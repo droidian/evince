@@ -1,0 +1,16 @@
+Source: evince
+Section: gnome
+Priority: optional
+Maintainer: Sebastien Bacher <seb128@debian.org>
+Uploaders: @GNOME_TEAM@
+Build-Depends: cdbs, debhelper (>= 4.0.0), gnome-pkg-tools, libgtk2.0-dev (>= 2.6.0), libgnomeui-dev (>= 2.4.0), libgnomevfs2-dev, libgnomeprint2.2-dev, libgnomeprintui2.2-dev, libglade2-dev, libxml-parser-perl, gs, libxt-dev
+Standards-Version: 3.6.1.1
+
+Package: evince
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: document (postcript, pdf, dvi) viewer
+ It's designed to be a simple multi-page document viewer, it has support
+ for thumbnails and bookmarks right now. Zooming, search, clipboard and
+ most other functions are working or coming along since it is still very
+ much at the early stages of stability. 
