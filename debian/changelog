@@ -1,3 +1,10 @@
+evince (0.1.2-1) unstable; urgency=low
+
+  * Upload to unstable.
+  * New upstream release.
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri,  4 Feb 2005 14:53:13 +0100
+
 evince (0.1.1-1) experimental; urgency=low
 
   * Initial Release.
