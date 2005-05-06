@@ -3,7 +3,7 @@ Section: gnome
 Priority: optional
 Maintainer: Sebastien Bacher <seb128@debian.org>
 Uploaders: @GNOME_TEAM@
-Build-Depends: cdbs, debhelper (>= 4.0.0), gnome-pkg-tools, libgtk2.0-dev (>= 2.6.0), libgnomeui-dev (>= 2.4.0), libgnomevfs2-dev (>= 2.8.4), libgnomeprint2.2-dev, libgnomeprintui2.2-dev, libglade2-dev, libxml-parser-perl, gs, libxt-dev
+Build-Depends: cdbs, debhelper (>= 4.0.0), gnome-pkg-tools, libgtk2.0-dev (>= 2.6.0), libgnomeui-dev (>= 2.4.0), libgnomevfs2-dev, libgnomeprint2.2-dev, libgnomeprintui2.2-dev, libglade2-dev, libxml-parser-perl, gs, libxt-dev, libpoppler-glib-dev (>= 0.3.0), scrollkeeper
 Standards-Version: 3.6.1.1
 
 Package: evince

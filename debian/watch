@@ -1,0 +1,4 @@
+version=2
+ftp://ftp.gnome.org/pub/GNOME/sources/evince/0.2/ \
+	evince-(.*)\.tar\.gz \
+	debian uupdate

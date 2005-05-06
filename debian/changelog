@@ -1,3 +1,18 @@
+evince (0.2.1-1) unstable; urgency=low
+
+  * New upstream version (Closes: #306615):
+    - fix the crasher on copy (Closes: #294511).
+  * debian/control.in:
+    - updated.
+  * debian/evince.menu:
+    - menu entry (Closes: #297560).
+  * debian/evince.mime:
+    - register with the mimesystem (Closes: #303887).
+  * debian/watch:
+    - new file.
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri,  6 May 2005 15:01:45 +0200
+
 evince (0.1.5-2) unstable; urgency=low
 
   * Rebuilt for the libhowl transition (Closes: #298807).
