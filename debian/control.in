@@ -3,8 +3,8 @@ Section: gnome
 Priority: optional
 Maintainer: Sebastien Bacher <seb128@debian.org>
 Uploaders: @GNOME_TEAM@
-Build-Depends: cdbs, debhelper (>= 4.0.0), gnome-pkg-tools, libgtk2.0-dev (>= 2.6.0), libgnomeui-dev (>= 2.4.0), libgnomevfs2-dev, libgnomeprint2.2-dev, libgnomeprintui2.2-dev, libglade2-dev, libxml-parser-perl, gs, libxt-dev, libpoppler-glib-dev (>= 0.3.0), scrollkeeper
-Standards-Version: 3.6.1.1
+Build-Depends: cdbs, debhelper (>= 4.0.0), gnome-pkg-tools, libgtk2.0-dev (>= 2.6.0), libgnomeui-dev (>= 2.4.0), libgnomevfs2-dev, libgnomeprint2.2-dev, libgnomeprintui2.2-dev, libglade2-dev, libxml-parser-perl, gs, libxt-dev, libpoppler-glib-dev (>= 0.4.1), libdjvulibre-dev, libkpathsea-dev, scrollkeeper, libtiff4-dev, libnautilus-extension-dev, gnome-doc-utils
+Standards-Version: 3.6.2
 
 Package: evince
 Architecture: any
@@ -12,8 +12,9 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Provides: pdf-viewer, postscript-viewer
 Description: Document (postscript, pdf) viewer
  Evince is a simple multi-page document viewer.  It can display and print
- PostScript (PS), Encapsulated PostScript (EPS), and Portable Document Format
- (PDF) files.  When supported by the document, it also allows searching for text, 
+ PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable 
+ Document Format (PDF) files.  
+ When supported by the document, it also allows searching for text, 
  copying text to the clipboard, hypertext navigation, and 
  table-of-contents bookmarks.
  .

@@ -1,3 +1,44 @@
+evince (0.4.0-1) unstable; urgency=low
+
+  * New upstream version: (Closes: #311134)
+    - Document properties (Closes: #300761).
+    - Document rotation (Closes: #294555).
+    - Fix the number of pages for some ps files (Closes: #309905).
+    - Fix zoom value update (Closes: #310089).
+    - Support for printing page ranges (Closes: #299453).
+    - Update of the mimetype list (Closes: #308378).
+    - Updated translations (Closes: #308727).
+  * debian/control.in:
+    - updated the Build-Depends.
+    - updated the Standards-Version.
+  * debian/rules:
+    - clean the static files for the nautilus properties page.
+    - don't update scrollkeeper files on build.
+
+ -- Sebastien Bacher <seb128@debian.org>  Tue,  6 Sep 2005 17:38:16 +0200
+
+evince (0.3.0-2) unstable; urgency=low
+
+  * debian/control.in:
+    - updated the Build-Depends and the description.
+  * debian/rules:
+    - build with djvu and dvi options (Closes: #308021).
+  * debian/watch:
+    - updated.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat,  7 May 2005 14:40:25 +0200
+
+evince (0.3.0-1) unstable; urgency=low
+
+  * New upstream version:
+    - Continous mode.
+    - Dual page mode.
+    - Control + Scroll does zooming.
+    - Shift + Scroll scrolls horizontally.
+    - Zoom control in the toolbar.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat,  7 May 2005 12:55:06 +0200
+
 evince (0.2.1-1) unstable; urgency=low
 
   * New upstream version (Closes: #306615):

@@ -6,5 +6,8 @@ include /usr/share/cdbs/1/class/gnome.mk
 include /usr/share/cdbs/1/rules/simple-patchsys.mk
 include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
 
+DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper --enable-djvu --enable-dvi
+
 binary-install/evince::
 	dh_installmime
+	rm -f debian/evince/usr/lib/nautilus/extensions-1.0/libevince-properties-page.{a,la} 
