@@ -1,0 +1,11 @@
+diff -Nur evince-0.5.2/shell/main.c evince-0.5.2.new/shell/main.c
+--- evince-0.5.2/shell/main.c	2005-11-10 02:02:54.000000000 +0100
++++ evince-0.5.2.new/shell/main.c	2006-06-01 16:48:39.000000000 +0200
+@@ -275,6 +275,7 @@
+ 	}
+ #endif
+ 
++	gdk_threads_init ();
+ 	gnome_authentication_manager_init ();
+ 
+ 
