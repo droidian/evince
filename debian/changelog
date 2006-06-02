@@ -1,0 +1,124 @@
+evince (0.4.0-2) unstable; urgency=low
+
+  * Build-depend on libkpathsea4-dev | libkpathsea-dev instead of
+    libkpathsea-dev, thanks Frank Küster. (Closes: #357262)
+    [debian/control, debian/control.in]
+  * Bump up Standards-Version to 3.7.2.
+    [debian/control, debian/control.in]
+
+ -- Loic Minier <lool@dooz.org>  Tue, 30 May 2006 13:47:04 +0200
+
+evince (0.4.0-1) unstable; urgency=low
+
+  * New upstream version: (Closes: #311134)
+    - Document properties (Closes: #300761).
+    - Document rotation (Closes: #294555).
+    - Fix the number of pages for some ps files (Closes: #309905).
+    - Fix zoom value update (Closes: #310089).
+    - Support for printing page ranges (Closes: #299453).
+    - Update of the mimetype list (Closes: #308378).
+    - Updated translations (Closes: #308727).
+  * debian/control.in:
+    - updated the Build-Depends.
+    - updated the Standards-Version.
+  * debian/rules:
+    - clean the static files for the nautilus properties page.
+    - don't update scrollkeeper files on build.
+
+ -- Sebastien Bacher <seb128@debian.org>  Tue,  6 Sep 2005 17:38:16 +0200
+
+evince (0.3.0-2) unstable; urgency=low
+
+  * debian/control.in:
+    - updated the Build-Depends and the description.
+  * debian/rules:
+    - build with djvu and dvi options (Closes: #308021).
+  * debian/watch:
+    - updated.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat,  7 May 2005 14:40:25 +0200
+
+evince (0.3.0-1) unstable; urgency=low
+
+  * New upstream version:
+    - Continous mode.
+    - Dual page mode.
+    - Control + Scroll does zooming.
+    - Shift + Scroll scrolls horizontally.
+    - Zoom control in the toolbar.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat,  7 May 2005 12:55:06 +0200
+
+evince (0.2.1-1) unstable; urgency=low
+
+  * New upstream version (Closes: #306615):
+    - fix the crasher on copy (Closes: #294511).
+  * debian/control.in:
+    - updated.
+  * debian/evince.menu:
+    - menu entry (Closes: #297560).
+  * debian/evince.mime:
+    - register with the mimesystem (Closes: #303887).
+  * debian/watch:
+    - new file.
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri,  6 May 2005 15:01:45 +0200
+
+evince (0.1.5-2) unstable; urgency=low
+
+  * Rebuilt for the libhowl transition (Closes: #298807).
+  * debian/control.in:
+    - updated the gnome-vfs requirements.
+
+ -- Sebastien Bacher <seb128@debian.org>  Thu, 10 Mar 2005 19:44:16 +0100
+
+evince (0.1.5-1) unstable; urgency=low
+
+  * New upstream release:
+    - reload menu.
+    - support for DnD of files.
+  * debian/control.in:
+    - Depends on gs (Closes: #294512).
+    - Description update based on the text sent 
+      by Andre Lehovich <andrel@U.Arizona.EDU> (Closes: #294519).
+    - Provides pdf-viewer, postscript-viewer (Closes: #294516).
+  * debian/evince.xml, debian/evince.1:
+    - manpage written by Lars Wirzenius <liw@iki.fi> with some changes 
+      by Andre Lehovich <andrel@U.Arizona.EDU> (Closes: #295095).
+  * po/pt_BR.po:
+    - translation update by 
+      Fábio Brito d'Araújo e Oliveira <fabio@debian-ba.org>.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat, 26 Feb 2005 23:34:50 +0100
+
+evince (0.1.4-1) unstable; urgency=low
+
+  * New upstream release:
+    - epiphany like fullscreen mode.
+    - save chromes state between sessions.
+    - improve toolbar layout and icons.
+    - really fix postscript rendering.
+  * debian/control.in:
+    - don't mention DVI in the description (Closes: #294011).
+    - typos fix in the description (Closes: #294348).
+  
+ -- Sebastien Bacher <seb128@debian.org>  Wed,  9 Feb 2005 15:13:54 +0100
+
+evince (0.1.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Bacher <seb128@debian.org>  Sat,  5 Feb 2005 01:55:16 +0100
+
+evince (0.1.2-1) unstable; urgency=low
+
+  * Upload to unstable.
+  * New upstream release.
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri,  4 Feb 2005 14:53:13 +0100
+
+evince (0.1.1-1) experimental; urgency=low
+
+  * Initial Release.
+
+ -- Sebastien Bacher <seb128@debian.org>  Mon, 24 Jan 2005 13:21:42 +0100
