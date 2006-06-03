@@ -10,6 +10,8 @@ evince (0.5.2-1) experimental; urgency=low
   * debian/patches/04_gdk_threads_init.patch:
     - call gdk_threads_init, fix issues when using an authentification dialog
       (Ubuntu: #343347)
+  * debian/patches/05_fix_build_with_djvulibre.patch:
+    - fix build with the new djvulibre
   * debian/control.in:
     - Build-Depends on gnome-doc-utils and gnome-keyring according to configure
     - Depends on "gs-esp | gs" (Closes: #335108)
