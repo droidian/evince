@@ -1,5 +1,6 @@
-evince (0.5.2-1) experimental; urgency=low
+evince (0.5.3-1) experimental; urgency=low
 
+  [ Sebastien Bacher ]
   * New upstream versions:
     - fix a typo to the documentation (Closes: #320266)
     - odd pages are placed to the right in dual page mode (Closes: #356040)
@@ -16,14 +17,19 @@ evince (0.5.2-1) experimental; urgency=low
     - Build-Depends on gnome-doc-utils and gnome-keyring according to configure
     - Depends on "gs-esp | gs" (Closes: #335108)
     - updated djvulibre requirement according to the configure
-    - updated the description to mention poppler instead of xpdf 
+    - updated the description to mention poppler instead of xpdf
       (Closes: #332197)
     - updated the poppler requirement to build with the new soname
   * debian/evince.mime:
-    - list dvi and djvu, change suggested 
+    - list dvi and djvu, change suggested
       by Pierre THIERRY <nowhere.man@levallois.eu.org> (Closes: #337784)
 
- -- Sebastien Bacher <seb128@debian.org>  Fri,  2 Jun 2006 16:50:42 +0200
+  [ Josselin Mouette ]
+  * Even newer upstream release.
+  * 03_presentation_change_page.patch, 05_fix_build_with_djvulibre.patch:
+    removed, integrated upstream.
+
+ -- Josselin Mouette <joss@debian.org>  Sun, 18 Jun 2006 16:40:50 +0200
 
 evince (0.4.0-2) unstable; urgency=low
 
