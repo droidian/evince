@@ -10,4 +10,5 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper --enable-djvu --enable-dvi
 
 binary-install/evince::
 	dh_installmime
-	rm -f debian/evince/usr/lib/nautilus/extensions-1.0/libevince-properties-page.{a,la} 
+	rm -f debian/evince/usr/lib/nautilus/extensions-1.0/libevince-properties-page.a
+	rm -f debian/evince/usr/lib/nautilus/extensions-1.0/libevince-properties-page.la
