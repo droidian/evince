@@ -15,8 +15,9 @@ evince (0.6.0-1) experimental; urgency=low
   * Build-depend on libdbus-glib-1-dev and libdbus-glib-1-dev.
   * Enable pixbuf, comics and impress backends.
   * Require intltool 0.35.0.
+  * 04_gdk_threads_init.patch: removed, integrated upstream.
 
- -- Josselin Mouette <joss@debian.org>  Sat,  9 Sep 2006 22:11:53 +0200
+ -- Josselin Mouette <joss@debian.org>  Sat,  9 Sep 2006 22:43:08 +0200
 
 evince (0.5.3-1) experimental; urgency=low
 
