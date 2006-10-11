@@ -3,7 +3,7 @@ Section: gnome
 Priority: optional
 Maintainer: Sebastien Bacher <seb128@debian.org>
 Uploaders: @GNOME_TEAM@
-Build-Depends: cdbs, debhelper (>= 4.0.0), gnome-pkg-tools, libgtk2.0-dev (>= 2.10.0), libgnomeui-dev (>> 2.14.1-2), libgnomevfs2-dev, libglade2-dev, libxml-parser-perl, gs (>= 7), libxt-dev, libpoppler-glib-dev (>= 0.5.3), libdjvulibre-dev (>= 3.5.17), libkpathsea4-dev | libkpathsea-dev, scrollkeeper, libtiff4-dev, libnautilus-extension-dev, gnome-doc-utils (>= 0.3.2), libgnome-keyring-dev (>= 0.4.0), libdbus-glib-1-dev (>= 0.33), zlib1g-dev, intltool (>= 0.35.0)
+Build-Depends: cdbs, debhelper (>= 4.0.0), gnome-pkg-tools, libgtk2.0-dev (>= 2.10.0), libgnomeui-dev (>> 2.14.1-2), libgnomevfs2-dev, libglade2-dev, libxml-parser-perl, gs (>= 7), libxt-dev, libpoppler-glib-dev (>= 0.5.4), libdjvulibre-dev (>= 3.5.17), libkpathsea4-dev | libkpathsea-dev, scrollkeeper, libtiff4-dev, libnautilus-extension-dev, gnome-doc-utils (>= 0.3.2), libgnome-keyring-dev (>= 0.4.0), libdbus-glib-1-dev (>= 0.33), zlib1g-dev, intltool (>= 0.35.0)
 Standards-Version: 3.7.2
 
 Package: evince

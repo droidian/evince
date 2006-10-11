@@ -1,8 +1,10 @@
-evince (0.6.0-2) experimental; urgency=low
+evince (0.6.1-1) experimental; urgency=low
 
   * Bump libgnomeui-dev build-dep to >= 2.14.1-2 for the Gtk transition.
+  * New upstream release.
+    - Bump libpoppler-glib-dev build-dep to >= 0.5.4.
 
- -- Loic Minier <lool@dooz.org>  Wed, 11 Oct 2006 13:54:08 +0200
+ -- Loic Minier <lool@dooz.org>  Wed, 11 Oct 2006 14:00:53 +0200
 
 evince (0.6.0-1) experimental; urgency=low
 
