@@ -1,3 +1,9 @@
+evince (0.6.1-2) UNRELEASED; urgency=low
+
+  * Fix watch file to track all releases and use HTTP.
+
+ -- Loic Minier <lool@dooz.org>  Tue, 21 Nov 2006 17:20:19 +0100
+
 evince (0.6.1-1) experimental; urgency=low
 
   * Bump libgnomeui-dev build-dep to >= 2.14.1-2 for the Gtk transition.
