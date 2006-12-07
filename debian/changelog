@@ -1,3 +1,11 @@
+evince (0.4.0-3) unstable; urgency=high
+
+  * SECURITY: new patch, 10_CVE-2006-5864.patch, fixes a buffer overflow in
+    the PostScript processor; thanks Kees Cook; CVE-2006-5864;
+    closes: #402063.
+
+ -- Loic Minier <lool@dooz.org>  Thu,  7 Dec 2006 22:09:17 +0100
+
 evince (0.4.0-2) unstable; urgency=low
 
   * Build-depend on libkpathsea4-dev | libkpathsea-dev instead of
