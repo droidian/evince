@@ -1,3 +1,9 @@
+evince (0.4.0-4) UNRELEASED; urgency=low
+
+  * Add a get-orig-source target to retrieve the upstream tarball.
+
+ -- Loic Minier <lool@dooz.org>  Tue,  9 Jan 2007 15:36:41 +0100
+
 evince (0.4.0-3) unstable; urgency=high
 
   * SECURITY: new patch, 10_CVE-2006-5864.patch, fixes a buffer overflow in
