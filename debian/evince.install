@@ -1,0 +1,14 @@
+debian/tmp/etc/gconf/schemas/evince.schemas
+debian/tmp/etc/gconf/schemas/evince-thumbnailer-comics.schemas
+debian/tmp/etc/gconf/schemas/evince-thumbnailer-djvu.schemas
+debian/tmp/etc/gconf/schemas/evince-thumbnailer-dvi.schemas
+debian/tmp/etc/gconf/schemas/evince-thumbnailer.schemas
+debian/tmp/usr/share/applications/evince.desktop
+debian/tmp/usr/share/evince/
+debian/tmp/usr/share/icons/hicolor/
+debian/tmp/usr/share/gnome/help/evince/
+debian/tmp/usr/share/locale/
+debian/tmp/usr/share/omf/evince/
+debian/tmp/usr/bin/evince
+debian/tmp/usr/bin/evince-thumbnailer
+debian/tmp/usr/lib/nautilus/extensions-1.0/libevince-properties-page.so
