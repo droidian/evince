@@ -1,14 +1,24 @@
-evince (0.4.0-4) UNRELEASED; urgency=low
+evince (0.4.0-4) unstable; urgency=low
 
+  [ Loic Minier ]
   * Add a get-orig-source target to retrieve the upstream tarball.
 
- -- Loic Minier <lool@dooz.org>  Tue,  9 Jan 2007 15:36:41 +0100
+  [ Marc 'HE' Brockschmidt ]
+  * debian/patches/20_fix_multiple_copies.patch:
+     Backported from upstream, allowing people to print more than one copy of
+     one document in one go. (Closes: #401172)
+  * debian/patches/21_fix_doc_typo.patch:
+     Fix typo in documentation. (Closes: #320266)
+  * debian/evince.mime:
+     Add entries for DVI and DjVu documents. (Closes: 337784)
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Fri, 12 Jan 2007 13:56:37 +0100
 
 evince (0.4.0-3) unstable; urgency=high
 
   * SECURITY: new patch, 10_CVE-2006-5864.patch, fixes a buffer overflow in
     the PostScript processor; thanks Kees Cook; CVE-2006-5864;
-    closes: #402063.
+    (Closes: #402063).
 
  -- Loic Minier <lool@dooz.org>  Thu,  7 Dec 2006 22:09:17 +0100
 
