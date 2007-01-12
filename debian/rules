@@ -7,11 +7,12 @@ include /usr/share/cdbs/1/rules/simple-patchsys.mk
 include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
 -include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
+# debug lib
+DEB_DH_STRIP_ARGS += --dbg-package=evince
+
 DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper --enable-djvu \
 			--enable-dvi --with-print=gtk --enable-pixbuf \
 			--enable-comics --enable-impress
 
 binary-install/evince::
 	dh_installmime
-	rm -f debian/evince/usr/lib/nautilus/extensions-1.0/libevince-properties-page.a
-	rm -f debian/evince/usr/lib/nautilus/extensions-1.0/libevince-properties-page.la
