@@ -8,7 +8,7 @@ Standards-Version: 3.7.2
 
 Package: evince
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, gs-esp | gs
 Provides: pdf-viewer, postscript-viewer
 Description: Document (postscript, pdf) viewer
  Evince is a simple multi-page document viewer.  It can display and print
@@ -18,6 +18,6 @@ Description: Document (postscript, pdf) viewer
  copying text to the clipboard, hypertext navigation, and 
  table-of-contents bookmarks.
  .
- The PDF renderer is based on XPDF.  The PS renderer uses Ghostscript.
+ The PDF renderer is based on poppler.  The PS renderer uses Ghostscript.
  .
  Homepage: http://www.gnome.org/projects/evince/
