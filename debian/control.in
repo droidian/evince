@@ -10,6 +10,7 @@ Package: evince
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, gs-esp | gs
 Provides: pdf-viewer, postscript-viewer
+Recommends: gnome-icon-theme
 Description: Document (postscript, pdf) viewer
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable 
