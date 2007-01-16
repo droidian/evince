@@ -3,28 +3,709 @@ Mon, 10 Jan 2005 13:23:55 +0100.
 
 It was downloaded from ftp://ftp.gnome.org/pub/gnome/sources/evince/
 
-Copyright:
+The upstream authors are Bryan Clark, Carlos García Campos, David Malcolm,
+James Bowes, Jonathan Blandford, Kristian Høgsberg, Martin Kretzschmar
+and Nickolay V. Shmyrev. See http://live.gnome.org/Evince/Team for more
+information on the team behind evince.
 
-Upstream Authors: Martin Kretzschmar <martink@gnome.org>
-		  Marco Pesenti Gritti <marco@gnome.org>
-		  Jonathan Blandford <jrb@redhat.com>
+Due to the huge number of supported file formats, evince's copyright situation
+is a bit complex. Please refer to the following table or the source package
+for more information. The used shortcuts are explained after the table:
 
-License:
+File                                                 | License | Copyright Holder
+-----------------------------------------------------+---------+-----------------
+backend/ev-async-renderer.c                          | GPLv2h  | Marco Pesenti Gritti
+backend/ev-async-renderer.h                          | GPLv2h  | Marco Pesenti Gritti
+backend/ev-attachment.c                              | GPLv2h  | Carlos Garcia Campos <carlosgc@gnome.org>
+backend/ev-attachment.h                              | GPLv2h  | Carlos Garcia Campos <carlosgc@gnome.org>
+backend/ev-backend-marshal.c                         | unspec  | unspec
+backend/ev-backend-marshalers.h                      | unspec  | unspec
+backend/ev-document.c                                | GPLv2h  | Marco Pesenti Gritti
+backend/ev-document-factory.c                        | GPLv2h  | Red Hat, Inc
+backend/ev-document-factory.h                        | GPLv2h  | Red Hat, Inc
+backend/ev-document-find.c                           | GPLv2h  | Red Hat, Inc
+backend/ev-document-find.h                           | GPLv2h  | Red Hat, Inc
+backend/ev-document-fonts.c                          | GPLv2h  | Red Hat, Inc
+backend/ev-document-fonts.h                          | GPLv2h  | Red Hat, Inc
+backend/ev-document.h                                | GPLv2h  | Marco Pesenti Gritti
+backend/ev-document-info.h                           | GPLv2h  | Marco Pesenti Gritti
+backend/ev-document-links.c                          | GPLv2h  | Red Hat, Inc
+backend/ev-document-links.h                          | GPLv2h  | Red Hat, Inc
+backend/ev-document-misc.c                           | unspec  | Marco Pesenti Gritti
+backend/ev-document-misc.h                           | GPLv2h  | Marco Pesenti Gritti
+backend/ev-document-security.c                       | GPLv2h  | Red Hat, Inc
+backend/ev-document-security.h                       | GPLv2h  | Red Hat, Inc
+backend/ev-document-thumbnails.c                     | GPLv2h  | Anders Carlsson <andersca@gnome.org>
+backend/ev-document-thumbnails.h                     | GPLv2h  | Anders Carlsson <andersca@gnome.org>
+backend/ev-link-action.c                             | GPLv2h  | Red Hat, Inc., Carlos Garcia Campos <carlosgc@gnome.org>
+backend/ev-link-action.h                             | GPLv2h  | Red Hat, Inc., Carlos Garcia Campos <carlosgc@gnome.org>
+backend/ev-link.c                                    | GPLv2h  | Red Hat, Inc.
+backend/ev-link-dest.c                               | GPLv2h  | Red Hat, Inc., Carlos Garcia Campos <carlosgc@gnome.org>
+backend/ev-link-dest.h                               | GPLv2h  | Red Hat, Inc., Carlos Garcia Campos <carlosgc@gnome.org>
+backend/ev-link.h                                    | GPLv2h  | Red Hat, Inc.
+backend/ev-ps-exporter.c                             | GPLv2h  | Martin Kretzschmar
+backend/ev-ps-exporter.h                             | GPLv2h  | Martin Kretzschmar
+backend/ev-render-context.c                          | unspec  | unspec
+backend/ev-render-context.h                          | GPLv2h  | unspec
+backend/ev-selection.c                               | GPLv2h  | Red Hat, Inc.
+backend/ev-selection.h                               | GPLv2h  | Marco Pesenti Gritti
+comics/comics-document.c                             | GPLv2h  | Teemu Tervo <teemu.tervo@gmx.net>
+comics/comics-document.h                             | GPLv2h  | Teemu Tervo <teemu.tervo@gmx.net>
+cut-n-paste/recent-files/egg-recent-item.c           | GPLv2h  | James Willcox <jwillcox@cs.indiana.edu>
+cut-n-paste/recent-files/egg-recent-item.h           | unspec  | unspec
+cut-n-paste/recent-files/egg-recent-model.c          | GPLv2h  | James Willcox <jwillcox@cs.indiana.edu>
+cut-n-paste/recent-files/egg-recent-model.h          | unspec  | unspec
+cut-n-paste/recent-files/egg-recent-util.c           | unspec  | unspec
+cut-n-paste/recent-files/egg-recent-util.h           | unspec  | unspec
+cut-n-paste/recent-files/egg-recent-view.c           | GPLv2h  | James Willcox <jwillcox@cs.indiana.edu>
+cut-n-paste/recent-files/egg-recent-view.h           | unspec  | unspec
+cut-n-paste/recent-files/egg-recent-view-uimanager.c | GPLv2h  | James Willcox <jwillcox@cs.indiana.edu>, Paolo Bacchilega <paobac@cvs.gnome.org>
+cut-n-paste/recent-files/egg-recent-view-uimanager.h | unspec  | unspec
+cut-n-paste/toolbar-editor/egg-editable-toolbar.c    | GPLv2h  | Marco Pesenti Gritti, Christia
+cut-n-paste/toolbar-editor/egg-editable-toolbar.h    | GPLv2h  | Marco Pesenti Gritti, Christian Persch
+cut-n-paste/toolbar-editor/eggmarshalers.c           | unspec  | unspec
+cut-n-paste/toolbar-editor/eggmarshalers.h           | unspec  | unspec
+cut-n-paste/toolbar-editor/egg-toolbar-editor.c      | GPLv2h  | Marco Pesenti Gritti
+cut-n-paste/toolbar-editor/egg-toolbar-editor.h      | GPLv2h  | Marco Pesenti Gritti
+cut-n-paste/toolbar-editor/egg-toolbars-model.c      | GPLv2h  | Marco Pesenti Gritti, Christian Persch
+cut-n-paste/toolbar-editor/egg-toolbars-model.h      | GPLv2h  | Marco Pesenti Gritti, Christian Persch
+cut-n-paste/toolbar-editor/eggtypebuiltins.c         | unspec  | unspec
+cut-n-paste/toolbar-editor/eggtypebuiltins.h         | unspec  | unspec
+cut-n-paste/zoom-control/ephy-zoom-action.c          | GPLv2h  | Marco Pesenti Gritti, Christian Persch
+cut-n-paste/zoom-control/ephy-zoom-action.h          | GPLv2h  | Marco Pesenti Gritti, Christian Persch
+cut-n-paste/zoom-control/ephy-zoom.c                 | GPLv2h  | Christian Persch
+cut-n-paste/zoom-control/ephy-zoom-control.c         | GPLv2h  | Christian Persch
+cut-n-paste/zoom-control/ephy-zoom-control.h         | GPLv2h  | Christian Persch
+cut-n-paste/zoom-control/ephy-zoom.h                 | GPLv2h  | Christian Persch
+djvu/djvu-document.c                                 | GPLv2h  | Nickolay V. Shmyrev <nshmyrev@yandex.ru>
+djvu/djvu-document.h                                 | GPLv2h  | Nickolay V. Shmyrev <nshmyrev@yandex.ru>
+djvu/djvu-document-private.h                         | GPLv2h  | Michael Hofmann <mh21@piware.de>
+djvu/djvu-links.c                                    | GPLv2h  | Pauli Virtanen <pav@iki.fi>
+djvu/djvu-links.h                                    | GPLv2h  | Pauli Virtanen <pav@iki.fi>
+djvu/djvu-text.c                                     | GPLv2h  | Michael Hofmann <mh21@piware.de>
+djvu/djvu-text.h                                     | GPLv2h  | Michael Hofmann <mh21@piware.de>
+djvu/djvu-text-page.c                                | GPLv2h  | Michael Hofmann <mh21@piware.de>
+djvu/djvu-text-page.h                                | GPLv2h  | Michael Hofmann <mh21@piware.de>
+dvi/dvi-document.c                                   | GPLv2h  | Nickolay V. Shmyrev <nshmyrev@yandex.ru>
+dvi/dvi-document.h                                   | GPLv2h  | Nickolay V. Shmyrev <nshmyrev@yandex.ru>
+dvi/fonts.c                                          | unspec  | unspec
+dvi/fonts.h                                          | unspec  | unspec
+dvi/mdvi-lib/afmparse.c                              | Adobe   | Adobe Systems Incorporated.
+dvi/mdvi-lib/afmparse.h                              | Adobe   | Adobe Systems Incorporated.
+dvi/mdvi-lib/bitmap.c                                | GPLv2h  | Matias Atria
+dvi/mdvi-lib/bitmap.h                                | GPLv2h  | Matias Atria
+dvi/mdvi-lib/color.c                                 | GPLv2h  | Matias Atria
+dvi/mdvi-lib/color.h                                 | GPLv2h  | Matias Atria
+dvi/mdvi-lib/common.c                                | GPLv2h  | Matias Atria
+dvi/mdvi-lib/common.h                                | GPLv2h  | Matias Atria
+dvi/mdvi-lib/defaults.h                              | GPLv2h  | Matias Atria
+dvi/mdvi-lib/dviopcodes.h                            | unspec  | unspec
+dvi/mdvi-lib/dviread.c                               | GPLv2h  | Matias Atria
+dvi/mdvi-lib/files.c                                 | GPLv2h  | Matias Atria
+dvi/mdvi-lib/font.c                                  | GPLv2h  | Matias Atria
+dvi/mdvi-lib/fontmap.c                               | GPLv2h  | Matias Atria
+dvi/mdvi-lib/fontmap.h                               | GPLv2h  | Matias Atria
+dvi/mdvi-lib/fontsrch.c                              | GPLv2h  | Matias Atria
+dvi/mdvi-lib/gf.c                                    | GPLv2h  | Matias Atria
+dvi/mdvi-lib/hash.c                                  | GPLv2h  | Matias Atria
+dvi/mdvi-lib/hash.h                                  | unspec  | unspec
+dvi/mdvi-lib/list.c                                  | GPLv2h  | Matias Atria
+dvi/mdvi-lib/mdvi.h                                  | GPLv2h  | Matias Atria
+dvi/mdvi-lib/pagesel.c                               | GPLv2h  | Matias Atria
+dvi/mdvi-lib/paper.c                                 | GPLv2h  | Matias Atria
+dvi/mdvi-lib/paper.h                                 | unspec  | unspec
+dvi/mdvi-lib/pk.c                                    | GPLv2h  | Matias Atria
+dvi/mdvi-lib/private.h                               | GPLv2h  | Matias Atria
+dvi/mdvi-lib/setup.c                                 | GPLv2h  | Matias Atria
+dvi/mdvi-lib/special.c                               | GPLv2h  | Matias Atria
+dvi/mdvi-lib/sp-epsf.c                               | GPLv2h  | Matias Atria
+dvi/mdvi-lib/sysdeps.h                               | GPLv2h  | Matias Atria
+dvi/mdvi-lib/t1.c                                    | GPLv2h  | Matias Atria
+dvi/mdvi-lib/tfm.c                                   | GPLv2h  | Matias Atria
+dvi/mdvi-lib/tfmfile.c                               | GPLv2h  | Matias Atria
+dvi/mdvi-lib/tt.c                                    | GPLv2h  | Matias Atria
+dvi/mdvi-lib/util.c                                  | GPLv2h  | Matias Atria
+dvi/mdvi-lib/vf.c                                    | GPLv2h  | Matias Atria
+dvi/pixbuf-device.c                                  | unspec  | unspec
+dvi/pixbuf-device.h                                  | unspec  | unspec
+help/C/evince.xml                                    | GFDL1.1 | Sun Microsystems, Nickolay V. Shmyrev
+help/bg/evince.xml                                   | GFDL1.1 | unspec
+help/el/evince.xml                                   | GFDL1.1 | unspec
+help/es/evince.xml                                   | GFDL1.1 | Francisco Javier F. Serrador, Jorge Gonzalez Gonzalez
+help/fi/evince.xml                                   | GFDL1.1 | Tommi Vainikainen, Flammie Pirinen
+help/fr/evince.xml                                   | GFDL1.1 | Jonathan Ernst, Claude Paroz
+help/it/evince.xml                                   | GFDL1.1 | Ubuntu Italian Translators, Luca Ferretti
+help/nl/evince.xml                                   | GFDL1.1 | unspec
+help/ru/evince.xml                                   | GFDL1.1 | unspec
+help/sr/evince.xml                                   | GFDL1.1 | unspec
+help/sv/evince.xml                                   | GFDL1.1 | Daniel Nylander
+help/uk/evince.xml                                   | GFDL1.1 | unspec
+impress/common.h                                     |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/document.c                                   |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/f_oasis.c                                    |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/f_oo13.c                                     |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/iksemel.c                                    | LGPLv2h | Gurer Ozen <madcat@e-kolay.net>
+impress/iksemel.h                                    | LGPLv2h | Gurer Ozen <madcat@e-kolay.net>
+impress/imposter.h                                   |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/impress-document.c                           | GPLv2h  | Jonathan Blandford <jrb@gnome.org>, Bastien Nocera <hadess@hadess.net>
+impress/impress-document.h                           | GPLv2h  | Jonathan Blandford <jrb@gnome.org>
+impress/internal.h                                   |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/r_back.c                                     |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/r_draw.c                                     |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/render.c                                     |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/r_geometry.c                                 |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/r_gradient.c                                 |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/r_style.c                                    |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/r_text.c                                     |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/zip.c                                        |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+impress/zip.h                                        |   GPL   | Gurer Ozen <madcat@e-kolay.net>
+lib/ev-debug.c                                       | GPLv2h  | Marco Pesenti Gritti
+lib/ev-debug.h                                       | GPLv2h  | Marco Pesenti Gritti
+lib/ev-file-helpers.c                                | GPLv2h  | Jorn Baayen
+lib/ev-file-helpers.h                                | GPLv2h  | Jorn Baayen
+lib/ev-gui.c                                         | GPLv2h  | Marco Pesenti Gritti
+lib/ev-gui.h                                         | GPLv2h  | Marco Pesenti Gritti
+lib/ev-tooltip.c                                     | GPLv2h  | Red Hat, Inc.
+lib/ev-tooltip.h                                     | GPLv2h  | Red Hat, Inc.
+pdf/ev-poppler.cc                                    | GPLv2h  | Red Hat, Inc.
+pdf/ev-poppler.h                                     | GPLv2h  | Red Hat, Inc.
+pixbuf/pixbuf-document.c                             | GPLv2h  | Anders Carlsson <andersca@gnome.org>
+pixbuf/pixbuf-document.h                             | GPLv2h  | Anders Carlsson <andersca@gnome.org>
+po/be.po                                             | GPLv2h  | Evince maintainers
+po/bg.po                                             | GPLv2h  | Evince maintainers
+po/bn_IN.po                                          | GPLv2h  | Evince maintainers
+po/bn.po                                             | GPLv2h  | Evince maintainers
+po/br.po                                             | GPLv2   | Free Software Foundation
+po/ca.po                                             | GPLv2h  | Free Software Foundation
+po/cs.po                                             | GPLv2h  | Miloslav Trmac <mitr@volny.cz>
+po/cy.po                                             | GPLv2h  | Gareth Bowker
+po/da.po                                             | GPLv2h  | Free Software Foundation
+po/de.po                                             | GPLv2h  | Martin Kretzschmar
+po/dz.po                                             | GPLv2h  | Free Software Foundation
+po/el.po                                             | GPLv2h  | Free Software Foundation
+po/en_CA.po                                          | GPLv2h  | Adam Weinberger and the GNOME Foundation
+po/en_GB.po                                          | GPLv2h  | The Gnome Foundation
+po/es.po                                             | GPLv2h  | Spanish translation for Evince
+po/et.po                                             | GPLv2h  | Free Software Foundation
+po/eu.po                                             | GPLv2h  | Mikel Olasagasti
+po/fa.po                                             | GPLv2h  | Sharif FarsiWeb, Inc.
+po/fi.po                                             | GPLv2h  | Free Software Foundation
+po/fr.po                                             | GPLv2   | Free Software Foundation
+po/gl.po                                             | GPLv2h  | Evince maintainers
+po/gu.po                                             | unspec  | unspec
+po/he.po                                             | GPLv2h  | Evince maintainers
+po/hi.po                                             | GPLv2h  | Evince maintainers
+po/hu.po                                             | GPLv2h  | Free Software Foundation
+po/id.po                                             | GPLv2h  | Evince maintainers
+po/it.po                                             | GPLv2h  | Evince maintainers
+po/ja.po                                             | GPLv2h  | Evince maintainers
+po/ka.po                                             | GPLv2h  | Evince maintainers
+po/ko.po                                             | unspec  | unspec
+po/ku.po                                             | GPLv2h  | Canonical Ltd, and Rosetta Contributors 2005
+po/lt.po                                             | GPLv2h  | The Gnome Foundation
+po/lv.po                                             | GPLv2h  | Gnome i18n Project for Latvian
+po/mk.po                                             | GPLv2h  | Evince maintainers
+po/ml.po                                             | GPLv2h  | Evince maintainers
+po/mr.po                                             | GPLv2h  | Evince maintainers
+po/nb.po                                             | GPLv2h  | Free Software Foundation
+po/ne.po                                             | GPLv2h  | Evince maintainers
+po/nl.po                                             | GPLv2h  | Free Software Foundation
+po/nn.po                                             | GPLv2h  | Evince maintainers
+po/or.po                                             | GPLv2h  | Evince maintainers
+po/pa.po                                             | GPLv2h  | Evince maintainers
+po/pl.po                                             | GPLv2h  | Evince maintainers
+po/pt_BR.po                                          | GPLv2h  | Free Software Foundation
+po/pt.po                                             | GPLv2h  | Evince maintainers
+po/ro.po                                             | GPLv2h  | Free Software Foundation
+po/ru.po                                             | GPLv2   | Free Software Foundation
+po/rw.po                                             | GPLv2h  | Free Software Foundation
+po/sk.po                                             | GPLv2h  | Free Software Foundation
+po/sl.po                                             | GPLv2h  | Free Software Foundation
+po/sq.po                                             | GPLv2h  | Free Software Foundation
+po/sr@Latn.po                                        | GPLv2h  | Evince maintainers
+po/sr.po                                             | GPLv2h  | Evince maintainers
+po/sv.po                                             | GPLv2h  | Free Software Foundation
+po/ta.po                                             | GPLv2h  | Evince maintainers
+po/th.po                                             | GPLv2h  | Free Software Foundation
+po/tr.po                                             | GPLv2h  | The Gnome Foundation
+po/uk.po                                             | GPLv2h  | Free Software Foundation
+po/vi.po                                             | GPLv2h  | Gnome i18n Project for Vietnamese
+po/wa.po                                             | GPLv2h  | Evince maintainers
+po/zh_CN.po                                          | GPLv2h  | Evince maintainers
+po/zh_HK.po                                          | GPLv2h  | Free Software Foundation
+po/zh_TW.po                                          | GPLv2h  | Free Software Foundation
+properties/ev-properties-main.c                      | GPLv2.1h| Eazel Inc., Andrew Sobala <aes@gnome.org>, Bastien Nocera <hadess@hadess.net>
+properties/ev-properties-view.c                      | GPLv2h  | Red Hat, Inc
+properties/ev-properties-view.h                      | GPLv2h  | Red Hat, Inc
+ps/gsdefaults.c                                      | GPLv2h  | The Free Software Foundation
+ps/gsdefaults.h                                      | GPLv2h  | The Free Software Foundation
+ps/gsio.c                                            | GPLv2h  | The Free Software Foundation
+ps/gsio.h                                            | GPLv2h  | The Free Software Foundation
+ps/gstypes.h                                         | LGPLv2h | The Free Software Foundation
+ps/ps.c                                              | GPLv2h  | Timothy O. Theisen 
+ps/ps-document.c                                     | LGPLv2h | The Free Software Foundation
+ps/ps-document.h                                     | LGPLv2h | The Free Software Foundation
+ps/ps.h                                              | GPLv2h  | Timothy O. Theisen
+shell/eggfindbar.c                                   | GPLv2h  | Red Hat, Inc.
+shell/eggfindbar.h                                   | GPLv2h  | Red Hat, Inc.
+shell/ev-application.c                               | GPLv2h  | Martin Kretzschma
+shell/ev-application.h                               | GPLv2h  | Martin Kretzschma
+shell/ev-job-queue.c                                 | unspec  | unspec
+shell/ev-job-queue.h                                 | GPLv2h  | Red Hat, Inc
+shell/ev-jobs.c                                      | unspec  | unspec
+shell/ev-jobs.h                                      | GPLv2h  | Red Hat, Inc
+shell/ev-marshal.c                                   | unspec  | unspec
+shell/ev-marshal.h                                   | unspec  | unspec
+shell/ev-metadata-manager.c                          | GPLv2h  | Paolo Maggi
+shell/ev-metadata-manager.h                          | GPLv2h  | Paolo Maggi
+shell/ev-page-action.c                               | GPLv2h  | Marco Pesenti Gritti, Christian Persch
+shell/ev-page-action.h                               | GPLv2h  | Marco Pesenti Gritti, Christian Persch
+shell/ev-page-cache.c                                | unspec  | unspec
+shell/ev-page-cache.h                                | GPLv2h  | Red Hat, Inc
+shell/ev-password.h                                  | GPLv2h  | Red Hat, Inc
+shell/ev-password.c                                  | GPLv2h  | Red Hat, Inc
+shell/ev-password-view.h                             | GPLv2h  | Red Hat, Inc
+shell/ev-password-view.c                             | GPLv2h  | Red Hat, Inc
+shell/ev-pixbuf-cache.c                              | unspec  | unspec
+shell/ev-pixbuf-cache.h                              | GPLv2h  | Red Hat, Inc
+shell/ev-print-job.c                                 | GPLv2h  | Martin Kretzschmar
+shell/ev-print-job.h                                 | GPLv2h  | Martin Kretzschmar
+shell/ev-properties-dialog.c                         | GPLv2h  | Red Hat, Inc
+shell/ev-properties-dialog.h                         | GPLv2h  | Red Hat, Inc
+shell/ev-properties-fonts.c                          | GPLv2h  | Red Hat, Inc
+shell/ev-properties-fonts.h                          | GPLv2h  | Red Hat, Inc
+shell/ev-sidebar-attachments.c                       | GPLv2h  | Carlos Garcia Campos <carlosgc@gnome.org>
+shell/ev-sidebar-attachments.h                       | GPLv2h  | Carlos Garcia Campos <carlosgc@gnome.org>
+shell/ev-sidebar-page.c                              | GPLv2h  | Marco Pesenti Gritti
+shell/ev-sidebar-page.h                              | GPLv2h  | Marco Pesenti Gritti 
+shell/ev-sidebar-thumbnails.c                        | GPLv2h  | Red Hat, Inc., Anders Carlsson <andersca@gnome.org
+shell/ev-sidebar-thumbnails.h                        | GPLv2h  | Red Hat, Inc.
+shell/ev-stock-icons.c                               | GPLv2h  | Martin Kretzschmar
+shell/ev-stock-icons.h                               | GPLv2h  | Martin Kretzschmar
+shell/ev-utils.c                                     | GPLv2h  | Anders Carlsson <andersca@gnome.org>
+shell/ev-utils.h                                     | GPLv2h  | Anders Carlsson <andersca@gnome.org>
+shell/ev-view-accessible.c                           | GPLv2h  | Red Hat, Inc.
+shell/ev-view-accessible.h                           | GPLv2h  | Red Hat, Inc.
+shell/ev-view-private.h                              | GPLv2h  | Red Hat, Inc.
+shell/ev-view.c                                      | GPLv2h  | Red Hat, Inc.
+shell/ev-view.h                                      | GPLv2h  | Red Hat, Inc.
+shell/ev-window-title.c                              | GPLv2h  | Red Hat, Inc.
+shell/ev-window-title.h                              | GPLv2h  | Red Hat, Inc.
+shell/ev-window.c                                    | GPLv2h  | Martin Kretzschmar, Red Hat, Inc., Marco Pesenti Gritti, Christian Persch
+shell/ev-window.h                                    | GPLv2h  | Martin Kretzschmar
+shell/ev-sidebar.c                                   | GPLv2h  | Red Hat, Inc.
+shell/ev-sidebar.h                                   | GPLv2h  | Red Hat, Inc.
+shell/ev-sidebar-links.c                             | GPLv2h  | Red Hat, Inc.
+shell/ev-sidebar-links.h                             | GPLv2h  | Red Hat, Inc.
+shell/main.c                                         | GPLv2h  | Marco Pesenti Gritti
+thumbnailer/evince-thumbnailer.c                     | GPLv2h  | Fernando Herrera <fherrera@onirica.com>
+tiff/tiff2ps.c                                       |  SGI    | Sam Leffler, Silicon Graphics, Inc.
+tiff/tiff2ps.h                                       | GPLv2h  | rpath, Inc.
+tiff/tiff-document.c                                 | GPLv2h  | Jonathan Blandford <jrb@gnome.org>
+tiff/tiff-document.h                                 | GPLv2h  | Jonathan Blandford <jrb@gnome.org>
 
-   This package is free software; you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation; version 2 dated June, 1991.
+Shortcuts:
+ - "unspec":    The file contains no specific copyright/license notice. This
+                means that the copyright holder is the Evince Team (as
+                listed above) and the license is GPL2 or higher, unless
+                specified otherwise.
+ - "GPL":       The GNU General Public License, without versioning constraints.
+ - "GPLv2":     The GNU General Public License, version 2.
+ - "GPLv2h":    The GNU General Public License, version 2 or (at your
+                option) higher.
+ - "LGPLv2h":   The Lesser (or Library) GNU General Public License, version
+                2 or (at your option).
+ - "GFDL1.1":   The GNU Free Documentation License, version 1.1 or (at your
+                option) higher. The listed documents use the GFDL with no
+                Invariant Sections, no Front-Cover Texts, and no Back-Cover 
+                Texts.
+ - "Adobe":     The following licensing terms need to be respected:
+    | This file may be freely copied and redistributed as long as:
+    |   1) This entire notice continues to be included in the file,
+    |   2) If the file has been modified in any way, a notice of such
+    |      modification is conspicuously indicated.
+    |
+    | PostScript, Display PostScript, and Adobe are registered trademarks of
+    | Adobe Systems Incorporated.
+    |
+    | ************************************************************************
+    | THE INFORMATION BELOW IS FURNISHED AS IS, IS SUBJECT TO CHANGE WITHOUT
+    | NOTICE, AND SHOULD NOT BE CONSTRUED AS A COMMITMENT BY ADOBE SYSTEMS
+    | INCORPORATED. ADOBE SYSTEMS INCORPORATED ASSUMES NO RESPONSIBILITY OR
+    | LIABILITY FOR ANY ERRORS OR INACCURACIES, MAKES NO WARRANTY OF ANY
+    | KIND (EXPRESS, IMPLIED OR STATUTORY) WITH RESPECT TO THIS INFORMATION,
+    | AND EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES OF MERCHANTABILITY,
+    | FITNESS FOR PARTICULAR PURPOSES AND NONINFRINGEMENT OF THIRD PARTY RIGHTS.
+    | ************************************************************************
+ - "SGI":       The following licensing terms need to be respected:
+    | Permission to use, copy, modify, distribute, and sell this software and
+    | its documentation for any purpose is hereby granted without fee, provided
+    | that (i) the above copyright notices and this permission notice appear in
+    | all copies of the software and related documentation, and (ii) the names of
+    | Sam Leffler and Silicon Graphics may not be used in any advertising or
+    | publicity relating to the software without the specific, prior written
+    | permission of Sam Leffler and Silicon Graphics.
 
-   This package is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
+On Debian systems, you can find the complete textes for the GNU (Lesser)
+General licenses:
+  - GPL:      /usr/share/common-licenses/GPL
+  - GPLv2:    /usr/share/common-licenses/GPL-2
+  - LGPLv2:   /usr/share/common-licenses/LGPL-2
 
-   You should have received a copy of the GNU General Public License
-   along with this package; if not, write to the Free Software
-   Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
-   02111-1307, USA.
+This is the text of the GFDL, version 1.1:
 
-On Debian systems, the complete text of the GNU General
-Public License can be found in `/usr/share/common-licenses/GPL'.
+		GNU Free Documentation License
+		   Version 1.1, March 2000
 
+ Copyright (C) 2000  Free Software Foundation, Inc.
+     51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+
+
+0. PREAMBLE
+
+The purpose of this License is to make a manual, textbook, or other
+written document "free" in the sense of freedom: to assure everyone
+the effective freedom to copy and redistribute it, with or without
+modifying it, either commercially or noncommercially.  Secondarily,
+this License preserves for the author and publisher a way to get
+credit for their work, while not being considered responsible for
+modifications made by others.
+
+This License is a kind of "copyleft", which means that derivative
+works of the document must themselves be free in the same sense.  It
+complements the GNU General Public License, which is a copyleft
+license designed for free software.
+
+We have designed this License in order to use it for manuals for free
+software, because free software needs free documentation: a free
+program should come with manuals providing the same freedoms that the
+software does.  But this License is not limited to software manuals;
+it can be used for any textual work, regardless of subject matter or
+whether it is published as a printed book.  We recommend this License
+principally for works whose purpose is instruction or reference.
+
+
+1. APPLICABILITY AND DEFINITIONS
+
+This License applies to any manual or other work that contains a
+notice placed by the copyright holder saying it can be distributed
+under the terms of this License.  The "Document", below, refers to any
+such manual or work.  Any member of the public is a licensee, and is
+addressed as "you".
+
+A "Modified Version" of the Document means any work containing the
+Document or a portion of it, either copied verbatim, or with
+modifications and/or translated into another language.
+
+A "Secondary Section" is a named appendix or a front-matter section of
+the Document that deals exclusively with the relationship of the
+publishers or authors of the Document to the Document's overall subject
+(or to related matters) and contains nothing that could fall directly
+within that overall subject.  (For example, if the Document is in part a
+textbook of mathematics, a Secondary Section may not explain any
+mathematics.)  The relationship could be a matter of historical
+connection with the subject or with related matters, or of legal,
+commercial, philosophical, ethical or political position regarding
+them.
+
+The "Invariant Sections" are certain Secondary Sections whose titles
+are designated, as being those of Invariant Sections, in the notice
+that says that the Document is released under this License.
+
+The "Cover Texts" are certain short passages of text that are listed,
+as Front-Cover Texts or Back-Cover Texts, in the notice that says that
+the Document is released under this License.
+
+A "Transparent" copy of the Document means a machine-readable copy,
+represented in a format whose specification is available to the
+general public, whose contents can be viewed and edited directly and
+straightforwardly with generic text editors or (for images composed of
+pixels) generic paint programs or (for drawings) some widely available
+drawing editor, and that is suitable for input to text formatters or
+for automatic translation to a variety of formats suitable for input
+to text formatters.  A copy made in an otherwise Transparent file
+format whose markup has been designed to thwart or discourage
+subsequent modification by readers is not Transparent.  A copy that is
+not "Transparent" is called "Opaque".
+
+Examples of suitable formats for Transparent copies include plain
+ASCII without markup, Texinfo input format, LaTeX input format, SGML
+or XML using a publicly available DTD, and standard-conforming simple
+HTML designed for human modification.  Opaque formats include
+PostScript, PDF, proprietary formats that can be read and edited only
+by proprietary word processors, SGML or XML for which the DTD and/or
+processing tools are not generally available, and the
+machine-generated HTML produced by some word processors for output
+purposes only.
+
+The "Title Page" means, for a printed book, the title page itself,
+plus such following pages as are needed to hold, legibly, the material
+this License requires to appear in the title page.  For works in
+formats which do not have any title page as such, "Title Page" means
+the text near the most prominent appearance of the work's title,
+preceding the beginning of the body of the text.
+
+
+2. VERBATIM COPYING
+
+You may copy and distribute the Document in any medium, either
+commercially or noncommercially, provided that this License, the
+copyright notices, and the license notice saying this License applies
+to the Document are reproduced in all copies, and that you add no other
+conditions whatsoever to those of this License.  You may not use
+technical measures to obstruct or control the reading or further
+copying of the copies you make or distribute.  However, you may accept
+compensation in exchange for copies.  If you distribute a large enough
+number of copies you must also follow the conditions in section 3.
+
+You may also lend copies, under the same conditions stated above, and
+you may publicly display copies.
+
+
+3. COPYING IN QUANTITY
+
+If you publish printed copies of the Document numbering more than 100,
+and the Document's license notice requires Cover Texts, you must enclose
+the copies in covers that carry, clearly and legibly, all these Cover
+Texts: Front-Cover Texts on the front cover, and Back-Cover Texts on
+the back cover.  Both covers must also clearly and legibly identify
+you as the publisher of these copies.  The front cover must present
+the full title with all words of the title equally prominent and
+visible.  You may add other material on the covers in addition.
+Copying with changes limited to the covers, as long as they preserve
+the title of the Document and satisfy these conditions, can be treated
+as verbatim copying in other respects.
+
+If the required texts for either cover are too voluminous to fit
+legibly, you should put the first ones listed (as many as fit
+reasonably) on the actual cover, and continue the rest onto adjacent
+pages.
+
+If you publish or distribute Opaque copies of the Document numbering
+more than 100, you must either include a machine-readable Transparent
+copy along with each Opaque copy, or state in or with each Opaque copy
+a publicly-accessible computer-network location containing a complete
+Transparent copy of the Document, free of added material, which the
+general network-using public has access to download anonymously at no
+charge using public-standard network protocols.  If you use the latter
+option, you must take reasonably prudent steps, when you begin
+distribution of Opaque copies in quantity, to ensure that this
+Transparent copy will remain thus accessible at the stated location
+until at least one year after the last time you distribute an Opaque
+copy (directly or through your agents or retailers) of that edition to
+the public.
+
+It is requested, but not required, that you contact the authors of the
+Document well before redistributing any large number of copies, to give
+them a chance to provide you with an updated version of the Document.
+
+
+4. MODIFICATIONS
+
+You may copy and distribute a Modified Version of the Document under
+the conditions of sections 2 and 3 above, provided that you release
+the Modified Version under precisely this License, with the Modified
+Version filling the role of the Document, thus licensing distribution
+and modification of the Modified Version to whoever possesses a copy
+of it.  In addition, you must do these things in the Modified Version:
+
+A. Use in the Title Page (and on the covers, if any) a title distinct
+   from that of the Document, and from those of previous versions
+   (which should, if there were any, be listed in the History section
+   of the Document).  You may use the same title as a previous version
+   if the original publisher of that version gives permission.
+B. List on the Title Page, as authors, one or more persons or entities
+   responsible for authorship of the modifications in the Modified
+   Version, together with at least five of the principal authors of the
+   Document (all of its principal authors, if it has less than five).
+C. State on the Title page the name of the publisher of the
+   Modified Version, as the publisher.
+D. Preserve all the copyright notices of the Document.
+E. Add an appropriate copyright notice for your modifications
+   adjacent to the other copyright notices.
+F. Include, immediately after the copyright notices, a license notice
+   giving the public permission to use the Modified Version under the
+   terms of this License, in the form shown in the Addendum below.
+G. Preserve in that license notice the full lists of Invariant Sections
+   and required Cover Texts given in the Document's license notice.
+H. Include an unaltered copy of this License.
+I. Preserve the section entitled "History", and its title, and add to
+   it an item stating at least the title, year, new authors, and
+   publisher of the Modified Version as given on the Title Page.  If
+   there is no section entitled "History" in the Document, create one
+   stating the title, year, authors, and publisher of the Document as
+   given on its Title Page, then add an item describing the Modified
+   Version as stated in the previous sentence.
+J. Preserve the network location, if any, given in the Document for
+   public access to a Transparent copy of the Document, and likewise
+   the network locations given in the Document for previous versions
+   it was based on.  These may be placed in the "History" section.
+   You may omit a network location for a work that was published at
+   least four years before the Document itself, or if the original
+   publisher of the version it refers to gives permission.
+K. In any section entitled "Acknowledgements" or "Dedications",
+   preserve the section's title, and preserve in the section all the
+   substance and tone of each of the contributor acknowledgements
+   and/or dedications given therein.
+L. Preserve all the Invariant Sections of the Document,
+   unaltered in their text and in their titles.  Section numbers
+   or the equivalent are not considered part of the section titles.
+M. Delete any section entitled "Endorsements".  Such a section
+   may not be included in the Modified Version.
+N. Do not retitle any existing section as "Endorsements"
+   or to conflict in title with any Invariant Section.
+
+If the Modified Version includes new front-matter sections or
+appendices that qualify as Secondary Sections and contain no material
+copied from the Document, you may at your option designate some or all
+of these sections as invariant.  To do this, add their titles to the
+list of Invariant Sections in the Modified Version's license notice.
+These titles must be distinct from any other section titles.
+
+You may add a section entitled "Endorsements", provided it contains
+nothing but endorsements of your Modified Version by various
+parties--for example, statements of peer review or that the text has
+been approved by an organization as the authoritative definition of a
+standard.
+
+You may add a passage of up to five words as a Front-Cover Text, and a
+passage of up to 25 words as a Back-Cover Text, to the end of the list
+of Cover Texts in the Modified Version.  Only one passage of
+Front-Cover Text and one of Back-Cover Text may be added by (or
+through arrangements made by) any one entity.  If the Document already
+includes a cover text for the same cover, previously added by you or
+by arrangement made by the same entity you are acting on behalf of,
+you may not add another; but you may replace the old one, on explicit
+permission from the previous publisher that added the old one.
+
+The author(s) and publisher(s) of the Document do not by this License
+give permission to use their names for publicity for or to assert or
+imply endorsement of any Modified Version.
+
+
+5. COMBINING DOCUMENTS
+
+You may combine the Document with other documents released under this
+License, under the terms defined in section 4 above for modified
+versions, provided that you include in the combination all of the
+Invariant Sections of all of the original documents, unmodified, and
+list them all as Invariant Sections of your combined work in its
+license notice.
+
+The combined work need only contain one copy of this License, and
+multiple identical Invariant Sections may be replaced with a single
+copy.  If there are multiple Invariant Sections with the same name but
+different contents, make the title of each such section unique by
+adding at the end of it, in parentheses, the name of the original
+author or publisher of that section if known, or else a unique number.
+Make the same adjustment to the section titles in the list of
+Invariant Sections in the license notice of the combined work.
+
+In the combination, you must combine any sections entitled "History"
+in the various original documents, forming one section entitled
+"History"; likewise combine any sections entitled "Acknowledgements",
+and any sections entitled "Dedications".  You must delete all sections
+entitled "Endorsements."
+
+
+6. COLLECTIONS OF DOCUMENTS
+
+You may make a collection consisting of the Document and other documents
+released under this License, and replace the individual copies of this
+License in the various documents with a single copy that is included in
+the collection, provided that you follow the rules of this License for
+verbatim copying of each of the documents in all other respects.
+
+You may extract a single document from such a collection, and distribute
+it individually under this License, provided you insert a copy of this
+License into the extracted document, and follow this License in all
+other respects regarding verbatim copying of that document.
+
+
+7. AGGREGATION WITH INDEPENDENT WORKS
+
+A compilation of the Document or its derivatives with other separate
+and independent documents or works, in or on a volume of a storage or
+distribution medium, does not as a whole count as a Modified Version
+of the Document, provided no compilation copyright is claimed for the
+compilation.  Such a compilation is called an "aggregate", and this
+License does not apply to the other self-contained works thus compiled
+with the Document, on account of their being thus compiled, if they
+are not themselves derivative works of the Document.
+
+If the Cover Text requirement of section 3 is applicable to these
+copies of the Document, then if the Document is less than one quarter
+of the entire aggregate, the Document's Cover Texts may be placed on
+covers that surround only the Document within the aggregate.
+Otherwise they must appear on covers around the whole aggregate.
+
+
+8. TRANSLATION
+
+Translation is considered a kind of modification, so you may
+distribute translations of the Document under the terms of section 4.
+Replacing Invariant Sections with translations requires special
+permission from their copyright holders, but you may include
+translations of some or all Invariant Sections in addition to the
+original versions of these Invariant Sections.  You may include a
+translation of this License provided that you also include the
+original English version of this License.  In case of a disagreement
+between the translation and the original English version of this
+License, the original English version will prevail.
+
+
+9. TERMINATION
+
+You may not copy, modify, sublicense, or distribute the Document except
+as expressly provided for under this License.  Any other attempt to
+copy, modify, sublicense or distribute the Document is void, and will
+automatically terminate your rights under this License.  However,
+parties who have received copies, or rights, from you under this
+License will not have their licenses terminated so long as such
+parties remain in full compliance.
+
+
+10. FUTURE REVISIONS OF THIS LICENSE
+
+The Free Software Foundation may publish new, revised versions
+of the GNU Free Documentation License from time to time.  Such new
+versions will be similar in spirit to the present version, but may
+differ in detail to address new problems or concerns.  See
+http://www.gnu.org/copyleft/.
+
+Each version of the License is given a distinguishing version number.
+If the Document specifies that a particular numbered version of this
+License "or any later version" applies to it, you have the option of
+following the terms and conditions either of that specified version or
+of any later version that has been published (not as a draft) by the
+Free Software Foundation.  If the Document does not specify a version
+number of this License, you may choose any version ever published (not
+as a draft) by the Free Software Foundation.
+
+
+ADDENDUM: How to use this License for your documents
+
+To use this License in a document you have written, include a copy of
+the License in the document and put the following copyright and
+license notices just after the title page:
+
+      Copyright (c)  YEAR  YOUR NAME.
+      Permission is granted to copy, distribute and/or modify this document
+      under the terms of the GNU Free Documentation License, Version 1.1
+      or any later version published by the Free Software Foundation;
+      with the Invariant Sections being LIST THEIR TITLES, with the
+      Front-Cover Texts being LIST, and with the Back-Cover Texts being LIST.
+      A copy of the license is included in the section entitled "GNU
+      Free Documentation License".
+
+If you have no Invariant Sections, write "with no Invariant Sections"
+instead of saying which ones are invariant.  If you have no
+Front-Cover Texts, write "no Front-Cover Texts" instead of
+"Front-Cover Texts being LIST"; likewise for Back-Cover Texts.
+
+If your document contains nontrivial examples of program code, we
+recommend releasing these examples in parallel under your choice of
+free software license, such as the GNU General Public License,
+to permit their use in free software.
