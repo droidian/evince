@@ -14,43 +14,97 @@ for more information. The used shortcuts are explained after the table:
 
 File                                                 | License | Copyright Holder
 -----------------------------------------------------+---------+-----------------
-backend/ev-async-renderer.c                          | GPLv2h  | Marco Pesenti Gritti
-backend/ev-async-renderer.h                          | GPLv2h  | Marco Pesenti Gritti
-backend/ev-attachment.c                              | GPLv2h  | Carlos Garcia Campos <carlosgc@gnome.org>
-backend/ev-attachment.h                              | GPLv2h  | Carlos Garcia Campos <carlosgc@gnome.org>
-backend/ev-backend-marshal.c                         | unspec  | unspec
-backend/ev-backend-marshalers.h                      | unspec  | unspec
-backend/ev-document.c                                | GPLv2h  | Marco Pesenti Gritti
-backend/ev-document-factory.c                        | GPLv2h  | Red Hat, Inc
-backend/ev-document-factory.h                        | GPLv2h  | Red Hat, Inc
-backend/ev-document-find.c                           | GPLv2h  | Red Hat, Inc
-backend/ev-document-find.h                           | GPLv2h  | Red Hat, Inc
-backend/ev-document-fonts.c                          | GPLv2h  | Red Hat, Inc
-backend/ev-document-fonts.h                          | GPLv2h  | Red Hat, Inc
-backend/ev-document.h                                | GPLv2h  | Marco Pesenti Gritti
-backend/ev-document-info.h                           | GPLv2h  | Marco Pesenti Gritti
-backend/ev-document-links.c                          | GPLv2h  | Red Hat, Inc
-backend/ev-document-links.h                          | GPLv2h  | Red Hat, Inc
-backend/ev-document-misc.c                           | unspec  | Marco Pesenti Gritti
-backend/ev-document-misc.h                           | GPLv2h  | Marco Pesenti Gritti
-backend/ev-document-security.c                       | GPLv2h  | Red Hat, Inc
-backend/ev-document-security.h                       | GPLv2h  | Red Hat, Inc
-backend/ev-document-thumbnails.c                     | GPLv2h  | Anders Carlsson <andersca@gnome.org>
-backend/ev-document-thumbnails.h                     | GPLv2h  | Anders Carlsson <andersca@gnome.org>
-backend/ev-link-action.c                             | GPLv2h  | Red Hat, Inc., Carlos Garcia Campos <carlosgc@gnome.org>
-backend/ev-link-action.h                             | GPLv2h  | Red Hat, Inc., Carlos Garcia Campos <carlosgc@gnome.org>
-backend/ev-link.c                                    | GPLv2h  | Red Hat, Inc.
-backend/ev-link-dest.c                               | GPLv2h  | Red Hat, Inc., Carlos Garcia Campos <carlosgc@gnome.org>
-backend/ev-link-dest.h                               | GPLv2h  | Red Hat, Inc., Carlos Garcia Campos <carlosgc@gnome.org>
-backend/ev-link.h                                    | GPLv2h  | Red Hat, Inc.
-backend/ev-ps-exporter.c                             | GPLv2h  | Martin Kretzschmar
-backend/ev-ps-exporter.h                             | GPLv2h  | Martin Kretzschmar
-backend/ev-render-context.c                          | unspec  | unspec
-backend/ev-render-context.h                          | GPLv2h  | unspec
-backend/ev-selection.c                               | GPLv2h  | Red Hat, Inc.
-backend/ev-selection.h                               | GPLv2h  | Marco Pesenti Gritti
-comics/comics-document.c                             | GPLv2h  | Teemu Tervo <teemu.tervo@gmx.net>
-comics/comics-document.h                             | GPLv2h  | Teemu Tervo <teemu.tervo@gmx.net>
+backend/comics/comics-document.c                     | GPLv2h  | Teemu Tervo <teemu.tervo@gmx.net>
+backend/comics/comics-document.h                     | GPLv2h  | Teemu Tervo <teemu.tervo@gmx.net>
+backend/djvu/djvu-document.c                         | GPLv2h  | Nickolay V. Shmyrev <nshmyrev@yandex.ru>
+backend/djvu/djvu-document.h                         | GPLv2h  | Nickolay V. Shmyrev <nshmyrev@yandex.ru>
+backend/djvu/djvu-document-private.h                 | GPLv2h  | Michael Hofmann <mh21@piware.de>
+backend/djvu/djvu-links.c                            | GPLv2h  | Pauli Virtanen <pav@iki.fi>
+backend/djvu/djvu-links.h                            | GPLv2h  | Pauli Virtanen <pav@iki.fi>
+backend/djvu/djvu-text.c                             | GPLv2h  | Michael Hofmann <mh21@piware.de>
+backend/djvu/djvu-text.h                             | GPLv2h  | Michael Hofmann <mh21@piware.de>
+backend/djvu/djvu-text-page.c                        | GPLv2h  | Michael Hofmann <mh21@piware.de>
+backend/djvu/djvu-text-page.h                        | GPLv2h  | Michael Hofmann <mh21@piware.de>
+backend/dvi/dvi-document.c                           | GPLv2h  | Nickolay V. Shmyrev <nshmyrev@yandex.ru>
+backend/dvi/dvi-document.h                           | GPLv2h  | Nickolay V. Shmyrev <nshmyrev@yandex.ru>
+backend/dvi/fonts.c                                  | unspec  | unspec
+backend/dvi/fonts.h                                  | unspec  | unspec
+backend/dvi/mdvi-lib/afmparse.c                      | Adobe   | Adobe Systems Incorporated.
+backend/dvi/mdvi-lib/afmparse.h                      | Adobe   | Adobe Systems Incorporated.
+backend/dvi/mdvi-lib/bitmap.c                        | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/bitmap.h                        | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/color.c                         | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/color.h                         | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/common.c                        | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/common.h                        | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/defaults.h                      | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/dviopcodes.h                    | unspec  | unspec
+backend/dvi/mdvi-lib/dviread.c                       | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/files.c                         | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/font.c                          | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/fontmap.c                       | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/fontmap.h                       | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/fontsrch.c                      | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/gf.c                            | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/hash.c                          | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/hash.h                          | unspec  | unspec
+backend/dvi/mdvi-lib/list.c                          | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/mdvi.h                          | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/pagesel.c                       | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/paper.c                         | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/paper.h                         | unspec  | unspec
+backend/dvi/mdvi-lib/pk.c                            | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/private.h                       | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/setup.c                         | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/special.c                       | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/sp-epsf.c                       | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/sysdeps.h                       | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/t1.c                            | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/tfm.c                           | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/tfmfile.c                       | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/tt.c                            | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/util.c                          | GPLv2h  | Matias Atria
+backend/dvi/mdvi-lib/vf.c                            | GPLv2h  | Matias Atria
+backend/dvi/pixbuf-device.c                          | unspec  | unspec
+backend/dvi/pixbuf-device.h                          | unspec  | unspec
+backend/impress/common.h                             | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/document.c                           | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/f_oasis.c                            | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/f_oo13.c                             | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/iksemel.c                            | LGPLv2h | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/iksemel.h                            | LGPLv2h | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/imposter.h                           | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/impress-document.c                   | GPLv2h  | Jonathan Blandford <jrb@gnome.org>, Bastien Nocera <hadess@hadess.net>
+backend/impress/impress-document.h                   | GPLv2h  | Jonathan Blandford <jrb@gnome.org>
+backend/impress/internal.h                           | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/r_back.c                             | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/r_draw.c                             | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/render.c                             | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/r_geometry.c                         | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/r_gradient.c                         | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/r_style.c                            | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/r_text.c                             | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/zip.c                                | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/impress/zip.h                                | GPL     | Gurer Ozen <madcat@e-kolay.net>
+backend/pdf/ev-poppler.cc                            | GPLv2h  | Red Hat, Inc.
+backend/pdf/ev-poppler.h                             | GPLv2h  | Red Hat, Inc.
+backend/pixbuf/pixbuf-document.c                     | GPLv2h  | Anders Carlsson <andersca@gnome.org>
+backend/pixbuf/pixbuf-document.h                     | GPLv2h  | Anders Carlsson <andersca@gnome.org>
+backend/ps/gsdefaults.c                              | GPLv2h  | The Free Software Foundation
+backend/ps/gsdefaults.h                              | GPLv2h  | The Free Software Foundation
+backend/ps/gsio.c                                    | GPLv2h  | The Free Software Foundation
+backend/ps/gsio.h                                    | GPLv2h  | The Free Software Foundation
+backend/ps/gstypes.h                                 | LGPLv2h | The Free Software Foundation
+backend/ps/ps.c                                      | GPLv2h  | Timothy O. Theisen 
+backend/ps/ps-document.c                             | LGPLv2h | The Free Software Foundation
+backend/ps/ps-document.h                             | LGPLv2h | The Free Software Foundation
+backend/ps/ps.h                                      | GPLv2h  | Timothy O. Theisen
+backend/ps/ps-interpreter.c                          | GPLv2h  | Free Software Foundation, Carlos Garcia Campos <carlosgc@gnome.org>
+backend/ps/ps-interpreter.h                          | GPLv2h  | Carlos Garcia Campos <carlosgc@gnome.org>
+backend/tiff/tiff2ps.c                               | SGI     | Sam Leffler, Silicon Graphics, Inc.
+backend/tiff/tiff2ps.h                               | GPLv2h  | rpath, Inc.
+backend/tiff/tiff-document.c                         | GPLv2h  | Jonathan Blandford <jrb@gnome.org>
+backend/tiff/tiff-document.h                         | GPLv2h  | Jonathan Blandford <jrb@gnome.org>
 cut-n-paste/recent-files/egg-recent-item.c           | GPLv2h  | James Willcox <jwillcox@cs.indiana.edu>
 cut-n-paste/recent-files/egg-recent-item.h           | unspec  | unspec
 cut-n-paste/recent-files/egg-recent-model.c          | GPLv2h  | James Willcox <jwillcox@cs.indiana.edu>
@@ -71,66 +125,19 @@ cut-n-paste/toolbar-editor/egg-toolbars-model.c      | GPLv2h  | Marco Pesenti G
 cut-n-paste/toolbar-editor/egg-toolbars-model.h      | GPLv2h  | Marco Pesenti Gritti, Christian Persch
 cut-n-paste/toolbar-editor/eggtypebuiltins.c         | unspec  | unspec
 cut-n-paste/toolbar-editor/eggtypebuiltins.h         | unspec  | unspec
+cut-n-paste/totem-screensaver/totem-scrsaver.c       | GPLv2h  | Bastien Nocera <hadess@hadess.net>
+cut-n-paste/totem-screensaver/totem-scrsaver.h       | GPLv2h  | Bastien Nocera <hadess@hadess.net>
 cut-n-paste/zoom-control/ephy-zoom-action.c          | GPLv2h  | Marco Pesenti Gritti, Christian Persch
 cut-n-paste/zoom-control/ephy-zoom-action.h          | GPLv2h  | Marco Pesenti Gritti, Christian Persch
 cut-n-paste/zoom-control/ephy-zoom.c                 | GPLv2h  | Christian Persch
 cut-n-paste/zoom-control/ephy-zoom-control.c         | GPLv2h  | Christian Persch
 cut-n-paste/zoom-control/ephy-zoom-control.h         | GPLv2h  | Christian Persch
 cut-n-paste/zoom-control/ephy-zoom.h                 | GPLv2h  | Christian Persch
-djvu/djvu-document.c                                 | GPLv2h  | Nickolay V. Shmyrev <nshmyrev@yandex.ru>
-djvu/djvu-document.h                                 | GPLv2h  | Nickolay V. Shmyrev <nshmyrev@yandex.ru>
-djvu/djvu-document-private.h                         | GPLv2h  | Michael Hofmann <mh21@piware.de>
-djvu/djvu-links.c                                    | GPLv2h  | Pauli Virtanen <pav@iki.fi>
-djvu/djvu-links.h                                    | GPLv2h  | Pauli Virtanen <pav@iki.fi>
-djvu/djvu-text.c                                     | GPLv2h  | Michael Hofmann <mh21@piware.de>
-djvu/djvu-text.h                                     | GPLv2h  | Michael Hofmann <mh21@piware.de>
-djvu/djvu-text-page.c                                | GPLv2h  | Michael Hofmann <mh21@piware.de>
-djvu/djvu-text-page.h                                | GPLv2h  | Michael Hofmann <mh21@piware.de>
-dvi/dvi-document.c                                   | GPLv2h  | Nickolay V. Shmyrev <nshmyrev@yandex.ru>
-dvi/dvi-document.h                                   | GPLv2h  | Nickolay V. Shmyrev <nshmyrev@yandex.ru>
-dvi/fonts.c                                          | unspec  | unspec
-dvi/fonts.h                                          | unspec  | unspec
-dvi/mdvi-lib/afmparse.c                              | Adobe   | Adobe Systems Incorporated.
-dvi/mdvi-lib/afmparse.h                              | Adobe   | Adobe Systems Incorporated.
-dvi/mdvi-lib/bitmap.c                                | GPLv2h  | Matias Atria
-dvi/mdvi-lib/bitmap.h                                | GPLv2h  | Matias Atria
-dvi/mdvi-lib/color.c                                 | GPLv2h  | Matias Atria
-dvi/mdvi-lib/color.h                                 | GPLv2h  | Matias Atria
-dvi/mdvi-lib/common.c                                | GPLv2h  | Matias Atria
-dvi/mdvi-lib/common.h                                | GPLv2h  | Matias Atria
-dvi/mdvi-lib/defaults.h                              | GPLv2h  | Matias Atria
-dvi/mdvi-lib/dviopcodes.h                            | unspec  | unspec
-dvi/mdvi-lib/dviread.c                               | GPLv2h  | Matias Atria
-dvi/mdvi-lib/files.c                                 | GPLv2h  | Matias Atria
-dvi/mdvi-lib/font.c                                  | GPLv2h  | Matias Atria
-dvi/mdvi-lib/fontmap.c                               | GPLv2h  | Matias Atria
-dvi/mdvi-lib/fontmap.h                               | GPLv2h  | Matias Atria
-dvi/mdvi-lib/fontsrch.c                              | GPLv2h  | Matias Atria
-dvi/mdvi-lib/gf.c                                    | GPLv2h  | Matias Atria
-dvi/mdvi-lib/hash.c                                  | GPLv2h  | Matias Atria
-dvi/mdvi-lib/hash.h                                  | unspec  | unspec
-dvi/mdvi-lib/list.c                                  | GPLv2h  | Matias Atria
-dvi/mdvi-lib/mdvi.h                                  | GPLv2h  | Matias Atria
-dvi/mdvi-lib/pagesel.c                               | GPLv2h  | Matias Atria
-dvi/mdvi-lib/paper.c                                 | GPLv2h  | Matias Atria
-dvi/mdvi-lib/paper.h                                 | unspec  | unspec
-dvi/mdvi-lib/pk.c                                    | GPLv2h  | Matias Atria
-dvi/mdvi-lib/private.h                               | GPLv2h  | Matias Atria
-dvi/mdvi-lib/setup.c                                 | GPLv2h  | Matias Atria
-dvi/mdvi-lib/special.c                               | GPLv2h  | Matias Atria
-dvi/mdvi-lib/sp-epsf.c                               | GPLv2h  | Matias Atria
-dvi/mdvi-lib/sysdeps.h                               | GPLv2h  | Matias Atria
-dvi/mdvi-lib/t1.c                                    | GPLv2h  | Matias Atria
-dvi/mdvi-lib/tfm.c                                   | GPLv2h  | Matias Atria
-dvi/mdvi-lib/tfmfile.c                               | GPLv2h  | Matias Atria
-dvi/mdvi-lib/tt.c                                    | GPLv2h  | Matias Atria
-dvi/mdvi-lib/util.c                                  | GPLv2h  | Matias Atria
-dvi/mdvi-lib/vf.c                                    | GPLv2h  | Matias Atria
-dvi/pixbuf-device.c                                  | unspec  | unspec
-dvi/pixbuf-device.h                                  | unspec  | unspec
-help/C/evince.xml                                    | GFDL1.1 | Sun Microsystems, Nickolay V. Shmyrev
 help/bg/evince.xml                                   | GFDL1.1 | unspec
+help/ca/evince.xml                                   | GFDL1.1 | Sun Microsystems, Nickolay V. Shmyrev
+help/C/evince.xml                                    | GFDL1.1 | Sun Microsystems, Nickolay V. Shmyrev
 help/el/evince.xml                                   | GFDL1.1 | unspec
+help/en_GB/evince.xml                                | GFDL1.1 | David Lodge (dave@cirt.net)
 help/es/evince.xml                                   | GFDL1.1 | Francisco Javier F. Serrador, Jorge Gonzalez Gonzalez
 help/fi/evince.xml                                   | GFDL1.1 | Tommi Vainikainen, Flammie Pirinen
 help/fr/evince.xml                                   | GFDL1.1 | Jonathan Ernst, Claude Paroz
@@ -140,37 +147,50 @@ help/ru/evince.xml                                   | GFDL1.1 | unspec
 help/sr/evince.xml                                   | GFDL1.1 | unspec
 help/sv/evince.xml                                   | GFDL1.1 | Daniel Nylander
 help/uk/evince.xml                                   | GFDL1.1 | unspec
-impress/common.h                                     |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/document.c                                   |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/f_oasis.c                                    |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/f_oo13.c                                     |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/iksemel.c                                    | LGPLv2h | Gurer Ozen <madcat@e-kolay.net>
-impress/iksemel.h                                    | LGPLv2h | Gurer Ozen <madcat@e-kolay.net>
-impress/imposter.h                                   |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/impress-document.c                           | GPLv2h  | Jonathan Blandford <jrb@gnome.org>, Bastien Nocera <hadess@hadess.net>
-impress/impress-document.h                           | GPLv2h  | Jonathan Blandford <jrb@gnome.org>
-impress/internal.h                                   |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/r_back.c                                     |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/r_draw.c                                     |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/render.c                                     |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/r_geometry.c                                 |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/r_gradient.c                                 |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/r_style.c                                    |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/r_text.c                                     |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/zip.c                                        |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-impress/zip.h                                        |   GPL   | Gurer Ozen <madcat@e-kolay.net>
-lib/ev-debug.c                                       | GPLv2h  | Marco Pesenti Gritti
-lib/ev-debug.h                                       | GPLv2h  | Marco Pesenti Gritti
-lib/ev-file-helpers.c                                | GPLv2h  | Jorn Baayen
-lib/ev-file-helpers.h                                | GPLv2h  | Jorn Baayen
-lib/ev-gui.c                                         | GPLv2h  | Marco Pesenti Gritti
-lib/ev-gui.h                                         | GPLv2h  | Marco Pesenti Gritti
-lib/ev-tooltip.c                                     | GPLv2h  | Red Hat, Inc.
-lib/ev-tooltip.h                                     | GPLv2h  | Red Hat, Inc.
-pdf/ev-poppler.cc                                    | GPLv2h  | Red Hat, Inc.
-pdf/ev-poppler.h                                     | GPLv2h  | Red Hat, Inc.
-pixbuf/pixbuf-document.c                             | GPLv2h  | Anders Carlsson <andersca@gnome.org>
-pixbuf/pixbuf-document.h                             | GPLv2h  | Anders Carlsson <andersca@gnome.org>
+libdocument/ev-async-renderer.c                      | GPLv2h  | Marco Pesenti Gritti
+libdocument/ev-async-renderer.h                      | GPLv2h  | Marco Pesenti Gritti
+libdocument/ev-attachment.c                          | GPLv2h  | Carlos Garcia Campos <carlosgc@gnome.org>
+libdocument/ev-attachment.h                          | GPLv2h  | Carlos Garcia Campos <carlosgc@gnome.org>
+libdocument/ev-backend-marshal.c                     | unspec  | unspec
+libdocument/ev-backend-marshalers.h                  | unspec  | unspec
+libdocument/ev-document.c                            | GPLv2h  | Marco Pesenti Gritti
+libdocument/ev-document-factory.c                    | GPLv2h  | Red Hat, Inc
+libdocument/ev-document-factory.h                    | GPLv2h  | Red Hat, Inc
+libdocument/ev-document-find.c                       | GPLv2h  | Red Hat, Inc
+libdocument/ev-document-find.h                       | GPLv2h  | Red Hat, Inc
+libdocument/ev-document-fonts.c                      | GPLv2h  | Red Hat, Inc
+libdocument/ev-document-fonts.h                      | GPLv2h  | Red Hat, Inc
+libdocument/ev-document.h                            | GPLv2h  | Marco Pesenti Gritti
+libdocument/ev-document-images.c                     | GPLv2h  | 2006 Carlos Garcia Campos <carlosgc@gnome.org>
+libdocument/ev-document-images.h                     | GPLv2h  | 2006 Carlos Garcia Campos <carlosgc@gnome.org>
+libdocument/ev-document-info.h                       | GPLv2h  | Marco Pesenti Gritti
+libdocument/ev-document-links.c                      | GPLv2h  | Red Hat, Inc
+libdocument/ev-document-links.h                      | GPLv2h  | Red Hat, Inc
+libdocument/ev-document-misc.c                       | unspec  | Marco Pesenti Gritti
+libdocument/ev-document-misc.h                       | GPLv2h  | Marco Pesenti Gritti
+libdocument/ev-document-security.c                   | GPLv2h  | Red Hat, Inc
+libdocument/ev-document-security.h                   | GPLv2h  | Red Hat, Inc
+libdocument/ev-document-thumbnails.c                 | GPLv2h  | Anders Carlsson <andersca@gnome.org>
+libdocument/ev-document-thumbnails.h                 | GPLv2h  | Anders Carlsson <andersca@gnome.org>
+libdocument/ev-document-transition.c                 | GPLv2h  | 2006 Carlos Garcia Campos <carlosgc@gnome.org>
+libdocument/ev-document-transition.h                 | GPLv2h  | 2006 Carlos Garcia Campos <carlosgc@gnome.org>
+libdocument/ev-file-exporter.c                       | GPLv2h  | 2004 Martin Kretzschmar <martink@gnome.org>
+libdocument/ev-file-exporter.h                       | GPLv2h  | 2004 Martin Kretzschmar <martink@gnome.org>
+libdocument/ev-file-helpers.c                        | GPLv2h  | Jorn Baayen
+libdocument/ev-file-helpers.h                        | GPLv2h  | Jorn Baayen
+libdocument/ev-image.c                               | GPLv2h  | 2006 Carlos Garcia Campos <carlosgc@gnome.org>
+libdocument/ev-image.h                               | GPLv2h  | 2006 Carlos Garcia Campos <carlosgc@gnome.org>
+libdocument/ev-link-action.c                         | GPLv2h  | Red Hat, Inc., Carlos Garcia Campos <carlosgc@gnome.org>
+libdocument/ev-link-action.h                         | GPLv2h  | Red Hat, Inc., Carlos Garcia Campos <carlosgc@gnome.org>
+libdocument/ev-link.c                                | GPLv2h  | Red Hat, Inc.
+libdocument/ev-link-dest.c                           | GPLv2h  | Red Hat, Inc., Carlos Garcia Campos <carlosgc@gnome.org>
+libdocument/ev-link-dest.h                           | GPLv2h  | Red Hat, Inc., Carlos Garcia Campos <carlosgc@gnome.org>
+libdocument/ev-link.h                                | GPLv2h  | Red Hat, Inc.
+libdocument/ev-render-context.c                      | unspec  | unspec
+libdocument/ev-render-context.h                      | GPLv2h  | unspec
+libdocument/ev-selection.c                           | GPLv2h  | Red Hat, Inc.
+libdocument/ev-selection.h                           | GPLv2h  | Marco Pesenti Gritti
+po/ar.po                                             | GPLv2h  | 2006 Yousef Raffah <yousef@raffah.com>, 2006, 2007 Khaled Hosny <khaledhosny@eglug.org>
 po/be.po                                             | GPLv2h  | Evince maintainers
 po/bg.po                                             | GPLv2h  | Evince maintainers
 po/bn_IN.po                                          | GPLv2h  | Evince maintainers
@@ -204,6 +224,7 @@ po/ko.po                                             | unspec  | unspec
 po/ku.po                                             | GPLv2h  | Canonical Ltd, and Rosetta Contributors 2005
 po/lt.po                                             | GPLv2h  | The Gnome Foundation
 po/lv.po                                             | GPLv2h  | Gnome i18n Project for Latvian
+po/mg.po                                             | GPLv2h  | 2006 Fano Rajaonarisoa <fano@isvtec.com>, 2007 Thierry Randrianiriana <thierry@isvtec.com>
 po/mk.po                                             | GPLv2h  | Evince maintainers
 po/ml.po                                             | GPLv2h  | Evince maintainers
 po/mr.po                                             | GPLv2h  | Evince maintainers
@@ -237,19 +258,12 @@ po/zh_TW.po                                          | GPLv2h  | Free Software F
 properties/ev-properties-main.c                      | GPLv2.1h| Eazel Inc., Andrew Sobala <aes@gnome.org>, Bastien Nocera <hadess@hadess.net>
 properties/ev-properties-view.c                      | GPLv2h  | Red Hat, Inc
 properties/ev-properties-view.h                      | GPLv2h  | Red Hat, Inc
-ps/gsdefaults.c                                      | GPLv2h  | The Free Software Foundation
-ps/gsdefaults.h                                      | GPLv2h  | The Free Software Foundation
-ps/gsio.c                                            | GPLv2h  | The Free Software Foundation
-ps/gsio.h                                            | GPLv2h  | The Free Software Foundation
-ps/gstypes.h                                         | LGPLv2h | The Free Software Foundation
-ps/ps.c                                              | GPLv2h  | Timothy O. Theisen 
-ps/ps-document.c                                     | LGPLv2h | The Free Software Foundation
-ps/ps-document.h                                     | LGPLv2h | The Free Software Foundation
-ps/ps.h                                              | GPLv2h  | Timothy O. Theisen
 shell/eggfindbar.c                                   | GPLv2h  | Red Hat, Inc.
 shell/eggfindbar.h                                   | GPLv2h  | Red Hat, Inc.
 shell/ev-application.c                               | GPLv2h  | Martin Kretzschma
 shell/ev-application.h                               | GPLv2h  | Martin Kretzschma
+shell/ev-history.c                                   | GPLv2h  | 2005 Marco Pesenti Gritti
+shell/ev-history.h                                   | GPLv2h  | 2005 Marco Pesenti Gritti
 shell/ev-job-queue.c                                 | unspec  | unspec
 shell/ev-job-queue.h                                 | GPLv2h  | Red Hat, Inc
 shell/ev-jobs.c                                      | unspec  | unspec
@@ -258,14 +272,20 @@ shell/ev-marshal.c                                   | unspec  | unspec
 shell/ev-marshal.h                                   | unspec  | unspec
 shell/ev-metadata-manager.c                          | GPLv2h  | Paolo Maggi
 shell/ev-metadata-manager.h                          | GPLv2h  | Paolo Maggi
+shell/ev-navigation-action.c                         | GPLv2h  | 2003, 2004 Marco Pesenti Gritti, 2003, 2004 Christian Persch
+shell/ev-navigation-action.h                         | GPLv2h  | 2003, 2004 Marco Pesenti Gritti, 2003, 2004 Christian Persch
+shell/ev-navigation-action-widget.c                  | GPLv2h  | 2003, 2004 Marco Pesenti Gritti, 2003, 2004 Christian Persch
+shell/ev-navigation-action-widget.h                  | GPLv2h  | 2003, 2004 Marco Pesenti Gritti, 2003, 2004 Christian Persch
 shell/ev-page-action.c                               | GPLv2h  | Marco Pesenti Gritti, Christian Persch
 shell/ev-page-action.h                               | GPLv2h  | Marco Pesenti Gritti, Christian Persch
+shell/ev-page-action-widget.c                        | GPLv2h  | 2003, 2004 Marco Pesenti Gritti, 2003, 2004 Christian Persch
+shell/ev-page-action-widget.h                        | GPLv2h  | 2003, 2004 Marco Pesenti Gritti, 2003, 2004 Christian Persch
 shell/ev-page-cache.c                                | unspec  | unspec
 shell/ev-page-cache.h                                | GPLv2h  | Red Hat, Inc
-shell/ev-password.h                                  | GPLv2h  | Red Hat, Inc
 shell/ev-password.c                                  | GPLv2h  | Red Hat, Inc
-shell/ev-password-view.h                             | GPLv2h  | Red Hat, Inc
+shell/ev-password.h                                  | GPLv2h  | Red Hat, Inc
 shell/ev-password-view.c                             | GPLv2h  | Red Hat, Inc
+shell/ev-password-view.h                             | GPLv2h  | Red Hat, Inc
 shell/ev-pixbuf-cache.c                              | unspec  | unspec
 shell/ev-pixbuf-cache.h                              | GPLv2h  | Red Hat, Inc
 shell/ev-print-job.c                                 | GPLv2h  | Martin Kretzschmar
@@ -276,33 +296,31 @@ shell/ev-properties-fonts.c                          | GPLv2h  | Red Hat, Inc
 shell/ev-properties-fonts.h                          | GPLv2h  | Red Hat, Inc
 shell/ev-sidebar-attachments.c                       | GPLv2h  | Carlos Garcia Campos <carlosgc@gnome.org>
 shell/ev-sidebar-attachments.h                       | GPLv2h  | Carlos Garcia Campos <carlosgc@gnome.org>
+shell/ev-sidebar.c                                   | GPLv2h  | Red Hat, Inc.
+shell/ev-sidebar.h                                   | GPLv2h  | Red Hat, Inc.
+shell/ev-sidebar-links.c                             | GPLv2h  | Red Hat, Inc.
+shell/ev-sidebar-links.h                             | GPLv2h  | Red Hat, Inc.
 shell/ev-sidebar-page.c                              | GPLv2h  | Marco Pesenti Gritti
 shell/ev-sidebar-page.h                              | GPLv2h  | Marco Pesenti Gritti 
 shell/ev-sidebar-thumbnails.c                        | GPLv2h  | Red Hat, Inc., Anders Carlsson <andersca@gnome.org
 shell/ev-sidebar-thumbnails.h                        | GPLv2h  | Red Hat, Inc.
 shell/ev-stock-icons.c                               | GPLv2h  | Martin Kretzschmar
 shell/ev-stock-icons.h                               | GPLv2h  | Martin Kretzschmar
+shell/ev-tooltip.c                                   | GPLv2h  | Red Hat, Inc.
+shell/ev-tooltip.h                                   | GPLv2h  | Red Hat, Inc.
 shell/ev-utils.c                                     | GPLv2h  | Anders Carlsson <andersca@gnome.org>
 shell/ev-utils.h                                     | GPLv2h  | Anders Carlsson <andersca@gnome.org>
 shell/ev-view-accessible.c                           | GPLv2h  | Red Hat, Inc.
 shell/ev-view-accessible.h                           | GPLv2h  | Red Hat, Inc.
-shell/ev-view-private.h                              | GPLv2h  | Red Hat, Inc.
 shell/ev-view.c                                      | GPLv2h  | Red Hat, Inc.
 shell/ev-view.h                                      | GPLv2h  | Red Hat, Inc.
-shell/ev-window-title.c                              | GPLv2h  | Red Hat, Inc.
-shell/ev-window-title.h                              | GPLv2h  | Red Hat, Inc.
+shell/ev-view-private.h                              | GPLv2h  | Red Hat, Inc.
 shell/ev-window.c                                    | GPLv2h  | Martin Kretzschmar, Red Hat, Inc., Marco Pesenti Gritti, Christian Persch
 shell/ev-window.h                                    | GPLv2h  | Martin Kretzschmar
-shell/ev-sidebar.c                                   | GPLv2h  | Red Hat, Inc.
-shell/ev-sidebar.h                                   | GPLv2h  | Red Hat, Inc.
-shell/ev-sidebar-links.c                             | GPLv2h  | Red Hat, Inc.
-shell/ev-sidebar-links.h                             | GPLv2h  | Red Hat, Inc.
+shell/ev-window-title.c                              | GPLv2h  | Red Hat, Inc.
+shell/ev-window-title.h                              | GPLv2h  | Red Hat, Inc.
 shell/main.c                                         | GPLv2h  | Marco Pesenti Gritti
 thumbnailer/evince-thumbnailer.c                     | GPLv2h  | Fernando Herrera <fherrera@onirica.com>
-tiff/tiff2ps.c                                       |  SGI    | Sam Leffler, Silicon Graphics, Inc.
-tiff/tiff2ps.h                                       | GPLv2h  | rpath, Inc.
-tiff/tiff-document.c                                 | GPLv2h  | Jonathan Blandford <jrb@gnome.org>
-tiff/tiff-document.h                                 | GPLv2h  | Jonathan Blandford <jrb@gnome.org>
 
 Shortcuts:
  - "unspec":    The file contains no specific copyright/license notice. This
