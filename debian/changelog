@@ -45,6 +45,8 @@ evince (0.8.0-1) experimental; urgency=low
       - Fixed display of foreign character sets like japanese (Closes:
         #379105)
       - Fixed a bunch of rendering quirks (Closes: #383399, #394124)
+      - Add support for a bookmark system that defaults to opening
+        a file on the page it was closed before. (Closes: #342839)
 
  -- Marc 'HE' Brockschmidt <he@debian.org>  Sat, 24 Mar 2007 17:57:56 +0100
 
