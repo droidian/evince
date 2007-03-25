@@ -23,6 +23,7 @@ Description: Document (postscript, pdf) viewer
  Homepage: http://www.gnome.org/projects/evince/
 
 Package: evince-dbg
+Priority: extra
 Architecture: any
 Depends: evince (= ${binary:Version})
 Description: Document (postscript, pdf) viewer - debugging symbols
