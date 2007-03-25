@@ -33,7 +33,7 @@ evince (0.8.0-1) experimental; urgency=low
       - Fixed various problems happening when trying to reload documents.
         (Closes: #388368, #396467, #405130)
       - Fixed mime type detection to use file data, not the file name.
-        (Closes: #327769)
+        (Closes: #327769, #368351)
       - Fixed fullscreen/presentation mode problems. The toolbar is now
         only displayed on relevant (virtual) screens, zooming works
         properly. (Closes: #399906)
@@ -41,6 +41,10 @@ evince (0.8.0-1) experimental; urgency=low
         RGB images. (Closes: #367612)
       - Fixed documentation to clear up the "scroll by dragging the mouse"
         feature. (Closes: #384749)
+      - Fixed page-(down|up) behaviour in Dual View-mode. (Closes: #359143)
+      - Fixed display of foreign character sets like japanese (Closes:
+        #379105)
+      - Fixed a bunch of rendering quirks (Closes: #383399, #394124)
 
  -- Marc 'HE' Brockschmidt <he@debian.org>  Sat, 24 Mar 2007 17:57:56 +0100
 

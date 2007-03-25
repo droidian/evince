@@ -10,7 +10,7 @@ include /usr/share/gnome-pkg-tools/1/rules/check-dist.mk
 
 DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper --enable-djvu \
 			--enable-dvi --with-print=gtk --enable-pixbuf \
-			--enable-comics --enable-impress
+			--enable-comics --enable-impress --disable-gtk-doc
 
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so
 
