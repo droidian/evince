@@ -1,3 +1,12 @@
+evince (0.8.1-1) experimental; urgency=low
+
+  * New upstream version:
+    + debian/copyright: Updated
+    + debian/control: Add explicit dep on librsvg2-common from experimental
+      to allow autobuilding.
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Mon, 09 Apr 2007 23:17:21 +0200
+
 evince (0.8.0-1) experimental; urgency=low
 
   [ Loic Minier ]
