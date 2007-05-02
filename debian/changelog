@@ -1,3 +1,14 @@
+evince (0.8.1-2) UNRELEASED; urgency=low
+
+  * debian/control.in:
+     * Wrap build-depends and re-order them
+     * Replace b-d on "libkpathsea4-dev | libkpathsea-dev" by 
+       "libkpathsea-dev", which is a real package nowadays.
+     * Add Suggests: unrar
+     * Fix little oversight in evince-dbg description
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Wed, 02 May 2007 15:22:31 +0200
+
 evince (0.8.1-1) experimental; urgency=low
 
   * New upstream version:
