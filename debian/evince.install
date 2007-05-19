@@ -1,1 +1,16 @@
+debian/tmp/etc/gconf/schemas/ usr/share/gconf/
+debian/tmp/usr/share/applications/evince.desktop
+debian/tmp/usr/share/evince/
+debian/tmp/usr/share/icons/hicolor/
+debian/tmp/usr/share/gnome/help/evince/
+debian/tmp/usr/share/locale/
+debian/tmp/usr/share/omf/evince/
+debian/tmp/usr/share/man/man1/
+
+#Don't install gtk-doc for usual application package:
+#debian/tmp/usr/share/gtk-doc/
+
 debian/evince.xpm usr/share/pixmaps/
+debian/tmp/usr/bin/evince
+debian/tmp/usr/bin/evince-thumbnailer
+debian/tmp/usr/lib/nautilus/extensions-1.0/libevince-properties-page.so

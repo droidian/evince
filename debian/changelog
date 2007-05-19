@@ -1,3 +1,137 @@
+evince (0.8.1-2) unstable; urgency=low
+
+  * debian/control.in:
+     * Wrap build-depends and re-order them
+     * Replace b-d on "libkpathsea4-dev | libkpathsea-dev" by 
+       "libkpathsea-dev", which is a real package nowadays.
+     * Add Suggests: unrar
+     * Fix little oversight in evince-dbg description
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Wed, 02 May 2007 15:22:31 +0200
+
+evince (0.8.1-1) experimental; urgency=low
+
+  * New upstream version:
+    + debian/copyright: Updated
+    + debian/control: Add explicit dep on librsvg2-common from experimental
+      to allow autobuilding.
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Mon, 09 Apr 2007 23:17:21 +0200
+
+evince (0.8.0-1) experimental; urgency=low
+
+  [ Loic Minier ]
+  * Fix watch file to track all releases and use HTTP.
+  * Add a get-orig-source target to retrieve the upstream tarball.
+  * Recommend gnome-icon-theme for the icon used in the .desktop file.
+  * Include the new check-dist Makefile to prevent accidental uploads to
+    unstable; bump build-dep on gnome-pkg-tools to >= 0.10.
+
+  [ Marc 'HE' Brockschmidt ]
+  * Move to debhelper compat level 5.
+  * Add evince-dbg with the debugging symbols. With the number of crashes,
+    this seems to be needed quite often.
+  * Add evince.xpm (converted from the evince.png in the package) to be
+    installed as menu icon. (Closes: #391194)
+  * Put my name in the Maintainer field.
+  * Update and fix debian/copyright.
+  * Add manpage for evince-thumbnailer and install it.
+  * New upstream release:
+    + debian/control: 
+      - Updated (build-)depends (Closes: #332633, #373162)
+      - Add dependency on gnome-icon-theme (>= 2.17.1), as evince uses
+        some icons from there.
+    + debian/evince.1: Remove our manpage, upstream included one.
+    + debian/patches/10_CVE-2006-5864.patch: Removed, included upstream.
+    + Upstream changes:
+      - Fixed PS security problem. (Closes: #400904)
+      - Fixed printing of multiple copies. (Closes: #401172)
+      - Added support for compressed document types. (Closes: #329620,
+        #388188, #395119, #412613)
+      - Reworked printing dialog, allowing to print only even/odd pages
+        and fixing various problems. (Closes: #402398, #355845)
+      - Fixed various problems happening when trying to reload documents.
+        (Closes: #388368, #396467, #405130)
+      - Fixed mime type detection to use file data, not the file name.
+        (Closes: #327769, #368351)
+      - Fixed fullscreen/presentation mode problems. The toolbar is now
+        only displayed on relevant (virtual) screens, zooming works
+        properly. (Closes: #399906)
+      - Fixed generation of thumbnail images to not provide RGBA, but only
+        RGB images. (Closes: #367612)
+      - Fixed documentation to clear up the "scroll by dragging the mouse"
+        feature. (Closes: #384749)
+      - Fixed page-(down|up) behaviour in Dual View-mode. (Closes: #359143)
+      - Fixed display of foreign character sets like japanese (Closes:
+        #379105)
+      - Fixed a bunch of rendering quirks (Closes: #383399, #394124)
+      - Add support for a bookmark system that defaults to opening
+        a file on the page it was closed before. (Closes: #342839)
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Sat, 24 Mar 2007 17:57:56 +0100
+
+evince (0.6.1-1) experimental; urgency=low
+
+  * Bump libgnomeui-dev build-dep to >= 2.14.1-2 for the Gtk transition.
+  * New upstream release.
+    - Bump libpoppler-glib-dev build-dep to >= 0.5.4.
+
+ -- Loic Minier <lool@dooz.org>  Wed, 11 Oct 2006 14:00:53 +0200
+
+evince (0.6.0-1) experimental; urgency=low
+
+  [ Sebastien Bacher ]
+  * debian/watch:
+    - updated
+
+  [ Loic Minier ]
+  * Fix bashism.
+
+  [ Josselin Mouette ]
+  * New upstream release.
+  * Bump needed build-dependencies.
+  * Remove libgnomeprint requirements.
+  * Build-depend on GTK+ 2.10 and force use of GTK-print.
+  * Build-depend on libdbus-glib-1-dev and libdbus-glib-1-dev.
+  * Enable pixbuf, comics and impress backends.
+  * Require intltool 0.35.0.
+  * 04_gdk_threads_init.patch: removed, integrated upstream.
+
+ -- Josselin Mouette <joss@debian.org>  Sat,  9 Sep 2006 22:43:08 +0200
+
+evince (0.5.3-1) experimental; urgency=low
+
+  [ Sebastien Bacher ]
+  * New upstream versions:
+    - fix a typo to the documentation (Closes: #320266)
+    - odd pages are placed to the right in dual page mode (Closes: #356040)
+    - store window settings by document (Closes: #327408)
+  * Patches from the Ubuntu package:
+  * debian/patches/03_presentation_change_page.patch:
+    - fix previous and next keys usage to presentation mode (GNOME: #332993)
+  * debian/patches/04_gdk_threads_init.patch:
+    - call gdk_threads_init, fix issues when using an authentification dialog
+      (Ubuntu: #343347)
+  * debian/patches/05_fix_build_with_djvulibre.patch:
+    - fix build with the new djvulibre
+  * debian/control.in:
+    - Build-Depends on gnome-doc-utils and gnome-keyring according to configure
+    - Depends on "gs-esp | gs" (Closes: #335108)
+    - updated djvulibre requirement according to the configure
+    - updated the description to mention poppler instead of xpdf
+      (Closes: #332197)
+    - updated the poppler requirement to build with the new soname
+  * debian/evince.mime:
+    - list dvi and djvu, change suggested
+      by Pierre THIERRY <nowhere.man@levallois.eu.org> (Closes: #337784)
+
+  [ Josselin Mouette ]
+  * Even newer upstream release.
+  * 03_presentation_change_page.patch, 05_fix_build_with_djvulibre.patch:
+    removed, integrated upstream.
+
+ -- Josselin Mouette <joss@debian.org>  Sun, 18 Jun 2006 16:40:50 +0200
+
 evince (0.4.0-5) unstable; urgency=low
 
   * Recommend gnome-icon-theme for the icon used in the .desktop file.
@@ -8,27 +142,9 @@ evince (0.4.0-5) unstable; urgency=low
 
 evince (0.4.0-4) unstable; urgency=low
 
-  [ Loic Minier ]
-  * Add a get-orig-source target to retrieve the upstream tarball.
-
   [ Marc 'HE' Brockschmidt ]
-  * debian/patches/20_fix_multiple_copies.patch:
-     Backported from upstream, allowing people to print more than one copy of
-     one document in one go. (Closes: #401172)
   * debian/patches/21_fix_doc_typo.patch:
      Fix typo in documentation. (Closes: #320266)
-  * debian/evince.mime:
-     Add entries for DVI and DjVu documents. (Closes: 337784)
-  * debian/control: 
-    - Note that evince's PDF rendering is done by poppler, not
-      by XPdf (Closes: #332197)
-    - Add dependency on gs-esp | gs, as we need it for postscript
-      rendering. (Closes: 335108)
-    - Version build-dependencies on gnome-doc-utils and libdjvulibre-dev
-      (Closes: #332633)
-    - Put my name in the maintainer field. Thanks, Sebastien, for your work.
-      I hope you don't forget that you are still co-maintainer :-)
-  * debian/copyright: Update FSF address
 
  -- Marc 'HE' Brockschmidt <he@debian.org>  Fri, 12 Jan 2007 13:56:37 +0100
 
