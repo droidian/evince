@@ -1,0 +1,3 @@
+?package(evince-gtk):needs="X11" section="Apps/Viewers"\
+ title="Evince" command="/usr/bin/evince"\
+ hints="Documents" icon="/usr/share/pixmaps/evince.xpm"

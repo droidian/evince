@@ -1,11 +1,35 @@
-evince (0.8.1-2) UNRELEASED; urgency=low
+evince (0.9.0-1) experimental; urgency=low
 
+  * New upstream release. New features include:
+    + Printing support in djvu documents
+    + Optional drop of libgnome dependency
+    + Print button for preview mode
+    + Remember print settings
+    + History button improvements
+   Some bugfixes: 
+    + Fixes for issues with fullscreen toolbar
+    + Fix for crash in comics backend when filename contains quote
+    + Fix unhelpful messages on invalid URLs. (Closes: #415692)
+
+  * Added needed magic to provide gtk-only packages (evince-gtk and
+    evince-gtk-dbg). (Closes: #399439)
+  * debian/patches/10-comics_fix_INCLUDES.patch: Added to work around
+     Gnome #439925)
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Sun, 20 May 2007 12:47:56 +0200
+
+evince (0.8.1-2) unstable; urgency=low
+
+  * Upload to unstable; drop check-dist include.
   * debian/control.in:
      * Wrap build-depends and re-order them
      * Replace b-d on "libkpathsea4-dev | libkpathsea-dev" by 
        "libkpathsea-dev", which is a real package nowadays.
      * Add Suggests: unrar
      * Fix little oversight in evince-dbg description
+     * Remove unneeded librsvg2-common build-dep that was only there to
+       soothe sbuild.
+  * debian/copyright: Drop GFDL include, point to the common-licenses one.
 
  -- Marc 'HE' Brockschmidt <he@debian.org>  Wed, 02 May 2007 15:22:31 +0200
 

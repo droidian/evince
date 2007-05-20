@@ -1,0 +1,12 @@
+diff -Nwru evince-0.9.0/backend/comics/Makefile.in evince-0.9.0.patched/backend/comics/Makefile.in
+--- evince-0.9.0/backend/comics/Makefile.in	2007-05-14 20:13:26.000000000 +0000
++++ evince-0.9.0.patched/backend/comics/Makefile.in	2007-05-20 11:37:57.000000000 +0000
+@@ -305,7 +305,7 @@
+ INCLUDES = \
+ 	-I$(top_srcdir)		\
+ 	-I$(top_srcdir)/libdocument \
+-	$(LIB_CFLAGS)
++	$(BACKEND_CFLAGS)
+ 
+ noinst_LTLIBRARIES = libcomicsdocument.la
+ libcomicsdocument_la_SOURCES = \

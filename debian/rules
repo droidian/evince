@@ -1,5 +1,9 @@
 #!/usr/bin/make -f
-# -*- mode: makefile; coding: utf-8 -*-
+
+DEB_BUILDDIR := $(CURDIR)/debian/build/evince
+DEB_DESTDIR := $(CURDIR)/debian/tmp/
+DEB_BUILDDIR_evince-gtk := $(CURDIR)/debian/build/evince-gtk
+DEB_DESTDIR_evince-gtk := $(CURDIR)/debian/tmp-gtk
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/gnome.mk
@@ -14,9 +18,45 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper --enable-djvu \
 
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so
 
+#cdbs should do this, but doesn't (see #424636)
+clean::
+	rm -rf $(DEB_BUILDDIR) $(DEB_BUILDDIR_evince-gtk)
+
+configure/evince-gtk:: $(DEB_BUILDDIR_evince-gtk)/config.status
+$(DEB_BUILDDIR_evince-gtk)/config.status:
+	cd $(DEB_BUILDDIR_evince-gtk) && \
+		$(DEB_CONFIGURE_SCRIPT_ENV) $(DEB_CONFIGURE_SCRIPT) \
+			$(DEB_CONFIGURE_NORMAL_ARGS) \
+			$(cdbs_configure_flags) \
+			$(DEB_CONFIGURE_EXTRA_FLAGS) \
+			--without-libgnome --disable-nautilus \
+			$(DEB_CONFIGURE_USER_FLAGS) 
+
+build/evince-gtk::
+	make -C $(DEB_BUILDDIR_evince-gtk)
+
+install/evince-gtk::
+	make -C $(DEB_BUILDDIR_evince-gtk) install DESTDIR=$(DEB_DESTDIR_evince-gtk)
+
 binary-install/evince::
+	cp debian/evince.install.disabled debian/evince.install
+	dh_install -pevince --sourcedir=$(DEB_DESTDIR)
 	dh_installmime -pevince
+	rm debian/evince.install
+	dh_install -pevince debian/evince.xpm /usr/share/pixmaps/
 
 binary-install/evince-dbg::
 	rm -rf debian/evince-dbg/usr/share/doc/evince-dbg
 	dh_link -pevince-dbg usr/share/doc/evince usr/share/doc/evince-dbg
+
+binary-install/evince-gtk::
+	cp debian/evince-gtk.install.disabled debian/evince-gtk.install
+	dh_install -pevince-gtk --sourcedir=$(DEB_DESTDIR_evince-gtk)
+	dh_installmime -pevince-gtk
+	rm debian/evince-gtk.install
+	dh_install -pevince-gtk debian/evince.xpm /usr/share/pixmaps/
+
+binary-install/evince-gtk-dbg::
+	rm -rf debian/evince-gtk-dbg/usr/share/doc/evince-gtk-dbg
+	dh_link -pevince-gtk-dbg usr/share/doc/evince-gtk usr/share/doc/evince-gtk-dbg
+
