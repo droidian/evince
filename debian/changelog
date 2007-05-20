@@ -7,7 +7,7 @@ evince (0.8.1-2) unstable; urgency=low
        "libkpathsea-dev", which is a real package nowadays.
      * Add Suggests: unrar
      * Fix little oversight in evince-dbg description
-     * Remove unneeded librsvg2-common build-dep that was only their to
+     * Remove unneeded librsvg2-common build-dep that was only there to
        soothe sbuild.
   * debian/copyright: Drop GFDL include, point to the common-licenses one.
 
