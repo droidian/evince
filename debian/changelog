@@ -1,11 +1,15 @@
 evince (0.8.1-2) unstable; urgency=low
 
+  * Upload to unstable; drop check-dist include.
   * debian/control.in:
      * Wrap build-depends and re-order them
      * Replace b-d on "libkpathsea4-dev | libkpathsea-dev" by 
        "libkpathsea-dev", which is a real package nowadays.
      * Add Suggests: unrar
      * Fix little oversight in evince-dbg description
+     * Remove unneeded librsvg2-common build-dep that was only their to
+       soothe sbuild.
+  * debian/copyright: Drop GFDL include, point to the common-licenses one.
 
  -- Marc 'HE' Brockschmidt <he@debian.org>  Wed, 02 May 2007 15:22:31 +0200
 
