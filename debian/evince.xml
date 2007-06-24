@@ -20,7 +20,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 -->
 
-<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.2//EN" 
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.2//EN"
      "/usr/share/xml/docbook/schema/dtd/4.2/docbookx.dtd" []>
 
 <refentry>
@@ -42,7 +42,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
   </refmeta>
 
   <refnamediv>
-    <refname>evince</refname> 
+    <refname>evince</refname>
     <refpurpose>view PostScript and PDF documents</refpurpose>
   </refnamediv>
 
@@ -52,37 +52,37 @@ with this program; if not, write to the Free Software Foundation, Inc.,
       <arg><replaceable>file</replaceable></arg>
     </cmdsynopsis>
   </refsynopsisdiv>
-  
+
   <refsect1>
     <title>DESCRIPTION</title>
-    
+
     <para><command>evince</command> is a GNOME program for viewing
     PostScript (PS) and Portable Document Format (PDF) documents.
     It uses GhostScript for showing PS, and XPDF for showing PDF.</para>
-    
+
   </refsect1>
-  
+
   <refsect1>
     <title>OPTIONS</title>
-    
-    <para><command>evince</command> obeys all normal GNOME and GTK+ 
+
+    <para><command>evince</command> obeys all normal GNOME and GTK+
     command line options, and has no application specific options.</para>
 
     </refsect1>
 
   <refsect1>
     <title>SEE ALSO</title>
-    
+
     <para>
         <citerefentry><refentrytitle>gnome-options</refentrytitle>
                       <manvolnum>7</manvolnum></citerefentry>,
         <citerefentry><refentrytitle>gtk-options</refentrytitle>
                       <manvolnum>7</manvolnum></citerefentry>.
     </para>
-    
+
     <para><ulink url="http://www.gnome.org/projects/evince/"
     >http://www.gnome.org/projects/evince/</ulink></para>
-    
+
   </refsect1>
 
 </refentry>
