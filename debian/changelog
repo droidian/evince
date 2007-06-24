@@ -4,8 +4,9 @@ evince (0.8.1-3) UNRELEASED; urgency=low
     closes: #430379.
   * Drop dh_installmime from debian/rules and build-dep on cdbs >= 0.4.35.
   * Misc cleanups.
+  * Build-dep on cdbs >= 0.4.37 for -dbg support.
 
- -- Loic Minier <lool@dooz.org>  Sun, 24 Jun 2007 17:35:41 +0200
+ -- Loic Minier <lool@dooz.org>  Sun, 24 Jun 2007 18:12:22 +0200
 
 evince (0.8.1-2) unstable; urgency=low
 
