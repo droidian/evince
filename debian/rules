@@ -60,3 +60,7 @@ binary-install/evince-gtk-dbg::
 	rm -rf debian/evince-gtk-dbg/usr/share/doc/evince-gtk-dbg
 	dh_link -pevince-gtk-dbg usr/share/doc/evince-gtk usr/share/doc/evince-gtk-dbg
 
+binary-post-install/evince::
+	# check for missing MIME types
+	desktop-check-mime-types
+
