@@ -1,3 +1,10 @@
+evince (0.8.3-2) UNRELEASED; urgency=low
+
+  * Build-depend on gnome-pkg-tools >= 0.12 and replace
+    debian/check-mime-types.pl with desktop-check-mime-types.
+
+ -- Loic Minier <lool@dooz.org>  Thu, 05 Jul 2007 20:31:30 +0200
+
 evince (0.8.3-1) unstable; urgency=low
 
   * New patch, 60_gzdvi-support, adds support for GZip compressed DVI files;

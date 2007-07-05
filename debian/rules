@@ -24,5 +24,5 @@ binary-install/evince-dbg::
 
 binary-post-install/evince::
 	# check for missing MIME types
-	perl -T debian/check-mime-types.pl
+	desktop-check-mime-types
 
