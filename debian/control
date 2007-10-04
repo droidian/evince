@@ -27,7 +27,6 @@ Build-Depends: cdbs,
                libkpathsea-dev,
                libtiff4-dev,
                zlib1g-dev,
-               gtk-doc-tools (>= 1.9),
                autotools-dev
 Standards-Version: 3.7.2
 
