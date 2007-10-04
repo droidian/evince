@@ -10,6 +10,7 @@ image/x-bzeps; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.eps.bz2; prio
 image/x-gzeps; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.eps.gz; priority=5
 application/x-dvi; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.dvi; priority=5
 application/x-gzdvi; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.dvi.gz; priority=5
+application/x-bzdvi; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.dvi.bz2; priority=5
 image/vnd.djvu; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.djvu; priority=5
 image/tiff; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.tiff; priority=5
 application/x-cbr; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.cbr; priority=5
