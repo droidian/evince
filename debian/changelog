@@ -21,6 +21,8 @@ evince (2.20.0-1) experimental; urgency=low
       - Regenerated.
   * debian/control.in:
     + Add build dependency on autotools-dev and gtk-doc-tools.
+  * debian/rules:
+    + Enable gtk-doc support.
   * debian/evince.mime:
     + Add bzip2 compressed DVI mimetype.
 
