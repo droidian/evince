@@ -1,6 +1,6 @@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/aclocal.m4 evince-2.20.0/aclocal.m4
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/aclocal.m4 evince-2.20.0/aclocal.m4
 --- evince-2.20.0.old/aclocal.m4	2007-09-17 18:34:24.000000000 +0200
-+++ evince-2.20.0/aclocal.m4	2007-10-04 10:21:29.000000000 +0200
++++ evince-2.20.0/aclocal.m4	2007-10-04 10:49:27.000000000 +0200
 @@ -531,7 +531,7 @@
  	AC_REQUIRE([AM_MAINTAINER_MODE])
  
@@ -1429,9 +1429,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/aclocal.m4 evin
  		[$4])
  else
  	$1[]_CFLAGS=$pkg_cv_[]$1[]_CFLAGS
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/comics/Makefile.in evince-2.20.0/backend/comics/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/backend/comics/Makefile.in evince-2.20.0/backend/comics/Makefile.in
 --- evince-2.20.0.old/backend/comics/Makefile.in	2007-09-17 19:07:06.000000000 +0200
-+++ evince-2.20.0/backend/comics/Makefile.in	2007-10-04 10:21:38.000000000 +0200
++++ evince-2.20.0/backend/comics/Makefile.in	2007-10-04 10:49:33.000000000 +0200
 @@ -127,6 +127,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -1464,9 +1464,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/comics/
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/djvu/Makefile.in evince-2.20.0/backend/djvu/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/backend/djvu/Makefile.in evince-2.20.0/backend/djvu/Makefile.in
 --- evince-2.20.0.old/backend/djvu/Makefile.in	2007-09-17 19:07:07.000000000 +0200
-+++ evince-2.20.0/backend/djvu/Makefile.in	2007-10-04 10:21:38.000000000 +0200
++++ evince-2.20.0/backend/djvu/Makefile.in	2007-10-04 10:49:33.000000000 +0200
 @@ -128,6 +128,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -1499,9 +1499,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/djvu/Ma
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/dvi/Makefile.in evince-2.20.0/backend/dvi/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/backend/dvi/Makefile.in evince-2.20.0/backend/dvi/Makefile.in
 --- evince-2.20.0.old/backend/dvi/Makefile.in	2007-09-17 19:07:07.000000000 +0200
-+++ evince-2.20.0/backend/dvi/Makefile.in	2007-10-04 10:21:38.000000000 +0200
++++ evince-2.20.0/backend/dvi/Makefile.in	2007-10-04 10:49:33.000000000 +0200
 @@ -137,6 +137,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -1534,9 +1534,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/dvi/Mak
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/dvi/mdvi-lib/Makefile.in evince-2.20.0/backend/dvi/mdvi-lib/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/backend/dvi/mdvi-lib/Makefile.in evince-2.20.0/backend/dvi/mdvi-lib/Makefile.in
 --- evince-2.20.0.old/backend/dvi/mdvi-lib/Makefile.in	2007-09-17 19:07:07.000000000 +0200
-+++ evince-2.20.0/backend/dvi/mdvi-lib/Makefile.in	2007-10-04 10:21:38.000000000 +0200
++++ evince-2.20.0/backend/dvi/mdvi-lib/Makefile.in	2007-10-04 10:49:33.000000000 +0200
 @@ -130,6 +130,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -1569,9 +1569,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/dvi/mdv
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/impress/Makefile.in evince-2.20.0/backend/impress/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/backend/impress/Makefile.in evince-2.20.0/backend/impress/Makefile.in
 --- evince-2.20.0.old/backend/impress/Makefile.in	2007-09-17 19:07:08.000000000 +0200
-+++ evince-2.20.0/backend/impress/Makefile.in	2007-10-04 10:21:38.000000000 +0200
++++ evince-2.20.0/backend/impress/Makefile.in	2007-10-04 10:49:34.000000000 +0200
 @@ -132,6 +132,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -1604,9 +1604,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/impress
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/Makefile.in evince-2.20.0/backend/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/backend/Makefile.in evince-2.20.0/backend/Makefile.in
 --- evince-2.20.0.old/backend/Makefile.in	2007-09-17 19:07:06.000000000 +0200
-+++ evince-2.20.0/backend/Makefile.in	2007-10-04 10:21:38.000000000 +0200
++++ evince-2.20.0/backend/Makefile.in	2007-10-04 10:49:33.000000000 +0200
 @@ -130,6 +130,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -1639,9 +1639,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/Makefil
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/pdf/Makefile.in evince-2.20.0/backend/pdf/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/backend/pdf/Makefile.in evince-2.20.0/backend/pdf/Makefile.in
 --- evince-2.20.0.old/backend/pdf/Makefile.in	2007-09-17 19:07:08.000000000 +0200
-+++ evince-2.20.0/backend/pdf/Makefile.in	2007-10-04 10:21:39.000000000 +0200
++++ evince-2.20.0/backend/pdf/Makefile.in	2007-10-04 10:49:34.000000000 +0200
 @@ -136,6 +136,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -1674,9 +1674,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/pdf/Mak
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/pixbuf/Makefile.in evince-2.20.0/backend/pixbuf/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/backend/pixbuf/Makefile.in evince-2.20.0/backend/pixbuf/Makefile.in
 --- evince-2.20.0.old/backend/pixbuf/Makefile.in	2007-09-17 19:07:08.000000000 +0200
-+++ evince-2.20.0/backend/pixbuf/Makefile.in	2007-10-04 10:21:39.000000000 +0200
++++ evince-2.20.0/backend/pixbuf/Makefile.in	2007-10-04 10:49:34.000000000 +0200
 @@ -127,6 +127,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -1709,9 +1709,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/pixbuf/
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/ps/Makefile.in evince-2.20.0/backend/ps/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/backend/ps/Makefile.in evince-2.20.0/backend/ps/Makefile.in
 --- evince-2.20.0.old/backend/ps/Makefile.in	2007-09-17 19:07:09.000000000 +0200
-+++ evince-2.20.0/backend/ps/Makefile.in	2007-10-04 10:21:39.000000000 +0200
++++ evince-2.20.0/backend/ps/Makefile.in	2007-10-04 10:49:34.000000000 +0200
 @@ -128,6 +128,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -1744,9 +1744,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/ps/Make
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/tiff/Makefile.in evince-2.20.0/backend/tiff/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/backend/tiff/Makefile.in evince-2.20.0/backend/tiff/Makefile.in
 --- evince-2.20.0.old/backend/tiff/Makefile.in	2007-09-17 19:07:09.000000000 +0200
-+++ evince-2.20.0/backend/tiff/Makefile.in	2007-10-04 10:21:39.000000000 +0200
++++ evince-2.20.0/backend/tiff/Makefile.in	2007-10-04 10:49:34.000000000 +0200
 @@ -127,6 +127,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -1779,9 +1779,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/backend/tiff/Ma
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/configure evince-2.20.0/configure
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/configure evince-2.20.0/configure
 --- evince-2.20.0.old/configure	2007-09-17 18:34:36.000000000 +0200
-+++ evince-2.20.0/configure	2007-10-04 10:21:33.000000000 +0200
++++ evince-2.20.0/configure	2007-10-04 10:49:32.000000000 +0200
 @@ -891,14 +891,11 @@
  INTLTOOL_SCHEMAS_RULE
  INTLTOOL_THEME_RULE
@@ -5008,9 +5008,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/configure evinc
        -e "s|@INTLTOOL_PERL@|${INTLTOOL_PERL}|g" \
  	< ${ac_aux_dir}/${file}.in > ${file}.out
    if cmp -s ${file} ${file}.out 2>/dev/null; then
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/cut-n-paste/Makefile.in evince-2.20.0/cut-n-paste/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/cut-n-paste/Makefile.in evince-2.20.0/cut-n-paste/Makefile.in
 --- evince-2.20.0.old/cut-n-paste/Makefile.in	2007-09-17 19:07:09.000000000 +0200
-+++ evince-2.20.0/cut-n-paste/Makefile.in	2007-10-04 10:21:39.000000000 +0200
++++ evince-2.20.0/cut-n-paste/Makefile.in	2007-10-04 10:49:34.000000000 +0200
 @@ -123,6 +123,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5043,9 +5043,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/cut-n-paste/Mak
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/cut-n-paste/recent-files/Makefile.in evince-2.20.0/cut-n-paste/recent-files/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/cut-n-paste/recent-files/Makefile.in evince-2.20.0/cut-n-paste/recent-files/Makefile.in
 --- evince-2.20.0.old/cut-n-paste/recent-files/Makefile.in	2007-09-17 19:07:10.000000000 +0200
-+++ evince-2.20.0/cut-n-paste/recent-files/Makefile.in	2007-10-04 10:21:39.000000000 +0200
++++ evince-2.20.0/cut-n-paste/recent-files/Makefile.in	2007-10-04 10:49:34.000000000 +0200
 @@ -130,6 +130,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5078,9 +5078,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/cut-n-paste/rec
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/cut-n-paste/toolbar-editor/Makefile.in evince-2.20.0/cut-n-paste/toolbar-editor/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/cut-n-paste/toolbar-editor/Makefile.in evince-2.20.0/cut-n-paste/toolbar-editor/Makefile.in
 --- evince-2.20.0.old/cut-n-paste/toolbar-editor/Makefile.in	2007-09-17 19:07:10.000000000 +0200
-+++ evince-2.20.0/cut-n-paste/toolbar-editor/Makefile.in	2007-10-04 10:21:39.000000000 +0200
++++ evince-2.20.0/cut-n-paste/toolbar-editor/Makefile.in	2007-10-04 10:49:35.000000000 +0200
 @@ -141,6 +141,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5113,9 +5113,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/cut-n-paste/too
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/cut-n-paste/totem-screensaver/Makefile.in evince-2.20.0/cut-n-paste/totem-screensaver/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/cut-n-paste/totem-screensaver/Makefile.in evince-2.20.0/cut-n-paste/totem-screensaver/Makefile.in
 --- evince-2.20.0.old/cut-n-paste/totem-screensaver/Makefile.in	2007-09-17 19:07:11.000000000 +0200
-+++ evince-2.20.0/cut-n-paste/totem-screensaver/Makefile.in	2007-10-04 10:21:40.000000000 +0200
++++ evince-2.20.0/cut-n-paste/totem-screensaver/Makefile.in	2007-10-04 10:49:35.000000000 +0200
 @@ -132,6 +132,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5148,9 +5148,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/cut-n-paste/tot
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/cut-n-paste/zoom-control/Makefile.in evince-2.20.0/cut-n-paste/zoom-control/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/cut-n-paste/zoom-control/Makefile.in evince-2.20.0/cut-n-paste/zoom-control/Makefile.in
 --- evince-2.20.0.old/cut-n-paste/zoom-control/Makefile.in	2007-09-17 19:07:11.000000000 +0200
-+++ evince-2.20.0/cut-n-paste/zoom-control/Makefile.in	2007-10-04 10:21:40.000000000 +0200
++++ evince-2.20.0/cut-n-paste/zoom-control/Makefile.in	2007-10-04 10:49:35.000000000 +0200
 @@ -132,6 +132,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5183,9 +5183,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/cut-n-paste/zoo
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/16x16/actions/Makefile.in evince-2.20.0/data/icons/16x16/actions/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/16x16/actions/Makefile.in evince-2.20.0/data/icons/16x16/actions/Makefile.in
 --- evince-2.20.0.old/data/icons/16x16/actions/Makefile.in	2007-09-17 19:07:12.000000000 +0200
-+++ evince-2.20.0/data/icons/16x16/actions/Makefile.in	2007-10-04 10:21:40.000000000 +0200
++++ evince-2.20.0/data/icons/16x16/actions/Makefile.in	2007-10-04 10:49:35.000000000 +0200
 @@ -118,6 +118,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5218,9 +5218,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/16x1
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/16x16/apps/Makefile.in evince-2.20.0/data/icons/16x16/apps/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/16x16/apps/Makefile.in evince-2.20.0/data/icons/16x16/apps/Makefile.in
 --- evince-2.20.0.old/data/icons/16x16/apps/Makefile.in	2007-09-17 19:07:12.000000000 +0200
-+++ evince-2.20.0/data/icons/16x16/apps/Makefile.in	2007-10-04 10:21:40.000000000 +0200
++++ evince-2.20.0/data/icons/16x16/apps/Makefile.in	2007-10-04 10:49:35.000000000 +0200
 @@ -118,6 +118,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5253,9 +5253,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/16x1
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/16x16/Makefile.in evince-2.20.0/data/icons/16x16/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/16x16/Makefile.in evince-2.20.0/data/icons/16x16/Makefile.in
 --- evince-2.20.0.old/data/icons/16x16/Makefile.in	2007-09-17 19:07:11.000000000 +0200
-+++ evince-2.20.0/data/icons/16x16/Makefile.in	2007-10-04 10:21:40.000000000 +0200
++++ evince-2.20.0/data/icons/16x16/Makefile.in	2007-10-04 10:49:35.000000000 +0200
 @@ -120,6 +120,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5288,9 +5288,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/16x1
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/22x22/actions/Makefile.in evince-2.20.0/data/icons/22x22/actions/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/22x22/actions/Makefile.in evince-2.20.0/data/icons/22x22/actions/Makefile.in
 --- evince-2.20.0.old/data/icons/22x22/actions/Makefile.in	2007-09-17 19:07:12.000000000 +0200
-+++ evince-2.20.0/data/icons/22x22/actions/Makefile.in	2007-10-04 10:21:40.000000000 +0200
++++ evince-2.20.0/data/icons/22x22/actions/Makefile.in	2007-10-04 10:49:36.000000000 +0200
 @@ -118,6 +118,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5323,9 +5323,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/22x2
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/22x22/apps/Makefile.in evince-2.20.0/data/icons/22x22/apps/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/22x22/apps/Makefile.in evince-2.20.0/data/icons/22x22/apps/Makefile.in
 --- evince-2.20.0.old/data/icons/22x22/apps/Makefile.in	2007-09-17 19:07:13.000000000 +0200
-+++ evince-2.20.0/data/icons/22x22/apps/Makefile.in	2007-10-04 10:21:41.000000000 +0200
++++ evince-2.20.0/data/icons/22x22/apps/Makefile.in	2007-10-04 10:49:36.000000000 +0200
 @@ -118,6 +118,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5358,9 +5358,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/22x2
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/22x22/Makefile.in evince-2.20.0/data/icons/22x22/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/22x22/Makefile.in evince-2.20.0/data/icons/22x22/Makefile.in
 --- evince-2.20.0.old/data/icons/22x22/Makefile.in	2007-09-17 19:07:12.000000000 +0200
-+++ evince-2.20.0/data/icons/22x22/Makefile.in	2007-10-04 10:21:40.000000000 +0200
++++ evince-2.20.0/data/icons/22x22/Makefile.in	2007-10-04 10:49:36.000000000 +0200
 @@ -120,6 +120,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5393,9 +5393,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/22x2
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/24x24/actions/Makefile.in evince-2.20.0/data/icons/24x24/actions/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/24x24/actions/Makefile.in evince-2.20.0/data/icons/24x24/actions/Makefile.in
 --- evince-2.20.0.old/data/icons/24x24/actions/Makefile.in	2007-09-17 19:07:13.000000000 +0200
-+++ evince-2.20.0/data/icons/24x24/actions/Makefile.in	2007-10-04 10:21:41.000000000 +0200
++++ evince-2.20.0/data/icons/24x24/actions/Makefile.in	2007-10-04 10:49:36.000000000 +0200
 @@ -118,6 +118,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5428,9 +5428,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/24x2
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/24x24/apps/Makefile.in evince-2.20.0/data/icons/24x24/apps/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/24x24/apps/Makefile.in evince-2.20.0/data/icons/24x24/apps/Makefile.in
 --- evince-2.20.0.old/data/icons/24x24/apps/Makefile.in	2007-09-17 19:07:14.000000000 +0200
-+++ evince-2.20.0/data/icons/24x24/apps/Makefile.in	2007-10-04 10:21:41.000000000 +0200
++++ evince-2.20.0/data/icons/24x24/apps/Makefile.in	2007-10-04 10:49:36.000000000 +0200
 @@ -118,6 +118,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5463,9 +5463,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/24x2
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/24x24/Makefile.in evince-2.20.0/data/icons/24x24/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/24x24/Makefile.in evince-2.20.0/data/icons/24x24/Makefile.in
 --- evince-2.20.0.old/data/icons/24x24/Makefile.in	2007-09-17 19:07:13.000000000 +0200
-+++ evince-2.20.0/data/icons/24x24/Makefile.in	2007-10-04 10:21:41.000000000 +0200
++++ evince-2.20.0/data/icons/24x24/Makefile.in	2007-10-04 10:49:36.000000000 +0200
 @@ -120,6 +120,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5498,9 +5498,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/24x2
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/32x32/actions/Makefile.in evince-2.20.0/data/icons/32x32/actions/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/32x32/actions/Makefile.in evince-2.20.0/data/icons/32x32/actions/Makefile.in
 --- evince-2.20.0.old/data/icons/32x32/actions/Makefile.in	2007-09-17 19:07:14.000000000 +0200
-+++ evince-2.20.0/data/icons/32x32/actions/Makefile.in	2007-10-04 10:21:41.000000000 +0200
++++ evince-2.20.0/data/icons/32x32/actions/Makefile.in	2007-10-04 10:49:37.000000000 +0200
 @@ -118,6 +118,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5533,9 +5533,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/32x3
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/32x32/Makefile.in evince-2.20.0/data/icons/32x32/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/32x32/Makefile.in evince-2.20.0/data/icons/32x32/Makefile.in
 --- evince-2.20.0.old/data/icons/32x32/Makefile.in	2007-09-17 19:07:14.000000000 +0200
-+++ evince-2.20.0/data/icons/32x32/Makefile.in	2007-10-04 10:21:41.000000000 +0200
++++ evince-2.20.0/data/icons/32x32/Makefile.in	2007-10-04 10:49:36.000000000 +0200
 @@ -120,6 +120,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5568,9 +5568,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/32x3
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/48x48/actions/Makefile.in evince-2.20.0/data/icons/48x48/actions/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/48x48/actions/Makefile.in evince-2.20.0/data/icons/48x48/actions/Makefile.in
 --- evince-2.20.0.old/data/icons/48x48/actions/Makefile.in	2007-09-17 19:07:15.000000000 +0200
-+++ evince-2.20.0/data/icons/48x48/actions/Makefile.in	2007-10-04 10:21:41.000000000 +0200
++++ evince-2.20.0/data/icons/48x48/actions/Makefile.in	2007-10-04 10:49:37.000000000 +0200
 @@ -118,6 +118,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5603,9 +5603,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/48x4
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/48x48/apps/Makefile.in evince-2.20.0/data/icons/48x48/apps/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/48x48/apps/Makefile.in evince-2.20.0/data/icons/48x48/apps/Makefile.in
 --- evince-2.20.0.old/data/icons/48x48/apps/Makefile.in	2007-09-17 19:07:15.000000000 +0200
-+++ evince-2.20.0/data/icons/48x48/apps/Makefile.in	2007-10-04 10:21:42.000000000 +0200
++++ evince-2.20.0/data/icons/48x48/apps/Makefile.in	2007-10-04 10:49:37.000000000 +0200
 @@ -118,6 +118,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5638,9 +5638,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/48x4
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/48x48/Makefile.in evince-2.20.0/data/icons/48x48/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/48x48/Makefile.in evince-2.20.0/data/icons/48x48/Makefile.in
 --- evince-2.20.0.old/data/icons/48x48/Makefile.in	2007-09-17 19:07:14.000000000 +0200
-+++ evince-2.20.0/data/icons/48x48/Makefile.in	2007-10-04 10:21:41.000000000 +0200
++++ evince-2.20.0/data/icons/48x48/Makefile.in	2007-10-04 10:49:37.000000000 +0200
 @@ -120,6 +120,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5673,9 +5673,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/48x4
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/Makefile.in evince-2.20.0/data/icons/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/Makefile.in evince-2.20.0/data/icons/Makefile.in
 --- evince-2.20.0.old/data/icons/Makefile.in	2007-09-17 19:07:15.000000000 +0200
-+++ evince-2.20.0/data/icons/Makefile.in	2007-10-04 10:21:42.000000000 +0200
++++ evince-2.20.0/data/icons/Makefile.in	2007-10-04 10:49:37.000000000 +0200
 @@ -120,6 +120,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5708,9 +5708,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/Make
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/scalable/apps/Makefile.in evince-2.20.0/data/icons/scalable/apps/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/scalable/apps/Makefile.in evince-2.20.0/data/icons/scalable/apps/Makefile.in
 --- evince-2.20.0.old/data/icons/scalable/apps/Makefile.in	2007-09-17 19:07:16.000000000 +0200
-+++ evince-2.20.0/data/icons/scalable/apps/Makefile.in	2007-10-04 10:21:42.000000000 +0200
++++ evince-2.20.0/data/icons/scalable/apps/Makefile.in	2007-10-04 10:49:37.000000000 +0200
 @@ -118,6 +118,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5743,9 +5743,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/scal
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/scalable/Makefile.in evince-2.20.0/data/icons/scalable/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/icons/scalable/Makefile.in evince-2.20.0/data/icons/scalable/Makefile.in
 --- evince-2.20.0.old/data/icons/scalable/Makefile.in	2007-09-17 19:07:16.000000000 +0200
-+++ evince-2.20.0/data/icons/scalable/Makefile.in	2007-10-04 10:21:42.000000000 +0200
++++ evince-2.20.0/data/icons/scalable/Makefile.in	2007-10-04 10:49:37.000000000 +0200
 @@ -120,6 +120,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5778,9 +5778,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/icons/scal
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/Makefile.in evince-2.20.0/data/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/data/Makefile.in evince-2.20.0/data/Makefile.in
 --- evince-2.20.0.old/data/Makefile.in	2007-09-17 19:07:11.000000000 +0200
-+++ evince-2.20.0/data/Makefile.in	2007-10-04 10:21:40.000000000 +0200
++++ evince-2.20.0/data/Makefile.in	2007-10-04 10:49:35.000000000 +0200
 @@ -139,6 +139,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5813,9 +5813,128 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/data/Makefile.i
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/help/Makefile.in evince-2.20.0/help/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/gnome-doc-utils.make evince-2.20.0/gnome-doc-utils.make
+--- evince-2.20.0.old/gnome-doc-utils.make	2007-09-17 19:06:56.000000000 +0200
++++ evince-2.20.0/gnome-doc-utils.make	2007-10-04 10:49:22.000000000 +0200
+@@ -416,6 +416,11 @@
+ 	@list='$(_DOC_C_DOCS) $(_DOC_LC_DOCS) $(_DOC_POFILES)'; \
+ 	for doc in $$list; do \
+ 	  if test -f "$$doc"; then d=; else d="$(srcdir)/"; fi; \
++	    docdir=`echo $$doc | sed -e 's/^\(.*\/\).*/\1/' -e '/\//!s/.*//'`; \
++	    if ! test -d "$(distdir)/$$docdir"; then \
++	      echo "$(mkinstalldirs) $(distdir)/$$docdir"; \
++	      $(mkinstalldirs) "$(distdir)/$$docdir"; \
++	    fi; \
+ 	  echo "$(INSTALL_DATA) $$d$$doc $(distdir)/$$doc"; \
+ 	  $(INSTALL_DATA) "$$d$$doc" "$(distdir)/$$doc"; \
+ 	done
+@@ -486,6 +491,12 @@
+ 	done
+ 	@list='$(_DOC_C_DOCS) $(_DOC_LC_DOCS)'; for doc in $$list; do \
+ 	  if test -f "$$doc"; then d=; else d="$(srcdir)/"; fi; \
++	  docdir="$$lc/"`echo $$doc | sed -e 's/^\(.*\/\).*/\1/' -e '/\//!s/.*//'`; \
++	  docdir="$(DESTDIR)$(HELP_DIR)/$(DOC_MODULE)/$$docdir"; \
++	  if ! test -d "$$docdir"; then \
++	    echo "$(mkinstalldirs) $$docdir"; \
++	    $(mkinstalldirs) "$$docdir"; \
++	  fi; \
+ 	  echo "$(INSTALL_DATA) $$d$$doc $(DESTDIR)$(HELP_DIR)/$(DOC_MODULE)/$$doc"; \
+ 	  $(INSTALL_DATA) $$d$$doc $(DESTDIR)$(HELP_DIR)/$(DOC_MODULE)/$$doc; \
+ 	done
+@@ -554,7 +565,7 @@
+ 
+ uninstall-doc-omf:
+ 	@list='$(_DOC_OMF_ALL)'; for omf in $$list; do \
+-	  if test "x$(_ENABLE_SK)" == "xtrue"; then \
++	  if test "x$(_ENABLE_SK)" = "xtrue"; then \
+ 	    echo "scrollkeeper-uninstall -p $(_sklocalstatedir) $(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)/$$omf"; \
+ 	    scrollkeeper-uninstall -p "$(_sklocalstatedir)" "$(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)/$$omf"; \
+ 	  fi; \
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/gtk-doc.make evince-2.20.0/gtk-doc.make
+--- evince-2.20.0.old/gtk-doc.make	2007-09-17 19:06:56.000000000 +0200
++++ evince-2.20.0/gtk-doc.make	2007-10-04 10:49:22.000000000 +0200
+@@ -38,7 +38,12 @@
+ 	$(DOC_MODULE).prerequisites \
+ 	$(DOC_MODULE).signals
+ 
+-CLEANFILES = $(SCANOBJ_FILES) $(DOC_MODULE)-unused.txt $(DOC_STAMPS)
++REPORT_FILES = \
++	$(DOC_MODULE)-undocumented.txt \
++	$(DOC_MODULE)-undeclared.txt \
++	$(DOC_MODULE)-unused.txt
++
++CLEANFILES = $(SCANOBJ_FILES) $(REPORT_FILES) $(DOC_STAMPS)
+ 
+ if ENABLE_GTK_DOC
+ all-local: html-build.stamp
+@@ -79,6 +84,10 @@
+ tmpl.stamp: tmpl-build.stamp
+ 	@true
+ 
++tmpl/*.sgml:
++	@true
++
++
+ #### xml ####
+ 
+ sgml-build.stamp: tmpl.stamp $(HFILE_GLOB) $(CFILE_GLOB) $(DOC_MODULE)-sections.txt $(srcdir)/tmpl/*.sgml $(expand_content_files)
+@@ -96,11 +105,11 @@
+ html-build.stamp: sgml.stamp $(DOC_MAIN_SGML_FILE) $(content_files)
+ 	@echo 'gtk-doc: Building HTML'
+ 	@-chmod -R u+w $(srcdir)
+-	rm -rf $(srcdir)/html 
++	rm -rf $(srcdir)/html
+ 	mkdir $(srcdir)/html
+ 	cd $(srcdir)/html && gtkdoc-mkhtml $(DOC_MODULE) ../$(DOC_MAIN_SGML_FILE)
+ 	test "x$(HTML_IMAGES)" = "x" || ( cd $(srcdir) && cp $(HTML_IMAGES) html )
+-	@echo 'gtk-doc: Fixing cross-references' 
++	@echo 'gtk-doc: Fixing cross-references'
+ 	cd $(srcdir) && gtkdoc-fixxref --module-dir=html --html-dir=$(HTML_DIR) $(FIXXREF_OPTIONS)
+ 	touch html-build.stamp
+ 
+@@ -110,8 +119,13 @@
+ 	rm -f *~ *.bak
+ 	rm -rf .libs
+ 
++distclean-local:
++	cd $(srcdir) && \
++	  rm -rf xml $(REPORT_FILES) \
++	         $(DOC_MODULE)-decl-list.txt $(DOC_MODULE)-decl.txt
++
+ maintainer-clean-local: clean
+-	cd $(srcdir) && rm -rf xml html $(DOC_MODULE)-decl-list.txt $(DOC_MODULE)-decl.txt
++	cd $(srcdir) && rm -rf xml html
+ 
+ install-data-local:
+ 	installfiles=`echo $(srcdir)/html/*`; \
+@@ -125,7 +139,11 @@
+ 	  done; \
+ 	  echo '-- Installing $(srcdir)/html/index.sgml' ; \
+ 	  $(INSTALL_DATA) $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR) || :; \
++	  if test `which gtkdoc-rebase` != ""; then \
++        gtkdoc-rebase --relative --dest-dir=$(DESTDIR) --html-dir=$(DESTDIR)$(TARGET_DIR) ; \
++	  fi \
+ 	fi
++	
+ 
+ uninstall-local:
+ 	rm -f $(DESTDIR)$(TARGET_DIR)/*
+@@ -148,8 +166,9 @@
+ 	-cp $(srcdir)/tmpl/*.sgml $(distdir)/tmpl
+ 	-cp $(srcdir)/xml/*.xml $(distdir)/xml
+ 	cp $(srcdir)/html/* $(distdir)/html
+-	if test -f $(srcdir)/$(DOC_MODULE).types; then \
+-	  cp $(srcdir)/$(DOC_MODULE).types $(distdir)/$(DOC_MODULE).types; \
+-	fi
++	cp $(srcdir)/$(DOC_MODULE).types $(distdir)/
++	cp $(srcdir)/$(DOC_MODULE)-sections.txt $(distdir)/
++	cd $(distdir) && rm -f $(DISTCLEANFILES)
++	-gtkdoc-rebase --online --relative --html-dir=$(distdir)/html
+ 
+ .PHONY : dist-hook-local docs
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/help/Makefile.in evince-2.20.0/help/Makefile.in
 --- evince-2.20.0.old/help/Makefile.in	2007-09-17 19:07:16.000000000 +0200
-+++ evince-2.20.0/help/Makefile.in	2007-10-04 10:21:42.000000000 +0200
++++ evince-2.20.0/help/Makefile.in	2007-10-04 10:49:37.000000000 +0200
 @@ -145,6 +145,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5848,9 +5967,43 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/help/Makefile.i
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/help/reference/Makefile.in evince-2.20.0/help/reference/Makefile.in
+@@ -922,6 +920,11 @@
+ 	@list='$(_DOC_C_DOCS) $(_DOC_LC_DOCS) $(_DOC_POFILES)'; \
+ 	for doc in $$list; do \
+ 	  if test -f "$$doc"; then d=; else d="$(srcdir)/"; fi; \
++	    docdir=`echo $$doc | sed -e 's/^\(.*\/\).*/\1/' -e '/\//!s/.*//'`; \
++	    if ! test -d "$(distdir)/$$docdir"; then \
++	      echo "$(mkinstalldirs) $(distdir)/$$docdir"; \
++	      $(mkinstalldirs) "$(distdir)/$$docdir"; \
++	    fi; \
+ 	  echo "$(INSTALL_DATA) $$d$$doc $(distdir)/$$doc"; \
+ 	  $(INSTALL_DATA) "$$d$$doc" "$(distdir)/$$doc"; \
+ 	done
+@@ -990,6 +993,12 @@
+ 	done
+ 	@list='$(_DOC_C_DOCS) $(_DOC_LC_DOCS)'; for doc in $$list; do \
+ 	  if test -f "$$doc"; then d=; else d="$(srcdir)/"; fi; \
++	  docdir="$$lc/"`echo $$doc | sed -e 's/^\(.*\/\).*/\1/' -e '/\//!s/.*//'`; \
++	  docdir="$(DESTDIR)$(HELP_DIR)/$(DOC_MODULE)/$$docdir"; \
++	  if ! test -d "$$docdir"; then \
++	    echo "$(mkinstalldirs) $$docdir"; \
++	    $(mkinstalldirs) "$$docdir"; \
++	  fi; \
+ 	  echo "$(INSTALL_DATA) $$d$$doc $(DESTDIR)$(HELP_DIR)/$(DOC_MODULE)/$$doc"; \
+ 	  $(INSTALL_DATA) $$d$$doc $(DESTDIR)$(HELP_DIR)/$(DOC_MODULE)/$$doc; \
+ 	done
+@@ -1057,7 +1066,7 @@
+ 
+ uninstall-doc-omf:
+ 	@list='$(_DOC_OMF_ALL)'; for omf in $$list; do \
+-	  if test "x$(_ENABLE_SK)" == "xtrue"; then \
++	  if test "x$(_ENABLE_SK)" = "xtrue"; then \
+ 	    echo "scrollkeeper-uninstall -p $(_sklocalstatedir) $(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)/$$omf"; \
+ 	    scrollkeeper-uninstall -p "$(_sklocalstatedir)" "$(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)/$$omf"; \
+ 	  fi; \
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/help/reference/Makefile.in evince-2.20.0/help/reference/Makefile.in
 --- evince-2.20.0.old/help/reference/Makefile.in	2007-09-17 19:07:16.000000000 +0200
-+++ evince-2.20.0/help/reference/Makefile.in	2007-10-04 10:21:42.000000000 +0200
++++ evince-2.20.0/help/reference/Makefile.in	2007-10-04 10:49:38.000000000 +0200
 @@ -120,6 +120,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5883,9 +6036,499 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/help/reference/
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/libdocument/Makefile.in evince-2.20.0/libdocument/Makefile.in
+@@ -386,7 +384,12 @@
+ 	$(DOC_MODULE).prerequisites \
+ 	$(DOC_MODULE).signals
+ 
+-CLEANFILES = $(SCANOBJ_FILES) $(DOC_MODULE)-unused.txt $(DOC_STAMPS)
++REPORT_FILES = \
++	$(DOC_MODULE)-undocumented.txt \
++	$(DOC_MODULE)-undeclared.txt \
++	$(DOC_MODULE)-unused.txt
++
++CLEANFILES = $(SCANOBJ_FILES) $(REPORT_FILES) $(DOC_STAMPS)
+ all: all-am
+ 
+ .SUFFIXES:
+@@ -498,7 +501,7 @@
+ 
+ distclean: distclean-am
+ 	-rm -f Makefile
+-distclean-am: clean-am distclean-generic
++distclean-am: clean-am distclean-generic distclean-local
+ 
+ dvi: dvi-am
+ 
+@@ -551,16 +554,17 @@
+ 
+ .PHONY: all all-am all-local check check-am clean clean-generic \
+ 	clean-libtool clean-local dist-hook distclean \
+-	distclean-generic distclean-libtool distdir dvi dvi-am html \
+-	html-am info info-am install install-am install-data \
+-	install-data-am install-data-local install-dvi install-dvi-am \
+-	install-exec install-exec-am install-html install-html-am \
+-	install-info install-info-am install-man install-pdf \
+-	install-pdf-am install-ps install-ps-am install-strip \
+-	installcheck installcheck-am installdirs maintainer-clean \
+-	maintainer-clean-generic maintainer-clean-local mostlyclean \
+-	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+-	uninstall uninstall-am uninstall-local
++	distclean-generic distclean-libtool distclean-local distdir \
++	dvi dvi-am html html-am info info-am install install-am \
++	install-data install-data-am install-data-local install-dvi \
++	install-dvi-am install-exec install-exec-am install-html \
++	install-html-am install-info install-info-am install-man \
++	install-pdf install-pdf-am install-ps install-ps-am \
++	install-strip installcheck installcheck-am installdirs \
++	maintainer-clean maintainer-clean-generic \
++	maintainer-clean-local mostlyclean mostlyclean-generic \
++	mostlyclean-libtool pdf pdf-am ps ps-am uninstall uninstall-am \
++	uninstall-local
+ 
+ 
+ @ENABLE_GTK_DOC_TRUE@all-local: html-build.stamp
+@@ -599,6 +603,9 @@
+ tmpl.stamp: tmpl-build.stamp
+ 	@true
+ 
++tmpl/*.sgml:
++	@true
++
+ #### xml ####
+ 
+ sgml-build.stamp: tmpl.stamp $(HFILE_GLOB) $(CFILE_GLOB) $(DOC_MODULE)-sections.txt $(srcdir)/tmpl/*.sgml $(expand_content_files)
+@@ -616,11 +623,11 @@
+ html-build.stamp: sgml.stamp $(DOC_MAIN_SGML_FILE) $(content_files)
+ 	@echo 'gtk-doc: Building HTML'
+ 	@-chmod -R u+w $(srcdir)
+-	rm -rf $(srcdir)/html 
++	rm -rf $(srcdir)/html
+ 	mkdir $(srcdir)/html
+ 	cd $(srcdir)/html && gtkdoc-mkhtml $(DOC_MODULE) ../$(DOC_MAIN_SGML_FILE)
+ 	test "x$(HTML_IMAGES)" = "x" || ( cd $(srcdir) && cp $(HTML_IMAGES) html )
+-	@echo 'gtk-doc: Fixing cross-references' 
++	@echo 'gtk-doc: Fixing cross-references'
+ 	cd $(srcdir) && gtkdoc-fixxref --module-dir=html --html-dir=$(HTML_DIR) $(FIXXREF_OPTIONS)
+ 	touch html-build.stamp
+ 
+@@ -630,8 +637,13 @@
+ 	rm -f *~ *.bak
+ 	rm -rf .libs
+ 
++distclean-local:
++	cd $(srcdir) && \
++	  rm -rf xml $(REPORT_FILES) \
++	         $(DOC_MODULE)-decl-list.txt $(DOC_MODULE)-decl.txt
++
+ maintainer-clean-local: clean
+-	cd $(srcdir) && rm -rf xml html $(DOC_MODULE)-decl-list.txt $(DOC_MODULE)-decl.txt
++	cd $(srcdir) && rm -rf xml html
+ 
+ install-data-local:
+ 	installfiles=`echo $(srcdir)/html/*`; \
+@@ -645,6 +657,9 @@
+ 	  done; \
+ 	  echo '-- Installing $(srcdir)/html/index.sgml' ; \
+ 	  $(INSTALL_DATA) $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR) || :; \
++	  if test `which gtkdoc-rebase` != ""; then \
++        gtkdoc-rebase --relative --dest-dir=$(DESTDIR) --html-dir=$(DESTDIR)$(TARGET_DIR) ; \
++	  fi \
+ 	fi
+ 
+ uninstall-local:
+@@ -665,9 +680,10 @@
+ 	-cp $(srcdir)/tmpl/*.sgml $(distdir)/tmpl
+ 	-cp $(srcdir)/xml/*.xml $(distdir)/xml
+ 	cp $(srcdir)/html/* $(distdir)/html
+-	if test -f $(srcdir)/$(DOC_MODULE).types; then \
+-	  cp $(srcdir)/$(DOC_MODULE).types $(distdir)/$(DOC_MODULE).types; \
+-	fi
++	cp $(srcdir)/$(DOC_MODULE).types $(distdir)/
++	cp $(srcdir)/$(DOC_MODULE)-sections.txt $(distdir)/
++	cd $(distdir) && rm -f $(DISTCLEANFILES)
++	-gtkdoc-rebase --online --relative --html-dir=$(distdir)/html
+ 
+ .PHONY : dist-hook-local docs
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/intltool-extract.in evince-2.20.0/intltool-extract.in
+--- evince-2.20.0.old/intltool-extract.in	2007-09-17 19:06:56.000000000 +0200
++++ evince-2.20.0/intltool-extract.in	2007-10-04 10:49:22.000000000 +0200
+@@ -32,7 +32,7 @@
+ ## Release information
+ my $PROGRAM      = "intltool-extract";
+ my $PACKAGE      = "intltool";
+-my $VERSION      = "0.35.5";
++my $VERSION      = "0.36.2";
+ 
+ ## Loaded modules
+ use strict; 
+@@ -237,9 +237,9 @@
+ 
+     s/&apos;/'/g; # '
+     s/&quot;/"/g; # "
+-    s/&amp;/&/g;
+     s/&lt;/</g;
+     s/&gt;/>/g;
++    s/&amp;/&/g;
+ 
+     return $_;
+ }
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/intltool-merge.in evince-2.20.0/intltool-merge.in
+--- evince-2.20.0.old/intltool-merge.in	2007-09-17 19:06:56.000000000 +0200
++++ evince-2.20.0/intltool-merge.in	2007-10-04 10:49:22.000000000 +0200
+@@ -35,7 +35,7 @@
+ ## Release information
+ my $PROGRAM = "intltool-merge";
+ my $PACKAGE = "intltool";
+-my $VERSION = "0.35.5";
++my $VERSION = "0.36.2";
+ 
+ ## Loaded modules
+ use strict; 
+@@ -93,9 +93,24 @@
+ 
+ my %po_files_by_lang = ();
+ my %translations = ();
+-my $iconv = $ENV{"ICONV"} || $ENV{"INTLTOOL_ICONV"} || "@INTLTOOL_ICONV@";
++my $iconv = $ENV{"ICONV"} || "iconv";
+ my $devnull = ($^O eq 'MSWin32' ? 'NUL:' : '/dev/null');
+ 
++sub isProgramInPath
++{
++    my ($file) = @_;
++    # If either a file exists, or when run it returns 0 exit status
++    return 1 if ((-x $file) or (system("$file -l >$devnull") == 0));
++    return 0;
++}
++
++if (! isProgramInPath ("$iconv"))
++{
++	print STDERR " *** iconv is not found on this system!\n".
++		     " *** Without it, intltool-merge can not convert encodings.\n";
++	exit;
++}
++
+ # Use this instead of \w for XML files to handle more possible characters.
+ my $w = "[-A-Za-z0-9._:]";
+ 
+@@ -260,8 +275,42 @@
+ 
+ sub gather_po_files
+ {
+-    for my $po_file (glob "$PO_DIR/*.po") {
+-	$po_files_by_lang{po_file2lang($po_file)} = $po_file;
++    if (my $linguas = $ENV{"LINGUAS"})
++    {
++        for my $lang (split / /, $linguas) {
++            my $po_file = $PO_DIR . "/" . $lang . ".po";
++            if (-e $po_file) {
++                $po_files_by_lang{$lang} = $po_file;
++            }
++        }
++    }
++    else
++    {
++        if (open LINGUAS_FILE, "$PO_DIR/LINGUAS")
++        {
++            while (<LINGUAS_FILE>)
++            {
++                next if /^#/;
++
++                if (/([-a-zA-Z_@.]+)\n/)
++                {
++                    my $lang = $1;
++
++                    my $po_file = $PO_DIR . "/" . $lang . ".po";
++                    if (-e $po_file) {
++                        $po_files_by_lang{$lang} = $po_file;
++                    }
++                }
++            }
++
++            close LINGUAS_FILE;
++        }
++        else
++        {
++            for my $po_file (glob "$PO_DIR/*.po") {
++                $po_files_by_lang{po_file2lang($po_file)} = $po_file;
++            }
++        }
+     }
+ }
+ 
+@@ -428,7 +477,7 @@
+        
+ 	    if (/^msgid "((\\.|[^\\]+)*)"/ ) 
+             {
+-		$translations{$lang, $msgid} = $msgstr if $inmsgstr && $msgid && $msgstr && $msgid ne $msgstr;
++		$translations{$lang, $msgid} = $msgstr if $inmsgstr && $msgid && $msgstr;
+ 		$msgid = "";
+ 		$msgstr = "";
+ 
+@@ -455,7 +504,7 @@
+ 	        $msgstr .= unescape_po_string($1) if $inmsgstr;
+ 	    }
+ 	}
+-	$translations{$lang, $msgid} = $msgstr if $inmsgstr && $msgid && $msgstr && $msgstr ne $msgid;
++	$translations{$lang, $msgid} = $msgstr if $inmsgstr && $msgid && $msgstr;
+     }
+ }
+ 
+@@ -494,16 +543,15 @@
+     return $string;
+ }
+ 
+-## NOTE: deal with < - &lt; but not > - &gt;  because it seems its ok to have 
+-## > in the entity. For further info please look at #84738.
+ sub entity_decode
+ {
+     local ($_) = @_;
+ 
+     s/&apos;/'/g; # '
+     s/&quot;/"/g; # "
+-    s/&amp;/&/g;
+     s/&lt;/</g;
++    s/&gt;/>/g;
++    s/&amp;/&/g;
+ 
+     return $_;
+ }
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/intltool-update.in evince-2.20.0/intltool-update.in
+--- evince-2.20.0.old/intltool-update.in	2007-09-17 19:06:56.000000000 +0200
++++ evince-2.20.0/intltool-update.in	2007-10-04 10:49:22.000000000 +0200
+@@ -30,7 +30,7 @@
+ 
+ ## Release information
+ my $PROGRAM = "intltool-update";
+-my $VERSION = "0.35.5";
++my $VERSION = "0.36.2";
+ my $PACKAGE = "intltool";
+ 
+ ## Loaded modules
+@@ -71,7 +71,8 @@
+ "sheet(?:\\.in)+|".	# ?
+ "schemas(?:\\.in)+|".	# GConf specific
+ "pong(?:\\.in)+|".	# DEPRECATED: PONG is not used [by GNOME] any longer.
+-"kbd(?:\\.in)+";	# GOK specific. 
++"kbd(?:\\.in)+|".	# GOK specific. 
++"policy(?:\\.in)+";	# PolicyKit files
+ 
+ my $ini_support =
+ "icon(?:\\.in)+|".	# http://www.freedesktop.org/Standards/icon-theme-spec
+@@ -328,7 +329,12 @@
+ 	push @buf_i18n_ini,          "$File::Find::name" if /\.($ini_support)$/;
+ 	push @buf_i18n_xml_unmarked, "$File::Find::name" if /\.(schemas(\.in)+)$/;
+ 	}, "..";
+-
++    find sub { 
++	push @buf_i18n_plain,        "$File::Find::name" if /\.($buildin_gettext_support)$/;
++	push @buf_i18n_xml,          "$File::Find::name" if /\.($xml_support)$/;
++	push @buf_i18n_ini,          "$File::Find::name" if /\.($ini_support)$/;
++	push @buf_i18n_xml_unmarked, "$File::Find::name" if /\.(schemas(\.in)+)$/;
++	}, "$SRCDIR/..";
+ 
+     open POTFILES, $POTFILES_in or die "$PROGRAM:  there's no POTFILES.in!\n";
+     @buf_potfiles = grep !/^(#|\s*$)/, <POTFILES>;
+@@ -489,11 +495,15 @@
+     my %in2;
+     foreach (@buf_potfiles_sorted) 
+     {
++        s#^$SRCDIR/../##;
++        s#^$SRCDIR/##;
+ 	$in2{$_} = 1;
+     }
+ 
+     foreach (@buf_potfiles_ignore_sorted) 
+     {
++        s#^$SRCDIR/../##;
++        s#^$SRCDIR/##;
+ 	$in2{$_} = 1;
+     }
+ 
+@@ -501,9 +511,16 @@
+ 
+     foreach (@buf_allfiles_sorted)
+     {
+-	if (!exists($in2{$_}))
++        my $dummy = $_;
++        my $srcdir = $SRCDIR;
++
++        $srcdir =~ s#^../##;
++        $dummy =~ s#^$srcdir/../##;
++        $dummy =~ s#^$srcdir/##;
++        $dummy =~ s#_build/##;
++	if (!exists($in2{$dummy}))
+ 	{
+-	    push @result, $_
++	    push @result, $dummy
+ 	}
+     }
+ 
+@@ -563,11 +580,23 @@
+     exit 1;
+ }
+ 
+-sub isIntltoolExtractInPath
++sub isProgramInPath
+ {
+     my ($file) = @_;
+     # If either a file exists, or when run it returns 0 exit status
+-    return 1 if ((-x $file) or (system("$file >/dev/null") == 0));
++    return 1 if ((-x $file) or (system("$file --version >$devnull") == 0));
++    return 0;
++}
++
++sub isGNUGettextTool
++{
++    my ($file) = @_;
++    # Check that we are using GNU gettext tools
++    if (isProgramInPath ($file))
++    {
++        my $version = `$file --version`;
++        return 1 if ($version =~ m/.*\(GNU .*\).*/);
++    }
+     return 0;
+ }
+ 
+@@ -577,7 +606,7 @@
+ 
+     ## Generate the .h header files, so we can allow glade and
+     ## xml translation support
+-    if (! isIntltoolExtractInPath("$EXTRACT"))
++    if (! isProgramInPath ("$EXTRACT"))
+     {
+ 	print STDERR "\n *** The intltool-extract script wasn't found!"
+ 	     ."\n *** Without it, intltool-update can not generate files.\n";
+@@ -624,13 +653,13 @@
+ #
+ sub GeneratePOTemplate
+ {
+-    my $XGETTEXT = $ENV{"XGETTEXT"} || "@INTLTOOL_XGETTEXT@";
++    my $XGETTEXT = $ENV{"XGETTEXT"} || "xgettext";
+     my $XGETTEXT_ARGS = $ENV{"XGETTEXT_ARGS"} || '';
+     chomp $XGETTEXT;
+ 
+-    if (! -x $XGETTEXT)
++    if (! isGNUGettextTool ("$XGETTEXT"))
+     {
+-	print STDERR " *** xgettext is not found on this system!\n".
++	print STDERR " *** GNU xgettext is not found on this system!\n".
+ 		     " *** Without it, intltool-update can not extract strings.\n";
+ 	exit;
+     }
+@@ -726,7 +755,23 @@
+     unlink "$MODULE.pot";
+     my @xgettext_argument=("$XGETTEXT",
+ 			   "--add-comments",
+-			   "--directory\=\.",
++			   "--directory\=.",
++                           "--default-domain\=$MODULE",
++                           "--flag\=g_strdup_printf:1:c-format",
++                           "--flag\=g_string_printf:2:c-format",
++                           "--flag\=g_string_append_printf:2:c-format",
++                           "--flag\=g_error_new:3:c-format",
++                           "--flag\=g_set_error:4:c-format",
++                           "--flag\=g_markup_printf_escaped:1:c-format",
++                           "--flag\=g_log:3:c-format",
++                           "--flag\=g_print:1:c-format",
++                           "--flag\=g_printerr:1:c-format",
++                           "--flag\=g_printf:1:c-format",
++                           "--flag\=g_fprintf:2:c-format",
++                           "--flag\=g_sprintf:2:c-format",
++                           "--flag\=g_snprintf:3:c-format",
++                           "--flag\=g_scanner_error:2:c-format",
++                           "--flag\=g_scanner_warn:2:c-format",
+ 			   "--output\=$MODULE\.pot",
+ 			   "--files-from\=\.\/POTFILES\.in\.temp");
+     my $XGETTEXT_KEYWORDS = &FindPOTKeywords;
+@@ -793,9 +838,16 @@
+ {
+     -f "$MODULE.pot" or die "$PROGRAM: $MODULE.pot does not exist.\n";
+ 
+-    my $MSGMERGE = $ENV{"MSGMERGE"} || "@INTLTOOL_MSGMERGE@";
++    my $MSGMERGE = $ENV{"MSGMERGE"} || "msgmerge";
+     my ($lang, $outfile) = @_;
+ 
++    if (! isGNUGettextTool ("$MSGMERGE"))
++    {
++	print STDERR " *** GNU msgmerge is not found on this system!\n".
++		     " *** Without it, intltool-update can not extract strings.\n";
++	exit;
++    }
++
+     print "Merging $SRCDIR/$lang.po with $MODULE.pot..." if $VERBOSE;
+ 
+     my $infile = "$SRCDIR/$lang.po";
+@@ -836,7 +888,14 @@
+ sub Console_Write_TranslationStatus
+ {
+     my ($lang, $output_file) = @_;
+-    my $MSGFMT = $ENV{"MSGFMT"} || "@INTLTOOL_MSGFMT@";
++    my $MSGFMT = $ENV{"MSGFMT"} || "msgfmt";
++
++    if (! isGNUGettextTool ("$MSGFMT"))
++    {
++	print STDERR " *** GNU msgfmt is not found on this system!\n".
++		     " *** Without it, intltool-update can not extract strings.\n";
++	exit;
++    }
+ 
+     $output_file = "$SRCDIR/$lang.po" if ($output_file eq "");
+ 
+@@ -845,21 +904,28 @@
+ 
+ sub Console_Write_CoverageReport
+ {
+-    my $MSGFMT = $ENV{"MSGFMT"} || "@INTLTOOL_MSGFMT@";
++    my $MSGFMT = $ENV{"MSGFMT"} || "msgfmt";
++
++    if (! isGNUGettextTool ("$MSGFMT"))
++    {
++	print STDERR " *** GNU msgfmt is not found on this system!\n".
++		     " *** Without it, intltool-update can not extract strings.\n";
++	exit;
++    }
+ 
+     &GatherPOFiles;
+ 
+     foreach my $lang (@languages) 
+     {
+-	print "$lang: ";
++	print STDERR "$lang: ";
+ 	&POFile_Update ($lang, "");
+     }
+ 
+-    print "\n\n * Current translation support in $MODULE \n\n";
++    print STDERR "\n\n * Current translation support in $MODULE \n\n";
+ 
+     foreach my $lang (@languages)
+     {
+-	print "$lang: ";
++	print STDERR "$lang: ";
+ 	system ("$MSGFMT", "-o", "$devnull", "--verbose", "$SRCDIR/$lang.po");
+     }
+ }
+@@ -933,13 +999,13 @@
+ 
+ 	    $conf_in || die "Cannot find top_builddir in Makevars.";
+ 	}
+-	elsif (-f "../configure.ac") 
++	elsif (-f "$SRCDIR/../configure.ac") 
+ 	{
+-	    $conf_in = "../configure.ac";
++	    $conf_in = "$SRCDIR/../configure.ac";
+ 	} 
+-	elsif (-f "../configure.in") 
++	elsif (-f "$SRCDIR/../configure.in") 
+ 	{
+-	    $conf_in = "../configure.in";
++	    $conf_in = "$SRCDIR/../configure.in";
+ 	} 
+ 	else 
+ 	{
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/libdocument/Makefile.in evince-2.20.0/libdocument/Makefile.in
 --- evince-2.20.0.old/libdocument/Makefile.in	2007-09-17 19:07:17.000000000 +0200
-+++ evince-2.20.0/libdocument/Makefile.in	2007-10-04 10:21:42.000000000 +0200
++++ evince-2.20.0/libdocument/Makefile.in	2007-10-04 10:49:38.000000000 +0200
 @@ -165,6 +165,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -5918,7 +6561,7 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/libdocument/Mak
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/ltmain.sh evince-2.20.0/ltmain.sh
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/ltmain.sh evince-2.20.0/ltmain.sh
 --- evince-2.20.0.old/ltmain.sh	2007-04-05 16:20:16.000000000 +0200
 +++ evince-2.20.0/ltmain.sh	2007-08-14 19:43:36.000000000 +0200
 @@ -1,8 +1,8 @@
@@ -6261,9 +6904,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/ltmain.sh evinc
        # Now prepare to actually exec the command.
        exec_cmd="\$cmd$args"
      else
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/Makefile.in evince-2.20.0/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/Makefile.in evince-2.20.0/Makefile.in
 --- evince-2.20.0.old/Makefile.in	2007-09-17 19:07:19.000000000 +0200
-+++ evince-2.20.0/Makefile.in	2007-10-04 10:21:43.000000000 +0200
++++ evince-2.20.0/Makefile.in	2007-10-04 10:49:39.000000000 +0200
 @@ -137,6 +137,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -6296,9 +6939,21 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/Makefile.in evi
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/properties/Makefile.in evince-2.20.0/properties/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/po/Makefile.in.in evince-2.20.0/po/Makefile.in.in
+--- evince-2.20.0.old/po/Makefile.in.in	2007-09-17 19:06:56.000000000 +0200
++++ evince-2.20.0/po/Makefile.in.in	2007-10-04 10:49:22.000000000 +0200
+@@ -133,7 +133,7 @@
+ dvi info tags TAGS ID:
+ 
+ # Define this as empty until I found a useful application.
+-installcheck:
++install-exec installcheck:
+ 
+ uninstall:
+ 	linguas="$(USE_LINGUAS)"; \
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/properties/Makefile.in evince-2.20.0/properties/Makefile.in
 --- evince-2.20.0.old/properties/Makefile.in	2007-09-17 19:07:17.000000000 +0200
-+++ evince-2.20.0/properties/Makefile.in	2007-10-04 10:21:42.000000000 +0200
++++ evince-2.20.0/properties/Makefile.in	2007-10-04 10:49:38.000000000 +0200
 @@ -157,6 +157,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -6331,9 +6986,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/properties/Make
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/shell/Makefile.in evince-2.20.0/shell/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/shell/Makefile.in evince-2.20.0/shell/Makefile.in
 --- evince-2.20.0.old/shell/Makefile.in	2007-09-17 19:07:18.000000000 +0200
-+++ evince-2.20.0/shell/Makefile.in	2007-10-04 10:21:43.000000000 +0200
++++ evince-2.20.0/shell/Makefile.in	2007-10-04 10:49:38.000000000 +0200
 @@ -189,6 +189,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -6366,9 +7021,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/shell/Makefile.
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/test/Makefile.in evince-2.20.0/test/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/test/Makefile.in evince-2.20.0/test/Makefile.in
 --- evince-2.20.0.old/test/Makefile.in	2007-09-17 19:07:18.000000000 +0200
-+++ evince-2.20.0/test/Makefile.in	2007-10-04 10:21:43.000000000 +0200
++++ evince-2.20.0/test/Makefile.in	2007-10-04 10:49:38.000000000 +0200
 @@ -109,6 +109,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
@@ -6401,9 +7056,9 @@ diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/test/Makefile.i
  INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
  INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
  LDFLAGS = @LDFLAGS@
-diff -x'*config.sub*' -x'*config.guess*' -Naur evince-2.20.0.old/thumbnailer/Makefile.in evince-2.20.0/thumbnailer/Makefile.in
+diff -x'*config.sub' -x'*config.guess' -Naur evince-2.20.0.old/thumbnailer/Makefile.in evince-2.20.0/thumbnailer/Makefile.in
 --- evince-2.20.0.old/thumbnailer/Makefile.in	2007-09-17 19:07:18.000000000 +0200
-+++ evince-2.20.0/thumbnailer/Makefile.in	2007-10-04 10:21:43.000000000 +0200
++++ evince-2.20.0/thumbnailer/Makefile.in	2007-10-04 10:49:39.000000000 +0200
 @@ -153,6 +153,7 @@
  GNOME_PRINT_CFLAGS = @GNOME_PRINT_CFLAGS@
  GNOME_PRINT_LIBS = @GNOME_PRINT_LIBS@
