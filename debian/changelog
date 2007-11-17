@@ -5,8 +5,9 @@ evince (2.20.1-2) unstable; urgency=low
     order, and this fixes the GConf schemas installation.
     Closes: #448640.
   * Update the menu files to the new layout.
+  * Upload to unstable; drop check-dist include.
 
- -- Josselin Mouette <joss@debian.org>  Sat, 17 Nov 2007 11:23:14 +0100
+ -- Josselin Mouette <joss@debian.org>  Sat, 17 Nov 2007 11:48:11 +0100
 
 evince (2.20.1-1) experimental; urgency=low
 
