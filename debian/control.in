@@ -3,10 +3,10 @@ Section: gnome
 Priority: optional
 Maintainer: Marc 'HE' Brockschmidt <he@debian.org>
 Uploaders: @GNOME_TEAM@
-Build-Depends: cdbs (>= 0.4.37),
+Build-Depends: cdbs,
                debhelper (>= 5),
                intltool (>= 0.35.0),
-               gnome-pkg-tools (>= 0.12),
+               gnome-pkg-tools (>= 0.10),
                gnome-doc-utils (>= 0.3.2),
                libgtk2.0-dev (>= 2.10.0),
                libglade2-dev,
@@ -22,23 +22,38 @@ Build-Depends: cdbs (>= 0.4.37),
                scrollkeeper,
                gs (>= 7),
                libxt-dev,
-               libpoppler-glib-dev (>= 0.5.4),
-               libpoppler-glib-dev (<= 0.5.9),
+               libpoppler-glib-dev (>= 0.6),
                libdjvulibre-dev (>= 3.5.17),
                libkpathsea-dev,
                libtiff4-dev,
-               zlib1g-dev
+               zlib1g-dev,
+               autotools-dev
 Standards-Version: 3.7.2
 
 Package: evince
+Conflicts: evince-gtk
+Replaces: evince-gtk
 Architecture: any
-Depends: ${shlibs:Depends},
-         ${misc:Depends},
-         gs-esp | gs,
-         gnome-icon-theme (>= 2.17.1)
+Depends: ${shlibs:Depends}, ${misc:Depends}, gs-esp | gs, gnome-icon-theme (>= 2.17.1)
 Provides: pdf-viewer, postscript-viewer
 Suggests: unrar
 Description: Document (postscript, pdf) viewer
+ Evince is a simple multi-page document viewer.  It can display and print
+ PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable 
+ Document Format (PDF) files.  
+ When supported by the document, it also allows searching for text, 
+ copying text to the clipboard, hypertext navigation, and 
+ table-of-contents bookmarks.
+ .
+ The PDF renderer is based on poppler.  The PS renderer uses Ghostscript.
+ .
+ Homepage: http://www.gnome.org/projects/evince/
+
+Package: evince-dbg
+Priority: extra
+Architecture: any
+Depends: evince (= ${binary:Version})
+Description: Document (postscript, pdf) viewer - debugging symbols
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
  Document Format (PDF) files.
@@ -49,19 +64,43 @@ Description: Document (postscript, pdf) viewer
  The PDF renderer is based on poppler.  The PS renderer uses Ghostscript.
  .
  Homepage: http://www.gnome.org/projects/evince/
+ .
+ This package contains the debugging symbols needed by gdb.
 
-Package: evince-dbg
+Package: evince-gtk
+Conflicts: evince
+Replaces: evince
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, gs-esp | gs, gnome-icon-theme (>= 2.17.1)
+Provides: pdf-viewer, postscript-viewer
+Suggests: unrar
+Description: Document (postscript, pdf) viewer (gtk version)
+ Evince is a simple multi-page document viewer.  It can display and print
+ PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable 
+ Document Format (PDF) files.  
+ When supported by the document, it also allows searching for text, 
+ copying text to the clipboard, hypertext navigation, and 
+ table-of-contents bookmarks.
+ .
+ This version of evince is built without GNOME support.
+ .
+ The PDF renderer is based on poppler.  The PS renderer uses Ghostscript.
+ .
+ Homepage: http://www.gnome.org/projects/evince/
+
+Package: evince-gtk-dbg
 Priority: extra
 Architecture: any
-Depends: evince (= ${binary:Version}),
-         ${misc:Depends}
-Description: Document (postscript, pdf) viewer - debugging symbols
+Depends: evince-gtk (= ${binary:Version})
+Description: Document (postscript, pdf) viewer (gtk version) - debugging symbols
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
  Document Format (PDF) files.
  When supported by the document, it also allows searching for text,
  copying text to the clipboard, hypertext navigation, and
  table-of-contents bookmarks.
+ .
+ This version of evince is built without GNOME support.
  .
  The PDF renderer is based on poppler.  The PS renderer uses Ghostscript.
  .

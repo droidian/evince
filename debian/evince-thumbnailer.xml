@@ -20,7 +20,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 -->
 
-<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.4//EN"
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.4//EN" 
      "/usr/share/xml/docbook/schema/dtd/4.4/docbookx.dtd" []>
 
 <refentry>
@@ -42,7 +42,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
   </refmeta>
 
   <refnamediv>
-    <refname>evince-thumbnailer</refname>
+    <refname>evince-thumbnailer</refname> 
     <refpurpose>create png thumbnails from PostScript and PDF documents</refpurpose>
   </refnamediv>
 
@@ -54,41 +54,41 @@ with this program; if not, write to the Free Software Foundation, Inc.,
         <arg choice='plain'><replaceable>output</replaceable></arg>
     </cmdsynopsis>
   </refsynopsisdiv>
-
+  
   <refsect1>
     <title>DESCRIPTION</title>
-
-        <para><command>evince-thumbnailer</command> is a GNOME program to
-                create thumbnails from PostScript (PS), Portable Document Format
-                (PDF), DjVu and DVI files.</para>
-
+    
+	<para><command>evince-thumbnailer</command> is a GNOME program to
+		create thumbnails from PostScript (PS), Portable Document Format
+		(PDF), DjVu and DVI files.</para>
+    
   </refsect1>
-
+  
   <refsect1>
     <title>OPTIONS</title>
-
-    <para><command>evince</command> obeys all normal GNOME and GTK+
-                command line options. The only option <arg>-s <replaceable>size
-                </replaceable></arg> makes it possible to choose the vertical size
-                of the created thumbnail.</para>
+    
+    <para><command>evince</command> obeys all normal GNOME and GTK+ 
+		command line options. The only option <arg>-s <replaceable>size
+		</replaceable></arg> makes it possible to choose the vertical size
+		of the created thumbnail.</para>
 
     </refsect1>
 
   <refsect1>
     <title>SEE ALSO</title>
-
-        <para>
-                <citerefentry><refentrytitle>evince</refentrytitle>
-                        <manvolnum>1</manvolnum></citerefentry>,
+    
+	<para>
+		<citerefentry><refentrytitle>evince</refentrytitle>
+			<manvolnum>1</manvolnum></citerefentry>,
         <citerefentry><refentrytitle>gnome-options</refentrytitle>
-                        <manvolnum>7</manvolnum></citerefentry>,
+			<manvolnum>7</manvolnum></citerefentry>,
         <citerefentry><refentrytitle>gtk-options</refentrytitle>
-                        <manvolnum>7</manvolnum></citerefentry>.
+			<manvolnum>7</manvolnum></citerefentry>.
     </para>
-
+    
     <para><ulink url="http://www.gnome.org/projects/evince/"
     >http://www.gnome.org/projects/evince/</ulink></para>
-
+    
   </refsect1>
 
 </refentry>

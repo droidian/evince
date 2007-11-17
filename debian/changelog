@@ -1,33 +1,68 @@
-evince (0.8.3-2) UNRELEASED; urgency=low
+evince (2.20.1-2) unstable; urgency=low
 
-  [ Loic Minier ]
-  * Build-depend on gnome-pkg-tools >= 0.12 and replace
-    debian/check-mime-types.pl with desktop-check-mime-types.
+  * Simplify the build process by installing directly the stuff in
+    debian/evince(-gtk). This way dh_* are executed in the correct
+    order, and this fixes the GConf schemas installation.
+    Closes: #448640.
+  * Update the menu files to the new layout.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 17 Nov 2007 11:23:14 +0100
+
+evince (2.20.1-1) experimental; urgency=low
+
+  * New upstream bugfix release:
+    + debian/patches/99_autoreconf.patch:
+      - Updated for the new version.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 30 Oct 2007 13:13:35 +0100
+
+evince (2.20.0-1) experimental; urgency=low
+
+  [Loic Minier]
+  * Build-depend on gnome-pkg-tools >= 0.12 and call desktop-check-mime-types
+    to check for missing MIME types; update MIME types.
+  * Add application/x-pdf to evince.mime; closes: #431370.
 
   [ Josselin Mouette ]
-  * 60_gzdvi-support: add support for bzip2 compressed DVI files 
+  * 60_gzdvi-support: add support for bzip2 compressed DVI files
     (closes: #432445). Thanks Géraud Meyer.
 
- -- Josselin Mouette <joss@debian.org>  Sat, 14 Jul 2007 01:54:34 +0200
+  [ Sebastian Dröge ]
+  * New upstream release:
+    + debian/patches/10-comics_fix_INCLUDES.patch:
+      - Dropped, merged upstream.
+    + debian/control.in:
+      - Build depend on poppler >= 0.6
+    + debian/patches/60_gzdvi-support.patch:
+      - Updated for new upstream version.
+    + debian/patches/99_autoreconf.patch:
+      - Regenerated.
+  * debian/control.in:
+    + Add build dependency on autotools-dev.
+  * debian/evince.mime:
+    + Add bzip2 compressed DVI mimetype.
 
-evince (0.8.3-1) unstable; urgency=low
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 04 Oct 2007 10:12:45 +0200
 
-  * New patch, 60_gzdvi-support, adds support for GZip compressed DVI files;
-    closes: #430379.
-  * Drop dh_installmime from debian/rules and build-dep on cdbs >= 0.4.35.
-  * Misc cleanups.
-  * Build-dep on cdbs >= 0.4.37 for -dbg support.
-  * Add a script to check the presence of all MIME types listed in .desktop
-    files in debian/*.mime, debian/check-mime-types.pl; call this scrip in
-    post-install.
-  * Update list of MIME types.
-  * New upstream stable releases; bug fixes and translations.
-   - Build-dep on libpoppler-glib-dev (<= 0.5.9) to match the corresponding
-     upstream check.
-   - Split the part of 60_gzdvi-support patching configure into a new
-     70_autoconf patch and update for the new release.
+evince (0.9.0-1) experimental; urgency=low
 
- -- Loic Minier <lool@dooz.org>  Thu, 05 Jul 2007 13:27:45 +0200
+  * New upstream release. New features include:
+    + Printing support in djvu documents
+    + Optional drop of libgnome dependency
+    + Print button for preview mode
+    + Remember print settings
+    + History button improvements
+   Some bugfixes: 
+    + Fixes for issues with fullscreen toolbar
+    + Fix for crash in comics backend when filename contains quote
+    + Fix unhelpful messages on invalid URLs. (Closes: #415692)
+
+  * Added needed magic to provide gtk-only packages (evince-gtk and
+    evince-gtk-dbg). (Closes: #399439)
+  * debian/patches/10-comics_fix_INCLUDES.patch: Added to work around
+     Gnome #439925)
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Sun, 20 May 2007 12:47:56 +0200
 
 evince (0.8.1-2) unstable; urgency=low
 
