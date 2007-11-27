@@ -1,3 +1,9 @@
+evince (2.20.2-1) UNRELEASED; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 27 Nov 2007 05:44:45 +0100
+
 evince (2.20.1-2) unstable; urgency=low
 
   * Simplify the build process by installing directly the stuff in
