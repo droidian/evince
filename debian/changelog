@@ -1,6 +1,8 @@
 evince (2.20.2-1) unstable; urgency=low
 
-  * New upstream bugfix release.
+  * New upstream bugfix release:
+    + debian/patches/99_autoreconf.patch:
+      - Updated for the new version.
 
  -- Sebastian Dröge <slomo@debian.org>  Tue, 27 Nov 2007 05:44:45 +0100
 
