@@ -1,3 +1,11 @@
+evince (2.20.2-2) UNRELEASED; urgency=low
+
+  * Depend on ghostscript instead of gs | gs-esp; thanks Josh Triplett;
+    closes: #455645.
+  * Wrap deps.
+
+ -- Loic Minier <lool@dooz.org>  Tue, 11 Dec 2007 09:05:24 +0100
+
 evince (2.20.2-1) unstable; urgency=low
 
   * New upstream bugfix release:

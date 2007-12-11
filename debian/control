@@ -34,15 +34,19 @@ Package: evince
 Conflicts: evince-gtk
 Replaces: evince-gtk
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, gs-esp | gs, gnome-icon-theme (>= 2.17.1)
-Provides: pdf-viewer, postscript-viewer
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         ghostscript,
+         gnome-icon-theme (>= 2.17.1)
+Provides: pdf-viewer,
+          postscript-viewer
 Suggests: unrar
 Description: Document (postscript, pdf) viewer
  Evince is a simple multi-page document viewer.  It can display and print
- PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable 
- Document Format (PDF) files.  
- When supported by the document, it also allows searching for text, 
- copying text to the clipboard, hypertext navigation, and 
+ PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
+ Document Format (PDF) files.
+ When supported by the document, it also allows searching for text,
+ copying text to the clipboard, hypertext navigation, and
  table-of-contents bookmarks.
  .
  The PDF renderer is based on poppler.  The PS renderer uses Ghostscript.
@@ -71,15 +75,19 @@ Package: evince-gtk
 Conflicts: evince
 Replaces: evince
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, gs-esp | gs, gnome-icon-theme (>= 2.17.1)
-Provides: pdf-viewer, postscript-viewer
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         ghostscript,
+         gnome-icon-theme (>= 2.17.1)
+Provides: pdf-viewer,
+          postscript-viewer
 Suggests: unrar
 Description: Document (postscript, pdf) viewer (gtk version)
  Evince is a simple multi-page document viewer.  It can display and print
- PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable 
- Document Format (PDF) files.  
- When supported by the document, it also allows searching for text, 
- copying text to the clipboard, hypertext navigation, and 
+ PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
+ Document Format (PDF) files.
+ When supported by the document, it also allows searching for text,
+ copying text to the clipboard, hypertext navigation, and
  table-of-contents bookmarks.
  .
  This version of evince is built without GNOME support.
