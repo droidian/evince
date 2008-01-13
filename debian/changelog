@@ -6,11 +6,14 @@ evince (2.20.2-2) UNRELEASED; urgency=low
   * Wrap deps.
 
   [ Marc 'HE' Brockschmidt ]
-  * debian/control: 
+  * debian/control:
     + Move Homepage information to a proper control field from the long
       description.
     + Bump Standards-Version to 3.7.3 (no changes needed)
   * debian/copyright: Convert to UTF8
+
+  [ Josselin Mouette ]
+  * Fix watch file to only take stable versions into account.
 
  -- Marc 'HE' Brockschmidt <he@debian.org>  Sun, 23 Dec 2007 09:11:02 +0100
 
