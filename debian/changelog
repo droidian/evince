@@ -16,7 +16,11 @@ evince (2.20.2-2) UNRELEASED; urgency=low
   * Fix watch file to only take stable versions into account.
   * Recommend dbus-x11. Closes: #460984.
 
- -- Josselin Mouette <joss@debian.org>  Wed, 16 Jan 2008 10:22:19 +0100
+  [ Loic Minier ]
+  * Fix mailcap entry for gzip and bzip2-compressed PDF files; thanks
+    Tanguy Ortolo; closes: #470891.
+
+ -- Loic Minier <lool@dooz.org>  Fri, 14 Mar 2008 14:57:17 +0100
 
 evince (2.20.2-1) unstable; urgency=low
 

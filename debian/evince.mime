@@ -1,7 +1,7 @@
 application/pdf; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.pdf; priority=5
 application/x-pdf; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.pdf; priority=5
-application/x-bzpdf; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.pdf.gz; priority=5
-application/x-gzpdf; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.pdf.bz2; priority=5
+application/x-bzpdf; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.pdf.bz2; priority=5
+application/x-gzpdf; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.pdf.gz; priority=5
 application/postscript; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.ps; priority=5
 application/x-bzpostscript; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.ps.bz2; priority=5
 application/x-gzpostscript; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.ps.gz; priority=5
