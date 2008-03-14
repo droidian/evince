@@ -1,12 +1,51 @@
-evince (2.20.1-2) UNRELEASED; urgency=low
+evince (2.22.0-1) experimental; urgency=low
+
+  [ Loic Minier ]
+  * Fix mailcap entry for gzip and bzip2-compressed PDF files; thanks
+    Tanguy Ortolo; closes: #470891.
+  * Wrap deps.
+
+  [ Josselin Mouette ]
+  * Fix watch file to only take stable versions into account.
+  * Recommend dbus-x11. Closes: #460984.
+
+  [ Marc 'HE' Brockschmidt ]
+  * debian/control:
+    + Move Homepage information to a proper control field from the long
+      description.
+    + Bump Standards-Version to 3.7.3 (no changes needed)
+  * debian/copyright: Convert to UTF8
+  * New upstream version: Upload to experimental due to extensive changes
+    + debian/control:
+      - Switch from gnomevfs to gvfs
+      - Switch from gs to libspectre, remove deps (Closes: #466619, #455645)
+      - Update descriptions for gs -> libspectre change by removing
+        borings hints about what renderer is used
+    + debian/patches/60_gzdvi-support.patch:
+      - Updated for the new backend plugin system
+    + debian/patches/99_autoreconf.patch:
+      - Updated for the new version.
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Fri, 14 Mar 2008 14:57:17 +0100
+
+evince (2.20.2-1) unstable; urgency=low
+
+  * New upstream bugfix release:
+    + debian/patches/99_autoreconf.patch:
+      - Updated for the new version.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 27 Nov 2007 05:44:45 +0100
+
+evince (2.20.1-2) unstable; urgency=low
 
   * Simplify the build process by installing directly the stuff in
     debian/evince(-gtk). This way dh_* are executed in the correct
     order, and this fixes the GConf schemas installation.
     Closes: #448640.
   * Update the menu files to the new layout.
+  * Upload to unstable; drop check-dist include.
 
- -- Josselin Mouette <joss@debian.org>  Sat, 17 Nov 2007 11:23:14 +0100
+ -- Josselin Mouette <joss@debian.org>  Sat, 17 Nov 2007 11:48:11 +0100
 
 evince (2.20.1-1) experimental; urgency=low
 
