@@ -1,3 +1,10 @@
+evince (2.22.1.1-2) experimental; urgency=low
+
+  * debian/control.in:
+    + Rebuild against new poppler >= 0.8.0.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 20 May 2008 12:13:16 +0200
+
 evince (2.22.1.1-1) experimental; urgency=low
 
   * New upstream bugfix release.
