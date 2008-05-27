@@ -1,9 +1,36 @@
-evince (2.20.2-2) UNRELEASED; urgency=low
+evince (2.22.1.1-2) experimental; urgency=low
+
+  * debian/control.in:
+    + Rebuild against new poppler >= 0.8.0.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 20 May 2008 12:13:16 +0200
+
+evince (2.22.1.1-1) experimental; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 09 Apr 2008 08:46:03 +0200
+
+evince (2.22.1-1) experimental; urgency=low
+
+  * New upstream bugfix release:
+    + debian/patches/60_gzdvi-support.patch:
+      - Updated, most parts are applied upstream now.
+    + debian/patches/99_autoreconf.patch:
+      - Dropped, merged upstream.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 07 Apr 2008 19:18:30 +0200
+
+evince (2.22.0-1) experimental; urgency=low
 
   [ Loic Minier ]
-  * Depend on ghostscript instead of gs | gs-esp; thanks Josh Triplett;
-    closes: #455645.
+  * Fix mailcap entry for gzip and bzip2-compressed PDF files; thanks
+    Tanguy Ortolo; closes: #470891.
   * Wrap deps.
+
+  [ Josselin Mouette ]
+  * Fix watch file to only take stable versions into account.
+  * Recommend dbus-x11. Closes: #460984.
 
   [ Marc 'HE' Brockschmidt ]
   * debian/control:
@@ -11,16 +38,18 @@ evince (2.20.2-2) UNRELEASED; urgency=low
       description.
     + Bump Standards-Version to 3.7.3 (no changes needed)
   * debian/copyright: Convert to UTF8
+  * New upstream version: Upload to experimental due to extensive changes
+    + debian/control:
+      - Switch from gnomevfs to gvfs
+      - Switch from gs to libspectre, remove deps (Closes: #466619, #455645)
+      - Update descriptions for gs -> libspectre change by removing
+        borings hints about what renderer is used
+    + debian/patches/60_gzdvi-support.patch:
+      - Updated for the new backend plugin system
+    + debian/patches/99_autoreconf.patch:
+      - Updated for the new version.
 
-  [ Josselin Mouette ]
-  * Fix watch file to only take stable versions into account.
-  * Recommend dbus-x11. Closes: #460984.
-
-  [ Loic Minier ]
-  * Fix mailcap entry for gzip and bzip2-compressed PDF files; thanks
-    Tanguy Ortolo; closes: #470891.
-
- -- Loic Minier <lool@dooz.org>  Fri, 14 Mar 2008 14:57:17 +0100
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Fri, 14 Mar 2008 14:57:17 +0100
 
 evince (2.20.2-1) unstable; urgency=low
 

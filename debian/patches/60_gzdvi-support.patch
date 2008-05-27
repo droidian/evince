@@ -1,24 +1,62 @@
-diff -uprN evince-0.8.1.orig/configure.ac evince-0.8.1/configure.ac
---- evince-0.8.1.orig/configure.ac	2007-04-09 22:35:24.000000000 +0200
-+++ evince-0.8.1/configure.ac	2007-06-24 08:03:06.000000000 +0200
-@@ -427,7 +427,7 @@
- 	EVINCE_MIME_TYPES="${EVINCE_MIME_TYPES}application/postscript;application/x-bzpostscript;application/x-gzpostscript;image/x-eps;image/x-bzeps;image/x-gzeps;"
- fi
- if test "x$enable_dvi" = "xyes"; then
--	EVINCE_MIME_TYPES="${EVINCE_MIME_TYPES}application/x-dvi;"
-+	EVINCE_MIME_TYPES="${EVINCE_MIME_TYPES}application/x-dvi;application/x-gzdvi;application/x-bzdvi;"
- fi
- if test "x$enable_djvu" = "xyes"; then
- 	EVINCE_MIME_TYPES="${EVINCE_MIME_TYPES}image/vnd.djvu;"
-diff -uprN evince-0.8.1.orig/libdocument/ev-document-factory.c evince-0.8.1/libdocument/ev-document-factory.c
---- evince-0.8.1.orig/libdocument/ev-document-factory.c	2007-04-09 21:39:59.000000000 +0200
-+++ evince-0.8.1/libdocument/ev-document-factory.c	2007-06-24 08:07:25.000000000 +0200
-@@ -99,6 +99,8 @@ const EvDocumentType document_types[] = 
- #ifdef ENABLE_DVI
- 	/* dvi: */
- 	{"application/x-dvi",          EV_COMPRESSION_NONE, EV_BACKEND_DVI,  dvi_document_get_type},
-+	{"application/x-gzdvi",        EV_COMPRESSION_GZIP, EV_BACKEND_DVI,  dvi_document_get_type},
-+       {"application/x-bzdvi",        EV_COMPRESSION_BZIP2, EV_BACKEND_DVI,  dvi_document_get_type},
- #endif
+diff -ru evince-2.22.0.orig/thumbnailer/evince-thumbnailer-dvi.schemas.in evince-2.22.0/thumbnailer/evince-thumbnailer-dvi.schemas.in
+--- evince-2.22.0.orig/thumbnailer/evince-thumbnailer-dvi.schemas.in	2008-03-10 19:57:42.000000000 +0100
++++ evince-2.22.0/thumbnailer/evince-thumbnailer-dvi.schemas.in	2008-03-14 15:45:23.000000000 +0100
+@@ -26,5 +26,58 @@
+             </locale>
+         </schema>
  
- #ifdef ENABLE_COMICS
++
++        <schema>
++            <key>/schemas/desktop/gnome/thumbnailers/application@x-gzdvi/enable</key>
++            <applyto>/desktop/gnome/thumbnailers/application@x-gzdvi/enable</applyto>
++            <owner>evince</owner>
++            <type>bool</type>
++            <default>true</default>
++            <locale name="C">
++                <short></short>
++                <long></long>
++            </locale>
++        </schema>
++
++
++        <schema>
++            <key>/schemas/desktop/gnome/thumbnailers/application@x-gzdvi/command</key>
++            <applyto>/desktop/gnome/thumbnailers/application@x-gzdvi/command</applyto>
++            <owner>evince</owner>
++            <type>string</type>
++            <default>evince-thumbnailer -s %s %u %o</default>
++            <locale name="C">
++                <short></short>
++                <long></long>
++            </locale>
++        </schema>
++
++
++        <schema>
++            <key>/schemas/desktop/gnome/thumbnailers/application@x-bzdvi/enable</key>
++            <applyto>/desktop/gnome/thumbnailers/application@x-bzdvi/enable</applyto>
++            <owner>evince</owner>
++            <type>bool</type>
++            <default>true</default>
++            <locale name="C">
++                <short></short>
++                <long></long>
++            </locale>
++        </schema>
++
++
++        <schema>
++            <key>/schemas/desktop/gnome/thumbnailers/application@x-bzdvi/command</key>
++            <applyto>/desktop/gnome/thumbnailers/application@x-bzdvi/command</applyto>
++            <owner>evince</owner>
++            <type>string</type>
++            <default>evince-thumbnailer -s %s %u %o</default>
++            <locale name="C">
++                <short></short>
++                <long></long>
++            </locale>
++        </schema>
++
++
+     </schemalist>
+ </gconfschemafile>

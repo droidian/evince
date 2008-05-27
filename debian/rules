@@ -11,9 +11,12 @@ DEB_DESTDIR := $(CURDIR)/debian/evince
 DEB_BUILDDIR_evince-gtk := $(CURDIR)/debian/build/evince-gtk
 DEB_DESTDIR_evince-gtk := $(CURDIR)/debian/evince-gtk
 
-DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper --enable-djvu \
-			--enable-dvi --with-print=gtk --enable-pixbuf \
-			--enable-comics --enable-impress
+DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
+			--enable-djvu \
+			--enable-dvi \
+			--enable-pixbuf \
+			--enable-comics \
+			--enable-impress
 
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so
 
@@ -39,8 +42,8 @@ install/evince-gtk::
 
 binary-install/evince::
 	rm -rf debian/evince/usr/share/gtk-doc
-	rm -f debian/evince/usr/lib/nautilus/*/*a
-	dh_install -pevince debian/evince.xpm /usr/share/pixmaps/
+	#No development package:
+	rm -rf debian/evince/usr/lib/nautilus/*/*a debian/evince/usr/lib/*a debian/evince/usr/lib/evince/*/*a debian/evince/usr/include/ debian/evince/usr/lib/libevbackend.so
 
 binary-install/evince-dbg::
 	rm -rf debian/evince-dbg/usr/share/doc/evince-dbg
@@ -48,11 +51,13 @@ binary-install/evince-dbg::
 
 binary-install/evince-gtk::
 	rm -rf debian/evince-gtk/usr/share/gtk-doc
+	#No development package:
+	rm -rf debian/evince-gtk/usr/lib/nautilus/*/*a debian/evince-gtk/usr/lib/*a debian/evince-gtk/usr/lib/evince/*/*a debian/evince-gtk/usr/include/ debian/evince-gtk/usr/lib/libevbackend.so
 	rm -rf debian/evince-gtk/usr/lib/nautilus
 
 binary-install/evince-gtk-dbg::
 	rm -rf debian/evince-gtk-dbg/usr/share/doc/evince-gtk-dbg
-	dh_link -pevince-gtk-dbg usr/share/doc/evince-gtk usr/share/doc/evince-gtk-dbg
+		dh_link -pevince-gtk-dbg usr/share/doc/evince-gtk usr/share/doc/evince-gtk-dbg
 
 binary-post-install/evince::
 	# check for missing MIME types
