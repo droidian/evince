@@ -1,3 +1,12 @@
+evince (2.22.2-2) UNRELEASED; urgency=low
+
+  * 01_external_libgnome.patch: use libgnome to launch external links
+    instead of GIO, which requires gvfs installed for it to work. This 
+    is a temporary measure until gvfs becomes used by default in  
+    nautilus. Closes: #484032.
+
+ -- Josselin Mouette <joss@debian.org>  Mon, 16 Jun 2008 16:31:57 +0200
+
 evince (2.22.2-1) unstable; urgency=low
 
   * New upstream bugfix release.
