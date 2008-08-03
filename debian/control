@@ -39,7 +39,8 @@ Depends: ${shlibs:Depends},
          gnome-icon-theme (>= 2.17.1)
 Recommends: dbus-x11
 Provides: pdf-viewer,
-          postscript-viewer
+          postscript-viewer,
+          djvu-viewer
 Suggests: unrar
 Homepage: http://www.gnome.org/projects/evince/
 Description: Document (postscript, pdf) viewer
@@ -74,7 +75,8 @@ Depends: ${shlibs:Depends},
          gnome-icon-theme (>= 2.17.1)
 Recommends: dbus-x11
 Provides: pdf-viewer,
-          postscript-viewer
+          postscript-viewer,
+          djvu-viewer
 Suggests: unrar
 Homepage: http://www.gnome.org/projects/evince/
 Description: Document (postscript, pdf) viewer (gtk version)
