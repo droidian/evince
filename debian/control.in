@@ -41,7 +41,7 @@ Recommends: dbus-x11
 Provides: pdf-viewer,
           postscript-viewer,
           djvu-viewer
-Suggests: unrar
+Suggests: unrar, poppler-data
 Homepage: http://www.gnome.org/projects/evince/
 Description: Document (postscript, pdf) viewer
  Evince is a simple multi-page document viewer.  It can display and print
@@ -77,7 +77,7 @@ Recommends: dbus-x11
 Provides: pdf-viewer,
           postscript-viewer,
           djvu-viewer
-Suggests: unrar
+Suggests: unrar, poppler-data
 Homepage: http://www.gnome.org/projects/evince/
 Description: Document (postscript, pdf) viewer (gtk version)
  Evince is a simple multi-page document viewer.  It can display and print

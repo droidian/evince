@@ -1,6 +1,10 @@
 evince (2.22.2-3) UNRELEASED; urgency=low
 
+  [ Loic Minier ]
   * Let evince and evince-gtk provide djvu-viewer; closes: #493360.
+
+  [ Josselin Mouette ]
+  * Suggest poppler-data.
 
  -- Loic Minier <lool@dooz.org>  Sun, 03 Aug 2008 13:06:01 +0200
 
