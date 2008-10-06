@@ -36,7 +36,8 @@ Replaces: evince-gtk
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         gnome-icon-theme (>= 2.17.1)
+         gnome-icon-theme (>= 2.17.1),
+         shared-mime-info
 Recommends: dbus-x11
 Provides: pdf-viewer,
           postscript-viewer,
@@ -72,7 +73,8 @@ Replaces: evince
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         gnome-icon-theme (>= 2.17.1)
+         gnome-icon-theme (>= 2.17.1),
+         shared-mime-info
 Recommends: dbus-x11
 Provides: pdf-viewer,
           postscript-viewer,

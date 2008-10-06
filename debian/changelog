@@ -1,3 +1,10 @@
+evince (2.22.2-4) UNRELEASED; urgency=low
+
+  * Depend on shared-mime-info for MIME type detection via
+    g_content_type_guess(); see LP #208729 and GNOME #554563.
+
+ -- Loic Minier <lool@dooz.org>  Mon, 06 Oct 2008 09:08:25 +0200
+
 evince (2.22.2-3) unstable; urgency=low
 
   [ Loic Minier ]
