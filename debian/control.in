@@ -28,7 +28,8 @@ Build-Depends: cdbs,
                zlib1g-dev,
                autotools-dev,
                libspectre-dev
-Standards-Version: 3.7.3
+Standards-Version: 3.8.0
+Homepage: http://www.gnome.org/projects/evince/
 
 Package: evince
 Conflicts: evince-gtk
@@ -43,7 +44,6 @@ Provides: pdf-viewer,
           postscript-viewer,
           djvu-viewer
 Suggests: unrar, poppler-data
-Homepage: http://www.gnome.org/projects/evince/
 Description: Document (postscript, pdf) viewer
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
@@ -56,7 +56,6 @@ Package: evince-dbg
 Priority: extra
 Architecture: any
 Depends: evince (= ${binary:Version})
-Homepage: http://www.gnome.org/projects/evince/
 Description: Document (postscript, pdf) viewer - debugging symbols
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
@@ -80,7 +79,6 @@ Provides: pdf-viewer,
           postscript-viewer,
           djvu-viewer
 Suggests: unrar, poppler-data
-Homepage: http://www.gnome.org/projects/evince/
 Description: Document (postscript, pdf) viewer (gtk version)
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
@@ -95,7 +93,6 @@ Package: evince-gtk-dbg
 Priority: extra
 Architecture: any
 Depends: evince-gtk (= ${binary:Version})
-Homepage: http://www.gnome.org/projects/evince/
 Description: Document (postscript, pdf) viewer (gtk version) - debugging symbols
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
