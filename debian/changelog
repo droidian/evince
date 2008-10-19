@@ -1,4 +1,4 @@
-evince (2.22.2-4) UNRELEASED; urgency=low
+evince (2.22.2-4) unstable; urgency=low
 
   [ Loic Minier ]
   * Depend on shared-mime-info for MIME type detection via
@@ -13,7 +13,7 @@ evince (2.22.2-4) UNRELEASED; urgency=low
       to the source stanza.
     - Update Standards-Version to 3.8.0. No changes needed.
 
- -- Emilio Pozuelo Monfort <pochu@ubuntu.com>  Sun, 19 Oct 2008 14:53:41 +0200
+ -- Emilio Pozuelo Monfort <pochu@ubuntu.com>  Sun, 19 Oct 2008 15:49:19 +0200
 
 evince (2.22.2-3) unstable; urgency=low
 
