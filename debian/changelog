@@ -12,11 +12,8 @@ evince (2.22.2-4) unstable; urgency=low
     - No need to have one Homepage field for each package. Move it
       to the source stanza.
     - Update Standards-Version to 3.8.0. No changes needed.
-    - evince-gtk doesn't depend on gnome-icon-theme, as it's too heavy
-      and evince-gtk is likely to be used from non-GNOME systems.
-      Closes: #496250.
 
- -- Emilio Pozuelo Monfort <pochu@ubuntu.com>  Tue, 21 Oct 2008 12:14:13 +0200
+ -- Emilio Pozuelo Monfort <pochu@ubuntu.com>  Sun, 19 Oct 2008 15:49:19 +0200
 
 evince (2.22.2-3) unstable; urgency=low
 
