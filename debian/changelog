@@ -1,3 +1,23 @@
+evince (2.24.1-1) experimental; urgency=low
+
+  * New upstream release.
+    + Control+N opens a new window. Closes: #479760.
+    + Does not hang on corrupt djvu files. Closes: #477571.
+    + Copies links to the primary selection. Closes: #469579.
+    + More helpful error messages. Closes: #496487.
+    + Control+Insert copies text. Closes: #463836.
+  * Update build-dependencies.
+  * Remove evince-gtk, the libgnome dependency has disappeared now.
+  * evince provides evince-gtk.
+  * Don’t generate dependencies for the nautilus extension.
+  * Suggest nautilus.
+  * 01_external_libgnome.patch: removed, gio is the default now.
+  * Recommend gvfs.
+  * 02_fix_saving_images.patch: dropped, merged upstream.
+  * Add application/x-cb7 to supported MIME types.
+
+ -- Josselin Mouette <joss@debian.org>  Fri, 14 Nov 2008 12:37:55 +0100
+
 evince (2.22.2-4) unstable; urgency=low
 
   [ Loic Minier ]
