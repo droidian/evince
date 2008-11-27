@@ -1,8 +1,8 @@
 Source: evince
 Section: gnome
 Priority: optional
-Maintainer: Marc 'HE' Brockschmidt <he@debian.org>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Josselin Mouette <joss@debian.org>, Loic Minier <lool@dooz.org>, Sebastian Dröge <slomo@debian.org>
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: Emilio Pozuelo Monfort <pochu@ubuntu.com>, Josselin Mouette <joss@debian.org>, Marc 'HE' Brockschmidt <he@debian.org>, Sebastian Dröge <slomo@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 5),
                intltool (>= 0.35.0),

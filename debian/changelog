@@ -1,3 +1,10 @@
+evince (2.22.2-5) unstable; urgency=low
+
+  * debian/control: Make the Gnome team maintainer. I'm not doing the job
+     anyway.
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Thu, 27 Nov 2008 09:35:24 +0100
+
 evince (2.22.2-4) unstable; urgency=low
 
   [ Loic Minier ]
