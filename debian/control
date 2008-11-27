@@ -1,8 +1,8 @@
 Source: evince
 Section: gnome
 Priority: optional
-Maintainer: Marc 'HE' Brockschmidt <he@debian.org>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@ubuntu.com>, Josselin Mouette <joss@debian.org>, Sebastian Dröge <slomo@debian.org>
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: Emilio Pozuelo Monfort <pochu@ubuntu.com>, Josselin Mouette <joss@debian.org>, Marc 'HE' Brockschmidt <he@debian.org>, Sebastian Dröge <slomo@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 5),
                intltool (>= 0.35.0),
@@ -37,12 +37,13 @@ Depends: ${shlibs:Depends},
          ${misc:Depends},
          gnome-icon-theme (>= 2.17.1),
          shared-mime-info
-Recommends: dbus-x11
+Recommends: dbus-x11,
+            gvfs
 Provides: pdf-viewer,
           postscript-viewer,
           djvu-viewer,
           evince-gtk
-Suggests: unrar, poppler-data
+Suggests: unrar, poppler-data, nautilus
 Description: Document (postscript, pdf) viewer
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable

@@ -1,9 +1,14 @@
 evince (2.24.1-2) UNRELEASED; urgency=low
 
+  [ Josselin Mouette ]
   * README.Debian: document that you need to install poppler-data.
     Closes: #506836.
 
- -- Josselin Mouette <joss@debian.org>  Tue, 25 Nov 2008 10:09:48 +0100
+  [ Marc 'HE' Brockschmidt ]
+  * debian/control: Make the Gnome team maintainer. I'm not doing the job
+     anyway.
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Thu, 27 Nov 2008 09:38:05 +0100
 
 evince (2.24.1-1) experimental; urgency=low
 

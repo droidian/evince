@@ -1,7 +1,7 @@
 Source: evince
 Section: gnome
 Priority: optional
-Maintainer: Marc 'HE' Brockschmidt <he@debian.org>
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Uploaders: @GNOME_TEAM@
 Build-Depends: cdbs,
                debhelper (>= 5),
