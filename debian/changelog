@@ -1,3 +1,9 @@
+evince (2.24.2-2) UNRELEASED; urgency=low
+
+  * Add missing build-dependency on libgconf2-dev. Closes: #512540.
+
+ -- Josselin Mouette <joss@debian.org>  Tue, 27 Jan 2009 14:06:40 +0100
+
 evince (2.24.2-1) experimental; urgency=low
 
   [ Josselin Mouette ]
