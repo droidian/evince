@@ -56,7 +56,8 @@ Description: Document (postscript, pdf) viewer
 Package: evince-dbg
 Priority: extra
 Architecture: any
-Depends: evince (= ${binary:Version})
+Depends: ${misc:Depends},
+         evince (= ${binary:Version})
 Description: Document (postscript, pdf) viewer - debugging symbols
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
