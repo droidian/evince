@@ -7,7 +7,11 @@ evince (2.24.2-2) unstable; urgency=low
   * Upload to unstable
   * Let evince-dbg depend on ${misc:Depends}
 
- -- Emilio Pozuelo Monfort <pochu@ubuntu.com>  Wed, 04 Mar 2009 23:24:00 +0100
+  [ Josselin Mouette ]
+  * Revert the nautilus requirement, it will be handled later by 
+    binNMUs.
+
+ -- Josselin Mouette <joss@debian.org>  Sun, 15 Mar 2009 13:54:00 +0100
 
 evince (2.24.2-1) experimental; urgency=low
 
