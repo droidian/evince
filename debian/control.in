@@ -54,6 +54,7 @@ Description: Document (postscript, pdf) viewer
  table-of-contents bookmarks.
 
 Package: evince-dbg
+Section: debug
 Priority: extra
 Architecture: any
 Depends: ${misc:Depends},
