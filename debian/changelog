@@ -1,8 +1,23 @@
-evince (2.24.2-2) UNRELEASED; urgency=low
+evince (2.24.2-3) UNRELEASED; urgency=low
 
+  * Section of evince-dbg is debug.
+
+ -- Josselin Mouette <joss@debian.org>  Sun, 15 Mar 2009 20:27:33 +0100
+
+evince (2.24.2-2) unstable; urgency=low
+
+  [ Josselin Mouette ]
   * Add missing build-dependency on libgconf2-dev. Closes: #512540.
 
- -- Josselin Mouette <joss@debian.org>  Tue, 27 Jan 2009 14:06:40 +0100
+  [ Emilio Pozuelo Monfort ]
+  * Upload to unstable
+  * Let evince-dbg depend on ${misc:Depends}
+
+  [ Josselin Mouette ]
+  * Revert the nautilus requirement, it will be handled later by 
+    binNMUs.
+
+ -- Josselin Mouette <joss@debian.org>  Sun, 15 Mar 2009 13:54:00 +0100
 
 evince (2.24.2-1) experimental; urgency=low
 
