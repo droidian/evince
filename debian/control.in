@@ -8,12 +8,12 @@ Build-Depends: cdbs,
                intltool (>= 0.35.0),
                gnome-pkg-tools (>= 0.10),
                gnome-doc-utils (>= 0.3.2),
-               libglib2.0-dev (>= 2.15.6),
-               libgtk2.0-dev (>= 2.10.0),
+               libglib2.0-dev (>= 2.18.0),
+               libgtk2.0-dev (>= 2.12.0),
                libglade2-dev,
                libgconf2-dev,
                libnautilus-extension-dev,
-               libgnome-keyring-dev (>= 0.4.0),
+               libgnome-keyring-dev (>= 2.22.0),
                libdbus-glib-1-dev (>= 0.33),
                librsvg2-dev (>> 2.14.4-2),
                gnome-icon-theme (>= 2.17.1),
@@ -27,7 +27,7 @@ Build-Depends: cdbs,
                zlib1g-dev,
                autotools-dev,
                libspectre-dev
-Standards-Version: 3.8.0
+Standards-Version: 3.8.1
 Homepage: http://www.gnome.org/projects/evince/
 
 Package: evince
