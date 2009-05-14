@@ -25,6 +25,8 @@ evince (2.26.1-1) unstable; urgency=low
   * Reinstate evince-gtk, since we can now disable GConf and 
     gnome-keyring.
   * Don’t install .la and .a files in the moved places.
+  * Remove files in the install/evince* targets so that GConf schemas 
+    are removed.
 
  -- Josselin Mouette <joss@debian.org>  Thu, 14 May 2009 08:27:03 +0200
 

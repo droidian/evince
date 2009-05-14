@@ -40,21 +40,21 @@ build/evince-gtk::
 install/evince-gtk::
 	make -C $(DEB_BUILDDIR_evince-gtk) install DESTDIR=$(DEB_DESTDIR_evince-gtk)
 
-binary-install/evince::
+install/evince::
 	rm -rf debian/evince/usr/share/gtk-doc
 	#No development package, no nautilus/GConf stuff
 	rm -rf debian/evince/usr/lib/nautilus/*/*a \
-		debian/evince/etc \
 		debian/evince/usr/lib/evince/*/backends/*a \
 		debian/evince/usr/lib/*a \
 		debian/evince/usr/include/ \
 		debian/evince/usr/lib/pkgconfig \
 		debian/evince/usr/lib/*.so
 
-binary-install/evince::
+install/evince-gtk::
 	rm -rf debian/evince-gtk/usr/share/gtk-doc
 	#No development package:
 	rm -rf debian/evince-gtk/usr/lib/nautilus \
+		debian/evince-gtk/etc \
 		debian/evince-gtk/usr/lib/evince/*/backends/*a \
 		debian/evince-gtk/usr/lib/*a \
 		debian/evince-gtk/usr/include/ \
