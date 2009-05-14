@@ -1,8 +1,24 @@
-evince (2.24.2-3) UNRELEASED; urgency=low
+evince (2.26.0-1) UNRELEASED; urgency=low
 
+  [ Josselin Mouette ]
   * Section of evince-dbg is debug.
 
- -- Josselin Mouette <joss@debian.org>  Sun, 15 Mar 2009 20:27:33 +0100
+  [ Luca Bruno ]
+  * New upstream release
+    + Remember page setup options too. Closes: #430913.
+    + Show a confirmation dialog when there are pending print jobs while
+      closing the main window. Closes: #469304.
+    + Clamp top/bottom values of destinations to make sure they are not
+      bigger than the page height. Closes: #513150.
+  * debian/rules: delete libevdocument.so and libevview.so dev links.
+  * debian/control.in:
+    + Build-Depends version bumps:
+      - libglib2.0-dev to 2.18.0.
+      - libgtk2.0-dev to 2.12.0.
+      - libgnome-keyring-dev to 2.22.0.
+    + Update Standards-Version to 3.8.1. No changes needed.
+
+ -- Luca Bruno <lethalman88@gmail.com>  Sun, 22 Mar 2009 20:45:22 +0100
 
 evince (2.24.2-2) unstable; urgency=low
 

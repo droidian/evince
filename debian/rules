@@ -21,7 +21,8 @@ DEB_DH_SHLIBDEPS_ARGS_evince += --exclude=libevince-properties-page.so
 binary-install/evince::
 	rm -rf debian/evince/usr/share/gtk-doc
 	#No development package:
-	rm -rf debian/evince/usr/lib/nautilus/*/*a debian/evince/usr/lib/*a debian/evince/usr/lib/evince/*/*a debian/evince/usr/include/ debian/evince/usr/lib/libevbackend.so
+	rm -rf debian/evince/usr/lib/nautilus/*/*a debian/evince/usr/lib/*a debian/evince/usr/lib/evince/*/*a debian/evince/usr/include/ \
+		debian/evince/usr/lib/libevbackend.so debian/evince/usr/lib/libevview.so debian/evince/usr/lib/libevdocument.so
 
 binary-install/evince-dbg::
 	rm -rf debian/evince-dbg/usr/share/doc/evince-dbg
