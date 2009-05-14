@@ -21,7 +21,7 @@ evince (2.26.1-1) unstable; urgency=low
   [ Josselin Mouette ]
   * Remove useless build-dependency on libglade.
   * New upstream release.
-  * Really install the lintian override.
+  * Add lintian override for versionless GPL, we link to both.
   * Reinstate evince-gtk, since we can now disable GConf and 
     gnome-keyring.
   * Don’t install .la and .a files in the moved places.
