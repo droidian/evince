@@ -1,4 +1,4 @@
-evince (2.26.0-1) UNRELEASED; urgency=low
+evince (2.26.1-1) unstable; urgency=low
 
   [ Josselin Mouette ]
   * Section of evince-dbg is debug.
@@ -18,7 +18,15 @@ evince (2.26.0-1) UNRELEASED; urgency=low
       - libgnome-keyring-dev to 2.22.0.
     + Update Standards-Version to 3.8.1. No changes needed.
 
- -- Luca Bruno <lethalman88@gmail.com>  Sun, 22 Mar 2009 20:45:22 +0100
+  [ Josselin Mouette ]
+  * Remove useless build-dependency on libglade.
+  * New upstream release.
+  * Really install the lintian override.
+  * Reinstate evince-gtk, since we can now disable GConf and 
+    gnome-keyring.
+  * Don’t install .la and .a files in the moved places.
+
+ -- Josselin Mouette <joss@debian.org>  Thu, 14 May 2009 08:27:03 +0200
 
 evince (2.24.2-2) unstable; urgency=low
 

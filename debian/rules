@@ -6,7 +6,10 @@ include /usr/share/cdbs/1/rules/simple-patchsys.mk
 include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
 -include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
+DEB_BUILDDIR := $(CURDIR)/debian/build/evince
 DEB_DESTDIR := $(CURDIR)/debian/evince
+DEB_BUILDDIR_evince-gtk := $(CURDIR)/debian/build/evince-gtk
+DEB_DESTDIR_evince-gtk := $(CURDIR)/debian/evince-gtk
 
 DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-djvu \
@@ -16,17 +19,52 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-impress
 
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so
-DEB_DH_SHLIBDEPS_ARGS_evince += --exclude=libevince-properties-page.so
+
+#cdbs should do this, but doesn't (see #424636)
+clean::
+	rm -rf $(DEB_BUILDDIR) $(DEB_BUILDDIR_evince-gtk)
+
+configure/evince-gtk:: $(DEB_BUILDDIR_evince-gtk)/config.status
+$(DEB_BUILDDIR_evince-gtk)/config.status:
+	cd $(DEB_BUILDDIR_evince-gtk) && \
+		$(DEB_CONFIGURE_SCRIPT_ENV) $(DEB_CONFIGURE_SCRIPT) \
+			$(DEB_CONFIGURE_NORMAL_ARGS) \
+			$(cdbs_configure_flags) \
+			$(DEB_CONFIGURE_EXTRA_FLAGS) \
+			--without-keyring --without-gconf --disable-nautilus \
+			$(DEB_CONFIGURE_USER_FLAGS)
+
+build/evince-gtk::
+	make -C $(DEB_BUILDDIR_evince-gtk)
+
+install/evince-gtk::
+	make -C $(DEB_BUILDDIR_evince-gtk) install DESTDIR=$(DEB_DESTDIR_evince-gtk)
 
 binary-install/evince::
 	rm -rf debian/evince/usr/share/gtk-doc
 	#No development package:
-	rm -rf debian/evince/usr/lib/nautilus/*/*a debian/evince/usr/lib/*a debian/evince/usr/lib/evince/*/*a debian/evince/usr/include/ \
-		debian/evince/usr/lib/libevbackend.so debian/evince/usr/lib/libevview.so debian/evince/usr/lib/libevdocument.so
+	rm -rf debian/evince/usr/lib/nautilus/*/*a \
+		debian/evince/usr/lib/evince/*/backends/*a \
+		debian/evince/usr/lib/*a \
+		debian/evince/usr/include/ \
+		debian/evince/usr/lib/*.so
+
+binary-install/evince::
+	rm -rf debian/evince-gtk/usr/share/gtk-doc
+	#No development package:
+	rm -rf debian/evince-gtk/usr/lib/nautilus \
+		debian/evince-gtk/usr/lib/evince/*/backends/*a \
+		debian/evince-gtk/usr/lib/*a \
+		debian/evince-gtk/usr/include/ \
+		debian/evince-gtk/usr/lib/*.so
 
 binary-install/evince-dbg::
 	rm -rf debian/evince-dbg/usr/share/doc/evince-dbg
 	dh_link -pevince-dbg usr/share/doc/evince usr/share/doc/evince-dbg
+
+binary-install/evince-gtk-dbg::
+	rm -rf debian/evince-gtk-dbg/usr/share/doc/evince-gtk-dbg
+	dh_link -pevince-gtk-dbg usr/share/doc/evince-gtk usr/share/doc/evince-gtk-dbg
 
 binary-post-install/evince::
 	# check for missing MIME types
