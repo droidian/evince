@@ -2,4 +2,3 @@ debian/lintian/evince /usr/share/lintian/overrides/
 debian/tmp/etc
 debian/tmp/usr/bin
 debian/tmp/usr/lib/nautilus/*/*.so
-debian/tmp/usr/share/man
