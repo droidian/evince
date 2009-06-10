@@ -46,7 +46,7 @@ install/evince-gtk::
 		debian/evince-gtk/usr/lib \
 		debian/evince-gtk/usr/include
 
-install/evince-common::
+binary-install/evince-common::
 	rm -rf debian/evince-common/usr/share/gtk-doc
 
 binary-post-install/evince::

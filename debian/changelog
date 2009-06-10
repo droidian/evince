@@ -36,6 +36,7 @@ evince (2.26.2-1) unstable; urgency=low
   * Fixup some dependencies.
   * Don’t use symlinks for /usr/share/doc, it would require the 
     postinst dance.
+  * Correctly remove the doc from evince-common.
 
  -- Josselin Mouette <joss@debian.org>  Wed, 10 Jun 2009 22:41:12 +0200
 
