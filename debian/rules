@@ -49,22 +49,6 @@ install/evince-gtk::
 install/evince-common::
 	rm -rf debian/evince-common/usr/share/gtk-doc
 
-binary-install/evince::
-	rm -rf debian/evince/usr/share/doc/evince
-	dh_link -pevince usr/share/doc/evince-common usr/share/doc/evince
-
-binary-install/evince-gtk::
-	rm -rf debian/evince-gtk/usr/share/doc/evince-gtk
-	dh_link -pevince-gtk usr/share/doc/evince-common usr/share/doc/evince-gtk
-
-binary-install/evince-dbg::
-	rm -rf debian/evince-dbg/usr/share/doc/evince-dbg
-	dh_link -pevince-dbg usr/share/doc/evince usr/share/doc/evince-dbg
-
-binary-install/libevince-dev::
-	rm -rf debian/libevince-dev/usr/share/doc/libevince-dev
-	dh_link -plibevince-dev usr/share/doc/libevince1 usr/share/doc/libevince-dev
-
 binary-post-install/evince::
 	# check for missing MIME types
 	desktop-check-mime-types
