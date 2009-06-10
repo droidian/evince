@@ -1,2 +1,1 @@
 debian/lintian/evince-gtk /usr/share/lintian/overrides/
-debian/evince.xpm /usr/share/pixmaps/

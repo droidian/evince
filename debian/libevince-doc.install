@@ -1,0 +1,2 @@
+debian/lintian/libevince-doc /usr/share/lintian/overrides/
+debian/tmp/usr/share/gtk-doc

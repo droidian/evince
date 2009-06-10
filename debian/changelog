@@ -1,3 +1,42 @@
+evince (2.26.2-1) unstable; urgency=low
+
+  [ Luca Bruno ]
+  * New upstream release.
+  * debian/control.in:
+    - Split libevince1, libevince-dev and libevince-doc to expose evince
+      rendering and widgets development API.
+      These packages include libevdocument and libevview libraries.
+    - Split evince-backends which files are shared by evince and evince-gtk
+      binary packages.
+    - Split evince-common containing platform-independent files shared between
+      evince and evince-gtk packages.
+  * debian/evince.manpages, debian/evince-gtk.manpages:
+    - Moved to evince-common.manpages as they shared the evince-thumbnailer
+      manpage and because evince manpage is installed by evince-common.
+  * debian/rules:
+    - Install under debian/tmp by default.
+    - Enable gtk-doc, added install rule for evince-common to delete gtk-doc
+      files.
+    - Link evince and evince-gtk docs to evince-common docs.
+  * debian/lintian/{evince-backends, evince-common, libevince1, libevince-dev,
+    libevince-doc}:
+    - Added.
+
+  [ Josselin Mouette ]
+  * Don’t install any .la’s, and only the relevant .a’s.
+  * Use ${gnome:Depends}.
+  * Remove evince-gtk-dbg, the differences with evince are minor now and 
+    it will not work with the backends. Let’s hope the build-ids come 
+    soon to fix that mess.
+  * Don’t split the docs, given their size.
+  * Ship the backends with the library; the library needs them anyway, 
+    and they are in a correctly versioned directory.
+  * Install evince-thumbnailer.1 in evince-common.
+  * Install the XPM in evince-common.
+  * Fixup some dependencies.
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 10 Jun 2009 22:41:12 +0200
+
 evince (2.26.1-2) unstable; urgency=low
 
   * Update build dependencies to the current version. Closes: #528717.
