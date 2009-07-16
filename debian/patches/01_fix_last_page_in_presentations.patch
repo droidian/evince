@@ -1,0 +1,61 @@
+Description: see below
+Origin: upstream
+Bug: http://bugzilla.gnome.org/show_bug.cgi?id=583652
+Bug-Debian: http://bugs.debian.org/537156
+
+
+From c493eb6c33fd49abd66f1e5f4dfc208776302594 Mon Sep 17 00:00:00 2001
+From: Carlos Garcia Campos <carlosgc@gnome.org>
+Date: Mon, 08 Jun 2009 14:24:32 +0000
+Subject: [libview] Fix page transitions in presentation mode
+
+Set the destination surface as soon as possible when starting a page
+transition animation. Fixes bgo#583652 and bgo#581881.
+---
+diff --git a/libview/ev-transition-animation.c b/libview/ev-transition-animation.c
+index efcb509..7e33023 100644
+--- a/libview/ev-transition-animation.c
++++ b/libview/ev-transition-animation.c
+@@ -635,6 +635,9 @@ ev_transition_animation_set_origin_surface (EvTransitionAnimation *animation,
+ 
+ 	priv = EV_TRANSITION_ANIMATION_GET_PRIVATE (animation);
+ 
++	if (priv->origin_surface == origin_surface)
++		return;
++
+ 	surface = cairo_surface_reference (origin_surface);
+ 
+ 	if (priv->origin_surface)
+@@ -658,6 +661,9 @@ ev_transition_animation_set_dest_surface (EvTransitionAnimation *animation,
+ 
+ 	priv = EV_TRANSITION_ANIMATION_GET_PRIVATE (animation);
+ 
++	if (priv->dest_surface == dest_surface)
++		return;
++
+ 	surface = cairo_surface_reference (dest_surface);
+ 
+ 	if (priv->dest_surface)
+diff --git a/libview/ev-view.c b/libview/ev-view.c
+index 7626f86..80f8005 100644
+--- a/libview/ev-view.c
++++ b/libview/ev-view.c
+@@ -4161,10 +4161,14 @@ ev_view_presentation_animation_start (EvView *view,
+ 	if (!effect)
+ 		return;
+ 
+-	surface = ev_pixbuf_cache_get_surface (view->pixbuf_cache, view->current_page);
+ 	view->animation = ev_transition_animation_new (effect);
++
++	surface = ev_pixbuf_cache_get_surface (view->pixbuf_cache, view->current_page);
+ 	ev_transition_animation_set_origin_surface (view->animation, surface);
+-		
++	surface = ev_pixbuf_cache_get_surface (view->pixbuf_cache, new_page);
++	if (surface)
++		ev_transition_animation_set_dest_surface (view->animation, surface);
++
+ 	g_signal_connect (view->animation, "frame",
+ 			  G_CALLBACK (ev_view_transition_animation_frame), view);
+ 	g_signal_connect (view->animation, "finished",
+--
+cgit v0.8.2
