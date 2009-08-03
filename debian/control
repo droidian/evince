@@ -71,6 +71,7 @@ Description: Document (postscript, pdf) viewer - debugging symbols
  This package contains the debugging symbols needed by gdb.
 
 Package: evince-gtk
+Section: x11
 Conflicts: evince
 Architecture: any
 Depends: ${shlibs:Depends},
