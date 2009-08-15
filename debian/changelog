@@ -1,5 +1,6 @@
-evince (2.26.2-2) UNRELEASED; urgency=low
+evince (2.26.2-2) unstable; urgency=low
 
+  [ Emilio Pozuelo Monfort ]
   * debian/patches/60_gzdvi-support.patch: forwarded, add headers.
   * debian/patches/01_fix_last_page_in_presentations.patch: Backport
     change from upstream to fix last page in presentation mode being
@@ -7,7 +8,7 @@ evince (2.26.2-2) UNRELEASED; urgency=low
   * Standards-Version is 3.8.2, no changes needed.
   * evince-gtk shouldn't be in the gnome section. Closes: #528467.
 
- -- Emilio Pozuelo Monfort <pochu@ubuntu.com>  Tue, 07 Jul 2009 21:58:03 +0200
+ -- Josselin Mouette <joss@debian.org>  Sat, 15 Aug 2009 10:56:01 +0200
 
 evince (2.26.2-1) unstable; urgency=low
 
