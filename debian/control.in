@@ -10,7 +10,7 @@ Build-Depends: cdbs,
                gnome-doc-utils (>= 0.3.2),
                gtk-doc-tools (>= 1.0),
                libdbus-glib-1-dev (>= 0.70),
-               libgtk2.0-dev (>= 2.12.0),
+               libgtk2.0-dev (>= 2.14.0),
                libglib2.0-dev (>= 2.18.0),
                libgnome-keyring-dev (>= 2.22.0),
                gnome-icon-theme (>= 2.17.1),
@@ -19,8 +19,8 @@ Build-Depends: cdbs,
                libgconf2-dev,
                zlib1g-dev,
                libnautilus-extension-dev,
-               libpoppler-glib-dev (>= 0.8.0),
-               libspectre-dev (>= 0.2.0),
+               libpoppler-glib-dev (>= 0.11.0),
+               libspectre-dev (>= 0.2.0), libgs-dev,
                libtiff4-dev,
                libdjvulibre-dev (>= 3.5.17),
                libkpathsea-dev,
@@ -131,7 +131,9 @@ Package: libevince-dev
 Architecture: any
 Section: libdevel
 Depends: libevince1 (= ${binary:Version}),
-         ${misc:Depends}
+         ${misc:Depends},
+         libgtk2.0-dev (>= 2.14.0),
+         libglib2.0-dev (>= 2.18.0)
 Replaces: evince (<< 2.26.2), evince-gtk (<< 2.26.2)
 Description: Document (postscript, pdf) rendering library - development files
  This package contains evince-related libraries for rendering and displaying
