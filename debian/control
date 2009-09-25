@@ -2,48 +2,48 @@ Source: evince
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Emilio Pozuelo Monfort <pochu@ubuntu.com>, Josselin Mouette <joss@debian.org>, Sebastian Dröge <slomo@debian.org>
+Uploaders: Emilio Pozuelo Monfort <pochu@ubuntu.com>, Josselin Mouette <joss@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 5),
                intltool (>= 0.35.0),
                gnome-pkg-tools (>= 0.10),
                gnome-doc-utils (>= 0.3.2),
-               libglib2.0-dev (>= 2.18.0),
+               gtk-doc-tools (>= 1.0),
+               libdbus-glib-1-dev (>= 0.70),
                libgtk2.0-dev (>= 2.12.0),
-               libglade2-dev,
-               libgconf2-dev,
-               libnautilus-extension-dev,
+               libglib2.0-dev (>= 2.18.0),
                libgnome-keyring-dev (>= 2.22.0),
-               libdbus-glib-1-dev (>= 0.33),
-               librsvg2-dev (>> 2.14.4-2),
                gnome-icon-theme (>= 2.17.1),
-               libxml-parser-perl,
-               scrollkeeper,
-               libxt-dev,
-               libpoppler-glib-dev (>= 0.8),
+               libxml2-dev (>= 2.5.0),
+               libsm-dev (>= 2:1.0.0),
+               libgconf2-dev,
+               zlib1g-dev,
+               libnautilus-extension-dev,
+               libpoppler-glib-dev (>= 0.8.0),
+               libspectre-dev (>= 0.2.0),
+               libtiff4-dev,
                libdjvulibre-dev (>= 3.5.17),
                libkpathsea-dev,
-               libtiff4-dev,
-               zlib1g-dev,
-               autotools-dev,
-               libspectre-dev
-Standards-Version: 3.8.1
+               libt1-dev,
+               autotools-dev
+Standards-Version: 3.8.2
 Homepage: http://www.gnome.org/projects/evince/
 
 Package: evince
 Conflicts: evince-gtk
-Replaces: evince-gtk
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
+         libevince1 (= ${binary:Version}),
+         evince-common (>= ${gnome:Version}),
+         evince-common (<< ${gnome:NextVersion}),
          gnome-icon-theme (>= 2.17.1),
          shared-mime-info
 Recommends: dbus-x11,
             gvfs
 Provides: pdf-viewer,
           postscript-viewer,
-          djvu-viewer,
-          evince-gtk
+          djvu-viewer
 Suggests: unrar, poppler-data, nautilus
 Description: Document (postscript, pdf) viewer
  Evince is a simple multi-page document viewer.  It can display and print
@@ -58,7 +58,8 @@ Section: debug
 Priority: extra
 Architecture: any
 Depends: ${misc:Depends},
-         evince (= ${binary:Version})
+         evince (= ${binary:Version}),
+         libevince1 (= ${binary:Version})
 Description: Document (postscript, pdf) viewer - debugging symbols
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
@@ -68,3 +69,76 @@ Description: Document (postscript, pdf) viewer - debugging symbols
  table-of-contents bookmarks.
  .
  This package contains the debugging symbols needed by gdb.
+
+Package: evince-gtk
+Section: x11
+Conflicts: evince
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         libevince1 (= ${binary:Version}),
+         evince-common (>= ${gnome:Version}),
+         evince-common (<< ${gnome:NextVersion}),
+         gnome-icon-theme (>= 2.17.1),
+         shared-mime-info
+Recommends: dbus-x11
+Provides: pdf-viewer,
+          postscript-viewer,
+          djvu-viewer
+Suggests: gvfs, unrar, poppler-data, nautilus
+Description: Document (postscript, pdf) viewer (GTK+ version)
+ Evince is a simple multi-page document viewer.  It can display and print
+ PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
+ Document Format (PDF) files.
+ When supported by the document, it also allows searching for text,
+ copying text to the clipboard, hypertext navigation, and
+ table-of-contents bookmarks.
+ .
+ This version of evince is built without GConf and GNOME keyring 
+ support.
+
+Package: evince-common
+Architecture: all
+Depends: ${misc:Depends}
+Replaces: evince (<< 2.26.2), evince-gtk (<< 2.26.2)
+Description: Document (postscript, pdf) viewer - common files
+ Evince is a simple multi-page document viewer.  It can display and print
+ PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
+ Document Format (PDF) files.
+ When supported by the document, it also allows searching for text,
+ copying text to the clipboard, hypertext navigation, and
+ table-of-contents bookmarks.
+ .
+ This package contains shared files for evince and evince-gtk packages.
+
+Package: libevince1
+Architecture: any
+Section: libs
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Replaces: evince (<< 2.26.2), evince-gtk (<< 2.26.2)
+Description: Document (postscript, pdf) rendering library
+ This package contains evince-related libraries for rendering and displaying
+ Evince documents like PostScript (PS), Encapsulated PostScript (EPS), DJVU,
+ DVI and Portable Document Format (PDF) files.
+ * libevdocument, which performs the rendering of the documents
+ * libevview, which provides GTK+ widgets for displaying documents
+ .
+ It is shipped with the ps, pdf, dvi, impress, tiff, djvu, comics and
+ pixbuf backends.
+
+Package: libevince-dev
+Architecture: any
+Section: libdevel
+Depends: libevince1 (= ${binary:Version}),
+         ${misc:Depends}
+Replaces: evince (<< 2.26.2), evince-gtk (<< 2.26.2)
+Description: Document (postscript, pdf) rendering library - development files
+ This package contains evince-related libraries for rendering and displaying
+ Evince documents like PostScript (PS), Encapsulated PostScript (EPS), DJVU,
+ DVI and Portable Document Format (PDF) files.
+ * libevdocument, which performs the rendering of the documents
+ * libevview, which provides GTK+ widgets for displaying documents
+ .
+ This package provides the development headers, static libraries and 
+ documentation.

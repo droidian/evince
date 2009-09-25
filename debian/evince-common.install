@@ -1,0 +1,3 @@
+debian/lintian/evince-common /usr/share/lintian/overrides/
+debian/evince.xpm /usr/share/pixmaps/
+debian/tmp/usr/share

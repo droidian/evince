@@ -1,3 +1,6 @@
+Description: Enable thumbnailing for gzipped/bzipped dvi files
+Bug: http://bugzilla.gnome.org/show_bug.cgi?id=588013
+
 diff -ru evince-2.22.0.orig/thumbnailer/evince-thumbnailer-dvi.schemas.in evince-2.22.0/thumbnailer/evince-thumbnailer-dvi.schemas.in
 --- evince-2.22.0.orig/thumbnailer/evince-thumbnailer-dvi.schemas.in	2008-03-10 19:57:42.000000000 +0100
 +++ evince-2.22.0/thumbnailer/evince-thumbnailer-dvi.schemas.in	2008-03-14 15:45:23.000000000 +0100

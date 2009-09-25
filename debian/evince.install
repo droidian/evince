@@ -1,2 +1,4 @@
-debian/evince.lintian-override /usr/share/lintian/overrides/
-debian/evince.xpm /usr/share/pixmaps/
+debian/lintian/evince /usr/share/lintian/overrides/
+debian/tmp/etc
+debian/tmp/usr/bin
+debian/tmp/usr/lib/nautilus/*/*.so

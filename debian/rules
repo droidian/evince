@@ -4,29 +4,50 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/gnome.mk
 include /usr/share/cdbs/1/rules/simple-patchsys.mk
 include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
+include /usr/share/gnome-pkg-tools/1/rules/gnome-version.mk
 -include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
-DEB_DESTDIR := $(CURDIR)/debian/evince
+DEB_BUILDDIR := $(CURDIR)/debian/build/evince
+DEB_BUILDDIR_evince-gtk := $(CURDIR)/debian/build/evince-gtk
+DEB_DESTDIR_evince-gtk := $(CURDIR)/debian/evince-gtk
 
 DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
+			--enable-gtk-doc \
 			--enable-djvu \
 			--enable-dvi \
+			--enable-t1lib \
 			--enable-pixbuf \
 			--enable-comics \
 			--enable-impress
 
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so
-DEB_DH_SHLIBDEPS_ARGS_evince += --exclude=libevince-properties-page.so
 
-binary-install/evince::
-	rm -rf debian/evince/usr/share/gtk-doc
-	#No development package:
-	rm -rf debian/evince/usr/lib/nautilus/*/*a debian/evince/usr/lib/*a debian/evince/usr/lib/evince/*/*a debian/evince/usr/include/ \
-		debian/evince/usr/lib/libevbackend.so debian/evince/usr/lib/libevview.so debian/evince/usr/lib/libevdocument.so
+#cdbs should do this, but doesn't (see #424636)
+clean::
+	rm -rf $(DEB_BUILDDIR) $(DEB_BUILDDIR_evince-gtk)
 
-binary-install/evince-dbg::
-	rm -rf debian/evince-dbg/usr/share/doc/evince-dbg
-	dh_link -pevince-dbg usr/share/doc/evince usr/share/doc/evince-dbg
+configure/evince-gtk:: $(DEB_BUILDDIR_evince-gtk)/config.status
+$(DEB_BUILDDIR_evince-gtk)/config.status:
+	cd $(DEB_BUILDDIR_evince-gtk) && \
+		$(DEB_CONFIGURE_SCRIPT_ENV) $(DEB_CONFIGURE_SCRIPT) \
+			$(DEB_CONFIGURE_NORMAL_ARGS) \
+			$(cdbs_configure_flags) \
+			$(DEB_CONFIGURE_EXTRA_FLAGS) \
+			--without-keyring --without-gconf --disable-nautilus \
+			$(DEB_CONFIGURE_USER_FLAGS)
+
+build/evince-gtk::
+	make -C $(DEB_BUILDDIR_evince-gtk)
+
+install/evince-gtk::
+	make -C $(DEB_BUILDDIR_evince-gtk) install DESTDIR=$(DEB_DESTDIR_evince-gtk)
+	rm -rf debian/evince-gtk/usr/share \
+		debian/evince-gtk/etc \
+		debian/evince-gtk/usr/lib \
+		debian/evince-gtk/usr/include
+
+binary-install/evince-common::
+	rm -rf debian/evince-common/usr/share/gtk-doc
 
 binary-post-install/evince::
 	# check for missing MIME types

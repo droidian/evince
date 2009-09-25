@@ -1,0 +1,6 @@
+debian/lintian/libevince-dev /usr/share/lintian/overrides/
+debian/tmp/usr/lib/*.a
+debian/tmp/usr/include
+debian/tmp/usr/lib/pkgconfig
+debian/tmp/usr/lib/*.so
+debian/tmp/usr/share/gtk-doc
