@@ -2,7 +2,7 @@ Source: evince
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Josselin Mouette <joss@debian.org>
+Uploaders: Emilio Pozuelo Monfort <pochu@ubuntu.com>, Josselin Mouette <joss@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 5),
                intltool (>= 0.35.0),
@@ -20,7 +20,7 @@ Build-Depends: cdbs,
                zlib1g-dev,
                libnautilus-extension-dev,
                libpoppler-glib-dev (>= 0.11.0),
-               libspectre-dev (>= 0.2.0), libgs-dev,
+               libspectre-dev (>= 0.2.0),
                libtiff4-dev,
                libdjvulibre-dev (>= 3.5.17),
                libkpathsea-dev,

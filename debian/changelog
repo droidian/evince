@@ -1,3 +1,9 @@
+evince (2.28.0-2) UNRELEASED; urgency=low
+
+  * Remove the libgs-dev dependency now that libspectre has been fixed.
+
+ -- Josselin Mouette <joss@debian.org>  Mon, 05 Oct 2009 08:15:22 +0200
+
 evince (2.28.0-1) experimental; urgency=low
 
   * New upstream release.
