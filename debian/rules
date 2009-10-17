@@ -20,7 +20,8 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-comics \
 			--enable-impress
 
-DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so
+DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so \
+	-V'libevince1 (>= 2.28)'
 
 #cdbs should do this, but doesn't (see #424636)
 clean::
@@ -33,7 +34,10 @@ $(DEB_BUILDDIR_evince-gtk)/config.status:
 			$(DEB_CONFIGURE_NORMAL_ARGS) \
 			$(cdbs_configure_flags) \
 			$(DEB_CONFIGURE_EXTRA_FLAGS) \
-			--without-keyring --without-gconf --disable-nautilus \
+			--without-keyring \
+			--without-gconf \
+			--disable-nautilus \
+			--disable-dbus \
 			$(DEB_CONFIGURE_USER_FLAGS)
 
 build/evince-gtk::

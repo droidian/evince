@@ -1,3 +1,22 @@
+evince (2.28.0-2) UNRELEASED; urgency=low
+
+  * Remove the libgs-dev dependency now that libspectre has been fixed.
+
+ -- Josselin Mouette <joss@debian.org>  Mon, 05 Oct 2009 08:15:22 +0200
+
+evince (2.28.0-1) experimental; urgency=low
+
+  * New upstream release.
+  * Disable D-Bus in the GTK+ build.
+  * Add missing -dev dependencies.
+  * Bump shlibs for libevince1.
+  * 01_fix_last_page_in_presentations.patch, 60_gzdvi-support.patch: 
+    dropped, merged upstream.
+  * Add build-dependency on libgs-dev because of the broken 
+    libspectre.la.
+
+ -- Josselin Mouette <joss@debian.org>  Fri, 25 Sep 2009 19:06:36 +0200
+
 evince (2.26.2-2) unstable; urgency=low
 
   [ Emilio Pozuelo Monfort ]
