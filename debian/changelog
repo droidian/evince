@@ -13,6 +13,8 @@ evince (2.30.0-1) experimental; urgency=low
       debian/gir1.0-evince-2.30.install,
       debian/libevince-dev.install:
       - Enable GObject-Introspection support.
+    + debian/*.mime:
+      - Add application/x-cbt.
 
  -- Sebastian Dröge <slomo@debian.org>  Thu, 08 Apr 2010 06:11:38 +0200
 
