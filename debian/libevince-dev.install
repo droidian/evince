@@ -4,3 +4,4 @@ debian/tmp/usr/include
 debian/tmp/usr/lib/pkgconfig
 debian/tmp/usr/lib/*.so
 debian/tmp/usr/share/gtk-doc
+debian/tmp/usr/share/gir-*

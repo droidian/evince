@@ -18,10 +18,11 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-t1lib \
 			--enable-pixbuf \
 			--enable-comics \
-			--enable-impress
+			--enable-impress \
+			--enable-introspection=yes
 
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so \
-	-V'libevince1 (>= 2.28)'
+	-V'libevince2 (>= 2.30)'
 
 #cdbs should do this, but doesn't (see #424636)
 clean::
@@ -38,6 +39,7 @@ $(DEB_BUILDDIR_evince-gtk)/config.status:
 			--without-gconf \
 			--disable-nautilus \
 			--disable-dbus \
+			--enable-introspection=no \
 			$(DEB_CONFIGURE_USER_FLAGS)
 
 build/evince-gtk::
@@ -56,3 +58,7 @@ binary-install/evince-common::
 binary-post-install/evince::
 	# check for missing MIME types
 	desktop-check-mime-types
+
+common-binary-fixup-arch::
+	dh_girepository -pgir1.0-evince-2.30
+
