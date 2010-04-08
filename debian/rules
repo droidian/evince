@@ -50,8 +50,12 @@ install/evince-gtk::
 	make -C $(DEB_BUILDDIR_evince-gtk) install DESTDIR=$(DEB_DESTDIR_evince-gtk)
 	rm -rf debian/evince-gtk/usr/share \
 		debian/evince-gtk/etc \
-		debian/evince-gtk/usr/lib \
 		debian/evince-gtk/usr/include
+	rm -rf debian/evince-gtk/usr/lib/lib*
+	rm -rf debian/evince-gtk/usr/lib/nautilus
+	rm -rf debian/evince-gtk/usr/lib/pkgconfig
+	rm -rf debian/evince-gtk/usr/lib/girepository*
+	rm -rf debian/evince-gtk/usr/lib/evince/2
 
 binary-install/evince-common::
 	rm -rf debian/evince-common/usr/share/gtk-doc

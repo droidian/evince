@@ -1,3 +1,11 @@
+evince (2.30.0-2) experimental; urgency=low
+
+  * debian/evince.install,
+    debian/rules:
+    + Ship the evinced and evince-convert-metadata programs.
+
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 08 Apr 2010 16:53:12 +0200
+
 evince (2.30.0-1) experimental; urgency=low
 
   * New upstream stable release:
