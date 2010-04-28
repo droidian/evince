@@ -22,7 +22,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-introspection=yes
 
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so \
-	-V'libevince2 (>= 2.30)'
+	-V'libevince2 (>= 2.30.1)'
 
 #cdbs should do this, but doesn't (see #424636)
 clean::

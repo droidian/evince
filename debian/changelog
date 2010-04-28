@@ -1,3 +1,11 @@
+evince (2.30.1-1) experimental; urgency=low
+
+  * New upstream bugfix release:
+    + debian/rules:
+      - Update shlibs version because of API changes.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 28 Apr 2010 14:27:18 +0200
+
 evince (2.30.0-2) experimental; urgency=low
 
   * debian/evince.install,
