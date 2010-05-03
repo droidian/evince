@@ -14,6 +14,7 @@ application/x-bzdvi; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.dvi.bz2
 image/vnd.djvu; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.djvu; priority=5
 image/tiff; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.tiff; priority=5
 application/x-cbr; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.cbr; priority=5
+application/x-cbt; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.cbt; priority=5
 application/x-cbz; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.cbz; priority=5
 application/x-cb7; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.cb7; priority=5
 application/vnd.sun.xml.impress; evince %s; test=test -n "$DISPLAY"; nametemplate=%s.sxd; priority=5

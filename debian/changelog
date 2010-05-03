@@ -1,3 +1,39 @@
+evince (2.30.1-1) experimental; urgency=low
+
+  * New upstream bugfix release:
+    + debian/rules:
+      - Update shlibs version because of API changes.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 28 Apr 2010 14:27:18 +0200
+
+evince (2.30.0-2) experimental; urgency=low
+
+  * debian/evince.install,
+    debian/rules:
+    + Ship the evinced and evince-convert-metadata programs.
+
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 08 Apr 2010 16:53:12 +0200
+
+evince (2.30.0-1) experimental; urgency=low
+
+  * New upstream stable release:
+    + debian/control.in,
+      debian/rules,
+      debian/libevince[12].install,
+      debian/lintian/libevince[12]:
+      - Update for new soname.
+    + debian/control.in:
+      - Update build dependencies.
+    + debian/control.in,
+      debian/rules,
+      debian/gir1.0-evince-2.30.install,
+      debian/libevince-dev.install:
+      - Enable GObject-Introspection support.
+    + debian/*.mime:
+      - Add application/x-cbt.
+
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 08 Apr 2010 06:11:38 +0200
+
 evince (2.28.2-1) unstable; urgency=low
 
   * New upstream release.

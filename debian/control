@@ -7,7 +7,7 @@ Source: evince
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Josselin Mouette <joss@debian.org>
+Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Josselin Mouette <joss@debian.org>, Sebastian Dröge <slomo@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 5),
                intltool (>= 0.35.0),
@@ -15,6 +15,7 @@ Build-Depends: cdbs,
                gnome-doc-utils (>= 0.3.2),
                gtk-doc-tools (>= 1.0),
                libdbus-glib-1-dev (>= 0.70),
+               libx11-dev,
                libgtk2.0-dev (>= 2.14.0),
                libglib2.0-dev (>= 2.18.0),
                libgnome-keyring-dev (>= 2.22.0),
@@ -24,14 +25,19 @@ Build-Depends: cdbs,
                libgconf2-dev,
                zlib1g-dev,
                libnautilus-extension-dev,
-               libpoppler-glib-dev (>= 0.11.0),
+               libpoppler-glib-dev (>= 0.12.0),
                libspectre-dev (>= 0.2.0),
                libtiff4-dev,
                libdjvulibre-dev (>= 3.5.17),
                libkpathsea-dev,
                libt1-dev,
-               autotools-dev
-Standards-Version: 3.8.3
+               autotools-dev,
+               libgirepository1.0-dev (>= 0.6.7),
+               gobject-introspection (>= 0.6.7),
+               gir-repository-dev,
+               gir1.0-glib-2.0,
+               gir1.0-gtk-2.0
+Standards-Version: 3.8.4
 Homepage: http://www.gnome.org/projects/evince/
 
 Package: evince
@@ -39,7 +45,7 @@ Conflicts: evince-gtk
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         libevince1 (= ${binary:Version}),
+         libevince2 (= ${binary:Version}),
          evince-common (>= ${gnome:Version}),
          evince-common (<< ${gnome:NextVersion}),
          gnome-icon-theme (>= 2.17.1),
@@ -64,7 +70,7 @@ Priority: extra
 Architecture: any
 Depends: ${misc:Depends},
          evince (= ${binary:Version}),
-         libevince1 (= ${binary:Version})
+         libevince2 (= ${binary:Version})
 Description: Document (postscript, pdf) viewer - debugging symbols
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
@@ -81,7 +87,7 @@ Conflicts: evince
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         libevince1 (= ${binary:Version}),
+         libevince2 (= ${binary:Version}),
          evince-common (>= ${gnome:Version}),
          evince-common (<< ${gnome:NextVersion}),
          gnome-icon-theme (>= 2.17.1),
@@ -116,7 +122,7 @@ Description: Document (postscript, pdf) viewer - common files
  .
  This package contains shared files for evince and evince-gtk packages.
 
-Package: libevince1
+Package: libevince2
 Architecture: any
 Section: libs
 Depends: ${shlibs:Depends},
@@ -135,7 +141,7 @@ Description: Document (postscript, pdf) rendering library
 Package: libevince-dev
 Architecture: any
 Section: libdevel
-Depends: libevince1 (= ${binary:Version}),
+Depends: libevince2 (= ${binary:Version}),
          ${misc:Depends},
          libgtk2.0-dev (>= 2.14.0),
          libglib2.0-dev (>= 2.18.0)
@@ -149,3 +155,25 @@ Description: Document (postscript, pdf) rendering library - development files
  .
  This package provides the development headers, static libraries and 
  documentation.
+
+Package: gir1.0-evince-2.30
+Section: libs
+Architecture: any
+Depends: ${gir:Depends},
+         ${shlibs:Depends},
+         ${misc:Depends}
+Provides: gir1.0-evince-document-2.30,
+          gir1.0-evince-view-2.30
+Description: Description: GObject introspection data for the libevince library
+ This package contains introspection data for the libevince library.
+ .
+ Evince is a simple multi-page document viewer.  It can display and print
+ PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
+ Document Format (PDF) files.
+ When supported by the document, it also allows searching for text,
+ copying text to the clipboard, hypertext navigation, and
+ table-of-contents bookmarks.
+ .
+ It can be used by packages using the GIRepository format to generate
+ dynamic bindings.
+
