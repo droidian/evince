@@ -159,7 +159,7 @@ Depends: ${gir:Depends},
          ${misc:Depends}
 Provides: gir1.0-evince-document-2.30,
           gir1.0-evince-view-2.30
-Description: Description: GObject introspection data for the libevince library
+Description: GObject introspection data for the libevince library
  This package contains introspection data for the libevince library.
  .
  Evince is a simple multi-page document viewer.  It can display and print
