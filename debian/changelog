@@ -1,3 +1,9 @@
+evince (2.30.3-2) UNRELEASED; urgency=low
+
+  * Fix PostScript capitalization. Closes: #591872.
+
+ -- Josselin Mouette <joss@debian.org>  Mon, 16 Aug 2010 15:43:52 +0200
+
 evince (2.30.3-1) unstable; urgency=low
 
   * Fix description for the GIR package. Closes: #587646.
