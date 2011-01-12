@@ -1,3 +1,9 @@
+evince (2.30.3-3) UNRELEASED; urgency=low
+
+  * Fix indentation in package description. Closes: #609770.
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 12 Jan 2011 14:56:06 +0100
+
 evince (2.30.3-2) unstable; urgency=medium
 
   * Fix PostScript capitalization. Closes: #591872.
