@@ -4,7 +4,7 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/gnome.mk
 include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
 include /usr/share/gnome-pkg-tools/1/rules/gnome-version.mk
--include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
+include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 DEB_BUILDDIR := $(CURDIR)/debian/build/evince
 DEB_BUILDDIR_evince-gtk := $(CURDIR)/debian/build/evince-gtk
@@ -22,6 +22,8 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so \
 	-V'libevince2 (>= 2.30.1)'
+
+DEB_DH_STRIP_ARGS_evince-gtk = --dbg-package=
 
 #cdbs should do this, but doesn't (see #424636)
 clean::
