@@ -56,7 +56,7 @@ Provides: pdf-viewer,
           postscript-viewer,
           djvu-viewer
 Suggests: unrar, poppler-data, nautilus
-Description: Document (postscript, pdf) viewer
+Description: Document (PostScript, PDF) viewer
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
  Document Format (PDF) files.
@@ -71,7 +71,7 @@ Architecture: any
 Depends: ${misc:Depends},
          evince (= ${binary:Version}),
          libevince2 (= ${binary:Version})
-Description: Document (postscript, pdf) viewer - debugging symbols
+Description: Document (PostScript, PDF) viewer - debugging symbols
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
  Document Format (PDF) files.
@@ -97,7 +97,7 @@ Provides: pdf-viewer,
           postscript-viewer,
           djvu-viewer
 Suggests: gvfs, unrar, poppler-data, nautilus
-Description: Document (postscript, pdf) viewer (GTK+ version)
+Description: Document (PostScript, PDF) viewer (GTK+ version)
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
  Document Format (PDF) files.
@@ -112,7 +112,7 @@ Package: evince-common
 Architecture: all
 Depends: ${misc:Depends}
 Replaces: evince (<< 2.26.2), evince-gtk (<< 2.26.2)
-Description: Document (postscript, pdf) viewer - common files
+Description: Document (PostScript, PDF) viewer - common files
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
  Document Format (PDF) files.
@@ -128,12 +128,12 @@ Section: libs
 Depends: ${shlibs:Depends},
          ${misc:Depends}
 Replaces: evince (<< 2.26.2), evince-gtk (<< 2.26.2)
-Description: Document (postscript, pdf) rendering library
+Description: Document (PostScript, PDF) rendering library
  This package contains evince-related libraries for rendering and displaying
  Evince documents like PostScript (PS), Encapsulated PostScript (EPS), DJVU,
  DVI and Portable Document Format (PDF) files.
- * libevdocument, which performs the rendering of the documents
- * libevview, which provides GTK+ widgets for displaying documents
+  * libevdocument, which performs the rendering of the documents
+  * libevview, which provides GTK+ widgets for displaying documents
  .
  It is shipped with the ps, pdf, dvi, impress, tiff, djvu, comics and
  pixbuf backends.
@@ -146,7 +146,7 @@ Depends: libevince2 (= ${binary:Version}),
          libgtk2.0-dev (>= 2.14.0),
          libglib2.0-dev (>= 2.18.0)
 Replaces: evince (<< 2.26.2), evince-gtk (<< 2.26.2)
-Description: Document (postscript, pdf) rendering library - development files
+Description: Document (PostScript, PDF) rendering library - development files
  This package contains evince-related libraries for rendering and displaying
  Evince documents like PostScript (PS), Encapsulated PostScript (EPS), DJVU,
  DVI and Portable Document Format (PDF) files.
@@ -164,7 +164,7 @@ Depends: ${gir:Depends},
          ${misc:Depends}
 Provides: gir1.0-evince-document-2.30,
           gir1.0-evince-view-2.30
-Description: Description: GObject introspection data for the libevince library
+Description: GObject introspection data for the libevince library
  This package contains introspection data for the libevince library.
  .
  Evince is a simple multi-page document viewer.  It can display and print
