@@ -17,8 +17,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-t1lib \
 			--enable-pixbuf \
 			--enable-comics \
-			--enable-impress \
-			--enable-introspection=yes
+			--enable-impress
 
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so \
 	-V'libevince2 (>= 2.30.1)'
@@ -55,7 +54,6 @@ install/evince-gtk::
 	rm -rf debian/evince-gtk/usr/lib/lib*
 	rm -rf debian/evince-gtk/usr/lib/nautilus
 	rm -rf debian/evince-gtk/usr/lib/pkgconfig
-	rm -rf debian/evince-gtk/usr/lib/girepository*
 	rm -rf debian/evince-gtk/usr/lib/evince/2
 
 binary-install/evince-common::
@@ -64,7 +62,3 @@ binary-install/evince-common::
 binary-post-install/evince::
 	# check for missing MIME types
 	desktop-check-mime-types
-
-common-binary-fixup-arch::
-	dh_girepository -pgir1.0-evince-2.30
-

@@ -1,4 +1,4 @@
-evince (2.30.3-3) UNRELEASED; urgency=low
+evince (2.30.3-3) unstable; urgency=low
 
   [ Josselin Mouette ]
   * Fix indentation in package description. Closes: #609770.
@@ -7,8 +7,10 @@ evince (2.30.3-3) UNRELEASED; urgency=low
   * debian/rules:
     - Don't put evince-gtk's debugging symbols in evince-dbg, as they
       clash with those from evince itself. Closes: #610856.
+  * Remove gir1.0-evince-2.30 since nothing uses it, to ease the gir1.2
+    transition.
 
- -- Josselin Mouette <joss@debian.org>  Wed, 12 Jan 2011 14:56:06 +0100
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Wed, 16 Feb 2011 20:34:26 +0000
 
 evince (2.30.3-2) unstable; urgency=medium
 

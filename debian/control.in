@@ -26,12 +26,7 @@ Build-Depends: cdbs,
                libdjvulibre-dev (>= 3.5.17),
                libkpathsea-dev,
                libt1-dev,
-               autotools-dev,
-               libgirepository1.0-dev (>= 0.6.7),
-               gobject-introspection (>= 0.6.7),
-               gir-repository-dev,
-               gir1.0-glib-2.0,
-               gir1.0-gtk-2.0
+               autotools-dev
 Standards-Version: 3.8.4
 Homepage: http://www.gnome.org/projects/evince/
 
@@ -150,25 +145,3 @@ Description: Document (PostScript, PDF) rendering library - development files
  .
  This package provides the development headers, static libraries and 
  documentation.
-
-Package: gir1.0-evince-2.30
-Section: libs
-Architecture: any
-Depends: ${gir:Depends},
-         ${shlibs:Depends},
-         ${misc:Depends}
-Provides: gir1.0-evince-document-2.30,
-          gir1.0-evince-view-2.30
-Description: GObject introspection data for the libevince library
- This package contains introspection data for the libevince library.
- .
- Evince is a simple multi-page document viewer.  It can display and print
- PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
- Document Format (PDF) files.
- When supported by the document, it also allows searching for text,
- copying text to the clipboard, hypertext navigation, and
- table-of-contents bookmarks.
- .
- It can be used by packages using the GIRepository format to generate
- dynamic bindings.
-
