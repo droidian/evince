@@ -1,3 +1,9 @@
+evince (3.0.0-2) experimental; urgency=low
+
+  * debian/control.in: add dependency on gsettings-desktop-schemas
+
+ -- Frederic Peters <fpeters@debian.org>  Thu, 14 Apr 2011 16:20:57 +0200
+
 evince (3.0.0-1) experimental; urgency=low
 
   * New upstream release.

@@ -37,7 +37,8 @@ Build-Depends: cdbs,
                libgirepository1.0-dev (>= 0.9.12),
                gir-repository-dev,
                gir1.2-glib-2.0,
-               gir1.2-gtk-3.0
+               gir1.2-gtk-3.0,
+               gsettings-desktop-schemas-dev
 Standards-Version: 3.8.4
 Homepage: http://www.gnome.org/projects/evince/
 
@@ -110,7 +111,8 @@ Description: Document (PostScript, PDF) viewer (GTK+ version)
 
 Package: evince-common
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends},
+         gsettings-desktop-schemas
 Replaces: evince (<< 2.26.2), evince-gtk (<< 2.26.2)
 Description: Document (PostScript, PDF) viewer - common files
  Evince is a simple multi-page document viewer.  It can display and print
