@@ -1,3 +1,9 @@
+evince (3.0.0-3) UNRELEASED; urgency=low
+
+  * Drop unneeded build-dependency on gir-repository-dev.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 16 Apr 2011 18:19:32 +0200
+
 evince (3.0.0-2) experimental; urgency=low
 
   * debian/control.in: add dependency on gsettings-desktop-schemas
