@@ -1,8 +1,9 @@
-evince (3.0.0-3) UNRELEASED; urgency=low
+evince (3.0.0-3) experimental; urgency=low
 
+  [ Josselin Mouette ]
   * Drop unneeded build-dependency on gir-repository-dev.
 
- -- Josselin Mouette <joss@debian.org>  Sat, 16 Apr 2011 18:19:32 +0200
+ -- Frederic Peters <fpeters@debian.org>  Wed, 20 Apr 2011 08:15:04 +0200
 
 evince (3.0.0-2) experimental; urgency=low
 
