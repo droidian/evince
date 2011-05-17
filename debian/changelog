@@ -1,6 +1,9 @@
 evince (3.0.0-4) UNRELEASED; urgency=low
 
   * bug-presubj: please document where to report rendering bugs.
+  * evince.mime: dropped. We have desktop files to handle MIME 
+    associations, no need to maintain an alternate system by hand.
+    Closes: #619564, #627027, #551734, #581441.
 
  -- Josselin Mouette <joss@debian.org>  Wed, 11 May 2011 20:59:13 +0200
 
