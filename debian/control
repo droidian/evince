@@ -40,7 +40,7 @@ Conflicts: evince-gtk
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         libevince2 (= ${binary:Version}),
+         libevince3 (= ${binary:Version}),
          evince-common (>= ${gnome:Version}),
          evince-common (<< ${gnome:NextVersion}),
          gnome-icon-theme (>= 2.17.1),
@@ -65,7 +65,7 @@ Priority: extra
 Architecture: any
 Depends: ${misc:Depends},
          evince (= ${binary:Version}),
-         libevince2 (= ${binary:Version})
+         libevince3 (= ${binary:Version})
 Description: Document (PostScript, PDF) viewer - debugging symbols
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
@@ -82,7 +82,7 @@ Conflicts: evince
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         libevince2 (= ${binary:Version}),
+         libevince3 (= ${binary:Version}),
          evince-common (>= ${gnome:Version}),
          evince-common (<< ${gnome:NextVersion}),
          gnome-icon-theme (>= 2.17.1),
@@ -117,7 +117,7 @@ Description: Document (PostScript, PDF) viewer - common files
  .
  This package contains shared files for evince and evince-gtk packages.
 
-Package: libevince2
+Package: libevince3
 Architecture: any
 Section: libs
 Depends: ${shlibs:Depends},
@@ -136,7 +136,7 @@ Description: Document (PostScript, PDF) rendering library
 Package: libevince-dev
 Architecture: any
 Section: libdevel
-Depends: libevince2 (= ${binary:Version}),
+Depends: libevince3 (= ${binary:Version}),
          ${misc:Depends},
          libgtk2.0-dev (>= 2.14.0),
          libglib2.0-dev (>= 2.18.0)

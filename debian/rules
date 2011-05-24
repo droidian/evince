@@ -21,7 +21,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-impress
 
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so \
-	-V'libevince2 (>= 2.30.1)'
+	-V'libevince3 (>= 2.32.0)'
 
 DEB_DH_STRIP_ARGS_evince-gtk = --dbg-package=
 
@@ -55,7 +55,7 @@ install/evince-gtk::
 	rm -rf debian/evince-gtk/usr/lib/lib*
 	rm -rf debian/evince-gtk/usr/lib/nautilus
 	rm -rf debian/evince-gtk/usr/lib/pkgconfig
-	rm -rf debian/evince-gtk/usr/lib/evince/2
+	rm -rf debian/evince-gtk/usr/lib/evince
 
 binary-install/evince-common::
 	rm -rf debian/evince-common/usr/share/gtk-doc
