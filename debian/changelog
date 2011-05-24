@@ -5,6 +5,11 @@ evince (2.32.0-1) UNRELEASED; urgency=low
   * debian/patches/03_dvi_security_CVE-2010-0433.patch:
     - Fix another buffer overflow in the dvi-backend. CVE-2010-0433
       Patch cherry-picked from upstream Git. Closes: #614668
+  * debian/control.in
+    - Drop Build-Depends on libdbus-glib-1-dev (ported to GDBus).
+    - Bump Build-Depends on libgtk2.0-dev to (>= 2.21.5).
+    - Bump Build-Depends on libglib2.0-dev to (>= 2.25.11).
+    - Bump Build-Depends on libpoppler-glib-dev to (>= 0.14.0).
 
  -- Michael Biebl <biebl@debian.org>  Tue, 24 May 2011 11:40:44 +0200
 
