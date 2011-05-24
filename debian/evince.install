@@ -4,3 +4,4 @@ debian/tmp/usr/bin
 debian/tmp/usr/lib/nautilus/*/*.so
 debian/tmp/usr/lib/evince/evinced
 debian/tmp/usr/lib/evince/evince-convert-metadata
+debian/tmp/usr/share/glib-2.0/schemas
