@@ -10,6 +10,7 @@ evince (2.32.0-1) UNRELEASED; urgency=low
     - Bump Build-Depends on libgtk2.0-dev to (>= 2.21.5).
     - Bump Build-Depends on libglib2.0-dev to (>= 2.25.11).
     - Bump Build-Depends on libpoppler-glib-dev to (>= 0.14.0).
+    - Bump Standards-Version to 3.9.2. No further changes.
   * Update libevince for soname bump from 2 → 3.
 
  -- Michael Biebl <biebl@debian.org>  Tue, 24 May 2011 11:40:44 +0200
