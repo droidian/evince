@@ -1,3 +1,9 @@
+evince (2.32.0-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 24 May 2011 11:40:44 +0200
+
 evince (2.30.3-3) unstable; urgency=low
 
   [ Josselin Mouette ]
