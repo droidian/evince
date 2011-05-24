@@ -2,6 +2,9 @@ evince (2.32.0-1) UNRELEASED; urgency=low
 
   * New upstream release.
   * Refresh debian/patches/02_link_ice.patch.
+  * debian/patches/03_dvi_security_CVE-2010-0433.patch:
+    - Fix another buffer overflow in the dvi-backend. CVE-2010-0433
+      Patch cherry-picked from upstream Git. Closes: #614668
 
  -- Michael Biebl <biebl@debian.org>  Tue, 24 May 2011 11:40:44 +0200
 

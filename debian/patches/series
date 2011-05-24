@@ -1,2 +1,3 @@
 01_dvi_security.patch
 02_link_ice.patch
+03_dvi_security_CVE-2010-0433.patch
