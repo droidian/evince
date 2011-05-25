@@ -12,8 +12,8 @@ evince (2.32.0-1) UNRELEASED; urgency=low
     - Bump Build-Depends on libpoppler-glib-dev to (>= 0.14.0).
     - Bump Standards-Version to 3.9.2. No further changes.
   * Update libevince for soname bump from 2 → 3.
-  * debian/evince.install:
-    - Install gsettings schemas.
+  * debian/evince-common.install:
+    - Install gsettings schemas and gconf conversion script.
 
  -- Michael Biebl <biebl@debian.org>  Tue, 24 May 2011 11:40:44 +0200
 
