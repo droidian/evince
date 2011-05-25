@@ -14,6 +14,9 @@ evince (2.32.0-1) UNRELEASED; urgency=low
   * Update libevince for soname bump from 2 → 3.
   * debian/evince-common.install:
     - Install gsettings schemas and gconf conversion script.
+  * debian/patches/06_new_poppler_api_update.patch
+    - Update pdf_document_get_info to new poppler API. Patch cherry-picked
+      from upstream Git.
 
  -- Michael Biebl <biebl@debian.org>  Tue, 24 May 2011 11:40:44 +0200
 
