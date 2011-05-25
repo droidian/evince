@@ -17,6 +17,7 @@ evince (2.32.0-1) UNRELEASED; urgency=low
   * debian/patches/06_new_poppler_api_update.patch
     - Update pdf_document_get_info to new poppler API. Patch cherry-picked
       from upstream Git.
+  * Bump debhelper compatibility level to 8. Update Build-Depends accordingly.
 
  -- Michael Biebl <biebl@debian.org>  Tue, 24 May 2011 11:40:44 +0200
 
