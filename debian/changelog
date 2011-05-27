@@ -5,6 +5,9 @@ evince (3.0.0-4) UNRELEASED; urgency=low
     associations, no need to maintain an alternate system by hand.
     Closes: #619564, #627027, #551734, #581441.
 
+  [Sebastien Bacher]
+  * debian/evince-commin.install: install the thumbnailer entry
+
  -- Josselin Mouette <joss@debian.org>  Wed, 11 May 2011 20:59:13 +0200
 
 evince (3.0.0-3) experimental; urgency=low
