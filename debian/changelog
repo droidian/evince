@@ -21,6 +21,7 @@ evince (2.32.0-1) UNRELEASED; urgency=low
     - Update Build-Depends on debhelper.
     - Strip debian/tmp/ from .install.
   * debian/watch: Switch to .bz2 tarballs.
+  * Use dh_lintian to install the override files.
 
  -- Michael Biebl <biebl@debian.org>  Tue, 24 May 2011 11:40:44 +0200
 
