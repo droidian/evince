@@ -1,4 +1,4 @@
-evince (2.32.0-1) UNRELEASED; urgency=low
+evince (2.32.0-1) unstable; urgency=low
 
   * New upstream release.
   * Refresh debian/patches/02_link_ice.patch.
@@ -25,7 +25,7 @@ evince (2.32.0-1) UNRELEASED; urgency=low
   * debian/watch: Switch to .bz2 tarballs.
   * Use dh_lintian to install the override files.
 
- -- Michael Biebl <biebl@debian.org>  Tue, 24 May 2011 11:40:44 +0200
+ -- Michael Biebl <biebl@debian.org>  Thu, 30 Jun 2011 01:29:48 +0200
 
 evince (2.30.3-3) unstable; urgency=low
 
