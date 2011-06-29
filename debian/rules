@@ -17,7 +17,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-dvi \
 			--enable-t1lib \
 			--enable-comics \
-			--enable-introspection=yes
+			--enable-introspection
 
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so \
 	-V'libevince3-3 (>= 3.0.0)'
