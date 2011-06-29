@@ -1,2 +1,2 @@
 debian/lintian/gir1.2-evince-3.0 /usr/share/lintian/overrides/
-debian/tmp/usr/lib/girepository-*
+usr/lib/girepository-*
