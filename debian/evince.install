@@ -1,4 +1,3 @@
-debian/lintian/evince /usr/share/lintian/overrides/
 usr/bin
 usr/lib/nautilus/*/*.so
 usr/lib/evince/evinced
