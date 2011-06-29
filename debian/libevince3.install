@@ -1,4 +1,4 @@
 debian/lintian/libevince3 /usr/share/lintian/overrides/
-debian/tmp/usr/lib/*.so.*
-debian/tmp/usr/lib/evince/*/backends/*.so
-debian/tmp/usr/lib/evince/*/backends/*.evince-backend
+usr/lib/*.so.*
+usr/lib/evince/*/backends/*.so
+usr/lib/evince/*/backends/*.evince-backend
