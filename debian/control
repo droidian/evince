@@ -7,7 +7,7 @@ Source: evince
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Frederic Peters <fpeters@debian.org>, Josselin Mouette <joss@debian.org>, Sebastian Dröge <slomo@debian.org>
+Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Frederic Peters <fpeters@debian.org>, Josselin Mouette <joss@debian.org>, Michael Biebl <biebl@debian.org>, Sebastian Dröge <slomo@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 7),
                dh-autoreconf,
@@ -38,7 +38,7 @@ Build-Depends: cdbs,
                gir1.2-glib-2.0,
                gir1.2-gtk-3.0,
                gsettings-desktop-schemas-dev
-Standards-Version: 3.8.4
+Standards-Version: 3.9.2
 Homepage: http://www.gnome.org/projects/evince/
 
 Package: evince
