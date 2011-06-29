@@ -18,6 +18,7 @@ evince (2.32.0-1) UNRELEASED; urgency=low
     - Update pdf_document_get_info to new poppler API. Patch cherry-picked
       from upstream Git.
   * Bump debhelper compatibility level to 8. Update Build-Depends accordingly.
+  * debian/watch: Switch to .bz2 tarballs.
 
  -- Michael Biebl <biebl@debian.org>  Tue, 24 May 2011 11:40:44 +0200
 
