@@ -1,4 +1,4 @@
-evince (3.0.2-1) UNRELEASED; urgency=low
+evince (3.0.2-1) experimental; urgency=low
 
   [ Josselin Mouette ]
   * bug-presubj: please document where to report rendering bugs.
@@ -14,7 +14,7 @@ evince (3.0.2-1) UNRELEASED; urgency=low
   * debian/patches/01_configure-gdk-targets.patch: Update configure check for
     smclient support. With GDK 3.0 the target variable was renamed to targets.
 
- -- Michael Biebl <biebl@debian.org>  Thu, 30 Jun 2011 01:56:37 +0200
+ -- Michael Biebl <biebl@debian.org>  Thu, 30 Jun 2011 02:58:49 +0200
 
 evince (3.0.0-3) experimental; urgency=low
 
