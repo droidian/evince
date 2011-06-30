@@ -40,7 +40,7 @@ $(DEB_BUILDDIR_evince-gtk)/config.status:
 			--without-gconf \
 			--disable-nautilus \
 			--disable-dbus \
-			--enable-introspection=no \
+			--disable-introspection \
 			--disable-gtk-doc \
 			$(DEB_CONFIGURE_USER_FLAGS)
 
