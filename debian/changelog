@@ -21,7 +21,7 @@ evince (2.32.0-1) UNRELEASED; urgency=low
       from upstream Git.
   * Bump debhelper compatibility level to 7.
     - Update Build-Depends on debhelper.
-    - Strip debian/tmp/ from .install.
+    - Strip debian/tmp/ from .install files.
   * debian/watch: Switch to .bz2 tarballs.
   * Use dh_lintian to install the override files.
 

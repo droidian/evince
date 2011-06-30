@@ -1,5 +1,5 @@
-debian/tmp/etc
-debian/tmp/usr/bin
-debian/tmp/usr/lib/nautilus/*/*.so
-debian/tmp/usr/lib/evince/evinced
-debian/tmp/usr/lib/evince/evince-convert-metadata
+etc
+usr/bin
+usr/lib/nautilus/*/*.so
+usr/lib/evince/evinced
+usr/lib/evince/evince-convert-metadata
