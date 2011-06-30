@@ -1,1 +1,2 @@
 00_gir-libdocument-library-path.patch
+01_configure-gdk-targets.patch

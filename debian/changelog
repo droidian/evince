@@ -11,6 +11,8 @@ evince (3.0.2-1) UNRELEASED; urgency=low
 
   [ Michael Biebl ]
   * New upstream release.
+  * debian/patches/01_configure-gdk-targets.patch: Update configure check for
+    smclient support. With GDK 3.0 the target variable was renamed to targets.
 
  -- Michael Biebl <biebl@debian.org>  Thu, 30 Jun 2011 01:56:37 +0200
 

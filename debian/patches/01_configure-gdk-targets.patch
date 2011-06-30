@@ -1,0 +1,18 @@
+Description: Update smclient configure check for gdk 3.0 target
+ See
+ http://git.gnome.org/browse/gtk+/commit/gdk-3.0.pc.in?id=cacee7e7a380ac9009fc1339a860f563ebe4dc4d
+Author: Michael Biebl <biebl@debian.org>
+Bug: https://bugzilla.gnome.org/show_bug.cgi?id=653691
+Index: evince-3.0.2/configure.ac
+===================================================================
+--- evince-3.0.2.orig/configure.ac	2011-06-30 00:21:09.826201076 +0000
++++ evince-3.0.2/configure.ac	2011-06-30 00:21:21.394055650 +0000
+@@ -179,7 +179,7 @@
+ # SM client
+ # *********
+ 
+-GDK_TARGET="$($PKG_CONFIG --variable target gdk-3.0)"
++GDK_TARGET="$($PKG_CONFIG --variable targets gdk-3.0)"
+ 
+ AC_MSG_CHECKING([which smclient backend to use])
+ AC_ARG_WITH([smclient],
