@@ -1,4 +1,4 @@
-evince (2.32.0-1) unstable; urgency=low
+evince (2.32.0-1) UNRELEASED; urgency=low
 
   * New upstream release.
   * Refresh debian/patches/02_link_ice.patch.
