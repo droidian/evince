@@ -7,7 +7,7 @@ Source: evince
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Frederic Peters <fpeters@debian.org>, Josselin Mouette <joss@debian.org>, Michael Biebl <biebl@debian.org>, Sebastian Dröge <slomo@debian.org>
+Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Frederic Peters <fpeters@debian.org>, Josselin Mouette <joss@debian.org>, Michael Biebl <biebl@debian.org>
 Build-Depends: cdbs,
                debhelper (>= 7),
                dh-autoreconf,
@@ -128,7 +128,8 @@ Architecture: any
 Section: libs
 Depends: ${shlibs:Depends},
          ${misc:Depends}
-Replaces: evince (<< 2.26.2), evince-gtk (<< 2.26.2)
+Replaces: evince (<< 2.26.2), evince-gtk (<< 2.26.2), libevince3
+Breaks: libevince3
 Description: Document (PostScript, PDF) rendering library
  This package contains evince-related libraries for rendering and displaying
  Evince documents like PostScript (PS), Encapsulated PostScript (EPS), DJVU,

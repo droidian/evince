@@ -123,7 +123,8 @@ Architecture: any
 Section: libs
 Depends: ${shlibs:Depends},
          ${misc:Depends}
-Replaces: evince (<< 2.26.2), evince-gtk (<< 2.26.2)
+Replaces: evince (<< 2.26.2), evince-gtk (<< 2.26.2), libevince3
+Breaks: libevince3
 Description: Document (PostScript, PDF) rendering library
  This package contains evince-related libraries for rendering and displaying
  Evince documents like PostScript (PS), Encapsulated PostScript (EPS), DJVU,
