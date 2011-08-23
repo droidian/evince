@@ -61,7 +61,3 @@ binary-install/evince-common::
 binary-post-install/evince::
 	# check for missing MIME types
 	desktop-check-mime-types
-
-common-binary-fixup-arch::
-	dh_girepository -pgir1.2-evince-3.0
-

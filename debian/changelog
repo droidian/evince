@@ -1,9 +1,13 @@
 evince (3.0.2-2) UNRELEASED; urgency=low
 
+  [ Josselin Mouette ]
   * evince-gtk.mime: removed too. Really closes: #627027.
   * Add missing Replaces/Breaks against libevince3. Closes: #632733.
 
- -- Josselin Mouette <joss@debian.org>  Thu, 30 Jun 2011 22:48:56 +0200
+  [ Michael Biebl ]
+  * Rely on cdbs to call dh_girepository. Bump Build-Depends accordingly.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 23 Aug 2011 10:12:44 +0200
 
 evince (3.0.2-1) experimental; urgency=low
 
