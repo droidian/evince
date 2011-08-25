@@ -1,0 +1,32 @@
+Description: Fix build failure with binutils gold (missing -lz)
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=638689
+Author: Michael Biebl <biebl@debian.org>
+diff --git a/configure.ac b/configure.ac
+index c7083e4..cf51e43 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -148,6 +148,7 @@ PKG_CHECK_MODULES(LIBDOCUMENT, gtk+-3.0 >= $GTK_REQUIRED gio-2.0 >= $GLIB_REQUIR
+ PKG_CHECK_MODULES(LIBVIEW, gtk+-3.0 >= $GTK_REQUIRED gail-3.0 >= $GTK_REQUIRED gthread-2.0 gio-2.0 >= $GLIB_REQUIRED)
+ PKG_CHECK_MODULES(BACKEND, cairo >= $CAIRO_REQUIRED gtk+-3.0 >= $GTK_REQUIRED)
+ PKG_CHECK_MODULES(FRONTEND_CORE, gtk+-3.0 >= $GTK_REQUIRED gthread-2.0 gio-2.0 >= $GLIB_REQUIRED)
++PKG_CHECK_MODULES(ZLIB, zlib)
+ 
+ SHELL_PLATFORM_PKGS=
+ case "$with_platform" in
+diff --git a/cut-n-paste/synctex/Makefile.am b/cut-n-paste/synctex/Makefile.am
+index 881ef4a..69365d7 100644
+--- a/cut-n-paste/synctex/Makefile.am
++++ b/cut-n-paste/synctex/Makefile.am
+@@ -7,8 +7,12 @@ libsynctex_la_SOURCES = 	\
+ 	synctex_parser_utils.c
+ 
+ libsynctex_la_CFLAGS =	\
++	$(ZLIB_CFLAGS)		\
+ 	$(SHELL_CORE_CFLAGS)	\
+ 	$(WARNING_CFLAGS)	\
+ 	$(DISABLE_DEPRECATED)
+ 
++libsynctex_la_LIBADD =	\
++	$(ZLIB_LIBS)
++
+ -include $(top_srcdir)/git.mk
