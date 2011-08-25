@@ -22,7 +22,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so \
 	-V'libevince3-3 (>= 3.0.0)'
 
-DEB_DH_STRIP_ARGS_evince-gtk = --dbg-package=
+DEB_DH_STRIP_ARGS_evince-gtk =
 
 #cdbs should do this, but doesn't (see #424636)
 clean::

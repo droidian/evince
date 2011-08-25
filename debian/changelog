@@ -6,6 +6,7 @@ evince (3.0.2-2) UNRELEASED; urgency=low
 
   [ Michael Biebl ]
   * Rely on cdbs to call dh_girepository. Bump Build-Depends accordingly.
+  * Bump debhelper compatibility level to 8.
 
  -- Michael Biebl <biebl@debian.org>  Tue, 23 Aug 2011 10:12:44 +0200
 
