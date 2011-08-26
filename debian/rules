@@ -57,7 +57,3 @@ install/evince-gtk::
 
 binary-install/evince-common::
 	rm -rf debian/evince-common/usr/share/gtk-doc
-
-binary-post-install/evince::
-	# check for missing MIME types
-	desktop-check-mime-types
