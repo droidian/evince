@@ -1,3 +1,10 @@
+evince (3.0.2-3) UNRELEASED; urgency=low
+
+  * 03_nodisplay.patch: drop NoDisplay=true from the desktop file, so 
+    that it appears in the shell. Closes: #427576.
+
+ -- Josselin Mouette <joss@debian.org>  Mon, 19 Sep 2011 18:12:31 +0200
+
 evince (3.0.2-2) experimental; urgency=low
 
   [ Josselin Mouette ]
