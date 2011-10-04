@@ -20,7 +20,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-introspection
 
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so \
-	-V'libevince3-3 (>= 3.0.0)'
+	-V'libevince3-3 (>= 3.2.0)'
 
 DEB_DH_STRIP_ARGS_evince-gtk =
 
