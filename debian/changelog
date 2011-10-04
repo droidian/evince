@@ -6,6 +6,10 @@ evince (3.2.0-1) UNRELEASED; urgency=low
 
   [ Michael Biebl ]
   * New upstream release.
+  * Remove patches:
+    - debian/patches/00_gir-libdocument-library-path.patch, merged upstream.
+    - debian/patches/01_configure-gdk-targets.patch, merged upstream.
+    - debian/patches/02-link-missing-zlib-library.patch, fixed upstream.
 
  -- Michael Biebl <biebl@debian.org>  Tue, 04 Oct 2011 07:03:02 +0200
 

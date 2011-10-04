@@ -1,4 +1,2 @@
-00_gir-libdocument-library-path.patch
-01_configure-gdk-targets.patch
-02-link-missing-zlib-library.patch
+#02-link-missing-zlib-library.patch
 03_nodisplay.patch
