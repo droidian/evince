@@ -1,4 +1,4 @@
-evince (3.2.0-1) UNRELEASED; urgency=low
+evince (3.2.0-1) experimental; urgency=low
 
   [ Josselin Mouette ]
   * 03_nodisplay.patch: drop NoDisplay=true from the desktop file, so 
@@ -13,7 +13,7 @@ evince (3.2.0-1) UNRELEASED; urgency=low
   * debian/control:
     - Add Vcs-* fields.
 
- -- Michael Biebl <biebl@debian.org>  Tue, 04 Oct 2011 07:03:02 +0200
+ -- Michael Biebl <biebl@debian.org>  Tue, 04 Oct 2011 07:19:28 +0200
 
 evince (3.0.2-2) experimental; urgency=low
 
