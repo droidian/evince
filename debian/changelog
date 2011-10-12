@@ -1,6 +1,7 @@
 evince (3.2.0-2) UNRELEASED; urgency=low
 
   * Upload to unstable.
+  * debian/watch: Switch to .xz tarballs.
 
  -- Michael Biebl <biebl@debian.org>  Wed, 12 Oct 2011 22:20:42 +0200
 
