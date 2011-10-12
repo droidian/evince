@@ -16,14 +16,13 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-djvu \
 			--enable-dvi \
 			--enable-t1lib \
-			--enable-pixbuf \
 			--enable-comics \
-			--enable-impress
+			--enable-introspection
 
 DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so \
-	-V'libevince3 (>= 2.32.0)'
+	-V'libevince3-3 (>= 3.0.0)'
 
-DEB_DH_STRIP_ARGS_evince-gtk = --dbg-package=
+DEB_DH_STRIP_ARGS_evince-gtk =
 
 #cdbs should do this, but doesn't (see #424636)
 clean::
@@ -37,9 +36,7 @@ $(DEB_BUILDDIR_evince-gtk)/config.status:
 			$(cdbs_configure_flags) \
 			$(DEB_CONFIGURE_EXTRA_FLAGS) \
 			--without-keyring \
-			--without-gconf \
 			--disable-nautilus \
-			--disable-dbus \
 			--disable-introspection \
 			--disable-gtk-doc \
 			$(DEB_CONFIGURE_USER_FLAGS)
@@ -55,11 +52,8 @@ install/evince-gtk::
 	rm -rf debian/evince-gtk/usr/lib/lib*
 	rm -rf debian/evince-gtk/usr/lib/nautilus
 	rm -rf debian/evince-gtk/usr/lib/pkgconfig
-	rm -rf debian/evince-gtk/usr/lib/evince
+	rm -rf debian/evince-gtk/usr/lib/girepository*
+	rm -rf debian/evince-gtk/usr/lib/evince/3
 
 binary-install/evince-common::
 	rm -rf debian/evince-common/usr/share/gtk-doc
-
-binary-post-install/evince::
-	# check for missing MIME types
-	desktop-check-mime-types

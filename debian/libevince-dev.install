@@ -3,3 +3,4 @@ usr/include
 usr/lib/pkgconfig
 usr/lib/*.so
 usr/share/gtk-doc
+usr/share/gir-*

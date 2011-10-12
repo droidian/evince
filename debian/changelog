@@ -1,3 +1,96 @@
+evince (3.2.0-1) experimental; urgency=low
+
+  [ Josselin Mouette ]
+  * 03_nodisplay.patch: drop NoDisplay=true from the desktop file, so 
+    that it appears in the shell. Closes: #427576.
+
+  [ Michael Biebl ]
+  * New upstream release.
+  * Remove patches:
+    - debian/patches/00_gir-libdocument-library-path.patch, merged upstream.
+    - debian/patches/01_configure-gdk-targets.patch, merged upstream.
+    - debian/patches/02-link-missing-zlib-library.patch, fixed upstream.
+  * debian/control:
+    - Add Vcs-* fields.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 04 Oct 2011 07:19:28 +0200
+
+evince (3.0.2-2) experimental; urgency=low
+
+  [ Josselin Mouette ]
+  * evince-gtk.mime: removed too. Really closes: #627027.
+  * Add missing Replaces/Breaks against libevince3. Closes: #632733.
+
+  [ Michael Biebl ]
+  * Rely on cdbs to call dh_girepository. Bump Build-Depends accordingly.
+  * Bump debhelper compatibility level to 8.
+  * debian/patches/02-link-missing-zlib-library.patch: Fix build failure with
+    binutils-gold (missing -lz). Closes: #638689
+  * Remove desktop-check-mime-types call from debian/rules.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 28 Aug 2011 20:04:11 +0200
+
+evince (3.0.2-1) experimental; urgency=low
+
+  [ Josselin Mouette ]
+  * bug-presubj: please document where to report rendering bugs.
+  * evince.mime: dropped. We have desktop files to handle MIME 
+    associations, no need to maintain an alternate system by hand.
+    Closes: #619564, #627027, #551734, #581441.
+
+  [ Sebastien Bacher ]
+  * debian/evince-commin.install: install the thumbnailer entry
+
+  [ Michael Biebl ]
+  * New upstream release.
+  * debian/patches/01_configure-gdk-targets.patch: Update configure check for
+    smclient support. With GDK 3.0 the target variable was renamed to targets.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 30 Jun 2011 02:58:49 +0200
+
+evince (3.0.0-3) experimental; urgency=low
+
+  [ Josselin Mouette ]
+  * Drop unneeded build-dependency on gir-repository-dev.
+
+ -- Frederic Peters <fpeters@debian.org>  Wed, 20 Apr 2011 08:15:04 +0200
+
+evince (3.0.0-2) experimental; urgency=low
+
+  * debian/control.in: add dependency on gsettings-desktop-schemas
+
+ -- Frederic Peters <fpeters@debian.org>  Thu, 14 Apr 2011 16:20:57 +0200
+
+evince (3.0.0-1) experimental; urgency=low
+
+  * New upstream release.
+
+  [ Josselin Mouette ]
+  * Fix indentation in package description. Closes: #609770.
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/rules:
+    - Don't put evince-gtk's debugging symbols in evince-dbg, as they
+      clash with those from evince itself. Closes: #610856.
+
+  [ Frederic Peters ]
+  * debian/control.in:
+    + Update list of build dependencies for new release.
+    + Make the -dev package depend on the gir package.
+    + Add build-dependency on dh-autoreconf.
+    + Update libevince3-3 description to note the removal of the pixbuf and
+      impress backends.
+    + Update evince-gtk description as evince doesn't depend on GConf.
+  * debian/rules:
+    + include dh-autoreconf
+    + update configure flags (pixbuf and impress backends have been removed).
+  * debian/patches/01_dvi_security.patch: removed, upstream.
+  * debian/patches/00_gir-libdocument-library-path.patch: fix call to
+    g-ir-scanner to make it find libdocument3.
+  * debian/evince-common.install: install GSettings schemas.
+
+ -- Frederic Peters <fpeters@debian.org>  Thu, 14 Apr 2011 15:28:56 +0200
+
 evince (2.32.0-1) unstable; urgency=low
 
   * New upstream release.
