@@ -1,3 +1,27 @@
+evince (3.2.1-2) UNRELEASED; urgency=low
+
+  * Change section of gir1.2-evince-3.0 to introspection.
+  * Tighten dependency beetwen libevince-dev and gir1.2-evince-3.0.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 14 Dec 2011 19:10:22 +0100
+
+evince (3.2.1-1) unstable; urgency=low
+
+  [ Jordi Mallach ]
+  * Make Vcs-* fields point at the unstable branch.
+
+  [ Michael Biebl ]
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 18 Oct 2011 00:32:54 +0200
+
+evince (3.2.0-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * debian/watch: Switch to .xz tarballs.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 13 Oct 2011 19:58:23 +0200
+
 evince (3.2.0-1) experimental; urgency=low
 
   [ Josselin Mouette ]

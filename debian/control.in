@@ -35,8 +35,8 @@ Build-Depends: cdbs (>= 0.4.90),
                gsettings-desktop-schemas-dev
 Standards-Version: 3.9.2
 Homepage: http://www.gnome.org/projects/evince/
-Vcs-Svn: svn://anonscm.debian.org/svn/pkg-gnome/desktop/experimental/evince
-Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/experimental/evince
+Vcs-Svn: svn://anonscm.debian.org/svn/pkg-gnome/desktop/unstable/evince
+Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/evince
 
 Package: evince
 Conflicts: evince-gtk
@@ -140,10 +140,10 @@ Package: libevince-dev
 Architecture: any
 Section: libdevel
 Depends: libevince3-3 (= ${binary:Version}),
+         gir1.2-evince-3.0 (= ${binary:Version}),
          ${misc:Depends},
          libgtk-3-dev (>= 3.0.2),
-         libglib2.0-dev (>= 2.25.1),
-         gir1.2-evince-3.0
+         libglib2.0-dev (>= 2.25.1)
 Replaces: evince (<< 2.26.2), evince-gtk (<< 2.26.2)
 Description: Document (PostScript, PDF) rendering library - development files
  This package contains evince-related libraries for rendering and displaying
@@ -156,7 +156,7 @@ Description: Document (PostScript, PDF) rendering library - development files
  documentation.
 
 Package: gir1.2-evince-3.0
-Section: libs
+Section: introspection
 Architecture: any
 Depends: ${gir:Depends},
          ${shlibs:Depends},
