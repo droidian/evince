@@ -3,8 +3,9 @@ evince (3.3.90-1) UNRELEASED; urgency=low
   * New upstream development release.
   * Change section of gir1.2-evince-3.0 to introspection.
   * Tighten dependency beetwen libevince-dev and gir1.2-evince-3.0.
+  * Exclude /usr/lib/nautilus/ and /usr/lib/evince/ from dh_makeshlibs.
 
- -- Michael Biebl <biebl@debian.org>  Thu, 08 Mar 2012 16:16:14 +0100
+ -- Michael Biebl <biebl@debian.org>  Thu, 08 Mar 2012 16:18:06 +0100
 
 evince (3.2.1-1) unstable; urgency=low
 
