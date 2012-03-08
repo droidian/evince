@@ -4,6 +4,8 @@ evince (3.3.90-1) UNRELEASED; urgency=low
   * Change section of gir1.2-evince-3.0 to introspection.
   * Tighten dependency beetwen libevince-dev and gir1.2-evince-3.0.
   * Exclude /usr/lib/nautilus/ and /usr/lib/evince/ from dh_makeshlibs.
+  * debian/patches/01_poppler-0.16-compat.patch: Keep evince compiling against
+    0.16 so we don't require 0.18. Thanks Pino Toscano for the patch.
 
  -- Michael Biebl <biebl@debian.org>  Thu, 08 Mar 2012 16:18:06 +0100
 

@@ -1,2 +1,2 @@
-#02-link-missing-zlib-library.patch
+01_poppler-0.16-compat.patch
 03_nodisplay.patch
