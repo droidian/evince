@@ -16,6 +16,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-djvu \
 			--enable-dvi \
 			--enable-t1lib \
+			--enable-xps \
 			--enable-comics \
 			--enable-introspection
 
