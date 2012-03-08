@@ -1,9 +1,10 @@
-evince (3.2.1-2) UNRELEASED; urgency=low
+evince (3.3.90-1) UNRELEASED; urgency=low
 
+  * New upstream development release.
   * Change section of gir1.2-evince-3.0 to introspection.
   * Tighten dependency beetwen libevince-dev and gir1.2-evince-3.0.
 
- -- Michael Biebl <biebl@debian.org>  Wed, 14 Dec 2011 19:10:22 +0100
+ -- Michael Biebl <biebl@debian.org>  Thu, 08 Mar 2012 16:16:14 +0100
 
 evince (3.2.1-1) unstable; urgency=low
 
