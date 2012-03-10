@@ -7,6 +7,7 @@ evince (3.3.90-1) UNRELEASED; urgency=low
   * debian/patches/01_poppler-0.16-compat.patch: Keep evince compiling against
     0.16 so we don't require 0.18. Thanks Pino Toscano for the patch.
   * Enable XPS support.
+  * Add symbols file for libevince3-3.
 
  -- Michael Biebl <biebl@debian.org>  Thu, 08 Mar 2012 16:36:11 +0100
 
