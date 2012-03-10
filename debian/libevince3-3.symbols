@@ -54,7 +54,7 @@ libevdocument3.so.3 libevince3-3 #MINVER#
  ev_backends_manager_get_document_module_name@Base 3.0.2
  ev_backends_manager_get_document_type_info@Base 3.0.2
  ev_compression_type_get_type@Base 3.0.2
- ev_doc_mutex@Base 3.0.2
+ (optional)ev_doc_mutex@Base 3.3.90
  ev_document_annotations_add_annotation@Base 3.0.2
  ev_document_annotations_can_add_annotation@Base 3.0.2
  ev_document_annotations_document_is_modified@Base 3.0.2
@@ -98,8 +98,6 @@ libevdocument3.so.3 libevince3-3 #MINVER#
  ev_document_forms_get_form_fields@Base 3.0.2
  ev_document_forms_get_type@Base 3.0.2
  ev_document_get_backend_info@Base 3.0.2
- ev_document_get_doc_mutex@Base 3.0.2
- ev_document_get_fc_mutex@Base 3.0.2
  ev_document_get_info@Base 3.0.2
  ev_document_get_max_label_len@Base 3.0.2
  ev_document_get_max_page_size@Base 3.0.2
@@ -178,6 +176,7 @@ libevdocument3.so.3 libevince3-3 #MINVER#
  ev_document_transition_get_page_duration@Base 3.0.2
  ev_document_transition_get_type@Base 3.0.2
  ev_document_ui_hints_get_type@Base 3.0.2
+ (optional)ev_fc_mutex@Base 3.3.90
  ev_file_compress@Base 3.0.2
  ev_file_exporter_begin@Base 3.0.2
  ev_file_exporter_begin_page@Base 3.0.2
