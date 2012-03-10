@@ -21,7 +21,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-introspection
 
 DEB_DH_MAKESHLIBS_ARGS += -X /usr/lib/nautilus/ -X /usr/lib/evince/ \
-	-V'libevince3-3 (>= 3.0.0)'
+	-V'libevince3-3 (>= 3.3.90)'
 
 DEB_DH_STRIP_ARGS_evince-gtk =
 
