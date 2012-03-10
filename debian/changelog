@@ -1,4 +1,4 @@
-evince (3.3.90-1) UNRELEASED; urgency=low
+evince (3.3.90-1) experimental; urgency=low
 
   * New upstream development release.
   * Change section of gir1.2-evince-3.0 to introspection.
@@ -9,7 +9,7 @@ evince (3.3.90-1) UNRELEASED; urgency=low
   * Enable XPS support.
   * Add symbols file for libevince3-3.
 
- -- Michael Biebl <biebl@debian.org>  Thu, 08 Mar 2012 16:36:11 +0100
+ -- Michael Biebl <biebl@debian.org>  Sat, 10 Mar 2012 11:39:00 +0100
 
 evince (3.2.1-1) unstable; urgency=low
 
