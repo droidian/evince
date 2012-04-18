@@ -1,6 +1,6 @@
-evince (3.3.92-1) UNRELEASED; urgency=low
+evince (3.4.0-1) UNRELEASED; urgency=low
 
-  * New upstream development release.
+  * New upstream release.
 
  -- Michael Biebl <biebl@debian.org>  Mon, 19 Mar 2012 14:50:02 +0100
 
