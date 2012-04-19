@@ -7,8 +7,11 @@ evince (3.4.0-1) UNRELEASED; urgency=low
   * Don't bother setting a shlibs version for dh_makeshlibs since we use a
     symbols file, use "-V -- -c4" instead.
   * Bump Standards-Version to 3.9.3.
+  * Split libevince3-3 into libevdocument3-4 and libevview3-3 as libevdocument
+    had a soname bump but libevview did not, so they are no longer in sync.
+    We still keep a single -dev and gir package for convenience sake.
 
- -- Michael Biebl <biebl@debian.org>  Thu, 19 Apr 2012 15:01:03 +0200
+ -- Michael Biebl <biebl@debian.org>  Thu, 19 Apr 2012 15:08:30 +0200
 
 evince (3.3.90-1) experimental; urgency=low
 
