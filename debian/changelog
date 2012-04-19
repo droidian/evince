@@ -4,8 +4,10 @@ evince (3.4.0-1) UNRELEASED; urgency=low
   * Wrap dependencies.
   * Remove obsolete Replaces.
   * Drop explicit Build-Depends on gir packages.
+  * Don't bother setting a shlibs version for dh_makeshlibs since we use a
+    symbols file, use "-V -- -c4" instead.
 
- -- Michael Biebl <biebl@debian.org>  Thu, 19 Apr 2012 14:59:52 +0200
+ -- Michael Biebl <biebl@debian.org>  Thu, 19 Apr 2012 15:01:03 +0200
 
 evince (3.3.90-1) experimental; urgency=low
 
