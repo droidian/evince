@@ -6,6 +6,7 @@ evince (3.4.0-1) UNRELEASED; urgency=low
   * Drop explicit Build-Depends on gir packages.
   * Don't bother setting a shlibs version for dh_makeshlibs since we use a
     symbols file, use "-V -- -c4" instead.
+  * Bump Standards-Version to 3.9.3.
 
  -- Michael Biebl <biebl@debian.org>  Thu, 19 Apr 2012 15:01:03 +0200
 
