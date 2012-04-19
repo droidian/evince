@@ -16,11 +16,12 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-djvu \
 			--enable-dvi \
 			--enable-t1lib \
+			--enable-xps \
 			--enable-comics \
 			--enable-introspection
 
-DEB_DH_MAKESHLIBS_ARGS += --exclude=libevince-properties-page.so \
-	-V'libevince3-3 (>= 3.0.0)'
+DEB_DH_MAKESHLIBS_ARGS += -X /usr/lib/nautilus/ -X /usr/lib/evince/ \
+	-V'libevince3-3 (>= 3.3.90)'
 
 DEB_DH_STRIP_ARGS_evince-gtk =
 

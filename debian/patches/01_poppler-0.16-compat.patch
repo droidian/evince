@@ -1,0 +1,31 @@
+Description: Make evince compile against poppler 0.16
+Author: Pino Toscano <pino@debian.org>
+Index: evince-3.3.90/configure.ac
+===================================================================
+--- evince-3.3.90.orig/configure.ac	2012-03-08 13:47:49.657097584 +0100
++++ evince-3.3.90/configure.ac	2012-03-08 13:47:51.641097514 +0100
+@@ -485,7 +485,7 @@
+   [enable_pdf=yes])
+ 
+ if test "x$enable_pdf" = "xyes"; then
+-    POPPLER_REQUIRED=0.18.0
++    POPPLER_REQUIRED=0.16.0
+     PKG_CHECK_MODULES(POPPLER, poppler-glib >= $POPPLER_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED,enable_pdf=yes,enable_pdf=no)
+ 
+     if test "x$enable_pdf" = "xyes"; then
+Index: evince-3.3.90/backend/pdf/ev-poppler.cc
+===================================================================
+--- evince-3.3.90.orig/backend/pdf/ev-poppler.cc	2012-03-08 13:47:49.657097584 +0100
++++ evince-3.3.90/backend/pdf/ev-poppler.cc	2012-03-08 13:48:22.821096411 +0100
+@@ -1234,9 +1234,11 @@
+ 
+ 		}
+ 			break;
++#if POPPLER_CHECK_VERSION(0, 18, 0)
+ 	        case POPPLER_ACTION_JAVASCRIPT:
+ 			unimplemented_action = "POPPLER_ACTION_JAVASCRIPT";
+ 			break;
++#endif
+ 	        case POPPLER_ACTION_UNKNOWN:
+ 			unimplemented_action = "POPPLER_ACTION_UNKNOWN";
+ 	}
