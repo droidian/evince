@@ -1,8 +1,10 @@
 evince (3.4.0-1) UNRELEASED; urgency=low
 
   * New upstream release.
+  * Wrap dependencies.
+  * Remove obsolete Replaces.
 
- -- Michael Biebl <biebl@debian.org>  Mon, 19 Mar 2012 14:50:02 +0100
+ -- Michael Biebl <biebl@debian.org>  Thu, 19 Apr 2012 14:57:53 +0200
 
 evince (3.3.90-1) experimental; urgency=low
 
