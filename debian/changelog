@@ -10,8 +10,9 @@ evince (3.4.0-1) UNRELEASED; urgency=low
   * Split libevince3-3 into libevdocument3-4 and libevview3-3 as libevdocument
     had a soname bump but libevview did not, so they are no longer in sync.
     We still keep a single -dev and gir package for convenience sake.
+  * Mention support for XPS documents in the package description.
 
- -- Michael Biebl <biebl@debian.org>  Thu, 19 Apr 2012 15:08:30 +0200
+ -- Michael Biebl <biebl@debian.org>  Thu, 19 Apr 2012 15:22:00 +0200
 
 evince (3.3.90-1) experimental; urgency=low
 

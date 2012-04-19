@@ -58,8 +58,8 @@ Suggests: unrar,
           nautilus
 Description: Document (PostScript, PDF) viewer
  Evince is a simple multi-page document viewer.  It can display and print
- PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
- Document Format (PDF) files.
+ PostScript (PS), Encapsulated PostScript (EPS), DjVu, DVI, Portable
+ Document Format (PDF) and XML Paper Specification (XPS) files.
  When supported by the document, it also allows searching for text,
  copying text to the clipboard, hypertext navigation, and
  table-of-contents bookmarks.
@@ -74,8 +74,8 @@ Depends: ${misc:Depends},
          libevview3-3 (= ${binary:Version})
 Description: Document (PostScript, PDF) viewer - debugging symbols
  Evince is a simple multi-page document viewer.  It can display and print
- PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
- Document Format (PDF) files.
+ PostScript (PS), Encapsulated PostScript (EPS), DjVu, DVI, Portable
+ Document Format (PDF) and XML Paper Specification (XPS) files.
  When supported by the document, it also allows searching for text,
  copying text to the clipboard, hypertext navigation, and
  table-of-contents bookmarks.
@@ -104,8 +104,8 @@ Suggests: gvfs,
           nautilus
 Description: Document (PostScript, PDF) viewer (GTK+ version)
  Evince is a simple multi-page document viewer.  It can display and print
- PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
- Document Format (PDF) files.
+ PostScript (PS), Encapsulated PostScript (EPS), DjVu, DVI, Portable
+ Document Format (PDF) and XML Paper Specification (XPS) files.
  When supported by the document, it also allows searching for text,
  copying text to the clipboard, hypertext navigation, and
  table-of-contents bookmarks.
@@ -118,8 +118,8 @@ Depends: ${misc:Depends},
          gsettings-desktop-schemas
 Description: Document (PostScript, PDF) viewer - common files
  Evince is a simple multi-page document viewer.  It can display and print
- PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
- Document Format (PDF) files.
+ PostScript (PS), Encapsulated PostScript (EPS), DjVu, DVI, Portable
+ Document Format (PDF) and XML Paper Specification (XPS) files.
  When supported by the document, it also allows searching for text,
  copying text to the clipboard, hypertext navigation, and
  table-of-contents bookmarks.
@@ -159,8 +159,8 @@ Depends: libevdocument3-4 (= ${binary:Version}),
          libglib2.0-dev (>= 2.25.1)
 Description: Document (PostScript, PDF) rendering library - development files
  This package contains evince-related libraries for rendering and displaying
- Evince documents like PostScript (PS), Encapsulated PostScript (EPS), DJVU,
- DVI and Portable Document Format (PDF) files.
+ Evince documents like PostScript (PS), Encapsulated PostScript (EPS), DjVu,
+ DVI, Portable Document Format (PDF) and XML Paper Specification (XPS) files.
  * libevdocument, which performs the rendering of the documents
  * libevview, which provides GTK+ widgets for displaying documents
  .
@@ -180,8 +180,8 @@ Description: GObject introspection data for the evince libraries
  libevdocument library.
  .
  Evince is a simple multi-page document viewer.  It can display and print
- PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and Portable
- Document Format (PDF) files.
+ PostScript (PS), Encapsulated PostScript (EPS), DjVu, DVI, Portable
+ Document Format (PDF) and XML Paper Specification (XPS) files.
  When supported by the document, it also allows searching for text,
  copying text to the clipboard, hypertext navigation, and
  table-of-contents bookmarks.
