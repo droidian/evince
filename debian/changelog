@@ -1,4 +1,4 @@
-evince (3.4.0-1) unstable; urgency=low
+evince (3.4.0-1) experimental; urgency=low
 
   * New upstream release.
   * Wrap dependencies.
