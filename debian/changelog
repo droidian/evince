@@ -1,6 +1,7 @@
 evince (3.4.0-3) UNRELEASED; urgency=low
 
   * Build with all hardening flags. Closes: #678995.
+  * Add corresponding build-dependency on a recent dpkg-dev.
 
  -- Josselin Mouette <joss@debian.org>  Mon, 25 Jun 2012 19:17:35 +0200
 
