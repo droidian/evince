@@ -1,9 +1,13 @@
 evince (3.4.0-3) UNRELEASED; urgency=low
 
+  [ Josselin Mouette ]
   * Build with all hardening flags. Closes: #678995.
   * Add corresponding build-dependency on a recent dpkg-dev.
 
- -- Josselin Mouette <joss@debian.org>  Mon, 25 Jun 2012 19:17:35 +0200
+  [ Michael Biebl ]
+  * Build against poppler 0.18.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 26 Jun 2012 15:26:59 +0200
 
 evince (3.4.0-2) unstable; urgency=low
 
