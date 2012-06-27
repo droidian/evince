@@ -137,11 +137,13 @@ Architecture: any
 Section: libs
 Depends: ${shlibs:Depends},
          ${misc:Depends}
+Replaces: libevince3-3
+Breaks: libevince3-3
 Description: Document (PostScript, PDF) rendering library
  This package contains libevdocument, which performs the rendering of the
  documents.
  .
- It shipps with a ps, pdf, dvi, tiff, djvu, comics and xps backend.
+ It ships with a ps, pdf, dvi, tiff, djvu, comics and xps backend.
 
 Package: libevview3-3
 Architecture: any
