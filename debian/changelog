@@ -11,6 +11,10 @@ evince (3.4.0-3) UNRELEASED; urgency=low
   * Fix typo in package description
   * Have libevdocument3-4 break/replace libevince3-3 too (LP: #1018543)
 
+  [ Josselin Mouette ]
+  * Re-add evince.mime with only application/pdf supported.
+    Closes: #658139.
+
  -- Michael Biebl <biebl@debian.org>  Tue, 26 Jun 2012 15:26:59 +0200
 
 evince (3.4.0-2) unstable; urgency=low
