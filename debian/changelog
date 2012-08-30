@@ -1,4 +1,4 @@
-evince (3.4.0-3) UNRELEASED; urgency=low
+evince (3.4.0-3) unstable; urgency=low
 
   [ Josselin Mouette ]
   * Build with all hardening flags. Closes: #678995.
@@ -15,7 +15,7 @@ evince (3.4.0-3) UNRELEASED; urgency=low
   * Re-add evince.mime with only application/pdf supported.
     Closes: #658139.
 
- -- Michael Biebl <biebl@debian.org>  Tue, 26 Jun 2012 15:26:59 +0200
+ -- Michael Biebl <biebl@debian.org>  Thu, 30 Aug 2012 02:27:50 +0200
 
 evince (3.4.0-2) unstable; urgency=low
 
