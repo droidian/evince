@@ -1,8 +1,43 @@
-evince (3.4.0-1) UNRELEASED; urgency=low
+evince (3.4.0-3) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * Build with all hardening flags. Closes: #678995.
+  * Add corresponding build-dependency on a recent dpkg-dev.
+
+  [ Michael Biebl ]
+  * Build against poppler 0.18.
+
+  [ Jeremy Bicha ]
+  * Fix typo in package description
+  * Have libevdocument3-4 break/replace libevince3-3 too (LP: #1018543)
+
+  [ Josselin Mouette ]
+  * Re-add evince.mime with only application/pdf supported.
+    Closes: #658139.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 30 Aug 2012 02:27:50 +0200
+
+evince (3.4.0-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 15 May 2012 14:35:31 +0200
+
+evince (3.4.0-1) experimental; urgency=low
 
   * New upstream release.
+  * Wrap dependencies.
+  * Remove obsolete Replaces.
+  * Drop explicit Build-Depends on gir packages.
+  * Don't bother setting a shlibs version for dh_makeshlibs since we use a
+    symbols file, use "-V -- -c4" instead.
+  * Bump Standards-Version to 3.9.3.
+  * Split libevince3-3 into libevdocument3-4 and libevview3-3 as libevdocument
+    had a soname bump but libevview did not, so they are no longer in sync.
+    We still keep a single -dev and gir package for convenience sake.
+  * Mention support for XPS documents in the package description.
 
- -- Michael Biebl <biebl@debian.org>  Mon, 19 Mar 2012 14:50:02 +0100
+ -- Michael Biebl <biebl@debian.org>  Thu, 19 Apr 2012 15:22:50 +0200
 
 evince (3.3.90-1) experimental; urgency=low
 

@@ -1,5 +1,8 @@
 #!/usr/bin/make -f
 
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+include /usr/share/dpkg/buildflags.mk
+
 include /usr/share/cdbs/1/rules/autoreconf.mk
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/gnome.mk
@@ -21,7 +24,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-scrollkeeper \
 			--enable-introspection
 
 DEB_DH_MAKESHLIBS_ARGS += -X /usr/lib/nautilus/ -X /usr/lib/evince/ \
-	-V'libevince3-3 (>= 3.3.90)'
+	-V -- -c4
 
 DEB_DH_STRIP_ARGS_evince-gtk =
 
@@ -54,7 +57,7 @@ install/evince-gtk::
 	rm -rf debian/evince-gtk/usr/lib/nautilus
 	rm -rf debian/evince-gtk/usr/lib/pkgconfig
 	rm -rf debian/evince-gtk/usr/lib/girepository*
-	rm -rf debian/evince-gtk/usr/lib/evince/3
+	rm -rf debian/evince-gtk/usr/lib/evince/4
 
 binary-install/evince-common::
 	rm -rf debian/evince-common/usr/share/gtk-doc
