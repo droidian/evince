@@ -2,7 +2,7 @@ evince (3.6.1-1) UNRELEASED; urgency=low
 
   * Team upload.
   * debian/patches/03_nodisplay.patch: add upstream and Debian bug references
-  * New upstream release
+  * New upstream release (Closes: #690792)
     - update symbols files, dropping some removed private symbols
     - update build-dependencies
     - help is now in yelp format
