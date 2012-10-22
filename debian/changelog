@@ -1,3 +1,10 @@
+evince (3.4.0-4) UNRELEASED; urgency=low
+
+  * Team upload.
+  * debian/patches/03_nodisplay.patch: add upstream and Debian bug references
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 22 Oct 2012 18:36:32 +0100
+
 evince (3.4.0-3) unstable; urgency=low
 
   [ Josselin Mouette ]
