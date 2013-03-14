@@ -56,7 +56,6 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_backends_manager_get_document_module_name@Base 3.0.2
  ev_backends_manager_get_document_type_info@Base 3.0.2
  ev_compression_type_get_type@Base 3.0.2
- (optional)ev_doc_mutex@Base 3.3.90
  ev_document_annotations_add_annotation@Base 3.0.2
  ev_document_annotations_can_add_annotation@Base 3.0.2
  ev_document_annotations_document_is_modified@Base 3.0.2
@@ -85,6 +84,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_find_get_type@Base 3.0.2
  ev_document_find_page_by_label@Base 3.0.2
  ev_document_fonts_fill_model@Base 3.0.2
+ ev_document_fonts_get_fonts_summary@Base 3.7.90
  ev_document_fonts_get_progress@Base 3.0.2
  ev_document_fonts_get_type@Base 3.0.2
  ev_document_fonts_scan@Base 3.0.2
@@ -164,6 +164,8 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_misc_invert_surface@Base 3.0.2
  ev_document_misc_paint_one_page@Base 3.0.2
  ev_document_misc_pixbuf_from_surface@Base 3.0.2
+ ev_document_misc_render_loading_thumbnail@Base 3.7.90
+ ev_document_misc_render_thumbnail_with_frame@Base 3.7.90
  ev_document_misc_surface_from_pixbuf@Base 3.0.2
  ev_document_misc_surface_rotate_and_scale@Base 3.0.2
  ev_document_mode_get_type@Base 3.0.2
@@ -185,7 +187,6 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_transition_get_page_duration@Base 3.0.2
  ev_document_transition_get_type@Base 3.0.2
  ev_document_ui_hints_get_type@Base 3.0.2
- (optional)ev_fc_mutex@Base 3.3.90
  ev_file_compress@Base 3.0.2
  ev_file_copy_metadata@Base 3.5.2
  ev_file_exporter_begin@Base 3.0.2
@@ -227,6 +228,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_layer_get_type@Base 3.0.2
  ev_layer_is_parent@Base 3.0.2
  ev_layer_new@Base 3.0.2
+ ev_link_action_equal@Base 3.7.90
  ev_link_action_get_action_type@Base 3.0.2
  ev_link_action_get_dest@Base 3.0.2
  ev_link_action_get_filename@Base 3.0.2
@@ -244,6 +246,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_link_action_new_named@Base 3.0.2
  ev_link_action_new_remote@Base 3.0.2
  ev_link_action_type_get_type@Base 3.0.2
+ ev_link_dest_equal@Base 3.7.90
  ev_link_dest_get_bottom@Base 3.0.2
  ev_link_dest_get_dest_type@Base 3.0.2
  ev_link_dest_get_left@Base 3.0.2
@@ -272,7 +275,10 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_mapping_list_get_data@Base 3.0.2
  ev_mapping_list_get_list@Base 3.0.2
  ev_mapping_list_get_page@Base 3.0.2
+ ev_mapping_list_get_type@Base 3.7.90
+ ev_mapping_list_length@Base 3.7.90
  ev_mapping_list_new@Base 3.0.2
+ ev_mapping_list_nth@Base 3.7.90
  ev_mapping_list_ref@Base 3.0.2
  ev_mapping_list_unref@Base 3.0.2
  ev_mkdtemp@Base 3.0.2

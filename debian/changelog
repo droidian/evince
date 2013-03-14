@@ -1,8 +1,21 @@
-evince (3.6.1-2) UNRELEASED; urgency=low
+evince (3.7.90-1) UNRELEASED; urgency=low
 
+  [ Josselin Mouette ]
   * Finally remove evince.mime for good.
 
- -- Josselin Mouette <joss@debian.org>  Sat, 17 Nov 2012 14:38:53 +0100
+  [ Andreas Henriksson ]
+  * New upstream release.
+    - bump gtk+ build-dependency to >= 3.7.5 according to configure.ac
+    - also replace libgnome-keyring-dev with libsecret-1-dev (>= 0.5)
+  * Update debian/libevdocument3-4.symbols:
+    - dropping (optional)ev_{doc,fc}_mutex@Base 3.3.90
+    - adding new symbols
+  * Updated debian/libevview3-3.symbols:
+    - dropping ev_loading_window_{get_size,get_type,move,new}@Base 3.0.2
+      and ev_view_accessible_factory_get_type@Base 3.0.2
+    - adding new symbols
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 14 Mar 2013 20:56:01 +0100
 
 evince (3.6.1-1) experimental; urgency=low
 
