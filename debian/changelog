@@ -1,4 +1,4 @@
-evince (3.7.90-1) UNRELEASED; urgency=low
+evince (3.7.90-1) experimental; urgency=low
 
   [ Josselin Mouette ]
   * Finally remove evince.mime for good.
@@ -15,7 +15,7 @@ evince (3.7.90-1) UNRELEASED; urgency=low
       and ev_view_accessible_factory_get_type@Base 3.0.2
     - adding new symbols
 
- -- Andreas Henriksson <andreas@fatal.se>  Thu, 14 Mar 2013 20:56:01 +0100
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 15 Mar 2013 18:58:50 +0100
 
 evince (3.6.1-1) experimental; urgency=low
 
