@@ -10,7 +10,7 @@ evince (3.7.90-1) UNRELEASED; urgency=low
   * Update debian/libevdocument3-4.symbols:
     - dropping (optional)ev_{doc,fc}_mutex@Base 3.3.90
     - adding new symbols
-  * Updated debian/libevview3-3.symbols:
+  * Update debian/libevview3-3.symbols:
     - dropping ev_loading_window_{get_size,get_type,move,new}@Base 3.0.2
       and ev_view_accessible_factory_get_type@Base 3.0.2
     - adding new symbols
