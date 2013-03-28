@@ -1,6 +1,8 @@
 evince (3.8.0-1) UNRELEASED; urgency=low
 
   * New upstream release.
+    + debian/patches/03_nodisplay.patch:
+      - Dropped, included upstream.
 
  -- Emilio Pozuelo Monfort <pochu@debian.org>  Thu, 28 Mar 2013 22:21:21 +0100
 
