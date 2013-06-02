@@ -17,7 +17,6 @@ DEB_DH_INSTALL_ARGS += --sourcedir=debian/install/evince
 DEB_DH_INSTALL_ARGS_evince-gtk += --sourcedir=debian/install/evince-gtk
 
 DEB_CONFIGURE_EXTRA_FLAGS = \
-			--disable-scrollkeeper \
 			--enable-gtk-doc \
 			--enable-djvu \
 			--enable-dvi \
