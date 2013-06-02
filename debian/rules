@@ -17,18 +17,20 @@ DEB_DH_INSTALL_ARGS += --sourcedir=debian/install/evince
 DEB_DH_INSTALL_ARGS_evince-gtk += --sourcedir=debian/install/evince-gtk
 
 DEB_CONFIGURE_EXTRA_FLAGS = \
-			--enable-gtk-doc \
 			--enable-djvu \
 			--enable-dvi \
 			--enable-t1lib \
 			--enable-xps \
-			--enable-comics \
-			--enable-introspection
+			--enable-comics
 
 DEB_DH_MAKESHLIBS_ARGS += -X /usr/lib/nautilus/ -X /usr/lib/evince/ \
 	-V -- -c4
 
 DEB_DH_STRIP_ARGS_evince-gtk =
+
+DEB_CONFIGURE_FLAGS_evince = \
+			--enable-introspection \
+			--enable-gtk-doc
 
 DEB_CONFIGURE_FLAGS_evince-gtk = \
 			--without-keyring \
