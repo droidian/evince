@@ -39,16 +39,6 @@ DEB_CONFIGURE_FLAGS_evince-gtk = \
 			--disable-introspection \
 			--disable-gtk-doc
 
-install/evince-gtk::
-	rm -rf debian/install/evince-gtk/usr/share
-	rm -rf debian/install/evince-gtk/etc
-	rm -rf debian/install/evince-gtk/usr/include
-	rm -rf debian/install/evince-gtk/usr/lib/lib*
-	rm -rf debian/install/evince-gtk/usr/lib/nautilus
-	rm -rf debian/install/evince-gtk/usr/lib/pkgconfig
-	rm -rf debian/install/evince-gtk/usr/lib/girepository*
-	rm -rf debian/install/evince-gtk/usr/lib/evince/4
-
 install/evince-common::
 	dh_install -p${cdbs_curpkg} --ignore=debian/${cdbs_curpkg}.install \
 		debian/evince.xpm usr/share/pixmaps
