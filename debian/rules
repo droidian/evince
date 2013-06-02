@@ -49,6 +49,3 @@ install/evince-gtk::
 install/evince-common::
 	dh_install -p${cdbs_curpkg} --ignore=debian/${cdbs_curpkg}.install \
 	debian/evince.xpm usr/share/pixmaps
-
-binary-install/evince-common::
-	rm -rf debian/evince-common/usr/share/gtk-doc
