@@ -1,6 +1,11 @@
 evince (3.8.2-1) UNRELEASED; urgency=low
 
   * New upstream release.
+  * debian/evince-common.install,
+    debian/rules:
+    + Install the xpm icon from debian/rules.
+  * debian/rules:
+    + Take advantage of CDBS' flavor support.
 
  -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 02 Jun 2013 19:17:30 +0200
 
