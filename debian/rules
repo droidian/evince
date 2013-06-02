@@ -51,4 +51,4 @@ install/evince-gtk::
 
 install/evince-common::
 	dh_install -p${cdbs_curpkg} --ignore=debian/${cdbs_curpkg}.install \
-	debian/evince.xpm usr/share/pixmaps
+		debian/evince.xpm usr/share/pixmaps
