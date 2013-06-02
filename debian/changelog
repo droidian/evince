@@ -1,4 +1,4 @@
-evince (3.8.2-1) UNRELEASED; urgency=low
+evince (3.8.2-1) experimental; urgency=low
 
   * New upstream release.
   * debian/evince-common.install,
@@ -15,7 +15,7 @@ evince (3.8.2-1) UNRELEASED; urgency=low
     + Install what we need for evince-gtk from the install file
       instead of installing everything and then removing various bits.
 
- -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 02 Jun 2013 19:17:30 +0200
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 02 Jun 2013 23:37:15 +0200
 
 evince (3.8.0-1) experimental; urgency=low
 
