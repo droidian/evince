@@ -1,3 +1,60 @@
+evince (3.8.2-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/evince-common.install,
+    debian/rules:
+    + Install the xpm icon from debian/rules.
+  * debian/rules:
+    + Take advantage of CDBS' flavor support.
+    + Drop --disable-scrollkeeper, no longer used.
+    + No need to remove /usr/share/gtk-doc from evince-common, we're
+      not installing it in the first place.
+    + Include utils.mk
+  * debian/evince-gtk.install,
+    debian/rules:
+    + Install what we need for evince-gtk from the install file
+      instead of installing everything and then removing various bits.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 02 Jun 2013 23:37:15 +0200
+
+evince (3.8.0-1) experimental; urgency=low
+
+  * New upstream release.
+    + debian/patches/03_nodisplay.patch:
+      - Dropped, included upstream.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Thu, 28 Mar 2013 23:42:03 +0100
+
+evince (3.7.90-1) experimental; urgency=low
+
+  [ Josselin Mouette ]
+  * Finally remove evince.mime for good.
+
+  [ Andreas Henriksson ]
+  * New upstream release.
+    - bump gtk+ build-dependency to >= 3.7.5 according to configure.ac
+    - also replace libgnome-keyring-dev with libsecret-1-dev (>= 0.5)
+  * Update debian/libevdocument3-4.symbols:
+    - dropping (optional)ev_{doc,fc}_mutex@Base 3.3.90
+    - adding new symbols
+  * Update debian/libevview3-3.symbols:
+    - dropping ev_loading_window_{get_size,get_type,move,new}@Base 3.0.2
+      and ev_view_accessible_factory_get_type@Base 3.0.2
+    - adding new symbols
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 15 Mar 2013 18:58:50 +0100
+
+evince (3.6.1-1) experimental; urgency=low
+
+  * Team upload.
+  * debian/patches/03_nodisplay.patch: add upstream and Debian bug references
+  * New upstream release (Closes: #690792)
+    - update symbols files, dropping some removed private symbols
+    - update build-dependencies
+    - help is now in yelp format
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 22 Oct 2012 18:47:56 +0100
+
 evince (3.4.0-3) unstable; urgency=low
 
   [ Josselin Mouette ]
