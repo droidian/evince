@@ -1,4 +1,4 @@
-evince (3.8.3-1) UNRELEASED; urgency=low
+evince (3.8.3-1) unstable; urgency=low
 
   * New upstream release.
   * Bump Standards-Version to 3.9.4. No further changes.
@@ -6,8 +6,9 @@ evince (3.8.3-1) UNRELEASED; urgency=low
     evince against poppler 0.18 since unstable doesn't have 0.20 yet.
   * Lower the Build-Depends on libpoppler-glib-dev to (>= 0.18.0) again for
     now.
+  * Upload to unstable.
 
- -- Michael Biebl <biebl@debian.org>  Wed, 28 Aug 2013 01:36:08 +0200
+ -- Michael Biebl <biebl@debian.org>  Wed, 28 Aug 2013 01:54:46 +0200
 
 evince (3.8.2-1) experimental; urgency=low
 
