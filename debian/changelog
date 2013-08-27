@@ -1,6 +1,7 @@
 evince (3.8.3-1) UNRELEASED; urgency=low
 
   * New upstream release.
+  * Bump Standards-Version to 3.9.4. No further changes.
 
  -- Michael Biebl <biebl@debian.org>  Wed, 28 Aug 2013 01:36:08 +0200
 
