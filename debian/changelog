@@ -1,9 +1,9 @@
-evince (3.8.3-2) UNRELEASED; urgency=low
+evince (3.8.3-2) unstable; urgency=low
 
   * Depend on gnome-icon-theme-symbolic for the symbolic icons used in the
     redesigned UI. Closes: #717057
 
- -- Michael Biebl <biebl@debian.org>  Thu, 05 Sep 2013 17:12:09 +0200
+ -- Michael Biebl <biebl@debian.org>  Thu, 05 Sep 2013 17:17:59 +0200
 
 evince (3.8.3-1) unstable; urgency=low
 
