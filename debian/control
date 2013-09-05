@@ -53,7 +53,7 @@ Depends: ${shlibs:Depends},
          libevview3-3 (= ${binary:Version}),
          evince-common (>= ${gnome:Version}),
          evince-common (<< ${gnome:NextVersion}),
-         gnome-icon-theme (>= 2.17.1),
+         gnome-icon-theme-symbolic (>= 2.17.1),
          shared-mime-info
 Recommends: dbus-x11,
             gvfs
