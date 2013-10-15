@@ -3,11 +3,9 @@ Description: Make it possible to compile evince 3.8 against poppler 0.18
  check so we can build against older versions. The existing code already
  provides a sensible fallback path.
 Author: Michael Biebl <biebl@debian.org>
-diff --git a/backend/pdf/ev-poppler.cc b/backend/pdf/ev-poppler.cc
-index 883de2d..0ddaef9 100644
 --- a/backend/pdf/ev-poppler.cc
 +++ b/backend/pdf/ev-poppler.cc
-@@ -1115,10 +1115,10 @@ pdf_document_fonts_fill_model (EvDocumentFonts *document_fonts,
+@@ -1115,10 +1115,10 @@
  		const char *type_str;
  		const char *embedded;
  		const char *standard_str = "";
@@ -20,7 +18,7 @@ index 883de2d..0ddaef9 100644
  		const gchar *encoding_text;
  		char *details;
  		
-@@ -1128,7 +1128,9 @@ pdf_document_fonts_fill_model (EvDocumentFonts *document_fonts,
+@@ -1128,7 +1128,9 @@
  			name = _("No name");
  		}
  
@@ -30,7 +28,7 @@ index 883de2d..0ddaef9 100644
  		if (!encoding) {
  			/* translators: When a font type does not have
  			   encoding information or it is unknown.  Example:
-@@ -1165,7 +1167,9 @@ pdf_document_fonts_fill_model (EvDocumentFonts *document_fonts,
+@@ -1165,7 +1167,9 @@
  			}
  		}
  
@@ -40,11 +38,9 @@ index 883de2d..0ddaef9 100644
  		filename = poppler_fonts_iter_get_file_name (iter);
  		encoding_text = _("Encoding");
  		substitute_text = _("Substituting with");
-diff --git a/configure.ac b/configure.ac
-index 184f492..5bfb40b 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -471,7 +471,7 @@ AC_ARG_ENABLE([pdf],
+@@ -474,7 +474,7 @@
    [enable_pdf=yes])
  
  if test "x$enable_pdf" = "xyes"; then

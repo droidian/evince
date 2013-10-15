@@ -1,3 +1,22 @@
+evince (3.10.0-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+  * Bump build-dependencies according to configure.ac (except poppler):
+    - libgtk-3-dev to >= 3.8.0
+    - libglib2.0-dev to >= 2.36
+  * Add patches to revert more poppler version bumps:
+    - debian/patches/revert-poppler-0.24.patch
+    - debian/patches/revert-poppler-0.23.3.patch
+  * Refresh debian/patches/01-poppler-0.18-compat.patch while at it.
+  * Update debian/libevdocument3-4.symbols with one added symbol
+  * Update debian/libevview3-3.symbols
+    - several additions and one removal: ev_view_selection_mode_get_type
+    - dropped symbol used (or wrapped atleast) in gnome-python-desktop
+    - Noone else seems to have noticed, so I'll just stick my head
+      in the sand for now and hope this doesn't cause any issues.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 15 Oct 2013 13:11:57 +0200
+
 evince (3.8.3-2) unstable; urgency=low
 
   * Depend on gnome-icon-theme-symbolic for the symbolic icons used in the
