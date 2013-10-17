@@ -1,4 +1,4 @@
-evince (3.10.0-1) UNRELEASED; urgency=low
+evince (3.10.0-1) unstable; urgency=low
 
   * New upstream release.
   * Bump build-dependencies according to configure.ac (except poppler):
@@ -15,7 +15,7 @@ evince (3.10.0-1) UNRELEASED; urgency=low
     - Noone else seems to have noticed, so I'll just stick my head
       in the sand for now and hope this doesn't cause any issues.
 
- -- Andreas Henriksson <andreas@fatal.se>  Tue, 15 Oct 2013 13:11:57 +0200
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 17 Oct 2013 12:44:30 +0200
 
 evince (3.8.3-2) unstable; urgency=low
 
