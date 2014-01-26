@@ -1,3 +1,10 @@
+evince (3.10.0-3) UNRELEASED; urgency=medium
+
+  * debian/control.in:
+    + Build depend on libtiff-dev instead of libtiff4-dev. Closes: #736001.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 26 Jan 2014 21:10:47 +0100
+
 evince (3.10.0-2) unstable; urgency=medium
 
   * Remove t1lib dependency (Closes: #638759)
