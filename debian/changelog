@@ -1,3 +1,54 @@
+evince (3.10.0-3) UNRELEASED; urgency=medium
+
+  * debian/control.in:
+    + Build depend on libtiff-dev instead of libtiff4-dev. Closes: #736001.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 26 Jan 2014 21:10:47 +0100
+
+evince (3.10.0-2) unstable; urgency=medium
+
+  * Remove t1lib dependency (Closes: #638759)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 17 Jan 2014 22:35:24 +0100
+
+evince (3.10.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump build-dependencies according to configure.ac (except poppler):
+    - libgtk-3-dev to >= 3.8.0
+    - libglib2.0-dev to >= 2.36
+  * Add patches to revert more poppler version bumps:
+    - debian/patches/revert-poppler-0.24.patch
+    - debian/patches/revert-poppler-0.23.3.patch
+  * Refresh debian/patches/01-poppler-0.18-compat.patch while at it.
+  * Update debian/libevdocument3-4.symbols with one added symbol
+  * Update debian/libevview3-3.symbols
+    - several additions and one removal: ev_view_selection_mode_get_type
+    - dropped symbol used (or wrapped atleast) in gnome-python-desktop
+    - Noone else seems to have noticed, so I'll just stick my head
+      in the sand for now and hope this doesn't cause any issues.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 17 Oct 2013 12:44:30 +0200
+
+evince (3.8.3-2) unstable; urgency=low
+
+  * Depend on gnome-icon-theme-symbolic for the symbolic icons used in the
+    redesigned UI. Closes: #717057
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 05 Sep 2013 17:17:59 +0200
+
+evince (3.8.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.4. No further changes.
+  * debian/patches/01-poppler-0.18-compat.patch: Make it possible to compile
+    evince against poppler 0.18 since unstable doesn't have 0.20 yet.
+  * Lower the Build-Depends on libpoppler-glib-dev to (>= 0.18.0) again for
+    now.
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 28 Aug 2013 01:54:46 +0200
+
 evince (3.8.2-1) experimental; urgency=low
 
   * New upstream release.

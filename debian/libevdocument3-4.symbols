@@ -180,6 +180,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_synctex_backward_search@Base 3.0.2
  ev_document_synctex_forward_search@Base 3.0.2
  ev_document_text_get_text@Base 3.0.2
+ ev_document_text_get_text_attrs@Base 3.10.0
  ev_document_text_get_text_layout@Base 3.0.2
  ev_document_text_get_text_mapping@Base 3.0.2
  ev_document_text_get_type@Base 3.0.2
