@@ -191,6 +191,7 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_view_find_changed@Base 3.0.2
  ev_view_find_next@Base 3.0.2
  ev_view_find_previous@Base 3.0.2
+ ev_view_find_restart@Base 3.11.90
  ev_view_find_search_changed@Base 3.0.2
  ev_view_find_set_highlight_search@Base 3.0.2
  ev_view_find_set_result@Base 3.10.0
