@@ -273,6 +273,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_link_new@Base 3.0.2
  ev_mapping_list_find@Base 3.0.2
  ev_mapping_list_find_custom@Base 3.0.2
+ ev_mapping_list_get@Base 3.11.90
  ev_mapping_list_get_data@Base 3.0.2
  ev_mapping_list_get_list@Base 3.0.2
  ev_mapping_list_get_page@Base 3.0.2

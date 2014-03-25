@@ -1,9 +1,21 @@
-evince (3.10.0-3) UNRELEASED; urgency=medium
+evince (3.12.0-1) unstable; urgency=medium
 
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 25 Mar 2014 21:04:58 +0100
+
+evince (3.11.90-1) experimental; urgency=medium
+
+  [ Emilio Pozuelo Monfort ]
   * debian/control.in:
     + Build depend on libtiff-dev instead of libtiff4-dev. Closes: #736001.
 
- -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 26 Jan 2014 21:10:47 +0100
+  [ Andreas Henriksson ]
+  * New upstream release.
+  * Add one new symbol to debian/libevdocument3-4.symbols
+  * Add one new symbol to debian/libevview3-3.symbols
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 23 Feb 2014 20:11:04 +0100
 
 evince (3.10.0-2) unstable; urgency=medium
 
