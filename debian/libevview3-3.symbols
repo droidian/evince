@@ -186,6 +186,7 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_view_accessible_get_type@Base 3.7.90
  ev_view_accessible_new@Base 3.7.90
  ev_view_accessible_set_model@Base 3.10.0
+ ev_view_accessible_set_page_range@Base 3.12.2
  ev_view_autoscroll_start@Base 3.0.2
  ev_view_autoscroll_stop@Base 3.0.2
  ev_view_begin_add_annotation@Base 3.0.2
