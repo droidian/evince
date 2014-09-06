@@ -1,3 +1,9 @@
+evince (3.13.91-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sat, 06 Sep 2014 14:07:46 +0200
+
 evince (3.12.2-1) unstable; urgency=medium
 
   * New upstream release.
