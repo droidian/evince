@@ -1,3 +1,9 @@
+evince (3.13.91-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sat, 06 Sep 2014 17:35:21 +0200
+
 evince (3.12.2-1) unstable; urgency=medium
 
   * New upstream release.

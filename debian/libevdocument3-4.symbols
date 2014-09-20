@@ -58,9 +58,11 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_compression_type_get_type@Base 3.0.2
  ev_document_annotations_add_annotation@Base 3.0.2
  ev_document_annotations_can_add_annotation@Base 3.0.2
+ ev_document_annotations_can_remove_annotation@Base 3.13.91
  ev_document_annotations_document_is_modified@Base 3.0.2
  ev_document_annotations_get_annotations@Base 3.0.2
  ev_document_annotations_get_type@Base 3.0.2
+ ev_document_annotations_remove_annotation@Base 3.13.91
  ev_document_annotations_save_annotation@Base 3.0.2
  ev_document_attachments_get_attachments@Base 3.0.2
  ev_document_attachments_get_type@Base 3.0.2
@@ -113,6 +115,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_get_page_label@Base 3.0.2
  ev_document_get_page_size@Base 3.0.2
  ev_document_get_thumbnail@Base 3.0.2
+ ev_document_get_thumbnail_surface@Base 3.13.91
  ev_document_get_title@Base 3.0.2
  ev_document_get_type@Base 3.0.2
  ev_document_get_uri@Base 3.0.2
@@ -165,6 +168,8 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_misc_paint_one_page@Base 3.0.2
  ev_document_misc_pixbuf_from_surface@Base 3.0.2
  ev_document_misc_render_loading_thumbnail@Base 3.7.90
+ ev_document_misc_render_loading_thumbnail_surface@Base 3.13.91
+ ev_document_misc_render_thumbnail_surface_with_frame@Base 3.13.91
  ev_document_misc_render_thumbnail_with_frame@Base 3.7.90
  ev_document_misc_surface_from_pixbuf@Base 3.0.2
  ev_document_misc_surface_rotate_and_scale@Base 3.0.2
@@ -282,6 +287,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_mapping_list_new@Base 3.0.2
  ev_mapping_list_nth@Base 3.7.90
  ev_mapping_list_ref@Base 3.0.2
+ ev_mapping_list_remove@Base 3.13.91
  ev_mapping_list_unref@Base 3.0.2
  ev_mkdtemp@Base 3.0.2
  ev_mkstemp@Base 3.0.2
@@ -293,11 +299,15 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_rectangle_free@Base 3.0.2
  ev_rectangle_get_type@Base 3.0.2
  ev_rectangle_new@Base 3.0.2
+ ev_render_context_compute_scaled_size@Base 3.13.91
+ ev_render_context_compute_scales@Base 3.13.91
+ ev_render_context_compute_transformed_size@Base 3.13.91
  ev_render_context_get_type@Base 3.0.2
  ev_render_context_new@Base 3.0.2
  ev_render_context_set_page@Base 3.0.2
  ev_render_context_set_rotation@Base 3.0.2
  ev_render_context_set_scale@Base 3.0.2
+ ev_render_context_set_target_size@Base 3.13.91
  ev_selection_get_selected_text@Base 3.0.2
  ev_selection_get_selection_region@Base 3.0.2
  ev_selection_get_type@Base 3.0.2
