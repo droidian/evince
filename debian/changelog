@@ -1,3 +1,9 @@
+evince (3.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 24 Sep 2014 13:00:51 +0200
+
 evince (3.13.92-1) unstable; urgency=medium
 
   * New upstream release
