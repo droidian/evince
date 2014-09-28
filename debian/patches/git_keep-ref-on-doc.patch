@@ -1,0 +1,52 @@
+From 0aafd8809a5464aef05e73c33e501cea0b413059 Mon Sep 17 00:00:00 2001
+From: Carlos Garcia Campos <carlosgc@gnome.org>
+Date: Sat, 27 Sep 2014 12:29:48 +0200
+Subject: window-title: Keep a weak ref on the document
+
+To cleanup the pointer and doc_title when the document is destroyed.
+Fixes a crash when a new document is added to the window.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=737365
+
+diff --git a/shell/ev-window-title.c b/shell/ev-window-title.c
+index b442717..c09da93 100644
+--- a/shell/ev-window-title.c
++++ b/shell/ev-window-title.c
+@@ -190,6 +190,14 @@ ev_window_title_set_type (EvWindowTitle *window_title, EvWindowTitleType type)
+ 	ev_window_title_update (window_title);
+ }
+ 
++static void
++document_destroyed_cb (EvWindowTitle *window_title,
++                       GObject       *document)
++{
++        window_title->document = NULL;
++        g_clear_pointer (&window_title->doc_title, g_free);
++}
++
+ void
+ ev_window_title_set_document (EvWindowTitle *window_title,
+ 			      EvDocument    *document)
+@@ -197,7 +205,10 @@ ev_window_title_set_document (EvWindowTitle *window_title,
+         if (window_title->document == document)
+                 return;
+ 
++        if (window_title->document)
++                g_object_weak_unref (G_OBJECT (window_title->document), (GWeakNotify)document_destroyed_cb, window_title);
+ 	window_title->document = document;
++        g_object_weak_ref (G_OBJECT (window_title->document), (GWeakNotify)document_destroyed_cb, window_title);
+         g_clear_pointer (&window_title->doc_title, g_free);
+ 
+ 	if (window_title->document != NULL) {
+@@ -237,6 +248,8 @@ ev_window_title_set_uri (EvWindowTitle *window_title,
+ void
+ ev_window_title_free (EvWindowTitle *window_title)
+ {
++        if (window_title->document)
++                g_object_weak_unref (G_OBJECT (window_title->document), (GWeakNotify)document_destroyed_cb, window_title);
+         g_free (window_title->doc_title);
+ 	g_free (window_title->uri);
+ 	g_free (window_title);
+-- 
+cgit v0.10.1
+
