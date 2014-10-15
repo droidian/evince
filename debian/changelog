@@ -3,6 +3,7 @@ evince (3.14.1-1) UNRELEASED; urgency=medium
   * New upstream release.
   * Drop patches to build against older poppler versions since we have a new
     enough version now.
+  * Drop git_keep-ref-on-doc.patch, merged upstream.
 
  -- Michael Biebl <biebl@debian.org>  Wed, 15 Oct 2014 22:28:17 +0200
 
