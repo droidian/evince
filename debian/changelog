@@ -1,6 +1,8 @@
 evince (3.14.1-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Drop patches to build against older poppler versions since we have a new
+    enough version now.
 
  -- Michael Biebl <biebl@debian.org>  Wed, 15 Oct 2014 22:28:17 +0200
 
