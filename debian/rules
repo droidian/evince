@@ -30,13 +30,15 @@ DEB_DH_STRIP_ARGS_evince-gtk =
 
 DEB_CONFIGURE_FLAGS_evince = \
 			--enable-introspection \
-			--enable-gtk-doc
+			--enable-gtk-doc \
+			--enable-libgnome-desktop
 
 DEB_CONFIGURE_FLAGS_evince-gtk = \
 			--without-keyring \
 			--disable-nautilus \
 			--disable-introspection \
-			--disable-gtk-doc
+			--disable-gtk-doc \
+			--disable-libgnome-desktop
 
 install/evince-common::
 	dh_install -p${cdbs_curpkg} --ignore=debian/${cdbs_curpkg}.install \
