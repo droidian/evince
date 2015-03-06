@@ -1,4 +1,4 @@
-evince (3.14.1-2) UNRELEASED; urgency=medium
+evince (3.14.1-2) unstable; urgency=medium
 
   * Team upload.
 
@@ -6,7 +6,7 @@ evince (3.14.1-2) UNRELEASED; urgency=medium
   * Add debian/patches/revert-69b474fce1.patch (Closes: #768133)
     - from upstream git, reverts commit which broke landscape printing
 
- -- Simon McVittie <smcv@debian.org>  Fri, 06 Mar 2015 08:31:17 +0000
+ -- Simon McVittie <smcv@debian.org>  Fri, 06 Mar 2015 08:36:46 +0000
 
 evince (3.14.1-1) unstable; urgency=medium
 
