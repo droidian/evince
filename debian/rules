@@ -1,10 +1,11 @@
 #!/usr/bin/make -f
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed -Wl,-z,defs
 
 DEB_BUILDDIR = debian/build
 DEB_MAKE_DESTDIRSKEL = $(CURDIR)/debian/install/@FLAVOR@
-DEB_MAKE_FLAVORS = evince evince-gtk
+DEB_MAKE_FLAVORS = evince # evince-gtk
 
 include /usr/share/cdbs/1/rules/autoreconf.mk
 include /usr/share/cdbs/1/rules/debhelper.mk
@@ -25,6 +26,8 @@ DEB_CONFIGURE_EXTRA_FLAGS = \
 
 DEB_DH_MAKESHLIBS_ARGS += -X /usr/lib/nautilus/ -X /usr/lib/evince/ \
 	-V -- -c4
+
+DEB_DH_SHLIBDEPS_ARGS += -X /usr/lib/nautilus/
 
 DEB_DH_STRIP_ARGS_evince-gtk =
 
