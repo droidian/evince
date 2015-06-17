@@ -1,3 +1,59 @@
+evince (3.14.1-3) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * Build only the full-flavored variant of Evince (Closes: #755071).
+    + Disable building of the evince-gtk flavor.
+    + Turn evince-gtk into a transitional package that depends on evince.
+    + Add Breaks and Replaces to the evince package accordingly.
+    + Move gvfs from Recommends to Suggests.
+    + Exclude the "/usr/lib/nautilus/" path from dh_shlibdeps to avoid
+      the infamous dependency on libnautilus*.
+  * Append "-Wl,--as-needed -Wl,-z,defs" to LDFLAGS to avoid more
+    unnecessary dependencies.
+
+ -- Fabian Greffrath <fabian@debian.org>  Tue, 19 May 2015 17:19:59 +0200
+
+evince (3.14.1-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Chris Kuehl ]
+  * Add debian/patches/revert-69b474fce1.patch (Closes: #768133)
+    - from upstream git, reverts commit which broke landscape printing
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 06 Mar 2015 08:36:46 +0000
+
+evince (3.14.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop patches to build against older poppler versions since we have a new
+    enough version now.
+  * Drop git_keep-ref-on-doc.patch, merged upstream.
+  * Bump Build-Depends on libpoppler-glib-dev to (>= 0.24.0).
+  * Update Homepage URL.
+  * Bump Standards-Version to 3.9.6. No further changes.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 15 Oct 2014 23:12:08 +0200
+
+evince (3.14.0-2) unstable; urgency=medium
+
+  * Add debian/patches/git_keep-ref-on-doc.patch (Closes: #763138)
+    - from upstream git, fixes reference counting and thus crashes.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 28 Sep 2014 11:38:11 +0200
+
+evince (3.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 24 Sep 2014 13:00:51 +0200
+
+evince (3.13.92-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sat, 20 Sep 2014 10:01:33 +0200
+
 evince (3.13.91-1) experimental; urgency=medium
 
   * New upstream release
