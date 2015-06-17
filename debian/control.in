@@ -40,6 +40,7 @@ Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/evince
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/evince
 
 Package: evince
+Conflicts: evince-gtk
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
@@ -49,16 +50,14 @@ Depends: ${shlibs:Depends},
          evince-common (<< ${gnome:NextVersion}),
          gnome-icon-theme-symbolic (>= 2.17.1),
          shared-mime-info
-Recommends: dbus-x11
+Recommends: dbus-x11,
+            gvfs
 Provides: pdf-viewer,
           postscript-viewer,
           djvu-viewer
-Suggests: gvfs,
-          unrar,
+Suggests: unrar,
           poppler-data,
           nautilus
-Breaks: evince-gtk (<< 3.14.1-3~)
-Replaces: evince-gtk (<< 3.14.1-3~)
 Description: Document (PostScript, PDF) viewer
  Evince is a simple multi-page document viewer.  It can display and print
  PostScript (PS), Encapsulated PostScript (EPS), DjVu, DVI, Portable
@@ -86,13 +85,34 @@ Description: Document (PostScript, PDF) viewer - debugging symbols
  This package contains the debugging symbols needed by gdb.
 
 Package: evince-gtk
-Section: oldlibs
-Priority: extra
+Section: x11
+Conflicts: evince
 Architecture: any
-Depends: evince (= ${binary:Version}),
+Depends: ${shlibs:Depends},
          ${misc:Depends},
-Description: dummy package for the transition from evince-gtk to evince
- This package is a transitional dummy package. It can be safely removed.
+         libevdocument3-4 (= ${binary:Version}),
+         libevview3-3 (= ${binary:Version}),
+         evince-common (>= ${gnome:Version}),
+         evince-common (<< ${gnome:NextVersion}),
+         gnome-icon-theme-symbolic (>= 2.17.1),
+         shared-mime-info
+Recommends: dbus-x11
+Provides: pdf-viewer,
+          postscript-viewer,
+          djvu-viewer
+Suggests: gvfs,
+          unrar,
+          poppler-data,
+          nautilus
+Description: Document (PostScript, PDF) viewer (GTK+ version)
+ Evince is a simple multi-page document viewer.  It can display and print
+ PostScript (PS), Encapsulated PostScript (EPS), DjVu, DVI, Portable
+ Document Format (PDF) and XML Paper Specification (XPS) files.
+ When supported by the document, it also allows searching for text,
+ copying text to the clipboard, hypertext navigation, and
+ table-of-contents bookmarks.
+ .
+ This version of evince is built without GNOME keyring support.
 
 Package: evince-common
 Architecture: all
@@ -106,7 +126,7 @@ Description: Document (PostScript, PDF) viewer - common files
  copying text to the clipboard, hypertext navigation, and
  table-of-contents bookmarks.
  .
- This package contains architecture-independent files for evince.
+ This package contains shared files for evince and evince-gtk packages.
 
 Package: libevdocument3-4
 Architecture: any

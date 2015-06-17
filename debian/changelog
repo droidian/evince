@@ -1,18 +1,3 @@
-evince (3.14.1-3) UNRELEASED; urgency=medium
-
-  * Team upload.
-  * Build only the full-flavored variant of Evince (Closes: #755071).
-    + Disable building of the evince-gtk flavor.
-    + Turn evince-gtk into a transitional package that depends on evince.
-    + Add Breaks and Replaces to the evince package accordingly.
-    + Move gvfs from Recommends to Suggests.
-    + Exclude the "/usr/lib/nautilus/" path from dh_shlibdeps to avoid
-      the infamous dependency on libnautilus*.
-  * Append "-Wl,--as-needed -Wl,-z,defs" to LDFLAGS to avoid more
-    unnecessary dependencies.
-
- -- Fabian Greffrath <fabian@debian.org>  Tue, 19 May 2015 17:19:59 +0200
-
 evince (3.14.1-2) unstable; urgency=medium
 
   * Team upload.
