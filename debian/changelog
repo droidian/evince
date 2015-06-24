@@ -1,7 +1,6 @@
-evince (3.14.2-2) UNRELEASED; urgency=medium
+evince (3.16.1-1) UNRELEASED; urgency=medium
 
   [ Fabian Greffrath ]
-  * Team upload.
   * Build only the full-flavored variant of Evince (Closes: #755071).
     + Disable building of the evince-gtk flavor.
     + Turn evince-gtk into a transitional package that depends on evince.
@@ -14,6 +13,7 @@ evince (3.14.2-2) UNRELEASED; urgency=medium
 
   [ Michael Biebl ]
   * Remove leftover bits from the flavors build which are no longer necessary.
+  * New upstream release.
 
  -- Fabian Greffrath <fabian@debian.org>  Tue, 19 May 2015 17:19:59 +0200
 
