@@ -14,6 +14,7 @@ evince (3.16.1-1) UNRELEASED; urgency=medium
   [ Michael Biebl ]
   * Remove leftover bits from the flavors build which are no longer necessary.
   * New upstream release.
+  * Drop obsolete Breaks/Replaces from pre-wheezy.
 
  -- Fabian Greffrath <fabian@debian.org>  Tue, 19 May 2015 17:19:59 +0200
 

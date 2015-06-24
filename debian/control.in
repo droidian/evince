@@ -113,8 +113,6 @@ Architecture: any
 Section: libs
 Depends: ${shlibs:Depends},
          ${misc:Depends}
-Replaces: libevince3-3
-Breaks: libevince3-3
 Description: Document (PostScript, PDF) rendering library
  This package contains libevdocument, which performs the rendering of the
  documents.
@@ -126,8 +124,6 @@ Architecture: any
 Section: libs
 Depends: ${shlibs:Depends},
          ${misc:Depends}
-Replaces: libevince3-3
-Breaks: libevince3-3
 Description: Document (PostScript, PDF) rendering library - Gtk+ widgets
  This package contains libevview, which provides GTK+ widgets for displaying
  documents.
