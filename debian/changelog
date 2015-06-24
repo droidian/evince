@@ -16,6 +16,7 @@ evince (3.16.1-1) UNRELEASED; urgency=medium
   * New upstream release.
   * Drop obsolete Breaks/Replaces from pre-wheezy.
   * Update debian/libevdocument3-4.symbols, add new symbols.
+  * Install AppData files.
 
  -- Fabian Greffrath <fabian@debian.org>  Tue, 19 May 2015 17:19:59 +0200
 
