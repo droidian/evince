@@ -125,7 +125,7 @@ Architecture: any
 Section: libs
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         gstreamer0.10-plugins-base
+         gstreamer1.0-plugins-base
 Description: Document (PostScript, PDF) rendering library - Gtk+ widgets
  This package contains libevview, which provides GTK+ widgets for displaying
  documents.

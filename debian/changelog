@@ -1,6 +1,6 @@
 evince (3.18.0-2) UNRELEASED; urgency=medium
 
-  * libevview3-3: depend on gstreamer0.10-plugins-base
+  * libevview3-3: depend on gstreamer1.0-plugins-base
     - for playbin plugin
 
  -- Andreas Henriksson <andreas@fatal.se>  Thu, 24 Sep 2015 12:59:25 +0200
