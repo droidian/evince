@@ -26,6 +26,3 @@ DEB_DH_MAKESHLIBS_ARGS += -X /usr/lib/nautilus/ \
 
 DEB_DH_SHLIBDEPS_ARGS += -X /usr/lib/nautilus/
 
-install/evince-common::
-	dh_install -p${cdbs_curpkg} --ignore=debian/${cdbs_curpkg}.install \
-		debian/evince.xpm usr/share/pixmaps
