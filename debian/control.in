@@ -38,7 +38,7 @@ Build-Depends: cdbs (>= 0.4.90),
 Standards-Version: 3.9.6
 Homepage: https://wiki.gnome.org/Apps/Evince
 Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/evince
-Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/evince
+Vcs-Browser: https://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/evince
 
 Package: evince
 Architecture: any
