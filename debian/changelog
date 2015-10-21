@@ -1,7 +1,11 @@
-evince (3.18.0-2) UNRELEASED; urgency=medium
+evince (3.18.1-1) UNRELEASED; urgency=medium
 
+  [ Andreas Henriksson ]
   * libevview3-3: depend on gstreamer1.0-plugins-base
     - for playbin plugin
+
+  [ Michael Biebl ]
+  * New upstream release.
 
  -- Andreas Henriksson <andreas@fatal.se>  Thu, 24 Sep 2015 12:59:25 +0200
 
