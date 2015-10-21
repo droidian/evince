@@ -1,4 +1,4 @@
-evince (3.18.1-1) UNRELEASED; urgency=medium
+evince (3.18.1-1) unstable; urgency=medium
 
   [ Andreas Henriksson ]
   * libevview3-3: depend on gstreamer1.0-plugins-base
@@ -10,7 +10,7 @@ evince (3.18.1-1) UNRELEASED; urgency=medium
     - Bump libgtk-3-dev to (>= 3.16.0)
     - Bump libglib2.0-dev to (>= 2.36.0)
 
- -- Andreas Henriksson <andreas@fatal.se>  Thu, 24 Sep 2015 12:59:25 +0200
+ -- Michael Biebl <biebl@debian.org>  Wed, 21 Oct 2015 20:32:41 +0200
 
 evince (3.18.0-1) unstable; urgency=medium
 
