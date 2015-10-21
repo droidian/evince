@@ -6,6 +6,9 @@ evince (3.18.1-1) UNRELEASED; urgency=medium
 
   [ Michael Biebl ]
   * New upstream release.
+  * Update Depends of libevince-dev as per evince-document-3.0.pc:
+    - Bump libgtk-3-dev to (>= 3.16.0)
+    - Bump libglib2.0-dev to (>= 2.36.0)
 
  -- Andreas Henriksson <andreas@fatal.se>  Thu, 24 Sep 2015 12:59:25 +0200
 
