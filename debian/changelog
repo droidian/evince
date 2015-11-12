@@ -1,8 +1,8 @@
-evince (3.18.2-1) UNRELEASED; urgency=medium
+evince (3.18.2-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- Michael Biebl <biebl@debian.org>  Thu, 12 Nov 2015 14:36:46 +0100
+ -- Michael Biebl <biebl@debian.org>  Thu, 12 Nov 2015 14:48:08 +0100
 
 evince (3.18.1-1) unstable; urgency=medium
 
