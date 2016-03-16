@@ -2,10 +2,6 @@
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
-DEB_BUILDDIR = debian/build
-DEB_MAKE_DESTDIRSKEL = $(CURDIR)/debian/install/@FLAVOR@
-DEB_MAKE_FLAVORS = evince # evince-gtk
-
 include /usr/share/cdbs/1/rules/autoreconf.mk
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/gnome.mk
@@ -17,32 +13,16 @@ include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 include /usr/share/dpkg/buildflags.mk
 
-DEB_DH_INSTALL_ARGS += --sourcedir=debian/install/evince
-DEB_DH_INSTALL_ARGS_evince-gtk += --sourcedir=debian/install/evince-gtk
+DEB_CONFIGURE_EXTRA_FLAGS += --enable-djvu \
+                             --enable-dvi \
+                             --enable-xps \
+                             --enable-comics \
+                             --enable-introspection \
+                             --enable-gtk-doc
 
-DEB_CONFIGURE_EXTRA_FLAGS = \
-			--enable-djvu \
-			--enable-dvi \
-			--enable-xps \
-			--enable-comics
-
-DEB_DH_MAKESHLIBS_ARGS += -X /usr/lib/nautilus/ -X /usr/lib/evince/ \
-	-V -- -c4
+DEB_DH_MAKESHLIBS_ARGS += -X /usr/lib/nautilus/ \
+                          -X /usr/lib/evince/ \
+                          -V -- -c4
 
 DEB_DH_SHLIBDEPS_ARGS += -X /usr/lib/nautilus/
 
-DEB_DH_STRIP_ARGS_evince-gtk =
-
-DEB_CONFIGURE_FLAGS_evince = \
-			--enable-introspection \
-			--enable-gtk-doc
-
-DEB_CONFIGURE_FLAGS_evince-gtk = \
-			--without-keyring \
-			--disable-nautilus \
-			--disable-introspection \
-			--disable-gtk-doc
-
-install/evince-common::
-	dh_install -p${cdbs_curpkg} --ignore=debian/${cdbs_curpkg}.install \
-		debian/evince.xpm usr/share/pixmaps
