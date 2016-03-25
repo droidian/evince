@@ -1,3 +1,18 @@
+evince (3.20.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 25 Mar 2016 07:52:25 +0100
+
+evince (3.19.92-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump build-dependencies according to configure.ac changes:
+    - libpoppler-glib-dev (>= 0.33.0)
+    - libdjvulibre-dev (>= 3.5.22)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 16 Mar 2016 19:33:32 +0100
+
 evince (3.18.2-1) unstable; urgency=medium
 
   * New upstream release.

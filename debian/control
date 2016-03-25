@@ -6,7 +6,7 @@ Source: evince
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Andreas Henriksson <andreas@fatal.se>, Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>
+Uploaders: Andreas Henriksson <andreas@fatal.se>, Michael Biebl <biebl@debian.org>
 Build-Depends: cdbs (>= 0.4.90),
                debhelper (>= 9),
                dpkg-dev (>= 1.16.1),
@@ -28,10 +28,10 @@ Build-Depends: cdbs (>= 0.4.90),
                libsm-dev (>= 2:1.0.0),
                zlib1g-dev,
                libnautilus-extension-dev (>= 2.91.4),
-               libpoppler-glib-dev (>= 0.24.0),
+               libpoppler-glib-dev (>= 0.33.0),
                libspectre-dev (>= 0.2.0),
                libtiff-dev,
-               libdjvulibre-dev (>= 3.5.17),
+               libdjvulibre-dev (>= 3.5.22),
                libkpathsea-dev,
                libgxps-dev (>= 0.2.1),
                autotools-dev,
