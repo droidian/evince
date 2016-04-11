@@ -13,7 +13,9 @@ include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 include /usr/share/dpkg/buildflags.mk
 
-DEB_CONFIGURE_EXTRA_FLAGS += --enable-djvu \
+DEB_CONFIGURE_EXTRA_FLAGS += --libdir="\$${prefix}/lib/$(DEB_HOST_MULTIARCH)" \
+                             --libexecdir=/usr/lib/evince \
+                             --enable-djvu \
                              --enable-dvi \
                              --enable-xps \
                              --enable-comics \
@@ -22,7 +24,7 @@ DEB_CONFIGURE_EXTRA_FLAGS += --enable-djvu \
                              --enable-libgnome-desktop
 
 DEB_DH_MAKESHLIBS_ARGS += -X /usr/lib/nautilus/ \
-                          -X /usr/lib/evince/ \
+                          -X /usr/lib/$(DEB_HOST_MULTIARCH)/evince/ \
                           -V -- -c4
 
 DEB_DH_SHLIBDEPS_ARGS += -X /usr/lib/nautilus/
