@@ -5,10 +5,18 @@ evince (3.20.0-2) UNRELEASED; urgency=medium
 
   [ Laurent Bigonville ]
   * debian/evince-common.install: Install evince.service systemd file
-  * debian/control.in: Add libgnome-desktop-3-dev to the build-dependency to
-    enable 
+  * debian/control.in:
+    - Add libgnome-desktop-3-dev to the build-dependency to enable Thumbnail
+      cache (Closes: #779907)
+    - Drop evince-dbg package and rely on automatically built dbgsym packages
+    - Fix typos (Closes: #673236, #620517)
+    - Bump gtk-doc-tools build-dependency to 1.13 (Closes: #554780)
+  * Add a manpage for evince-previewer, thanks to Mattia Rizzolo and Tomasz
+    Buchert (Closes: #762530)
+  * debian/evince-gtk.lintian-overrides: Readd lintian override for
+    versionless GPL for evince-gtk package until we drop it completely.
 
- -- Laurent Bigonville <bigon@debian.org>  Mon, 11 Apr 2016 13:04:03 +0200
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 11 Apr 2016 13:54:38 +0200
 
 evince (3.20.0-1) unstable; urgency=medium
 
