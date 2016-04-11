@@ -1,3 +1,4 @@
+usr/lib/systemd/user/evince.service
 usr/share/dbus-1
 usr/share/help
 usr/share/evince
