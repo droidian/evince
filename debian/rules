@@ -28,3 +28,9 @@ DEB_DH_MAKESHLIBS_ARGS += -X /usr/lib/nautilus/ \
 DEB_DH_SHLIBDEPS_ARGS += -X /usr/lib/nautilus/
 
 DEB_DH_STRIP_ARGS_ALL = --dbgsym-migration='evince-dbg (<< 3.20.0-2~)'
+
+install/evince::
+	install -m 0644 -D debian/apparmor-profile debian/evince/etc/apparmor.d/usr.bin.evince
+	install -m 0644 -D debian/apparmor-profile.abstraction debian/evince/etc/apparmor.d/abstractions/evince
+	install -m 0644 -D debian/evince.apport debian/evince/usr/share/apport/package-hooks/source_evince.py
+	dh_apparmor --profile-name=usr.bin.evince -pevince
