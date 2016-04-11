@@ -15,8 +15,10 @@ evince (3.20.0-2) UNRELEASED; urgency=medium
     Buchert (Closes: #762530)
   * debian/evince-gtk.lintian-overrides: Readd lintian override for
     versionless GPL for evince-gtk package until we drop it completely.
+  * Move the manpages and the .desktop, icons, appdata, dconf, dbus/systemd
+    files from the -common package to the main one.
 
- -- Laurent Bigonville <bigon@debian.org>  Mon, 11 Apr 2016 13:54:38 +0200
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 11 Apr 2016 15:47:01 +0200
 
 evince (3.20.0-1) unstable; urgency=medium
 

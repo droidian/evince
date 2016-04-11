@@ -1,4 +1,12 @@
-# keep in sync with evince-gtk.install as needed
 usr/bin
-usr/lib/nautilus/*/*.so
 usr/lib/evince/evinced
+usr/lib/nautilus/*/*.so
+usr/lib/systemd/user/
+usr/share/appdata
+usr/share/applications
+usr/share/dbus-1
+usr/share/GConf/gsettings
+usr/share/glib-2.0/schemas
+usr/share/icons
+usr/share/man
+usr/share/thumbnailers
