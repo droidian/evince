@@ -90,6 +90,8 @@ Package: libevdocument3-4
 Architecture: any
 Section: libs
 Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: evince-common (<< 3.20.0-2~)
+Replaces: evince-common (<< 3.20.0-2~)
 Description: Document (PostScript, PDF) rendering library
  This package contains libevdocument, which performs the rendering of the
  documents.

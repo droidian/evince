@@ -19,11 +19,12 @@ evince (3.20.0-2) UNRELEASED; urgency=medium
     versionless GPL for evince-gtk package until we drop it completely.
   * Move the manpages and the .desktop, icons, appdata, dconf, dbus/systemd
     files from the -common package to the main one.
+  * Move appdata files for the backends to the libevdocument package
   * Run wrap-and-sort script
   * Install apparmor profiles and apport hook, both coming from Ubuntu, thanks
     to them.
 
- -- Laurent Bigonville <bigon@debian.org>  Mon, 11 Apr 2016 18:39:03 +0200
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 11 Apr 2016 19:49:32 +0200
 
 evince (3.20.0-1) unstable; urgency=medium
 
