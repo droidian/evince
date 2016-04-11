@@ -95,7 +95,7 @@ backend/ps/gsdefaults.h                              | GPLv2h  | The Free Softwa
 backend/ps/gsio.c                                    | GPLv2h  | The Free Software Foundation
 backend/ps/gsio.h                                    | GPLv2h  | The Free Software Foundation
 backend/ps/gstypes.h                                 | LGPLv2h | The Free Software Foundation
-backend/ps/ps.c                                      | GPLv2h  | Timothy O. Theisen 
+backend/ps/ps.c                                      | GPLv2h  | Timothy O. Theisen
 backend/ps/ps-document.c                             | LGPLv2h | The Free Software Foundation
 backend/ps/ps-document.h                             | LGPLv2h | The Free Software Foundation
 backend/ps/ps.h                                      | GPLv2h  | Timothy O. Theisen
@@ -301,7 +301,7 @@ shell/ev-sidebar.h                                   | GPLv2h  | Red Hat, Inc.
 shell/ev-sidebar-links.c                             | GPLv2h  | Red Hat, Inc.
 shell/ev-sidebar-links.h                             | GPLv2h  | Red Hat, Inc.
 shell/ev-sidebar-page.c                              | GPLv2h  | Marco Pesenti Gritti
-shell/ev-sidebar-page.h                              | GPLv2h  | Marco Pesenti Gritti 
+shell/ev-sidebar-page.h                              | GPLv2h  | Marco Pesenti Gritti
 shell/ev-sidebar-thumbnails.c                        | GPLv2h  | Red Hat, Inc., Anders Carlsson <andersca@gnome.org
 shell/ev-sidebar-thumbnails.h                        | GPLv2h  | Red Hat, Inc.
 shell/ev-stock-icons.c                               | GPLv2h  | Martin Kretzschmar
@@ -336,7 +336,7 @@ Shortcuts:
                 2 or (at your option).
  - "GFDL1.1":   The GNU Free Documentation License, version 1.1 or (at your
                 option) higher. The listed documents use the GFDL with no
-                Invariant Sections, no Front-Cover Texts, and no Back-Cover 
+                Invariant Sections, no Front-Cover Texts, and no Back-Cover
                 Texts.
  - "Adobe":     The following licensing terms need to be respected:
     | This file may be freely copied and redistributed as long as:
@@ -364,17 +364,17 @@ Shortcuts:
     | Sam Leffler and Silicon Graphics may not be used in any advertising or
     | publicity relating to the software without the specific, prior written
     | permission of Sam Leffler and Silicon Graphics.
- - "MIT":       The following licensing terms need to be respected: 
+ - "MIT":       The following licensing terms need to be respected:
     | Permission is hereby granted, free of charge, to any person
     | obtaining a copy of this software and associated documentation files
     | (the "Software"), to deal in the Software without restriction,
     | including without limitation the rights to use, copy, modify, merge,
     | publish, distribute, sublicense, and/or sell copies of the Software,
     | and to permit persons to whom the Software is furnished to do so,
-    | subject to the following conditions: 
+    | subject to the following conditions:
     |
     | The above copyright notice and this permission notice shall be
-    | included in all copies or substantial portions of the Software. 
+    | included in all copies or substantial portions of the Software.
     |
     | THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
     | EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
