@@ -1,3 +1,10 @@
+evince (3.20.0-4) UNRELEASED; urgency=medium
+
+  * debian/patches/git_fix_gesture_shortcut_help.patch:
+    - Upstream patch to fix gesture shortcuts shown in Ctrl+? quick help
+
+ -- Jeremy Bicha <jbicha@linux.com>  Sat, 14 May 2016 15:57:36 -0400
+
 evince (3.20.0-3) unstable; urgency=medium
 
   * debian/control.in: Add Breaks/Replaces against apparmor-profiles-extra

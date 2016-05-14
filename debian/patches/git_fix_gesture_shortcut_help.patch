@@ -1,0 +1,46 @@
+From 93f8b7770b9e765e8e2c841f38d4edba000c4f64 Mon Sep 17 00:00:00 2001
+From: Hashem Nasarat <hashem@riseup.net>
+Date: Wed, 10 Feb 2016 01:04:59 -0500
+Subject: shell: fix typo in zoom in/out gesture shortcuts
+
+Also reorder them so it's zoom in and then zoom out.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=761803
+---
+ shell/help-overlay.ui | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+diff --git a/shell/help-overlay.ui b/shell/help-overlay.ui
+index 0218fa8..60489ae 100644
+--- a/shell/help-overlay.ui
++++ b/shell/help-overlay.ui
+@@ -192,14 +192,14 @@
+               <object class="GtkShortcutsShortcut">
+                 <property name="visible">True</property>
+                 <property name="title" translatable="yes" context="shortcut window">Zoom in</property>
+-                <property name="shortcut-type">gesture-pinch</property>
++                <property name="shortcut-type">gesture-stretch</property>
+               </object>
+             </child>
+             <child>
+               <object class="GtkShortcutsShortcut">
+                 <property name="visible">True</property>
+-                <property name="title" translatable="yes" context="shortcut window">Zoom in</property>
+-                <property name="shortcut-type">gesture-stretch</property>
++                <property name="title" translatable="yes" context="shortcut window">Zoom out</property>
++                <property name="shortcut-type">gesture-pinch</property>
+               </object>
+             </child>
+             <child>
+@@ -216,7 +216,6 @@
+                 <property name="shortcut-type">gesture-two-finger-swipe-left</property>
+               </object>
+             </child>
+-
+           </object>
+         </child>
+       </object>
+-- 
+cgit v0.12
+
+
