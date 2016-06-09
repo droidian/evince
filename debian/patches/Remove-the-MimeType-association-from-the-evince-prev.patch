@@ -1,0 +1,32 @@
+From 823369f498dfafed6b7247c3211449207a3dcab1 Mon Sep 17 00:00:00 2001
+From: Laurent Bigonville <bigon@bigon.be>
+Date: Thu, 9 Jun 2016 09:42:58 +0200
+Subject: [PATCH] Remove the MimeType association from the
+ evince-previewer.desktop file
+
+evince-previewer is not supposed to be used directly by the users and
+then shouldn't be added to the list of available applications when
+opening files.
+
+On debian it causes issues as the .desktop file are automatically
+registered in the /etc/mailcap file and applications using this
+mechanism will prefer evince-previewer over evince itself, see:
+https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=825418
+
+https://bugzilla.gnome.org/show_bug.cgi?id=744893
+---
+ data/evince-previewer.desktop.in.in | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/data/evince-previewer.desktop.in.in b/data/evince-previewer.desktop.in.in
+index 97738b7..a155fb6 100644
+--- a/data/evince-previewer.desktop.in.in
++++ b/data/evince-previewer.desktop.in.in
+@@ -14,4 +14,3 @@ X-GNOME-Bugzilla-Product=evince
+ X-GNOME-Bugzilla-Component=BugBuddyBugs
+ X-GNOME-Bugzilla-Version=@VERSION@
+ Categories=GNOME;GTK;Office;Viewer;Graphics;2DGraphics;VectorGraphics;
+-MimeType=@EVINCE_MIME_TYPES@;
+-- 
+2.8.1
+

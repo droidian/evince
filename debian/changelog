@@ -1,9 +1,15 @@
 evince (3.20.0-4) UNRELEASED; urgency=medium
 
+  [ Jeremy Bicha ]
   * debian/patches/git_fix_gesture_shortcut_help.patch:
     - Upstream patch to fix gesture shortcuts shown in Ctrl+? quick help
 
- -- Jeremy Bicha <jbicha@linux.com>  Sat, 14 May 2016 15:57:36 -0400
+  [ Laurent Bigonville ]
+  * Remove-the-MimeType-association-from-the-evince-prev.patch: Remove
+    MimeType association from the evince-previewer as it's not supposed to be
+    used by users and clutter /etc/mailcap (Closes: #825418)
+
+ -- Laurent Bigonville <bigon@debian.org>  Thu, 09 Jun 2016 20:31:09 +0200
 
 evince (3.20.0-3) unstable; urgency=medium
 
