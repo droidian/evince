@@ -1,4 +1,4 @@
-evince (3.20.0-4) UNRELEASED; urgency=medium
+evince (3.20.0-4) unstable; urgency=medium
 
   [ Jeremy Bicha ]
   * debian/patches/git_fix_gesture_shortcut_help.patch:
@@ -9,7 +9,7 @@ evince (3.20.0-4) UNRELEASED; urgency=medium
     MimeType association from the evince-previewer as it's not supposed to be
     used by users and clutter /etc/mailcap (Closes: #825418)
 
- -- Laurent Bigonville <bigon@debian.org>  Thu, 09 Jun 2016 20:31:09 +0200
+ -- Laurent Bigonville <bigon@debian.org>  Thu, 09 Jun 2016 20:55:44 +0200
 
 evince (3.20.0-3) unstable; urgency=medium
 
