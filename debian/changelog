@@ -3,6 +3,7 @@ evince (3.20.1-1) UNRELEASED; urgency=medium
   * New upstream release.
   * Refresh patches, drop those which have been applied upstream.
   * Convert from cdbs to dh.
+  * Bump Standards-Version to 3.9.8.
 
  -- Michael Biebl <biebl@debian.org>  Thu, 23 Jun 2016 23:57:22 +0200
 
