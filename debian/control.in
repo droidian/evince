@@ -5,7 +5,6 @@ Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.
 Uploaders: @GNOME_TEAM@
 Build-Depends: adwaita-icon-theme,
                autotools-dev,
-               cdbs (>= 0.4.90),
                debhelper (>= 9.20160114~),
                dh-apparmor,
                dh-autoreconf,

@@ -9,7 +9,6 @@ Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.
 Uploaders: Andreas Henriksson <andreas@fatal.se>, Laurent Bigonville <bigon@debian.org>, Michael Biebl <biebl@debian.org>
 Build-Depends: adwaita-icon-theme,
                autotools-dev,
-               cdbs (>= 0.4.90),
                debhelper (>= 9.20160114~),
                dh-apparmor,
                dh-autoreconf,
