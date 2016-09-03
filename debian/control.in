@@ -51,7 +51,7 @@ Depends: evince-common (<< ${gnome:NextVersion}),
          shared-mime-info,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: dbus-x11
+Recommends: default-dbus-session-bus | dbus-session-bus
 Provides: djvu-viewer, pdf-viewer, postscript-viewer
 Suggests: gvfs, nautilus, poppler-data, unrar
 Breaks: apparmor-profiles-extra (<< 1.7~),
