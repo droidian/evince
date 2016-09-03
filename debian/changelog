@@ -1,11 +1,11 @@
-evince (3.21.4-1) UNRELEASED; urgency=medium
+evince (3.21.4-1) unstable; urgency=medium
 
   * New upstream release.
   * Refresh debian/patches/01_nautilus_extension_path.patch.
   * Use Recommends: default-dbus-session-bus | dbus-session-bus instead of
     Recommends: dbus-x11. (Closes: #835879)
 
- -- Michael Biebl <biebl@debian.org>  Sat, 03 Sep 2016 19:38:24 +0200
+ -- Michael Biebl <biebl@debian.org>  Sat, 03 Sep 2016 19:50:17 +0200
 
 evince (3.20.1-1) unstable; urgency=medium
 
