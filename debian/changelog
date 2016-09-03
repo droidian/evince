@@ -1,6 +1,7 @@
 evince (3.21.4-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Refresh debian/patches/01_nautilus_extension_path.patch.
 
  -- Michael Biebl <biebl@debian.org>  Sat, 03 Sep 2016 19:38:24 +0200
 
