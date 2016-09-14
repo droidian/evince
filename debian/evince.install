@@ -1,6 +1,6 @@
 usr/bin
 usr/lib/evince/evinced
-usr/lib/nautilus/*/*.so
+usr/lib/*/nautilus/*/*.so
 usr/lib/systemd/user/
 usr/share/GConf/gsettings
 usr/share/appdata/evince.appdata.xml
