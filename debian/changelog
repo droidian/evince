@@ -3,6 +3,7 @@ evince (3.21.92-1) UNRELEASED; urgency=medium
   * New upstream development release.
   * Install nautilus extension into multiarch path. Bump Build-Depends on
     libnautilus-extension-dev to (>= 3.21.92-3~) for that.
+  * Bump debhelper compat level to 10.
 
  -- Michael Biebl <biebl@debian.org>  Wed, 14 Sep 2016 19:28:56 +0200
 

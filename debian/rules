@@ -11,7 +11,7 @@ export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 export BROWSER_PLUGIN_DIR = /usr/lib/mozilla/plugins
 
 %:
-	dh $@ --with autoreconf,gir,gnome
+	dh $@ --with gir,gnome
 
 override_dh_autoreconf:
 	dh_autoreconf --as-needed
@@ -29,7 +29,7 @@ override_dh_auto_configure:
 
 override_dh_makeshlibs:
 	dh_makeshlibs \
-		-X /usr/lib/nautilus/ \
+		-X /usr/lib/$(DEB_HOST_MULTIARCH)/nautilus/ \
 		-X /usr/lib/$(DEB_HOST_MULTIARCH)/evince/ \
 		-V -- -c4
 
