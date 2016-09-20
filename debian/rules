@@ -33,9 +33,6 @@ override_dh_makeshlibs:
 		-X /usr/lib/$(DEB_HOST_MULTIARCH)/evince/ \
 		-V -- -c4
 
-override_dh_shlibdeps:
-	dh_shlibdeps -X /usr/lib/nautilus/
-
 override_dh_strip:
 	dh_strip --dbgsym-migration='evince-dbg (<< 3.20.0-2~)'
 
