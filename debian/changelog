@@ -4,6 +4,8 @@ evince (3.22.1-2) UNRELEASED; urgency=medium
   * Change Suggests: nautilus into Enhances: nautilus. The nautilus extension
     shipped by evince adds a properties page to nautilus showing additional
     information for PDF and other types of documents.
+  * Add Suggests: nautilus-sendto. It is required by the "Send To …" file menu
+    entry. (Closes: #723071)
 
  -- Michael Biebl <biebl@debian.org>  Sun, 16 Oct 2016 22:38:32 +0200
 

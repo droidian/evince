@@ -58,6 +58,7 @@ Provides: djvu-viewer,
           pdf-viewer,
           postscript-viewer
 Suggests: gvfs,
+          nautilus-sendto,
           poppler-data,
           unrar
 Breaks: apparmor-profiles-extra (<< 1.7~),
