@@ -1,6 +1,9 @@
 evince (3.22.1-2) UNRELEASED; urgency=medium
 
   * Run "wrap-and-sort -a".
+  * Change Suggests: nautilus into Enhances: nautilus. The nautilus extension
+    shipped by evince adds a properties page to nautilus showing additional
+    information for PDF and other types of documents.
 
  -- Michael Biebl <biebl@debian.org>  Sun, 16 Oct 2016 22:38:32 +0200
 
