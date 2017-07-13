@@ -17,7 +17,6 @@
   deny /run/udev/data/** r,
 
   # move out to the gnome abstraction if anyone else needs these
-  /dev/.udev/{data,db}/* r,
   /etc/udev/udev.conf r,
   /sys/devices/**/block/**/uevent r,
 

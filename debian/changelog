@@ -1,3 +1,10 @@
+evince (3.22.1-5) UNRELEASED; urgency=medium
+
+  * debian/apparmor-profile.abstraction: remove support for the obsolete
+    /dev/.udev/ directory (Closes: #867143).
+
+ -- Laurent Bigonville <bigon@debian.org>  Thu, 13 Jul 2017 16:38:04 +0200
+
 evince (3.22.1-4) unstable; urgency=high
 
   * d/p/comics-Remove-support-for-tar-and-tar-like-commands.patch: 
