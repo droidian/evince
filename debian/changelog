@@ -2,8 +2,8 @@ evince (3.22.1-4) unstable; urgency=high
 
   * d/p/comics-Remove-support-for-tar-and-tar-like-commands.patch: 
     Fix possible command injection vulnerability in CBT handler, this patch
-    removes handling of the CBT file format completely and now requires unrar,
-    unzip or 7z to open cbr, cbz or cb7 files (CVE-2017-1000083)
+    removes handling of the CBT file format completely and evince now requires
+    unrar, unzip or 7z to open cbr, cbz or cb7 files (CVE-2017-1000083)
     Discovered by Felix Wilhelm from the Google Security Team.
 
  -- Laurent Bigonville <bigon@debian.org>  Thu, 13 Jul 2017 15:47:05 +0200
