@@ -1,4 +1,4 @@
-evince (3.22.1-4) UNRELEASED; urgency=high
+evince (3.22.1-4) unstable; urgency=high
 
   * d/p/comics-Remove-support-for-tar-and-tar-like-commands.patch: 
     Fix possible command injection vulnerability in CBT handler, this patch
@@ -6,7 +6,7 @@ evince (3.22.1-4) UNRELEASED; urgency=high
     unzip or 7z to open cbr, cbz or cb7 files (CVE-2017-1000083)
     Discovered by Felix Wilhelm from the Google Security Team.
 
- -- Laurent Bigonville <bigon@debian.org>  Thu, 13 Jul 2017 15:40:07 +0200
+ -- Laurent Bigonville <bigon@debian.org>  Thu, 13 Jul 2017 15:47:05 +0200
 
 evince (3.22.1-3) unstable; urgency=medium
 
