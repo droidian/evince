@@ -1,7 +1,11 @@
-evince (3.22.1-5) UNRELEASED; urgency=medium
+evince (3.25.91-1) UNRELEASED; urgency=medium
 
+  [ Laurent Bigonville ]
   * debian/apparmor-profile.abstraction: remove support for the obsolete
     /dev/.udev/ directory (Closes: #867143).
+
+  [ Jeremy Bicha ]
+  * New upstream release
 
  -- Laurent Bigonville <bigon@debian.org>  Thu, 13 Jul 2017 16:38:04 +0200
 
