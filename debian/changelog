@@ -6,6 +6,8 @@ evince (3.25.91-1) UNRELEASED; urgency=medium
 
   [ Jeremy Bicha ]
   * New upstream release
+  * debian/control.in:
+    - Build-depend on libarchive-dev and libgdk-pixbuf2.0-dev
 
  -- Laurent Bigonville <bigon@debian.org>  Thu, 13 Jul 2017 16:38:04 +0200
 
