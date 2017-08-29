@@ -10,6 +10,7 @@ evince (3.24.1-1) UNRELEASED; urgency=medium
     - Build-depend on libarchive-dev and libgdk-pixbuf2.0-dev
   * Drop comics-Remove-support-for-tar-and-tar-like-commands.patch:
     Applied in new release
+  * Bump Standards-Version to 4.1.0
 
  -- Laurent Bigonville <bigon@debian.org>  Thu, 13 Jul 2017 16:38:04 +0200
 
