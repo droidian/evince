@@ -1,4 +1,4 @@
-evince (3.24.1-1) UNRELEASED; urgency=medium
+evince (3.24.1-1) unstable; urgency=medium
 
   [ Laurent Bigonville ]
   * debian/apparmor-profile.abstraction: remove support for the obsolete
