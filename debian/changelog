@@ -1,9 +1,8 @@
-evince (3.24.1-2) UNRELEASED; urgency=medium
+evince (3.25.92-1) UNRELEASED; urgency=medium
 
-  * 3.25.91+ fails to build on some architectures:
-    https://bugzilla.gnome.org/787086
+  * New upstream release
 
- -- Jeremy Bicha <jbicha@debian.org>  Thu, 31 Aug 2017 10:01:37 -0400
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 06 Sep 2017 07:54:48 -0400
 
 evince (3.24.1-1) unstable; urgency=medium
 
