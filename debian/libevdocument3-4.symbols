@@ -88,6 +88,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_factory_get_document@Base 3.0.2
  ev_document_factory_get_document_for_gfile@Base 3.5.2
  ev_document_factory_get_document_for_stream@Base 3.5.2
+ ev_document_factory_get_document_full@Base 3.25.4
  ev_document_fc_mutex_lock@Base 3.0.2
  ev_document_fc_mutex_trylock@Base 3.0.2
  ev_document_fc_mutex_unlock@Base 3.0.2
@@ -167,6 +168,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_links_has_document_links@Base 3.0.2
  ev_document_load@Base 3.0.2
  ev_document_load_flags_get_type@Base 3.5.2
+ ev_document_load_full@Base 3.25.4
  ev_document_load_gfile@Base 3.5.2
  ev_document_load_stream@Base 3.5.2
  ev_document_media_get_media_mapping@Base 3.18.0
