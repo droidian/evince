@@ -2,6 +2,9 @@ evince (3.25.92-1) UNRELEASED; urgency=medium
 
   * New upstream release
   * debian/libevdocument3-4.symbols: add new symbols
+  * Add patches from Ubuntu to show traditional menu bar outside GNOME:
+    - traditional_menu_bar.patch
+    - unity_normal_titlebar.patch
 
  -- Jeremy Bicha <jbicha@debian.org>  Wed, 06 Sep 2017 07:54:48 -0400
 
