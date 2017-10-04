@@ -78,15 +78,6 @@ Description: Document (PostScript, PDF) viewer
  copying text to the clipboard, hypertext navigation, and
  table-of-contents bookmarks.
 
-Package: evince-gtk
-Section: oldlibs
-Priority: extra
-Architecture: any
-Depends: evince (= ${binary:Version}),
-         ${misc:Depends}
-Description: dummy package for the transition from evince-gtk to evince
- This package is a transitional dummy package. It can be safely removed.
-
 Package: evince-common
 Architecture: all
 Depends: ${misc:Depends}
