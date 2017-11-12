@@ -143,8 +143,8 @@ Multi-Arch: same
 Depends: ${gir:Depends},
          ${misc:Depends},
          ${shlibs:Depends}
-Provides: gir1.2-evince-document-3.0,
-          gir1.2-evince-view-3.0
+Provides: gir1.2-evincedocument-3.0 (= ${binary:Version}),
+          gir1.2-evinceview-3.0 (= ${binary:Version})
 Description: GObject introspection data for the evince libraries
  This package contains introspection data for the libevview and
  libevdocument libraries.
