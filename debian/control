@@ -40,7 +40,7 @@ Build-Depends: adwaita-icon-theme,
                libxml2-dev (>= 2.5.0),
                yelp-tools,
                zlib1g-dev
-Standards-Version: 4.1.1
+Standards-Version: 4.1.2
 Homepage: https://wiki.gnome.org/Apps/Evince
 Vcs-Git: https://anonscm.debian.org/git/pkg-gnome/evince.git
 Vcs-Browser: https://anonscm.debian.org/git/pkg-gnome/evince.git
