@@ -1,3 +1,11 @@
+evince (3.26.0-2+csd1) bionic; urgency=medium
+
+  * Drop obsolete paches:
+    - traditional_menu_bar.patch
+    - unity_normal_titlebar.patch
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Mon, 18 Dec 2017 09:18:01 -0500
+
 evince (3.26.0-2) unstable; urgency=medium
 
   [ Michael Biebl ]
