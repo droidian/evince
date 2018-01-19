@@ -1,11 +1,9 @@
 #!/usr/bin/make -f
-
-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
+-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 include /usr/share/dpkg/buildflags.mk
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-
-export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,--as-needed
 
 # Mozilla plugins shouldn't be installed in multi-arch path
 export BROWSER_PLUGIN_DIR = /usr/lib/mozilla/plugins
