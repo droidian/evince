@@ -8,7 +8,7 @@ Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Uploaders: Jeremy Bicha <jbicha@debian.org>, Laurent Bigonville <bigon@debian.org>, Michael Biebl <biebl@debian.org>
 Build-Depends: adwaita-icon-theme,
-               debhelper (>= 10),
+               debhelper (>= 11),
                dh-apparmor,
                dpkg-dev (>= 1.16.1),
                gnome-common,
