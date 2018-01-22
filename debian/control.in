@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Uploaders: @GNOME_TEAM@
 Build-Depends: adwaita-icon-theme,
-               debhelper (>= 11),
+               debhelper (>= 10),
                dh-apparmor,
                dpkg-dev (>= 1.16.1),
                gnome-common,
