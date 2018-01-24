@@ -2,6 +2,9 @@ evince (3.26.0-3) UNRELEASED; urgency=medium
 
   * Update Vcs fields for migration to https://salsa.debian.org/
   * Bump debhelper compat to 11
+  * Drop obsolete patches (Closes: #876993, #886937)
+    - traditional_menu_bar.patch
+    - unity_normal_titlebar.patch
 
  -- Jeremy Bicha <jbicha@debian.org>  Fri, 19 Jan 2018 13:39:36 -0500
 
