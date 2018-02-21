@@ -1,6 +1,7 @@
 evince (3.27.91-1) UNRELEASED; urgency=medium
 
   * New upstream development release
+  * Bump minimum libarchive-dev to 3.2.0
 
  -- Jeremy Bicha <jbicha@debian.org>  Wed, 21 Feb 2018 18:13:12 -0500
 
