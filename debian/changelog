@@ -1,10 +1,10 @@
-evince (3.27.92-1) UNRELEASED; urgency=medium
+evince (3.27.92-1) unstable; urgency=medium
 
   * New upstream release candidate
-  * Release to unstable
   * Update install files for moved AppStream metadata
+  * Release to unstable
 
- -- Jeremy Bicha <jbicha@debian.org>  Sat, 10 Mar 2018 21:17:04 -0500
+ -- Jeremy Bicha <jbicha@debian.org>  Sat, 10 Mar 2018 21:31:03 -0500
 
 evince (3.27.91-1) experimental; urgency=medium
 
