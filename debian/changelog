@@ -1,8 +1,14 @@
-evince (3.29.91-1) UNRELEASED; urgency=medium
+evince (3.29.91-1) experimental; urgency=medium
 
-  * New upstream release
+  * New upstream development release
+    - User interface updates including "decluttered" headerbar
+  * Build-Depend on libgspell-1-dev & libsynctex-dev
+  * debian/evince.install: the AppStream metadata file was renamed
+  * debian/evince.docs: This version doesn't include a README
+  * debian/libevview3-3.symbols: Add new symbols
+  * Bump Standards-Version to 4.2.0
 
- -- Jeremy Bicha <jbicha@debian.org>  Tue, 14 Aug 2018 09:39:57 -0400
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 14 Aug 2018 10:21:23 -0400
 
 evince (3.28.2-1) unstable; urgency=medium
 
