@@ -1,6 +1,7 @@
 /*
  *  Copyright (C) 2003, 2004 Marco Pesenti Gritti
  *  Copyright (C) 2003, 2004 Christian Persch
+ *  Copyright (C) 2018       Germán Poo-Caamaño
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -231,6 +232,7 @@ ev_page_action_widget_init (EvPageActionWidget *action_widget)
         g_signal_connect_swapped (action_widget->entry, "focus-out-event",
                                   G_CALLBACK (focus_out_cb),
                                   action_widget);
+	g_object_set (action_widget->entry, "xalign", 1.0, NULL);
 
 	obj = gtk_widget_get_accessible (action_widget->entry);
 	atk_object_set_name (obj, "page-label-entry");

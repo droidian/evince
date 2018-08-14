@@ -1052,7 +1052,7 @@ ev_view_presentation_draw_end_page (EvViewPresentation *pview,
 	PangoLayout *layout;
 	PangoFontDescription *font_desc;
 	gchar *markup;
-	const gchar *text = _("End of presentation. Click to exit.");
+	const gchar *text = _("End of presentation. Press Esc or click to exit.");
 
 	if (pview->state != EV_PRESENTATION_END)
 		return;
@@ -1163,7 +1163,7 @@ ev_view_presentation_key_press_event (GtkWidget   *widget,
 	if (pview->state == EV_PRESENTATION_END)
                 return gtk_bindings_activate_event (G_OBJECT (widget), event);
 
-        if (event->state != 0)
+        if (event->state & GDK_CONTROL_MASK)
                 return gtk_bindings_activate_event (G_OBJECT (widget), event);
 
 	switch (event->keyval) {

@@ -1,6 +1,7 @@
 /* this file is part of evince, a gnome document viewer
  *
  *  Copyright (C) 2005 Red Hat, Inc
+ *  Copyright (C) 2018 Germán Poo-Caamaño <gpoo@gnome.org>
  *
  * Evince is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by
@@ -23,7 +24,9 @@
 
 #include <string.h>
 #include <gio/gio.h>
+#include <glib.h>
 #include <glib/gi18n.h>
+#include <glib/gprintf.h>
 
 /* Known backends (for bad extensions fix) */
 #define EV_BACKEND_PS  "PSDocument"
@@ -40,8 +43,9 @@ struct _EvWindowTitle
 	EvWindow *window;
 	EvWindowTitleType type;
 	EvDocument *document;
-	char *uri;
-        char *doc_title;
+	char *filename;
+	char *doc_title;
+	char *dirname;
 };
 
 static const BadTitleEntry bad_extensions[] = {
@@ -57,19 +61,6 @@ static const BadTitleEntry bad_prefixes[] = {
 	{ EV_BACKEND_PDF, "Microsoft PowerPoint - " }
 };
 
-static char *
-get_filename_from_uri (const char *uri)
-{
-	char *filename;
-	char *basename;
-	
-	filename = g_uri_unescape_string (uri, NULL);
-	basename = g_path_get_basename (filename);
-	g_free(filename);
-
-	return basename;
-}
-
 /* Some docs report titles with confusing extensions (ex. .doc for pdf).
 	   Erase the confusing extension of the title */
 static void
@@ -83,13 +74,10 @@ ev_window_title_sanitize_title (EvWindowTitle *window_title, char **title) {
 		if (g_ascii_strcasecmp (bad_extensions[i].backend, backend) == 0 && 
 		    g_str_has_suffix (*title, bad_extensions[i].text)) {
 			char *new_title;
-			char *filename = get_filename_from_uri (window_title->uri);
 
 			new_title = g_strndup (*title, strlen(*title) - strlen(bad_extensions[i].text));
 			g_free (*title);
 			*title = new_title;
-
-			g_free (filename);
 		}
 	}
 	for (i = 0; i < G_N_ELEMENTS (bad_prefixes); i++) {
@@ -112,6 +100,7 @@ ev_window_title_update (EvWindowTitle *window_title)
 	GtkHeaderBar *toolbar = GTK_HEADER_BAR (ev_window_get_toolbar (EV_WINDOW (window)));
 	char *title = NULL, *p;
 	char *subtitle = NULL, *title_header = NULL;
+	gboolean ltr;
 
         if (window_title->type == EV_WINDOW_TITLE_RECENT) {
                 gtk_header_bar_set_subtitle (toolbar, NULL);
@@ -119,22 +108,27 @@ ev_window_title_update (EvWindowTitle *window_title)
                 return;
         }
 
-	if (window_title->doc_title && window_title->uri) {
+	ltr = gtk_widget_get_direction (GTK_WIDGET (window)) == GTK_TEXT_DIR_LTR;
+
+	if (window_title->doc_title && window_title->filename) {
                 title = g_strdup (window_title->doc_title);
                 ev_window_title_sanitize_title (window_title, &title);
 
-		subtitle = get_filename_from_uri (window_title->uri);
+		subtitle = window_title->filename;
 
 		title_header = title;
-		title = g_strdup_printf ("%s — %s", subtitle, title);
+		if (ltr)
+			title = g_strdup_printf ("%s — %s", subtitle, title);
+		else
+			title = g_strdup_printf ("%s — %s", title, subtitle);
 
                 for (p = title; *p; ++p) {
                         /* an '\n' byte is always ASCII, no need for UTF-8 special casing */
                         if (*p == '\n')
                                 *p = ' ';
                 }
-	} else if (window_title->uri) {
-		title = get_filename_from_uri (window_title->uri);
+	} else if (window_title->filename) {
+		title = g_strdup (window_title->filename);
 	} else if (!title) {
 		title = g_strdup (_("Document Viewer"));
 	}
@@ -146,11 +140,18 @@ ev_window_title_update (EvWindowTitle *window_title)
 			gtk_header_bar_set_title (toolbar, title_header);
 			gtk_header_bar_set_subtitle (toolbar, subtitle);
 		}
+		if (window_title->dirname)
+			gtk_widget_set_tooltip_text (GTK_WIDGET (toolbar),
+						     window_title->dirname);
 		break;
 	case EV_WINDOW_TITLE_PASSWORD: {
                 gchar *password_title;
 
-		password_title = g_strdup_printf ("%s — %s", title, _("Password Required"));
+		if (ltr)
+			password_title = g_strdup_printf ("%s — %s", title, _("Password Required"));
+		else
+			password_title = g_strdup_printf ("%s — %s", _("Password Required"), title);
+
 		gtk_window_set_title (window, password_title);
 		g_free (password_title);
 
@@ -164,7 +165,6 @@ ev_window_title_update (EvWindowTitle *window_title)
 	}
 
 	g_free (title);
-	g_free (subtitle);
 	g_free (title_header);
 }
 
@@ -196,6 +196,7 @@ document_destroyed_cb (EvWindowTitle *window_title,
 {
         window_title->document = NULL;
         g_clear_pointer (&window_title->doc_title, g_free);
+        g_clear_pointer (&window_title->dirname, g_free);
 }
 
 void
@@ -210,9 +211,12 @@ ev_window_title_set_document (EvWindowTitle *window_title,
 	window_title->document = document;
         g_object_weak_ref (G_OBJECT (window_title->document), (GWeakNotify)document_destroyed_cb, window_title);
         g_clear_pointer (&window_title->doc_title, g_free);
+        g_clear_pointer (&window_title->dirname, g_free);
 
 	if (window_title->document != NULL) {
 		gchar *doc_title;
+		gchar *filepath;
+		gchar *dirname;
 
 		doc_title = g_strdup (ev_document_get_title (window_title->document));
 
@@ -227,20 +231,28 @@ ev_window_title_set_document (EvWindowTitle *window_title,
                                 g_free (doc_title);
                         }
 		}
+
+		filepath = g_filename_from_uri (ev_document_get_uri (window_title->document),
+						NULL, NULL);
+		dirname = g_path_get_dirname (filepath);
+		g_free (filepath);
+
+		if (dirname)
+			window_title->dirname = dirname;
 	}
 
 	ev_window_title_update (window_title);
 }
 
 void
-ev_window_title_set_uri (EvWindowTitle *window_title,
-			 const char    *uri)
+ev_window_title_set_filename (EvWindowTitle *window_title,
+			      const char    *filename)
 {
-        if (g_strcmp0 (uri, window_title->uri) == 0)
+        if (g_strcmp0 (filename, window_title->filename) == 0)
                 return;
 
-	g_free (window_title->uri);
-	window_title->uri = g_strdup (uri);
+	g_free (window_title->filename);
+	window_title->filename = g_strdup (filename);
 
 	ev_window_title_update (window_title);
 }
@@ -251,6 +263,7 @@ ev_window_title_free (EvWindowTitle *window_title)
         if (window_title->document)
                 g_object_weak_unref (G_OBJECT (window_title->document), (GWeakNotify)document_destroyed_cb, window_title);
         g_free (window_title->doc_title);
-	g_free (window_title->uri);
+	g_free (window_title->filename);
+	g_free (window_title->dirname);
 	g_free (window_title);
 }

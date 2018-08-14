@@ -64,7 +64,7 @@ struct _EvDocumentPrivate
 	EvPageSize     *page_sizes;
 	EvDocumentInfo *info;
 
-	synctex_scanner_t synctex_scanner;
+	synctex_scanner_p synctex_scanner;
 };
 
 static guint64         _ev_document_get_size_gfile  (GFile      *file);
@@ -451,9 +451,10 @@ ev_document_load_full (EvDocument           *document,
  * On failure, %FALSE is returned and @error is filled in.
  * If the document is encrypted, EV_DEFINE_ERROR_ENCRYPTED is returned.
  * If the backend cannot load the specific document, EV_DOCUMENT_ERROR_INVALID
- * is returned. Other errors are possible too, depending on the backend
- * used to load the document and the URI, e.g. #GIOError, #GFileError, and
- * #GConvertError.
+ * is returned. If the backend does not support the format for the document's
+ * contents, EV_DOCUMENT_ERROR_UNSUPPORTED_CONTENT is returned. Other errors
+ * are possible too, depending on the backend used to load the document and
+ * the URI, e.g. #GIOError, #GFileError, and #GConvertError.
  *
  * Returns: %TRUE on success, or %FALSE on failure.
  */
@@ -640,7 +641,7 @@ ev_document_synctex_backward_search (EvDocument *document,
                                      gfloat      y)
 {
         EvSourceLink *result = NULL;
-        synctex_scanner_t scanner;
+        synctex_scanner_p scanner;
 
         g_return_val_if_fail (EV_IS_DOCUMENT (document), NULL);
 
@@ -649,10 +650,10 @@ ev_document_synctex_backward_search (EvDocument *document,
                 return NULL;
 
         if (synctex_edit_query (scanner, page_index + 1, x, y) > 0) {
-                synctex_node_t node;
+                synctex_node_p node;
 
                 /* We assume that a backward search returns either zero or one result_node */
-                node = synctex_next_result (scanner);
+                node = synctex_scanner_next_result (scanner);
                 if (node != NULL) {
 			const gchar *filename;
 
@@ -675,7 +676,8 @@ ev_document_synctex_backward_search (EvDocument *document,
  * @source_link: a #EvSourceLink
  *
  * Peforms a Synctex forward search to obtain the area in the document
- * corresponding to the position @line and @column number in the source Tex file
+ * corresponding to the position (line and column in @source_link) in
+ * the source Tex file.
  *
  * Returns: An EvMapping with the page number and area corresponfing to
  * the given line in the source file. It must be free with g_free when done
@@ -685,7 +687,7 @@ ev_document_synctex_forward_search (EvDocument   *document,
 				    EvSourceLink *link)
 {
         EvMapping        *result = NULL;
-        synctex_scanner_t scanner;
+        synctex_scanner_p scanner;
 
         g_return_val_if_fail (EV_IS_DOCUMENT (document), NULL);
 
@@ -693,11 +695,16 @@ ev_document_synctex_forward_search (EvDocument   *document,
         if (!scanner)
                 return NULL;
 
-        if (synctex_display_query (scanner, link->filename, link->line, link->col) > 0) {
-                synctex_node_t node;
+	/* Since 1.19, synctex_display_query has a fourth parameter,
+	 * page-hint, which we set into a dummy number to not break the
+	 * API. In synctex it is used to set the best results first
+	 * given the page-hint
+	 */
+        if (synctex_display_query (scanner, link->filename, link->line, link->col, 0) > 0) {
+                synctex_node_p node;
                 gint           page;
 
-                if ((node = synctex_next_result (scanner))) {
+                if ((node = synctex_scanner_next_result (scanner))) {
                         result = g_new (EvMapping, 1);
 
                         page = synctex_node_page (node) - 1;

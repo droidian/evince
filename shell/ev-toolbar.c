@@ -2,7 +2,7 @@
  *  this file is part of evince, a gnome document viewer
  *
  * Copyright (C) 2012-2014 Carlos Garcia Campos <carlosgc@gnome.org>
- * Copyright (C) 2014 Germán Poo-Caamaño <gpoo@gnome.org>
+ * Copyright (C) 2014-2018 Germán Poo-Caamaño <gpoo@gnome.org>
  *
  * Evince is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by
@@ -29,7 +29,6 @@
 
 #include "ev-stock-icons.h"
 #include "ev-zoom-action.h"
-#include "ev-history-action.h"
 #include "ev-application.h"
 #include "ev-page-action-widget.h"
 #include <math.h>
@@ -43,16 +42,14 @@ enum
 struct _EvToolbarPrivate {
         EvWindow  *window;
 
-        GtkWidget *view_menu_button;
         GtkWidget *action_menu_button;
-        GtkWidget *history_action;
         GtkWidget *zoom_action;
         GtkWidget *page_selector;
         GtkWidget *navigation_action;
         GtkWidget *find_button;
         GtkWidget *open_button;
         GtkWidget *annots_button;
-        GMenu *bookmarks_section;
+        GtkWidget *sidebar_button;
 
         EvToolbarMode toolbar_mode;
 };
@@ -85,13 +82,15 @@ ev_toolbar_set_button_action (EvToolbar   *ev_toolbar,
         gtk_actionable_set_action_name (GTK_ACTIONABLE (button), action_name);
         gtk_button_set_label (button, NULL);
         gtk_button_set_focus_on_click (button, FALSE);
-        gtk_widget_set_tooltip_text (GTK_WIDGET (button), tooltip);
+        if (tooltip)
+                gtk_widget_set_tooltip_text (GTK_WIDGET (button), tooltip);
 }
 
 static GtkWidget *
 ev_toolbar_create_button (EvToolbar   *ev_toolbar,
                           const gchar *action_name,
                           const gchar *icon_name,
+                          const gchar *label,
                           const gchar *tooltip)
 {
         GtkWidget *button = gtk_button_new ();
@@ -100,7 +99,10 @@ ev_toolbar_create_button (EvToolbar   *ev_toolbar,
         image = gtk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_MENU);
 
         gtk_widget_set_valign (button, GTK_ALIGN_CENTER);
-        gtk_button_set_image (GTK_BUTTON (button), image);
+        if (icon_name)
+                gtk_button_set_image (GTK_BUTTON (button), image);
+        if (label)
+                gtk_button_set_label (GTK_BUTTON (button), label);
         ev_toolbar_set_button_action (ev_toolbar, GTK_BUTTON (button), action_name, tooltip);
 
         return button;
@@ -147,39 +149,23 @@ ev_toolbar_create_menu_button (EvToolbar   *ev_toolbar,
 }
 
 static void
-ev_toolbar_setup_bookmarks_menu (EvToolbar  *toolbar,
-                                 GMenuModel *bookmarks_submenu_model)
-{
-        GMenu *bookmarks_section = toolbar->priv->bookmarks_section;
-
-        /* The bookmarks section has one or two items: "Add Bookmark"
-         * and the "Bookmarks" submenu item. Hide the latter when there
-         * are no bookmarks.
-         */
-        if (g_menu_model_get_n_items (bookmarks_submenu_model) > 0) {
-                if (g_menu_model_get_n_items (G_MENU_MODEL (bookmarks_section)) == 1)
-                        g_menu_append_submenu (bookmarks_section, _("Bookmarks"), bookmarks_submenu_model);
-        } else {
-                if (g_menu_model_get_n_items (G_MENU_MODEL (bookmarks_section)) == 2)
-                        g_menu_remove (bookmarks_section, 1);
-        }
-}
-
-static void
-ev_toolbar_bookmarks_menu_model_changed (GMenuModel *model,
-                                         gint        position,
-                                         gint        removed,
-                                         gint        added,
-                                         EvToolbar  *toolbar)
-{
-        ev_toolbar_setup_bookmarks_menu (toolbar, model);
-}
-
-static void
 zoom_selector_activated (GtkWidget *zoom_action,
                          EvToolbar *toolbar)
 {
         ev_window_focus_view (toolbar->priv->window);
+}
+
+static void
+ev_toolbar_find_button_sensitive_changed (GtkWidget  *find_button,
+					  GParamSpec *pspec,
+					  EvToolbar *ev_toolbar)
+{
+        if (gtk_widget_is_sensitive (find_button))
+                gtk_widget_set_tooltip_text (find_button,
+                                             _("Find a word or phrase in the document"));
+        else
+                gtk_widget_set_tooltip_text (find_button,
+                                             _("Search not available for this document"));
 }
 
 static void
@@ -188,21 +174,27 @@ ev_toolbar_constructed (GObject *object)
         EvToolbar      *ev_toolbar = EV_TOOLBAR (object);
         GtkBuilder     *builder;
         GtkWidget      *tool_item;
-        GtkWidget      *hbox, *vbox;
+        GtkWidget      *vbox;
         GtkWidget      *button;
         GMenuModel     *menu;
-        GMenuModel     *bookmarks_submenu_model;
 
         G_OBJECT_CLASS (ev_toolbar_parent_class)->constructed (object);
 
         builder = gtk_builder_new_from_resource ("/org/gnome/evince/gtk/menus.ui");
 
         button = ev_toolbar_create_button (ev_toolbar, "win.open",
-                                           "document-open-symbolic",
+                                           NULL,
+                                           _("Open…"),
                                            _("Open an existing document"));
         ev_toolbar->priv->open_button = button;
         gtk_container_add (GTK_CONTAINER (ev_toolbar), button);
-        gtk_widget_set_margin_end (button, 6);
+
+        /* Sidebar */
+        button = ev_toolbar_create_toggle_button (ev_toolbar, "win.show-side-pane",
+                                                  EV_STOCK_VIEW_SIDEBAR,
+                                                  _("Side pane"));
+        ev_toolbar->priv->sidebar_button = button;
+        gtk_header_bar_pack_start (GTK_HEADER_BAR (ev_toolbar), button);
 
         /* Page selector */
         /* Use EvPageActionWidget for now, since the page selector action is also used by the previewer */
@@ -212,28 +204,12 @@ ev_toolbar_constructed (GObject *object)
         ev_toolbar->priv->page_selector = tool_item;
         ev_page_action_widget_set_model (EV_PAGE_ACTION_WIDGET (tool_item),
                                          ev_window_get_document_model (ev_toolbar->priv->window));
-        gtk_widget_set_margin_end (tool_item, 6);
         gtk_header_bar_pack_start (GTK_HEADER_BAR (ev_toolbar), tool_item);
 
-        /* History */
-        hbox = ev_history_action_new (ev_window_get_history (ev_toolbar->priv->window));
-        ev_toolbar->priv->history_action = hbox;
-        gtk_widget_set_margin_end (hbox, 6);
-        gtk_header_bar_pack_start (GTK_HEADER_BAR (ev_toolbar), hbox);
-
-        /* Find */
-        button = ev_toolbar_create_toggle_button (ev_toolbar, "win.toggle-find", "edit-find-symbolic",
-                                                  _("Find a word or phrase in the document"));
-        ev_toolbar->priv->find_button = button;
-        gtk_widget_set_margin_end (button, 6);
-        gtk_header_bar_pack_start (GTK_HEADER_BAR (ev_toolbar), button);
-
         /* Edit Annots */
-        /* FIXME: Use a better icon for edit than text editor */
-        button = ev_toolbar_create_toggle_button (ev_toolbar, "win.toggle-edit-annots", "accessories-text-editor-symbolic",
+        button = ev_toolbar_create_toggle_button (ev_toolbar, "win.toggle-edit-annots", "document-edit-symbolic",
                                                   _("Annotate the document"));
         ev_toolbar->priv->annots_button = button;
-        gtk_widget_set_margin_end (button, 6);
         gtk_header_bar_pack_start (GTK_HEADER_BAR (ev_toolbar), button);
 
         /* Action Menu */
@@ -246,14 +222,15 @@ ev_toolbar_constructed (GObject *object)
         ev_toolbar->priv->action_menu_button = button;
         gtk_header_bar_pack_end (GTK_HEADER_BAR (ev_toolbar), button);
 
-        /* View Menu */
-        menu = G_MENU_MODEL (gtk_builder_get_object (builder, "view-menu"));
-        button = ev_toolbar_create_menu_button (ev_toolbar, "document-properties-symbolic",
-                                                menu, GTK_ALIGN_END);
-        gtk_widget_set_tooltip_text (button, _("View options"));
-        atk_object_set_name (gtk_widget_get_accessible (button), _("View options"));
-        ev_toolbar->priv->view_menu_button = button;
+        /* Find */
+        button = ev_toolbar_create_toggle_button (ev_toolbar, "win.toggle-find", "edit-find-symbolic",
+                                                  NULL);
+        ev_toolbar->priv->find_button = button;
         gtk_header_bar_pack_end (GTK_HEADER_BAR (ev_toolbar), button);
+        g_signal_connect (button,
+                          "notify::sensitive",
+                          G_CALLBACK (ev_toolbar_find_button_sensitive_changed),
+                          ev_toolbar);
 
         /* Zoom selector */
         vbox = ev_zoom_action_new (ev_window_get_document_model (ev_toolbar->priv->window),
@@ -264,15 +241,7 @@ ev_toolbar_constructed (GObject *object)
         g_signal_connect (vbox, "activated",
                           G_CALLBACK (zoom_selector_activated),
                           ev_toolbar);
-        gtk_widget_set_margin_end (vbox, 6);
         gtk_header_bar_pack_end (GTK_HEADER_BAR (ev_toolbar), vbox);
-
-        ev_toolbar->priv->bookmarks_section = G_MENU (gtk_builder_get_object (builder, "bookmarks"));
-        bookmarks_submenu_model = ev_window_get_bookmarks_menu (ev_toolbar->priv->window);
-        g_signal_connect (bookmarks_submenu_model, "items-changed",
-                          G_CALLBACK (ev_toolbar_bookmarks_menu_model_changed),
-                          ev_toolbar);
-        ev_toolbar_setup_bookmarks_menu (ev_toolbar, bookmarks_submenu_model);
 
         g_object_unref (builder);
 }
@@ -325,18 +294,11 @@ ev_toolbar_has_visible_popups (EvToolbar *ev_toolbar)
 
         priv = ev_toolbar->priv;
 
-        popover = gtk_menu_button_get_popover (GTK_MENU_BUTTON (priv->view_menu_button));
-        if (gtk_widget_get_visible (GTK_WIDGET (popover)))
-                return TRUE;
-
         popover = gtk_menu_button_get_popover (GTK_MENU_BUTTON (priv->action_menu_button));
         if (gtk_widget_get_visible (GTK_WIDGET (popover)))
                 return TRUE;
 
         if (ev_zoom_action_get_popup_shown (EV_ZOOM_ACTION (ev_toolbar->priv->zoom_action)))
-                return TRUE;
-
-        if (ev_history_action_get_popup_shown (EV_HISTORY_ACTION (ev_toolbar->priv->history_action)))
                 return TRUE;
 
         return FALSE;
@@ -372,19 +334,9 @@ ev_toolbar_set_mode (EvToolbar     *ev_toolbar,
 
         switch (mode) {
         case EV_TOOLBAR_MODE_NORMAL:
-                gtk_widget_show (priv->view_menu_button);
-                gtk_widget_show (priv->action_menu_button);
-                gtk_widget_show (priv->history_action);
-                gtk_widget_show (priv->zoom_action);
-                gtk_widget_show (priv->page_selector);
-                gtk_widget_show (priv->find_button);
-                gtk_widget_show (priv->annots_button);
-                gtk_widget_hide (priv->open_button);
-                break;
         case EV_TOOLBAR_MODE_FULLSCREEN:
-                gtk_widget_show (priv->view_menu_button);
+                gtk_widget_show (priv->sidebar_button);
                 gtk_widget_show (priv->action_menu_button);
-                gtk_widget_show (priv->history_action);
                 gtk_widget_show (priv->zoom_action);
                 gtk_widget_show (priv->page_selector);
                 gtk_widget_show (priv->find_button);
@@ -392,9 +344,8 @@ ev_toolbar_set_mode (EvToolbar     *ev_toolbar,
                 gtk_widget_hide (priv->open_button);
                 break;
 	case EV_TOOLBAR_MODE_RECENT_VIEW:
-                gtk_widget_hide (priv->view_menu_button);
+                gtk_widget_hide (priv->sidebar_button);
                 gtk_widget_hide (priv->action_menu_button);
-                gtk_widget_hide (priv->history_action);
                 gtk_widget_hide (priv->zoom_action);
                 gtk_widget_hide (priv->page_selector);
                 gtk_widget_hide (priv->find_button);

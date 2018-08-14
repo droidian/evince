@@ -107,6 +107,7 @@ typedef struct {
 #define ZOOM_OUT_FACTOR (1.0/ZOOM_IN_FACTOR)
 
 #define SCROLL_TIME 150
+#define SCROLL_PAGE_THRESHOLD 0.7
 
 #define DEFAULT_PIXBUF_CACHE_SIZE 52428800 /* 50MB */
 
@@ -163,6 +164,8 @@ static void          show_annotation_windows                 (EvView            
 							      gint                page);
 static void          hide_annotation_windows                 (EvView             *view,
 							      gint                page);
+static void	     ev_view_create_annotation_from_selection (EvView          *view,
+							       EvViewSelection *selection);
 /*** GtkWidget implementation ***/
 static void       ev_view_size_request_continuous_dual_page  (EvView             *view,
 							      GtkRequisition     *requisition);
@@ -951,6 +954,10 @@ compute_scroll_increment (EvView        *view,
 		if (cairo_region_num_rectangles (sel_region) > 0) {
 			cairo_region_get_rectangle (sel_region, 0, &rect);
 			fraction = 1 - (rect.height / gtk_adjustment_get_page_size (adjustment));
+			/* jump the full page height if the line is too large a
+			 * fraction of the page */
+			if (fraction < SCROLL_PAGE_THRESHOLD)
+				fraction = 1.0;
 		}
 		cairo_region_destroy (sel_region);
 	}
@@ -1373,7 +1380,7 @@ _ev_view_transform_view_point_to_doc_point (EvView       *view,
 					    double       *doc_point_y)
 {
 	*doc_point_x = MAX ((double) (view_point->x - page_area->x - border->left) / view->scale, 0);
-	*doc_point_y = MAX ((double) (view_point->y - page_area->y - border->right) / view->scale, 0);
+	*doc_point_y = MAX ((double) (view_point->y - page_area->y - border->top) / view->scale, 0);
 }
 
 void
@@ -1384,7 +1391,7 @@ _ev_view_transform_view_rect_to_doc_rect (EvView       *view,
 					  EvRectangle  *doc_rect)
 {
 	doc_rect->x1 = MAX ((double) (view_rect->x - page_area->x - border->left) / view->scale, 0);
-	doc_rect->y1 = MAX ((double) (view_rect->y - page_area->y - border->right) / view->scale, 0);
+	doc_rect->y1 = MAX ((double) (view_rect->y - page_area->y - border->top) / view->scale, 0);
 	doc_rect->x2 = doc_rect->x1 + (double) view_rect->width / view->scale;
 	doc_rect->y2 = doc_rect->y1 + (double) view_rect->height / view->scale;
 }
@@ -3153,7 +3160,7 @@ ev_view_create_annotation_window (EvView       *view,
 	ev_view_window_child_put (view, window, page,
 				  view_rect.x, view_rect.y,
 				  doc_rect.x1, doc_rect.y1);
-
+        ev_annotation_window_set_enable_spellchecking (EV_ANNOTATION_WINDOW (window), ev_view_get_enable_spellchecking (view));
 	return window;
 }
 
@@ -3325,32 +3332,17 @@ ev_view_handle_annotation (EvView       *view,
 }
 
 static void
-ev_view_create_annotation (EvView *view)
+ev_view_create_annotation_real (EvView *view,
+				gint    annot_page,
+				EvPoint start,
+				EvPoint end)
 {
 	EvAnnotation   *annot;
-	EvPoint         start;
-	EvPoint         end;
-	gint            annot_page;
-	gint            offset;
-	GdkRectangle    page_area;
-	GtkBorder       border;
 	EvRectangle     doc_rect, popup_rect;
 	EvPage         *page;
 	GdkColor        color = { 0, 65535, 65535, 0 };
 	GdkRectangle    view_rect;
 	cairo_region_t *region;
-
-	find_page_at_location (view, view->adding_annot_info.start.x, view->adding_annot_info.start.y, &annot_page, &offset, &offset);
-	if (annot_page == -1) {
-		ev_view_cancel_add_annotation (view);
-		return;
-	}
-
-	ev_view_get_page_extents (view, annot_page, &page_area, &border);
-	_ev_view_transform_view_point_to_doc_point (view, &view->adding_annot_info.start, &page_area, &border,
-						    &start.x, &start.y);
-	_ev_view_transform_view_point_to_doc_point (view, &view->adding_annot_info.stop, &page_area, &border,
-						    &end.x, &end.y);
 
 	ev_document_doc_mutex_lock ();
 	page = ev_document_get_page (view->document, annot_page);
@@ -3397,6 +3389,8 @@ ev_view_create_annotation (EvView *view)
 	}
 	ev_document_annotations_add_annotation (EV_DOCUMENT_ANNOTATIONS (view->document),
 						annot, &doc_rect);
+	/* Re-fetch area as eg. adding Text Markup annots updates area for its bounding box */
+	ev_annotation_get_area (annot, &doc_rect);
 	ev_document_doc_mutex_unlock ();
 
 	/* If the page didn't have annots, mark the cache as dirty */
@@ -3413,6 +3407,45 @@ ev_view_create_annotation (EvView *view)
 	view->adding_annot_info.annot = annot;
 }
 
+static void
+ev_view_create_annotation (EvView *view)
+{
+	EvPoint         start;
+	EvPoint         end;
+	gint            annot_page;
+	gint            offset;
+	GdkRectangle    page_area;
+	GtkBorder       border;
+
+	find_page_at_location (view, view->adding_annot_info.start.x, view->adding_annot_info.start.y, &annot_page, &offset, &offset);
+	if (annot_page == -1) {
+		ev_view_cancel_add_annotation (view);
+		return;
+	}
+
+	ev_view_get_page_extents (view, annot_page, &page_area, &border);
+	_ev_view_transform_view_point_to_doc_point (view, &view->adding_annot_info.start, &page_area, &border,
+						    &start.x, &start.y);
+	_ev_view_transform_view_point_to_doc_point (view, &view->adding_annot_info.stop, &page_area, &border,
+						    &end.x, &end.y);
+
+	ev_view_create_annotation_real (view, annot_page, start, end);
+}
+
+static void
+ev_view_create_annotation_from_selection (EvView          *view,
+					  EvViewSelection *selection)
+{
+	EvPoint doc_point_start;
+	EvPoint doc_point_end;
+
+	doc_point_start.x = selection->rect.x1;
+	doc_point_start.y = selection->rect.y1;
+	doc_point_end.x = selection->rect.x2;
+	doc_point_end.y = selection->rect.y2;
+
+	ev_view_create_annotation_real (view, selection->page, doc_point_start, doc_point_end);
+}
 void
 ev_view_focus_annotation (EvView    *view,
 			  EvMapping *annot_mapping)
@@ -3851,7 +3884,6 @@ ev_view_set_caret_cursor_position (EvView *view,
 			gtk_widget_queue_draw (GTK_WIDGET (view));
 	}
 }
-
 /*** GtkWidget implementation ***/
 
 static void
@@ -4239,6 +4271,19 @@ ev_view_scroll_event (GtkWidget *widget, GdkEventScroll *event)
 		}
 
 		return FALSE;
+	}
+
+	/* Do scroll only on one axis at a time. Issue #866 */
+	if (event->direction == GDK_SCROLL_SMOOTH &&
+	    event->delta_x != 0.0 && event->delta_y != 0.0) {
+		gdouble abs_x, abs_y;
+		abs_x = fabs (event->delta_x);
+		abs_y = fabs (event->delta_y);
+
+		if (abs_y > abs_x)
+			event->delta_x = 0.0;
+		else if (abs_x > abs_y)
+			event->delta_y = 0.0;
 	}
 
 	return FALSE;
@@ -5393,6 +5438,7 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 					1, (GdkEvent *)event);
 
 			view->selection_info.in_drag = FALSE;
+			view->pressed_button = -1;
 
 			gtk_target_list_unref (target_list);
 
@@ -5413,6 +5459,7 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 					1, (GdkEvent *)event);
 
 			view->image_dnd_info.in_drag = FALSE;
+			view->pressed_button = -1;
 
 			gtk_target_list_unref (target_list);
 
@@ -5544,6 +5591,10 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 
 			/* FIXME: reload only annotation area */
 			ev_view_reload_page (view, annot_page, NULL);
+		} else if (ev_document_has_synctex (view->document) && (event->state & GDK_CONTROL_MASK)) {
+			/* Ignore spurious motion event triggered by slightly moving mouse
+			 * while clicking for launching synctex. Issue #951 */
+			return TRUE;
 		} else {
 			/* Schedule timeout to scroll during selection and additionally
 			 * scroll once to allow arbitrary speed. */
@@ -5627,6 +5678,116 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 	} 
 
 	return FALSE;
+}
+/**
+ * ev_view_get_selected_text:
+ * @view: #EvView instance
+ *
+ * Returns a pointer to a constant string containing the selected
+ * text in the view.
+ *
+ * The value returned may be NULL if there is no selected text.
+ *
+ * Returns: The string representing selected text.
+ *
+ * Since: 3.30
+ */
+char *
+ev_view_get_selected_text (EvView *view)
+{
+	return get_selected_text (view);
+}
+
+/**
+ * ev_view_add_text_markup_annotation_for_selected_text:
+ * @view: #EvView instance
+ *
+ * Adds a Text Markup annotation (defaulting to a 'highlight' one) to
+ * the currently selected text on the document.
+ *
+ * When the selected text spans more than one page, it will add a
+ * corresponding annotation for each page that contains selected text.
+ *
+ * Returns: %TRUE if annotations were added successfully, %FALSE otherwise.
+ *
+ * Since: 3.30
+ */
+gboolean
+ev_view_add_text_markup_annotation_for_selected_text (EvView  *view)
+{
+	GList *l;
+
+	if (view->adding_annot_info.annot || view->adding_annot_info.adding_annot ||
+	    view->selection_info.selections == NULL)
+		return FALSE;
+
+	for (l = view->selection_info.selections; l != NULL; l = l->next) {
+		EvViewSelection *selection = (EvViewSelection *)l->data;
+
+		view->adding_annot_info.adding_annot = TRUE;
+		view->adding_annot_info.type = EV_ANNOTATION_TYPE_TEXT_MARKUP;
+
+		ev_view_create_annotation_from_selection (view, selection);
+
+		if (view->adding_annot_info.adding_annot)
+			g_signal_emit (view, signals[SIGNAL_ANNOT_ADDED], 0, view->adding_annot_info.annot);
+	}
+
+	clear_selection (view);
+
+	view->adding_annot_info.adding_annot = FALSE;
+	view->adding_annot_info.annot = NULL;
+
+	return TRUE;
+}
+
+void
+ev_view_set_enable_spellchecking (EvView *view,
+                                  gboolean enabled)
+{
+        EvMappingList *annots;
+        GList         *l;
+        gint           n_pages = 0;
+        gint           current_page;
+
+        g_return_if_fail (EV_IS_VIEW (view));
+
+        view->enable_spellchecking = enabled;
+
+        if (view->document)
+                n_pages = ev_document_get_n_pages (view->document);
+
+        for (current_page = 0; current_page < n_pages; current_page++) {
+                annots = ev_page_cache_get_annot_mapping (view->page_cache, current_page);
+
+                for (l = ev_mapping_list_get_list (annots); l && l->data; l = g_list_next (l)) {
+                        EvAnnotation      *annot;
+                        GtkWidget         *window;
+
+                        annot = ((EvMapping *)(l->data))->data;
+
+                        if (!EV_IS_ANNOTATION_MARKUP (annot))
+                                continue;
+
+                        window = get_window_for_annot (view, annot);
+
+                        if (window) {
+                                ev_annotation_window_set_enable_spellchecking (EV_ANNOTATION_WINDOW (window), view->enable_spellchecking);
+                        }
+                }
+        }
+}
+
+gboolean
+ev_view_get_enable_spellchecking (EvView *view)
+{
+        g_return_val_if_fail (EV_IS_VIEW (view), FALSE);
+
+#ifdef WITH_GSPELL
+        return view->enable_spellchecking;
+#else
+        return FALSE;
+#endif
 }
 
 static gboolean
@@ -6880,6 +7041,11 @@ ev_view_dispose (GObject *object)
 
 	ev_view_window_children_free (view);
 
+	if (view->update_cursor_idle_id) {
+		g_source_remove (view->update_cursor_idle_id);
+		view->update_cursor_idle_id = 0;
+	}
+
 	if (view->selection_scroll_id) {
 	    g_source_remove (view->selection_scroll_id);
 	    view->selection_scroll_id = 0;
@@ -7413,6 +7579,13 @@ ev_view_class_init (EvViewClass *class)
 	class->move_cursor = ev_view_move_cursor;
 	class->activate = ev_view_activate;
 
+	/**
+	 * EvView:is-loading:
+	 *
+	 * Allows to implement a custom notification system.
+	 *
+	 * Since: 3.8
+	 */
 	g_object_class_install_property (object_class,
 					 PROP_IS_LOADING,
 					 g_param_spec_boolean ("is-loading",
@@ -7500,9 +7673,9 @@ ev_view_class_init (EvViewClass *class)
 		         G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION,
 		         G_STRUCT_OFFSET (EvViewClass, sync_source),
 		         NULL, NULL,
-		         g_cclosure_marshal_VOID__POINTER,
+		         g_cclosure_marshal_VOID__BOXED,
 		         G_TYPE_NONE, 1,
-			 G_TYPE_POINTER);
+			 EV_TYPE_SOURCE_LINK | G_SIGNAL_TYPE_STATIC_SCOPE);
 	signals[SIGNAL_ANNOT_ADDED] = g_signal_new ("annot-added",
 	  	         G_TYPE_FROM_CLASS (object_class),
 		         G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION,
@@ -7791,15 +7964,40 @@ ev_view_page_changed_cb (EvDocumentModel *model,
 	}
 }
 
+static gboolean
+cursor_scroll_update (gpointer data)
+{
+	EvView *view = data;
+	gint x, y;
+
+	view->update_cursor_idle_id = 0;
+	ev_document_misc_get_pointer_position (GTK_WIDGET (view), &x, &y);
+	ev_view_handle_cursor_over_xy (view, x, y);
+
+	return FALSE;
+}
+
+static void
+schedule_scroll_cursor_update (EvView *view)
+{
+	if (view->update_cursor_idle_id)
+		return;
+
+	view->update_cursor_idle_id =
+		g_idle_add (cursor_scroll_update, view);
+}
+
 static void
 on_adjustment_value_changed (GtkAdjustment *adjustment,
 			     EvView        *view)
 {
 	GtkWidget *widget = GTK_WIDGET (view);
 	int dx = 0, dy = 0;
-	gint x, y;
+	gdouble x, y;
 	gint value;
 	GList *l;
+	GdkEvent *event;
+	gboolean cursor_updated;
 
 	if (!gtk_widget_get_realized (widget))
 		return;
@@ -7843,8 +8041,20 @@ on_adjustment_value_changed (GtkAdjustment *adjustment,
 		gdk_window_scroll (gtk_widget_get_window (widget), dx, dy);
 	}
 
-	ev_document_misc_get_pointer_position (widget, &x, &y);
-	ev_view_handle_cursor_over_xy (view, x, y);
+	cursor_updated = FALSE;
+	event = gtk_get_current_event ();
+	if (event) {
+		if (event->type == GDK_SCROLL &&
+		    gdk_event_get_window (event) == gtk_widget_get_window (widget)) {
+			gdk_event_get_coords (event, &x, &y);
+			ev_view_handle_cursor_over_xy (view, (gint) x, (gint) y);
+			cursor_updated = TRUE;
+		}
+		gdk_event_free (event);
+	}
+
+	if (!cursor_updated)
+		schedule_scroll_cursor_update (view);
 
 	if (view->document)
 		view_update_range_and_current_page (view);
