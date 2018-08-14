@@ -36,6 +36,7 @@
     <keyword type="struct" name="struct EvSidebarAttachmentsClass" link="EvSidebarAttachments.html#EvSidebarAttachmentsClass"/>
     <keyword type="struct" name="EvSidebarAttachmentsPrivate" link="EvSidebarAttachments.html#EvSidebarAttachmentsPrivate"/>
     <keyword type="signal" name="The “popup” signal" link="EvSidebarAttachments.html#EvSidebarAttachments-popup"/>
+    <keyword type="signal" name="The “save-attachment” signal" link="EvSidebarAttachments.html#EvSidebarAttachments-save-attachment"/>
     <keyword type="function" name="ev_properties_dialog_new ()" link="evince-ev-properties-dialog.html#ev-properties-dialog-new"/>
     <keyword type="function" name="ev_properties_dialog_set_document ()" link="evince-ev-properties-dialog.html#ev-properties-dialog-set-document"/>
     <keyword type="struct" name="EvPropertiesDialog" link="evince-ev-properties-dialog.html#EvPropertiesDialog-struct"/>
@@ -83,6 +84,7 @@
     <keyword type="struct" name="struct EvSidebar" link="EvSidebar.html#EvSidebar-struct"/>
     <keyword type="struct" name="struct EvSidebarClass" link="EvSidebar.html#EvSidebarClass"/>
     <keyword type="struct" name="EvSidebarPrivate" link="EvSidebar.html#EvSidebarPrivate"/>
+    <keyword type="property" name="The “active-icon-name” property" link="EvSidebar.html#EvSidebar--active-icon-name"/>
     <keyword type="property" name="The “current-page” property" link="EvSidebar.html#EvSidebar--current-page"/>
     <keyword type="function" name="ev_properties_license_new ()" link="evince-ev-properties-license.html#ev-properties-license-new"/>
     <keyword type="function" name="ev_properties_license_set_license ()" link="evince-ev-properties-license.html#ev-properties-license-set-license"/>
@@ -145,7 +147,6 @@
     <keyword type="struct" name="EvSidebarLayersPrivate" link="EvSidebarLayers.html#EvSidebarLayersPrivate"/>
     <keyword type="signal" name="The “layers-visibility-changed” signal" link="EvSidebarLayers.html#EvSidebarLayers-layers-visibility-changed"/>
     <keyword type="function" name="ev_password_view_new ()" link="EvPasswordView.html#ev-password-view-new"/>
-    <keyword type="function" name="ev_password_view_set_uri ()" link="EvPasswordView.html#ev-password-view-set-uri"/>
     <keyword type="function" name="ev_password_view_ask_password ()" link="EvPasswordView.html#ev-password-view-ask-password"/>
     <keyword type="function" name="ev_password_view_get_password ()" link="EvPasswordView.html#ev-password-view-get-password"/>
     <keyword type="function" name="ev_password_view_get_password_save_flags ()" link="EvPasswordView.html#ev-password-view-get-password-save-flags"/>
@@ -166,7 +167,6 @@
     <keyword type="function" name="ev_window_title_new ()" link="evince-ev-window-title.html#ev-window-title-new"/>
     <keyword type="function" name="ev_window_title_set_type ()" link="evince-ev-window-title.html#ev-window-title-set-type"/>
     <keyword type="function" name="ev_window_title_set_document ()" link="evince-ev-window-title.html#ev-window-title-set-document"/>
-    <keyword type="function" name="ev_window_title_set_uri ()" link="evince-ev-window-title.html#ev-window-title-set-uri"/>
     <keyword type="function" name="ev_window_title_free ()" link="evince-ev-window-title.html#ev-window-title-free"/>
     <keyword type="struct" name="EvWindowTitle" link="evince-ev-window-title.html#EvWindowTitle"/>
     <keyword type="enum" name="enum EvWindowTitleType" link="evince-ev-window-title.html#EvWindowTitleType"/>

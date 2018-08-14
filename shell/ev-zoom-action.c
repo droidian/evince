@@ -68,7 +68,7 @@ struct _EvZoomActionPrivate {
         GMenu           *menu;
 
         GMenuModel      *zoom_free_section;
-        GtkWidget       *popup;
+        GtkPopover      *popup;
         gboolean         popup_shown;
 };
 
@@ -95,10 +95,10 @@ ev_zoom_action_set_zoom_level (EvZoomAction *zoom_action,
         }
 
         zoom_perc = zoom * 100.;
-        if (ABS ((gint)zoom_perc - zoom_perc) < 0.001)
+        if (ABS ((gint)zoom_perc - zoom_perc) < 0.01)
                 zoom_str = g_strdup_printf ("%d%%", (gint)zoom_perc);
         else
-                zoom_str = g_strdup_printf ("%.2f%%", zoom_perc);
+                zoom_str = g_strdup_printf ("%.1f%%", zoom_perc);
         gtk_entry_set_text (GTK_ENTRY (zoom_action->priv->entry), zoom_str);
         g_free (zoom_str);
 }
@@ -141,8 +141,8 @@ static void
 ev_zoom_action_set_width_chars (EvZoomAction *zoom_action,
                                 gint          width)
 {
-        /* width + 3 (two decimals and the comma) + 3 (for the icon) */
-        gtk_entry_set_width_chars (GTK_ENTRY (zoom_action->priv->entry), width + 3 + 3);
+        /* width + 2 (one decimals and the comma) + 3 (for the icon) */
+        gtk_entry_set_width_chars (GTK_ENTRY (zoom_action->priv->entry), width + 2 + 3);
 }
 
 static void
@@ -225,7 +225,7 @@ focus_out_cb (EvZoomAction *zoom_action)
 }
 
 static void
-popup_menu_closed (GtkWidget    *popup,
+popup_menu_closed (GtkPopover   *popup,
                    EvZoomAction *zoom_action)
 {
         if (zoom_action->priv->popup != popup)
@@ -235,7 +235,7 @@ popup_menu_closed (GtkWidget    *popup,
         zoom_action->priv->popup = NULL;
 }
 
-static GtkWidget *
+static GtkPopover *
 get_popup (EvZoomAction *zoom_action)
 {
         GdkRectangle rect;
@@ -243,15 +243,15 @@ get_popup (EvZoomAction *zoom_action)
         if (zoom_action->priv->popup)
                 return zoom_action->priv->popup;
 
-        zoom_action->priv->popup = gtk_popover_new_from_model (GTK_WIDGET (zoom_action),
-                                                               G_MENU_MODEL (zoom_action->priv->menu));
+        zoom_action->priv->popup = GTK_POPOVER (gtk_popover_new_from_model (GTK_WIDGET (zoom_action),
+                                                                            G_MENU_MODEL (zoom_action->priv->menu)));
         g_signal_connect (zoom_action->priv->popup, "closed",
                           G_CALLBACK (popup_menu_closed),
                           zoom_action);
         gtk_entry_get_icon_area (GTK_ENTRY (zoom_action->priv->entry),
                                  GTK_ENTRY_ICON_SECONDARY, &rect);
-        gtk_popover_set_pointing_to (GTK_POPOVER (zoom_action->priv->popup), &rect);
-        gtk_popover_set_position (GTK_POPOVER (zoom_action->priv->popup), GTK_POS_BOTTOM);
+        gtk_popover_set_pointing_to (zoom_action->priv->popup, &rect);
+        gtk_popover_set_position (zoom_action->priv->popup, GTK_POS_BOTTOM);
 
         return zoom_action->priv->popup;
 }
@@ -265,7 +265,7 @@ entry_icon_press_callback (GtkEntry            *entry,
         if (event->button != GDK_BUTTON_PRIMARY)
                 return;
 
-        gtk_widget_show (get_popup (zoom_action));
+        gtk_popover_popup (get_popup (zoom_action));
         zoom_action->priv->popup_shown = TRUE;
 }
 
@@ -415,8 +415,9 @@ ev_zoom_action_init (EvZoomAction *zoom_action)
         priv->entry = gtk_entry_new ();
         gtk_entry_set_icon_from_icon_name (GTK_ENTRY (priv->entry),
                                            GTK_ENTRY_ICON_SECONDARY,
-                                           "go-down-symbolic");
+                                           "pan-down-symbolic");
         gtk_box_pack_start (GTK_BOX (zoom_action), priv->entry, TRUE, FALSE, 0);
+        g_object_set (priv->entry, "xalign", 1.0, NULL);
         gtk_widget_show (priv->entry);
 
         g_signal_connect (priv->entry, "icon-press",

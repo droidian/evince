@@ -66,6 +66,7 @@ void            ev_view_copy_link_address (EvView         *view,
 					   EvLinkAction   *action);
 void		ev_view_select_all	  (EvView         *view);
 gboolean        ev_view_get_has_selection (EvView         *view);
+char *   ev_view_get_selected_text (EvView  *view);
 
 /* Page size */
 gboolean	ev_view_can_zoom_in       (EvView         *view);
@@ -125,6 +126,10 @@ void           ev_view_begin_add_annotation  (EvView          *view,
 void           ev_view_cancel_add_annotation (EvView          *view);
 void           ev_view_remove_annotation     (EvView          *view,
 					      EvAnnotation    *annot);
+gboolean       ev_view_add_text_markup_annotation_for_selected_text (EvView  *view);
+void           ev_view_set_enable_spellchecking (EvView *view,
+                                                 gboolean spellcheck);
+gboolean       ev_view_get_enable_spellchecking (EvView *view);
 
 /* Caret navigation */
 gboolean       ev_view_supports_caret_navigation    (EvView  *view);

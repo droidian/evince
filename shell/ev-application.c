@@ -65,6 +65,7 @@ struct _EvApplicationClass {
 G_DEFINE_TYPE (EvApplication, ev_application, GTK_TYPE_APPLICATION)
 
 #ifdef ENABLE_DBUS
+#define APPLICATION_DBUS_NAME        "org.gnome.evince.Application"
 #define APPLICATION_DBUS_OBJECT_PATH "/org/gnome/evince/Evince"
 #define APPLICATION_DBUS_INTERFACE   "org.gnome.evince.Application"
 
@@ -102,7 +103,7 @@ ev_application_new (void)
   const GApplicationFlags flags = G_APPLICATION_NON_UNIQUE;
 
   return g_object_new (EV_TYPE_APPLICATION,
-                       "application-id", NULL,
+                       "application-id", APPLICATION_DBUS_NAME,
                        "flags", flags,
                        NULL);
 }
@@ -645,7 +646,7 @@ ev_application_open_uri_at_dest (EvApplication  *application,
 #endif /* ENABLE_DBUS */
 }
 
-static void
+void
 ev_application_new_window (EvApplication *application,
 			   GdkScreen     *screen,
 			   guint32        timestamp)
@@ -938,28 +939,6 @@ ev_application_migrate_config_dir (EvApplication *application)
 }
 
 static void
-app_new_cb (GSimpleAction *action,
-            GVariant      *parameter,
-            gpointer       user_data)
-{
-	EvApplication *application = user_data;
-        GList         *windows, *l;
-        GtkWindow     *window = NULL;
-
-        windows = gtk_application_get_windows (GTK_APPLICATION (application));
-        for (l = windows; l != NULL; l = l->next) {
-                if (EV_IS_WINDOW (l->data)) {
-                        window = GTK_WINDOW (l->data);
-                        break;
-                }
-        }
-
-	ev_application_new_window (application,
-                                   window ? gtk_window_get_screen (window) : gdk_screen_get_default (),
-                                   gtk_get_current_event_time ());
-}
-
-static void
 app_help_cb (GSimpleAction *action,
              GVariant      *parameter,
              gpointer       user_data)
@@ -985,6 +964,7 @@ app_about_cb (GSimpleAction *action,
                 "Carlos Garcia Campos <carlosgc@gnome.org>",
                 "Wouter Bolsterlee <wbolster@gnome.org>",
                 "Christian Persch <chpe" "\100" "gnome.org>",
+                "Germán Poo-Caamaño <gpoo" "\100" "gnome.org>",
                 NULL
         };
         const char *documenters[] = {
@@ -1021,13 +1001,12 @@ static void
 ev_application_startup (GApplication *gapplication)
 {
         const GActionEntry app_menu_actions[] = {
-		{ "new",  app_new_cb, NULL, NULL, NULL },
                 { "help", app_help_cb, NULL, NULL, NULL },
                 { "about", app_about_cb, NULL, NULL, NULL }
         };
 
         const gchar *action_accels[] = {
-          "win.open",                   "<Ctrl>O", NULL,
+          "win.win",                    "<Ctrl>O", NULL,
           "win.open-copy",              "<Ctrl>N", NULL,
           "win.save-as",                "<Ctrl>S", NULL,
           "win.print",                  "<Ctrl>P", NULL,
@@ -1036,34 +1015,38 @@ ev_application_startup (GApplication *gapplication)
           "win.select-all",             "<Ctrl>A", NULL,
           "win.save-settings",          "<Ctrl>T", NULL,
           "win.add-bookmark",           "<Ctrl>D", NULL,
+          "win.delete-bookmark",        "<Ctrl><Shift>D", NULL,
           "win.close",                  "<Ctrl>W", NULL,
           "win.escape",                 "Escape", NULL,
           "win.find",                   "<Ctrl>F", "slash", NULL,
-          "win.find-next",              "<Ctrl>G", NULL,
-          "win.find-previous",          "<Ctrl><Shift>G", NULL,
+          "win.find-next",              "<Ctrl>G", "F3", NULL,
+          "win.find-previous",          "<Ctrl><Shift>G", "<Shift>F3", NULL,
           "win.select-page",            "<Ctrl>L", NULL,
           "win.go-backwards",           "<Shift>Page_Up", NULL,
           "win.go-forward",             "<Shift>Page_Down", NULL,
-          "win.go-next-page",           "n", NULL,
-          "win.go-previous-page",       "p", NULL,
+          "win.go-next-page",           "n", "<Ctrl>Page_Down", NULL,
+          "win.go-previous-page",       "p", "<Ctrl>Page_Up", NULL,
           "win.go-back-history",        "<alt>P", "Back", NULL,
           "win.go-forward-history",     "<alt>N", "Forward", NULL,
           "win.sizing-mode::fit-page",  "f", NULL,
           "win.sizing-mode::fit-width", "w", NULL,
           "win.sizing-mode::automatic", "a", NULL,
+          "win.default-zoom",           "<Ctrl>0", NULL,
           "win.open-menu",              "F10", NULL,
           "win.caret-navigation",       "F7", NULL,
           "win.zoom-in",                "plus", "<Ctrl>plus", "KP_Add", "<Ctrl>KP_Add", "equal", "<Ctrl>equal", NULL,
           "win.zoom-out",               "minus", "<Ctrl>minus", "KP_Subtract", "<Ctrl>KP_Subtract", NULL,
           "win.show-side-pane",         "F9", NULL,
           "win.fullscreen",             "F11", NULL,
-          "win.presentation",           "F5", NULL,
+          "win.presentation",           "F5", "<Shift>F5", NULL,
           "win.continuous",             "c", NULL,
           "win.dual-page",              "d", NULL,
           "win.rotate-left",            "<Ctrl>Left", NULL,
           "win.rotate-right",           "<Ctrl>Right", NULL,
           "win.inverted-colors",        "<Ctrl>I", NULL,
           "win.reload",                 "<Ctrl>R", NULL,
+          "win.add-annotation",         "s", NULL,
+          "win.highlight-annotation",   "<Ctrl>H", NULL,
           NULL
         };
 

@@ -5,15 +5,15 @@
 # Mișu Moldovan <dumol@gnome.ro>, 2005 - 2009.
 # Lucian Adrian Grijincu <lucian.grijincu@gmail.com>, 2009, 2010.
 # Simion Ruxandra <ruxy.simion@gmail.com>, 2010.
-# Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>, 2015.
+# Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>, 2015, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: evince\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
-"product=evince&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-03-26 11:36+0000\n"
-"PO-Revision-Date: 2018-04-02 20:35+0300\n"
-"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/evince/issues\n"
+"POT-Creation-Date: 2018-07-16 02:46+0000\n"
+"PO-Revision-Date: 2018-07-17 21:20+0300\n"
+"Last-Translator: Florentina Mușat <florentina.musat.28 [at] gmail [dot] "
+"com>\n"
 "Language-Team: Gnome Romanian Translation Team\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.0.9\n"
 "X-Project-Style: gnome\n"
 
 #: ../backend/comics/comics-document.c:118
@@ -47,12 +47,12 @@ msgid ""
 "libarchive lacks support for this comic book’s compression, please contact "
 "your distributor"
 msgstr ""
-"libarchive nu deține suport pentru compresia acestei benzi desenate, "
-"contactați distribuitorul"
+"libarchive nu are suport pentru compresia benzilor desenate, contactați "
+"distribuitorul dumneavoastră"
 
 #: ../backend/comics/comics-document.c:264
 msgid "Can not get local path for archive"
-msgstr "Nu se poate obține calea locală pentru arhivă"
+msgstr "Nu s-a putut obține calea pentru arhivă"
 
 #: ../backend/comics/comicsdocument.evince-backend.in.in.h:1
 #: ../backend/comics/evince-comicsdocument.metainfo.xml.in.in.h:1
@@ -97,53 +97,53 @@ msgstr "Documente DVI"
 msgid "Adds support for reading DVI documents"
 msgstr "Adaugă suport pentru citirea documenteleor DVI"
 
-#: ../backend/pdf/ev-poppler.cc:674
+#: ../backend/pdf/ev-poppler.cc:927
 msgid "This work is in the Public Domain"
 msgstr "Această lucrare este în Domeniul public"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:930 ../backend/pdf/ev-poppler.cc:936
+#: ../backend/pdf/ev-poppler.cc:1189 ../backend/pdf/ev-poppler.cc:1195
 msgid "Yes"
 msgstr "Da"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:933 ../backend/pdf/ev-poppler.cc:936
+#: ../backend/pdf/ev-poppler.cc:1192 ../backend/pdf/ev-poppler.cc:1195
 msgid "No"
 msgstr "Nu"
 
-#: ../backend/pdf/ev-poppler.cc:1067
+#: ../backend/pdf/ev-poppler.cc:1326
 msgid "Type 1"
 msgstr "Tip 1"
 
-#: ../backend/pdf/ev-poppler.cc:1069
+#: ../backend/pdf/ev-poppler.cc:1328
 msgid "Type 1C"
 msgstr "Tip 1C"
 
-#: ../backend/pdf/ev-poppler.cc:1071
+#: ../backend/pdf/ev-poppler.cc:1330
 msgid "Type 3"
 msgstr "Tip 3"
 
-#: ../backend/pdf/ev-poppler.cc:1073
+#: ../backend/pdf/ev-poppler.cc:1332
 msgid "TrueType"
 msgstr "TrueType"
 
-#: ../backend/pdf/ev-poppler.cc:1075
+#: ../backend/pdf/ev-poppler.cc:1334
 msgid "Type 1 (CID)"
 msgstr "Tip 1 (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:1077
+#: ../backend/pdf/ev-poppler.cc:1336
 msgid "Type 1C (CID)"
 msgstr "Tip 1C (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:1079
+#: ../backend/pdf/ev-poppler.cc:1338
 msgid "TrueType (CID)"
 msgstr "TrueType (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:1081
+#: ../backend/pdf/ev-poppler.cc:1340
 msgid "Unknown font type"
 msgstr "Tipul fontului este necunoscut"
 
-#: ../backend/pdf/ev-poppler.cc:1125
+#: ../backend/pdf/ev-poppler.cc:1384
 msgid ""
 "This document contains non-embedded fonts that are not from the PDF Standard "
 "14 fonts. If the substitute fonts selected by fontconfig are not the same as "
@@ -154,11 +154,11 @@ msgstr ""
 "fontconfig nu sunt la fel ca fonturile folosite la crearea PDF-ului, "
 "randarea poate să nu fie corectă."
 
-#: ../backend/pdf/ev-poppler.cc:1130
+#: ../backend/pdf/ev-poppler.cc:1389
 msgid "All fonts are either standard or embedded."
 msgstr "Toate fonturile sunt fie standard fie încapsulate."
 
-#: ../backend/pdf/ev-poppler.cc:1162
+#: ../backend/pdf/ev-poppler.cc:1419
 msgid "No name"
 msgstr "Fără nume"
 
@@ -172,20 +172,20 @@ msgstr "Fără nume"
 #. Author: None
 #. Keywords: None
 #.
-#: ../backend/pdf/ev-poppler.cc:1171 ../libview/ev-print-operation.c:1975
+#: ../backend/pdf/ev-poppler.cc:1428 ../libview/ev-print-operation.c:1975
 #: ../properties/ev-properties-view.c:231
 msgid "None"
 msgstr "Fără"
 
-#: ../backend/pdf/ev-poppler.cc:1179
+#: ../backend/pdf/ev-poppler.cc:1436
 msgid "Embedded subset"
 msgstr "Inclus parțial"
 
-#: ../backend/pdf/ev-poppler.cc:1181
+#: ../backend/pdf/ev-poppler.cc:1438
 msgid "Embedded"
 msgstr "Inclus"
 
-#: ../backend/pdf/ev-poppler.cc:1183
+#: ../backend/pdf/ev-poppler.cc:1440
 msgid "Not embedded"
 msgstr "Neinclus"
 
@@ -194,7 +194,7 @@ msgstr "Neinclus"
 #. * type. Example:
 #. * "Type 1 (One of the Standard 14 Fonts)"
 #.
-#: ../backend/pdf/ev-poppler.cc:1190
+#: ../backend/pdf/ev-poppler.cc:1447
 msgid " (One of the Standard 14 Fonts)"
 msgstr " (Unul dintre cele 14 fonturi standard)"
 
@@ -203,17 +203,54 @@ msgstr " (Unul dintre cele 14 fonturi standard)"
 #. * type. Example:
 #. * "TrueType (Not one of the Standard 14 Fonts)"
 #.
-#: ../backend/pdf/ev-poppler.cc:1197
+#: ../backend/pdf/ev-poppler.cc:1454
 msgid " (Not one of the Standard 14 Fonts)"
 msgstr " (Nu este unul dintre cele 14 fonturi standard)"
 
-#: ../backend/pdf/ev-poppler.cc:1204
-msgid "Encoding"
-msgstr "Codare"
+#. Translators: string is a concatenation of previous
+#. * translated strings to indicate the fonts properties
+#. * in a PDF document.
+#. *
+#. * Example:
+#. * Type 1 (One of the standard 14 Fonts)
+#. * Not embedded
+#. * Substituting with TeXGyreTermes-Regular
+#. * (/usr/share/textmf/.../texgyretermes-regular.otf)
+#.
+#: ../backend/pdf/ev-poppler.cc:1473
+#, c-format
+msgid ""
+"%s%s\n"
+"Encoding: %s\n"
+"%s\n"
+"Substituting with <b>%s</b>\n"
+"(%s)"
+msgstr ""
+"%s%s\n"
+"Codare: %s\n"
+"%s\n"
+"Se substituie cu <b>%s</b>\n"
+"(%s)"
 
-#: ../backend/pdf/ev-poppler.cc:1205
-msgid "Substituting with"
-msgstr "Se înlocuiește cu"
+#. Translators: string is a concatenation of previous
+#. * translated strings to indicate the fonts properties
+#. * in a PDF document.
+#. *
+#. * Example:
+#. * TrueType (CID)
+#. * Encoding: Custom
+#. * Embedded subset
+#.
+#: ../backend/pdf/ev-poppler.cc:1491
+#, c-format
+msgid ""
+"%s%s\n"
+"Encoding: %s\n"
+"%s"
+msgstr ""
+"%s%s\n"
+"Codare: %s\n"
+"%s"
 
 #: ../backend/pdf/evince-pdfdocument.metainfo.xml.in.in.h:1
 #: ../backend/pdf/pdfdocument.evince-backend.in.in.h:1
@@ -266,17 +303,17 @@ msgid "Adds support for reading XPS documents"
 msgstr "Adaugă suport pentru citirea documentelor XPS"
 
 #: ../browser-plugin/EvBrowserPluginToolbar.cpp:288
-#: ../previewer/ev-previewer-window.c:317 ../shell/evince-menus.ui.h:33
+#: ../previewer/ev-previewer-window.c:317 ../shell/evince-menus.ui.h:21
 msgid "Fit Pa_ge"
-msgstr "Potrivește pa_gina"
+msgstr "Încadrează pa_gina"
 
 #: ../browser-plugin/EvBrowserPluginToolbar.cpp:297
-#: ../previewer/ev-previewer-window.c:320 ../shell/evince-menus.ui.h:34
+#: ../previewer/ev-previewer-window.c:320 ../shell/evince-menus.ui.h:22
 msgid "Fit _Width"
-msgstr "Potrivește la _lățime"
+msgstr "Încadrează la _lățime"
 
 #: ../browser-plugin/EvBrowserPluginToolbar.cpp:306
-#: ../shell/evince-menus.ui.h:35
+#: ../shell/evince-menus.ui.h:23
 msgid "_Automatic"
 msgstr "_Automată"
 
@@ -284,15 +321,15 @@ msgstr "_Automată"
 #: ../browser-plugin/EvBrowserPluginToolbar.cpp:331
 #: ../previewer/ev-previewer-window.c:271
 msgid "Go to the previous page"
-msgstr "Navighează la pagina precedentă"
+msgstr "Arată pagina precedentă"
 
 #: ../browser-plugin/EvBrowserPluginToolbar.cpp:335
 #: ../previewer/ev-previewer-window.c:274
 msgid "Go to the next page"
-msgstr "Navighează la pagina următoare"
+msgstr "Arată pagina următoare"
 
 #. Search.
-#: ../browser-plugin/EvBrowserPluginToolbar.cpp:362 ../shell/ev-toolbar.c:226
+#: ../browser-plugin/EvBrowserPluginToolbar.cpp:362 ../shell/ev-toolbar.c:188
 msgid "Find a word or phrase in the document"
 msgstr "Caută un cuvânt sau o frază în document"
 
@@ -323,26 +360,26 @@ msgid "Print document"
 msgstr "Tipărește documentul"
 
 #. Manually set name and icon
-#: ../data/evince.desktop.in.in.h:1 ../shell/ev-application.c:1012
-#: ../shell/ev-window-title.c:139 ../shell/main.c:298
+#: ../data/org.gnome.Evince.desktop.in.in.h:1 ../shell/ev-window.c:3920
+#: ../shell/ev-window-title.c:133 ../shell/main.c:298
 msgid "Document Viewer"
 msgstr "Vizualizator de documente"
 
-#: ../data/evince.desktop.in.in.h:2
+#: ../data/org.gnome.Evince.desktop.in.in.h:2
 msgid "View multi-page documents"
 msgstr "Vizualizați documente cu mai multe pagini"
 
-#: ../data/evince.desktop.in.in.h:3
+#: ../data/org.gnome.Evince.desktop.in.in.h:3
 msgid "pdf;ps;postscript;dvi;xps;djvu;tiff;document;presentation;viewer;"
 msgstr ""
 "pdf;ps;postscript;dvi;xps;djvu;tiff;document;presentation;viewer;prezentare;"
 "vizualizator;"
 
-#: ../data/evince-previewer.desktop.in.in.h:1
+#: ../data/org.gnome.Evince-previewer.desktop.in.in.h:1
 msgid "Print Preview"
 msgstr "Previzualizează tipărire"
 
-#: ../data/evince-previewer.desktop.in.in.h:2
+#: ../data/org.gnome.Evince-previewer.desktop.in.in.h:2
 msgid "Preview before printing"
 msgstr "Previzualizează înainte de tipărirea"
 
@@ -441,19 +478,19 @@ msgstr "Crearea fișierului temporar a eșuat: %s"
 msgid "Failed to create a temporary directory: %s"
 msgstr "Crearea dosarului temporar a eșuat: %s"
 
-#: ../libmisc/ev-page-action-widget.c:84 ../libmisc/ev-page-action-widget.c:123
+#: ../libmisc/ev-page-action-widget.c:95 ../libmisc/ev-page-action-widget.c:143
 #, c-format
 msgid "(%d of %d)"
 msgstr "(%d din %d)"
 
-#: ../libmisc/ev-page-action-widget.c:86 ../libmisc/ev-page-action-widget.c:127
+#: ../libmisc/ev-page-action-widget.c:97 ../libmisc/ev-page-action-widget.c:147
 #, c-format
 msgid "of %d"
 msgstr "din %d"
 
-#: ../libmisc/ev-page-action-widget.c:185 ../shell/ev-history.c:426
-#: ../shell/ev-sidebar-bookmarks.c:306 ../shell/ev-window.c:910
-#: ../shell/ev-window.c:4709
+#: ../libmisc/ev-page-action-widget.c:205 ../shell/ev-history.c:426
+#: ../shell/ev-sidebar-bookmarks.c:310 ../shell/ev-window.c:927
+#: ../shell/ev-window.c:4898
 #, c-format
 msgid "Page %s"
 msgstr "Pagina %s"
@@ -462,23 +499,23 @@ msgstr "Pagina %s"
 msgid "Not found, click to change search options"
 msgstr "Nu a fost găsit, clic pentru a schimba opțiunile de căutare"
 
-#: ../libmisc/ev-search-box.c:180 ../libmisc/ev-search-box.c:236
+#: ../libmisc/ev-search-box.c:184 ../libmisc/ev-search-box.c:240
 msgid "Search options"
 msgstr "Opțiuni de căutare"
 
-#: ../libmisc/ev-search-box.c:310
+#: ../libmisc/ev-search-box.c:314
 msgid "_Whole Words Only"
 msgstr "_Numai cuvinte întregi"
 
-#: ../libmisc/ev-search-box.c:323
+#: ../libmisc/ev-search-box.c:327
 msgid "C_ase Sensitive"
 msgstr "_Majuscule semnificative"
 
-#: ../libmisc/ev-search-box.c:590
+#: ../libmisc/ev-search-box.c:594
 msgid "Find previous occurrence of the search string"
 msgstr "Caută precedenta apariție a șirului de caractere căutat"
 
-#: ../libmisc/ev-search-box.c:597
+#: ../libmisc/ev-search-box.c:600
 msgid "Find next occurrence of the search string"
 msgstr "Caută următoarea apariție a șirului de caractere căutat"
 
@@ -553,7 +590,7 @@ msgstr "Micșorează la aria tipăribilă"
 
 #: ../libview/ev-print-operation.c:1977
 msgid "Fit to Printable Area"
-msgstr "Potrivește la aria tipăribilă"
+msgstr "Încadrează la aria tipăribilă"
 
 #: ../libview/ev-print-operation.c:1980
 msgid ""
@@ -568,16 +605,16 @@ msgid ""
 "• “Fit to Printable Area”: Document pages are enlarged or reduced as "
 "required to fit the printable area of the printer page.\n"
 msgstr ""
-"Scalează paginile documentului pentru a încăpea pe pagina imprimantei "
-"selectate. Alegeți una dintre următoarele:\n"
+"Scalează paginile documentelor pentru a încăpea pe pagina imprimantei "
+"selectată. Alegeți una din următoarele:\n"
 "\n"
-"• „Nimic”: Nu se efectuează nicio scalare de pagină.\n"
+"• „Niciuna”: Nu se efectuează nicio scalare de pagină.\n"
 "\n"
 "• „Micșorează la aria tipăribilă”: Paginile documentului mai mari decât aria "
 "tipăribilă sunt micșorate pentru a încăpea pe aria tipăribilă a paginii "
 "imprimantei.\n"
 "\n"
-"• „Potrivește la aria tipăribilă”: Paginile documentului sunt mărite sau "
+"• „Încadrează la aria tipăribilă”: Paginile documentului sunt mărite sau "
 "micșorate după nevoie pentru a încăpea pe aria tipăribilă a paginii "
 "imprimantei.\n"
 
@@ -630,57 +667,57 @@ msgstr "Defilare descendentă a vizualizării"
 msgid "Document View"
 msgstr "Vizualizare document"
 
-#: ../libview/ev-view.c:2035
-msgid "Go to first page"
-msgstr "Navighează la prima pagină"
-
 #: ../libview/ev-view.c:2037
-msgid "Go to previous page"
-msgstr "Navighează la pagina precedentă"
+msgid "Go to first page"
+msgstr "Du-te la prima pagină"
 
 #: ../libview/ev-view.c:2039
-msgid "Go to next page"
-msgstr "Navighează la pagina următoare"
+msgid "Go to previous page"
+msgstr "Du-te la pagina precedentă"
 
 #: ../libview/ev-view.c:2041
-msgid "Go to last page"
-msgstr "Navighează la ultima pagină"
+msgid "Go to next page"
+msgstr "Du-te la pagina următoare"
 
 #: ../libview/ev-view.c:2043
-msgid "Go to page"
-msgstr "Navighează la pagina"
+msgid "Go to last page"
+msgstr "Du-te la ultima pagină"
 
 #: ../libview/ev-view.c:2045
+msgid "Go to page"
+msgstr "Du-te la pagina"
+
+#: ../libview/ev-view.c:2047
 msgid "Find"
 msgstr "Caută"
 
-#: ../libview/ev-view.c:2073
+#: ../libview/ev-view.c:2075
 #, c-format
 msgid "Go to page %s"
-msgstr "Navighează la pagina %s"
+msgstr "Du-te la pagina %s"
 
-#: ../libview/ev-view.c:2079
+#: ../libview/ev-view.c:2081
 #, c-format
 msgid "Go to %s on file “%s”"
-msgstr "Navighează la %s în fișierul „%s”"
+msgstr "Du-te la %s în fișierul „%s”"
 
-#: ../libview/ev-view.c:2082
+#: ../libview/ev-view.c:2084
 #, c-format
 msgid "Go to file “%s”"
-msgstr "Navighează la fișierul „%s”"
+msgstr "Du-te în fișierul „%s”"
 
-#: ../libview/ev-view.c:2090
+#: ../libview/ev-view.c:2092
 #, c-format
 msgid "Launch %s"
 msgstr "Pornește %s"
 
 #: ../libview/ev-view-presentation.c:752
 msgid "Jump to page:"
-msgstr "Sari la pagina:"
+msgstr "Du-te la pagina:"
 
 #: ../libview/ev-view-presentation.c:1055
-msgid "End of presentation. Click to exit."
-msgstr "Sfârșitul prezentării. Clic pentru ieșire."
+msgid "End of presentation. Press Esc or click to exit."
+msgstr "Sfârșitul prezentării. Apăsați Esc sau clic pentru a ieși."
 
 #: ../previewer/ev-previewer.c:45
 msgid "Delete the temporary file"
@@ -688,7 +725,7 @@ msgstr "Șterge fișierul temporar"
 
 #: ../previewer/ev-previewer.c:46
 msgid "File specifying print settings"
-msgstr "Fișier specificând configurările de tipărire"
+msgstr "Fișier ce specifică configurările de tipărire"
 
 #: ../previewer/ev-previewer.c:46
 msgid "FILE"
@@ -698,20 +735,20 @@ msgstr "FIȘIER"
 msgid "GNOME Document Previewer"
 msgstr "Previzualizare de documente GNOME"
 
-#: ../previewer/ev-previewer-window.c:91 ../shell/ev-window.c:3293
+#: ../previewer/ev-previewer-window.c:91 ../shell/ev-window.c:3375
 msgid "Failed to print document"
 msgstr "Tipărirea documentului a eșuat"
 
 #: ../previewer/ev-previewer-window.c:223
 #, c-format
 msgid "The selected printer “%s” could not be found"
-msgstr "Imprimanta selectată „%s” nu a putut fi găsită"
+msgstr "Imprimanta selectată „%s” nu a fost găsită"
 
-#: ../previewer/ev-previewer-window.c:270 ../shell/evince-menus.ui.h:40
+#: ../previewer/ev-previewer-window.c:270 ../shell/evince-menus.ui.h:28
 msgid "_Previous Page"
 msgstr "Pagina pr_ecedentă"
 
-#: ../previewer/ev-previewer-window.c:273 ../shell/evince-menus.ui.h:41
+#: ../previewer/ev-previewer-window.c:273 ../shell/evince-menus.ui.h:29
 msgid "_Next Page"
 msgstr "Pagina ur_mătoare"
 
@@ -932,43 +969,23 @@ msgstr "Deschide"
 msgid "Close"
 msgstr "Închide"
 
-#: ../shell/ev-annotations-toolbar.c:120
+# LG: descriere a unei iconițe atașabile unei notițe
+#. Translators: an annotation that looks like a "sticky note"
+#: ../shell/ev-annotations-toolbar.c:131
+msgid "Note text"
+msgstr "Textul notei"
+
+#: ../shell/ev-annotations-toolbar.c:133
 msgid "Add text annotation"
 msgstr "Adăugă adnotare text"
 
-#: ../shell/ev-annotations-toolbar.c:127
+#: ../shell/ev-annotations-toolbar.c:138
+msgid "Highlight text"
+msgstr "Evidențiază textul"
+
+#: ../shell/ev-annotations-toolbar.c:140
 msgid "Add highlight annotation"
 msgstr "Adăugă adnotare evidențiată"
-
-#: ../shell/ev-application.c:1007 ../evince.appdata.xml.in.h:1
-msgid "Evince"
-msgstr "Evince"
-
-#: ../shell/ev-application.c:1009
-msgid "© 1996–2017 The Evince authors"
-msgstr "© 1996–2017 Autorii Evince"
-
-#: ../shell/ev-application.c:1015
-msgid "translator-credits"
-msgstr ""
-"Eugen Paiuc <eug_paiuc@bluewin.ch>\n"
-"Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
-"Mișu Moldovan <dumol@gnome.ro>\n"
-"Florentina Mușat <florentina.musat.28@gmail.com>\n"
-"\n"
-"Contribuții din Launchpad:\n"
-"  Dread Knight https://launchpad.net/~dread.knight\n"
-"  Gheorghe Pop https://launchpad.net/~pop-gheorghe\n"
-"  Ionuț Jula https://launchpad.net/~ionutjula\n"
-"  Lucian Adrian Grijincu https://launchpad.net/~lucian.grijincu"
-
-#: ../shell/ev-history-action.c:221
-msgid "Go to previous history item"
-msgstr "Navighează la precendentul element de istoric"
-
-#: ../shell/ev-history-action.c:226
-msgid "Go to next history item"
-msgstr "Navighează la următorul element de istoric"
 
 #: ../shell/ev-keyring.c:86
 #, c-format
@@ -989,37 +1006,37 @@ msgstr ""
 "Acest document este criptat și nu poate fi citit decât după introducerea "
 "corectă a parolei."
 
-#: ../shell/ev-password-view.c:151 ../shell/ev-password-view.c:269
+#: ../shell/ev-password-view.c:151 ../shell/ev-password-view.c:261
 msgid "_Unlock Document"
 msgstr "_Decriptare document"
 
-#: ../shell/ev-password-view.c:261
+#: ../shell/ev-password-view.c:253
 msgid "Enter password"
 msgstr "Introduceți parola"
 
-#: ../shell/ev-password-view.c:300
+#: ../shell/ev-password-view.c:291
 #, c-format
 msgid ""
 "The document “%s” is locked and requires a password before it can be opened."
 msgstr "Documentul „%s” este criptat și necesită o parolă pentru a fi deschis."
 
-#: ../shell/ev-password-view.c:303
+#: ../shell/ev-password-view.c:294
 msgid "Password required"
 msgstr "E nevoie de parolă"
 
-#: ../shell/ev-password-view.c:333
+#: ../shell/ev-password-view.c:330
 msgid "_Password:"
 msgstr "_Parolă:"
 
-#: ../shell/ev-password-view.c:364
+#: ../shell/ev-password-view.c:361
 msgid "Forget password _immediately"
 msgstr "_Uită parola imediat"
 
-#: ../shell/ev-password-view.c:376
+#: ../shell/ev-password-view.c:373
 msgid "Remember password until you _log out"
 msgstr "Reține parola până _la închiderea sesiunii"
 
-#: ../shell/ev-password-view.c:388
+#: ../shell/ev-password-view.c:385
 msgid "Remember _forever"
 msgstr "Reține pentru _totdeauna"
 
@@ -1048,15 +1065,15 @@ msgstr "Font"
 msgid "Gathering font information… %3d%%"
 msgstr "Se obțin informațiile despre fonturi… %3d%%"
 
-#: ../shell/ev-properties-license.c:134
+#: ../shell/ev-properties-license.c:149
 msgid "Usage terms"
 msgstr "Termeni de utilizare"
 
-#: ../shell/ev-properties-license.c:140
+#: ../shell/ev-properties-license.c:161
 msgid "Text License"
 msgstr "Licență text"
 
-#: ../shell/ev-properties-license.c:146
+#: ../shell/ev-properties-license.c:172
 msgid "Further Information"
 msgstr "Informații suplimentare"
 
@@ -1069,43 +1086,58 @@ msgstr "Documentul nu conține nicio adnotare"
 msgid "Page %d"
 msgstr "Pagina %d"
 
-#: ../shell/ev-sidebar-annotations.c:511
+#: ../shell/ev-sidebar-annotations.c:511 ../shell/ev-window.c:7183
 msgid "Annotations"
 msgstr "Adnotări"
 
-#: ../shell/ev-sidebar-attachments.c:695
+#: ../shell/ev-sidebar-attachments.c:490
+#, c-format
+msgid "A file named “%s” already exists. Do you want to replace it?"
+msgstr "Un fișier cu numele „%s” există deja. Doriți să îl înlocuiți?"
+
+#: ../shell/ev-sidebar-attachments.c:494
+#, c-format
+msgid "The file “%s” already exists. Replacing it will overwrite its contents."
+msgstr ""
+"Fișierul „%s” există deja. Înlocuirea acestuia îi va suprascrie conținutul."
+
+#: ../shell/ev-sidebar-attachments.c:499
+msgid "_Replace"
+msgstr "Î_nlocuiește"
+
+#: ../shell/ev-sidebar-attachments.c:901 ../shell/ev-window.c:7207
 msgid "Attachments"
 msgstr "Atașamente"
 
-#: ../shell/ev-sidebar-bookmarks.c:148
+#: ../shell/ev-sidebar-bookmarks.c:150
 msgid "_Open Bookmark"
 msgstr "_Deschide semnul de carte"
 
-#: ../shell/ev-sidebar-bookmarks.c:150
+#: ../shell/ev-sidebar-bookmarks.c:152
 msgid "_Rename Bookmark"
 msgstr "_Redenumește semnul de carte"
 
-#: ../shell/ev-sidebar-bookmarks.c:152
+#: ../shell/ev-sidebar-bookmarks.c:154
 msgid "_Remove Bookmark"
 msgstr "Elimină semnul de ca_rte"
 
-#: ../shell/ev-sidebar-bookmarks.c:467 ../shell/ev-sidebar-bookmarks.c:468
+#: ../shell/ev-sidebar-bookmarks.c:470 ../shell/ev-sidebar-bookmarks.c:471
 msgid "Add bookmark"
-msgstr "_Adaugă semn de carte"
+msgstr "Adaugă semn de carte"
 
-#: ../shell/ev-sidebar-bookmarks.c:476 ../shell/ev-sidebar-bookmarks.c:477
+#: ../shell/ev-sidebar-bookmarks.c:479 ../shell/ev-sidebar-bookmarks.c:480
 msgid "Remove bookmark"
 msgstr "Elimină semnul de carte"
 
-#: ../shell/ev-sidebar-bookmarks.c:593 ../shell/ev-toolbar.c:161
+#: ../shell/ev-sidebar-bookmarks.c:596 ../shell/ev-window.c:7191
 msgid "Bookmarks"
 msgstr "Semne de carte"
 
-#: ../shell/ev-sidebar-layers.c:444
+#: ../shell/ev-sidebar-layers.c:444 ../shell/ev-window.c:7219
 msgid "Layers"
 msgstr "Straturi"
 
-#: ../shell/ev-sidebar-links.c:344
+#: ../shell/ev-sidebar-links.c:344 ../shell/evince-menus.ui.h:1
 msgid "Print…"
 msgstr "Tipărește…"
 
@@ -1115,23 +1147,35 @@ msgstr "Tipărește…"
 #. * your language.  The sidebar cannot be shrinked smaller than
 #. * the longest title in there.
 #.
-#: ../shell/ev-sidebar-links.c:751
+#: ../shell/ev-sidebar-links.c:751 ../shell/ev-window.c:7171
 msgid "Outline"
 msgstr "Contur"
 
-#: ../shell/ev-sidebar-thumbnails.c:1135
+#: ../shell/ev-sidebar-thumbnails.c:1135 ../shell/ev-window.c:7154
 msgid "Thumbnails"
 msgstr "Miniaturi"
 
-#: ../shell/ev-toolbar.c:202
+#: ../shell/ev-toolbar.c:191
+msgid "Search not available for this document"
+msgstr "Căutarea nu este disponibilă pentru acest document"
+
+#: ../shell/ev-toolbar.c:210
+msgid "Open…"
+msgstr "Deschide…"
+
+#: ../shell/ev-toolbar.c:211
 msgid "Open an existing document"
 msgstr "Deschide un document existent"
 
-#: ../shell/ev-toolbar.c:210
+#: ../shell/ev-toolbar.c:218
+msgid "Side pane"
+msgstr "Vedere laterală"
+
+#: ../shell/ev-toolbar.c:225
 msgid "Select page or search in the index"
 msgstr "Selectați pagina sau căutați în index"
 
-#: ../shell/ev-toolbar.c:211
+#: ../shell/ev-toolbar.c:226
 msgid "Select page"
 msgstr "Selectează pagina"
 
@@ -1139,19 +1183,15 @@ msgstr "Selectează pagina"
 msgid "Annotate the document"
 msgstr "Adnotează documentul"
 
-#: ../shell/ev-toolbar.c:243 ../shell/ev-toolbar.c:244
+#: ../shell/ev-toolbar.c:242 ../shell/ev-toolbar.c:243
 msgid "File options"
 msgstr "Opțiuni fișier"
 
-#: ../shell/ev-toolbar.c:253 ../shell/ev-toolbar.c:254
-msgid "View options"
-msgstr "Opțiuni vizualizare"
-
-#: ../shell/ev-toolbar.c:262
+#: ../shell/ev-toolbar.c:252
 msgid "Select or set the zoom level of the document"
 msgstr "Selectați sau stabiliți nivelul de zoom al documentului"
 
-#: ../shell/ev-toolbar.c:263
+#: ../shell/ev-toolbar.c:253
 msgid "Set zoom level"
 msgstr "Stabilește nivelul de zoom"
 
@@ -1159,90 +1199,90 @@ msgstr "Stabilește nivelul de zoom"
 msgid "Supported Image Files"
 msgstr "Fișiere imagine suportate"
 
-#: ../shell/ev-window.c:1544
+#: ../shell/ev-window.c:1576
 msgid "The document contains no pages"
 msgstr "Documentul nu conține nicio pagină"
 
-#: ../shell/ev-window.c:1547
+#: ../shell/ev-window.c:1579
 msgid "The document contains only empty pages"
 msgstr "Acest document conține doar pagini goale"
 
-#: ../shell/ev-window.c:1761 ../shell/ev-window.c:1927
+#: ../shell/ev-window.c:1795 ../shell/ev-window.c:1961
 #, c-format
 msgid "Unable to open document “%s”."
 msgstr "Documentul nu a putut fi deschis „%s”."
 
-#: ../shell/ev-window.c:1891
+#: ../shell/ev-window.c:1925
 #, c-format
 msgid "Loading document from “%s”"
 msgstr "Se încarcă documentul de la „%s”"
 
-#: ../shell/ev-window.c:2042 ../shell/ev-window.c:2370
+#: ../shell/ev-window.c:2078 ../shell/ev-window.c:2435
 #, c-format
 msgid "Downloading document (%d%%)"
 msgstr "Se descarcă documentul (%d%%)"
 
-#: ../shell/ev-window.c:2075
+#: ../shell/ev-window.c:2110
 msgid "Failed to load remote file."
 msgstr "Reîncărcarea documentului de la distanță a eșuat."
 
-#: ../shell/ev-window.c:2314
+#: ../shell/ev-window.c:2379
 #, c-format
 msgid "Reloading document from %s"
 msgstr "Se reîncarcă documentul de la %s"
 
-#: ../shell/ev-window.c:2346
+#: ../shell/ev-window.c:2411
 msgid "Failed to reload document."
 msgstr "Reîncărcarea documentului a eșuat."
 
-#: ../shell/ev-window.c:2562
+#: ../shell/ev-window.c:2643
 msgid "Open Document"
 msgstr "Deschidere document"
 
-#: ../shell/ev-window.c:2635
+#: ../shell/ev-window.c:2718
 #, c-format
 msgid "Saving document to %s"
 msgstr "Se salvează documentul în %s"
 
-#: ../shell/ev-window.c:2638
+#: ../shell/ev-window.c:2721
 #, c-format
 msgid "Saving attachment to %s"
 msgstr "Se salvează atașamentul în %s"
 
-#: ../shell/ev-window.c:2641
+#: ../shell/ev-window.c:2724
 #, c-format
 msgid "Saving image to %s"
 msgstr "Se salvează imaginea în %s"
 
-#: ../shell/ev-window.c:2685 ../shell/ev-window.c:2785
+#: ../shell/ev-window.c:2768 ../shell/ev-window.c:2868
 #, c-format
 msgid "The file could not be saved as “%s”."
 msgstr "Fișierul nu a putut fi salvat ca „%s”."
 
-#: ../shell/ev-window.c:2716
+#: ../shell/ev-window.c:2799
 #, c-format
 msgid "Uploading document (%d%%)"
 msgstr "Se încarcă documentul (%d%%)"
 
-#: ../shell/ev-window.c:2720
+#: ../shell/ev-window.c:2803
 #, c-format
 msgid "Uploading attachment (%d%%)"
 msgstr "Se încarcă atașamentul (%d%%)"
 
-#: ../shell/ev-window.c:2724
+#: ../shell/ev-window.c:2807
 #, c-format
 msgid "Uploading image (%d%%)"
 msgstr "Se încarcă imaginea (%d%%)"
 
-#: ../shell/ev-window.c:2837
+#: ../shell/ev-window.c:2920
 msgid "Save As…"
 msgstr "Salvează ca…"
 
-#: ../shell/ev-window.c:2932
+#: ../shell/ev-window.c:3014
 msgid "Could not send current document"
 msgstr "Nu s-a putut trimite documentul actual"
 
-#: ../shell/ev-window.c:3237
+#: ../shell/ev-window.c:3319
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
@@ -1250,50 +1290,50 @@ msgstr[0] "o sarcină în așteptare în coadă"
 msgstr[1] "%d sarcini în așteptare în coadă"
 msgstr[2] "%d de sarcini în așteptare în coadă"
 
-#: ../shell/ev-window.c:3350
+#: ../shell/ev-window.c:3432
 #, c-format
 msgid "Printing job “%s”"
 msgstr "Se tipărește sarcina „%s”"
 
-#: ../shell/ev-window.c:3565
+#: ../shell/ev-window.c:3642
 msgid "Document contains form fields that have been filled out. "
-msgstr "Documentul conține câmpuri de formular care au fost completate. "
+msgstr "Documentul conține câmpuri care au fost completate. "
 
-#: ../shell/ev-window.c:3568
+#: ../shell/ev-window.c:3645
 msgid "Document contains new or modified annotations. "
 msgstr "Documentul conține adnotări noi sau modificate. "
 
-#: ../shell/ev-window.c:3580
+#: ../shell/ev-window.c:3657
 #, c-format
 msgid "Reload document “%s”?"
 msgstr "Reîncărcați documentul „%s”?"
 
-#: ../shell/ev-window.c:3582
+#: ../shell/ev-window.c:3659
 msgid "If you reload the document, changes will be permanently lost."
 msgstr "Dacă reîncărcați documentul, modificările vor fi pierdute definitiv."
 
-#: ../shell/ev-window.c:3586
+#: ../shell/ev-window.c:3663
 msgid "Reload"
 msgstr "Reîncarcă"
 
-#: ../shell/ev-window.c:3593
+#: ../shell/ev-window.c:3670
 #, c-format
 msgid "Save a copy of document “%s” before closing?"
 msgstr "Salvați o copie a documentului „%s” înainte de închidere?"
 
-#: ../shell/ev-window.c:3595
+#: ../shell/ev-window.c:3672
 msgid "If you don’t save a copy, changes will be permanently lost."
 msgstr "Dacă nu salvați o copie, modificările vor fi pierdute definitiv."
 
-#: ../shell/ev-window.c:3597
+#: ../shell/ev-window.c:3674
 msgid "Close _without Saving"
 msgstr "Închide _fără a salva"
 
-#: ../shell/ev-window.c:3601
+#: ../shell/ev-window.c:3678
 msgid "Save a _Copy"
 msgstr "Salvează o _copie"
 
-#: ../shell/ev-window.c:3685
+#: ../shell/ev-window.c:3762
 #, c-format
 msgid "Wait until print job “%s” finishes before closing?"
 msgstr ""
@@ -1303,7 +1343,7 @@ msgstr ""
 #. TRANS: the singular form is not really used as n_print_jobs > 1
 #. but some languages distinguish between different plurals forms,
 #. so the ngettext is needed.
-#: ../shell/ev-window.c:3691
+#: ../shell/ev-window.c:3768
 #, c-format
 msgid "There is %d print job active. Wait until print finishes before closing?"
 msgid_plural ""
@@ -1318,31 +1358,57 @@ msgstr[2] ""
 "Există %d de sarcini de tipărire active. Așteptați până când tipărirea se "
 "termină înainte de a închide?"
 
-#: ../shell/ev-window.c:3706
+#: ../shell/ev-window.c:3783
 msgid "If you close the window, pending print jobs will not be printed."
 msgstr "Dacă închideți fereastra, sarcinile în așteptare nu vor fi tipărite."
 
-#: ../shell/ev-window.c:3710
+#: ../shell/ev-window.c:3787
 msgid "Cancel _print and Close"
 msgstr "Anulează ti_părirea și ieși"
 
-#: ../shell/ev-window.c:3714
+#: ../shell/ev-window.c:3791
 msgid "Close _after Printing"
 msgstr "Ieși după termin_area tipăririi"
 
-#: ../shell/ev-window.c:4244
+#: ../shell/ev-window.c:3915 ../org.gnome.Evince.appdata.xml.in.h:1
+msgid "Evince"
+msgstr "Evince"
+
+#: ../shell/ev-window.c:3917
+msgid "© 1996–2017 The Evince authors"
+msgstr "© 1996–2017 Autorii Evince"
+
+#: ../shell/ev-window.c:3923
+msgid "translator-credits"
+msgstr ""
+"Eugen Paiuc <eug_paiuc@bluewin.ch>\n"
+"Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
+"Mișu Moldovan <dumol@gnome.ro>\n"
+"Florentina Mușat <florentina.musat.28 [at] gmail [dot] com>, 2018\n"
+"\n"
+"Contribuții din Launchpad:\n"
+"  Dread Knight https://launchpad.net/~dread.knight\n"
+"  Gheorghe Pop https://launchpad.net/~pop-gheorghe\n"
+"  Ionuț Jula https://launchpad.net/~ionutjula\n"
+"  Lucian Adrian Grijincu https://launchpad.net/~lucian.grijincu"
+
+#: ../shell/ev-window.c:4431
 msgid "Running in presentation mode"
 msgstr "Pornit în modul de prezentare"
 
-#: ../shell/ev-window.c:5393
+#: ../shell/ev-window.c:5343
+msgid "The attachment could not be saved."
+msgstr "Atașamentul nu a putut fi salvat."
+
+#: ../shell/ev-window.c:5642
 msgid "Enable caret navigation?"
 msgstr "Activează navigarea de tip cursor?"
 
-#: ../shell/ev-window.c:5395
+#: ../shell/ev-window.c:5644
 msgid "_Enable"
 msgstr "Activ_ează"
 
-#: ../shell/ev-window.c:5398
+#: ../shell/ev-window.c:5647
 msgid ""
 "Pressing F7 turns the caret navigation on or off. This feature places a "
 "moveable cursor in text pages, allowing you to move around and select text "
@@ -1353,103 +1419,100 @@ msgstr ""
 "permițându-vă să mutați și să selectați text folosind tastatura. Doriți să "
 "activați navigarea de tip cursor?"
 
-#: ../shell/ev-window.c:5403
+#: ../shell/ev-window.c:5652
 msgid "Don’t show this message again"
 msgstr "Nu arăta din nou acest mesaj"
 
-#: ../shell/ev-window.c:5942 ../shell/ev-window.c:5958
+#: ../shell/ev-window.c:6197 ../shell/ev-window.c:6213
 msgid "Unable to launch external application."
 msgstr "Nu s-a putut lansa aplicația externă."
 
-#: ../shell/ev-window.c:6019
+#: ../shell/ev-window.c:6274
 msgid "Unable to open external link"
 msgstr "Adresa externă nu a putut fi deschisă"
 
-#: ../shell/ev-window.c:6222
+#: ../shell/ev-window.c:6487
 msgid "Couldn’t find appropriate format to save image"
-msgstr "Nu a putut fi găsit un format potrivit pentru salvarea imaginii"
+msgstr "Nu s-a găsit un format potrivit pentru salvarea imaginii"
 
-#: ../shell/ev-window.c:6254
+#: ../shell/ev-window.c:6519
 msgid "The image could not be saved."
 msgstr "Imaginea nu a putut fi salvată."
 
-#: ../shell/ev-window.c:6289
+#: ../shell/ev-window.c:6554
 msgid "Save Image"
 msgstr "Salvează imaginea"
 
-#: ../shell/ev-window.c:6448
+#: ../shell/ev-window.c:6713
 msgid "Unable to open attachment"
 msgstr "Atașamentul nu a putut fi deschis"
 
-#: ../shell/ev-window.c:6504
-msgid "The attachment could not be saved."
-msgstr "Atașamentul nu a putut fi salvat."
-
-#: ../shell/ev-window.c:6552
+#: ../shell/ev-window.c:6779
 msgid "Save Attachment"
 msgstr "Salvează atașamentul"
 
-#: ../shell/ev-window-title.c:118
+#: ../shell/ev-window-title.c:107
 msgid "Recent Documents"
 msgstr "Documente recente"
 
-#: ../shell/ev-window-title.c:153 ../shell/ev-window-title.c:157
+#: ../shell/ev-window-title.c:151 ../shell/ev-window-title.c:153
+#: ../shell/ev-window-title.c:158
 msgid "Password Required"
 msgstr "E nevoie de parolă"
 
-#: ../shell/ev-zoom-action.c:48
+#: ../shell/ev-zoom-action.c:49
 msgid "50%"
 msgstr "50%"
 
-#: ../shell/ev-zoom-action.c:49
+#: ../shell/ev-zoom-action.c:50
 msgid "70%"
 msgstr "70%"
 
-#: ../shell/ev-zoom-action.c:50
+#: ../shell/ev-zoom-action.c:51
 msgid "85%"
 msgstr "85%"
 
-#: ../shell/ev-zoom-action.c:51
+#: ../shell/ev-zoom-action.c:52
 msgid "100%"
 msgstr "100%"
 
-#: ../shell/ev-zoom-action.c:52
+#: ../shell/ev-zoom-action.c:53
 msgid "125%"
 msgstr "125%"
 
-#: ../shell/ev-zoom-action.c:53
+#: ../shell/ev-zoom-action.c:54
 msgid "150%"
 msgstr "150%"
 
-#: ../shell/ev-zoom-action.c:54
+#: ../shell/ev-zoom-action.c:55
 msgid "175%"
 msgstr "175%"
 
-#: ../shell/ev-zoom-action.c:55
+#: ../shell/ev-zoom-action.c:56
 msgid "200%"
 msgstr "200%"
 
-#: ../shell/ev-zoom-action.c:56
+#: ../shell/ev-zoom-action.c:57
 msgid "300%"
 msgstr "300%"
 
-#: ../shell/ev-zoom-action.c:57
+#: ../shell/ev-zoom-action.c:58
 msgid "400%"
 msgstr "400%"
 
-#: ../shell/ev-zoom-action.c:58
+#: ../shell/ev-zoom-action.c:59
 msgid "800%"
 msgstr "800%"
 
-#: ../shell/ev-zoom-action.c:59
+#: ../shell/ev-zoom-action.c:60
 msgid "1600%"
 msgstr "1600%"
 
-#: ../shell/ev-zoom-action.c:60
+#: ../shell/ev-zoom-action.c:61
 msgid "3200%"
 msgstr "3200%"
 
-#: ../shell/ev-zoom-action.c:61
+#: ../shell/ev-zoom-action.c:62
 msgid "6400%"
 msgstr "6400%"
 
@@ -1505,182 +1568,178 @@ msgstr "ȘIR"
 msgid "[FILE…]"
 msgstr "[FIȘIER…]"
 
-#: ../shell/evince-menus.ui.h:1
-msgid "_New Window"
-msgstr "Fereastră _nouă"
-
 #: ../shell/evince-menus.ui.h:2
-msgid "_Keyboard Shortcuts"
-msgstr "Scurtături _tastatură"
+msgid "Fullscreen"
+msgstr "Ecran complet"
 
 #: ../shell/evince-menus.ui.h:3
-msgid "_Help"
-msgstr "_Ajutor"
+msgid "Send To…"
+msgstr "Trimite la…"
 
 #: ../shell/evince-menus.ui.h:4
-msgid "_About"
-msgstr "_Despre"
+msgid "New _Window"
+msgstr "Fereastră no_uă"
 
 #: ../shell/evince-menus.ui.h:5
-msgid "_Continuous"
-msgstr "C_ontinuu"
+msgid "Open a C_opy"
+msgstr "Deschide o c_opie"
 
 #: ../shell/evince-menus.ui.h:6
-msgid "_Dual"
-msgstr "_Dual"
-
-#: ../shell/evince-menus.ui.h:7
-msgid "Side _Pane"
-msgstr "_Vedere laterală"
-
-#: ../shell/evince-menus.ui.h:8
-msgid "_Fullscreen"
-msgstr "_Pe tot ecranul"
-
-#: ../shell/evince-menus.ui.h:9
-msgid "Pre_sentation"
-msgstr "Pre_zentare"
-
-#: ../shell/evince-menus.ui.h:10
-msgid "Rotate _Left"
-msgstr "Rotește la _stânga"
-
-#: ../shell/evince-menus.ui.h:11
-msgid "Rotate _Right"
-msgstr "Rotește la _dreapta"
-
-#: ../shell/evince-menus.ui.h:12
-msgid "First Page"
-msgstr "Prima pagină"
-
-#: ../shell/evince-menus.ui.h:13
-msgid "Previous Page"
-msgstr "Pagina precedentă"
-
-#: ../shell/evince-menus.ui.h:14
-msgid "Next Page"
-msgstr "Pagina următoare"
-
-#: ../shell/evince-menus.ui.h:15
-msgid "Last Page"
-msgstr "Ultima pagină"
-
-#: ../shell/evince-menus.ui.h:16
-msgid "Zoom _In"
-msgstr "Aprop_ie"
-
-#: ../shell/evince-menus.ui.h:17
-msgid "Zoom _Out"
-msgstr "_Depărtează"
-
-#: ../shell/evince-menus.ui.h:18
-msgid "_Odd Pages Left"
-msgstr "_Paginile impare la stânga"
-
-#: ../shell/evince-menus.ui.h:19
-msgid "_Inverted Colors"
-msgstr "Culori _inversate"
-
-#: ../shell/evince-menus.ui.h:20
-msgid "_Reload"
-msgstr "_Reîncarcă"
-
-#: ../shell/evince-menus.ui.h:21
-msgid "_Open…"
-msgstr "_Deschide…"
-
-#: ../shell/evince-menus.ui.h:22
-msgid "Op_en a Copy"
-msgstr "D_eschide o copie"
-
-#: ../shell/evince-menus.ui.h:23
 msgid "_Save As…"
 msgstr "_Salvează ca…"
 
-#: ../shell/evince-menus.ui.h:24
-msgid "Send _To…"
-msgstr "_Trimite la…"
-
-#: ../shell/evince-menus.ui.h:25
+#: ../shell/evince-menus.ui.h:7
 msgid "Open Containing _Folder"
 msgstr "Deschide _dosarul conținător"
 
-#: ../shell/evince-menus.ui.h:26
-msgid "_Print…"
-msgstr "Ti_părește…"
+#: ../shell/evince-menus.ui.h:8
+msgid "Present as _Slideshow"
+msgstr "Prezintă ca _succesiune de diapozitive"
 
-#: ../shell/evince-menus.ui.h:27
-msgid "P_roperties…"
-msgstr "P_roprietăți…"
+#: ../shell/evince-menus.ui.h:9
+msgid "_Continuous"
+msgstr "C_ontinuu"
 
-#: ../shell/evince-menus.ui.h:28
-msgid "_Copy"
-msgstr "_Copiază"
+#: ../shell/evince-menus.ui.h:10
+msgid "_Dual"
+msgstr "_Dual"
 
-#: ../shell/evince-menus.ui.h:29
-msgid "Select _All"
-msgstr "Selectează t_ot"
+#: ../shell/evince-menus.ui.h:11
+msgid "_Odd Pages Left"
+msgstr "_Paginile impare la stânga"
 
-#: ../shell/evince-menus.ui.h:30
-msgid "Save Current Settings as _Default"
-msgstr "Salvea_ză configurările curente ca implicite"
+#: ../shell/evince-menus.ui.h:12
+msgid "Ro_tate ⤵"
+msgstr "Ro_tește ⤵"
 
-#: ../shell/evince-menus.ui.h:31
-msgid "_Add Bookmark"
-msgstr "_Adaugă semn de carte"
+#: ../shell/evince-menus.ui.h:13
+msgid "Ni_ght Mode"
+msgstr "Mod no_cturn"
 
-#: ../shell/evince-menus.ui.h:32
-msgid "_Close"
-msgstr "În_chide"
+#: ../shell/evince-menus.ui.h:14
+msgid "Prop_erties…"
+msgstr "Propri_etăți…"
 
-#: ../shell/evince-menus.ui.h:36
+#: ../shell/evince-menus.ui.h:15
+msgid "Save Current Settings as Defa_ult"
+msgstr "Salvează configurările c_urente ca implicite"
+
+#: ../shell/evince-menus.ui.h:16
+msgid "_Keyboard Shortcuts"
+msgstr "Scurtături de _tastatură"
+
+#: ../shell/evince-menus.ui.h:17
+msgid "_Help"
+msgstr "_Ajutor"
+
+#: ../shell/evince-menus.ui.h:18
+msgid "_About"
+msgstr "_Despre"
+
+#: ../shell/evince-menus.ui.h:19
+msgid "Zoom _In"
+msgstr "Aprop_ie"
+
+#: ../shell/evince-menus.ui.h:20
+msgid "Zoom _Out"
+msgstr "_Depărtează"
+
+#: ../shell/evince-menus.ui.h:24
 msgid "_Open Link"
 msgstr "_Deschide adresa"
 
-#: ../shell/evince-menus.ui.h:37
+#: ../shell/evince-menus.ui.h:25
 msgid "_Copy Link Address"
 msgstr "_Copiază adresa"
 
-#: ../shell/evince-menus.ui.h:38
+#: ../shell/evince-menus.ui.h:26
 msgid "_Go To"
 msgstr "_Navigare"
 
-#: ../shell/evince-menus.ui.h:39
+#: ../shell/evince-menus.ui.h:27
 msgid "Open in New _Window"
 msgstr "Deschide într-o nouă _fereastră"
 
-#: ../shell/evince-menus.ui.h:42
+#: ../shell/evince-menus.ui.h:30
+msgid "_Reload"
+msgstr "_Reîncarcă"
+
+#: ../shell/evince-menus.ui.h:31
 msgid "Auto_scroll"
 msgstr "Derulare _automată"
 
-#: ../shell/evince-menus.ui.h:43
+#: ../shell/evince-menus.ui.h:32
+msgid "_Copy"
+msgstr "_Copiază"
+
+#: ../shell/evince-menus.ui.h:33
+msgid "Select _All"
+msgstr "Selectează t_ot"
+
+#: ../shell/evince-menus.ui.h:34
 msgid "_Save Image As…"
 msgstr "_Salvează imaginea ca…"
 
-#: ../shell/evince-menus.ui.h:44
+#: ../shell/evince-menus.ui.h:35
 msgid "Copy _Image"
 msgstr "Copiază _imaginea"
 
-#: ../shell/evince-menus.ui.h:45
+#: ../shell/evince-menus.ui.h:36
 msgid "_Open Attachment"
 msgstr "_Deschide atașament"
 
-#: ../shell/evince-menus.ui.h:46
+#: ../shell/evince-menus.ui.h:37
 msgid "_Save Attachment As…"
 msgstr "_Salvează atașamentul ca…"
 
-#: ../shell/evince-menus.ui.h:47
+#: ../shell/evince-menus.ui.h:38
 msgid "Annotation Properties…"
 msgstr "Proprietăți adnotare…"
 
-#: ../shell/evince-menus.ui.h:48
+#: ../shell/evince-menus.ui.h:39
 msgid "Remove Annotation"
 msgstr "Elimină adnotarea"
+
+#: ../shell/evince-menus.ui.h:40
+msgid "Highlight Selected Text"
+msgstr "Evidențiază textul selectat"
+
+#: ../shell/evince-menus.ui.h:41
+msgid "Navigation"
+msgstr "Navigare"
+
+#: ../shell/evince-menus.ui.h:42
+msgid "First Page"
+msgstr "Prima pagină"
+
+#: ../shell/evince-menus.ui.h:43
+msgid "Previous Page"
+msgstr "Pagina precedentă"
+
+#: ../shell/evince-menus.ui.h:44
+msgid "Next Page"
+msgstr "Pagina următoare"
+
+#: ../shell/evince-menus.ui.h:45
+msgid "Last Page"
+msgstr "Ultima pagină"
+
+#: ../shell/evince-menus.ui.h:46
+msgid "History"
+msgstr "Istoric"
+
+#: ../shell/evince-menus.ui.h:47
+msgid "Back"
+msgstr "Înapoi"
+
+#: ../shell/evince-menus.ui.h:48
+msgid "Forward"
+msgstr "Înainte"
 
 #: ../shell/help-overlay.ui.h:1
 msgctxt "shortcut window"
 msgid "Opening, closing, saving and printing"
-msgstr "Deschiderea, închiderea, salvarea și tipărirea"
+msgstr "Deschidere, închidere, salvare și tipărire"
 
 #: ../shell/help-overlay.ui.h:2
 msgctxt "shortcut window"
@@ -1710,148 +1769,267 @@ msgstr "Închide fereastra documentului curent"
 #: ../shell/help-overlay.ui.h:7
 msgctxt "shortcut window"
 msgid "Reload the document"
-msgstr "Reîncărcare document"
+msgstr "Reîncarcă documentul"
 
 #: ../shell/help-overlay.ui.h:8
 msgctxt "shortcut window"
-msgid "Selecting and copying text"
-msgstr "Selectarea și copierea de text"
+msgid "Window"
+msgstr "Fereastră"
 
 #: ../shell/help-overlay.ui.h:9
+msgctxt "shortcut window"
+msgid "Toggle fullscreen"
+msgstr "Comută modul pe tot ecranul"
+
+#: ../shell/help-overlay.ui.h:10
+msgctxt "shortcut window"
+msgid "Enter presentation mode"
+msgstr "Intră în modul de prezentare"
+
+#: ../shell/help-overlay.ui.h:11
+msgctxt "shortcut window"
+msgid "Toggle sidebar"
+msgstr "Comută bara laterală"
+
+#: ../shell/help-overlay.ui.h:12
+msgctxt "shortcut window"
+msgid "Toggle caret navigation"
+msgstr "Comută navigarea de tip cursor"
+
+#: ../shell/help-overlay.ui.h:13
+msgctxt "shortcut window"
+msgid "Selecting and copying text"
+msgstr "Selectarea și copoierea textului"
+
+#: ../shell/help-overlay.ui.h:14
 msgctxt "shortcut window"
 msgid "Copy highlighted text"
 msgstr "Copiază textul evidențiat"
 
-#: ../shell/help-overlay.ui.h:10
-msgctxt "shortcut window"
-msgid "Select all the text in a document"
-msgstr "Selectează tot textul într-un document"
-
-#: ../shell/help-overlay.ui.h:11
-msgctxt "shortcut window"
-msgid "Moving around the document"
-msgstr "Navigarea în document"
-
-#: ../shell/help-overlay.ui.h:12
-msgctxt "shortcut window"
-msgid "Move around a page"
-msgstr "Navigare într-o pagină"
-
-#: ../shell/help-overlay.ui.h:13
-msgctxt "shortcut window"
-msgid "Move up/down a page several lines at a time"
-msgstr "Mutare în sus/jos într-o pagină câteva linii la rând"
-
-#: ../shell/help-overlay.ui.h:14
-msgctxt "shortcut window"
-msgid "Go to page number"
-msgstr "Navighează la numărul de pagină"
-
 #: ../shell/help-overlay.ui.h:15
 msgctxt "shortcut window"
-msgid "Go to the beginning/end of a page"
-msgstr "Navighează la începutul/sfârșitul unei pagini"
+msgid "Select all the text in a document"
+msgstr "Selectează tot textul dintr-un document"
 
 #: ../shell/help-overlay.ui.h:16
 msgctxt "shortcut window"
-msgid "Go to the beginning of the document"
-msgstr "Navighează la începutul documentului"
+msgid "Rotating and zooming"
+msgstr "Rotire și zoom"
 
 #: ../shell/help-overlay.ui.h:17
-msgctxt "shortcut window"
-msgid "Go to the end of the document"
-msgstr "Navighează la sfârșitul documentului"
-
-#: ../shell/help-overlay.ui.h:18
-msgctxt "shortcut window"
-msgid "Finding text"
-msgstr "Căutare de text"
-
-#: ../shell/help-overlay.ui.h:19
-msgctxt "shortcut window"
-msgid "Show the search bar"
-msgstr "Afișează bara de căutare"
-
-#: ../shell/help-overlay.ui.h:20
-msgctxt "shortcut window"
-msgid "Go to the next search result"
-msgstr "Navighează la rezultatul următor al căutării"
-
-#: ../shell/help-overlay.ui.h:21
-msgctxt "shortcut window"
-msgid "Go to the previous search result"
-msgstr "Navighează la rezultatul anterior al căutării"
-
-#: ../shell/help-overlay.ui.h:22
-msgctxt "shortcut window"
-msgid "Rotating and zooming"
-msgstr "Rotarea și focalizarea"
-
-#: ../shell/help-overlay.ui.h:23
 msgctxt "shortcut window"
 msgid "Rotate the page 90 degrees counter-clockwise"
 msgstr "Rotește pagina cu 90 de grade în sens anti-orar"
 
-#: ../shell/help-overlay.ui.h:24
+#: ../shell/help-overlay.ui.h:18
 msgctxt "shortcut window"
 msgid "Rotate the page 90 degrees clockwise"
 msgstr "Rotește pagina cu 90 de grade în sens orar"
 
-#: ../shell/help-overlay.ui.h:25
+#: ../shell/help-overlay.ui.h:19
 msgctxt "shortcut window"
 msgid "Zoom in"
-msgstr "Mărire"
+msgstr "Apropie"
+
+#: ../shell/help-overlay.ui.h:20
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr "Depărtează"
+
+#: ../shell/help-overlay.ui.h:21
+msgctxt "shortcut window"
+msgid "Zoom 1∶1"
+msgstr "Focalizare 1∶1"
+
+#: ../shell/help-overlay.ui.h:22
+msgctxt "shortcut window"
+msgid "Fit page"
+msgstr "Încadrează pagina"
+
+#: ../shell/help-overlay.ui.h:23
+msgctxt "shortcut window"
+msgid "Fit width"
+msgstr "Încadrează la lățime"
+
+#: ../shell/help-overlay.ui.h:24
+msgctxt "shortcut window"
+msgid "Automatic zoom"
+msgstr "Zoom automat"
+
+#: ../shell/help-overlay.ui.h:25
+msgctxt "shortcut window"
+msgid "Moving around the document"
+msgstr "Mutarea documentului"
 
 #: ../shell/help-overlay.ui.h:26
 msgctxt "shortcut window"
-msgid "Zoom out"
-msgstr "Micșorare"
+msgid "Move around a page"
+msgstr "Mutarea unei pagini"
 
 #: ../shell/help-overlay.ui.h:27
 msgctxt "shortcut window"
-msgid "Fit page"
-msgstr "Potrivește la pagină"
+msgid "Move up/down a page several lines at a time"
+msgstr "Mută sus/jos o pagină cu câteva linii"
 
 #: ../shell/help-overlay.ui.h:28
 msgctxt "shortcut window"
-msgid "Fit width"
-msgstr "Potrivește la lățime"
+msgid "Go to previous/next page"
+msgstr "Navighează la pagina precedentă/următoare"
 
 #: ../shell/help-overlay.ui.h:29
 msgctxt "shortcut window"
-msgid "Automatic zoom"
-msgstr "Focalizare automată"
+msgid "Go to previous/next page visited"
+msgstr "Navighează la precedenta/următoarea pagină vizitată"
 
 #: ../shell/help-overlay.ui.h:30
 msgctxt "shortcut window"
-msgid "Touchpad gestures"
-msgstr "Gesturi touchpad"
+msgid "Go to page number"
+msgstr "Navighează la pagina cu numărul"
 
 #: ../shell/help-overlay.ui.h:31
+msgctxt "shortcut window"
+msgid "Go to the beginning/end of a page"
+msgstr "Navighează la începutul/sfârșitul unei pagini"
+
+#: ../shell/help-overlay.ui.h:32
+msgctxt "shortcut window"
+msgid "Go to the beginning of the document"
+msgstr "Navighează la începutul documentului"
+
+#: ../shell/help-overlay.ui.h:33
+msgctxt "shortcut window"
+msgid "Go to the end of the document"
+msgstr "Navighează la sfârșitul documentului"
+
+#: ../shell/help-overlay.ui.h:34
+msgctxt "shortcut window"
+msgid "Finding text"
+msgstr "Căutarea de text"
+
+#: ../shell/help-overlay.ui.h:35
+msgctxt "shortcut window"
+msgid "Show the search bar"
+msgstr "Arată bara de căutare"
+
+#: ../shell/help-overlay.ui.h:36
+msgctxt "shortcut window"
+msgid "Go to the next search result"
+msgstr "Navighează la următorul rezultat al căutării"
+
+#: ../shell/help-overlay.ui.h:37
+msgctxt "shortcut window"
+msgid "Go to the previous search result"
+msgstr "Navighează la precedentul rezultat al căutării"
+
+#: ../shell/help-overlay.ui.h:38
+msgctxt "shortcut window"
+msgid "Document view and handling"
+msgstr "Vizualizare și administrare document"
+
+#: ../shell/help-overlay.ui.h:39
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "Adaugă semn de carte"
+
+#: ../shell/help-overlay.ui.h:40
+msgctxt "shortcut window"
+msgid "Toggle inverted colors"
+msgstr "Comută inversarea culorilor"
+
+#: ../shell/help-overlay.ui.h:41
+msgctxt "shortcut window"
+msgid "Toggle continuous scrolling"
+msgstr "Comută derularea continuă"
+
+#: ../shell/help-overlay.ui.h:42
+msgctxt "shortcut window"
+msgid "Toggle dual page"
+msgstr "Compută modul două pagini"
+
+#: ../shell/help-overlay.ui.h:43
+msgctxt "shortcut window"
+msgid "Touchpad gestures"
+msgstr "Gesturi pentru touchpad"
+
+#: ../shell/help-overlay.ui.h:44
 msgctxt "shortcut window"
 msgid "Go to next page"
 msgstr "Navighează la pagina următoare"
 
-#: ../shell/help-overlay.ui.h:32
+#: ../shell/help-overlay.ui.h:45
 msgctxt "shortcut window"
 msgid "Go to previous page"
 msgstr "Navighează la pagina precedentă"
 
-#: ../evince.appdata.xml.in.h:2
+#: ../org.gnome.Evince.appdata.xml.in.h:2
 msgid "Document viewer for popular document formats"
 msgstr "Vizualizator de documente pentru formatele populare"
 
-#: ../evince.appdata.xml.in.h:3
-msgid "This is a document viewer for the GNOME desktop."
-msgstr "Acesta este un vizualizator de documente pentru desktopul GNOME."
-
-#: ../evince.appdata.xml.in.h:4
+#: ../org.gnome.Evince.appdata.xml.in.h:3
 msgid ""
-"It supports the following document formats: PDF, PS, EPS, XPS, DjVu, TIFF, "
-"DVI (with SyncTeX), and Comic Books archives (CBR, CBT, CBZ, CB7)."
+"A document viewer for the GNOME desktop. You can view, search or annotate "
+"documents in many different formats."
 msgstr ""
-"Suportă următoarele formate de documente: PDF, PS, EPS, XPS, DjVu, TIFF, DVI "
-"(cu SyncTeX), și arhive de benzi desenate (CBR, CBT, CBZ, CB7)."
+"Un vizualizator de documente pentru desktopul GNOME. Aveți posibilitatea de "
+"a vizualiza, căuta sau adnota documente în multe formate diferite."
+
+#: ../org.gnome.Evince.appdata.xml.in.h:4
+msgid ""
+"Evince supports documents in: PDF, PS, EPS, XPS, DjVu, TIFF, DVI (with "
+"SyncTeX), and Comic Books archives (CBR, CBT, CBZ, CB7)."
+msgstr ""
+"Evince suportă documente în: PDF, PS, EPS, XPS, DjVu, TIFF, DVI (cu "
+"SyncTeX), și arhive de benzi desenate (CBR, CBT, CBZ, CB7)."
+
+#: ../org.gnome.Evince.appdata.xml.in.h:5
+msgid "A clear, simple UI"
+msgstr "Un UI simplu, clar"
+
+#: ../org.gnome.Evince.appdata.xml.in.h:6
+msgid "Advanced highlighting and annotation"
+msgstr "Evidențiere și adnotare avansată"
+
+#~ msgid "Encoding"
+#~ msgstr "Codare"
+
+#~ msgid "Substituting with"
+#~ msgstr "Se înlocuiește cu"
+
+#~ msgid "Go to previous history item"
+#~ msgstr "Navighează la precendentul element de istoric"
+
+#~ msgid "Go to next history item"
+#~ msgstr "Navighează la următorul element de istoric"
+
+#~ msgid "View options"
+#~ msgstr "Opțiuni vizualizare"
+
+#~ msgid "Pre_sentation"
+#~ msgstr "Pre_zentare"
+
+#~ msgid "Rotate _Right"
+#~ msgstr "Rotește la _dreapta"
+
+#~ msgid "_Inverted Colors"
+#~ msgstr "Culori _inversate"
+
+#~ msgid "Enable Spellchecking"
+#~ msgstr "Activează verificarea ortografiei"
+
+#~ msgid "_Open…"
+#~ msgstr "_Deschide…"
+
+#~ msgid "_Print…"
+#~ msgstr "Ti_părește…"
+
+#~ msgid "_Add Bookmark"
+#~ msgstr "_Adaugă semn de carte"
+
+#~ msgid "_Close"
+#~ msgstr "În_chide"
+
+#~ msgid "This is a document viewer for the GNOME desktop."
+#~ msgstr "Acesta este un vizualizator de documente pentru desktopul GNOME."
 
 #~ msgid ""
 #~ "Error launching the command “%s” in order to decompress the comic book: %s"
@@ -2098,9 +2276,6 @@ msgstr ""
 #~ msgid "_Contents"
 #~ msgstr "_Cuprins"
 
-#~ msgid "Leave Fullscreen"
-#~ msgstr "Mărime normală"
-
 #~ msgid "Leave fullscreen mode"
 #~ msgstr "Mărime normală"
 
@@ -2127,12 +2302,6 @@ msgstr ""
 
 #~ msgid "Zoom"
 #~ msgstr "Zoom"
-
-#~ msgid "Navigation"
-#~ msgstr "Navigare"
-
-#~ msgid "Back"
-#~ msgstr "Înapoi"
 
 #~ msgid "Open Folder"
 #~ msgstr "Deschide dosarul"
@@ -2187,9 +2356,6 @@ msgstr ""
 #~ "Formatul metadatelor folosit de Evince s-a schimbat și, prin urmare, "
 #~ "trebuie migrat. Dacă migrarea este anulată stocarea acestora nu va "
 #~ "funcționa."
-
-#~ msgid "Impress Slides"
-#~ msgstr "Diapozitive Impress"
 
 #~ msgid "No error"
 #~ msgstr "Fără eroare"

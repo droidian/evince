@@ -1,13 +1,21 @@
 =================
-Evince    3.28.2
+Evince    3.29.91
 =================
 
-UI translations:
- * Daniel Șerbănescu (ro)
- * Stas Solovey (ru)
+Bug fixes and improvements.
 
-Doc translations:
- * Anders Jonsson (sv)
+=================
+Evince    3.29.90
+=================
+
+Revamped the user interface.
+Bug fixes and improvements.
+
+=================
+Evince    3.29.1
+=================
+
+Bug fixes and improvements.
 
 =================
 Evince    3.28.0
@@ -378,10 +386,13 @@ Bug fixes:
     * Fix several memory leaks (#770070 and #770069, Eric R. Schulz)
     * Fix scaling calculation in PostScript backend (#755776, Jason
       Crain)
-    * Fix a crash when processing button events in EvView (#769700,
-      Marek Kasik)
     * Fix a crash when opening a copy of a document with annotation
       popup windows (#760299, Jose Aliste)
+
+Security Fixes:
+
+    * Fix a crash when processing button events in EvView (#769700)
+      CVE-2013-3718. (Marek Kasik)
 
 Translation updates:
 
@@ -2973,10 +2984,13 @@ New Features and UI Improvements:
 Bug fixes:
 
     * Fix return value in g_return_val_if_fail() macro (Daniel Garcia)
-    * Fix several security issues in dvi backend: CVE-2010-2640,
-      CVE-2010-2641, CVE-2010-2642 and CVE-2010-2643 (José Aliste)
     * Do not use deprecated API: GdkCursor, GtkStyle, size-request
       (Carlos Garcia Campos)
+
+Security Fixes:
+
+    * Fix several security issues in dvi backend: CVE-2010-2640,
+      CVE-2010-2641, CVE-2010-2642 and CVE-2010-2643 (José Aliste)
 
 Translation updates:
 
@@ -5212,7 +5226,7 @@ Bug Fixes:
 
 Security Fixes:
 
-    * Buffer overflow in PS backend. CVE-2006-5864. (Carlos Garcia Campos)
+    * Buffer overflow in PS backend (#380191). CVE-2006-5864. (Carlos Garcia Campos)
 
 Translations:
 

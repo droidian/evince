@@ -4,6 +4,7 @@
     <value nick="fit-page" value="0"/>
     <value nick="fit-width" value="1"/>
     <value nick="free" value="2"/>
+    <value nick="automatic" value="3"/>
   </enum>
 
   <schema id="org.gnome.Evince" path="/org/gnome/evince/" gettext-domain="evince">
@@ -42,6 +43,9 @@
   </schema>
 
   <schema id="org.gnome.Evince.Default" path="/org/gnome/evince/default/" gettext-domain="evince">
+    <key name="enable-spellchecking" type="b">
+      <default>true</default>
+    </key>
     <key name="show-toolbar" type="b">
       <default>true</default>
     </key>
@@ -52,7 +56,7 @@
       <default>(0., 0.)</default>
     </key>
     <key name="sizing-mode" enum="org.gnome.Evince.SizingMode">
-      <default>'fit-width'</default>
+      <default>'automatic'</default>
     </key>
     <key name="zoom" type="d">
       <default>1.</default>

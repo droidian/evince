@@ -168,6 +168,8 @@ struct _EvView {
 	gint scroll_x;
 	gint scroll_y;	
 
+	guint update_cursor_idle_id;
+
 	/* Delta sum for emulating normal scrolling */
 	gdouble       total_delta;
 	PendingScroll pending_scroll;
@@ -227,6 +229,7 @@ struct _EvView {
 	AddingAnnotInfo    adding_annot_info;
 	MovingAnnotInfo    moving_annot_info;
 	GHashTable        *annot_window_map;
+	gboolean           enable_spellchecking;
 
 	/* Focus */
 	EvMapping *focused_element;

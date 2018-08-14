@@ -3,8 +3,8 @@
 # *****************************************************************************
 
 m4_define([ev_major_version],[3])
-m4_define([ev_minor_version],[28])
-m4_define([ev_micro_version],[2])
+m4_define([ev_minor_version],[29])
+m4_define([ev_micro_version],[91])
 m4_define([ev_extra_version],[])
 m4_define([ev_version],[ev_major_version.ev_minor_version.ev_micro_version()ev_extra_version])
 
@@ -129,6 +129,8 @@ LIBSECRET_REQUIRED=0.5
 GTK_REQUIRED=3.16.0
 NAUTILUS_REQUIRED=2.91.4
 GDK_PIXBUF_REQUIRED=2.36.5
+GSPELL_REQUIRED=1.6.0
+SYNCTEX_REQUIRED=1.19
 
 AC_SUBST([GLIB_REQUIRED])
 AC_SUBST([GTK_REQUIRED])
@@ -286,6 +288,19 @@ if test "$with_keyring" = "yes"; then
         PKG_CHECK_MODULES(LIBSECRET, libsecret-1 >= $LIBSECRET_REQUIRED)
         AC_DEFINE([WITH_KEYRING],[1],[Define if KEYRING support is enabled])
 fi
+# *******************
+# Gspell
+# *******************
+
+AC_ARG_WITH(gspell,
+	[AS_HELP_STRING([--without-gspell],
+			[Disable the gpell support])],
+	[],
+	[with_gspell=yes])
+if test "$with_gspell" = "yes"; then
+	PKG_CHECK_MODULES(GSPELL, gspell-1 >= $GSPELL_REQUIRED)
+	AC_DEFINE([WITH_GSPELL],[1],[Define if GSPELL support is enabled])
+fi
 
 # ****
 # DBUS
@@ -393,8 +408,8 @@ LIBDOCUMENT_LIBS="$LIBDOCUMENT_LIBS"
 AC_SUBST(LIBDOCUMENT_CFLAGS)
 AC_SUBST(LIBDOCUMENT_LIBS)
 
-LIBVIEW_CFLAGS="$LIBVIEW_CFLAGS $GTKUNIXPRINT_CFLAGS $GSTREAMER_CFLAGS $DEBUG_FLAGS"
-LIBVIEW_LIBS="$LIBVIEW_LIBS $GTKUNIXPRINT_LIBS $GSTREAMER_LIBS -lm"
+LIBVIEW_CFLAGS="$LIBVIEW_CFLAGS $GTKUNIXPRINT_CFLAGS $GSTREAMER_CFLAGS $GSPELL_CFLAGS $DEBUG_FLAGS"
+LIBVIEW_LIBS="$LIBVIEW_LIBS $GTKUNIXPRINT_LIBS $GSTREAMER_LIBS $GSPELL_LIBS -lm"
 AC_SUBST(LIBVIEW_CFLAGS)
 AC_SUBST(LIBVIEW_LIBS)
 
@@ -521,6 +536,19 @@ if test -z "$enable_introspection"; then
 fi
 
 GOBJECT_INTROSPECTION_CHECK([1.0])
+
+dnl ================== libsynctex ===========================================
+
+PKG_CHECK_MODULES(SYNCTEX, [synctex >= $SYNCTEX_REQUIRED], has_synctex=system, has_synctex=internal)
+
+dnl not found? use internal code copy.
+if test "x$has_synctex" = "xinternal"; then
+	SYNCTEX_LIBS="\$(top_builddir)/cut-n-paste/synctex/libsynctex.la"
+	SYNCTEX_CFLAGS="-I\$(top_srcdir)/cut-n-paste/synctex"
+fi
+AC_SUBST(SYNCTEX_LIBS)
+AC_SUBST(SYNCTEX_CFLAGS)
+AM_CONDITIONAL(USE_INTERNAL_SYNCTEX, test x$has_synctex = xinternal)
 
 dnl ================== portability checks ===========================================
 
@@ -926,8 +954,8 @@ cut-n-paste/unarr/Makefile
 cut-n-paste/unarr/common/Makefile
 cut-n-paste/unarr/lzmasdk/Makefile
 cut-n-paste/unarr/rar/Makefile
-data/evince.desktop.in
-data/evince-previewer.desktop.in
+data/org.gnome.Evince.desktop.in
+data/org.gnome.Evince-previewer.desktop.in
 data/Makefile
 data/icons/Makefile
 data/icons/16x16/Makefile
@@ -1018,5 +1046,6 @@ Keyring integration ......:  $with_keyring
 GTK+ Unix Print ..........:  $with_gtk_unix_print
 Thumbnail cache ..........:  $enable_gnome_desktop
 Multimedia ...............:  $enable_multimedia
-
+Spell Checker.............:  $with_gspell
+SyncTeX ..................:  $has_synctex
 ])

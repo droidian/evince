@@ -200,6 +200,8 @@ struct _EvWindowPrivate {
 	char *uri;
 	glong uri_mtime;
 	char *local_uri;
+	char *display_name;
+	char *edit_name;
 	gboolean in_reload;
 	EvFileMonitor *monitor;
 	guint setup_document_idle;
@@ -272,6 +274,12 @@ struct _EvWindowPrivate {
 #define LAYERS_SIDEBAR_ID "layers"
 #define ANNOTS_SIDEBAR_ID "annotations"
 #define BOOKMARKS_SIDEBAR_ID "bookmarks"
+#define LINKS_SIDEBAR_ICON EV_STOCK_OUTLINE
+#define THUMBNAILS_SIDEBAR_ICON "view-grid-symbolic"
+#define ATTACHMENTS_SIDEBAR_ICON "mail-attachment-symbolic"
+#define LAYERS_SIDEBAR_ICON "view-paged-symbolic"
+#define ANNOTS_SIDEBAR_ICON "accessories-text-editor-symbolic"
+#define BOOKMARKS_SIDEBAR_ICON "user-bookmarks-symbolic"
 
 #define EV_PRINT_SETTINGS_FILE  "print-settings"
 #define EV_PRINT_SETTINGS_GROUP "Print Settings"
@@ -332,6 +340,9 @@ static void     ev_window_popup_cmd_open_link_new_window(GSimpleAction    *actio
 static void     ev_window_popup_cmd_copy_link_address   (GSimpleAction    *action,
 							 GVariant         *parameter,
 							 gpointer          user_data);
+static void     ev_window_popup_cmd_annotate_selected_text (GSimpleAction    *action,
+							    GVariant         *parameter,
+							    gpointer          user_data);
 static void     ev_window_popup_cmd_save_image_as       (GSimpleAction    *action,
 							 GVariant         *parameter,
 							 gpointer          user_data);
@@ -376,6 +387,9 @@ static void     ev_window_destroy_recent_view           (EvWindow         *ev_wi
 static void     recent_view_item_activated_cb           (EvRecentView     *recent_view,
                                                          const char       *uri,
                                                          EvWindow         *ev_window);
+static void     ev_window_fullscreen_show_toolbar       (EvWindow         *ev_window);
+static void     ev_window_begin_add_annot               (EvWindow         *ev_window,
+							 EvAnnotationType  annot_type);
 
 static gchar *nautilus_sendto = NULL;
 
@@ -528,6 +542,11 @@ ev_window_update_actions_sensitivity (EvWindow *ev_window)
 				      !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "inverted-colors",
 				      has_pages && !recent_view_mode);
+#if WITH_GSPELL
+	ev_window_set_action_enabled (ev_window, "enable-spellchecking", TRUE);
+#else
+	ev_window_set_action_enabled (ev_window, "enable-spellchecking", FALSE);
+#endif
 
 	/* Bookmarks menu */
 	ev_window_set_action_enabled (ev_window, "add-bookmark",
@@ -548,6 +567,7 @@ ev_window_update_actions_sensitivity (EvWindow *ev_window)
 	ev_window_set_action_enabled (ev_window, "open-menu", !recent_view_mode);
 
 	/* Same for popups specific actions */
+	ev_window_set_action_enabled (ev_window, "annotate-selected-text", !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "open-link", !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "open-link-new-window", !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "go-to-link", !recent_view_mode);
@@ -642,6 +662,9 @@ update_chrome_visibility (EvWindow *window)
 
 	set_widget_visibility (priv->toolbar, toolbar);
 	set_widget_visibility (priv->sidebar, sidebar);
+
+	if (toolbar && ev_document_model_get_fullscreen (window->priv->model))
+		ev_window_fullscreen_show_toolbar (window);
 }
 
 static void
@@ -1406,6 +1429,20 @@ ev_window_setup_default (EvWindow *ev_window)
 	ev_document_model_set_sizing_mode (model, g_settings_get_enum (settings, "sizing-mode"));
 	if (ev_document_model_get_sizing_mode (model) == EV_SIZING_FREE)
 		ev_document_model_set_scale (model, g_settings_get_double (settings, "zoom"));
+
+	g_simple_action_set_state (
+		G_SIMPLE_ACTION (g_action_map_lookup_action (G_ACTION_MAP (ev_window),
+		                                             "enable-spellchecking")),
+		g_variant_new_boolean (
+#ifdef WITH_GSPELL
+		g_settings_get_boolean (settings, "enable-spellchecking")
+#else
+		FALSE
+#endif
+		)
+	);
+	ev_view_set_enable_spellchecking (EV_VIEW (ev_window->priv->view),
+		g_settings_get_boolean (settings, "enable-spellchecking"));
 }
 
 static void
@@ -1461,7 +1498,8 @@ ev_window_setup_document (EvWindow *ev_window)
 
 	ev_window_set_page_mode (ev_window, PAGE_MODE_DOCUMENT);
 	ev_window_title_set_document (ev_window->priv->title, document);
-	ev_window_title_set_uri (ev_window->priv->title, ev_window->priv->uri);
+	ev_window_title_set_filename (ev_window->priv->title,
+				      ev_window->priv->display_name);
 
         ev_window_ensure_settings (ev_window);
 
@@ -1741,19 +1779,21 @@ ev_window_load_job_cb (EvJob *job,
 		}
 
 		/* We need to ask the user for a password */
-		ev_window_title_set_uri (ev_window->priv->title,
-					 ev_window->priv->uri);
+		ev_window_title_set_filename (ev_window->priv->title,
+					      ev_window->priv->display_name);
 		ev_window_title_set_type (ev_window->priv->title,
 					  EV_WINDOW_TITLE_PASSWORD);
 
-		ev_password_view_set_uri (EV_PASSWORD_VIEW (ev_window->priv->password_view),
-					  job_load->uri);
+		ev_password_view_set_filename (EV_PASSWORD_VIEW (ev_window->priv->password_view),
+					       ev_window->priv->display_name);
 
 		ev_window_set_page_mode (ev_window, PAGE_MODE_PASSWORD);
 
 		ev_job_load_set_password (job_load, NULL);
 		ev_password_view_ask_password (EV_PASSWORD_VIEW (ev_window->priv->password_view));
 	} else {
+		ev_toolbar_set_mode (EV_TOOLBAR (ev_window->priv->toolbar),
+				     EV_TOOLBAR_MODE_RECENT_VIEW);
 		text = g_uri_unescape_string (job_load->uri, NULL);
 		display_name = g_markup_escape_text (text, -1);
 		g_free (text);
@@ -2013,6 +2053,8 @@ window_open_file_copy_ready_cb (GFile        *source,
 		ev_window_clear_local_uri (ev_window);
 		g_free (ev_window->priv->uri);
 		ev_window->priv->uri = NULL;
+		g_clear_pointer (&ev_window->priv->display_name, g_free);
+		g_clear_pointer (&ev_window->priv->edit_name, g_free);
 		g_object_unref (source);
 
 		ev_window_hide_loading_message (ev_window);
@@ -2064,9 +2106,8 @@ ev_window_load_file_remote (EvWindow *ev_window,
 		/* We'd like to keep extension of source uri since
 		 * it helps to resolve some mime types, say cbz.
                  */
-		base_name = g_file_get_basename (source_file);
+		base_name = ev_window->priv->edit_name;
                 template = g_strdup_printf ("document.XXXXXX-%s", base_name);
-                g_free (base_name);
 
                 tmp_file = ev_mkstemp_file (template, &err);
 		g_free (template);
@@ -2099,6 +2140,35 @@ ev_window_load_file_remote (EvWindow *ev_window,
 
 	ev_window_show_progress_message (ev_window, 1,
 					 (GSourceFunc)show_loading_progress);
+}
+
+static void
+set_filenames (EvWindow *ev_window, GFile *f)
+{
+	EvWindowPrivate *priv = ev_window->priv;
+	GFileInfo       *info;
+	GError          *error = NULL;
+
+	g_clear_pointer (&priv->display_name, g_free);
+	g_clear_pointer (&priv->edit_name, g_free);
+
+	info = g_file_query_info (f,
+				  G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME ","
+				  G_FILE_ATTRIBUTE_STANDARD_EDIT_NAME,
+			          G_FILE_QUERY_INFO_NONE, NULL, &error);
+	if (info) {
+		priv->display_name = g_strdup (g_file_info_get_display_name (info));
+		priv->edit_name = g_strdup (g_file_info_get_edit_name (info));
+		g_object_unref (info);
+	} else {
+		g_warning ("%s: %s", G_STRFUNC, error->message);
+		g_error_free (error);
+	}
+
+	if (!priv->display_name)
+		priv->display_name = g_file_get_basename (f);
+	if (!priv->edit_name)
+		priv->edit_name = g_file_get_basename (f);
 }
 
 void
@@ -2166,6 +2236,7 @@ ev_window_open_uri (EvWindow       *ev_window,
 		g_object_unref (ev_window->priv->dest);
 	ev_window->priv->dest = dest ? g_object_ref (dest) : NULL;
 
+	set_filenames (ev_window, source_file);
 	setup_size_from_metadata (ev_window);
 	setup_model_from_metadata (ev_window);
 
@@ -2552,6 +2623,22 @@ file_open_dialog_response_cb (GtkWidget *chooser,
 }
 
 static void
+ev_window_cmd_new_window (GSimpleAction *action,
+			  GVariant      *parameter,
+			  gpointer       user_data)
+{
+
+	EvWindow  *window = user_data;
+	GdkScreen *screen;
+	guint32    timestamp;
+
+	screen = gtk_window_get_screen (GTK_WINDOW (window));
+        timestamp = gtk_get_current_event_time ();
+
+	ev_application_new_window (EV_APP, screen, timestamp);
+}
+
+static void
 ev_window_cmd_file_open (GSimpleAction *action,
 			 GVariant      *parameter,
 			 gpointer       user_data)
@@ -2589,6 +2676,8 @@ ev_window_open_copy_at_dest (EvWindow   *window,
 
 	if (window->priv->metadata)
 		new_window->priv->metadata = g_object_ref (window->priv->metadata);
+	new_window->priv->display_name = g_strdup (window->priv->display_name);
+	new_window->priv->edit_name = g_strdup (window->priv->edit_name);
 	ev_window_open_document (new_window,
 				 window->priv->document,
 				 dest, 0, NULL);
@@ -2851,13 +2940,12 @@ ev_window_save_as (EvWindow *ev_window)
 	gtk_file_chooser_set_do_overwrite_confirmation (GTK_FILE_CHOOSER (fc), TRUE);
 
 	file = g_file_new_for_uri (ev_window->priv->uri);
-	base_name = g_file_get_basename (file);
+	base_name = ev_window->priv->edit_name;
 	parent = g_file_get_parent (file);
 	dir_name = g_file_get_path (parent);
 	g_object_unref (parent);
 
 	gtk_file_chooser_set_current_name (GTK_FILE_CHOOSER (fc), base_name);
-	g_free (base_name);
 
 	documents_dir = g_get_user_special_dir (G_USER_DIRECTORY_DOCUMENTS);
 	default_dir = g_file_test (documents_dir, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_DIR) ?
@@ -3396,8 +3484,6 @@ ev_window_print_range (EvWindow *ev_window,
 	gint              document_last_page;
 	gboolean          embed_page_setup;
 	gchar            *output_basename;
-	gchar            *unescaped_basename;
-	const gchar      *document_uri;
 	gchar            *dot;
 
 	g_return_if_fail (EV_IS_WINDOW (ev_window));
@@ -3446,18 +3532,15 @@ ev_window_print_range (EvWindow *ev_window,
 						    &range, 1);
 	}
 
-	document_uri = ev_document_get_uri (ev_window->priv->document);
-	output_basename = g_path_get_basename (document_uri);
+	output_basename = g_strdup (ev_window->priv->edit_name);
 	dot = g_strrstr (output_basename, ".");
 	if (dot)
 		dot[0] = '\0';
 
-	unescaped_basename = g_uri_unescape_string (output_basename, NULL);
 	/* Set output basename for printing to file */
 	gtk_print_settings_set (print_settings,
 			        GTK_PRINT_SETTINGS_OUTPUT_BASENAME,
-			        unescaped_basename);
-	g_free (unescaped_basename);
+			        output_basename);
 	g_free (output_basename);
 
 	ev_print_operation_set_job_name (op, gtk_window_get_title (GTK_WINDOW (ev_window)));
@@ -3872,6 +3955,18 @@ ev_window_cmd_view_zoom (GSimpleAction *action,
 }
 
 static void
+ev_window_cmd_set_default_zoom (GSimpleAction *action,
+				GVariant      *parameter,
+				gpointer       user_data)
+{
+	EvWindow *ev_window = user_data;
+
+	ev_document_model_set_sizing_mode (ev_window->priv->model, EV_SIZING_FREE);
+	ev_document_model_set_scale (ev_window->priv->model,
+				     1. * get_screen_dpi (ev_window) / 72.0);
+}
+
+static void
 ev_window_cmd_edit_select_all (GSimpleAction *action,
 			       GVariant      *parameter,
 			       gpointer       user_data)
@@ -3901,7 +3996,18 @@ ev_window_cmd_find (GSimpleAction *action,
 		    GVariant      *parameter,
 		    gpointer       user_data)
 {
+	EvView *view;
+	gchar *selected_text = NULL;
 	EvWindow *ev_window = user_data;
+
+	view = EV_VIEW (ev_window->priv->view);
+        selected_text = ev_view_get_selected_text (view);
+
+        if (selected_text != NULL) {
+		GtkSearchEntry *entry = ev_search_box_get_entry (EV_SEARCH_BOX (ev_window->priv->search_box));
+		gtk_entry_set_text (GTK_ENTRY (entry), selected_text);
+		g_free (selected_text);
+	}
 
 	ev_window_show_find_bar (ev_window, TRUE);
 }
@@ -4259,16 +4365,6 @@ ev_window_uninhibit_screensaver (EvWindow *window)
 }
 
 static void
-ev_window_update_presentation_action (EvWindow *window)
-{
-	GAction *action;
-
-	action = g_action_map_lookup_action (G_ACTION_MAP (window), "presentation");
-	g_simple_action_set_state (G_SIMPLE_ACTION (action),
-				   g_variant_new_boolean (EV_WINDOW_IS_PRESENTATION (window)));
-}
-
-static void
 ev_window_view_presentation_finished (EvWindow *window)
 {
 	ev_window_stop_presentation (window, TRUE);
@@ -4333,7 +4429,6 @@ ev_window_run_presentation (EvWindow *window)
 			    TRUE, TRUE, 0);
 
 	gtk_widget_hide (window->priv->hpaned);
-	ev_window_update_presentation_action (window);
 	update_chrome_visibility (window);
 
 	gtk_widget_grab_focus (window->priv->presentation_view);
@@ -4368,7 +4463,6 @@ ev_window_stop_presentation (EvWindow *window,
 	window->priv->presentation_view = NULL;
 
 	gtk_widget_show (window->priv->hpaned);
-	ev_window_update_presentation_action (window);
 	update_chrome_visibility (window);
 	if (unfullscreen_window)
 		gtk_window_unfullscreen (GTK_WINDOW (window));
@@ -4388,9 +4482,8 @@ ev_window_cmd_view_presentation (GSimpleAction *action,
 {
 	EvWindow *window = user_data;
 
-	if (g_variant_get_boolean (state)) {
+	if (!EV_WINDOW_IS_PRESENTATION (window))
 		ev_window_run_presentation (window);
-	}
 	/* We don't exit presentation when action is toggled because it conflicts with some
 	 * remote controls. The behaviour is also consistent with libreoffice and other
 	 * presentation tools. See https://bugzilla.gnome.org/show_bug.cgi?id=556162
@@ -4509,11 +4602,24 @@ ev_window_cmd_view_inverted_colors (GSimpleAction *action,
 }
 
 static void
+ev_window_cmd_view_enable_spellchecking (GSimpleAction *action,
+				    GVariant      *state,
+				    gpointer       user_data)
+{
+	EvWindow *ev_window = user_data;
+
+	ev_view_set_enable_spellchecking (EV_VIEW (ev_window->priv->view),
+	g_variant_get_boolean (state));
+	g_simple_action_set_state (action, state);
+}
+
+static void
 ev_window_cmd_edit_save_settings (GSimpleAction *action,
 				  GVariant      *state,
 				  gpointer       user_data)
 {
 	EvWindow        *ev_window = user_data;
+	EvView          *ev_view = EV_VIEW (ev_window->priv->view);
 	EvWindowPrivate *priv = ev_window->priv;
 	EvDocumentModel *model = priv->model;
 	GSettings       *settings = priv->default_settings;
@@ -4543,6 +4649,8 @@ ev_window_cmd_edit_save_settings (GSimpleAction *action,
 			    gtk_paned_get_position (GTK_PANED (priv->hpaned)));
 	g_settings_set_string (settings, "sidebar-page",
 			       ev_window_sidebar_get_current_page_id (ev_window));
+	g_settings_set_boolean (settings, "enable-spellchecking",
+				ev_view_get_enable_spellchecking (ev_view));
 	g_settings_apply (settings);
 }
 
@@ -4711,6 +4819,20 @@ ev_window_cmd_bookmarks_add (GSimpleAction *action,
 
 	/* EvBookmarks takes ownership of bookmark */
 	ev_bookmarks_add (window->priv->bookmarks, &bm);
+}
+
+static void
+ev_window_cmd_bookmarks_delete (GSimpleAction *action,
+				GVariant      *parameter,
+				gpointer       user_data)
+{
+	EvWindow *window = user_data;
+	EvBookmark bm;
+
+	bm.page = ev_document_model_get_page (window->priv->model);
+	bm.title = NULL;
+
+	ev_bookmarks_delete (window->priv->bookmarks, &bm);
 }
 
 static void
@@ -4963,7 +5085,6 @@ view_menu_link_popup (EvWindow *ev_window,
 {
 	gboolean  show_external = FALSE;
 	gboolean  show_internal = FALSE;
-	GAction  *action;
 
 	g_clear_object (&ev_window->priv->link);
 	if (link) {
@@ -4988,24 +5109,17 @@ view_menu_link_popup (EvWindow *ev_window,
 		}
 	}
 
-	action = g_action_map_lookup_action (G_ACTION_MAP (ev_window), "open-link");
-	g_simple_action_set_enabled (G_SIMPLE_ACTION (action), show_external);
+	ev_window_set_action_enabled (ev_window, "open-link", show_external);
+	ev_window_set_action_enabled (ev_window, "copy-link-address", show_external);
+	ev_window_set_action_enabled (ev_window, "go-to-link", show_internal);
 
-	action = g_action_map_lookup_action (G_ACTION_MAP (ev_window), "copy-link-address");
-	g_simple_action_set_enabled (G_SIMPLE_ACTION (action), show_external);
-
-	action = g_action_map_lookup_action (G_ACTION_MAP (ev_window), "go-to-link");
-	g_simple_action_set_enabled (G_SIMPLE_ACTION (action), show_internal);
-
-	action = g_action_map_lookup_action (G_ACTION_MAP (ev_window), "open-link-new-window");
-	g_simple_action_set_enabled (G_SIMPLE_ACTION (action), show_internal);
+	ev_window_set_action_enabled (ev_window, "open-link-new-window", show_internal);
 }
 
 static void
 view_menu_image_popup (EvWindow  *ev_window,
 		       EvImage   *image)
 {
-	GAction *action;
 	gboolean show_image = FALSE;
 
 	g_clear_object (&ev_window->priv->image);
@@ -5014,18 +5128,14 @@ view_menu_image_popup (EvWindow  *ev_window,
 		show_image = TRUE;
 	}
 
-	action = g_action_map_lookup_action (G_ACTION_MAP (ev_window), "save-image");
-	g_simple_action_set_enabled (G_SIMPLE_ACTION (action), show_image);
-
-	action = g_action_map_lookup_action (G_ACTION_MAP (ev_window), "copy-image");
-	g_simple_action_set_enabled (G_SIMPLE_ACTION (action), show_image);
+	ev_window_set_action_enabled (ev_window, "save-image", show_image);
+	ev_window_set_action_enabled (ev_window, "copy-image", show_image);
 }
 
 static void
 view_menu_annot_popup (EvWindow     *ev_window,
 		       EvAnnotation *annot)
 {
-	GAction *action;
 	gboolean show_annot_props = FALSE;
 	gboolean show_attachment = FALSE;
 	gboolean can_remove_annots = FALSE;
@@ -5045,6 +5155,7 @@ view_menu_annot_popup (EvWindow     *ev_window,
 
 				g_list_free_full (ev_window->priv->attach_list,
 						  g_object_unref);
+				ev_window->priv->attach_list = NULL;
 				ev_window->priv->attach_list =
 					g_list_prepend (ev_window->priv->attach_list,
 							g_object_ref (attachment));
@@ -5055,17 +5166,10 @@ view_menu_annot_popup (EvWindow     *ev_window,
 	if (EV_IS_DOCUMENT_ANNOTATIONS (ev_window->priv->document))
 		can_remove_annots = ev_document_annotations_can_remove_annotation (EV_DOCUMENT_ANNOTATIONS (ev_window->priv->document));
 
-	action = g_action_map_lookup_action (G_ACTION_MAP (ev_window), "annot-properties");
-	g_simple_action_set_enabled (G_SIMPLE_ACTION (action), show_annot_props);
-
-	action = g_action_map_lookup_action (G_ACTION_MAP (ev_window), "remove-annot");
-	g_simple_action_set_enabled (G_SIMPLE_ACTION (action), annot != NULL && can_remove_annots);
-
-	action = g_action_map_lookup_action (G_ACTION_MAP (ev_window), "open-attachment");
-	g_simple_action_set_enabled (G_SIMPLE_ACTION (action), show_attachment);
-
-	action = g_action_map_lookup_action (G_ACTION_MAP (ev_window), "save-attachment");
-	g_simple_action_set_enabled (G_SIMPLE_ACTION (action), show_attachment);
+	ev_window_set_action_enabled (ev_window, "annot-properties", show_annot_props);
+	ev_window_set_action_enabled (ev_window, "remove-annot", annot != NULL && can_remove_annots);
+	ev_window_set_action_enabled (ev_window, "open-attachment", show_attachment);
+	ev_window_set_action_enabled (ev_window, "save-attachment", show_attachment);
 }
 
 static gboolean
@@ -5077,6 +5181,7 @@ view_menu_popup_cb (EvView   *view,
 	gboolean has_link = FALSE;
 	gboolean has_image = FALSE;
 	gboolean has_annot = FALSE;
+	gboolean can_annotate;
 
 	for (l = items; l; l = g_list_next (l)) {
 		if (EV_IS_LINK (l->data)) {
@@ -5098,6 +5203,10 @@ view_menu_popup_cb (EvView   *view,
 	if (!has_annot)
 		view_menu_annot_popup (ev_window, NULL);
 
+	can_annotate = !has_annot && ev_view_get_has_selection (view);
+
+	ev_window_set_action_enabled (ev_window, "annotate-selected-text", can_annotate);
+
 	if (!ev_window->priv->view_popup) {
 		ev_window->priv->view_popup = gtk_menu_new_from_model (ev_window->priv->view_popup_menu);
 		gtk_menu_attach_to_widget (GTK_MENU (ev_window->priv->view_popup),
@@ -5115,15 +5224,11 @@ attachment_bar_menu_popup_cb (EvSidebarAttachments *attachbar,
 			      GList                *attach_list,
 			      EvWindow             *ev_window)
 {
-	GAction *action;
-
 	g_assert (attach_list != NULL);
 
-	action = g_action_map_lookup_action (G_ACTION_MAP (ev_window), "open-attachment");
-	g_simple_action_set_enabled (G_SIMPLE_ACTION (action), TRUE);
+	ev_window_set_action_enabled (ev_window, "open-attachment", TRUE);
 
-	action = g_action_map_lookup_action (G_ACTION_MAP (ev_window), "save-attachment");
-	g_simple_action_set_enabled (G_SIMPLE_ACTION (action), TRUE);
+	ev_window_set_action_enabled (ev_window, "save-attachment", TRUE);
 
 	g_list_free_full (ev_window->priv->attach_list, g_object_unref);
 	ev_window->priv->attach_list = attach_list;
@@ -5139,6 +5244,83 @@ attachment_bar_menu_popup_cb (EvSidebarAttachments *attachbar,
 			3, gtk_get_current_event_time ());
 
 	return TRUE;
+}
+
+static gboolean
+save_attachment_to_target_file (EvAttachment *attachment,
+                                GFile        *target_file,
+                                gboolean      is_dir,
+                                gboolean      is_native,
+                                EvWindow     *ev_window)
+{
+	GFile  *save_to = NULL;
+	GError *error = NULL;
+
+	if (is_native) {
+		if (is_dir) {
+			save_to = g_file_get_child (target_file,
+                            /* FIXMEchpe: file name encoding! */
+						    ev_attachment_get_name (attachment));
+		} else {
+			save_to = g_object_ref (target_file);
+		}
+	} else {
+		save_to = ev_mkstemp_file ("saveattachment.XXXXXX", &error);
+	}
+
+        if (save_to)
+                ev_attachment_save (attachment, save_to, &error);
+
+	if (error) {
+		ev_window_error_message (ev_window, error, 
+					 "%s", _("The attachment could not be saved."));
+		g_error_free (error);
+		g_object_unref (save_to);
+
+		return FALSE;
+	}
+
+	if (!is_native) {
+		GFile *dest_file;
+
+		if (is_dir) {
+			dest_file = g_file_get_child (target_file,
+						      ev_attachment_get_name (attachment));
+		} else {
+			dest_file = g_object_ref (target_file);
+		}
+
+		ev_window_save_remote (ev_window, EV_SAVE_ATTACHMENT,
+				       save_to, dest_file);
+
+		g_object_unref (dest_file);
+	}
+
+	g_object_unref (save_to);
+	return TRUE;
+}
+
+static gboolean
+attachment_bar_save_attachment_cb (EvSidebarAttachments  *attachbar,
+                                   EvAttachment          *attachment,
+                                   const char            *uri,
+                                   EvWindow              *ev_window)
+{
+	GFile    *target_file;
+	gboolean  is_native;
+	gboolean  success;
+
+	target_file = g_file_new_for_uri (uri);
+	is_native = g_file_is_native (target_file);
+
+	success = save_attachment_to_target_file (attachment,
+	                                          target_file,
+	                                          FALSE,
+	                                          is_native,
+	                                          ev_window);
+
+	g_object_unref (target_file);
+	return success;
 }
 
 static void
@@ -5229,6 +5411,13 @@ search_bar_search_mode_enabled_changed (GtkSearchBar *search_bar,
 		/* Handle the case of search bar close button clicked */
 		ev_window_close_find_bar (ev_window);
 	}
+}
+
+void
+ev_window_handle_annot_popup (EvWindow     *ev_window,
+			      EvAnnotation *annot)
+{
+	view_menu_annot_popup (ev_window, annot);
 }
 
 static void
@@ -5418,6 +5607,26 @@ ev_window_cmd_view_toggle_caret_navigation (GSimpleAction *action,
 }
 
 static void
+ev_window_cmd_add_highlight_annotation (GSimpleAction *action,
+                                        GVariant      *state,
+                                        gpointer       user_data)
+{
+	EvWindow *ev_window = user_data;
+
+	ev_window_begin_add_annot (ev_window, EV_ANNOTATION_TYPE_TEXT_MARKUP);
+}
+
+static void
+ev_window_cmd_add_annotation (GSimpleAction *action,
+			      GVariant      *state,
+			      gpointer       user_data)
+{
+	EvWindow *ev_window = user_data;
+
+	ev_window_begin_add_annot (ev_window, EV_ANNOTATION_TYPE_TEXT);
+}
+
+static void
 ev_window_cmd_toggle_edit_annots (GSimpleAction *action,
 				  GVariant      *state,
 				  gpointer       user_data)
@@ -5577,10 +5786,7 @@ ev_window_dispose (GObject *object)
 	}
 
 	if (priv->attach_list) {
-		g_list_foreach (priv->attach_list,
-				(GFunc) g_object_unref,
-				NULL);
-		g_list_free (priv->attach_list);
+		g_list_free_full (priv->attach_list, g_object_unref);
 		priv->attach_list = NULL;
 	}
 
@@ -5588,6 +5794,9 @@ ev_window_dispose (GObject *object)
 		g_free (priv->uri);
 		priv->uri = NULL;
 	}
+
+	g_clear_pointer (&priv->display_name, g_free);
+	g_clear_pointer (&priv->edit_name, g_free);
 
 	if (priv->search_string) {
 		g_free (priv->search_string);
@@ -5690,6 +5899,7 @@ ev_window_class_init (EvWindowClass *ev_window_class)
 }
 
 static const GActionEntry actions[] = {
+	{ "new", ev_window_cmd_new_window },
 	{ "open", ev_window_cmd_file_open },
 	{ "open-copy", ev_window_cmd_file_open_copy },
 	{ "save-as", ev_window_cmd_save_as },
@@ -5718,8 +5928,9 @@ static const GActionEntry actions[] = {
 	{ "dual-odd-left", NULL, NULL, "false", ev_window_cmd_dual_odd_pages_left },
 	{ "show-side-pane", NULL, NULL, "false", ev_window_view_cmd_toggle_sidebar },
 	{ "inverted-colors", NULL, NULL, "false", ev_window_cmd_view_inverted_colors },
+	{ "enable-spellchecking", NULL, NULL, "false", ev_window_cmd_view_enable_spellchecking },
 	{ "fullscreen", NULL, NULL, "false", ev_window_cmd_view_fullscreen },
-	{ "presentation", NULL, NULL, "false", ev_window_cmd_view_presentation },
+	{ "presentation", ev_window_cmd_view_presentation },
 	{ "rotate-left", ev_window_cmd_edit_rotate_left },
 	{ "rotate-right", ev_window_cmd_edit_rotate_right },
 	{ "zoom-in", ev_window_cmd_view_zoom_in },
@@ -5727,17 +5938,22 @@ static const GActionEntry actions[] = {
 	{ "reload", ev_window_cmd_view_reload },
 	{ "auto-scroll", ev_window_cmd_view_autoscroll },
 	{ "add-bookmark", ev_window_cmd_bookmarks_add },
+	{ "delete-bookmark", ev_window_cmd_bookmarks_delete },
 	{ "goto-bookmark", ev_window_activate_goto_bookmark_action, "u" },
 	{ "close", ev_window_cmd_file_close_window },
 	{ "scroll-forward", ev_window_cmd_scroll_forward },
 	{ "scroll-backwards", ev_window_cmd_scroll_backwards },
 	{ "sizing-mode", NULL, "s", "'free'", ev_window_change_sizing_mode_action_state },
 	{ "zoom", ev_window_cmd_view_zoom, "d" },
+	{ "default-zoom", ev_window_cmd_set_default_zoom },
 	{ "escape", ev_window_cmd_escape },
 	{ "open-menu", ev_window_cmd_action_menu },
 	{ "caret-navigation", NULL, NULL, "false", ev_window_cmd_view_toggle_caret_navigation },
+	{ "add-annotation", NULL, NULL, "false", ev_window_cmd_add_annotation },
+	{ "highlight-annotation", NULL, NULL, "false", ev_window_cmd_add_highlight_annotation },
 	{ "toggle-edit-annots", NULL, NULL, "false", ev_window_cmd_toggle_edit_annots },
 	/* Popups specific items */
+	{ "annotate-selected-text", ev_window_popup_cmd_annotate_selected_text },
 	{ "open-link", ev_window_popup_cmd_open_link },
 	{ "open-link-new-window", ev_window_popup_cmd_open_link_new_window },
 	{ "go-to-link", ev_window_popup_cmd_open_link },
@@ -5792,6 +6008,12 @@ static void
 ev_window_begin_add_annot (EvWindow        *window,
 			   EvAnnotationType annot_type)
 {
+	if (annot_type == EV_ANNOTATION_TYPE_TEXT_MARKUP &&
+	    ev_view_get_has_selection (EV_VIEW (window->priv->view))) {
+		ev_view_add_text_markup_annotation_for_selected_text (EV_VIEW (window->priv->view));
+		return;
+	}
+
 	ev_view_begin_add_annotation (EV_VIEW (window->priv->view), annot_type);
 }
 
@@ -6113,6 +6335,16 @@ ev_window_popup_cmd_open_link (GSimpleAction *action,
 	EvWindow *window = user_data;
 
 	ev_view_handle_link (EV_VIEW (window->priv->view), window->priv->link);
+}
+
+static void
+ev_window_popup_cmd_annotate_selected_text (GSimpleAction *action,
+					    GVariant      *parameter,
+					    gpointer       user_data)
+{
+	EvWindow *ev_window = user_data;
+	EvView *view = EV_VIEW (ev_window->priv->view);
+	ev_view_add_text_markup_annotation_for_selected_text (view);
 }
 
 static void
@@ -6479,52 +6711,14 @@ attachment_save_dialog_response_cb (GtkWidget *fc,
 	
 	for (l = ev_window->priv->attach_list; l && l->data; l = g_list_next (l)) {
 		EvAttachment *attachment;
-		GFile        *save_to = NULL;
-		GError       *error = NULL;
 		
 		attachment = (EvAttachment *) l->data;
 
-		if (is_native) {
-			if (is_dir) {
-				save_to = g_file_get_child (target_file,
-                                    /* FIXMEchpe: file name encoding! */
-							    ev_attachment_get_name (attachment));
-			} else {
-				save_to = g_object_ref (target_file);
-			}
-		} else {
-			save_to = ev_mkstemp_file ("saveattachment.XXXXXX", &error);
-		}
-
-                if (save_to)
-                        ev_attachment_save (attachment, save_to, &error);
-		
-		if (error) {
-			ev_window_error_message (ev_window, error, 
-						 "%s", _("The attachment could not be saved."));
-			g_error_free (error);
-			g_object_unref (save_to);
-
-			continue;
-		}
-
-		if (!is_native) {
-			GFile *dest_file;
-
-			if (is_dir) {
-				dest_file = g_file_get_child (target_file,
-							      ev_attachment_get_name (attachment));
-			} else {
-				dest_file = g_object_ref (target_file);
-			}
-
-			ev_window_save_remote (ev_window, EV_SAVE_ATTACHMENT,
-					       save_to, dest_file);
-
-			g_object_unref (dest_file);
-		}
-
-		g_object_unref (save_to);
+		save_attachment_to_target_file (attachment,
+		                                target_file,
+		                                is_dir,
+		                                is_native,
+		                                ev_window);
 	}
 
 	g_free (uri);
@@ -6921,7 +7115,9 @@ ev_window_init (EvWindow *ev_window)
 	sidebar_page_main_widget_update_cb (G_OBJECT (sidebar_widget), NULL, ev_window);
 	gtk_widget_show (sidebar_widget);
 	ev_sidebar_add_page (EV_SIDEBAR (ev_window->priv->sidebar),
-			     sidebar_widget);
+			      sidebar_widget,
+			      THUMBNAILS_SIDEBAR_ID, _("Thumbnails"),
+			      THUMBNAILS_SIDEBAR_ICON);
 
 	sidebar_widget = ev_sidebar_links_new ();
 	ev_window->priv->sidebar_links = sidebar_widget;
@@ -6936,27 +7132,9 @@ ev_window_init (EvWindow *ev_window)
 	sidebar_page_main_widget_update_cb (G_OBJECT (sidebar_widget), NULL, ev_window);
 	gtk_widget_show (sidebar_widget);
 	ev_sidebar_add_page (EV_SIDEBAR (ev_window->priv->sidebar),
-			     sidebar_widget);
-
-	sidebar_widget = ev_sidebar_attachments_new ();
-	ev_window->priv->sidebar_attachments = sidebar_widget;
-	g_signal_connect_object (sidebar_widget,
-				 "popup",
-				 G_CALLBACK (attachment_bar_menu_popup_cb),
-				 ev_window, 0);
-	gtk_widget_show (sidebar_widget);
-	ev_sidebar_add_page (EV_SIDEBAR (ev_window->priv->sidebar),
-			     sidebar_widget);
-
-	sidebar_widget = ev_sidebar_layers_new ();
-	ev_window->priv->sidebar_layers = sidebar_widget;
-	g_signal_connect (sidebar_widget,
-			  "layers_visibility_changed",
-			  G_CALLBACK (sidebar_layers_visibility_changed),
-			  ev_window);
-	gtk_widget_show (sidebar_widget);
-	ev_sidebar_add_page (EV_SIDEBAR (ev_window->priv->sidebar),
-			     sidebar_widget);
+			      sidebar_widget,
+			      LINKS_SIDEBAR_ID, _("Outline"),
+			      LINKS_SIDEBAR_ICON);
 
 	sidebar_widget = ev_sidebar_annotations_new ();
 	ev_window->priv->sidebar_annots = sidebar_widget;
@@ -6966,13 +7144,45 @@ ev_window_init (EvWindow *ev_window)
 			  ev_window);
 	gtk_widget_show (sidebar_widget);
 	ev_sidebar_add_page (EV_SIDEBAR (ev_window->priv->sidebar),
-			     sidebar_widget);
+			      sidebar_widget,
+			      ANNOTS_SIDEBAR_ID, _("Annotations"),
+			      ANNOTS_SIDEBAR_ICON);
 
 	sidebar_widget = ev_sidebar_bookmarks_new ();
 	ev_window->priv->sidebar_bookmarks = sidebar_widget;
 	gtk_widget_show (sidebar_widget);
 	ev_sidebar_add_page (EV_SIDEBAR (ev_window->priv->sidebar),
-			     sidebar_widget);
+			      sidebar_widget,
+			      BOOKMARKS_SIDEBAR_ID, _("Bookmarks"),
+			      BOOKMARKS_SIDEBAR_ICON);
+
+	sidebar_widget = ev_sidebar_attachments_new ();
+	ev_window->priv->sidebar_attachments = sidebar_widget;
+	g_signal_connect_object (sidebar_widget,
+				 "popup",
+				 G_CALLBACK (attachment_bar_menu_popup_cb),
+				 ev_window, 0);
+	g_signal_connect_object (sidebar_widget,
+				 "save-attachment",
+				 G_CALLBACK (attachment_bar_save_attachment_cb),
+				 ev_window, 0);
+	gtk_widget_show (sidebar_widget);
+	ev_sidebar_add_page (EV_SIDEBAR (ev_window->priv->sidebar),
+			      sidebar_widget,
+			      ATTACHMENTS_SIDEBAR_ID, _("Attachments"),
+			      ATTACHMENTS_SIDEBAR_ICON);
+
+	sidebar_widget = ev_sidebar_layers_new ();
+	ev_window->priv->sidebar_layers = sidebar_widget;
+	g_signal_connect (sidebar_widget,
+			  "layers_visibility_changed",
+			  G_CALLBACK (sidebar_layers_visibility_changed),
+			  ev_window);
+	gtk_widget_show (sidebar_widget);
+	ev_sidebar_add_page (EV_SIDEBAR (ev_window->priv->sidebar),
+			      sidebar_widget,
+			      LAYERS_SIDEBAR_ID, _("Layers"),
+			      LAYERS_SIDEBAR_ICON);
 
 	ev_window->priv->view_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 
