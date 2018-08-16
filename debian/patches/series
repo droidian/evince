@@ -1,1 +1,3 @@
 01_nautilus_extension_path.patch
+appdata-Use-provides-to-link-to-previous-ID.patch
+appdata-Fix-screenshot-URLs.patch

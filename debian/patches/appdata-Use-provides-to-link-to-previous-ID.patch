@@ -1,0 +1,28 @@
+From: Jeremy Bicha <jbicha@ubuntu.com>
+Date: Tue, 14 Aug 2018 23:30:56 -0400
+Subject: appdata: Use provides to link to previous ID
+
+Adding the provides ID field allows GNOME Software to link
+reviews for the old name of the app with the current name
+
+https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-provides
+
+Closes: https://gitlab.gnome.org/GNOME/evince/issues/962
+---
+ org.gnome.Evince.appdata.xml.in | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/org.gnome.Evince.appdata.xml.in b/org.gnome.Evince.appdata.xml.in
+index 2c88660..1826f2e 100644
+--- a/org.gnome.Evince.appdata.xml.in
++++ b/org.gnome.Evince.appdata.xml.in
+@@ -26,6 +26,9 @@
+     <_p>A document viewer for the GNOME desktop. You can view, search or annotate documents in many different formats.</_p>
+     <_p>Evince supports documents in: PDF, PS, EPS, XPS, DjVu, TIFF, DVI (with SyncTeX), and Comic Books archives (CBR, CBT, CBZ, CB7).</_p>
+   </description>
++  <provides>
++    <id>evince.desktop</id>
++  </provides>
+   <screenshots>
+     <screenshot type="default">
+     <image>https://gitlab.gnome.org/evince/raw/master/data/screenshots/evince-1.png</image>
