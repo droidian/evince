@@ -1,0 +1,31 @@
+From: Jeremy Bicha <jbicha@ubuntu.com>
+Date: Sun, 19 Aug 2018 18:50:03 -0400
+Subject: shell: set application-id to org.gnome.Evince
+
+This is needed for GNOME Shell to match the app with its .desktop
+---
+ shell/ev-application.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/shell/ev-application.c b/shell/ev-application.c
+index 60d8a73..eb771d4 100644
+--- a/shell/ev-application.c
++++ b/shell/ev-application.c
+@@ -65,7 +65,7 @@ struct _EvApplicationClass {
+ G_DEFINE_TYPE (EvApplication, ev_application, GTK_TYPE_APPLICATION)
+ 
+ #ifdef ENABLE_DBUS
+-#define APPLICATION_DBUS_NAME        "org.gnome.evince.Application"
++#define APPLICATION_NAME             "org.gnome.Evince"
+ #define APPLICATION_DBUS_OBJECT_PATH "/org/gnome/evince/Evince"
+ #define APPLICATION_DBUS_INTERFACE   "org.gnome.evince.Application"
+ 
+@@ -103,7 +103,7 @@ ev_application_new (void)
+   const GApplicationFlags flags = G_APPLICATION_NON_UNIQUE;
+ 
+   return g_object_new (EV_TYPE_APPLICATION,
+-                       "application-id", APPLICATION_DBUS_NAME,
++                       "application-id", APPLICATION_NAME,
+                        "flags", flags,
+                        NULL);
+ }

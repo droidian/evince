@@ -1,0 +1,22 @@
+From: =?utf-8?q?Germ=C3=A1n_Poo-Caama=C3=B1o?= <gpoo@gnome.org>
+Date: Sun, 19 Aug 2018 15:18:20 -0300
+Subject: build: Remove symbolic/actions from configure
+
+Icons were removed from there, and no Makefile should be generated
+there.
+---
+ configure.ac | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 999c5c4..6d6709c 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -980,7 +980,6 @@ data/icons/scalable/Makefile
+ data/icons/scalable/actions/Makefile
+ data/icons/scalable/mimetypes/Makefile
+ data/icons/symbolic/Makefile
+-data/icons/symbolic/actions/Makefile
+ data/icons/symbolic/apps/Makefile
+ help/Makefile
+ help/reference/Makefile
