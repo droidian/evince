@@ -154,18 +154,3 @@ Description: GObject introspection data for the evince libraries
  .
  It can be used by packages using the GIRepository format to generate
  dynamic bindings.
-
-Package: browser-plugin-evince
-Architecture: any
-Depends: ${misc:Depends},
-         ${shlibs:Depends}
-Description: plugin for web browsers to display documents (PostScript, PDF, …)
- This package contains a plugin to display all the document types evince can
- handle inside the browser window.
- .
- Evince is a simple multi-page document viewer.  It can display and print
- PostScript (PS), Encapsulated PostScript (EPS), DjVu, DVI, Portable
- Document Format (PDF) and XML Paper Specification (XPS) files.
- When supported by the document, it also allows searching for text,
- copying text to the clipboard, hypertext navigation, and
- table-of-contents bookmarks.
