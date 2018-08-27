@@ -264,6 +264,7 @@ INSTOBJEXT = @INSTOBJEXT@
 INTLLIBS = @INTLLIBS@
 INTLTOOL_EXTRACT = @INTLTOOL_EXTRACT@
 INTLTOOL_MERGE = @INTLTOOL_MERGE@
+INTLTOOL_PERL = @INTLTOOL_PERL@
 INTLTOOL_UPDATE = @INTLTOOL_UPDATE@
 INTLTOOL_V_MERGE = @INTLTOOL_V_MERGE@
 INTLTOOL_V_MERGE_OPTIONS = @INTLTOOL_V_MERGE_OPTIONS@
@@ -429,8 +430,8 @@ iconsdir = $(themedir)/$(size)/$(context)
 icons_DATA = \
 	object-rotate-left.svg	\
 	object-rotate-right.svg \
-	view-sidebar.svg \
-	outline.svg
+	outline-symbolic.svg \
+	view-sidebar-symbolic.svg
 
 noinst_DATA = 
 EXTRA_DIST = \
