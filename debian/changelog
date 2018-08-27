@@ -1,3 +1,9 @@
+evince (3.29.92-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 27 Aug 2018 15:30:27 -0400
+
 evince (3.29.91-2) experimental; urgency=medium
 
   * Move addon AppStream metadata to the main package
