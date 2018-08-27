@@ -1,8 +1,10 @@
-evince (3.29.92-1) UNRELEASED; urgency=medium
+evince (3.29.92-1) experimental; urgency=medium
 
   * New upstream release
+  * Drop the 8 cherry-picked patches applied in new release
+  * Drop browser-plugin-evince since it is not longer supported by GNOME Web
 
- -- Jeremy Bicha <jbicha@debian.org>  Mon, 27 Aug 2018 15:30:27 -0400
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 27 Aug 2018 15:39:06 -0400
 
 evince (3.29.91-2) experimental; urgency=medium
 
