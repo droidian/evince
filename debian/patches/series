@@ -1,9 +1,1 @@
 Fix-path-of-the-libnautilus-extension-with-multi-arch.patch
-appdata-Use-provides-to-link-to-previous-ID.patch
-appdata-Fix-screenshot-URLs.patch
-icons-install-symbolics-properly.patch
-shell-Update-app-icon-name-in-about-dialog.patch
-icons-Move-symbolic-action-icons-to-scalable.patch
-build-Remove-symbolic-actions-from-configure.patch
-shell-Update-default-app-icon-name.patch
-shell-set-application-id-to-org.gnome.Evince.patch
