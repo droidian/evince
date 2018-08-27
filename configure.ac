@@ -4,7 +4,7 @@
 
 m4_define([ev_major_version],[3])
 m4_define([ev_minor_version],[29])
-m4_define([ev_micro_version],[91])
+m4_define([ev_micro_version],[92])
 m4_define([ev_extra_version],[])
 m4_define([ev_version],[ev_major_version.ev_minor_version.ev_micro_version()ev_extra_version])
 
@@ -601,7 +601,7 @@ AC_ARG_ENABLE(ps,
   	[AS_HELP_STRING([--disable-ps],
 			[Disable the PostScript backend])],
 	[enable_ps=$enableval],
-	[enable_ps=yes])
+	[enable_ps=no])
 
 if test "x$enable_ps" = "xyes"; then
    if test "x$have_spectre" = "xyes"; then

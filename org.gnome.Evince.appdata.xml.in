@@ -26,13 +26,16 @@
     <_p>A document viewer for the GNOME desktop. You can view, search or annotate documents in many different formats.</_p>
     <_p>Evince supports documents in: PDF, PS, EPS, XPS, DjVu, TIFF, DVI (with SyncTeX), and Comic Books archives (CBR, CBT, CBZ, CB7).</_p>
   </description>
+  <provides>
+    <id>evince.desktop</id>
+  </provides>
   <screenshots>
     <screenshot type="default">
-    <image>https://gitlab.gnome.org/evince/raw/master/data/screenshots/evince-1.png</image>
+    <image>https://gitlab.gnome.org/GNOME/evince/raw/master/data/screenshots/evince-1.png</image>
     <_caption>A clear, simple UI</_caption>
     </screenshot>
     <screenshot>
-    <image>https://gitlab.gnome.org/evince/raw/master/data/screenshots/evince-2.png</image>
+    <image>https://gitlab.gnome.org/GNOME/evince/raw/master/data/screenshots/evince-2.png</image>
     <_caption>Advanced highlighting and annotation</_caption>
     </screenshot>
   </screenshots>
@@ -42,7 +45,7 @@
   <url type="donation">https://www.gnome.org/support-gnome/</url>
   <project_group>GNOME</project_group>
   <compulsory_for_desktop>GNOME</compulsory_for_desktop>
-  <updatecontact>https://wiki.gnome.org/Apps/Evince/ReportingBugs</updatecontact>
+  <update_contact>evince-list@gnome.org</update_contact>
   <kudos>
     <kudo>AppMenu</kudo>
     <kudo>ModernToolkit</kudo>

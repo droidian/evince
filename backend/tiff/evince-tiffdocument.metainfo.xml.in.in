@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="addon">
   <id>evince-tiffdocument</id>
-  <extends>evince.desktop</extends>
+  <extends>org.gnome.Evince</extends>
   <_name>TIFF Documents</_name>
   <_summary>Adds support for reading TIFF documents</_summary>
   <mimetypes>
@@ -11,7 +11,7 @@
     <kudo>ModernToolkit</kudo>
   </kudos>
   <url type="homepage">https://wiki.gnome.org/Apps/Evince/SupportedDocumentFormats</url>
-  <metadata_license>GPL-2.0+</metadata_license>
+  <metadata_license>GPL-2.0+ or GFDL-1.3-only</metadata_license>
   <project_license>GPL-2.0+</project_license>
-  <updatecontact>carlosgc@gnome.org</updatecontact>
+  <update_contact>evince-list@gnome.org</update_contact>
 </component>
