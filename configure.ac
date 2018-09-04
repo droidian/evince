@@ -3,8 +3,8 @@
 # *****************************************************************************
 
 m4_define([ev_major_version],[3])
-m4_define([ev_minor_version],[29])
-m4_define([ev_micro_version],[92])
+m4_define([ev_minor_version],[30])
+m4_define([ev_micro_version],[0])
 m4_define([ev_extra_version],[])
 m4_define([ev_version],[ev_major_version.ev_minor_version.ev_micro_version()ev_extra_version])
 
@@ -510,7 +510,7 @@ AC_ARG_ENABLE([browser-plugin],
   [AS_HELP_STRING([--disable-browser-plugin],
                   [Disable the Browser Plugin])],
   [],
-  [enable_browser_plugin=yes])
+  [enable_browser_plugin=no])
 
 if test x$enable_browser_plugin = "xyes" ; then
   PKG_CHECK_MODULES([BROWSER_PLUGIN],[gtk+-3.0 >= $GTK_REQUIRED gthread-2.0 gio-2.0 >= $GLIB_REQUIRED])
