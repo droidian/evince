@@ -1,3 +1,11 @@
+evince (3.30.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+    - The postscript backend has been disabled for now because
+      of ghostscript security issues.
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 03 Sep 2018 22:10:20 -0400
+
 evince (3.29.92-1) experimental; urgency=medium
 
   * New upstream release
