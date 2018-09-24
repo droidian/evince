@@ -53,6 +53,9 @@
   # For Send to
   /usr/bin/nautilus-sendto Cx -> sanitized_helper,
 
+  # GLib desktop launch helper (used under the hood by g_app_info_launch)
+  /usr/lib/@{multiarch}/glib-[0-9]*/gio-launch-desktop rmix,
+
   # allow directory listings (ie 'r' on directories) so browsing via the file
   # dialog works
   / r,
