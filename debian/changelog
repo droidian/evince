@@ -1,3 +1,11 @@
+evince (3.30.0-3) unstable; urgency=medium
+
+  [ Olivier Tilloy ]
+  * AppArmor: allow executing the gio-launch-desktop helper
+    (Closes: #908516)
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 27 Sep 2018 12:19:53 +0100
+
 evince (3.30.0-2) unstable; urgency=medium
 
   * Re-enable postscript since ghostscript 9.22~dfsg-3 includes the recent
