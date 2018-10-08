@@ -43,10 +43,10 @@
 <p>Följande paket måste vara installerade för att lägga till stöd för SyncTeX:</p>
 <list>
   <item>
-    <p>En LaTeX-motor med SyncTex-stöd, så som <app>pdflatex</app>.</p>
+    <p>En LaTeX-motor med SyncTeX-stöd, så som <app>pdflatex</app>.</p>
   </item>
   <item>
-    <p>En textredigerare med SynxTeX-stöd, så som <app>gedit</app> med gedit-plugins installerat.</p>
+    <p>En textredigerare med SyncTeX-stöd, så som <app>gedit</app> med gedit-plugins installerat.</p>
   </item>
 </list>
 

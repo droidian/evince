@@ -37,14 +37,10 @@
 <p>Aby dodać obsługę SyncTeX, te pakiety muszą być zainstalowane:</p>
 <list>
   <item>
-    <p>
-      A LaTeX engine with SyncTex support, such as <app>pdflatex</app>.
-    </p>
+    <p>Mechanizm LaTeX z obsługą SyncTeX, taki jak <app>pdflatex</app>.</p>
   </item>
   <item>
-    <p>
-      A text editor with SynxTeX support, such as <app>gedit</app> with gedit-plugins installed.
-    </p>
+    <p>Edytor tekstu z obsługą SyncTeX, taki jak <app>gedit</app> z zainstalowanym pakietem gedit-plugins.</p>
   </item>
 </list>
 
