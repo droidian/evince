@@ -37,10 +37,14 @@
 <p>Para añadir soporte para SyncTex se deben instalar los siguientes paquetes:</p>
 <list>
   <item>
-    <p>Un motor LaTeX con soporte de SyncTex como <app>pdflatex</app>.</p>
+    <p>
+      A LaTeX engine with SyncTeX support, such as <app>pdflatex</app>.
+    </p>
   </item>
   <item>
-    <p>Un editor de texto con soporte de SynxTeX, como <app>gedit</app> con el paquete gedit-plugins instalado.</p>
+    <p>
+      A text editor with SyncTeX support, such as <app>gedit</app> with gedit-plugins installed.
+    </p>
   </item>
 </list>
 
