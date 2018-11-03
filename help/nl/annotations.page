@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="guide" style="task" id="annotations" xml:lang="nl">
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="annotations" xml:lang="nl">
 
   <info>
     <link type="guide" xref="index#annotations"/>
@@ -40,7 +40,7 @@
     <list>
      <item>
       <p>U zou nu de knoppen <gui>Tekstannotatie toevoegen</gui> en <gui>Markeerannotatie toevoegen</gui> moeten zien onder de titelbalk.</p>
-       <media its:translate="no" type="image" src="figures/list-add-tabs.png"/>
+       <media type="image" src="figures/list-add-tabs.png"/>
      </item>
     </list>
  </item>

@@ -37,14 +37,10 @@
 <p>Kvůli podpoře SyncTeX je zapotřebí mít nainstalované následující balíčky:</p>
 <list>
   <item>
-    <p>
-      A LaTeX engine with SyncTeX support, such as <app>pdflatex</app>.
-    </p>
+    <p>Program na zpracování formátu LaTeX s podporou SyncTeX, jako je třeba <app>pdflatex</app>.</p>
   </item>
   <item>
-    <p>
-      A text editor with SyncTeX support, such as <app>gedit</app> with gedit-plugins installed.
-    </p>
+    <p>Textový editor s podporou SyncTeX, jako je třeba <app>gedit</app> s nainstalovaným zásuvným modulem gedit-plugins.</p>
   </item>
 </list>
 

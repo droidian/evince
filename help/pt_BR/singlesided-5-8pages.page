@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="print-booklet#singleSided"/>
-    <title type="sort">Livreto de 04 ou 5 páginas</title>
+    <title type="sort">Livreto de 4 ou 5 páginas</title>
     <desc>Imprimir um livreto de 5, 6, 7 ou 8 páginas.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>

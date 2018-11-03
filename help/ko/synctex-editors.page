@@ -18,7 +18,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>조성호</mal:name>
       <mal:email>darkcircle.0426@gmail.com</mal:email>
-      <mal:years>2012, 2013</mal:years>
+      <mal:years>2012, 2013, 2018</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -35,21 +35,13 @@
 </section>
 
 <section id="vim-latex"><title>Vim-latex</title>
-<p>
-The <app>gedit</app> plugin contains a python script (<file>evince_dbus.py</file>) that can be used to get SyncTeX working with Vim.
-In order to use vim-latex together with the <app>document viewer</app> you need to follow the next steps:
-</p>
+<p><app>지에디트</app> 플러그인에 SyncTeX이 Vim과 동작할 수 있게 하는 파이썬 스크립트(<file>evince_dbus.py</file>)가 있습니다. vim-latex를 <app>문서 보기</app>와 사용하려면 다음 순서를 따라야 합니다:</p>
 <steps>
  <item>
-  <p>
-     Copy the <file>evince_dbus.py</file> to some directory in your path and give it +x permissions.
-
- </p>
+  <p><file>evince_dbus.py</file>를 경로 어딘가에 복사하고 +x 권한을 줍니다.</p>
  </item>
  <item>
-  <p>
-     Modify your <file>~/.vimrc</file> file and add the following lines.
-    </p>
+  <p><file>~/.vimrc</file> 파일을 수정하고 다음 줄을 추가합니다.</p>
 <code>
 let g:Tex_ViewRule_pdf = 'evince_dbus.py'
 let g:Tex_DefaultTargetFormat = 'pdf'

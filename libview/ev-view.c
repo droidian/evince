@@ -2692,14 +2692,19 @@ ev_view_form_field_choice_create_widget (EvView      *view,
 					G_CALLBACK (ev_view_form_field_destroy),
 					view);
 	} else if (field_choice->is_editable) { /* ComboBoxEntry */
+		GtkEntry *combo_entry;
 		gchar *text;
 
 		choice = gtk_combo_box_new_with_model_and_entry (model);
+		combo_entry = GTK_ENTRY (gtk_bin_get_child (GTK_BIN (choice)));
+		/* This sets GtkEntry's minimum-width to be 1 char long, short enough
+		 * to workaround gtk issue gtk#1422 . Evince issue #1002 */
+		gtk_entry_set_width_chars (combo_entry, 1);
 		gtk_combo_box_set_entry_text_column (GTK_COMBO_BOX (choice), 0);
 
 		text = ev_document_forms_form_field_choice_get_text (EV_DOCUMENT_FORMS (view->document), field);
 		if (text) {
-			gtk_entry_set_text (GTK_ENTRY (gtk_bin_get_child (GTK_BIN (choice))), text);
+			gtk_entry_set_text (combo_entry, text);
 			g_free (text);
 		}
 
@@ -5659,6 +5664,11 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 			dvadj_value = gtk_adjustment_get_page_size (view->vadjustment) *
 				      (gdouble)dy / allocation.height;
 
+			/* We will update the drag event's start position if
+			 * the adjustment value is changed, but only if the
+			 * change was not caused by this function. */
+			view->drag_info.in_notify = TRUE;
+
 			/* clamp scrolling to visible area */
 			gtk_adjustment_set_value (view->hadjustment,
 						  MIN (view->drag_info.hadj - dhadj_value,
@@ -5668,6 +5678,8 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 						  MIN (view->drag_info.vadj - dvadj_value,
 						       gtk_adjustment_get_upper (view->vadjustment) -
 						       gtk_adjustment_get_page_size (view->vadjustment)));
+
+			view->drag_info.in_notify = FALSE;
 
 			return TRUE;
 		}
@@ -8011,6 +8023,13 @@ on_adjustment_value_changed (GtkAdjustment *adjustment,
 
 	if (!gtk_widget_get_realized (widget))
 		return;
+
+	/* If the adjustment value is set during a drag event, update the drag
+	 * start position so it can continue from the new location. */
+	if (view->drag_info.in_drag && !view->drag_info.in_notify) {
+		view->drag_info.hadj += gtk_adjustment_get_value (view->hadjustment) - view->scroll_x;
+		view->drag_info.vadj += gtk_adjustment_get_value (view->vadjustment) - view->scroll_y;
+	}
 
 	if (view->hadjustment) {
 		value = (gint) gtk_adjustment_get_value (view->hadjustment);

@@ -49,10 +49,7 @@
 <p>Der <app>Dokumentenbetrachter</app> wird von einer Gemeinschaft aus Freiwilligen entwickelt. Sie sind herzlich eingeladen, sich daran zu beteiligen. Falls Sie ein Problem entdecken, können Sie einen <em>Fehlerbericht erstellen</em>. Besuchen Sie hierzu <link href="https://gitlab.gnome.org/GNOME/evince/issues/"/>.</p>
    <p>Die ist eine Fehlerdatenbank, in der Benutzer und Entwickler Details zu Fehlern, Abstürzen und Erweiterungswünschen hinterlegen.</p>
    <p>Dazu benötigen Sie ein Konto, über das Sie Fehler melden und Kommentare hinterlassen können. Außerdem müssen Sie sich registrieren, um Statusmeldungen zu Ihrem Fehlerbericht per E-Mail erhalten zu können. Falls Sie noch nicht über ein Konto verfügen, klicken Sie auf <gui>Sign in / Register</gui>, um eines anzulegen.</p>
-   <p>
-   Once you have an account, log in, and click on <gui>New issue</gui>.
-   Before reporting a bug, please read the <link href="https://wiki.gnome.org/Community/GettingInTouch/Bugzilla/Guidelines">bug writing guidelines</link>,  and please <link href="https://gitlab.gnome.org/GNOME/evince/issues">browse</link> for the bug to see if it already exists.
-   </p>
+   <p>Sobald die Erstellung des Kontos abgeschlossen ist, klicken Sie auf <gui>New issue</gui>. Bevor Sie einen Fehler melden, lesen Sie bitte die <link href="https://wiki.gnome.org/Community/GettingInTouch/Bugzilla/Guidelines">bug writing guidelines</link> und <link href="https://gitlab.gnome.org/GNOME/evince/issues">schauen Sie bitte nach</link>, ob der Fehler vielleicht schon gemeldet wurde.</p>
    <p>Falls Sie eine Anfrage nach einem neuen Funktionsmerkmal stellen, wählen Sie <gui>1. Feature</gui> im Menü <gui>Labels</gui>. Füllen Sie die Felder »Title« (Titel) und »Description« (Beschreibung) aus und klicken Sie auf <gui>Submit Issue</gui>.</p>
    <p>Ihr Bericht bekommt eine Kennung (ID) zugewiesen und der Status wird mit laufender Bearbeitung stets aktualisiert.</p>
 </page>

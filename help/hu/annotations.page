@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="guide" style="task" id="annotations" xml:lang="hu">
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="annotations" xml:lang="hu">
 
   <info>
     <link type="guide" xref="index#annotations"/>
@@ -46,7 +46,7 @@
     <list>
      <item>
       <p>Most látnia kell a <gui>Szöveges jegyzet hozzáadása</gui> és a <gui>Kiemelés jegyzet hozzáadása</gui> gombokat a címsáv alatt.</p>
-       <media its:translate="no" type="image" src="figures/list-add-tabs.png"/>
+       <media type="image" src="figures/list-add-tabs.png"/>
      </item>
     </list>
  </item>
