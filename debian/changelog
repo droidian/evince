@@ -1,8 +1,14 @@
-evince (3.30.2-1) UNRELEASED; urgency=medium
+evince (3.30.2-1) unstable; urgency=medium
 
+  [ Jeremy Bicha ]
   * New upstream release
 
- -- Jeremy Bicha <jbicha@debian.org>  Sat, 03 Nov 2018 17:26:33 -0400
+  [ Jamie Strandboge ]
+  * debian/apparmor-profile: Update thumbnailer policy
+    for temporary file path with and without bubblewrap (LP: #1798091)
+    (Closes: #911161)
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sat, 03 Nov 2018 17:30:50 -0400
 
 evince (3.30.1-1) unstable; urgency=medium
 
