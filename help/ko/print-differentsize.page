@@ -24,7 +24,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>조성호</mal:name>
       <mal:email>darkcircle.0426@gmail.com</mal:email>
-      <mal:years>2012, 2013</mal:years>
+      <mal:years>2012, 2013, 2018</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -46,8 +46,7 @@
       <p><gui>페이지 설정</gui> 탭을 선택합니다.</p>
     </item>
     <item>
-      <p>Under the <em>Paper</em> column, choose your <em>Paper size</em> from
-      the drop-down list.</p>
+      <p><em>용지</em> 칸 아래에서, 드롭다운 목록의 <em>용지 크기</em>를 선택합니다.</p>
     </item>
     <item>
       <p><gui>인쇄</gui>를 누르면 문서를 인쇄합니다.</p>

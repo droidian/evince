@@ -7,6 +7,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.24" version="0.2" date="2017-08-10" status="final"/>
+    <revision pkgversion="3.30" version="0.3" date="2018-08-30" status="final"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -30,6 +31,10 @@
    <credit type="editor">
        <name>Andre Klapper</name>
        <email>ak-47@gmx.net</email>
+    </credit>
+   <credit type="editor">
+       <name>Germán Poo-Caamaño</name>
+       <email>gpoo@gnome.org</email>
     </credit>
 
     <license>
@@ -96,8 +101,12 @@
         <td><p><key>Page Up</key>/<key>Page Down</key></p></td>
     </tr>
     <tr>
-        <td><p>Přejít na předchozí/následující stránku</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Page Up</key></keyseq>/<keyseq><key>Ctrl</key><key>Page Down</key></keyseq></p></td>
+        <td><p>Přejít na předchozí stránku.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Page Up</key></keyseq> / <key>P</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Přejít na následující stránku.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Page Down</key></keyseq> / <key>N</key></p></td>
     </tr>
 <tr>
         <td><p>Přejít na stránku číslo.</p></td>
@@ -120,9 +129,22 @@
          <td><p><keyseq><key>Ctrl</key><key>End</key></keyseq></p></td>
     </tr>
     <tr>
-    	<td><p>Zobrazit postranní panel s obsahem</p></td>
+        <td><p>Přidat záložku pro aktuální stránku.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>D</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Smazat záložku pro aktuální stránku, pokud taková existuje.</p></td>
+        <td><p><keyseq><key>Shift</key><key>Ctrl</key><key>D</key></keyseq></p></td>
+    </tr>
+    <tr>
+    	<td><p>Zobrazit postranní panel s obsahem a záložkami.</p></td>
          <td><p><key>F9</key></p></td>
-    </tr></table>
+    </tr>
+    <tr>
+        <td><p>Zapnout kurzorovou navigaci zobrazením kurzoru v textové stránce, kterým se můžete po textu pohybovat pomocí klávesnice a text vybírat.</p></td>
+        <td><p><key>F7</key></p></td>
+    </tr>
+  </table>
 </section>
 
 <section id="copy">
@@ -130,7 +152,7 @@
 <table frame="all" rules="cols" shade="rows">
     <tr>
         <td><p>Kopírovat zvýrazněný text</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq> / <keyseq><key>Ctrl</key><key>Insert</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Vybrat všechen text v dokumentu</p></td>
@@ -143,16 +165,16 @@
     <title>Hledání textu</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Zobrazit lištu nástrojů sloužící k hledání slov v dokumentu. Po zmáčknutí této klávesové zkratky se vyhledávací políčko automaticky vybere a jakmile začnete psát text, hned se vyhledává.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>F</key></keyseq></p></td>
+        <td><p>Zobrazit lištu nástrojů sloužící k hledání slov v dokumentu. Po zmáčknutí této klávesové zkratky se vyhledávací políčko automaticky vybere a jakmile začnete psát text, hned se vyhledává. Pokud před započetím hledání máte v dokumentu vybraný nějaký text, začne se vyhledávat s tímto textem jako zadáním pro hledání.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>F</key></keyseq> / <key>/</key></p></td>
     </tr>
     <tr>
         <td><p>Přejít na následující výsledek hledání</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>G</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>G</key></keyseq> / <key>F3</key></p></td>
     </tr>
     <tr>
         <td><p>Přejít na předchozí výsledek hledání</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Shift</key><key>G</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Shift</key><key>G</key></keyseq> / <keyseq><key>Shift</key><key>F3</key></keyseq></p></td>
     </tr>
 </table>
 </section>
@@ -169,12 +191,74 @@
         <td><p><keyseq><key>Ctrl</key><key>šipka vpravo</key></keyseq></p></td>
     </tr>
     <tr>
+        <td><p>Výchozí přiblížení.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>0</key></keyseq></p></td>
+    </tr>
+    <tr>
         <td><p>Přiblížit</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>+</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>+</key></keyseq> / <key>=</key> / <keyseq><key>Ctrl</key><key>=</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Oddálit</p></td>
         <td><p><keyseq><key>Ctrl</key><key>-</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Přizpůsobit stránku oknu.</p></td>
+        <td><p><key>F</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Přizpůsobit šířku obsahu dostupnému místu.</p></td>
+        <td><p><key>W</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Automatické přiblížení.</p></td>
+        <td><p><key>A</key></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="window">
+    <title>Okno</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>K zobrazení dokumentu můžete použít celou obrazovku.</p></td>
+        <td><p><key>F11</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Spustit prezentaci.</p></td>
+        <td><p><key>F5</key> / <keyseq><key>Shift</key><key>F5</key></keyseq></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="document">
+    <title>Zobrazení dokumentu</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Prohodit barvu pozadí a textu.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>I</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Přepnout mezi plynulým a stránkovým posuvem pro posouvání zobrazeného dokumentu.</p></td>
+        <td><p><key>C</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Zobrazit dvě stránky vedle sebe.</p></td>
+        <td><p><key>D</key></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="annotate">
+    <title>Poznámky v dokumentu</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Přidat připojenou poznámku.</p></td>
+        <td><p><key>S</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Zvýraznit text.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>H</key></keyseq></p></td>
     </tr>
 </table>
 </section>

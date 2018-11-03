@@ -7,6 +7,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.24" version="0.2" date="2017-08-10" status="final"/>
+    <revision pkgversion="3.30" version="0.3" date="2018-08-30" status="final"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -30,6 +31,10 @@
    <credit type="editor">
        <name>Andre Klapper</name>
        <email>ak-47@gmx.net</email>
+    </credit>
+   <credit type="editor">
+       <name>Germán Poo-Caamaño</name>
+       <email>gpoo@gnome.org</email>
     </credit>
 
     <license>
@@ -102,8 +107,12 @@
         <td><p><key>Page Up</key> / <key>Page Down</key></p></td>
     </tr>
     <tr>
-        <td><p>Gå till nästa/föregående sida.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Page Up</key></keyseq> / <keyseq><key>Ctrl</key><key>Page Down</key></keyseq></p></td>
+        <td><p>Gå till föregående sida.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Page Up</key></keyseq> / <key>P</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Gå till nästa sida.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Page Down</key></keyseq> / <key>N</key></p></td>
     </tr>
 <tr>
         <td><p>Gå till sidnummer.</p></td>
@@ -126,9 +135,22 @@
          <td><p><keyseq><key>Ctrl</key><key>End</key></keyseq></p></td>
     </tr>
     <tr>
-    	<td><p>Visa sidopanelen med innehållsförteckning.</p></td>
+        <td><p>Lägg till ett bokmärke på aktuell sida.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>D</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Ta bort bokmärket på aktuell sida om ett sådant existerar.</p></td>
+        <td><p><keyseq><key>Skift</key><key>Ctrl</key><key>D</key></keyseq></p></td>
+    </tr>
+    <tr>
+    	<td><p>Visa sidopanelen med innehållsförteckning och bokmärken.</p></td>
          <td><p><key>F9</key></p></td>
-    </tr></table>
+    </tr>
+    <tr>
+        <td><p>Aktivera markörnavigering som placerar en rörlig markör i textsidor, vilket låter dig flytta runt i dokumentet och markera text med tangentbordet.</p></td>
+        <td><p><key>F7</key></p></td>
+    </tr>
+  </table>
 </section>
 
 <section id="copy">
@@ -136,7 +158,7 @@
 <table frame="all" rules="cols" shade="rows">
     <tr>
         <td><p>Kopiera markerad text.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq> / <keyseq><key>Ctrl</key><key>Insert</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Markera all text i ett dokument.</p></td>
@@ -149,16 +171,16 @@
     <title>Sök efter text</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Visa verktygsfältet som låter dig söka efter ord i dokumentet. Sökrutan markeras automatiskt när du trycker på detta och sökningen börjar så snart du börjat skriva in text.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>F</key></keyseq></p></td>
+        <td><p>Visa verktygsfältet som låter dig söka efter ord i dokumentet. Sökrutan markeras automatiskt när du trycker på detta och sökningen börjar så snart du börjat skriva in text. Om du markerar text i dokumentet innan du söker kommer sökningen att starta med den texten som inmatning.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>F</key></keyseq> / <key>/</key></p></td>
     </tr>
     <tr>
         <td><p>Gå till nästa sökresultat.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>G</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>G</key></keyseq> / <key>F3</key></p></td>
     </tr>
     <tr>
         <td><p>Gå till föregående sökresultat.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Skift</key><key>G</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Skift</key><key>G</key></keyseq> / <keyseq><key>Skift</key><key>F3</key></keyseq></p></td>
     </tr>
 </table>
 </section>
@@ -175,12 +197,74 @@
         <td><p><keyseq><key>Ctrl</key><key>Högerpil</key></keyseq></p></td>
     </tr>
     <tr>
+        <td><p>Standardzoomnivå</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>0</key></keyseq></p></td>
+    </tr>
+    <tr>
         <td><p>Zooma in.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>+</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>+</key></keyseq> / <key>=</key> / <keyseq><key>Ctrl</key><key>=</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Zooma ut.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>-</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Anpassa sidan till fönstret.</p></td>
+        <td><p><key>F</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Anpassa innehållsbredden till det tillgängliga utrymmet.</p></td>
+        <td><p><key>W</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Automatisk zoomning.</p></td>
+        <td><p><key>A</key></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="window">
+    <title>Fönster</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Använd hela skärmen för att visa dokumentet.</p></td>
+        <td><p><key>F11</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Starta en presentation.</p></td>
+        <td><p><key>F5</key> / <keyseq><key>Skift</key><key>F5</key></keyseq></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="document">
+    <title>Dokumentvy</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Ändra bakgrunds- och textfärger.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>I</key></keyseq></p></td>
+    </tr>
+    <tr>
+        <td><p>Växla mellan kontinuerlig och sidvis visning av dokumentet.</p></td>
+        <td><p><key>C</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Visa två sidor bredvid varandra.</p></td>
+        <td><p><key>D</key></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="annotate">
+    <title>Lägg till kommentarer till dokumentet</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Lägg till en post-it-liknande anteckning.</p></td>
+        <td><p><key>S</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Färgmarkera text.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>H</key></keyseq></p></td>
     </tr>
 </table>
 </section>

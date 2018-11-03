@@ -61,14 +61,10 @@
 <p>Os seguintes pacotes precisam estar instalados para dar suporte ao SyncTeX:</p>
 <list>
   <item>
-    <p>
-      A LaTeX engine with SyncTeX support, such as <app>pdflatex</app>.
-    </p>
+    <p>Um mecanismo LaTeX com suporte a SyncTeX, tal como <app>pdflatx</app>.</p>
   </item>
   <item>
-    <p>
-      A text editor with SyncTeX support, such as <app>gedit</app> with gedit-plugins installed.
-    </p>
+    <p>Um editor de texto com suporte a SyncTeX, tal como <app>gedit</app> com gedit-plugins instalado.</p>
   </item>
 </list>
 
