@@ -117,6 +117,7 @@
 
   # from http://live.gnome.org/Evince/SupportedDocumentFormats. Allow
   # read and write for all supported file formats
+  /**.[aA][iI]         rw,
   /**.[bB][mM][pP]     rw,
   /**.[dD][jJ][vV][uU] rw,
   /**.[dD][vV][iI]     rw,

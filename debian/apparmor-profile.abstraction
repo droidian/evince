@@ -66,6 +66,7 @@
 
   # from http://live.gnome.org/Evince/SupportedDocumentFormats. Allow
   # read for all supported file formats
+  /**.[aA][iI]         r,
   /**.[bB][mM][pP]     r,
   /**.[dD][jJ][vV][uU] r,
   /**.[dD][vV][iI]     r,
