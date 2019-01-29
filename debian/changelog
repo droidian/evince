@@ -1,9 +1,9 @@
-evince (3.30.2-3) UNRELEASED; urgency=medium
+evince (3.30.2-3) unstable; urgency=medium
 
   [ Jason Crain ]
   * debian/apparmor-profile: Allow Illustrator .ai files (Closes: #920233)
 
- -- Jeremy Bicha <jbicha@debian.org>  Tue, 22 Jan 2019 19:37:13 -0500
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 28 Jan 2019 19:48:11 -0500
 
 evince (3.30.2-2) unstable; urgency=medium
 
