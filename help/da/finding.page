@@ -7,6 +7,7 @@
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
     <revision pkgversion="3.12" date="2014-03-23" status="candidate"/>
     <revision pkgversion="3.15" date="2015-01-28" status="candidate"/>
+    <revision pkgversion="3.30" date="2018-11-25" status="candidate"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -47,7 +48,10 @@
     <p>For at filtrere ord efter store/små bogstaver eller fuldførelse, så kan du klikke på søgeboksen og vælge <gui>Skeln mellem store/små bogstaver</gui> eller <gui>Kun hele ord</gui>.</p>
   </note>
 
-  <p>Hvis det ord eller udtryk, som du søgte efter, ikke findes i dokumentet, får du beskeden <em>Ikke fundet</em> ved siden af søgeboksen. Men findes det blot én gang i dokumentet, så vil du få besked om, hvor mange gange det søgte ord optræder på den nuværende side.</p>
+  <p>If the word or phrase that you searched for is not found in the document,
+  you will see <media type="image" src="figures/search-not-found.png"/> in the
+  search box. However, if it appears in the document at least once, you will be
+  shown how many times the search result appears on the current page.</p>
 
   <note>
     <p>Man kan kun søge i PDF-dokumenter. Visse PDF-dokumenter kan man ikke søge i, fordi teksten er indlejret i dokumentet som et billede.</p>

@@ -131,11 +131,13 @@
         <td><p><keyseq><key>Strg</key><key>L</key></keyseq> gefolgt von der Seitennummer und der <key>Eingabetaste</key></p></td>
 </tr>
     <tr>
-        <td><p>An den Anfang der Seite springen (Anfang des Dokuments, falls <guiseq><gui>Ansicht</gui><gui>Fortlaufend</gui></guiseq> ausgewählt ist).</p></td>
+        <td><p>Go to the beginning of a page (beginning of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
          <td><p><key>Pos1</key></p></td>
     </tr>
     <tr>
-        <td><p>An das Ende der Seite springen (Ende des Dokuments, falls <guiseq><gui>Ansicht</gui><gui>Fortlaufend</gui></guiseq> ausgewählt ist).</p></td>
+        <td><p>Go to the end of a page (end of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
         <td><p><key>Ende</key></p></td>
     </tr>
     <tr>

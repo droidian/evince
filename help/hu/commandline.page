@@ -44,7 +44,10 @@
     <title>Dokumentum megnyitása adott oldalon</title>
     <p>Dokumentum adott oldalon való megnyitására használhatja a <cmd>--page-label</cmd> kapcsolót. Egy dokumentum például a következőképpen nyitható meg a 3. oldalon:</p>
     <screen>evince --page-label=3 fájl.pdf</screen>
-    <p>Az oldalcímkének azonos formátumúnak kell lennie, mint a <app>Dokumentummegjelenítő</app> címsávján megjelenő oldalszámnak.</p>
+    <p>
+    The page label should be in the same format as the page number displayed in
+    the <app>Document Viewer</app> header bar.
+    </p>
 </section>
 <section id="fullsreen">
     <title>Dokumentum megnyitása teljes képernyős módban</title>

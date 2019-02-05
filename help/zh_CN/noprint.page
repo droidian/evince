@@ -5,6 +5,7 @@
     <link type="guide" xref="index#printing"/>
     <desc>作者也许在该文档中设置了打印限制。</desc>
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <revision pkgversion="3.30.2" version="0.2" date="2018-11-25" status="final"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -32,7 +33,19 @@
 
   <p>要检查您的打印机是否正确打印：</p>
   <steps>
-   <item><p>在顶栏上点击您的名字并选择 <gui>系统设置</gui>。</p></item>
+    <item>
+      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
+      overview and start typing <gui>Settings</gui>.</p>
+    </item>
+    <item>
+      <p>Click on <gui>Settings</gui>.</p>
+    </item>
+    <item>
+      <p>Click <gui>Devices</gui> in the sidebar.</p>
+    </item>
+    <item>
+      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+    </item>
    <item><p>在列表中单击您的打印机。</p></item>
    <item><p>单击 <gui>打印测试页</gui>。应有一张页面发送到您的打印机。</p>
 <note>

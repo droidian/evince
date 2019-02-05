@@ -212,27 +212,45 @@ ev_print_region_contents (cairo_region_t *region)
 	}
 }
 
+static gint
+get_monitor_number (GdkDisplay *display,
+		    GdkMonitor *monitor)
+{
+	gint i;
+
+	for (i = 0; i < gdk_display_get_n_monitors (display); i++) {
+		if (monitor == gdk_display_get_monitor (display, i))
+		    return i;
+	}
+	/* Assume monitor 0 if none */
+	return 0;
+}
+
 static void
 ev_gui_sanitise_popup_position (GtkMenu *menu,
 				GtkWidget *widget,
 				gint *x,
 				gint *y)
 {
-	GdkScreen *screen = gtk_widget_get_screen (widget);
+	GdkDisplay *display;
+	GdkMonitor *monitor;
+	GdkRectangle geometry;
 	gint monitor_num;
-	GdkRectangle monitor;
 	GtkRequisition req;
 
 	g_return_if_fail (widget != NULL);
 
 	gtk_widget_get_preferred_size (GTK_WIDGET (menu), &req, NULL);
 
-	monitor_num = gdk_screen_get_monitor_at_point (screen, *x, *y);
+	display = gtk_widget_get_display (widget);
+	monitor = gdk_display_get_monitor_at_point (display, *x, *y);
+	monitor_num = get_monitor_number (display, monitor);
 	gtk_menu_set_monitor (menu, monitor_num);
-	gdk_screen_get_monitor_geometry (screen, monitor_num, &monitor);
 
-	*x = CLAMP (*x, monitor.x, monitor.x + MAX (0, monitor.width - req.width));
-	*y = CLAMP (*y, monitor.y, monitor.y + MAX (0, monitor.height - req.height));
+	gdk_monitor_get_geometry (monitor, &geometry);
+
+	*x = CLAMP (*x, geometry.x, geometry.x + MAX (0, geometry.width - req.width));
+	*y = CLAMP (*y, geometry.y, geometry.y + MAX (0, geometry.height - req.height));
 }
 
 void
@@ -363,4 +381,35 @@ get_gdk_pixbuf_format_by_extension (const gchar *uri)
 
 	g_slist_free (pixbuf_formats);
 	return NULL;
+}
+
+/*
+ * Replace all occurences of substr in str with repl
+ *
+ * @param str a string
+ * @param substr some string to replace
+ * @param repl a replacement string
+ *
+ * @return a newly allocated string with the substr replaced by repl; free with g_free
+ */
+gchar*
+ev_str_replace (const char *str, const char *substr, const char *repl)
+{
+	GString		*gstr;
+	const char	*cur;
+
+	if (str == NULL || substr == NULL || repl == NULL)
+		return NULL;
+
+	gstr = g_string_sized_new (2 * strlen (str));
+
+	for (cur = str; *cur; ++cur) {
+		if (g_str_has_prefix (cur, substr)) {
+			g_string_append (gstr, repl);
+			cur += strlen (substr) - 1;
+		} else
+			g_string_append_c (gstr, *cur);
+	}
+
+	return g_string_free (gstr, FALSE);
 }

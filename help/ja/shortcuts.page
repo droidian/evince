@@ -103,11 +103,13 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> followed by the page number and <key>Enter</key></p></td>
 </tr>
     <tr>
-        <td><p>ページの冒頭へ移動 (<guiseq><gui>表示</gui><gui>連続ページ</gui></guiseq>が選択されている場合はドキュメントの冒頭)</p></td>
+        <td><p>Go to the beginning of a page (beginning of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
-        <td><p>ページの末尾へ移動 (<guiseq><gui>表示</gui><gui>連続ページ</gui></guiseq>が選択されている場合はドキュメントの末尾)</p></td>
+        <td><p>Go to the end of a page (end of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>

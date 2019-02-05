@@ -15,7 +15,8 @@
 /* Whether multimedia support is enabled */
 #undef ENABLE_MULTIMEDIA
 
-/* always defined to indicate that i18n is enabled */
+/* Define to 1 if translation of program messages to the user's native
+   language is requested. */
 #undef ENABLE_NLS
 
 /* Enable support for PostScript files. */
@@ -36,9 +37,6 @@
 /* Define if gtk+-unix-print is enabled. */
 #undef GTKUNIXPRINT_ENABLED
 
-/* Define to 1 if you have the `bind_textdomain_codeset' function. */
-#undef HAVE_BIND_TEXTDOMAIN_CODESET
-
 /* defined if cairo-pdf is available */
 #undef HAVE_CAIRO_PDF
 
@@ -56,7 +54,8 @@
    the CoreFoundation framework. */
 #undef HAVE_CFPREFERENCESCOPYAPPVALUE
 
-/* Define to 1 if you have the `dcgettext' function. */
+/* Define if the GNU dcgettext() function is already present or preinstalled.
+   */
 #undef HAVE_DCGETTEXT
 
 /* Whether GSettings Desktop Schemas are available */
@@ -74,17 +73,14 @@
 /* Define if cairo and GTK+ have necessary functions for hi-dpi */
 #undef HAVE_HIDPI_SUPPORT
 
+/* Define if you have the iconv() function and it works. */
+#undef HAVE_ICONV
+
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
 
-/* Define if your <locale.h> file defines LC_MESSAGES. */
-#undef HAVE_LC_MESSAGES
-
 /* Whether GNOME Desktop (Thumbnail cache) is available */
 #undef HAVE_LIBGNOME_DESKTOP
-
-/* Define to 1 if you have the <locale.h> header file. */
-#undef HAVE_LOCALE_H
 
 /* Defines if localtime_r is available on your system */
 #undef HAVE_LOCALTIME_R

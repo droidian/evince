@@ -5,6 +5,7 @@
     <link type="guide" xref="index#printing"/>
     <desc>O autor pode ter colocado restrições de impressão no documento.</desc>
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <revision pkgversion="3.30.2" version="0.2" date="2018-11-25" status="final"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -68,7 +69,19 @@
 
   <p>Para verificar se a impressora está imprimindo corretamente:</p>
   <steps>
-   <item><p>Abra as <gui>Configurações do sistema</gui> e vá até <gui>Impressoras</gui>.</p></item>
+    <item>
+      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
+      overview and start typing <gui>Settings</gui>.</p>
+    </item>
+    <item>
+      <p>Click on <gui>Settings</gui>.</p>
+    </item>
+    <item>
+      <p>Click <gui>Devices</gui> in the sidebar.</p>
+    </item>
+    <item>
+      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+    </item>
    <item><p>Selecione sua impressora na lista.</p></item>
    <item><p>Clique em <gui>Imprimir página de teste</gui>. Uma página deve ser impressa em sua impressora.</p>
 <note>

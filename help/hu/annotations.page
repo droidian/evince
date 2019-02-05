@@ -41,11 +41,15 @@
 <p>Jegyzet létrehozásához:</p>
 <steps>
  <item>
-  <p>Válassza a címsor <gui>A dokumentum jegyzetelése</gui> pontját.</p>
+  <p>
+    Select <gui>Annotate the document</gui> from the header bar.
+  </p>
     <media type="image" src="figures/add-text-annotation.png"/>
     <list>
      <item>
-      <p>Most látnia kell a <gui>Szöveges jegyzet hozzáadása</gui> és a <gui>Kiemelés jegyzet hozzáadása</gui> gombokat a címsáv alatt.</p>
+      <p>
+        You should now see <gui>Add text annotation</gui> and <gui>Add highlight annotation</gui> buttons below the header bar.
+      </p>
        <media type="image" src="figures/list-add-tabs.png"/>
      </item>
     </list>

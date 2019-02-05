@@ -139,11 +139,13 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> ακολοθούμενη από τον αριθμό της σελίδας και <key>Enter</key></p></td>
 </tr>
     <tr>
-        <td><p>Μετάβαση στην αρχή μιας σελίδας (αρχή του εγγράφου αν επιλεχθεί το <guiseq><gui>Προβολή</gui><gui>Συνεχής</gui></guiseq>).</p></td>
+        <td><p>Go to the beginning of a page (beginning of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
-        <td><p>Μετάβαση στο τέλος μιας σελίδας (τέλος του εγγράφου αν επιλεχθεί το <guiseq><gui>Προβολή</gui><gui>Συνεχής</gui></guiseq>).</p></td>
+        <td><p>Go to the end of a page (end of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>

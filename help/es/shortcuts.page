@@ -45,7 +45,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2012 - 2018</mal:years>
+      <mal:years>2012 - 2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -101,25 +101,24 @@
         <td><p><key>Re Pág</key> / <key>Av Pág</key></p></td>
     </tr>
     <tr>
-        <td><p>Go to the previous page.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Page Up</key></keyseq> /
-<key>P</key></p></td>
+        <td><p>Ir a la página anterior.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Re Pág</key></keyseq> / <key>P</key></p></td>
     </tr>
     <tr>
-        <td><p>Go to the next page.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Page Down</key></keyseq> /
-<key>N</key></p></td>
+        <td><p>Ir a la página siguiente.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Av Pág</key></keyseq> / <key>N</key></p></td>
     </tr>
 <tr>
         <td><p>Ir a un número de página.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> seguido del número de página e <key>Intro</key></p></td>
 </tr>
     <tr>
-        <td><p>Ir al principio de una página (el principio de un documento si <guiseq><gui>Ver</gui><gui>Continuo</gui></guiseq> está seleccionado).</p></td>
+        <td><p>Go to the beginning of a page (beginning of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
          <td><p><key>Inicio</key></p></td>
     </tr>
     <tr>
-        <td><p>Ir al final de la página (final de documento si <guiseq><gui>Ver</gui><gui>Continuo</gui></guiseq> está seleccionado).</p></td>
+        <td><p>Ir al final de la página (final de documento si <gui>Continuo</gui> está seleccionado en el menú <gui>Opciones de la vista</gui>).</p></td>
         <td><p><key>Fin</key></p></td>
     </tr>
     <tr>
@@ -131,15 +130,15 @@
          <td><p><keyseq><key>Ctrl</key><key>Fin</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Add a bookmark in the current page.</p></td>
+        <td><p>Añadir un marcador a la página actual.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Delete the bookmark in the current page if there is one.</p></td>
-        <td><p><keyseq><key>Shift</key><key>Ctrl</key><key>D</key></keyseq></p></td>
+        <td><p><keyseq><key>Mayús</key><key>Ctrl</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
-    	<td><p>Display the side bar with a table of contents and bookmarks.</p></td>
+    	<td><p>Mostrar la barra lateral con una tabla de contenidos y marcadores.</p></td>
          <td><p><key>F9</key></p></td>
     </tr>
     <tr>
@@ -154,7 +153,7 @@
 <table frame="all" rules="cols" shade="rows">
     <tr>
         <td><p>Copiar el texto resaltado.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq> / <keyseq><key>Ctrl</key><key>Insert</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq> / <keyseq><key>Ctrl</key><key>Ins</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Seleccionar todo el texto en un documento.</p></td>
@@ -182,7 +181,7 @@
     </tr>
     <tr>
         <td><p>Ir al resultado anterior de la búsqueda.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Shift</key><key>G</key></keyseq> / <keyseq><key>Shift</key><key>F3</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Mayús</key><key>G</key></keyseq> / <keyseq><key>Mayús</key><key>F3</key></keyseq></p></td>
     </tr>
 </table>
 </section>
@@ -199,52 +198,51 @@
         <td><p><keyseq><key>Ctrl</key><key>Flecha derecha</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Default zoom.</p></td>
+        <td><p>Ampliación predeterminada.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>0</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Ampliar.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>+</key></keyseq> / <key>=</key> /
-               <keyseq><key>Ctrl</key><key>=</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>+</key></keyseq> / <key>=</key> / <keyseq><key>Ctrl</key><key>=</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Reducir.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>-</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Fit the page into the window.</p></td>
+        <td><p>Ajustar la página a la ventana.</p></td>
         <td><p><key>F</key></p></td>
     </tr>
     <tr>
-        <td><p>Fit the content width to the space available.</p></td>
+        <td><p>Ajustar la anchura del contenido al espacio disponible.</p></td>
         <td><p><key>W</key></p></td>
     </tr>
     <tr>
-        <td><p>Automatic zoom.</p></td>
+        <td><p>Ampliación automática.</p></td>
         <td><p><key>A</key></p></td>
     </tr>
 </table>
 </section>
 
 <section id="window">
-    <title>Window</title>
+    <title>Ventana</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Use the full screen to view the document.</p></td>
+        <td><p>Usar toda la pantalla para ver el documento:</p></td>
         <td><p><key>F11</key></p></td>
     </tr>
     <tr>
-        <td><p>Start a presentation.</p></td>
-        <td><p><key>F5</key> / <keyseq><key>Shift</key><key>F5</key></keyseq></p></td>
+        <td><p>Iniciar una presentación.</p></td>
+        <td><p><key>F5</key> / <keyseq><key>Mayús</key><key>F5</key></keyseq></p></td>
     </tr>
 </table>
 </section>
 
 <section id="document">
-    <title>Document view</title>
+    <title>Vista de documento</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Invert background and text colors.</p></td>
+        <td><p>Invertir los colores del texto y del fondo.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>I</key></keyseq></p></td>
     </tr>
     <tr>
@@ -259,14 +257,14 @@
 </section>
 
 <section id="annotate">
-    <title>Annotate the document</title>
+    <title>Anotar el documento</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
         <td><p>Add a post-it like note.</p></td>
         <td><p><key>S</key></p></td>
     </tr>
     <tr>
-        <td><p>Highlight text.</p></td>
+        <td><p>Resaltar texto.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>H</key></keyseq></p></td>
     </tr>
 </table>

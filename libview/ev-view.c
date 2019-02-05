@@ -102,7 +102,7 @@ typedef struct {
 	EvRectangle doc_rect;
 } EvViewChild;
 
-#define MIN_SCALE 0.2
+#define MIN_SCALE 0.05409 /* large documents (comics) need a small value, see #702 */
 #define ZOOM_IN_FACTOR  1.2
 #define ZOOM_OUT_FACTOR (1.0/ZOOM_IN_FACTOR)
 
@@ -2472,6 +2472,7 @@ ev_view_form_field_text_create_widget (EvView      *view,
 	EvFormFieldText *field_text = EV_FORM_FIELD_TEXT (field);
 	GtkWidget       *text = NULL;
 	gchar           *txt;
+	GtkStyleContext *context;
 
 	txt = ev_document_forms_form_field_text_get_text (EV_DOCUMENT_FORMS (view->document),
 							  field);
@@ -2482,6 +2483,10 @@ ev_view_form_field_text_create_widget (EvView      *view,
 	        case EV_FORM_FIELD_TEXT_NORMAL:
 			text = gtk_entry_new ();
 			gtk_entry_set_has_frame (GTK_ENTRY (text), FALSE);
+			/* Remove '.flat' style added by previous call
+			 * gtk_entry_set_has_frame(FALSE) which caused bug #687 */
+			context = gtk_widget_get_style_context (text);
+			gtk_style_context_remove_class (context, GTK_STYLE_CLASS_FLAT);
 			gtk_entry_set_max_length (GTK_ENTRY (text), field_text->max_len);
 			gtk_entry_set_visibility (GTK_ENTRY (text), !field_text->is_password);
 			
@@ -2573,8 +2578,8 @@ ev_view_form_field_choice_changed (GtkWidget   *widget,
 		gint item;
 		
 		item = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
-		if (!field_choice->selected_items ||
-		    GPOINTER_TO_INT (field_choice->selected_items->data) != item) {
+		if (item != -1 && (!field_choice->selected_items ||
+		    GPOINTER_TO_INT (field_choice->selected_items->data) != item)) {
 			g_list_free (field_choice->selected_items);
 			field_choice->selected_items = NULL;
 			field_choice->selected_items = g_list_prepend (field_choice->selected_items,
@@ -2622,6 +2627,51 @@ ev_view_form_field_choice_changed (GtkWidget   *widget,
 	}
 }
 
+typedef struct _PopupShownData {
+	GtkWidget   *choice;
+	EvFormField *field;
+	EvView      *view;
+} PopupShownData;
+
+static gboolean
+ev_view_form_field_choice_popup_shown_real (PopupShownData *data)
+{
+	ev_view_form_field_choice_changed (data->choice, data->field);
+	ev_view_form_field_destroy (data->choice, data->view);
+
+	g_object_unref (data->choice);
+	g_object_unref (data->field);
+	g_free (data);
+
+	return FALSE;
+}
+
+static void
+ev_view_form_field_choice_popup_shown_cb (GObject    *self,
+					  GParamSpec *pspec,
+					  EvView     *view)
+{
+	EvFormField *field;
+	GtkWidget *choice;
+	gboolean shown;
+	PopupShownData *data;
+
+	g_object_get (self, "popup-shown", &shown, NULL);
+	if (shown)
+		return; /* popup is already opened */
+
+	/* Popup has been closed */
+	field = g_object_get_data (self, "form-field");
+	choice = GTK_WIDGET (self);
+
+	data = g_new0 (PopupShownData, 1);
+	data->choice = g_object_ref (choice);
+	data->field = g_object_ref (field);
+	data->view = view;
+	/* We need to use an idle here because combobox "active" item is not updated yet */
+	g_idle_add ((GSourceFunc) ev_view_form_field_choice_popup_shown_real, (gpointer) data);
+}
+
 static GtkWidget *
 ev_view_form_field_choice_create_widget (EvView      *view,
 					 EvFormField *field)
@@ -2630,7 +2680,7 @@ ev_view_form_field_choice_create_widget (EvView      *view,
 	GtkWidget         *choice;
 	GtkTreeModel      *model;
 	gint               n_items, i;
-	gint               selected_item = 0;
+	gint               selected_item = -1;
 
 	n_items = ev_document_forms_form_field_choice_get_n_items (EV_DOCUMENT_FORMS (view->document),
 								   field);
@@ -2729,12 +2779,10 @@ ev_view_form_field_choice_create_widget (EvView      *view,
 		gtk_combo_box_set_active (GTK_COMBO_BOX (choice), selected_item);
 		gtk_combo_box_popup (GTK_COMBO_BOX (choice));
 		
-		g_signal_connect (choice, "changed",
-				  G_CALLBACK (ev_view_form_field_choice_changed),
-				  field);
-		g_signal_connect_after (choice, "changed",
-					G_CALLBACK (ev_view_form_field_destroy),
-					view);
+		/* See issue #294 for why we use this instead of "changed" signal */
+		g_signal_connect (choice, "notify::popup-shown",
+				  G_CALLBACK (ev_view_form_field_choice_popup_shown_cb),
+				  view);
 	}
 
 	g_object_unref (model);
@@ -7871,7 +7919,6 @@ ev_view_init (EvView *view)
 	gtk_widget_set_has_window (GTK_WIDGET (view), TRUE);
 	gtk_widget_set_can_focus (GTK_WIDGET (view), TRUE);
 	gtk_widget_set_redraw_on_allocate (GTK_WIDGET (view), FALSE);
-	gtk_container_set_resize_mode (GTK_CONTAINER (view), GTK_RESIZE_QUEUE);
 
 	context = gtk_widget_get_style_context (GTK_WIDGET (view));
 	gtk_style_context_add_class (context, "content-view");

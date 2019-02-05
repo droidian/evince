@@ -7,6 +7,7 @@
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
     <revision pkgversion="3.12" date="2014-03-23" status="candidate"/>
     <revision pkgversion="3.15" date="2015-01-28" status="candidate"/>
+    <revision pkgversion="3.30" date="2018-11-25" status="candidate"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -83,7 +84,10 @@
     <p>Para filtrar palavras pelos caracteres maiúsculos/minúsculos ou palavras completas, você pode selecionar na caixa de pesquisa as opções <gui>Diferenciar maiúsc./minúsc.</gui> ou <gui>Somente palavras inteiras</gui>.</p>
   </note>
 
-  <p>Se a palavra ou frase que você procurou não é encontrada no documento, você verá o texto <em>Não encontrado</em> ao lado da caixa de pesquisa. Ao invés disso, se a palavra ou frase for encontrada no documento pelo menos uma vez, você verá ao lado da caixa de pesquisa quantas vezes o resultado acontece na página atual.</p>
+  <p>If the word or phrase that you searched for is not found in the document,
+  you will see <media type="image" src="figures/search-not-found.png"/> in the
+  search box. However, if it appears in the document at least once, you will be
+  shown how many times the search result appears on the current page.</p>
 
   <note>
     <p>Apenas é possível fazer pesquisas em documentos PDF. Pode não ser possível fazer pesquisas em alguns documentos PDF se o texto está armazenado nele como uma imagem.</p>

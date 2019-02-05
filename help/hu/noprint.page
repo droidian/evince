@@ -5,6 +5,7 @@
     <link type="guide" xref="index#printing"/>
     <desc>A szerző nyomtatási korlátozásokat alkalmazhatott a dokumentumra.</desc>
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <revision pkgversion="3.30.2" version="0.2" date="2018-11-25" status="final"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -44,7 +45,19 @@
 
   <p>A nyomtató megfelelő működésének ellenőrzéséhez:</p>
   <steps>
-   <item><p>Kattintson a nevére a felső sávon, és válassza a <gui>Rendszerbeállítások</gui> menüpontot.</p></item>
+    <item>
+      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
+      overview and start typing <gui>Settings</gui>.</p>
+    </item>
+    <item>
+      <p>Click on <gui>Settings</gui>.</p>
+    </item>
+    <item>
+      <p>Click <gui>Devices</gui> in the sidebar.</p>
+    </item>
+    <item>
+      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+    </item>
    <item><p>Kattintson a nyomtatójára a listában.</p></item>
    <item><p>Kattintson a <gui>Tesztoldal nyomtatása</gui> gombra. Egy oldal kerül kiküldésre a nyomtatóra.</p>
 <note>

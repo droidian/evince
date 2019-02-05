@@ -5,6 +5,7 @@
     <link type="guide" xref="index#printing"/>
     <desc>Forfatteren kan have lagt begrænsninger i dokumentet hvad angår udskrivning.</desc>
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <revision pkgversion="3.30.2" version="0.2" date="2018-11-25" status="final"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -32,7 +33,19 @@
 
   <p>For at finde ud af om din printer udskriver korrekt:</p>
   <steps>
-   <item><p>Klik på dit navn i toppanelet og vælg <gui>Systemindstillinger</gui>.</p></item>
+    <item>
+      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
+      overview and start typing <gui>Settings</gui>.</p>
+    </item>
+    <item>
+      <p>Click on <gui>Settings</gui>.</p>
+    </item>
+    <item>
+      <p>Click <gui>Devices</gui> in the sidebar.</p>
+    </item>
+    <item>
+      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+    </item>
    <item><p>Klik på din printer i listen.</p></item>
    <item><p>Klik på <gui>Udskriv prøveside</gui>. Der sendes en side til din printer.</p>
 <note>

@@ -33,6 +33,9 @@
 G_BEGIN_DECLS
 
 /* Evince stock icons */
+#define EV_STOCK_ANNOT_TEXT             "annotations-text-symbolic"
+#define EV_STOCK_ANNOT_SQUIGGLY         "annotations-squiggly-symbolic"
+#define EV_STOCK_FIND_UNSUPPORTED       "find-unsupported-symbolic"
 #define EV_STOCK_ZOOM	                "zoom"
 #define EV_STOCK_ZOOM_PAGE              "zoom-fit-height"
 #define EV_STOCK_ZOOM_WIDTH             "zoom-fit-width"
@@ -41,7 +44,7 @@ G_BEGIN_DECLS
 #define EV_STOCK_ROTATE_LEFT            "object-rotate-left"
 #define EV_STOCK_ROTATE_RIGHT           "object-rotate-right"
 #define EV_STOCK_RUN_PRESENTATION       "x-office-presentation"
-#define EV_STOCK_VISIBLE                "eye"
+#define EV_STOCK_VISIBLE                "visible-symbolic"
 #define EV_STOCK_RESIZE_SE              "resize-se"
 #define EV_STOCK_RESIZE_SW              "resize-sw"
 #define EV_STOCK_CLOSE                  "close"

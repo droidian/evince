@@ -41,11 +41,15 @@
 <p>Aby utworzyć przypis:</p>
 <steps>
  <item>
-  <p>Wybierz <gui>Dodaj przypis do dokumentu</gui> na pasku tytułu.</p>
+  <p>
+    Select <gui>Annotate the document</gui> from the header bar.
+  </p>
     <media type="image" src="figures/add-text-annotation.png"/>
     <list>
      <item>
-      <p>Pod paskiem tytułu powinny być widoczne przyciski <gui>Dodaj przypis tekstowy</gui> i <gui>Dodaj zakreślenie</gui>.</p>
+      <p>
+        You should now see <gui>Add text annotation</gui> and <gui>Add highlight annotation</gui> buttons below the header bar.
+      </p>
        <media type="image" src="figures/list-add-tabs.png"/>
      </item>
     </list>

@@ -105,10 +105,13 @@
       <p>So gehen Sie zu einer bestimmten Seite:</p>
       <list>
         <item>
-          <p>Tippen Sie die Seitennummer unter <gui style="input">Seite wählen</gui> in der <link xref="toolbar">Titelleiste</link> ein und drücken Sie die <key>Eingabetaste</key>.</p>
+          <p>Type a page number in <gui style="input">Select Page</gui> on the
+          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
         </item>
         <item>
-          <p>Um zuvor besuchte Seiten zu sehen, wählen Sie <gui style="button">&lt;</gui> oder <gui style="button">&gt;</gui> in der Titelleiste.</p>
+          <p>If you want to see the previously visited pages press
+          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
+          the header bar.</p>
         </item>
         <item>
           <p>Wenn Sie zum Anfang oder das Ende des Dokuments springen möchten:</p>

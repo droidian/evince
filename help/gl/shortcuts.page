@@ -109,11 +109,13 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> followed by the page number and <key>Enter</key></p></td>
 </tr>
     <tr>
-        <td><p>Ir ao comezo da páxina (comezo do documento se <guiseq><gui>Ver</gui><gui>Continuo</gui></guiseq> está seleccionado).</p></td>
+        <td><p>Go to the beginning of a page (beginning of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
          <td><p><key>Inicio</key></p></td>
     </tr>
     <tr>
-        <td><p>Ir ao final da páxina (final do documento se <guiseq><gui>Ver</gui><gui>Continuo</gui></guiseq> está seleccionado).</p></td>
+        <td><p>Go to the end of a page (end of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
         <td><p><key>Fin</key></p></td>
     </tr>
     <tr>

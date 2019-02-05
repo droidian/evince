@@ -145,11 +145,13 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> suivi par le numéro de page puis <key>Entrée</key></p></td>
 </tr>
     <tr>
-        <td><p>Aller au début de la page (au début du document si <guiseq><gui>Affichage</gui><gui>Continue</gui></guiseq> est sélectionné).</p></td>
+        <td><p>Go to the beginning of a page (beginning of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
          <td><p><key>Origine</key></p></td>
     </tr>
     <tr>
-        <td><p>Aller à la fin de la page (à la fin du document si <guiseq><gui>Affichage</gui><gui>Continue</gui></guiseq> est sélectionné).</p></td>
+        <td><p>Go to the end of a page (end of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
         <td><p><key>Fin</key></p></td>
     </tr>
     <tr>

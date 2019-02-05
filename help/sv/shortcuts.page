@@ -119,11 +119,11 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> följt av sidnumret och <key>Retur</key></p></td>
 </tr>
     <tr>
-        <td><p>Gå till början av en sida (början av dokumentet om <guiseq><gui>Visa</gui> <gui>Sammanhängande</gui></guiseq> är markerat).</p></td>
+        <td><p>Gå till början av en sida (början av dokumentet om <gui>Sammanhängande</gui> är markerat i menyn <gui>Visningsalternativ</gui>).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
-        <td><p>Gå till slutet av en sida (slutet av dokumentet om <guiseq><gui>Visa</gui><gui>Sammanhängande</gui></guiseq> är markerat).</p></td>
+        <td><p>Gå till slutet av en sida (slutet av dokumentet om <gui>Sammanhängande</gui> är markerat i menyn <gui>Visningsalternativ</gui>).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>

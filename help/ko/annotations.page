@@ -41,11 +41,15 @@
 <p>추가 정보를 만들려면:</p>
 <steps>
  <item>
-  <p>제목 표시줄에서 <gui>문서에 추가 정보를 넣습니다</gui>를 선택합니다.</p>
+  <p>
+    Select <gui>Annotate the document</gui> from the header bar.
+  </p>
     <media type="image" src="figures/add-text-annotation.png"/>
     <list>
      <item>
-      <p>이제 드롭다운 메뉴에서 <gui>텍스트 추가 정보 추가</gui>와 <gui>강조 추가 정보 추가</gui>탭이 나타납니다.</p>
+      <p>
+        You should now see <gui>Add text annotation</gui> and <gui>Add highlight annotation</gui> buttons below the header bar.
+      </p>
        <media type="image" src="figures/list-add-tabs.png"/>
      </item>
     </list>

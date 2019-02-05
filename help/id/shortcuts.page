@@ -109,11 +109,13 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> diikuti dengan nomor halaman dan <key>Enter</key></p></td>
 </tr>
     <tr>
-        <td><p>Pergi ke awal halaman (awal dokumen bila <guiseq><gui>Tilik</gui> <gui>Menyambung</gui></guiseq> dipilih).</p></td>
+        <td><p>Go to the beginning of a page (beginning of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
-        <td><p>Pergi ke akhir halaman (akhir dokumen bila <guiseq><gui>Tilik</gui><gui>Menyambung</gui></guiseq> dipilih).</p></td>
+        <td><p>Go to the end of a page (end of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>

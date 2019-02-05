@@ -38,7 +38,10 @@
     <title>Een document op een bepaalde pagina openen</title>
     <p>U kunt de <cmd>--page-label</cmd>-switch gebruiken om een document op een specifieke pagina te openen. Bijvoorbeeld, om een document op pagina 3 te openen, kunt u het volgende typen:</p>
     <screen>evince --page-label=3 file.pdf</screen>
-    <p>Het pagina-label moet in hetzelfde formaat zijn als het paginanummer dat wordt weergegeven in de titelbalk van <app>Documentweergave</app>.</p>
+    <p>
+    The page label should be in the same format as the page number displayed in
+    the <app>Document Viewer</app> header bar.
+    </p>
 </section>
 <section id="fullsreen">
     <title>Een document in modus voor volledig scherm openen</title>

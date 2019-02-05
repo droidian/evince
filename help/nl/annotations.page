@@ -35,11 +35,15 @@
 <p>Om een annotatie te maken:</p>
 <steps>
  <item>
-  <p>Selecteer <gui>Het document annoteren</gui> vanuit de titelbalk.</p>
+  <p>
+    Select <gui>Annotate the document</gui> from the header bar.
+  </p>
     <media type="image" src="figures/add-text-annotation.png"/>
     <list>
      <item>
-      <p>U zou nu de knoppen <gui>Tekstannotatie toevoegen</gui> en <gui>Markeerannotatie toevoegen</gui> moeten zien onder de titelbalk.</p>
+      <p>
+        You should now see <gui>Add text annotation</gui> and <gui>Add highlight annotation</gui> buttons below the header bar.
+      </p>
        <media type="image" src="figures/list-add-tabs.png"/>
      </item>
     </list>

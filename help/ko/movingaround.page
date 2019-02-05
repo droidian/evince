@@ -87,10 +87,13 @@
       <p>지정한 페이지로 이동하려면:</p>
       <list>
         <item>
-          <p><link xref="titlebar">제목 표시줄</link>의 <gui style="input">페이지 선택</gui> 입력 창에서 페이지 번호를 입력하고 <key>Enter</key>를 누릅니다.</p>
+          <p>Type a page number in <gui style="input">Select Page</gui> on the
+          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
         </item>
         <item>
-          <p>앞 단계의 페이지를 보려면, 제목 표시줄에서 <gui style="button">&lt;</gui> 또는 <gui style="button">&gt;</gui>를 누릅니다.</p>
+          <p>If you want to see the previously visited pages press
+          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
+          the header bar.</p>
         </item>
         <item>
           <p>문서의 처음이나 끝 부분으로 이동하려면:</p>

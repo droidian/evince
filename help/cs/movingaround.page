@@ -87,10 +87,13 @@
       <p>Pro přejití na konkrétní stránku:</p>
       <list>
         <item>
-          <p>Napište číslo stránky do kolonky <gui style="input">Zvolit stránku</gui> na <link xref="titlebar">hlavičkové liště</link> a zmáčkněte <key>Enter</key>.</p>
+          <p>Type a page number in <gui style="input">Select Page</gui> on the
+          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
         </item>
         <item>
-          <p>Pokud chcete vidět předchozí navštívené stránky, zmáčkněte <gui style="button">&lt;</gui> nebo <gui style="button">&gt;</gui> na hlavičkové liště.</p>
+          <p>If you want to see the previously visited pages press
+          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
+          the header bar.</p>
         </item>
         <item>
           <p>Když chcete přejít na začátek nebo konec dokumentu:</p>
