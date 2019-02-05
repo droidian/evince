@@ -1,3 +1,9 @@
+evince (3.31.90-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 04 Feb 2019 21:30:45 -0500
+
 evince (3.30.2-3) unstable; urgency=medium
 
   [ Jason Crain ]
