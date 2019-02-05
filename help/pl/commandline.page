@@ -44,7 +44,10 @@
     <title>Otwieranie dokumentu na konkretnej stronie</title>
     <p>Można użyć przełącznika <cmd>--page-label</cmd>, aby otworzyć dokument na konkretnej stronie. Na przykład, aby otworzyć dokument na 3. stronie, wpisz:</p>
     <screen>evince --page-label=3 plik.pdf</screen>
-    <p>Etykieta strony musi być w tym samym formacie, co numer strony wyświetlany na pasku tytułu <app>Przeglądarki dokumentów</app>.</p>
+    <p>
+    The page label should be in the same format as the page number displayed in
+    the <app>Document Viewer</app> header bar.
+    </p>
 </section>
 <section id="fullsreen">
     <title>Otwieranie dokumentu w trybie pełnoekranowym</title>

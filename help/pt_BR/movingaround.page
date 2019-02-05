@@ -111,10 +111,13 @@
       <p>Para ir até uma determinada página:</p>
       <list>
         <item>
-          <p>Digite um número de página na caixa do canto superior esquerdo da <link xref="titlebar">barra de ferramentas</link> e pressione <key>Enter</key>.</p>
+          <p>Type a page number in <gui style="input">Select Page</gui> on the
+          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
         </item>
         <item>
-          <p>Para ver as páginas visitadas anteriormente, use os botões <gui style="button">&lt;</gui> ou <gui style="button">&gt;</gui> da barra de título.</p>
+          <p>If you want to see the previously visited pages press
+          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
+          the header bar.</p>
         </item>
         <item>
           <p>Para ir para o início ou para o final do documento:</p>

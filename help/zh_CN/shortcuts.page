@@ -103,13 +103,13 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> followed by the page number and <key>Enter</key></p></td>
 </tr>
     <tr>
-        <td><p>Go to the beginning of a page (beginning of the document
-if <guiseq><gui>View</gui> <gui>Continuous</gui></guiseq> is
-selected).</p></td>
+        <td><p>Go to the beginning of a page (beginning of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
-        <td><p>转到页面最后 (如果选定 <guiseq><gui>查看</gui><gui>连续</gui></guiseq>，则是文档的结尾处)。</p></td>
+        <td><p>Go to the end of a page (end of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>

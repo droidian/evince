@@ -74,7 +74,10 @@
     <title>Ouverture d’un document à une page précise</title>
     <p>Vous pouvez utiliser l’option <cmd>--page-label</cmd> pour ouvrir un document à une page précise. Par exemple, pour ouvrir un document à la page 3, vous devez saisir :</p>
     <screen>evince --page-label=3 fichier.pdf</screen>
-    <p>Le numéro de page doit être dans le même format que le numéro affiché dans la barre de titre du <app>Visionneur de documents</app>.</p>
+    <p>
+    The page label should be in the same format as the page number displayed in
+    the <app>Document Viewer</app> header bar.
+    </p>
 </section>
 <section id="fullsreen">
     <title>Ouverture d’un document en mode plein écran</title>

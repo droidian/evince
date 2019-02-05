@@ -29,6 +29,7 @@
 #include "ev-link.h"
 #include "ev-history.h"
 #include "ev-document-model.h"
+#include "ev-metadata.h"
 
 G_BEGIN_DECLS
 
@@ -51,7 +52,6 @@ typedef enum {
 
 typedef struct _EvWindow EvWindow;
 typedef struct _EvWindowClass EvWindowClass;
-typedef struct _EvWindowPrivate EvWindowPrivate;
 
 #define EV_TYPE_WINDOW			(ev_window_get_type())
 #define EV_WINDOW(object)		(G_TYPE_CHECK_INSTANCE_CAST((object), EV_TYPE_WINDOW, EvWindow))
@@ -63,7 +63,6 @@ typedef struct _EvWindowPrivate EvWindowPrivate;
 
 struct _EvWindow {
 	GtkApplicationWindow base_instance;
-	EvWindowPrivate     *priv;
 };
 
 struct _EvWindowClass {
@@ -96,6 +95,8 @@ void            ev_window_focus_view                     (EvWindow       *ev_win
 GtkWidget      *ev_window_get_toolbar			 (EvWindow	 *ev_window);
 void            ev_window_handle_annot_popup             (EvWindow       *ev_window,
                                                           EvAnnotation   *annot);
+EvMetadata     *ev_window_get_metadata			 (EvWindow	 *ev_window);
+gint            ev_window_get_metadata_sidebar_size      (EvWindow       *ev_window);
 
 G_END_DECLS
 

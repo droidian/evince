@@ -7,6 +7,7 @@
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
     <revision pkgversion="3.12" date="2014-03-23" status="candidate"/>
     <revision pkgversion="3.15" date="2015-01-28" status="candidate"/>
+    <revision pkgversion="3.30" date="2018-11-25" status="candidate"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -89,7 +90,10 @@
     <p>Pour filtrer les mots en fonction de la casse ou par mots entiers, faites un clic droit sur la barre de recherche et sélectionnez <gui>Respecter la casse</gui> ou <gui>Mots entiers</gui>.</p>
   </note>
 
-  <p>Si le mot ou la phrase que vous recherchez n’est pas trouvé dans le document complet, le message affiche <em>Non trouvé</em> à côté de la boîte de recherche. Cependant s’il apparaît au moins une fois dans le document, le message vous informe du nombre d’occurrences sur la page actuelle.</p>
+  <p>If the word or phrase that you searched for is not found in the document,
+  you will see <media type="image" src="figures/search-not-found.png"/> in the
+  search box. However, if it appears in the document at least once, you will be
+  shown how many times the search result appears on the current page.</p>
 
   <note>
     <p>Il n’est possible de faire une recherche que dans les documents PDF. Ce n’est pas possible avec certains documents PDF car leur texte est codé dans le document sous la forme d’images.</p>

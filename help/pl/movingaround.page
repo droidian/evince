@@ -87,10 +87,13 @@
       <p>Aby przejść do konkretnej strony:</p>
       <list>
         <item>
-          <p>Wpisz numer strony w polu <gui style="input">Wybór strony</gui> na <link xref="titlebar">pasku tytułu</link> i naciśnij klawisz <key>Enter</key>.</p>
+          <p>Type a page number in <gui style="input">Select Page</gui> on the
+          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
         </item>
         <item>
-          <p>Aby wyświetlić poprzednio odwiedzone strony, kliknij przyciski <gui style="button">&lt;</gui> lub <gui style="button">&gt;</gui> na pasku tytułu.</p>
+          <p>If you want to see the previously visited pages press
+          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
+          the header bar.</p>
         </item>
         <item>
           <p>Aby przejść na początek lub koniec dokumentu:</p>

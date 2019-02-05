@@ -34,7 +34,7 @@
     <screen>evince --page-label=3 файл.pdf</screen>
     <p>
     The page label should be in the same format as the page number displayed in
-    the <app>Document Viewer</app> title bar.
+    the <app>Document Viewer</app> header bar.
     </p>
 </section>
 <section id="fullsreen">

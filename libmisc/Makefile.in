@@ -90,13 +90,18 @@ build_triplet = @build@
 host_triplet = @host@
 subdir = libmisc
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/gnome-compiler-flags.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ax_require_defined.m4 \
+	$(top_srcdir)/m4/gettext.m4 \
+	$(top_srcdir)/m4/gnome-compiler-flags.m4 \
 	$(top_srcdir)/m4/gsettings.m4 $(top_srcdir)/m4/gtk-doc.m4 \
-	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/introspection.m4 \
+	$(top_srcdir)/m4/iconv.m4 $(top_srcdir)/m4/intlmacosx.m4 \
+	$(top_srcdir)/m4/introspection.m4 $(top_srcdir)/m4/lib-ld.m4 \
+	$(top_srcdir)/m4/lib-link.m4 $(top_srcdir)/m4/lib-prefix.m4 \
 	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
 	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
 	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/m4/nls.m4 \
-	$(top_srcdir)/m4/pkg.m4 $(top_srcdir)/m4/yelp.m4 \
+	$(top_srcdir)/m4/pkg.m4 $(top_srcdir)/m4/po.m4 \
+	$(top_srcdir)/m4/progtest.m4 $(top_srcdir)/m4/yelp.m4 \
 	$(top_srcdir)/acinclude.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
@@ -109,8 +114,7 @@ LTLIBRARIES = $(noinst_LTLIBRARIES)
 libevmisc_la_DEPENDENCIES =  \
 	$(top_builddir)/libdocument/libevdocument3.la \
 	$(top_builddir)/libview/libevview3.la
-am_libevmisc_la_OBJECTS = libevmisc_la-ev-page-action.lo \
-	libevmisc_la-ev-page-action-widget.lo \
+am_libevmisc_la_OBJECTS = libevmisc_la-ev-page-action-widget.lo \
 	libevmisc_la-ev-search-box.lo
 libevmisc_la_OBJECTS = $(am_libevmisc_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
@@ -137,7 +141,6 @@ depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__maybe_remake_depfiles = depfiles
 am__depfiles_remade =  \
 	./$(DEPDIR)/libevmisc_la-ev-page-action-widget.Plo \
-	./$(DEPDIR)/libevmisc_la-ev-page-action.Plo \
 	./$(DEPDIR)/libevmisc_la-ev-search-box.Plo
 am__mv = mv -f
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
@@ -187,7 +190,6 @@ CTAGS = ctags
 am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
-ALL_LINGUAS = @ALL_LINGUAS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
 AM_CPPFLAGS = @AM_CPPFLAGS@
@@ -209,8 +211,6 @@ CAIRO_PDF_CFLAGS = @CAIRO_PDF_CFLAGS@
 CAIRO_PDF_LIBS = @CAIRO_PDF_LIBS@
 CAIRO_PS_CFLAGS = @CAIRO_PS_CFLAGS@
 CAIRO_PS_LIBS = @CAIRO_PS_LIBS@
-CATALOGS = @CATALOGS@
-CATOBJEXT = @CATOBJEXT@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
@@ -222,7 +222,6 @@ CXXCPP = @CXXCPP@
 CXXDEPMODE = @CXXDEPMODE@
 CXXFLAGS = @CXXFLAGS@
 CYGPATH_W = @CYGPATH_W@
-DATADIRNAME = @DATADIRNAME@
 DEFS = @DEFS@
 DEPDIR = @DEPDIR@
 DESKTOP_SCHEMAS_CFLAGS = @DESKTOP_SCHEMAS_CFLAGS@
@@ -246,7 +245,6 @@ EV_DAEMON_CFLAGS = @EV_DAEMON_CFLAGS@
 EV_DAEMON_LIBS = @EV_DAEMON_LIBS@
 EV_DOCUMENT_LT_CURRENT_MINUS_AGE = @EV_DOCUMENT_LT_CURRENT_MINUS_AGE@
 EV_DOCUMENT_LT_VERSION_INFO = @EV_DOCUMENT_LT_VERSION_INFO@
-EV_INTLTOOL_EVINCE_BACKEND_RULE = @EV_INTLTOOL_EVINCE_BACKEND_RULE@
 EV_MAJOR_VERSION = @EV_MAJOR_VERSION@
 EV_MICRO_VERSION = @EV_MICRO_VERSION@
 EV_MINOR_VERSION = @EV_MINOR_VERSION@
@@ -259,6 +257,7 @@ FRONTEND_CORE_CFLAGS = @FRONTEND_CORE_CFLAGS@
 FRONTEND_CORE_LIBS = @FRONTEND_CORE_LIBS@
 FRONTEND_LIBS = @FRONTEND_LIBS@
 GDBUS_CODEGEN = @GDBUS_CODEGEN@
+GETTEXT_MACRO_VERSION = @GETTEXT_MACRO_VERSION@
 GETTEXT_PACKAGE = @GETTEXT_PACKAGE@
 GLIB_COMPILE_RESOURCES = @GLIB_COMPILE_RESOURCES@
 GLIB_COMPILE_SCHEMAS = @GLIB_COMPILE_SCHEMAS@
@@ -266,8 +265,8 @@ GLIB_GENMARSHAL = @GLIB_GENMARSHAL@
 GLIB_MKENUMS = @GLIB_MKENUMS@
 GLIB_PREFIX = @GLIB_PREFIX@
 GLIB_REQUIRED = @GLIB_REQUIRED@
-GMOFILES = @GMOFILES@
 GMSGFMT = @GMSGFMT@
+GMSGFMT_015 = @GMSGFMT_015@
 GREP = @GREP@
 GSETTINGS_DISABLE_SCHEMAS_COMPILE = @GSETTINGS_DISABLE_SCHEMAS_COMPILE@
 GSPELL_CFLAGS = @GSPELL_CFLAGS@
@@ -293,16 +292,7 @@ INSTALL_DATA = @INSTALL_DATA@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
-INSTOBJEXT = @INSTOBJEXT@
 INTLLIBS = @INTLLIBS@
-INTLTOOL_EXTRACT = @INTLTOOL_EXTRACT@
-INTLTOOL_MERGE = @INTLTOOL_MERGE@
-INTLTOOL_PERL = @INTLTOOL_PERL@
-INTLTOOL_UPDATE = @INTLTOOL_UPDATE@
-INTLTOOL_V_MERGE = @INTLTOOL_V_MERGE@
-INTLTOOL_V_MERGE_OPTIONS = @INTLTOOL_V_MERGE_OPTIONS@
-INTLTOOL__v_MERGE_ = @INTLTOOL__v_MERGE_@
-INTLTOOL__v_MERGE_0 = @INTLTOOL__v_MERGE_0@
 INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
 INTROSPECTION_CFLAGS = @INTROSPECTION_CFLAGS@
 INTROSPECTION_COMPILER = @INTROSPECTION_COMPILER@
@@ -321,6 +311,8 @@ LIBDOCUMENT_CFLAGS = @LIBDOCUMENT_CFLAGS@
 LIBDOCUMENT_LIBS = @LIBDOCUMENT_LIBS@
 LIBGNOME_DESKTOP_CFLAGS = @LIBGNOME_DESKTOP_CFLAGS@
 LIBGNOME_DESKTOP_LIBS = @LIBGNOME_DESKTOP_LIBS@
+LIBICONV = @LIBICONV@
+LIBINTL = @LIBINTL@
 LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBS = @LIBS@
@@ -331,15 +323,16 @@ LIBVIEW_CFLAGS = @LIBVIEW_CFLAGS@
 LIBVIEW_LIBS = @LIBVIEW_LIBS@
 LIPO = @LIPO@
 LN_S = @LN_S@
+LTLIBICONV = @LTLIBICONV@
+LTLIBINTL = @LTLIBINTL@
 LTLIBOBJS = @LTLIBOBJS@
 LT_SYS_LIBRARY_PATH = @LT_SYS_LIBRARY_PATH@
 MAINT = @MAINT@
 MAKEINFO = @MAKEINFO@
 MANIFEST_TOOL = @MANIFEST_TOOL@
 MKDIR_P = @MKDIR_P@
-MKINSTALLDIRS = @MKINSTALLDIRS@
 MSGFMT = @MSGFMT@
-MSGFMT_OPTS = @MSGFMT_OPTS@
+MSGFMT_015 = @MSGFMT_015@
 MSGMERGE = @MSGMERGE@
 NAUTILUS_CFLAGS = @NAUTILUS_CFLAGS@
 NAUTILUS_EXTENSION_DIR = @NAUTILUS_EXTENSION_DIR@
@@ -362,12 +355,9 @@ PDF_MIME_TYPES = @PDF_MIME_TYPES@
 PKG_CONFIG = @PKG_CONFIG@
 PKG_CONFIG_LIBDIR = @PKG_CONFIG_LIBDIR@
 PKG_CONFIG_PATH = @PKG_CONFIG_PATH@
-POFILES = @POFILES@
 POPPLER_CFLAGS = @POPPLER_CFLAGS@
 POPPLER_LIBS = @POPPLER_LIBS@
 POSUB = @POSUB@
-PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
-PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
 PREVIEWER_CFLAGS = @PREVIEWER_CFLAGS@
 PREVIEWER_LIBS = @PREVIEWER_LIBS@
 PS_MIME_TYPES = @PS_MIME_TYPES@
@@ -391,6 +381,8 @@ WARN_CFLAGS = @WARN_CFLAGS@
 WARN_CXXFLAGS = @WARN_CXXFLAGS@
 WINDRES = @WINDRES@
 XGETTEXT = @XGETTEXT@
+XGETTEXT_015 = @XGETTEXT_015@
+XGETTEXT_EXTRA_OPTIONS = @XGETTEXT_EXTRA_OPTIONS@
 XMLLINT = @XMLLINT@
 XPS_MIME_TYPES = @XPS_MIME_TYPES@
 YELP_LC_DIST = @YELP_LC_DIST@
@@ -433,8 +425,6 @@ htmldir = @htmldir@
 includedir = @includedir@
 infodir = @infodir@
 install_sh = @install_sh@
-intltool__v_merge_options_ = @intltool__v_merge_options_@
-intltool__v_merge_options_0 = @intltool__v_merge_options_0@
 libdir = @libdir@
 libexecdir = @libexecdir@
 localedir = @localedir@
@@ -458,8 +448,6 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 noinst_LTLIBRARIES = libevmisc.la
 libevmisc_la_SOURCES = \
-	ev-page-action.c	\
-	ev-page-action.h	\
 	ev-page-action-widget.c	\
 	ev-page-action-widget.h \
 	ev-search-box.c		\
@@ -531,7 +519,6 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libevmisc_la-ev-page-action-widget.Plo@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libevmisc_la-ev-page-action.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libevmisc_la-ev-search-box.Plo@am__quote@ # am--include-marker
 
 $(am__depfiles_remade):
@@ -560,13 +547,6 @@ am--depfiles: $(am__depfiles_remade)
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
-
-libevmisc_la-ev-page-action.lo: ev-page-action.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libevmisc_la_CFLAGS) $(CFLAGS) -MT libevmisc_la-ev-page-action.lo -MD -MP -MF $(DEPDIR)/libevmisc_la-ev-page-action.Tpo -c -o libevmisc_la-ev-page-action.lo `test -f 'ev-page-action.c' || echo '$(srcdir)/'`ev-page-action.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libevmisc_la-ev-page-action.Tpo $(DEPDIR)/libevmisc_la-ev-page-action.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='ev-page-action.c' object='libevmisc_la-ev-page-action.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libevmisc_la_CFLAGS) $(CFLAGS) -c -o libevmisc_la-ev-page-action.lo `test -f 'ev-page-action.c' || echo '$(srcdir)/'`ev-page-action.c
 
 libevmisc_la-ev-page-action-widget.lo: ev-page-action-widget.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libevmisc_la_CFLAGS) $(CFLAGS) -MT libevmisc_la-ev-page-action-widget.lo -MD -MP -MF $(DEPDIR)/libevmisc_la-ev-page-action-widget.Tpo -c -o libevmisc_la-ev-page-action-widget.lo `test -f 'ev-page-action-widget.c' || echo '$(srcdir)/'`ev-page-action-widget.c
@@ -714,7 +694,6 @@ clean-am: clean-generic clean-libtool clean-noinstLTLIBRARIES \
 
 distclean: distclean-am
 		-rm -f ./$(DEPDIR)/libevmisc_la-ev-page-action-widget.Plo
-	-rm -f ./$(DEPDIR)/libevmisc_la-ev-page-action.Plo
 	-rm -f ./$(DEPDIR)/libevmisc_la-ev-search-box.Plo
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
@@ -762,7 +741,6 @@ installcheck-am:
 
 maintainer-clean: maintainer-clean-am
 		-rm -f ./$(DEPDIR)/libevmisc_la-ev-page-action-widget.Plo
-	-rm -f ./$(DEPDIR)/libevmisc_la-ev-page-action.Plo
 	-rm -f ./$(DEPDIR)/libevmisc_la-ev-search-box.Plo
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic

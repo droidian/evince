@@ -20,7 +20,6 @@
       <sub name="EvPasswordView" link="EvPasswordView.html"/>
       <sub name="ev-media-player-keys" link="evince-ev-media-player-keys.html"/>
       <sub name="EvFileMonitor" link="EvFileMonitor.html"/>
-      <sub name="EvPageAction" link="EvPageAction.html"/>
       <sub name="ev-window-title" link="evince-ev-window-title.html"/>
       <sub name="ev-keyring" link="evince-ev-keyring.html"/>
       <sub name="ev-utils" link="evince-ev-utils.html"/>
@@ -83,7 +82,6 @@
     <keyword type="function" name="ev_sidebar_set_model ()" link="EvSidebar.html#ev-sidebar-set-model"/>
     <keyword type="struct" name="struct EvSidebar" link="EvSidebar.html#EvSidebar-struct"/>
     <keyword type="struct" name="struct EvSidebarClass" link="EvSidebar.html#EvSidebarClass"/>
-    <keyword type="struct" name="EvSidebarPrivate" link="EvSidebar.html#EvSidebarPrivate"/>
     <keyword type="property" name="The “active-icon-name” property" link="EvSidebar.html#EvSidebar--active-icon-name"/>
     <keyword type="property" name="The “current-page” property" link="EvSidebar.html#EvSidebar--current-page"/>
     <keyword type="function" name="ev_properties_license_new ()" link="evince-ev-properties-license.html#ev-properties-license-new"/>
@@ -93,12 +91,10 @@
     <keyword type="struct" name="EvPropertiesLicensePrivate" link="evince-ev-properties-license.html#EvPropertiesLicensePrivate"/>
     <keyword type="function" name="ev_message_area_new ()" link="EvMessageArea.html#ev-message-area-new"/>
     <keyword type="function" name="ev_message_area_set_image ()" link="EvMessageArea.html#ev-message-area-set-image"/>
-    <keyword type="function" name="ev_message_area_set_image_from_stock ()" link="EvMessageArea.html#ev-message-area-set-image-from-stock"/>
     <keyword type="function" name="ev_message_area_set_text ()" link="EvMessageArea.html#ev-message-area-set-text"/>
     <keyword type="function" name="ev_message_area_set_secondary_text ()" link="EvMessageArea.html#ev-message-area-set-secondary-text"/>
     <keyword type="struct" name="struct EvMessageArea" link="EvMessageArea.html#EvMessageArea-struct"/>
     <keyword type="struct" name="struct EvMessageAreaClass" link="EvMessageArea.html#EvMessageAreaClass"/>
-    <keyword type="struct" name="EvMessageAreaPrivate" link="EvMessageArea.html#EvMessageAreaPrivate"/>
     <keyword type="property" name="The “image” property" link="EvMessageArea.html#EvMessageArea--image"/>
     <keyword type="property" name="The “secondary-text” property" link="EvMessageArea.html#EvMessageArea--secondary-text"/>
     <keyword type="property" name="The “text” property" link="EvMessageArea.html#EvMessageArea--text"/>
@@ -107,7 +103,6 @@
     <keyword type="function" name="ev_progress_message_area_set_fraction ()" link="EvProgressMessageArea.html#ev-progress-message-area-set-fraction"/>
     <keyword type="struct" name="struct EvProgressMessageArea" link="EvProgressMessageArea.html#EvProgressMessageArea-struct"/>
     <keyword type="struct" name="struct EvProgressMessageAreaClass" link="EvProgressMessageArea.html#EvProgressMessageAreaClass"/>
-    <keyword type="struct" name="EvProgressMessageAreaPrivate" link="EvProgressMessageArea.html#EvProgressMessageAreaPrivate"/>
     <keyword type="property" name="The “fraction” property" link="EvProgressMessageArea.html#EvProgressMessageArea--fraction"/>
     <keyword type="property" name="The “status” property" link="EvProgressMessageArea.html#EvProgressMessageArea--status"/>
     <keyword type="function" name="ev_metadata_new ()" link="evince-ev-metadata.html#ev-metadata-new"/>
@@ -133,11 +128,9 @@
     <keyword type="enum" name="enum EvPrintPageSet" link="EvWindow.html#EvPrintPageSet"/>
     <keyword type="struct" name="struct EvWindow" link="EvWindow.html#EvWindow-struct"/>
     <keyword type="struct" name="struct EvWindowClass" link="EvWindow.html#EvWindowClass"/>
-    <keyword type="struct" name="EvWindowPrivate" link="EvWindow.html#EvWindowPrivate"/>
     <keyword type="function" name="ev_history_new ()" link="EvHistory.html#ev-history-new"/>
     <keyword type="function" name="ev_history_add_link ()" link="EvHistory.html#ev-history-add-link"/>
     <keyword type="struct" name="struct EvHistory" link="EvHistory.html#EvHistory-struct"/>
-    <keyword type="struct" name="EvHistoryPrivate" link="EvHistory.html#EvHistoryPrivate"/>
     <keyword type="struct" name="struct EvHistoryClass" link="EvHistory.html#EvHistoryClass"/>
     <keyword type="signal" name="The “activate-link” signal" link="EvHistory.html#EvHistory-activate-link"/>
     <keyword type="signal" name="The “changed” signal" link="EvHistory.html#EvHistory-changed"/>
@@ -152,7 +145,6 @@
     <keyword type="function" name="ev_password_view_get_password_save_flags ()" link="EvPasswordView.html#ev-password-view-get-password-save-flags"/>
     <keyword type="struct" name="struct EvPasswordView" link="EvPasswordView.html#EvPasswordView-struct"/>
     <keyword type="struct" name="struct EvPasswordViewClass" link="EvPasswordView.html#EvPasswordViewClass"/>
-    <keyword type="struct" name="EvPasswordViewPrivate" link="EvPasswordView.html#EvPasswordViewPrivate"/>
     <keyword type="signal" name="The “unlock” signal" link="EvPasswordView.html#EvPasswordView-unlock"/>
     <keyword type="function" name="ev_media_player_keys_new ()" link="evince-ev-media-player-keys.html#ev-media-player-keys-new"/>
     <keyword type="function" name="ev_media_player_keys_focused ()" link="evince-ev-media-player-keys.html#ev-media-player-keys-focused"/>
@@ -162,7 +154,6 @@
     <keyword type="function" name="ev_file_monitor_new ()" link="EvFileMonitor.html#ev-file-monitor-new"/>
     <keyword type="struct" name="struct EvFileMonitor" link="EvFileMonitor.html#EvFileMonitor-struct"/>
     <keyword type="struct" name="struct EvFileMonitorClass" link="EvFileMonitor.html#EvFileMonitorClass"/>
-    <keyword type="struct" name="EvFileMonitorPrivate" link="EvFileMonitor.html#EvFileMonitorPrivate"/>
     <keyword type="signal" name="The “changed” signal" link="EvFileMonitor.html#EvFileMonitor-changed"/>
     <keyword type="function" name="ev_window_title_new ()" link="evince-ev-window-title.html#ev-window-title-new"/>
     <keyword type="function" name="ev_window_title_set_type ()" link="evince-ev-window-title.html#ev-window-title-set-type"/>

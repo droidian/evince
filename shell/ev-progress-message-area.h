@@ -2,6 +2,7 @@
  *  this file is part of evince, a gnome document viewer
  *
  * Copyright (C) 2008 Carlos Garcia Campos <carlosgc@gnome.org>
+ * Copyright (C) 2018 Germán Poo-Caamaño <gpoo@gnome.org>
  *
  * Evince is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by
@@ -36,13 +37,9 @@ G_BEGIN_DECLS
 
 typedef struct _EvProgressMessageArea        EvProgressMessageArea;
 typedef struct _EvProgressMessageAreaClass   EvProgressMessageAreaClass;
-typedef struct _EvProgressMessageAreaPrivate EvProgressMessageAreaPrivate;
 
 struct _EvProgressMessageArea {
 	EvMessageArea parent_instance;
-
-	/*< private >*/
-	EvProgressMessageAreaPrivate *priv;
 };
 
 struct _EvProgressMessageAreaClass {
@@ -50,7 +47,7 @@ struct _EvProgressMessageAreaClass {
 };
 
 GType      ev_progress_message_area_get_type        (void) G_GNUC_CONST;
-GtkWidget *ev_progress_message_area_new             (const gchar           *stock_id,
+GtkWidget *ev_progress_message_area_new             (const gchar           *icon_name,
 						     const gchar           *text,
 						     const gchar           *first_button_text,
 						     ...);

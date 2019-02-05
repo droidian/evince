@@ -23,7 +23,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2012 - 2018</mal:years>
+      <mal:years>2012 - 2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -41,11 +41,15 @@
 <p>Crear una anotación:</p>
 <steps>
  <item>
-  <p>Seleccione <gui>Anotar el documento</gui> en la barra de título.</p>
+  <p>
+    Select <gui>Annotate the document</gui> from the header bar.
+  </p>
     <media type="image" src="figures/add-text-annotation.png"/>
     <list>
      <item>
-      <p>Ahora debería ver los botones <gui>Añadir anotación de texto</gui> y <gui>Añadir anotación resaltada</gui> debajo de la barra de título.</p>
+      <p>
+        You should now see <gui>Add text annotation</gui> and <gui>Add highlight annotation</gui> buttons below the header bar.
+      </p>
        <media type="image" src="figures/list-add-tabs.png"/>
      </item>
     </list>

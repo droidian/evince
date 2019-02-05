@@ -47,11 +47,15 @@
 <p>För att skapa en kommentar:</p>
 <steps>
  <item>
-  <p>Välj <gui>Lägg till kommentarer till dokumentet</gui> från namnlisten.</p>
+  <p>
+    Select <gui>Annotate the document</gui> from the header bar.
+  </p>
     <media type="image" src="figures/add-text-annotation.png"/>
     <list>
      <item>
-      <p>Du bör nu se knapparna <gui>Lägg till textkommentar</gui> och <gui>Lägg till färgmarkeringskommentar</gui> under namnlisten.</p>
+      <p>
+        You should now see <gui>Add text annotation</gui> and <gui>Add highlight annotation</gui> buttons below the header bar.
+      </p>
        <media type="image" src="figures/list-add-tabs.png"/>
      </item>
     </list>

@@ -41,11 +41,15 @@
 <p>Poznámku vytvoříte následovně:</p>
 <steps>
  <item>
-  <p>Na hlavičkové liště vyberte <gui>Přidat poznámky k dokumentu</gui>.</p>
+  <p>
+    Select <gui>Annotate the document</gui> from the header bar.
+  </p>
     <media type="image" src="figures/add-text-annotation.png"/>
     <list>
      <item>
-      <p>Nyní byste pod hlavičkovou lištou měli vidět tlačítka <gui>Přidat textovou poznámku</gui> a <gui>Přidat zvýrazněnou poznámku</gui>.</p>
+      <p>
+        You should now see <gui>Add text annotation</gui> and <gui>Add highlight annotation</gui> buttons below the header bar.
+      </p>
        <media type="image" src="figures/list-add-tabs.png"/>
      </item>
     </list>

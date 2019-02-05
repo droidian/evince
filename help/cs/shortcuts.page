@@ -113,11 +113,13 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> následováno číslem stránky a <key>Enter</key></p></td>
 </tr>
     <tr>
-        <td><p>Přejít na začátek stránky (případně začátek dokumentu, kdy je vybráno <guiseq><gui>Zobrazit</gui> <gui>Souvislé</gui></guiseq>).</p></td>
+        <td><p>Go to the beginning of a page (beginning of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
-        <td><p>Přejít na konec stránky (případně konec dokumentu, kdy je vybráno <guiseq><gui>Zobrazit</gui> <gui>Souvislé</gui></guiseq>).</p></td>
+        <td><p>Go to the end of a page (end of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>

@@ -5,10 +5,14 @@ context = actions
 iconsdir = $(themedir)/$(size)/$(context)
 
 icons_DATA = \
+	annotations-text-symbolic.svg	\
+	annotations-squiggly-symbolic.svg	\
+	find-unsupported-symbolic.svg	\
 	object-rotate-left.svg	\
 	object-rotate-right.svg \
 	outline-symbolic.svg \
-	view-sidebar-symbolic.svg
+	view-sidebar-symbolic.svg \
+	visible-symbolic.svg
 
 noinst_DATA =
 

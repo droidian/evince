@@ -7,6 +7,7 @@
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
     <revision pkgversion="3.12" date="2014-03-23" status="candidate"/>
     <revision pkgversion="3.15" date="2015-01-28" status="candidate"/>
+    <revision pkgversion="3.30" date="2018-11-25" status="candidate"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -65,7 +66,7 @@
     <p>För att filtrera ord efter skiftläge eller hela ord, kan du högerklicka på sökrutan och välja <gui>Skiftlägeskänslig</gui> eller <gui>Enbart hela ord</gui>.</p>
   </note>
 
-  <p>Om ordet eller frasen som du söker efter inte finns i dokumentet kommer du att se <em>Hittades inte</em> intill sökrutan. Om det däremot finns i dokumentet på minst ett ställer kommer du att få se hur många gånger sökresultatet finns på den aktuella sidan.</p>
+  <p>Om ordet eller frasen som du söker efter inte finns i dokumentet kommer du att se <media type="image" src="figures/search-not-found.png"/> i sökrutan. Om det däremot finns i dokumentet på minst ett ställe kommer du att få se hur många gånger sökresultatet finns på den aktuella sidan.</p>
 
   <note>
     <p>Endast PDF-dokument är sökbara. Vissa PDF-dokument är inte sökbara eftersom deras text kodats som en bild i dokument.</p>

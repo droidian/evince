@@ -103,11 +103,13 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> followed by the page number and <key>Enter</key></p></td>
 </tr>
     <tr>
-        <td><p>Pojdite na začetek strani (začetek dokumenta, če je izbran <guiseq><gui>Pogled</gui><gui>Neprekinjen</gui></guiseq>). </p></td>
+        <td><p>Go to the beginning of a page (beginning of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
-        <td><p>Pojdite na konec strani (konec dokumenta, če je izbran <guiseq><gui>Pogled</gui><gui>Neprekinjen</gui></guiseq>).</p></td>
+        <td><p>Go to the end of a page (end of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>

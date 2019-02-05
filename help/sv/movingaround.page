@@ -93,10 +93,13 @@
       <p>För att gå till en specifik sida:</p>
       <list>
         <item>
-          <p>Skriv in ett sidnummer i <gui style="input">Välj sida</gui> i <link xref="titlebar">namnlisten</link> och tryck <key>Retur</key>.</p>
+          <p>Type a page number in <gui style="input">Select Page</gui> on the
+          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
         </item>
         <item>
-          <p>Om du vill se tidigare besökta sidor tryck på <gui style="button">&lt;</gui> eller <gui style="button">&gt;</gui> i namnlisten.</p>
+          <p>If you want to see the previously visited pages press
+          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
+          the header bar.</p>
         </item>
         <item>
           <p>Om du vill gå till början eller slutet av dokumentet:</p>

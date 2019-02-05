@@ -7,6 +7,7 @@
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
     <revision pkgversion="3.12" date="2014-03-23" status="candidate"/>
     <revision pkgversion="3.15" date="2015-01-28" status="candidate"/>
+    <revision pkgversion="3.30" date="2018-11-25" status="candidate"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -59,7 +60,10 @@
     <p>검색어를 대소문자 구별하거나 전체 검색어만 찾으려면, 검색 창을 눌러 <gui>대소문자 구별</gui> 또는 <gui>전체 단어 일치</gui>를 선택하십시오.</p>
   </note>
 
-  <p>여러분이 검색한 단어나 문장이 문서에 없는 경우, <em>없음</em>이라는 메시지가 검색 창 옆에 나옵니다. 문서에 하나 이상 있으면, 현재 페이지에서 몇개를 찾았는지 표시합니다.</p>
+  <p>If the word or phrase that you searched for is not found in the document,
+  you will see <media type="image" src="figures/search-not-found.png"/> in the
+  search box. However, if it appears in the document at least once, you will be
+  shown how many times the search result appears on the current page.</p>
 
   <note>
     <p>PDF 문서만 검색할 수 있습니다. 어떤 PDF 문서는 검색할 수 없는데 문서의 본문이 이미지 형식으로 인코딩되었기 때문입니다.</p>

@@ -7,6 +7,7 @@
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
     <revision pkgversion="3.12" date="2014-03-23" status="candidate"/>
     <revision pkgversion="3.15" date="2015-01-28" status="candidate"/>
+    <revision pkgversion="3.30" date="2018-11-25" status="candidate"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -83,7 +84,10 @@
     <p>Για να φιλτράρετε τις λέξεις κατά διάκριση πεζών/κεφαλαίων ή συμπλήρωσης, μπορείτε να κάνετε δεξί κλικ στο πλαίσιο αναζήτησης και να επιλέξετε <gui>Διάκριση πεζών/κεφαλαίων</gui> or <gui>Μόνο ολόκληρες λέξεις</gui>.</p>
   </note>
 
-  <p>Εάν η λέξη ή φράση που αναζητήσατε, δεν υπάρχει στο έγγραφο, θα δείτε ένα μήνυμα δίπλα στο πλαίσιο αναζήτησης που θα λέει <em>Δεν βρέθηκε</em>. Όμως, εάν εμφανίζεται στο έγγραφο τουλάχιστον μια φορά, θα δείτε πόσες φορές εμφανίζεται η αναζητούμενη λέξη στην τρέχουσα σελίδα.</p>
+  <p>If the word or phrase that you searched for is not found in the document,
+  you will see <media type="image" src="figures/search-not-found.png"/> in the
+  search box. However, if it appears in the document at least once, you will be
+  shown how many times the search result appears on the current page.</p>
 
   <note>
     <p>Μόνο στα έγγραφα PDF μπορεί να γίνει αναζήτηση. Μερικά έγγραφα PDF δεν είναι αναζητήσιμα επειδή το κείμενό τους είναι κωδικοποιημένο στο έγγραφο ως εικόνα.</p>

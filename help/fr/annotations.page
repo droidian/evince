@@ -71,11 +71,15 @@
 <p>Pour créer une annotation :</p>
 <steps>
  <item>
-  <p>Choisissez <gui>Annoter le document</gui> dans la barre de titre.</p>
+  <p>
+    Select <gui>Annotate the document</gui> from the header bar.
+  </p>
     <media type="image" src="figures/add-text-annotation.png"/>
     <list>
      <item>
-      <p>Vous devriez maintenant voir les boutons <gui>Ajouter une annotation texte</gui> et <gui>Ajouter une annotation surbrillante</gui> sous la barre de titre.</p>
+      <p>
+        You should now see <gui>Add text annotation</gui> and <gui>Add highlight annotation</gui> buttons below the header bar.
+      </p>
        <media type="image" src="figures/list-add-tabs.png"/>
      </item>
     </list>

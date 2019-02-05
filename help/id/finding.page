@@ -7,6 +7,7 @@
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
     <revision pkgversion="3.12" date="2014-03-23" status="candidate"/>
     <revision pkgversion="3.15" date="2015-01-28" status="candidate"/>
+    <revision pkgversion="3.30" date="2018-11-25" status="candidate"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -53,7 +54,10 @@
     <p>Untuk menyaring kata berdasarkan besar kecilnya atau lengkap tidaknya, Anda dapat mengklik kanan pada kotak pencarian dan memilih <gui>Peka Huruf Besar Kecil</gui> atau <gui>Hanya Kata Lengkap</gui>.</p>
   </note>
 
-  <p>Bila kata atau frasa yang Anda cari tak ada dalam dokumen, Anda akan melihat <em>Tak ditemukan</em> di sebelah kotak pencarian. Namun, bila itu muncul dalam dokumen paling tidak sekali, Anda akan diberitahu berapa kali kata yang Anda cari muncul pada halaman kini.</p>
+  <p>If the word or phrase that you searched for is not found in the document,
+  you will see <media type="image" src="figures/search-not-found.png"/> in the
+  search box. However, if it appears in the document at least once, you will be
+  shown how many times the search result appears on the current page.</p>
 
   <note>
     <p>Hanya dokumen PDF yang bisa dicari. Beberapa dokumen PDF tak dapat dicari karena teksnya dienkode dalam dokumen sebagai gambar.</p>

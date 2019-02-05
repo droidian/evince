@@ -87,10 +87,13 @@
       <p>Adott oldalra ugráshoz:</p>
       <list>
         <item>
-          <p>Írjon be egy oldalszámot a <link xref="titlebar">címsávon</link> lévő <gui style="input">Oldal kiválasztása</gui> mezőbe, és nyomja meg az <key>Enter</key> billentyűt.</p>
+          <p>Type a page number in <gui style="input">Select Page</gui> on the
+          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
         </item>
         <item>
-          <p>Ha szeretné látni a korábban már felkeresett oldalakat, akkor nyomja meg a címsávon a <gui style="button">&lt;</gui> vagy <gui style="button">&gt;</gui> gombot.</p>
+          <p>If you want to see the previously visited pages press
+          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
+          the header bar.</p>
         </item>
         <item>
           <p>Ha a dokumentum elejére vagy végére szeretne ugrani:</p>

@@ -137,11 +137,13 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> seguido do número da página e <key>Enter</key></p></td>
 </tr>
     <tr>
-        <td><p>Ir para o início de uma página (ou do documento se a opção <gui>Contínuo</gui> do menu de <gui>Opções de visualização</gui> está marcada).</p></td>
+        <td><p>Go to the beginning of a page (beginning of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
-        <td><p>Ir para o final de uma página (ou do documento se a opção <gui>Contínuo</gui> do menu de <gui>Opções de visualização</gui> está marcada).</p></td>
+        <td><p>Go to the end of a page (end of the document if
+<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>

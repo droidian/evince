@@ -23,7 +23,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2012 - 2018</mal:years>
+      <mal:years>2012 - 2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -37,9 +37,7 @@
 <p>Para añadir soporte para SyncTex se deben instalar los siguientes paquetes:</p>
 <list>
   <item>
-    <p>
-      A LaTeX engine with SyncTeX support, such as <app>pdflatex</app>.
-    </p>
+    <p>Un motor LaTeX con soporte de SyncTex como <app>pdflatex</app>.</p>
   </item>
   <item>
     <p>

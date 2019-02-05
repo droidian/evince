@@ -5,6 +5,7 @@
     <link type="guide" xref="index#printing"/>
     <desc>Upphovsmannen kan ha satt utskriftsrestriktioner på dokumentet.</desc>
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <revision pkgversion="3.30.2" version="0.2" date="2018-11-25" status="final"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -50,7 +51,18 @@
 
   <p>För att kontrollera om din skrivare kan skriva ut korrekt:</p>
   <steps>
-   <item><p>Klicka på ditt namn i systemraden och välj <gui>Systeminställningar</gui>.</p></item>
+    <item>
+      <p>Öppna översiktsvyn <gui href="help:gnome-help/shell-introduction#activities">Aktiviteter</gui> och börja skriva <gui>Inställningar</gui>.</p>
+    </item>
+    <item>
+      <p>Klicka på <gui>Inställningar</gui>.</p>
+    </item>
+    <item>
+      <p>Klicka på <gui>Enheter</gui> i sidopanelen.</p>
+    </item>
+    <item>
+      <p>Klicka på <gui>Skrivare</gui> i sidopanelen för att öppna panelen.</p>
+    </item>
    <item><p>Klicka på din skrivare i listan.</p></item>
    <item><p>Klicka på <gui>Skriv ut testsida</gui>. En sida bör skickas till din skrivare.</p>
 <note>

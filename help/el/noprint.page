@@ -5,6 +5,7 @@
     <link type="guide" xref="index#printing"/>
     <desc>Ο συγγραφέας μπορεί να έχει θέσει περιορισμούς εκτύπωσης στο έγγραφο.</desc>
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <revision pkgversion="3.30.2" version="0.2" date="2018-11-25" status="final"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -68,7 +69,19 @@
 
   <p>Για να ελέγξετε αν ο εκτυπωτής σας τυπώνει σωστά:</p>
   <steps>
-   <item><p>Πατήστε το όνομά σας στην επάνω γραμμή και επιλέξτε <gui>Ρυθμίσεις συστήματος</gui>.</p></item>
+    <item>
+      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
+      overview and start typing <gui>Settings</gui>.</p>
+    </item>
+    <item>
+      <p>Click on <gui>Settings</gui>.</p>
+    </item>
+    <item>
+      <p>Click <gui>Devices</gui> in the sidebar.</p>
+    </item>
+    <item>
+      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+    </item>
    <item><p>Κλικ στον εκτυπωτή σας στη λίστα.</p></item>
    <item><p>Κλικ <gui>Εκτύπωση δοκιμαστικής σελίδας</gui>. Μια σελίδα θα πρέπει να σταλεί στον εκτυπωτή σας.</p>
 <note>
