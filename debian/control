@@ -6,8 +6,9 @@ Source: evince
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Jeremy Bicha <jbicha@debian.org>, Tim Lunn <tim@feathertop.org>
+Uploaders: Jeremy Bicha <jbicha@debian.org>
 Build-Depends: adwaita-icon-theme,
+               appstream,
                debhelper (>= 11),
                dh-apparmor,
                dpkg-dev (>= 1.16.1),
@@ -16,7 +17,7 @@ Build-Depends: adwaita-icon-theme,
                gobject-introspection (>= 1.0),
                gsettings-desktop-schemas-dev,
                gtk-doc-tools (>= 1.13),
-               intltool (>= 0.35.0),
+               itstool,
                libarchive-dev (>= 3.2.0),
                libcairo2-dev (>= 1.10.0),
                libdjvulibre-dev (>= 3.5.22),
