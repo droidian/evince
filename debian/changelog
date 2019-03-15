@@ -1,3 +1,9 @@
+evince (3.32.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 15 Mar 2019 11:09:56 +0100
+
 evince (3.31.91-1) experimental; urgency=medium
 
   * New upstream release
