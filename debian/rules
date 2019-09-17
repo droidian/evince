@@ -46,5 +46,3 @@ override_dh_install:
 
 override_dh_missing:
 	dh_missing --fail-missing
-
-override_dh_dwz:
