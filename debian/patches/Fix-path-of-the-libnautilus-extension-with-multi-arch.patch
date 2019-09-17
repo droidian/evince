@@ -8,10 +8,10 @@ Subject: Fix path of the libnautilus-extension with multi-arch
  2 files changed, 1 insertion(+), 3 deletions(-)
 
 diff --git a/configure.ac b/configure.ac
-index aa2c8e2..6d6709c 100644
+index 760f0d5..003c79e 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -446,8 +446,6 @@ if test "$enable_nautilus" = "yes" ; then
+@@ -445,8 +445,6 @@ if test "$enable_nautilus" = "yes" ; then
    PKG_CHECK_MODULES([NAUTILUS],[gtk+-3.0 $MM gthread-2.0 libnautilus-extension >= $NAUTILUS_REQUIRED],
                      [],[AC_MSG_ERROR([libnautilus-extension not found; use --disable-nautilus to disable the nautilus extensions])])
    NAUTILUS_EXTENSION_DIR=`$PKG_CONFIG --variable=extensiondir libnautilus-extension`

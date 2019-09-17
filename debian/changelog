@@ -24,6 +24,10 @@ evince (3.32.0-3) UNRELEASED; urgency=medium
     + debian/apparmor-profile.abstraction: allow directory read on
       /var/lib/texmf
     (Closes: #930707)
+  * d/p/tiff-Handle-failure-from-TIFFReadRGBAImageOriented.patch:
+    Add patch from upstream to avoid displaying uninitialized memory if
+    TIFFREADGBAImageOriented fails. Thanks to Leonidas S. Barbosa / Ubuntu.
+    (Closes: #927820, CVE-2019-11459)
 
  -- Simon McVittie <smcv@debian.org>  Tue, 17 Sep 2019 08:41:09 +0100
 
