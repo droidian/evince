@@ -1,4 +1,5 @@
 libevview3.so.3 libevview3-3 #MINVER#
+* Build-Depends-Package: libevince-dev
  ev_annotation_window_get_annotation@Base 3.0.2
  ev_annotation_window_get_enable_spellchecking@Base 3.29.91
  ev_annotation_window_get_rectangle@Base 3.0.2

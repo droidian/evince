@@ -1,4 +1,5 @@
 libevdocument3.so.4 libevdocument3-4 #MINVER#
+* Build-Depends-Package: libevince-dev
  ev_annotation_attachment_get_attachment@Base 3.0.2
  ev_annotation_attachment_get_type@Base 3.0.2
  ev_annotation_attachment_new@Base 3.0.2
