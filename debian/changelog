@@ -1,8 +1,14 @@
 evince (3.32.0-3) UNRELEASED; urgency=medium
 
   * d/tests/libevince-dev: Add a superficial build test
+  * Use debhelper-compat 12
+  * Enable gir and gnome debhelper addons via dh-sequence-*
+    build-dependencies
+  * d/*.symbols: Add Build-Depends-Package field
+  * Standards-Version: 4.4.0 (no changes required)
+  * Set Rules-Requires-Root to no
 
- -- Simon McVittie <smcv@debian.org>  Tue, 17 Sep 2019 08:11:58 +0100
+ -- Simon McVittie <smcv@debian.org>  Tue, 17 Sep 2019 08:41:09 +0100
 
 evince (3.32.0-2) unstable; urgency=medium
 
