@@ -9,7 +9,7 @@ Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.
 Uploaders: Jeremy Bicha <jbicha@debian.org>
 Build-Depends: adwaita-icon-theme,
                appstream,
-               debhelper (>= 11),
+               debhelper-compat (= 12),
                dh-apparmor,
                dpkg-dev (>= 1.16.1),
                gnome-common,
