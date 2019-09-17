@@ -62,7 +62,7 @@
   /usr/share/** r,
   /usr/lib/ghostscript/** mr,
   /var/lib/ghostscript/** r,
-  /var/lib/texmf/** r,
+  /var/lib/texmf/{,**} r,
 
   # from http://live.gnome.org/Evince/SupportedDocumentFormats. Allow
   # read for all supported file formats

@@ -7,6 +7,23 @@ evince (3.32.0-3) UNRELEASED; urgency=medium
   * d/*.symbols: Add Build-Depends-Package field
   * Standards-Version: 4.4.0 (no changes required)
   * Set Rules-Requires-Root to no
+  * Update AppArmor profiles from Ubuntu (thanks to Jamie Strandboge):
+    + debian/apparmor-profile:
+      - allow 'rk' on @{HOME}/.config/enchant/* in evince
+      - add additional org.gtk.vfs rules for metadata and List* DBus APIs
+      - silence noisy denial for mktexpk, mktextfm, dvipdfm, dvipdfmx and
+        mkofm since with the new gnome-desktop3 sandboxed invocation of
+        NO_NEW_PRIVS blocks transition to sanitized_helper. In addition,
+        thumbnails are generated just fine without these
+      - allow access to @{PROC}/@{pid}/fd/, @{PROC}/@{pid}/mountinfo and
+        /sys/devices/system/cpu/ in the thumbnailer (needed by some helpers)
+      - allow 'r' on @{HOME}/.texmf*/** in the thumbnailer
+      - update gnome-desktop and add evince-thumbnailer /tmp file paths
+      - allow read on '/' and deny write on /missfont.log which is happening
+        now due to new sandboxed thumbnailer invocation
+    + debian/apparmor-profile.abstraction: allow directory read on
+      /var/lib/texmf
+    (Closes: #930707)
 
  -- Simon McVittie <smcv@debian.org>  Tue, 17 Sep 2019 08:41:09 +0100
 

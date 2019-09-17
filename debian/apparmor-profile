@@ -107,6 +107,7 @@
   /etc/dconf/**                                       r,
   owner @{HOME}/.cache/dconf/user                     rw,
   owner @{HOME}/.config/dconf/user                    r,
+  owner @{HOME}/.config/enchant/*                     rk,
   owner /{,var/}run/user/*/dconf/                     w,
   owner /{,var/}run/user/*/dconf/user                 rw,
   owner /{,var/}run/user/*/dconf-service/keyfile/     w,
@@ -219,6 +220,21 @@
     member="ListMountableInfo"
     peer=(label=unconfined),
 
+  # updating gvfs-metadata for thumbnails is unneeded, so explicitly deny it
+  deny dbus (send)
+    bus=session
+    path="/org/gtk/vfs/metadata"
+    interface="org.gtk.vfs.Metadata"
+    member="GetTreeFromDevice"
+    peer=(label=unconfined),
+  deny @{HOME}/.local/share/gvfs-metadata/* r,
+
+  dbus (send)
+    bus=session
+    path="/org/gtk/vfs/Daemon"
+    interface="org.gtk.vfs.Daemon"
+    member="List*"
+    peer=(label=unconfined),
 
   # The thumbnailer doesn't need access to everything in the nameservice
   # abstraction. Allow reading of /etc/passwd and /etc/group, but suppress
@@ -242,10 +258,14 @@
   /etc/xpdf/* r,
 
   /usr/bin/gs-esp ixr,
-  /usr/bin/mktexpk Cx -> sanitized_helper,
-  /usr/bin/mktextfm Cx -> sanitized_helper,
-  /usr/bin/dvipdfm Cx -> sanitized_helper,
-  /usr/bin/dvipdfmx Cx -> sanitized_helper,
+  # Silence these denials since 'no new privs' drops transitions to
+  # sanitized_helper, we don't want all those perms in the thumbnailer
+  # and the thumbnailer generates thumbnails without these just fine.
+  deny /usr/bin/mktexpk x,
+  deny /usr/bin/mktextfm x,
+  deny /usr/bin/dvipdfm x,
+  deny /usr/bin/dvipdfmx x,
+  deny /usr/bin/mkofm x,
 
   # supported archivers
   /{usr/,}bin/gzip ixr,
@@ -259,6 +279,11 @@
   /usr/bin/zipnote ixr,
   /{usr/,}bin/tar ixr,
   /usr/bin/xz ixr,
+
+  # miscellaneous access for the above
+  owner @{PROC}/@{pid}/fd/ r,
+  owner @{PROC}/@{pid}/mountinfo r,
+  /sys/devices/system/cpu/ r,
 
   # allow read access to anything in /usr/share, for plugins and input methods
   /usr/local/share/** r,
@@ -291,6 +316,7 @@
   /**.[xX][zZ]         r,
 
   owner @{HOME}/.texlive*/** r,
+  owner @{HOME}/.texmf*/** r,
   owner @{HOME}/.local/share/{,flatpak/exports/share/}mime/** r,
   owner @{HOME}/.local/share/{,flatpak/exports/share/}mime/** r,
 
@@ -301,7 +327,12 @@
   owner /media/**  r,
 
   owner /tmp/.gnome_desktop_thumbnail* w,
-  owner /tmp/gnome-desktop-thumbnailer* w,
+  owner /tmp/gnome-desktop-* rw,
+  owner /tmp/evince-thumbnailer*/{,**} rw,
+  
+  # these happen post pivot_root
+  / r,
+  deny /missfont.log w,
 
   # Site-specific additions and overrides. See local/README for details.
   #include <local/usr.bin.evince>
