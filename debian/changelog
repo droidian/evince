@@ -1,5 +1,6 @@
-evince (3.32.0-3) UNRELEASED; urgency=medium
+evince (3.32.0-3) unstable; urgency=medium
 
+  * Team upload
   * d/tests/libevince-dev: Add a superficial build test
   * Use debhelper-compat 12
   * Enable gir and gnome debhelper addons via dh-sequence-*
@@ -30,7 +31,7 @@ evince (3.32.0-3) UNRELEASED; urgency=medium
     (Closes: #927820, CVE-2019-11459)
   * Remove migration path from legacy -dbg package older than Debian 9
 
- -- Simon McVittie <smcv@debian.org>  Tue, 17 Sep 2019 08:41:09 +0100
+ -- Simon McVittie <smcv@debian.org>  Fri, 27 Sep 2019 09:52:04 +0100
 
 evince (3.32.0-2) unstable; urgency=medium
 
