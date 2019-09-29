@@ -59,7 +59,9 @@
 
 <steps>
  <item>
-  <p>Κάντε κλικ στο <guiseq><gui>Αρχείο</gui><gui>Εκτύπωση</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Πηγαίνετε στην καρτέλα <gui>Διαμόρφωση σελίδας</gui> του παραθύρου εκτύπωσης και διαλέξτε μια επιλογή από την αναδυόμενη λίστα <gui>Διπλή όψη</gui>.</p>

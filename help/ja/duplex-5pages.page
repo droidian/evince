@@ -20,7 +20,9 @@
 <title>5 ページの小冊子</title>
 <steps>
  <item>
-  <p><guiseq><gui>ファイル</gui><gui>印刷</gui></guiseq>をクリックします。</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
 
 
@@ -31,7 +33,9 @@
  </item>
  <item>
   <p><gui>ページの設定</gui>タブを選択します。</p>
-  <p><em>レイアウト</em>の下にある<gui>両面印刷</gui>というオプションで<gui>短辺 (折り返し)</gui>を選択します。</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> option, select <gui>Short Edge (Flip)</gui>.
+  </p>
  <p><gui>段組み印刷</gui>というオプションで <gui>2</gui> を選択します。</p>
   <p><gui>ページの順番</gui>というオプションで<gui>右から左へ</gui>を選択します。</p>
   <p><gui>印刷</gui>をクリックします。</p>
@@ -42,8 +46,10 @@
   <p>印刷が完了したら、印刷物を (2 ページが裏面に印刷されるように) 向きに注意しながらひっくり返してプリンターへ戻します。</p>
  </item>
  <item>
-  <p>再び<guiseq><gui>ファイル</gui><gui>印刷</gui></guiseq>をクリックします。</p>
-  <p>全般タブを選択します。</p>
+  <p>
+     Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
+  <p><gui>全般</gui>タブを選択します。</p>
   <p><em>範囲</em>の下にある<gui>ページ</gui>を選択し、2 と入力します。</p>
  </item>
  <item>
@@ -53,22 +59,28 @@
  </item>
 
  <item>
-  <p>3 ページ目を印刷するには再度、<guiseq><gui>ファイル</gui><gui>印刷</gui></guiseq>をクリックします。</p>
+  <p>
+   To print page 3, press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
   <p>
     In the <gui>General</gui> tab enter the page number in the <gui>Pages</gui> selection.
   </p>
  </item>
  <item>
- <p><gui>ページの設定</gui>タブで<gui>ページの順番</gui>を<gui>右から左へ</gui>に設定します。</p>
+ <p><gui>ページの設定</gui>タブを選択します。</p>
+ <p><gui>ページの順番</gui>というオプションで<gui>右から左へ</gui>を選択します。</p>
 <p><gui>印刷</gui>をクリックします。</p>
  </item>
  <item>
  <p>3 ページが印刷されたならば、(4 および 9 ページが裏面に印刷されるように) 向きに注意して用紙をプリンターに戻します。</p>
  </item>
  <item>
-  <p><guiseq><gui>ファイル</gui><gui>印刷</gui></guiseq>をクリックします。</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
   <p><gui>全般</gui>タブで<gui>ページ</gui>という選択肢の入力欄に 4, 9 と入力してください。</p>
-  <p><gui>ページの設定</gui>タブで<gui>ページの順番</gui>を<gui>左から右へ</gui>に設定します。</p>
+  <p><gui>ページの設定</gui>タブを選択します。</p>
+  <p><gui>ページの順番</gui>というオプションで<gui>左から右へ</gui>を選択します。</p>
  <p><gui>印刷</gui>をクリックします。</p>
  </item>
 </steps>

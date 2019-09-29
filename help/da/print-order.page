@@ -23,7 +23,7 @@
  <p>Printere udskriver sædvanligvis den første side først og den sidste side sidst, så siderne ligger i omvendt rækkefølge, når du tager dem ud af printeren.</p>
  <p>For at vende rækkefølgen om:</p>
  <steps>
-  <item><p><guiseq><gui>Fil</gui><gui>Udskriv</gui></guiseq></p></item>
+  <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
   <item><p>I printervinduets faneblad <gui>Generelt</gui> skal du under <em>Kopier</em> markere <gui>Omvendt</gui>. Sidste side udskrives så først, og så videre.</p></item>
  </steps>
 </section>
@@ -34,7 +34,7 @@
 
  <p>For at samle:</p>
  <steps>
-  <item><p>Klik på <guiseq><gui>Fil</gui><gui>Udskriv</gui></guiseq></p></item>
+  <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
   <item><p>I printervinduets faneblad <gui>Generelt</gui> under <em>Kopier</em> skal du sætte hak ved <gui>Saml</gui>.</p></item>
  </steps>
  <media type="image" src="figures/reverse-collate.png"/>

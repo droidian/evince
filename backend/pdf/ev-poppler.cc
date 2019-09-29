@@ -1960,7 +1960,7 @@ pdf_document_find_find_text_with_options (EvDocumentFind *document_find,
 
 	if (options & EV_FIND_CASE_SENSITIVE)
 		find_flags |= POPPLER_FIND_CASE_SENSITIVE;
-#if POPPLER_CHECK_VERSION(0, 73, 0)
+#if POPPLER_CHECK_VERSION(0, 76, 0)
 	else    /* When search is not case sensitive, do also ignore diacritics
 	        to broaden our search in order to match on more expected results */
 		find_flags |= POPPLER_FIND_IGNORE_DIACRITICS;
@@ -3606,8 +3606,10 @@ pdf_document_annotations_add_annotation (EvDocumentAnnotations *document_annotat
 			if (bbox.x1 != 0 && bbox.y1 != 0 && bbox.x2 != 0 && bbox.y2 != 0) {
 				poppler_rect.x1 = rect.x1 = bbox.x1;
 				poppler_rect.x2 = rect.x2 = bbox.x2;
-				poppler_rect.y1 = rect.y1 = height - bbox.y2;
-				poppler_rect.y2 = rect.y2 = height - bbox.y1;
+				rect.y1 = height - bbox.y2;
+				rect.y2 = height - bbox.y1;
+				poppler_rect.y1 = bbox.y1;
+				poppler_rect.y2 = bbox.y2;
 
 				ev_annotation_set_area (annot, &rect);
 			}

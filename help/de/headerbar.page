@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#tips"/>
-    <desc>Using the header bar.</desc>
+    <desc>Verwendung der Kopfleiste.</desc>
 
     <revision pkgversion="3.10" version="0.1" date="2013-11-04" status="final"/>
     <revision pkgversion="3.24" version="0.2" date="2017-09-17" status="final"/>
@@ -25,7 +25,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@gmail.com</mal:email>
-      <mal:years>2011, 2014-2015, 2018</mal:years>
+      <mal:years>2011, 2014-2015, 2018,2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -47,9 +47,9 @@
     </mal:credit>
   </info>
 
-<title>Header bar</title>
+<title>Kopfleiste</title>
 
-<p>The header bar contains:</p>
+<p>Die Kopfleiste enthält:</p>
   <list>
     <item>
       <p>Ein Textfeld, um zu einer <link xref="movingaround#between-pages">bestimmten Seite zu gehen</link> oder zum <link xref="finding">Suchen</link> im <link xref="movingaround#navigating">Index</link>.</p>

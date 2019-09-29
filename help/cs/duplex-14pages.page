@@ -32,7 +32,7 @@
 <title>14stránková brožura</title>
 <steps>
  <item>
-  <p>Klikněte na <guiseq><gui>Soubor</gui><gui>Tisk</gui></guiseq>.</p>
+  <p>Zmáčkněte tlačítko nabídky v pravém horním rohu okna a následně zmáčkněte tlačítko <gui style="button">Tisk</gui>.</p>
  </item>
  <item>
   <p>Zvolte kartu <gui>Obecné</gui>.</p>
@@ -54,7 +54,7 @@
  <p>Až jsou stránky vytisknuté, vezměte papír se stránkou 2 a vložte jej zpět do tiskárny, přičemž dbejte na to, aby byl správně otočen (stránka 1 se bude tisknout z druhé strany).</p>
  </item>
  <item>
-  <p>Klikněte na <guiseq><gui>Soubor</gui><gui>Tisk</gui></guiseq> znovu.</p>
+  <p>Zmáčkněte tlačítko nabídky v pravém horním rohu okna a následně zmáčkněte tlačítko <gui style="button">Tisk</gui>.</p>
  </item>
  <item>
   <p>Zvolte kartu <gui>Obecné</gui>.</p>

@@ -37,6 +37,12 @@
       <mal:email>kelemeng at gnome dot hu</mal:email>
       <mal:years>2011, 2012, 2013, 2014, 2015.</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Úr Balázs</mal:name>
+      <mal:email>ur.balazs at fsf dot hu</mal:email>
+      <mal:years>2019.</mal:years>
+    </mal:credit>
   </info>
 
   <title>Szöveg keresése dokumentumokban</title>
@@ -60,10 +66,7 @@
     <p>A szavak kis- és nagybetűk, vagy teljesség szerinti szűréséhez kattintson a jobb egérgombbal a keresőmezőre, és válassza a <gui>Nagybetűérzékeny</gui> vagy a <gui>Csak teljes szavak</gui> lehetőséget.</p>
   </note>
 
-  <p>If the word or phrase that you searched for is not found in the document,
-  you will see <media type="image" src="figures/search-not-found.png"/> in the
-  search box. However, if it appears in the document at least once, you will be
-  shown how many times the search result appears on the current page.</p>
+  <p>Ha a keresett szó vagy kifejezés nem fordul elő sehol a dokumentumban, akkor a <media type="image" src="figures/search-not-found.png"/> jelenik meg a keresőmezőben. Ha azonban legalább egyszer előfordul, akkor egy üzenet megadja, hogy a keresett szó hányszor fordul elő az adott oldalon.</p>
 
   <note>
     <p>Csak PDF-dokumentumokban lehet keresni. Egyes PDF-dokumentumokban azonban nem lehet keresni, mert szövegük a dokumentumban képként van tárolva.</p>

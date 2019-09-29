@@ -100,7 +100,7 @@ document).</p></td>
     <title>Moure's per un document</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Moure's a la pàgina següent/anterior</p></td>
+        <td><p>Moure's a la pàgina següent/anterior.</p></td>
         <td><p>Tecles de cursor</p></td>
     </tr>
     <tr>
@@ -129,7 +129,7 @@ document).</p></td>
     <tr>
         <td><p>Go to the end of a page (end of the document if
 <gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
-        <td><p><key>Final</key></p></td>
+        <td><p><key>Fi</key></p></td>
     </tr>
     <tr>
     	<td><p>Vés a l'inici del document.</p></td>
@@ -137,7 +137,7 @@ document).</p></td>
     </tr>
     <tr>
     	<td><p>Vés al final del document.</p></td>
-         <td><p><keyseq><key>Ctrl</key><key>Final</key></keyseq></p></td>
+         <td><p><keyseq><key>Ctrl</key><key>Fi</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Add a bookmark in the current page.</p></td>

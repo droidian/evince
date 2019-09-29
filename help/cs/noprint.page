@@ -46,17 +46,16 @@
   <p>Zkontrolujte, jestli tiskárna správně tiskne:</p>
   <steps>
     <item>
-      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
-      overview and start typing <gui>Settings</gui>.</p>
+      <p>Otevřete přehled <gui href="help:gnome-help/shell-introduction#activities">Činnosti</gui> a začněte psát <gui>nastavení</gui>.</p>
     </item>
     <item>
-      <p>Click on <gui>Settings</gui>.</p>
+      <p>Klikněte na <gui>Nastavení</gui>.</p>
     </item>
     <item>
-      <p>Click <gui>Devices</gui> in the sidebar.</p>
+      <p>V postranním panelu klikněte na <gui>Zařízení</gui>.</p>
     </item>
     <item>
-      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+      <p>Kliknutím na <gui>Tiskárny</gui> v postranním panelu otevřete příslušný panel.</p>
     </item>
    <item><p>V seznamu klikněte na svoji tiskárnu</p></item>
    <item><p>Klikněte na <gui>Tisk testovací stránky</gui>. Stránka by se měla odeslat do vaší tiskárny.</p>

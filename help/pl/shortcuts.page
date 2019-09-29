@@ -45,13 +45,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -113,13 +113,11 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq>, następnie numer strony i klawisz <key>Enter</key></p></td>
 </tr>
     <tr>
-        <td><p>Go to the beginning of a page (beginning of the document if
-<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
+        <td><p>Przejście na początek strony (początek dokumentu, jeśli wybrano tryb <gui>Ciągły</gui> w menu <gui>Opcje widoku</gui>).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
-        <td><p>Go to the end of a page (end of the document if
-<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
+        <td><p>Przejście na koniec strony (koniec dokumentu, jeśli wybrano tryb <gui>Ciągły</gui> w menu <gui>Opcje widoku</gui>).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>

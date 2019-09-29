@@ -65,7 +65,7 @@
  <p>Généralement les imprimantes impriment la première page en premier et la dernière en dernier. Ainsi, les pages peuvent se retrouver dans le mauvais ordre quand vous les récupérez.</p>
  <p>Pour inverser l’ordre :</p>
  <steps>
-  <item><p><guiseq><gui>Fichier</gui><gui>Imprimer</gui></guiseq></p></item>
+  <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
   <item><p>Dans l’onglet <gui>Général</gui> de la fenêtre d’impression, sélectionnez <gui>Inverser</gui> dans la partie <gui>Copies</gui>. La dernière page est alors imprimée en premier...</p></item>
  </steps>
 </section>
@@ -76,7 +76,7 @@
 
  <p>Pour rassembler :</p>
  <steps>
-  <item><p>Cliquez sur <guiseq><gui>Fichier</gui><gui>Imprimer</gui></guiseq></p></item>
+  <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
   <item><p>Dans l’onglet <gui>Général</gui> de la fenêtre d’impression, sélectionnez <gui>Rassembler</gui> dans la partie <gui>Copies</gui>.</p></item>
  </steps>
  <media type="image" src="figures/reverse-collate.png"/>

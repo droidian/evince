@@ -17,13 +17,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -32,7 +32,7 @@
 
 <p>Aby wydrukować tylko podane strony dokumentu:</p>
 <steps>
- <item><p>Kliknij <guiseq><gui>Plik</gui><gui>Wydrukuj</gui></guiseq>.</p></item>
+ <item><p>Kliknij przycisk menu w górnym prawym rogu okna i kliknij przycisk <gui style="button">Wydrukuj</gui>.</p></item>
  <item><p>W karcie <gui>Ogólne</gui> w oknie wydruku wybierz <gui>Strony</gui> w sekcji <gui>Zakres</gui>.</p></item>
 <item><p>Wpisz numery stron do wydrukowania, oddzielone przecinkami. Użyj myślnika, aby podać zakres stron.</p></item>
 </steps>

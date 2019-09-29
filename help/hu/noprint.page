@@ -11,7 +11,7 @@
       <email>philbull@gmail.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons – Így add tovább! 3.0</p>
     </license>
 
   
@@ -25,6 +25,12 @@
       <mal:name>Kelemen Gábor</mal:name>
       <mal:email>kelemeng at gnome dot hu</mal:email>
       <mal:years>2011, 2012, 2013, 2014, 2015.</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Úr Balázs</mal:name>
+      <mal:email>ur.balazs at fsf dot hu</mal:email>
+      <mal:years>2019.</mal:years>
     </mal:credit>
   </info>
 
@@ -46,17 +52,16 @@
   <p>A nyomtató megfelelő működésének ellenőrzéséhez:</p>
   <steps>
     <item>
-      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
-      overview and start typing <gui>Settings</gui>.</p>
+      <p>Nyissa meg a <gui href="help:gnome-help/shell-introduction#activities">Tevékenységek</gui> áttekintést, és kezdje el gépelni a <gui>Beállítások</gui> szót.</p>
     </item>
     <item>
-      <p>Click on <gui>Settings</gui>.</p>
+      <p>Kattintson a <gui>Beállítások</gui> elemre.</p>
     </item>
     <item>
-      <p>Click <gui>Devices</gui> in the sidebar.</p>
+      <p>Kattintson az <gui>Eszközök</gui> elemre az oldalsávon.</p>
     </item>
     <item>
-      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+      <p>Kattintson a <gui>Nyomtatók</gui> elemre az oldalsávon a panel megnyitásához.</p>
     </item>
    <item><p>Kattintson a nyomtatójára a listában.</p></item>
    <item><p>Kattintson a <gui>Tesztoldal nyomtatása</gui> gombra. Egy oldal kerül kiküldésre a nyomtatóra.</p>

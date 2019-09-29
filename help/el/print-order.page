@@ -59,7 +59,7 @@
  <p>Οι εκτυπωτές συνήθως τυπώνουν την πρώτη σελίδα πρώτα και την τελευταία σελίδα στο τέλος, έτσι οι σελίδες καταλήγουν με αντίστροφη σειρά όταν τις παίρνετε.</p>
  <p>Για να αντιστρέψετε τη σειρά:</p>
  <steps>
-  <item><p><guiseq><gui>Αρχείο</gui><gui>Εκτύπωση</gui></guiseq></p></item>
+  <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
   <item><p>Στην καρτέλα <gui>Γενικά</gui> του παραθύρου εκτύπωσης στο <em>αντίγραφα</em>, επιλέξτε <gui>Αντίστροφη σειρά</gui>. Η τελευταία σελίδα θα εκτυπωθεί πρώτη και ούτω καθεξής.</p></item>
  </steps>
 </section>
@@ -70,7 +70,7 @@
 
  <p>Για συρραφή:</p>
  <steps>
-  <item><p>Κάντε κλικ στο <guiseq><gui>Αρχείο</gui><gui>Εκτύπωση</gui></guiseq></p></item>
+  <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
   <item><p>Στην καρτέλα <gui>Γενικά</gui> του παραθύρου εκτύπωση στο <em>Αντίγραφα</em> επιλέξτε <gui>Συρραφή</gui>.</p></item>
  </steps>
  <media type="image" src="figures/reverse-collate.png"/>

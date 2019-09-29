@@ -20,7 +20,7 @@
 
 <p>仅打印来自文档的某些页：</p>
 <steps>
- <item><p>单击 <guiseq><gui>文件</gui><gui>打印</gui></guiseq></p></item>
+ <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
  <item><p>在打印窗口中的 <gui>常规</gui> 标签页里的 <gui>范围</gui> 部分选择 <gui>页面</gui>。</p></item>
 <item><p>在文本框中输入您想打印的页码，使用逗号分隔，表示一段页面可用短破折号。</p></item>
 </steps>

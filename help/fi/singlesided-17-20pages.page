@@ -56,7 +56,9 @@
  <p>Tulostaaksesi:</p>
   <steps>
  <item>
-  <p>Valitse <guiseq><gui>Tiedosto</gui><gui>Tulosta</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Siirry <gui>Yleiset</gui>-välilehdelle.</p>
@@ -67,7 +69,9 @@
  </item>
  <item>
   <p>Siirry <gui>Sivun asetukset</gui> -välilehdelle.</p>
-  <p>Valitse <gui>Kaksipuolinen</gui>-asetuksen arvoksi <gui>Yksipuolinen</gui> <em>Asettelu</em>-otsakkeen alta.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>One Sided</gui>.
+  </p>
   <p>Valitse <gui>Sivuja puolelle</gui> -valikosta <gui>2</gui>.</p>
   <p>Valitse <gui>Sivujärjestys</gui>-asetuksen arvoksi <gui>Vasemmalta oikealle</gui>.</p>
   <p>Valitse <gui>Tulosta vain</gui> -valikosta <gui>Parittomat sivut</gui>.</p>
@@ -79,7 +83,9 @@
     <p>Kun kaikki sivut on tulostettu, käännä paperit ympäri ja aseta ne takaisin tulostimeen.</p>
    </item>
    <item>
-    <p>Valitse <guiseq><gui>Tiedosto</gui><gui>Tulosta</gui></guiseq>.</p>
+    <p>
+    Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+    </p>
    </item>
    <item>
     <p>Siirry <gui>Sivun asetukset</gui> -välilehdelle.</p>

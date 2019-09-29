@@ -11,7 +11,7 @@
       <email>tiffany@antopolski.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons – Így add tovább! 3.0</p>
     </license>
 
   
@@ -26,6 +26,12 @@
       <mal:email>kelemeng at gnome dot hu</mal:email>
       <mal:years>2011, 2012, 2013, 2014, 2015.</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Úr Balázs</mal:name>
+      <mal:email>ur.balazs at fsf dot hu</mal:email>
+      <mal:years>2019.</mal:years>
+    </mal:credit>
   </info>
 
  <title>Jegyzetek személyre szabása</title>
@@ -35,7 +41,7 @@
   <p>Kattintson a jobb egérgombbal a jegyzet ikonjára a dokumentumban.</p>
  </item>
  <item>
-  <p>Válassza a <gui>Jegyzettulajdonságok</gui> menüpontot.</p>
+  <p>Válassza a <gui>Jegyzettulajdonságok…</gui> menüpontot.</p>
  </item>
  <item>
   <p>A <gui>Jegyzettulajdonságok</gui> ablakban módosíthatja a jegyzet szerzőjét, színét, stílusát és ikonját.</p>

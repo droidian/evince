@@ -20,7 +20,7 @@
 
 <p>ドキュメントの特定のページのみを印刷する方法は次のとおりです。</p>
 <steps>
- <item><p><guiseq><gui>ファイル</gui><gui>印刷</gui></guiseq>をクリックします。</p></item>
+ <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
  <item><p>印刷ウィンドウの<gui>全般</gui>タブで<gui>範囲</gui>セクションから<gui>ページ</gui>を選択します。</p></item>
 <item><p>テキストボックスに印刷したいページ番号をカンマ区切りで入力します。ページ範囲を示すには、ダッシュ (-) を使います。</p></item>
 </steps>

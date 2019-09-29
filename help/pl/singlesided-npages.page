@@ -19,13 +19,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -46,7 +46,7 @@
  <p>Aby wydrukować:</p>
   <steps>
  <item>
-  <p>Kliknij <guiseq><gui>Plik</gui><gui>Wydrukuj</gui></guiseq>.</p>
+  <p>Kliknij przycisk menu w górnym prawym rogu okna i kliknij przycisk <gui style="button">Wydrukuj</gui>.</p>
  </item>
  <item>
   <p>Wybierz kartę <gui>Ogólne</gui>.</p>
@@ -69,7 +69,7 @@
     <p>Po wydrukowaniu wszystkich stron odwróć kartki i umieść z powrotem w drukarce.</p>
    </item>
    <item>
-    <p>Kliknij <guiseq><gui>Plik</gui><gui>Wydrukuj</gui></guiseq>.</p>
+    <p>Kliknij przycisk menu w górnym prawym rogu okna i kliknij przycisk <gui style="button">Wydrukuj</gui>.</p>
    </item>
    <item>
     <p>Wybierz kartę <gui>Ustawienia strony</gui>.</p>

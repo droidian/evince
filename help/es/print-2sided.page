@@ -35,7 +35,7 @@
 
 <steps>
  <item>
-  <p>Pulse <guiseq><gui>Archivo</gui><gui>Imprimir</gui></guiseq>.</p>
+  <p>Pulse el botón de menú en la esquina superior derecha de la ventana y pulse el botón <gui style="button">Imprimir</gui>.</p>
  </item>
  <item>
   <p>Vaya a la pestaña <gui>Configuración de página</gui> de la ventana «Imprimir» y elija una opción en la lista desplegable <gui>Dos caras</gui>.</p>

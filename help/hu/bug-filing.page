@@ -11,7 +11,7 @@
       <email>tiffany@antopolski.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons – Így add tovább! 3.0</p>
     </license>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -25,23 +25,19 @@
       <mal:email>kelemeng at gnome dot hu</mal:email>
       <mal:years>2011, 2012, 2013, 2014, 2015.</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Úr Balázs</mal:name>
+      <mal:email>ur.balazs at fsf dot hu</mal:email>
+      <mal:years>2019.</mal:years>
+    </mal:credit>
   </info>
 
 <title>Hibajelentés küldése a <app>dokumentummegjelenítőről</app></title>
-<p>
-   The <app>document viewer</app> is maintained by a volunteer community. You are welcome to participate.  If you notice a problem you can file a <em>bug report</em>. To file a bug, go to <link href="https://gitlab.gnome.org/GNOME/evince/issues/"/>.
-   </p>
+<p>A <app>dokumentummegjelenítőt</app> egy önkéntes közösség készíti. Közreműködését szívesen fogadjuk. Ha hibát észlelt, beküldhet egy <em>hibajelentést</em>. Ehhez keresse fel a <link href="https://gitlab.gnome.org/GNOME/evince/issues/"/> oldalt.</p>
    <p>Ez egy hibakövető rendszer, ahová a felhasználók és fejlesztők beküldhetik a hibákkal, összeomlásokkal kapcsolatos adatokat, és továbbfejlesztéseket kérhetnek.</p>
-   <p>
-   To participate you need an account which will give you the ability to gain access, file bugs, and make comments.  Also, you need to register so you can receive updates by e-mail about the status of your bug. If you don't already have an account, just click on the <gui>Sign in / Register</gui> link to create one.
-   </p>
-   <p>
-   Once you have an account, log in, and click on <gui>New issue</gui>.
-   Before reporting a bug, please read the <link href="https://wiki.gnome.org/Community/GettingInTouch/Bugzilla/Guidelines">bug writing guidelines</link>,  and please <link href="https://gitlab.gnome.org/GNOME/evince/issues">browse</link> for the bug to see if it already exists.
-   </p>
-   <p>
-   If you are requesting a new feature, choose <gui>1. Feature</gui> in the <gui>Labels</gui> menu.
-   Fill in the Title and Description sections and click <gui>Submit Issue</gui>.
-   </p>
+   <p>A részvételhez létre kell hoznia egy fiókot, amely lehetővé teszi a hozzáférést, hibajelentések beküldését és a hibákhoz való hozzászólást. A regisztráció után a hozzászólásokat e-mailben is megkaphatja. Ha még nincs fiókja, akkor a <gui>Sign in / Register</gui> hivatkozásra kattintva létrehozhat egyet.</p>
+   <p>Ha létrehozta fiókját, jelentkezzen be és kattintson a <gui>New issue</gui> gombra. Hiba jelentése előtt olvassa el a <link href="https://wiki.gnome.org/Community/GettingInTouch/Bugzilla/Guidelines">hibajelentés-írási irányelveket</link>, és <link href="https://gitlab.gnome.org/GNOME/evince/issues">ellenőrizze</link>, hogy nincs-e már a hiba bejelentve.</p>
+   <p>Ha új szolgáltatást kér, válassza az <gui>1. Feature</gui> lehetőséget a <gui>Labels</gui> menüben. Töltse ki a Title és Description szakaszokat, és kattintson a <gui>Submit Issue</gui> gombra.</p>
    <p>A hibajelentés kapni fog egy azonosítószámot, az állapota pedig a feldolgozása során frissülni fog.</p>
 </page>

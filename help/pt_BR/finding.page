@@ -51,15 +51,15 @@
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2017, 2018</mal:years>
+      <mal:name>Isaac Ferreira Filho</mal:name>
+      <mal:email>isaacmob@riseup.net</mal:email>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Isaac Ferreira Filho</mal:name>
-      <mal:email>isaacmob@riseup.net</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -84,10 +84,7 @@
     <p>Para filtrar palavras pelos caracteres maiúsculos/minúsculos ou palavras completas, você pode selecionar na caixa de pesquisa as opções <gui>Diferenciar maiúsc./minúsc.</gui> ou <gui>Somente palavras inteiras</gui>.</p>
   </note>
 
-  <p>If the word or phrase that you searched for is not found in the document,
-  you will see <media type="image" src="figures/search-not-found.png"/> in the
-  search box. However, if it appears in the document at least once, you will be
-  shown how many times the search result appears on the current page.</p>
+  <p>Se a palavra ou frase que você procurou não é encontrada no documento, você verá <media type="image" src="figures/search-not-found.png"/> na caixa de pesquisa. Ao invés disso, se a palavra ou frase for encontrada no documento pelo menos uma vez, você verá ao lado da caixa de pesquisa quantas vezes o resultado acontece na página atual.</p>
 
   <note>
     <p>Apenas é possível fazer pesquisas em documentos PDF. Pode não ser possível fazer pesquisas em alguns documentos PDF se o texto está armazenado nele como uma imagem.</p>

@@ -31,7 +31,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Anders Jonsson</mal:name>
       <mal:email>anders.jonsson@norsjovallen.se</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   </info>
 
@@ -41,7 +41,7 @@
 
 <steps>
  <item>
-  <p>Klicka på <guiseq><gui>Arkiv</gui><gui>Skriv ut</gui></guiseq>.</p>
+  <p>Tryck på menyknappen i fönstrets övre högra hörn och tryck på knappen <gui style="button">Skriv ut</gui>.</p>
  </item>
  <item>
   <p>Gå till fliken <gui>Sidinställningar</gui> i fönstret Skriv ut och välj ett alternativ från listboxen <gui>Tvåsidig</gui>.</p>

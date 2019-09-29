@@ -113,8 +113,7 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> seguido del número de página e <key>Intro</key></p></td>
 </tr>
     <tr>
-        <td><p>Go to the beginning of a page (beginning of the document if
-<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
+        <td><p>Ir al principio de una página (el principio de un documento si <gui>Continuo</gui> está seleccionado en el menú <gui>Opciones de la vista</gui>).</p></td>
          <td><p><key>Inicio</key></p></td>
     </tr>
     <tr>
@@ -134,7 +133,7 @@
         <td><p><keyseq><key>Ctrl</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Delete the bookmark in the current page if there is one.</p></td>
+        <td><p>Eliminar el marcador en la página actual si hay alguno.</p></td>
         <td><p><keyseq><key>Mayús</key><key>Ctrl</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
@@ -142,7 +141,7 @@
          <td><p><key>F9</key></p></td>
     </tr>
     <tr>
-        <td><p>Enable caret navigation placing a moveable cursor in text pages, allowing you to move around and select text with the keyboard.</p></td>
+        <td><p>Activar la navegación con el cursor colocando un cursor movible en las páginas de texto, permitiéndole moverse por el texto y seleccionarlo con el teclado.</p></td>
         <td><p><key>F7</key></p></td>
     </tr>
   </table>
@@ -166,13 +165,7 @@
     <title>Buscar texto</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>
-        Show the toolbar that lets you search for words in the document. The
-        search box is automatically highlighted when you press this, and the
-        search will start as soon as you type some text. If you select a text
-        in the document before searching, then the search will start using that
-        text as input.
-        </p></td>
+        <td><p>Mostrar la barra de herramientas que le permite buscar palabras en el documento. La caja de búsqueda se resalta automáticamente cuando la pulsa, y la búsqueda empezará tan pronto como escriba algún texto. Si previamente selecciona un texto en el documento la búsqueda se hará usando ese texto como entrada.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>F</key></keyseq> / <key>/</key></p></td>
     </tr>
     <tr>
@@ -246,11 +239,11 @@
         <td><p><keyseq><key>Ctrl</key><key>I</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Swap between continuous and page by page view of the document.</p></td>
+        <td><p>Cambiar entre vista de página continua y página a página del documento.</p></td>
         <td><p><key>C</key></p></td>
     </tr>
     <tr>
-        <td><p>Display two pages side by side.</p></td>
+        <td><p>Mostrar dos páginas una al lado de la otra</p></td>
         <td><p><key>D</key></p></td>
     </tr>
 </table>
@@ -260,7 +253,7 @@
     <title>Anotar el documento</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Add a post-it like note.</p></td>
+        <td><p>Añadir una nota tipo post-it.</p></td>
         <td><p><key>S</key></p></td>
     </tr>
     <tr>

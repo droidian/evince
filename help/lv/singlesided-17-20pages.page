@@ -44,7 +44,9 @@
  <p>Lai drukātu:</p>
   <steps>
  <item>
-  <p>Spiediet <guiseq><gui>Datne</gui><gui>Drukāt</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Izvēlies <gui>Vispārīgi</gui> cilni.</p>
@@ -55,7 +57,9 @@
  </item>
  <item>
   <p>Izvēlies <gui>Lappuses iestatīšana</gui> cilni.</p>
-  <p>Zem <em>Izkārtojums</em>, <gui>Divpusējs</gui> izvēlnē izvēlies <gui>Vienpusējs</gui>.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>One Sided</gui>.
+  </p>
   <p><gui>Lappuses vienā pusē</gui> izvēlnē izvēlieties <gui>2</gui>.</p>
   <p><gui>Lappušu secība</gui> izvēlnē izvēlies <gui>No kreisās uz labo</gui>.</p>
   <p><gui>Drukāt tikai</gui> izvēlnē izvēlies <gui>Nepāra loksnes</gui>.</p>
@@ -67,7 +71,9 @@
     <p>Kad ir izdrukātas visas lappuses, pagrieziet lapas otrādi un ieliec atpakaļ printerī.</p>
    </item>
    <item>
-    <p>Spiediet <guiseq><gui>Datne</gui><gui>Drukāt</gui></guiseq>.</p>
+    <p>
+    Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+    </p>
    </item>
    <item>
     <p>Izvēlies <gui>Lappuses iestatīšana</gui> cilni.</p>

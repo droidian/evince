@@ -222,6 +222,7 @@ typedef struct {
 	EvJob            *load_job;
 	EvJob            *reload_job;
 	EvJob            *save_job;
+	gboolean          close_after_save;
 
 	/* Printing */
 	GQueue           *print_queue;
@@ -567,7 +568,8 @@ ev_window_update_actions_sensitivity (EvWindow *ev_window)
 	ev_window_set_action_enabled (ev_window, "open-menu", !recent_view_mode);
 
 	/* Same for popups specific actions */
-	ev_window_set_action_enabled (ev_window, "annotate-selected-text", !recent_view_mode);
+	ev_window_set_action_enabled (ev_window, "annotate-selected-text", can_annotate &&
+				      !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "open-link", !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "open-link-new-window", !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "go-to-link", !recent_view_mode);
@@ -1383,15 +1385,6 @@ setup_size_from_metadata (EvWindow *window)
 	if (!priv->metadata)
 		return;
 
-	if (ev_metadata_get_boolean (priv->metadata, "window_maximized", &maximized)) {
-		if (maximized) {
-			gtk_window_maximize (GTK_WINDOW (window));
-			return;
-		} else {
-			gtk_window_unmaximize (GTK_WINDOW (window));
-		}
-	}
-
 	if (ev_metadata_get_int (priv->metadata, "window_x", &x) &&
 	    ev_metadata_get_int (priv->metadata, "window_y", &y)) {
 		gtk_window_move (GTK_WINDOW (window), x, y);
@@ -1400,6 +1393,14 @@ setup_size_from_metadata (EvWindow *window)
         if (ev_metadata_get_int (priv->metadata, "window_width", &width) &&
 	    ev_metadata_get_int (priv->metadata, "window_height", &height)) {
 		gtk_window_resize (GTK_WINDOW (window), width, height);
+	}
+
+	if (ev_metadata_get_boolean (priv->metadata, "window_maximized", &maximized)) {
+		if (maximized) {
+			gtk_window_maximize (GTK_WINDOW (window));
+		} else {
+			gtk_window_unmaximize (GTK_WINDOW (window));
+		}
 	}
 }
 
@@ -2983,11 +2984,21 @@ ev_window_clear_save_job (EvWindow *ev_window)
 	}
 }
 
+static gboolean
+destroy_window (GtkWidget *window)
+{
+	gtk_widget_destroy (window);
+
+	return FALSE;
+}
+
 static void
 ev_window_save_job_cb (EvJob     *job,
 		       EvWindow  *window)
 {
+	EvWindowPrivate *priv = GET_PRIVATE (window);
 	if (ev_job_is_failed (job)) {
+		priv->close_after_save = FALSE;
 		ev_window_error_message (window, job->error,
 					 _("The file could not be saved as “%s”."),
 					 EV_JOB_SAVE (job)->uri);
@@ -2996,6 +3007,9 @@ ev_window_save_job_cb (EvJob     *job,
 	}
 
 	ev_window_clear_save_job (window);
+
+	if (priv->close_after_save)
+		g_idle_add ((GSourceFunc)destroy_window, window);
 }
 
 static void
@@ -3007,6 +3021,7 @@ file_save_dialog_response_cb (GtkWidget *fc,
 	gchar *uri;
 
 	if (response_id != GTK_RESPONSE_OK) {
+		priv->close_after_save = FALSE;
 		gtk_widget_destroy (fc);
 		return;
 	}
@@ -3456,14 +3471,6 @@ ev_window_print_update_pending_jobs_message (EvWindow *ev_window,
 	g_free (text);
 }
 
-static gboolean
-destroy_window (GtkWidget *window)
-{
-	gtk_widget_destroy (window);
-
-	return FALSE;
-}
-
 static void
 ev_window_print_operation_done (EvPrintOperation       *op,
 				GtkPrintOperationResult result,
@@ -3749,10 +3756,12 @@ document_modified_confirmation_dialog_response (GtkDialog *dialog,
 						gint       response,
 						EvWindow  *ev_window)
 {
+	EvWindowPrivate *priv = GET_PRIVATE (ev_window);
 	gtk_widget_destroy (GTK_WIDGET (dialog));
 
 	switch (response) {
 	case GTK_RESPONSE_YES:
+		priv->close_after_save = TRUE;
 		ev_window_save_as (ev_window);
 		break;
 	case GTK_RESPONSE_NO:
@@ -3760,7 +3769,7 @@ document_modified_confirmation_dialog_response (GtkDialog *dialog,
 		break;
 	case GTK_RESPONSE_CANCEL:
 	default:
-		break;
+		priv->close_after_save = FALSE;
 	}
 }
 
@@ -4025,7 +4034,7 @@ ev_window_cmd_about (GSimpleAction *action,
                 "Bryan Clark <clarkbw@gnome.org>",
                 "Carlos Garcia Campos <carlosgc@gnome.org>",
                 "Wouter Bolsterlee <wbolster@gnome.org>",
-                "Christian Persch <chpe" "\100" "gnome.org>",
+                "Christian Persch <chpe" "\100" "src.gnome.org>",
                 "Germán Poo-Caamaño <gpoo" "\100" "gnome.org>",
                 NULL
         };
@@ -4422,6 +4431,7 @@ ev_window_add_fullscreen_timeout (EvWindow *window)
 {
 	EvWindowPrivate *priv = GET_PRIVATE (window);
 
+	ev_window_remove_fullscreen_timeout (window);
 	priv->fs_timeout_id =
 		g_timeout_add_seconds (FULLSCREEN_POPUP_TIMEOUT,
 				       (GSourceFunc)fullscreen_toolbar_timeout_cb, window);
@@ -5485,6 +5495,7 @@ view_menu_popup_cb (EvView   *view,
 		    EvWindow *ev_window)
 {
 	EvWindowPrivate *priv = GET_PRIVATE (ev_window);
+	EvDocument *document = priv->document;
 	GList   *l;
 	gboolean has_link = FALSE;
 	gboolean has_image = FALSE;
@@ -5511,7 +5522,9 @@ view_menu_popup_cb (EvView   *view,
 	if (!has_annot)
 		view_menu_annot_popup (ev_window, NULL);
 
-	can_annotate = !has_annot && ev_view_get_has_selection (view);
+	can_annotate = EV_IS_DOCUMENT_ANNOTATIONS (document) &&
+		ev_document_annotations_can_add_annotation (EV_DOCUMENT_ANNOTATIONS (document)) &&
+		!has_annot && ev_view_get_has_selection (view);
 
 	ev_window_set_action_enabled (ev_window, "annotate-selected-text", can_annotate);
 
@@ -6453,7 +6466,8 @@ window_configure_event_cb (EvWindow *window, GdkEventConfigure *event, gpointer 
 
 	state = gdk_window_get_state (gtk_widget_get_window (GTK_WIDGET (window)));
 
-	if (!(state & GDK_WINDOW_STATE_FULLSCREEN)) {
+	if (!(state & GDK_WINDOW_STATE_FULLSCREEN) &&
+	    !(state & GDK_WINDOW_STATE_MAXIMIZED)) {
 		if (priv->document) {
 			ev_document_get_max_page_size (priv->document,
 						       &document_width, &document_height);
@@ -7862,6 +7876,9 @@ ev_window_get_metadata_sidebar_size (EvWindow *ev_window)
 	g_return_val_if_fail (EV_WINDOW (ev_window), 0);
 
 	priv = GET_PRIVATE (ev_window);
+
+	if (!priv->metadata)
+		return 0;
 
 	if (ev_metadata_get_int (priv->metadata, "sidebar_size", &sidebar_size))
 		return sidebar_size;

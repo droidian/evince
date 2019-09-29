@@ -26,7 +26,9 @@
 <title>Pasquín de 13 páxinas</title>
 <steps>
  <item>
-  <p>Prema <guiseq><gui>Ficheiro</gui><gui>Imprimir</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Seleccione a lapela <gui>Xeral</gui>.</p>
@@ -36,7 +38,9 @@
 
  <item>
   <p>Seleccione a lapela <gui>Configuración da páxina</gui>.</p>
-  <p>En <em>Distribución</em>, no menú <gui>Dúas caras</gui> seleccione <gui>Bordo pequeno (voltear)</gui>.</p>
+  <p>
+Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>Short Edge (Flip)</gui>.
+  </p>
   <p>Ao lado de <gui>Contrasinal</gui>, prema <gui>Cambiar</gui>.</p>
 <p>Baixo <em>Distribución</em>, no menú <gui>Páxinas por cara</gui> seleccione <gui>2</gui>.</p>
 <p>Prema <gui>Imprimir</gui>.</p>
@@ -46,32 +50,46 @@
   <p>Cando se teña impresa a páxina, volva a poñer papel na impresora, tendo coidado de orientalo correctamente, a páxina 2 imprimiranse na outra cara.</p>
  </item>
  <item>
-  <p>Prema <guiseq><gui>Ficheiro</gui><gui>Imprimir</gui></guiseq>.</p>
-<p>Seleccione o separador «Xeral».</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
+<p>Seleccione a lapela <gui>Xeral</gui>.</p>
 <p>Baixo <em>Distribución</em>, no menú <gui>Páxinas por cara</gui> seleccione <gui>2</gui>.</p>
  </item>
  <item>
-  <p>Baixo <em>Distribución</em>, no menú <gui>Páxinas por cara</gui> seleccione <gui>2</gui>.</p>
+  <p>Seleccione a lapela <gui>Configuración da páxina</gui>.</p>
+  <p>No menú<gui>Ordenación de páxinas</gui>, elixa <gui>De esquerda a dereita</gui>.</p>
 <p>Prema <gui>Imprimir</gui>.</p>
  </item>
  <item>
-  <p>Para imprimir a páxina 3, prema <guiseq><gui>Ficheiro</gui><gui>Imprimir</gui></guiseq> de novo.</p>
+  <p>
+     To print page 3, press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
 <p>Na lapela <gui>Xeral</gui> escriba 3 na selección de <gui>Páxinas</gui>.</p>
-<p>No lapela <gui>Xeral</gui> na xanela Imprimir seleccione <gui>Páxinas</gui> desde a sección <gui>Rango</gui>.</p>
+<p>Seleccione a lapela <gui>Configuración da páxina</gui>.</p>
+<p>Baixo <em>Distribución</em>, no menú <gui>Páxinas por cara</gui> seleccione <gui>2</gui>.</p>
 <p>Prema <gui>Imprimir</gui>.</p>
  </item>
  <item>
   <p>Cando teña impresa a páxina 3, volva a poñer papel na impresora tendo coidado de orientalo correctamente (as páxinas 4 e 13 imprimiranse coa outra cara).</p>
  </item>
  <item>
-  <p>Prema <guiseq><gui>Ficheiro</gui><gui>Imprimir</gui></guiseq>.</p>
+  <p>
+    Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+ </p>
 <p>Na lapela <gui>Xeral</gui> escriba as páxinas 4,13 na selección de <gui>Páxinas</gui>.</p>
-<p>Na lapela <gui>Xeral</gui> na xanela Imprimir seleccione <gui>Páxinas</gui> desde a sección <gui>Rango</gui>.</p>
+<p>Seleccione a lapela <gui>Configuración da páxina</gui>.</p>
+<p>No menú<gui>Ordenación de páxinas</gui>, elixa <gui>De esquerda a dereita</gui>.</p>
 <p>Prema <gui>Imprimir</gui>.</p>
  </item>
  <item>
-  <p>Prema <guiseq><gui>Ficheiro</gui><gui>Imprimir</gui></guiseq>.</p>
-  <p>Escriba as páxinas 8, 9, 10, 7, 6, 11, 12, 5 no menú de selección <gui>Páxinas</gui> e estabeleza <gui>Orde das follas</gui> a <gui>de esquerda a dereita</gui>.</p>
+  <p>
+    Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
+  <p>
+Enter pages 8, 9, 10, 7, 6, 11, 12, 5 in the <gui>Pages</gui> selection menu.
+</p>
+  <p>No menú<gui>Ordenación de páxinas</gui>, elixa <gui>De esquerda a dereita</gui>.</p>
   <p>Prema <gui>Imprimir</gui>.</p>
  </item>
 </steps>

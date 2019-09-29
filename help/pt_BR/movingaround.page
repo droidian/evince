@@ -44,15 +44,15 @@
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2017, 2018</mal:years>
+      <mal:name>Isaac Ferreira Filho</mal:name>
+      <mal:email>isaacmob@riseup.net</mal:email>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Isaac Ferreira Filho</mal:name>
-      <mal:email>isaacmob@riseup.net</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -111,13 +111,10 @@
       <p>Para ir até uma determinada página:</p>
       <list>
         <item>
-          <p>Type a page number in <gui style="input">Select Page</gui> on the
-          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
+          <p>Digite um número de página em <gui style="input">Seleciona página</gui> na <link xref="headerbar">barra de cabeçalho</link> e pressione <key>Enter</key>.</p>
         </item>
         <item>
-          <p>If you want to see the previously visited pages press
-          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
-          the header bar.</p>
+          <p>Se você deseja ver as páginas anteriormente visitadas, pressione <gui style="button">&lt;</gui> ou <gui style="button">&gt;</gui> da barra de cabeçalho.</p>
         </item>
         <item>
           <p>Para ir para o início ou para o final do documento:</p>
@@ -178,7 +175,7 @@
     </item>
     <item>
       <p>selecionar a porcentagem de zoom desejado no menu suspenso no topo da janela.</p>
-      <media type="image" src="figures/zoom.png"/>
+      <media type="image" src="figures/zoom.png" its:translate="no"/>
     </item>
   </list>
 

@@ -23,7 +23,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@gmail.com</mal:email>
-      <mal:years>2011, 2014-2015, 2018</mal:years>
+      <mal:years>2011, 2014-2015, 2018,2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -50,8 +50,8 @@
 
 <p>So drucken Sie nur bestimmte Seiten eines Dokuments:</p>
 <steps>
- <item><p>Klicken Sie auf <guiseq><gui>Datei</gui><gui>Drucken</gui></guiseq></p></item>
- <item><p>Wählen Sie im Reiter <gui>Allgemein</gui> des Druckfensters <gui>Seiten</gui> im Abschnitt <gui>Bereich</gui>.</p></item>
+ <item><p>Öffnen Sie das Menü oben rechts im Fenster und wählen Sie dann <gui style="button">Drucken</gui>.</p></item>
+ <item><p>Wählen Sie im Reiter <gui>Allgemein</gui> des Druckfensters <gui>Seiten:</gui> im Abschnitt <gui>Seiten</gui>.</p></item>
 <item><p>Geben Sie die Nummern der Seiten im Textfeld durch Kommata getrennt ein, die Sie drucken möchten. Verwenden Sie einen Bindestrich, um zusammenhängende Bereiche anzugeben.</p></item>
 </steps>
 

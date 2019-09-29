@@ -35,7 +35,7 @@
  <p>Generalmente, las impresoras imprimen primero la primera página, y luego la última, por lo que las páginas acaban en orden inverso cuando las coge.</p>
  <p>Invertir el orden:</p>
  <steps>
-  <item><p><guiseq><gui>Archivo</gui><gui>Imprimir</gui></guiseq></p></item>
+  <item><p>Pulse el botón de menú en la esquina superior derecha de la ventana y pulse el botón <gui style="button">Imprimir</gui>.</p></item>
   <item><p>En la pestaña <gui>General</gui> de la ventana «Imprimir», bajo <em>Copias</em>, marque <gui>Invertir</gui>. Se imprimirá la primera página la primera, así en adelante.</p></item>
  </steps>
 </section>
@@ -46,7 +46,7 @@
 
  <p>Para intercalar:</p>
  <steps>
-  <item><p>Pulse <guiseq><gui>Archivo</gui><gui> Imprimir</gui></guiseq></p></item>
+  <item><p>Pulse el botón de menú en la esquina superior derecha de la ventana y pulse el botón <gui style="button">Imprimir</gui>.</p></item>
   <item><p>En la pestaña <gui>General</gui> de la ventana «Imprimir», en <em>Copias</em>, marque <gui>Intercalar</gui>.</p></item>
  </steps>
  <media type="image" src="figures/reverse-collate.png"/>

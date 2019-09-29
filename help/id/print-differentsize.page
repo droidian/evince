@@ -34,7 +34,7 @@
 
   <steps>
     <item>
-      <p>Buka menu di kanan atas jendela, lalu pilih <gui style="menuitem">Cetak…</gui>.</p>
+      <p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p>
     </item>
     <item>
       <p>Pilih tab <gui>Penyiapan Halaman</gui>.</p>

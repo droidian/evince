@@ -44,7 +44,9 @@
 <title>11-sivuinen kirjanen</title>
 <steps>
  <item>
-  <p>Valitse <guiseq><gui>Tiedosto</gui><gui>Tulosta</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
 
 
@@ -56,7 +58,9 @@
  </item>
  <item>
   <p>Siirry <gui>Sivun asetukset</gui> -välilehdelle.</p>
-  <p>Valitse <gui>Kaksipuolinen</gui>-asetuksen arvoksi <gui>Lyhyt reuna (käännetty)</gui> <em>Asettelu</em>-otsakkeen alta.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>Short Edge (Flip)</gui>.
+  </p>
   <p>Valitse <gui>Sivuja puolelle</gui>-asetuksen arvoksi <gui>2</gui>.</p>
   <p>Valitse <gui>Sivujärjestys</gui>-asetuksen arvoksi <gui>Oikealta vasemmalle</gui>.</p>
   <p>Napsauta <gui>Tulosta</gui>.</p>
@@ -64,7 +68,9 @@
 
 
  <item>
-  <p>Valitse <guiseq><gui>Tiedosto</gui><gui>Tulosta</gui></guiseq> uudelleen.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Siirry <gui>Yleiset</gui>-välilehdelle.</p>

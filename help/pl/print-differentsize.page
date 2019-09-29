@@ -24,13 +24,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -40,7 +40,7 @@
 
   <steps>
     <item>
-      <p>Otwórz menu w górnym prawym rogu okna, a następnie wybierz <gui style="menuitem">Wydrukuj…</gui>.</p>
+      <p>Kliknij przycisk menu w górnym prawym rogu okna i kliknij przycisk <gui style="button">Wydrukuj</gui>.</p>
     </item>
     <item>
       <p>Wybierz kartę <gui>Ustawienia strony</gui>.</p>

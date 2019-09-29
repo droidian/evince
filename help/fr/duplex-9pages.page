@@ -62,7 +62,9 @@
 <title>Livret de 9 pages</title>
 <steps>
  <item>
-  <p>Cliquez sur <guiseq><gui>Fichier</gui><gui>Imprimer</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
 
 
@@ -73,7 +75,9 @@
  </item>
  <item>
   <p>Sélectionnez l’onglet <gui>Mise en page</gui>.</p>
- <p>Sous <em>Mise en page</em>, dans le menu <gui>Recto-verso</gui>, choisissez <gui>Bord court (retourné)</gui>.</p>
+ <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> option, select <gui>Short Edge (Flip)</gui>.
+  </p>
   <p>Pour l’option <gui>Pages par côté</gui>, choisissez <gui>2</gui>.</p>
   <p>Dans le menu <gui>Ordre des pages</gui>, choisissez <gui>Droite à gauche</gui>.</p>
   <p>Cliquez sur <gui>Imprimer</gui>.</p>
@@ -84,36 +88,51 @@
   <p>Une fois que la page est imprimée, prenez le papier et replacez-le dans l’imprimante, en prenant soin de l’orienter correctement (la page 2 sera imprimée de l’autre côté).</p>
  </item>
  <item>
-  <p>Cliquez à nouveau sur <guiseq><gui>Fichier</gui><gui>Imprimer</gui></guiseq> et choisissez l’onglet <gui>Général</gui>.</p>
+  <p>
+    Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
+  <p>Sélectionnez l’onglet <gui>Général</gui>.</p>
   <p>Sous <em>Plage</em>, choisissez <gui>Pages</gui> et saisissez : 2.</p>
  </item>
  <item>
-  <p>Choisissez l’onglet <gui>Mise en page</gui> et dans le menu <gui>Ordre des pages</gui>, choisissez <gui>Gauche à droite</gui>.</p>
+  <p>Sélectionnez l’onglet <gui>Mise en page</gui>.</p>
+  <p>Dans le menu <gui>Ordre des pages</gui>, sélectionnez <gui>Gauche à droite</gui>.</p>
   <p>Cliquez sur <gui>Imprimer</gui>.</p>
  </item>
 
  <item>
-  <p>Cliquez à nouveau sur <guiseq><gui>Fichier</gui><gui>Imprimer</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
   <p>Dans l’onglet <gui>Général</gui>, saisissez 3 dans la sélection <gui>Pages</gui>.</p>
  </item>
 
  <item>
- <p>Dans l’onglet <gui>Mise en page</gui>, paramétrez l’<gui>Ordre des pages</gui> à <gui>Droite à gauche</gui>.</p>
+ <p>Sélectionnez l’onglet <gui>Mise en page</gui>.</p>
+ <p>Dans le menu <gui>Ordre des pages</gui>, choisissez <gui>Droite à gauche</gui>.</p>
  <p>Cliquez sur <gui>Imprimer</gui>.</p>
  </item>
  <item>
  <p>Une fois que la page 3 est imprimée, replacez le papier dans l’imprimante, en prenant soin de l’orienter correctement (les pages 4 et 9 seront imprimées de l’autre côté).</p>
  </item>
  <item>
-  <p>Cliquez sur <guiseq><gui>Fichier</gui><gui>Imprimer</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  <p>Dans l’onglet <gui>Général</gui>, saisissez les pages 4, 9 dans la sélection <gui>Pages</gui>.</p>
-<p>Dans l’onglet <gui>Mise en page</gui>, paramétrez l’<gui>Ordre des pages</gui> à <gui>Gauche à droite</gui>.</p>
+<p>Sélectionnez l’onglet <gui>Mise en page</gui>.</p>
+<p>Dans le menu <gui>Ordre des pages</gui>, sélectionnez <gui>Gauche à droite</gui>.</p>
 <p>Cliquez sur <gui>Imprimer</gui>.</p>
  </item>
 
  <item>
-  <p>Cliquez sur <guiseq><gui>Fichier</gui><gui>Imprimer</gui></guiseq>.</p>
-<p>Saisissez les pages 8, 5, 6, 7 dans le menu de sélection <gui>Pages</gui> et paramétrez l’<gui>Ordre des pages</gui> à <gui>Gauche à droite</gui>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+</p>
+<p>
+Enter pages 8, 5, 6, 7 in the <gui>Pages</gui> selection menu.
+</p>
+<p>Dans le menu <gui>Ordre des pages</gui>, sélectionnez <gui>Gauche à droite</gui>.</p>
 <p>Cliquez sur <gui>Imprimer</gui>.</p>
  </item>
 </steps>

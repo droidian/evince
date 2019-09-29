@@ -44,10 +44,7 @@
     <title>Otevření dokumentu na konkrétní stránce</title>
     <p>Pro otevření dokumentu na konkrétní stránce použijte přepínač <cmd>--page-label</cmd>. Například pro otevření dokumentu na straně 3 byste zadali:</p>
     <screen>evince --page-label=3 soubor.pdf</screen>
-    <p>
-    The page label should be in the same format as the page number displayed in
-    the <app>Document Viewer</app> header bar.
-    </p>
+    <p>Parametr --page-label by měl být ve stejném formátu jako číslo stránky zobrazené na záhlavní liště v <app>Prohlížeči dokumentů</app>.</p>
 </section>
 <section id="fullsreen">
     <title>Otevření dokumentu v režimu celé obrazovky</title>

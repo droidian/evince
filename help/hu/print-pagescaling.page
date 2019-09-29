@@ -27,6 +27,12 @@
       <mal:email>kelemeng at gnome dot hu</mal:email>
       <mal:years>2011, 2012, 2013, 2014, 2015.</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Úr Balázs</mal:name>
+      <mal:email>ur.balazs at fsf dot hu</mal:email>
+      <mal:years>2019.</mal:years>
+    </mal:credit>
   </info>
 
   <title>Oldal átméretezése nyomtatáshoz</title>
@@ -38,7 +44,7 @@
       <p>Nyissa meg az ablak jobb felső sarkában lévő menüt, majd válassza a <gui style="menuitem">Nyomtatás</gui> menüpontot.</p>
     </item>
     <item>
-      <p>Válassza az <gui>Oldalkezelés</gui> lapot.</p>
+      <p>Válassza az <gui style="tab">Oldalkezelés</gui> lapot.</p>
     </item>
     <item>
       <p>Válassza ki a <em>Papír méretezését</em> a legördülő listából.</p>

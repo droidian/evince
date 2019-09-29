@@ -30,6 +30,12 @@
       <mal:email>kelemeng at gnome dot hu</mal:email>
       <mal:years>2011, 2012, 2013, 2014, 2015.</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Úr Balázs</mal:name>
+      <mal:email>ur.balazs at fsf dot hu</mal:email>
+      <mal:years>2019.</mal:years>
+    </mal:credit>
   </info>
 
   <title>Mozgás a dokumentumban</title>
@@ -87,13 +93,10 @@
       <p>Adott oldalra ugráshoz:</p>
       <list>
         <item>
-          <p>Type a page number in <gui style="input">Select Page</gui> on the
-          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
+          <p>Írjon be egy oldalszámot a <link xref="headerbar">fejlécsávon</link> lévő <gui style="input">Oldal kiválasztása</gui> mezőbe, és nyomja meg az <key>Enter</key> billentyűt.</p>
         </item>
         <item>
-          <p>If you want to see the previously visited pages press
-          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
-          the header bar.</p>
+          <p>Ha szeretné látni a korábban már felkeresett oldalakat, akkor nyomja meg a fejlécsávon a <gui style="button">&lt;</gui> vagy <gui style="button">&gt;</gui> gombot.</p>
         </item>
         <item>
           <p>Ha a dokumentum elejére vagy végére szeretne ugrani:</p>
@@ -154,7 +157,7 @@
     </item>
     <item>
       <p>Válassza ki a kívánt nagyítási arányt az eszköztáron lévő legördülő menüből.</p>
-      <media type="image" src="figures/zoom.png"/>
+      <media type="image" src="figures/zoom.png" its:translate="no"/>
     </item>
   </list>
 

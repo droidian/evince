@@ -16,7 +16,7 @@
     <email>tiffany@antopolski.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons – Így add tovább! 3.0</p>
     </license>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -29,6 +29,12 @@
       <mal:name>Kelemen Gábor</mal:name>
       <mal:email>kelemeng at gnome dot hu</mal:email>
       <mal:years>2011, 2012, 2013, 2014, 2015.</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Úr Balázs</mal:name>
+      <mal:email>ur.balazs at fsf dot hu</mal:email>
+      <mal:years>2019.</mal:years>
     </mal:credit>
   </info>
 
@@ -44,10 +50,7 @@
     <title>Dokumentum megnyitása adott oldalon</title>
     <p>Dokumentum adott oldalon való megnyitására használhatja a <cmd>--page-label</cmd> kapcsolót. Egy dokumentum például a következőképpen nyitható meg a 3. oldalon:</p>
     <screen>evince --page-label=3 fájl.pdf</screen>
-    <p>
-    The page label should be in the same format as the page number displayed in
-    the <app>Document Viewer</app> header bar.
-    </p>
+    <p>Az oldalcímkének azonos formátumúnak kell lennie, mint a <app>Dokumentummegjelenítő</app> fejlécsávján megjelenő oldalszámnak.</p>
 </section>
 <section id="fullsreen">
     <title>Dokumentum megnyitása teljes képernyős módban</title>

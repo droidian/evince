@@ -87,12 +87,10 @@ G_DEFINE_TYPE_EXTENDED (EvSidebarLinks,
                         ev_sidebar_links, 
                         GTK_TYPE_BOX,
                         0, 
+                        G_ADD_PRIVATE (EvSidebarLinks)
                         G_IMPLEMENT_INTERFACE (EV_TYPE_SIDEBAR_PAGE, 
 					       ev_sidebar_links_page_iface_init))
 
-
-#define EV_SIDEBAR_LINKS_GET_PRIVATE(object) \
-	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EV_TYPE_SIDEBAR_LINKS, EvSidebarLinksPrivate))
 
 static void
 ev_sidebar_links_set_property (GObject      *object,
@@ -218,8 +216,6 @@ ev_sidebar_links_class_init (EvSidebarLinksClass *ev_sidebar_links_class)
 	g_object_class_override_property (g_object_class,
 					  PROP_WIDGET,
 					  "main-widget");
-
-	g_type_class_add_private (g_object_class, sizeof (EvSidebarLinksPrivate));
 }
 
 static void
@@ -341,11 +337,12 @@ build_popup_menu (EvSidebarLinks *sidebar)
 	GtkWidget *item;
 
 	menu = gtk_menu_new ();
-	item = gtk_label_new_with_mnemonic(_("Print…"));
+	item = gtk_menu_item_new_with_mnemonic(_("Print…"));
 	gtk_widget_show (item);
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
 	g_signal_connect (item, "activate",
 			  G_CALLBACK (print_section_cb), sidebar);
+	gtk_menu_attach_to_widget (menu, sidebar->priv->tree_view, NULL);
 
 	return GTK_MENU (menu);
 }
@@ -518,7 +515,7 @@ row_collapsed_cb (GtkTreeView *tree_view,
 		if (ev_metadata_get_string (metadata, "index-collapse", &index_collapse)) {
 			/* If collapsed row is not in 'index_collapse' we add it. */
 			if (g_strstr_len (index_collapse, -1, path_token) == NULL) {
-				if (!strcmp (index_expand, ""))
+				if (!index_expand || !strcmp (index_expand, ""))
 					new_index = g_strconcat (index_collapse, path_token, NULL);
 				else
 					new_index = g_strconcat (index_collapse, path_token + 1, NULL);
@@ -687,7 +684,7 @@ ev_sidebar_links_construct (EvSidebarLinks *ev_sidebar_links)
 static void
 ev_sidebar_links_init (EvSidebarLinks *ev_sidebar_links)
 {
-	ev_sidebar_links->priv = EV_SIDEBAR_LINKS_GET_PRIVATE (ev_sidebar_links);
+	ev_sidebar_links->priv = ev_sidebar_links_get_instance_private (ev_sidebar_links);
 
 	ev_sidebar_links_construct (ev_sidebar_links);
 }

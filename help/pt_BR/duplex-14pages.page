@@ -41,22 +41,22 @@
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2017, 2018</mal:years>
+      <mal:name>Isaac Ferreira Filho</mal:name>
+      <mal:email>isaacmob@riseup.net</mal:email>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Isaac Ferreira Filho</mal:name>
-      <mal:email>isaacmob@riseup.net</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
 <title>Livreto de 14 páginas</title>
 <steps>
  <item>
-  <p>Clique no menu de <gui>Opções do arquivo</gui> no canto superior direito da janela e selecione <gui>Imprimir</gui>.</p>
+  <p>Pressione o botão de menu no canto superior direito da janela e pressione o botão <gui style="button">Imprimir</gui>.</p>
  </item>
  <item>
   <p>Escolha a aba <gui>Geral</gui>.</p>
@@ -78,7 +78,7 @@
  <p>Quando terminar a impressão, pegue o papel com a página 2 e coloque-o de volta, virado, na impressora, tomando o cuidado de orientá-lo corretamente (a página 1 deverá ser impressa atrás da 2).</p>
  </item>
  <item>
-  <p>Clique no menu de <gui>Opções do arquivo</gui> no canto superior direito da janela e selecione <gui>Imprimir</gui> novamente.</p>
+  <p>Pressione o botão de menu no canto superior direito da janela e pressione o botão <gui style="button">Imprimir</gui>.</p>
  </item>
  <item>
   <p>Escolha a aba <gui>Geral</gui>.</p>

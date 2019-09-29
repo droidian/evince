@@ -26,7 +26,9 @@
 <title>4-page booklet</title>
 <steps>
  <item>
-  <p>Klik op <guiseq><gui>Bestand</gui><gui>Afdrukken</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
 
 
@@ -42,7 +44,7 @@
  <item>
   <p>Kies het tabblad <gui>Pagina-instellingen</gui>.</p>
   <p>
-   Under <em>Layout</em>, in the <gui>Two-side</gui> menu, select <gui>Short Edge (Flip)</gui>.
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>Short Edge (Flip)</gui>.
   </p>
   <p>
    In the <gui>Pages per side</gui> option, select <gui>2</gui>.

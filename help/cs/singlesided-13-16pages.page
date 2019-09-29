@@ -44,7 +44,7 @@
  <p>Tisk:</p>
   <steps>
  <item>
-  <p>Klikněte na <guiseq><gui>Soubor</gui><gui>Tisk</gui></guiseq>.</p>
+  <p>Zmáčkněte tlačítko nabídky v pravém horním rohu okna a následně zmáčkněte tlačítko <gui style="button">Tisk</gui>.</p>
  </item>
 
 
@@ -69,7 +69,7 @@
     <p>Po vytisknutí všech stránek je otočte vzhůru nohama a vraťte zpět do podavače tiskárny.</p>
    </item>
    <item>
-    <p>Klikněte na <guiseq><gui>Soubor</gui><gui>Tisk</gui></guiseq>.</p>
+    <p>Zmáčkněte tlačítko nabídky v pravém horním rohu okna a následně zmáčkněte tlačítko <gui style="button">Tisk</gui>.</p>
    </item>
    <item>
     <p>Přejděte na kartu <gui>Nastavení stránky</gui>.</p>

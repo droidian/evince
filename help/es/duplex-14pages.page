@@ -32,7 +32,7 @@
 <title>Folleto de 14 páginas</title>
 <steps>
  <item>
-  <p>Pulse <guiseq><gui>Archivo</gui><gui>Imprimir</gui></guiseq>.</p>
+  <p>Pulse el botón de menú en la esquina superior derecha de la ventana y pulse el botón <gui style="button">Imprimir</gui>.</p>
  </item>
  <item>
   <p>Elija la pestaña <gui>General</gui>.</p>
@@ -42,7 +42,7 @@
  </item>
  <item>
   <p>Elija la pestaña <gui>Configuración de página</gui>.</p>
- <p>En <em>Diseño</em>, en la opción <gui>Doble cara</gui>, seleccione <gui>Margen corto (girar)</gui>.</p>
+ <p>En <em>Distribución</em>, en la opción <gui>Doble cara</gui>, seleccione <gui>Margen corto (girar)</gui>.</p>
   <p>En la opción <gui>Páginas por hoja</gui>, elija <gui>2</gui>.</p>
  <p>En el menú<gui>Ordenación de páginas</gui>, elija <gui>De izquierda a derecha</gui>.</p>
  <p>Pulse <gui>Imprimir</gui>.</p>
@@ -54,7 +54,7 @@
  <p>Una vez que las páginas se han imprimido coja la página 2 y vuelva colocarla en la impresora, teniendo cuidado de orientarla correctamente (la página 1 se imprimirá en la otra cara).</p>
  </item>
  <item>
-  <p>Pulse <guiseq><gui>Archivo</gui><gui>Imprimir</gui></guiseq> otra vez.</p>
+  <p>Pulse el botón de menú en la esquina superior derecha de la ventana y pulse el botón <gui style="button">Imprimir</gui>.</p>
  </item>
  <item>
   <p>Elija la pestaña <gui>General</gui>.</p>

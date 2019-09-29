@@ -20,7 +20,7 @@
 
 <p>For kun at udskrive bestemte sider fra dokumentet:</p>
 <steps>
- <item><p>Klik på <guiseq><gui>Fil</gui><gui>Udskriv</gui></guiseq></p></item>
+ <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
  <item><p>På fanebladet <gui>Generelt</gui> i udskrivningsvinduet skal du i afsnittet <gui>Interval</gui> vælge <gui>Sider</gui>.</p></item>
 <item><p>I tekstboksen skal du skrive sidenumrene på de sider, som du vil udskrive, adskilt af kommaer. Brug en bindestreg for at angive en sekvens af sider.</p></item>
 </steps>

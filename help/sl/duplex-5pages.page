@@ -20,7 +20,9 @@
 <title>5 stranska knjižica</title>
 <steps>
  <item>
-  <p>Kliknite <guiseq><gui>Datoteka</gui><gui>Natisni</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
 
 
@@ -31,7 +33,9 @@
  </item>
  <item>
   <p>Izberite zavihek <gui>Nastavitev strani</gui>.</p>
-  <p>V meniju <em>Razporeditev</em> v možnosti <gui>Dvostransko</gui> izberite <gui>Kratek rob (zrcali)</gui>.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> option, select <gui>Short Edge (Flip)</gui>.
+  </p>
  <p>V možnosti <gui>Strani na stran</gui> izberite <gui>2</gui>.</p>
   <p>V meniju <gui>Ureditev strani</gui> izberite <gui>Od desne proti levi</gui>.</p>
   <p>Kliknite <gui>Natisni</gui>.</p>
@@ -42,8 +46,10 @@
   <p>Ko se je stran natisnila, vzemite papir in ga dajte nazaj v tiskalnik. Pri tem pazite, da jo pravilno obrnete (stran 2 bo natisnjena na drugi strani).</p>
  </item>
  <item>
-  <p>Znova kliknite <guiseq><gui>Datoteka</gui><gui>Natisni</gui></guiseq>.</p>
-  <p>Zaprite zavihek <guilabel>Splošno</guilabel>.</p>
+  <p>
+     Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
+  <p>Izberite zavihek <gui>Splošno</gui>.</p>
   <p>V <em>Obseg</em> izberite <gui>Strani</gui> in vnesite 2.</p>
  </item>
  <item>
@@ -53,22 +59,28 @@
  </item>
 
  <item>
-  <p>Za tiskanje strani 3 znova kliknite <guiseq><gui>Datoteka</gui><gui>Natisni</gui></guiseq>.</p>
+  <p>
+   To print page 3, press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
   <p>
     In the <gui>General</gui> tab enter the page number in the <gui>Pages</gui> selection.
   </p>
  </item>
  <item>
- <p>V zavihku <gui>Nastavitev strani</gui> spremenite <gui>Ureditev stani</gui> na <gui>Od desne proti levi</gui>.</p>
+ <p>Izberite zavihek <gui>Nastavitev strani</gui>.</p>
+ <p>V meniju <gui>Ureditev strani</gui> izberite <gui>Od desne proti levi</gui>.</p>
 <p>Kliknite <gui>Natisni</gui>.</p>
  </item>
  <item>
  <p>Ko se je stran 3 natisnila, vzemite papir in ga dajte nazaj v tiskalnik. Pri tem pazite, da jo pravilno obrnete (strani 4 in 9 bosta natisnjeni na drugi strani).</p>
  </item>
  <item>
-  <p>Kliknite <guiseq><gui>Datoteka</gui><gui>Natisni</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
   <p>V izbirni meni <gui>Strani</gui> v zavihku <gui>Splošno</gui> vnesite 4, 9.</p>
-  <p>V zavihku <gui>Nastavitev strani</gui> nastavite <gui>Ureditev strani</gui> na <gui>Od leve proti desni</gui>.</p>
+  <p>Izberite zavihek <gui>Nastavitev strani</gui>.</p>
+  <p>V meniju <gui>Ureditev strani</gui> izberite <gui>Od leve proti desni</gui>.</p>
  <p>Kliknite <gui>Natisni</gui>.</p>
  </item>
 </steps>

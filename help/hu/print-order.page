@@ -12,7 +12,7 @@
       <email>philbull@gmail.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons – Így add tovább! 3.0</p>
     </license>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -26,6 +26,12 @@
       <mal:email>kelemeng at gnome dot hu</mal:email>
       <mal:years>2011, 2012, 2013, 2014, 2015.</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Úr Balázs</mal:name>
+      <mal:email>ur.balazs at fsf dot hu</mal:email>
+      <mal:years>2019.</mal:years>
+    </mal:credit>
   </info>
 
 <title>Másolatok nyomtatása a megfelelő sorrendben</title>
@@ -35,7 +41,7 @@
  <p>A nyomtatók általában először az első, utoljára pedig az utolsó oldalt nyomtatják ki, így az oldalakat fordított sorrendben kapja meg.</p>
  <p>A sorrend megfordításához:</p>
  <steps>
-  <item><p><guiseq><gui>Fájl</gui><gui>Nyomtatás</gui></guiseq></p></item>
+  <item><p>Nyomja meg az ablak jobb felső sarkában lévő menügombot, majd nyomja meg a <gui style="button">Nyomtatás</gui> gombot.</p></item>
   <item><p>A Nyomtatás ablak <gui>Általános</gui> lapján a <em>Másolatok</em> szakaszban jelölje be a <gui>Fordított</gui> négyzetet. Ekkor az utolsó oldal kerül elsőként kinyomtatásra.</p></item>
  </steps>
 </section>
@@ -46,7 +52,7 @@
 
  <p>A szétválogatáshoz:</p>
  <steps>
-  <item><p>Válassza a <guiseq><gui>Fájl</gui><gui>Nyomtatás</gui></guiseq> menüpontot.</p></item>
+  <item><p>Nyomja meg az ablak jobb felső sarkában lévő menügombot, majd nyomja meg a <gui style="button">Nyomtatás</gui> gombot.</p></item>
   <item><p>A Nyomtatás ablak <gui>Általános</gui> lapján a <em>Másolatok</em> szakaszban jelölje be a <gui>Szétválogatás</gui> négyzetet.</p></item>
  </steps>
  <media type="image" src="figures/reverse-collate.png"/>
