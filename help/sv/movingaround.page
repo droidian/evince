@@ -34,7 +34,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Anders Jonsson</mal:name>
       <mal:email>anders.jonsson@norsjovallen.se</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   </info>
 
@@ -93,13 +93,10 @@
       <p>För att gå till en specifik sida:</p>
       <list>
         <item>
-          <p>Type a page number in <gui style="input">Select Page</gui> on the
-          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
+          <p>Skriv in ett sidnummer i <gui style="input">Välj sida</gui> i <link xref="headerbar">rubrikraden</link> och tryck <key>Retur</key>.</p>
         </item>
         <item>
-          <p>If you want to see the previously visited pages press
-          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
-          the header bar.</p>
+          <p>Om du vill se tidigare besökta sidor tryck på <gui style="button">&lt;</gui> eller <gui style="button">&gt;</gui> i rubrikraden.</p>
         </item>
         <item>
           <p>Om du vill gå till början eller slutet av dokumentet:</p>
@@ -160,7 +157,7 @@
     </item>
     <item>
       <p>välj den önskade zoom-procenten från rullgardinsmenyn ovanför fönstret.</p>
-      <media type="image" src="figures/zoom.png"/>
+      <media type="image" src="figures/zoom.png" its:translate="no"/>
     </item>
   </list>
 

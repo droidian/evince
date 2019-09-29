@@ -31,14 +31,14 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Anders Jonsson</mal:name>
       <mal:email>anders.jonsson@norsjovallen.se</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   </info>
 
 <title>4-sidors häfte</title>
 <steps>
  <item>
-  <p>Klicka på <guiseq><gui>Arkiv</gui><gui>Skriv ut</gui></guiseq>.</p>
+  <p>Tryck på menyknappen i fönstrets övre högra hörn och tryck på knappen <gui style="button">Skriv ut</gui>.</p>
  </item>
 
 
@@ -49,7 +49,7 @@
  </item>
  <item>
   <p>Välj fliken <gui>Sidinställningar</gui>.</p>
-  <p>Under <em>Layout</em> i menyn <gui>Tvåsidig</gui>, välj <gui>Kort kant (Vänd)</gui>.</p>
+  <p>Under <em>Layout</em> i menyn <gui>Tvåsidigt</gui>, välj <gui>Kort kant (Vänd)</gui>.</p>
   <p>I alternativet <gui>Sidor per blad</gui> välj <gui>2</gui>.</p>
   <p>I menyn <gui>Sidordning</gui>, välj <gui>Vänster till höger</gui>.</p>
  </item>

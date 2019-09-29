@@ -3,7 +3,7 @@
 # *****************************************************************************
 
 m4_define([ev_major_version],[3])
-m4_define([ev_minor_version],[32])
+m4_define([ev_minor_version],[34])
 m4_define([ev_micro_version],[0])
 m4_define([ev_extra_version],[])
 m4_define([ev_version],[ev_major_version.ev_minor_version.ev_micro_version()ev_extra_version])
@@ -123,7 +123,7 @@ AM_CONDITIONAL([PLATFORM_WIN32],[test "$with_platform" = "win32"])
 
 dnl Specify required versions of dependencies
 CAIRO_REQUIRED=1.10.0
-GLIB_REQUIRED=2.36.0
+GLIB_REQUIRED=2.38.0
 LIBSECRET_REQUIRED=0.5
 GTK_REQUIRED=3.22.0
 NAUTILUS_REQUIRED=2.91.4

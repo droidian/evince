@@ -44,10 +44,7 @@
     <title>Abrir un documento por una página específica</title>
     <p>Puede usar la opción <cmd>--page-label</cmd> para abrir un documento por la página especificada. Por ejemplo, para abrir la página 3 de un documento, escriba:</p>
     <screen>evince --page-label=3 archivo.pdf</screen>
-    <p>
-    The page label should be in the same format as the page number displayed in
-    the <app>Document Viewer</app> header bar.
-    </p>
+    <p>La etiqueta de la página debería estar en el mismo formato que el número de página mostrado en la barra de cabecera del <app>Visor de documentos</app>.</p>
 </section>
 <section id="fullsreen">
     <title>Abrir un documento en modo a pantalla completa</title>

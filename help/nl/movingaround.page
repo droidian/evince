@@ -166,7 +166,7 @@
     </item>
     <item>
       <p>selecteer het gewenste zoompercentage in het uitklapmenu boven het venster.</p>
-      <media type="image" src="figures/zoom.png"/>
+      <media type="image" src="figures/zoom.png" its:translate="no"/>
     </item>
   </list>
 

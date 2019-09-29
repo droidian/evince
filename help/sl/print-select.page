@@ -20,7 +20,7 @@
 
 <p>Za tiskanje le določenih strani v dokumentu:</p>
 <steps>
- <item><p>Kliknite <guiseq><gui>Datoteka</gui><gui>Natisni</gui></guiseq></p></item>
+ <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
  <item><p>V zavihku <gui>Splošno</gui> okna Tiskanje v odseku <gui>Obseg</gui> izberite <gui>Strani</gui>.</p></item>
 <item><p>V besedilno polje vpišite števila strani, ki jih želite natisniti, ločena z vejicami. Uporabite pomišljaj za tiskanje obsega več strani.</p></item>
 </steps>

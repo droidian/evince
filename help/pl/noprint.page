@@ -18,13 +18,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -46,17 +46,16 @@
   <p>Aby sprawdzić, czy drukarka poprawnie drukuje:</p>
   <steps>
     <item>
-      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
-      overview and start typing <gui>Settings</gui>.</p>
+      <p>Otwórz <gui href="help:gnome-help/shell-introduction#activities">ekran podglądu</gui> i zacznij pisać <gui>Ustawienia</gui>.</p>
     </item>
     <item>
-      <p>Click on <gui>Settings</gui>.</p>
+      <p>Kliknij <gui>Ustawienia</gui>.</p>
     </item>
     <item>
-      <p>Click <gui>Devices</gui> in the sidebar.</p>
+      <p>Kliknij <gui>Urządzenia</gui> na panelu bocznym.</p>
     </item>
     <item>
-      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+      <p>Kliknij <gui>Drukarki</gui> na panelu bocznym, aby otworzyć panel.</p>
     </item>
    <item><p>Kliknij drukarkę na liście.</p></item>
    <item><p>Kliknij <gui>Wydrukuj stronę testową</gui>. Strona powinna zostać wysłana do drukarki.</p>

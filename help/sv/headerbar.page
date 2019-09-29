@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#tips"/>
-    <desc>Using the header bar.</desc>
+    <desc>Använda rubrikraden.</desc>
 
     <revision pkgversion="3.10" version="0.1" date="2013-11-04" status="final"/>
     <revision pkgversion="3.24" version="0.2" date="2017-09-17" status="final"/>
@@ -31,13 +31,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Anders Jonsson</mal:name>
       <mal:email>anders.jonsson@norsjovallen.se</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   </info>
 
-<title>Header bar</title>
+<title>Rubrikrad</title>
 
-<p>The header bar contains:</p>
+<p>Rubrikraden innehåller:</p>
   <list>
     <item>
       <p>Ett textfält för att <link xref="movingaround#between-pages">gå till en specifik sida</link> eller för att <link xref="finding">söka</link> i <link xref="movingaround#navigating">indexet</link>.</p>

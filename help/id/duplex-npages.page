@@ -41,7 +41,9 @@
 
 <steps>
  <item>
-  <p>Klik <guiseq><gui>Berkas</gui><gui>Cetak</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Pilih tab <gui>Umum</gui>.</p>
@@ -52,7 +54,9 @@
  </item>
  <item>
   <p>Pilih tab <gui>Penyiapan Halaman</gui>.</p>
-  <p>Di bawah <em>Tata letak</em>, dalam menu <gui>Dua sisi</gui>, pilih <gui>Tepi Pendek (Balik)</gui>.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>Short Edge (Flip)</gui>.
+  </p>
   <p>Dalam menu <gui>Halaman tiap sisi</gui>, pilih <gui>2</gui>.</p>
   <p>Dalam menu <gui>Pengurutan halaman</gui>, pilih <gui>Kiri ke kanan</gui>.</p>
  </item>

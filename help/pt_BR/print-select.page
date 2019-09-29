@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="printing"/>
-    <desc>Imprimir apenas determinadas páginas, ou um intervalo de páginas.</desc>
+    <desc>Imprima apenas determinadas páginas, ou um intervalo de páginas.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -39,15 +39,15 @@
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2017, 2018</mal:years>
+      <mal:name>Isaac Ferreira Filho</mal:name>
+      <mal:email>isaacmob@riseup.net</mal:email>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Isaac Ferreira Filho</mal:name>
-      <mal:email>isaacmob@riseup.net</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -56,7 +56,7 @@
 
 <p>Para imprimir apenas determinadas páginas do documento:</p>
 <steps>
- <item><p>Clique em <guiseq><gui>Arquivo</gui><gui>Imprimir</gui></guiseq></p></item>
+ <item><p>Pressione o botão de menu no canto superior direito da janela e pressione o botão <gui style="button">Imprimir</gui>.</p></item>
  <item><p>Na aba <gui>Geral</gui> da janela <gui>Imprimir</gui>, em <em>Intervalo</em>, selecione <gui>Páginas</gui>.</p></item>
 <item><p>Digite os números das páginas que você deseja imprimir na caixa de texto, separados por vírgulas. Use um traço para indicar um intervalo de páginas.</p></item>
 </steps>

@@ -40,22 +40,25 @@
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2017, 2018</mal:years>
+      <mal:name>Isaac Ferreira Filho</mal:name>
+      <mal:email>isaacmob@riseup.net</mal:email>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Isaac Ferreira Filho</mal:name>
-      <mal:email>isaacmob@riseup.net</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
   <title>Mudando as configurações padrão</title>
 
   <p>Quando um documento é aberto pela primeira vez, as configurações de zoom e modos de visualização padrão são aplicadas. Todas as alterações feitas nessas configurações são salvas somente para o documento.</p>
-  <p>Você pode salvar as configurações atuais como padrão para todos os novos documentos, usando o item <gui style="menuitem">Salvar configurações atuais como padrão</gui> do menu de <gui>Opções do arquivo</gui>, ou usando o atalho <keyseq><key>Ctrl</key><key>T</key></keyseq>.</p>
+  <p>You can save the settings which you are currently using as default
+  for all new documents by selecting <guiseq><gui style="menu">Edit</gui>
+  <gui style="menuitem">Save Current Settings as Default</gui></guiseq>
+  or press <keyseq><key>Ctrl</key><key>T</key></keyseq>.</p>
 
   <note style="important">
     <p>As novas configurações padrão não substituem as configurações de documentos abertos anteriormente, elas são aplicadas apenas aos documentos abertos pela primeira vez.</p>

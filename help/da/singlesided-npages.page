@@ -34,7 +34,9 @@
  <p>For at udskrive:</p>
   <steps>
  <item>
-  <p>Klik på <guiseq><gui>Fil</gui><gui>Udskriv</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Vælg fanebladet <gui>Generelt</gui>.</p>
@@ -45,7 +47,9 @@
  </item>
  <item>
   <p>Vælg fanebladet <gui>Sideopsætning</gui>.</p>
-  <p>Under <em>Layout</em> skal du i menuen <gui>Dobbelsidet</gui>, vælge <gui>Enkeltsidet</gui>.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>One Sided</gui>.
+  </p>
   <p>I menuen <gui>Sider pr. ark</gui> skal du vælge <gui>2</gui>.</p>
   <p>I menuen <gui>Sideorden</gui> skal du vælge <gui>Venstre mod højre</gui>.</p>
   <p>I menuen <gui>Udskriv kun</gui> skal du vælge <gui>Ulige ark</gui>.</p>
@@ -57,7 +61,9 @@
     <p>Når alle siderne er udskrevet skal du vende arkene og lægge dem tilbage i printeren.</p>
    </item>
    <item>
-    <p>Klik på <guiseq><gui>Fil</gui><gui>Udskriv</gui></guiseq>.</p>
+    <p>
+    Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+    </p>
    </item>
    <item>
     <p>Vælg fanebladet <gui>Sideopsætning</gui>.</p>

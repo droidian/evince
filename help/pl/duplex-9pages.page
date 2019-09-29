@@ -19,20 +19,20 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
 <title>9-stronicowa broszura</title>
 <steps>
  <item>
-  <p>Kliknij <guiseq><gui>Plik</gui><gui>Wydrukuj</gui></guiseq>.</p>
+  <p>Kliknij przycisk menu w górnym prawym rogu okna i kliknij przycisk <gui style="button">Wydrukuj</gui>.</p>
  </item>
 
 
@@ -54,36 +54,41 @@
   <p>Po wydrukowaniu strony umieść kartkę z powrotem w drukarce, układając ją na właściwej stronie (2. strona zostanie wydrukowana na odwrocie).</p>
  </item>
  <item>
-  <p>Ponownie kliknij <guiseq><gui>Plik</gui><gui>Wydrukuj</gui></guiseq> i wybierz kartę Ogólne.</p>
+  <p>Kliknij przycisk menu w górnym prawym rogu okna i kliknij przycisk <gui style="button">Wydrukuj</gui>.</p>
+  <p>Wybierz kartę <gui>Ogólne</gui>.</p>
   <p>W sekcji <em>Zakres</em> zaznacz opcję <gui>Strony</gui> i wpisz: 2</p>
  </item>
  <item>
-  <p>Wybierz kartę <gui>Ustawienia strony</gui> i w menu <gui>Kolejność stron</gui> wybierz <gui>Od lewej do prawej</gui>.</p>
+  <p>Wybierz kartę <gui>Ustawienia strony</gui>.</p>
+  <p>W menu <gui>Kolejność stron</gui> wybierz <gui>Od lewej do prawej</gui>.</p>
   <p>Kliknij przycisk <gui>Wydrukuj</gui>.</p>
  </item>
 
  <item>
-  <p>Ponownie kliknij <guiseq><gui>Plik</gui><gui>Wydrukuj</gui></guiseq>.</p>
+  <p>Kliknij przycisk menu w górnym prawym rogu okna i kliknij przycisk <gui style="button">Wydrukuj</gui>.</p>
   <p>W karcie <gui>Ogólne</gui> wpisz 3 w opcji <gui>Strony</gui>.</p>
  </item>
 
  <item>
- <p>W karcie <gui>Ustawienia strony</gui> ustaw <gui>Kolejność stron</gui> na <gui>Od prawej do lewej</gui>.</p>
+ <p>Wybierz kartę <gui>Ustawienia strony</gui>.</p>
+ <p>W menu <gui>Kolejność stron</gui> wybierz <gui>Od prawej do lewej</gui>.</p>
  <p>Kliknij przycisk <gui>Wydrukuj</gui>.</p>
  </item>
  <item>
  <p>Po wydrukowaniu 3. strony umieść kartki z powrotem w drukarce, układając je na właściwej stronie (4. i 9. strona zostaną wydrukowane na odwrocie).</p>
  </item>
  <item>
-  <p>Kliknij <guiseq><gui>Plik</gui><gui>Wydrukuj</gui></guiseq>.</p>
- <p>W karcie <gui>Ogólne</gui> wpisz 4,9 w opcji <gui>Strony</gui>.</p>
-<p>W karcie <gui>Ustawienia strony</gui> ustaw <gui>Kolejność stron</gui> na <gui>Od lewej do prawej</gui>.</p>
+  <p>Kliknij przycisk menu w górnym prawym rogu okna i kliknij przycisk <gui style="button">Wydrukuj</gui>.</p>
+ <p>W karcie <gui>Ogólne</gui> wpisz numer stron 4, 9 w opcji <gui>Strony</gui>.</p>
+<p>Wybierz kartę <gui>Ustawienia strony</gui>.</p>
+<p>W menu <gui>Kolejność stron</gui> wybierz <gui>Od lewej do prawej</gui>.</p>
 <p>Kliknij przycisk <gui>Wydrukuj</gui>.</p>
  </item>
 
  <item>
-  <p>Kliknij <guiseq><gui>Plik</gui><gui>Wydrukuj</gui></guiseq>.</p>
-<p>Wpisz 8, 5, 6, 7 w menu <gui>Strony</gui> i ustaw <gui>Kolejność stron</gui> na <gui>Od lewej do prawej</gui>.</p>
+  <p>Kliknij przycisk menu w górnym prawym rogu okna i kliknij przycisk <gui style="button">Wydrukuj</gui>.</p>
+<p>Wpisz 8, 5, 6, 7 w menu <gui>Strony</gui>.</p>
+<p>W menu <gui>Kolejność stron</gui> wybierz <gui>Od lewej do prawej</gui>.</p>
 <p>Kliknij przycisk <gui>Wydrukuj</gui>.</p>
  </item>
 </steps>

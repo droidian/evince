@@ -87,13 +87,10 @@
       <p>Ir a una página específica:</p>
       <list>
         <item>
-          <p>Type a page number in <gui style="input">Select Page</gui> on the
-          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
+          <p>Escriba un número de página en <gui style="input">Seleccionar página</gui> en la <link xref="titlebar">barra de cabecera</link> y pulse <key>Intro</key></p>
         </item>
         <item>
-          <p>If you want to see the previously visited pages press
-          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
-          the header bar.</p>
+          <p>Si quiere ver las páginas visitadas anteriormente, pulse <gui style="button">&lt;</gui> o <gui style="button">&gt;</gui> en la barra de cabecera.</p>
         </item>
         <item>
           <p>Si quiere ir al principio o al final del documento:</p>
@@ -154,7 +151,7 @@
     </item>
     <item>
       <p>seleccione el porcentaje de ampliación que quiere desde el menú desplegable encima de la ventana.</p>
-      <media type="image" src="figures/zoom.png"/>
+      <media type="image" src="figures/zoom.png" its:translate="no"/>
     </item>
   </list>
 

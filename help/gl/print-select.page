@@ -26,7 +26,7 @@
 
 <p>Para imprimir só certas páxinas desde o documento:</p>
 <steps>
- <item><p>Prema <guiseq><gui>Ficheiro</gui><gui>Imprimir</gui></guiseq></p></item>
+ <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
  <item><p>Na lapela <gui>Xeral</gui> na xanela Imprimir seleccione <gui>Páxinas</gui> desde a sección <gui>Rango</gui>.</p></item>
 <item><p>Escriba na caixa de texto os números das páxinas que quere imprimir, separados por comas. Use un guíon para especificar un rango de páxinas.</p></item>
 </steps>

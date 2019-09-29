@@ -6,7 +6,7 @@
     <link type="seealso" xref="convertpdf"/>
     <link type="seealso" xref="convertPostScript"/>
     <link type="seealso" xref="convertSVG"/>
-    <desc>São suportados arquivos PDF, PostScript e muitos outros.</desc>
+    <desc>Há suporte a PDF, PostScript e muitos outros.</desc>
 
     <revision pkgversion="3.14" date="2013-06-15" status="final"/>
     <credit type="author">
@@ -47,21 +47,21 @@
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2017, 2018</mal:years>
+      <mal:name>Isaac Ferreira Filho</mal:name>
+      <mal:email>isaacmob@riseup.net</mal:email>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Isaac Ferreira Filho</mal:name>
-      <mal:email>isaacmob@riseup.net</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
 <title>Formatos de arquivo suportados</title>
 
-<p>O <app>Visualizador de Documentos</app> suporta os seguintes formatos de arquivo:</p>
+<p>O <app>Visualizador de Documentos</app> possui suporte os seguintes formatos de arquivo:</p>
 <list>
  <item><p>Comic Book Archive (.cbr and .cbz)</p></item>
  <item><p>Arquivos no formato “Device Independent” (.dvi)</p></item>

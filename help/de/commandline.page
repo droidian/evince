@@ -28,7 +28,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@gmail.com</mal:email>
-      <mal:years>2011, 2014-2015, 2018</mal:years>
+      <mal:years>2011, 2014-2015, 2018,2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -62,10 +62,7 @@
     <title>Ein Dokument auf einer bestimmten Seite öffnen</title>
     <p>Sie können mit dem Schalter <cmd>--page-label</cmd> ein Dokument auf einer bestimmten Seite öffnen. Wenn Sie beispielsweise die Seite 3 eines Dokuments öffnen wollen, geben Sie Folgendes ein:</p>
     <screen>evince --page-label=3 file.pdf</screen>
-    <p>
-    The page label should be in the same format as the page number displayed in
-    the <app>Document Viewer</app> header bar.
-    </p>
+    <p>Die Seitenbezeichnung sollte im gleichen Format sein wie die in der Titelleiste angezeigte des <app>Dokumentenbetrachters</app> angezeigte Seitennummer.</p>
 </section>
 <section id="fullsreen">
     <title>Ein Dokument im Vollbildmodus öffnen</title>

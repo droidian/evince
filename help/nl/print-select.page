@@ -26,7 +26,7 @@
 
 <p>Om alleen bepaalde pagina's van het document af te drukken:</p>
 <steps>
- <item><p>Klik op <guiseq><gui>Bestand</gui><gui>Afdrukken</gui></guiseq></p></item>
+ <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
  <item><p>In het tabblad <gui>Algemeen</gui> in het venster Afdrukken: kies <gui>Pagina's</gui> vanuit de sectie <gui>Bereik</gui>.</p></item>
 <item><p>Typ de paginanummers die u wilt afdrukken in het tekstvak, gescheiden door komma's. Gebruik een streepje om een bereik van pagina's aan te geven.</p></item>
 </steps>

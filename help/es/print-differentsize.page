@@ -40,7 +40,7 @@
 
   <steps>
     <item>
-      <p>Abra el menú en la parte superior derecha de la ventana y elija <gui style="menuitem">Imprimir…</gui>.</p>
+      <p>Pulse el botón de menú en la esquina superior derecha de la ventana y pulse el botón <gui style="button">Imprimir</gui>.</p>
     </item>
     <item>
       <p>Seleccione la pestaña <gui>Configuración de página</gui>.</p>

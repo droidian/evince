@@ -13,15 +13,14 @@
 # Ryan LORTIE <desrt@desrt.ca>, 2013.
 # Baptiste DARTHENAY <baptiste+ecrevisse@darthenay.fr>, 2014.
 # Daniel PUENTES <blatberk@openmailbox.org>, 2015.
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2010, 2011, 2012, 2014, 2015, 2018, 2019.
 # Carmen Bianca BAKKER <carmen@carmenbianca.eu>, 2018.
-# Tirifto <tirifto@posteo.cz>, 2019.
-# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2010-2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: evince\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/evince/issues\n"
-"POT-Creation-Date: 2019-03-08 06:07+0000\n"
-"PO-Revision-Date: 2019-03-10 20:43+0200\n"
+"POT-Creation-Date: 2019-02-10 22:01+0000\n"
+"PO-Revision-Date: 2019-02-24 13:31+0200\n"
 "Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
 "Language-Team: Esperanto <gnome-eo-list@gnome.org>\n"
 "Language: eo\n"
@@ -34,7 +33,7 @@ msgstr ""
 
 #: backend/comics/comics-document.c:163 backend/comics/comics-document.c:187
 msgid "File is corrupted"
-msgstr "Dosiero estas difektita"
+msgstr "Dosiero estas damaĝita"
 
 #: backend/comics/comics-document.c:228
 msgid "Archive is encrypted"
@@ -51,14 +50,14 @@ msgstr "Neniu dosiero en arĥivo"
 #: backend/comics/comics-document.c:276
 #, c-format
 msgid "Not a comic book MIME type: %s"
-msgstr "Ne estas MIME-tipo de bildrakonto: %s"
+msgstr "Ne estas MIME-tipo de komikso: %s"
 
 #: backend/comics/comics-document.c:283
 msgid ""
 "libarchive lacks support for this comic book’s compression, please contact "
 "your distributor"
 msgstr ""
-"Mankas subteno por la densigo de ĉi tiu bildrakonto en libarchive; bonvolu "
+"Mankas subteno por la densigo de ĉi tiu komikso en libarchive. Bonvolu "
 "kontakti vian distribuanton"
 
 #: backend/comics/comics-document.c:323
@@ -68,11 +67,11 @@ msgstr "Ne eblas atingi lokan vojon por arĥivo"
 #: backend/comics/comicsdocument.evince-backend.desktop.in.in:4
 #: backend/comics/evince-comicsdocument.metainfo.xml.in.in:5
 msgid "Comic Books"
-msgstr "Bildrakontoj"
+msgstr "Komikso"
 
 #: backend/comics/evince-comicsdocument.metainfo.xml.in.in:6
 msgid "Adds support for reading comic books"
-msgstr "Aldonas subtenon por legado de bildrakontoj"
+msgstr "Aldonas subtenon por legi komiksojn"
 
 #: backend/djvu/djvu-document.c:179
 msgid "DjVu document has incorrect format"
@@ -93,11 +92,11 @@ msgstr "DjVu-dokumentoj"
 
 #: backend/djvu/evince-djvudocument.metainfo.xml.in.in:6
 msgid "Adds support for reading DjVu documents"
-msgstr "Aldonas subtenon por legado de DjVu-dokumentoj"
+msgstr "Aldonas subtenon por legi DjVu-dokumentojn"
 
 #: backend/dvi/dvi-document.c:110
 msgid "DVI document has incorrect format"
-msgstr "La DVI-dokumento havas malĝustan strukturon"
+msgstr "La DVI-dokumento havas nekorektan strukturon"
 
 #: backend/dvi/dvidocument.evince-backend.desktop.in.in:4
 #: backend/dvi/evince-dvidocument.metainfo.xml.in.in:5
@@ -106,7 +105,7 @@ msgstr "DVI-dokumentoj"
 
 #: backend/dvi/evince-dvidocument.metainfo.xml.in.in:6
 msgid "Adds support for reading DVI documents"
-msgstr "Aldonas subtenon por legado de DVI-dokumentoj"
+msgstr "Aldonas subtenon por legi DVI-dokumentojn"
 
 #: backend/pdf/evince-pdfdocument.metainfo.xml.in.in:5
 #: backend/pdf/pdfdocument.evince-backend.desktop.in.in:5
@@ -115,7 +114,7 @@ msgstr "PDF-dokumentoj"
 
 #: backend/pdf/evince-pdfdocument.metainfo.xml.in.in:6
 msgid "Adds support for reading PDF Documents"
-msgstr "Aldonas subtenon por legado de PDF-dokumentoj"
+msgstr "Aldonas subtenon por legi PDF-dokumentojn"
 
 #: backend/pdf/ev-poppler.cc:917
 msgid "This work is in the Public Domain"
@@ -161,7 +160,7 @@ msgstr "Trutajpa (CID)"
 
 #: backend/pdf/ev-poppler.cc:1330
 msgid "Unknown font type"
-msgstr "Nekonata speco de tiparo"
+msgstr "Nekonata tipo de tiparo"
 
 #: backend/pdf/ev-poppler.cc:1374
 msgid ""
@@ -169,10 +168,10 @@ msgid ""
 "14 fonts. If the substitute fonts selected by fontconfig are not the same as "
 "the fonts used to create the PDF, the rendering may not be correct."
 msgstr ""
-"Ĉi dokumento enhavas neenkorpigitajn tiparojn kiuj ne estas inter la 14 "
-"normaj tiparoj de PDF. Se la anstataŭaj tiparoj elektitaj de fontconfig ne "
-"estas la samaj kiel la tiparoj uzitaj por krei la PDF-dosieron, tiam la "
-"bildigo eble ne estas ĝusta."
+"Ĉi dokumento enhavas neenkorpigitajn tiparojn kiu ne estas de la PDF normaj "
+"14 tiparoj. Se la anstataŭaj tiparoj elektitas de fontconfig ne estas la "
+"sama kiel la tiparoj uzitaj por krei na PDF, tiam la bildigo eble ne estas "
+"ĝusta."
 
 #: backend/pdf/ev-poppler.cc:1379
 msgid "All fonts are either standard or embedded."
@@ -216,7 +215,7 @@ msgstr "Ne enkorpigite"
 #.
 #: backend/pdf/ev-poppler.cc:1437
 msgid " (One of the Standard 14 Fonts)"
-msgstr " (Unu el la 14 normaj tiparoj)"
+msgstr " (Unu el la Normaj 14 Tiparoj)"
 
 #. Translators: string starting with a space
 #. * because it is directly appended to the font
@@ -225,7 +224,7 @@ msgstr " (Unu el la 14 normaj tiparoj)"
 #.
 #: backend/pdf/ev-poppler.cc:1444
 msgid " (Not one of the Standard 14 Fonts)"
-msgstr " (Ne unu el la 14 normaj tiparoj)"
+msgstr " (Ne unu el la Normaj 14 Tiparoj)"
 
 #. Translators: string is a concatenation of previous
 #. * translated strings to indicate the fonts properties
@@ -275,11 +274,11 @@ msgstr ""
 #: backend/ps/evince-psdocument.metainfo.xml.in.in:5
 #: backend/ps/psdocument.evince-backend.desktop.in.in:5
 msgid "PostScript Documents"
-msgstr "PostSkriptaj dokumentoj"
+msgstr "PostSkripto-dokumentoj"
 
 #: backend/ps/evince-psdocument.metainfo.xml.in.in:6
 msgid "Adds support for reading PostScript documents"
-msgstr "Aldonas subtenon por legi PostSkriptajn dokumentojn"
+msgstr "Aldonas subtenon por legi PostScript-dokumentojn"
 
 #: backend/ps/ev-spectre.c:98
 #, c-format
@@ -385,12 +384,12 @@ msgstr "org.gnome.Evince"
 
 #: data/org.gnome.Evince.gschema.xml:14
 msgid "Override document restrictions"
-msgstr "Transpasi rajtlimigojn de dokumento"
+msgstr "Superskribi rajtlimigojn de dokumento"
 
 #: data/org.gnome.Evince.gschema.xml:15
 msgid "Override document restrictions, like restriction to copy or to print."
 msgstr ""
-"Transpasi rajtlimigojn de dokumento, kiel rajtlimigon por kopii aŭ presi."
+"Superskribi rajtlimigojn de dokumento, kiel rajtlimigo por kopii aŭ presi."
 
 #: data/org.gnome.Evince.gschema.xml:19
 msgid "Automatically reload the document"
@@ -410,7 +409,7 @@ msgstr "La URI de la dosierujo laste uzita por konservi bildon"
 
 #: data/org.gnome.Evince.gschema.xml:32
 msgid "Page cache size in MiB"
-msgstr "Paĝa kaŝmemora grando en MiB"
+msgstr "Paĝo kaŝmemora grando en MiB"
 
 #: data/org.gnome.Evince.gschema.xml:33
 msgid ""
@@ -433,11 +432,11 @@ msgstr "Permesi al ligiloj ŝanĝi la zomnivelon."
 
 #: data/org.gnome.Evince-previewer.desktop.in.in:3
 msgid "Print Preview"
-msgstr "Antaŭrigardo de la presotaĵo"
+msgstr "Aspekto de la presotaĵo"
 
 #: data/org.gnome.Evince-previewer.desktop.in.in:4
 msgid "Preview before printing"
-msgstr "Antaŭrigardi antaŭ presi"
+msgstr "Aspekti antaŭ presi"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.Evince-previewer.desktop.in.in:11
@@ -506,11 +505,11 @@ msgstr "Paĝo %s"
 
 #: libmisc/ev-search-box.c:112
 msgid "Not found, click to change search options"
-msgstr "Ne trovita, alklaku por ŝanĝi serĉajn elekteblojn"
+msgstr "Ne trovita, alklaku por ŝanĝi serĉajn opciojn"
 
 #: libmisc/ev-search-box.c:186 libmisc/ev-search-box.c:242
 msgid "Search options"
-msgstr "Serĉaj elektebloj"
+msgstr "Serĉaj opcioj"
 
 #: libmisc/ev-search-box.c:318
 msgid "_Whole Words Only"
@@ -546,26 +545,26 @@ msgstr "Malsukcesis presi la paĝon %d: %s"
 #. Initial state
 #: libview/ev-print-operation.c:350
 msgid "Preparing preview…"
-msgstr "Pretiganta antaŭvidon…"
+msgstr "Pretiganta por antaŭvido…"
 
 #: libview/ev-print-operation.c:352 libview/ev-print-operation.c:362
 msgid "Finishing…"
-msgstr "Finanta…"
+msgstr "Finigante…"
 
 #: libview/ev-print-operation.c:354
 #, c-format
 msgid "Generating preview: page %d of %d"
-msgstr "Faranta antaŭvidon: %d el %d"
+msgstr "Farante antaŭvidon: %d el %d"
 
 #. Initial state
 #: libview/ev-print-operation.c:360
 msgid "Preparing to print…"
-msgstr "Pretiganta preson…"
+msgstr "Pretiganta por presi…"
 
 #: libview/ev-print-operation.c:364
 #, c-format
 msgid "Printing page %d of %d…"
-msgstr "Presanta la paĝon %d el %d…"
+msgstr "Presante la paĝon %d el %d…"
 
 #: libview/ev-print-operation.c:1214
 msgid "Requested format is not supported by this printer."
@@ -746,7 +745,7 @@ msgid ""
 "SyncTeX), and Comic Books archives (CBR, CBT, CBZ, CB7)."
 msgstr ""
 "Evinco subtenas la sekvajn dosierformojn: PDF, PS, EPS, XPS, DjVu, TIFF, DVI "
-"(kun SyncTeX), kaj bildrakontaj dosieroj (CBR, CBT, CBZ, CB7)."
+"(kun SyncTeX), kaj komiksaj dosieroj (CBR, CBT, CBZ, CB7)."
 
 #: org.gnome.Evince.appdata.xml.in:35
 msgid "A clear, simple UI"
@@ -770,7 +769,7 @@ msgstr "DOSIERO"
 
 #: previewer/ev-previewer.c:188 previewer/ev-previewer.c:222
 msgid "GNOME Document Previewer"
-msgstr "Dokumenta antaŭrigardilo de GNOME"
+msgstr "Dokument-antaŭrigardilo de GNOMEo"
 
 #: previewer/ev-previewer-toolbar.c:112 shell/ev-toolbar.c:217
 msgid "Select page or search in the index"
@@ -790,6 +789,7 @@ msgid "The selected printer “%s” could not be found"
 msgstr "La elektita presilo “%s” ne povas esti trovita"
 
 #: previewer/previewer.ui:7
+#| msgid "Print"
 msgid "_Print"
 msgstr "_Presi"
 
@@ -910,7 +910,7 @@ msgstr "%s, Pejzaĝo (%s)"
 
 #: shell/ev-annotation-properties-dialog.c:97
 msgid "Icon:"
-msgstr "Bildsimbolo:"
+msgstr "Piktogramo:"
 
 #: shell/ev-annotation-properties-dialog.c:103
 msgid "Note"
@@ -950,7 +950,7 @@ msgstr "Cirklo"
 
 #: shell/ev-annotation-properties-dialog.c:112
 msgid "Unknown"
-msgstr "Nekonata"
+msgstr "Nekonate"
 
 #: shell/ev-annotation-properties-dialog.c:123
 msgid "Markup type:"
@@ -990,7 +990,7 @@ msgstr "Koloro:"
 
 #: shell/ev-annotation-properties-dialog.c:192
 msgid "Opacity:"
-msgstr "Maltravidebleco:"
+msgstr "Opakeco:"
 
 #: shell/ev-annotation-properties-dialog.c:204
 msgid "Initial window state:"
@@ -1090,12 +1090,13 @@ msgid "_Help"
 msgstr "_Helpo"
 
 #: shell/evince-menus.ui:115
+#| msgid "Document Viewer"
 msgid "_About Document Viewer"
 msgstr "_Pri Dokumentmontrilo"
 
 #: shell/evince-menus.ui:146
 msgid "_Open Link"
-msgstr "Malfermi ligil_on"
+msgstr "Malfermi la ligil_on"
 
 #: shell/evince-menus.ui:151
 msgid "_Copy Link Address"
@@ -1226,6 +1227,7 @@ msgid "_Cancel"
 msgstr "_Nuligi"
 
 #: shell/ev-password-view.c:253
+#| msgid "_Unlock Document"
 msgid "_Unlock"
 msgstr "_Malŝlosi"
 
@@ -1376,7 +1378,7 @@ msgstr "Noti la dokumenton"
 
 #: shell/ev-toolbar.c:234 shell/ev-toolbar.c:235
 msgid "File options"
-msgstr "Dosieraj elektebloj"
+msgstr "Dosieraj opcioj"
 
 #: shell/ev-toolbar.c:254
 msgid "Select or set the zoom level of the document"
@@ -1411,7 +1413,7 @@ msgstr "Ŝargante dokumenton de “%s”"
 #: shell/ev-window.c:2031 shell/ev-window.c:2496 shell/ev-window.c:2853
 #: shell/ev-window.c:3570 shell/ev-window.c:3816
 msgid "C_ancel"
-msgstr "_Nuligi"
+msgstr "N_uligi"
 
 #: shell/ev-window.c:2181 shell/ev-window.c:2547
 #, c-format
@@ -1436,6 +1438,7 @@ msgid "Open Document"
 msgstr "Malfermi dokumenton"
 
 #: shell/ev-window.c:2764
+#| msgid "Open"
 msgid "_Open"
 msgstr "_Malfermi"
 
@@ -1479,6 +1482,7 @@ msgid "Save As…"
 msgstr "Konservi kiel…"
 
 #: shell/ev-window.c:3049 shell/ev-window.c:6879 shell/ev-window.c:7106
+#| msgid "_Save As…"
 msgid "_Save"
 msgstr "Kon_servi"
 
@@ -1516,6 +1520,7 @@ msgid "If you reload the document, changes will be permanently lost."
 msgstr "Se vi reŝargas la dokumenton, ŝanĝoj daŭre perdiĝos."
 
 #: shell/ev-window.c:3801
+#| msgid "No"
 msgid "_No"
 msgstr "_Ne"
 
@@ -1573,18 +1578,17 @@ msgstr "© 1996-2017 La aŭtoroj de Evinco"
 #: shell/ev-window.c:4057
 msgid "translator-credits"
 msgstr ""
-"Dominique PELLÉ <dominique.pelle@free.fr>\n"
-"Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
-"Denizo PRISKORN <tradukado@riseup.net>\n"
-"Daniel PUENTES <blatberk@openmailbox.org>\n"
-"Aisano <https://launchpad.net/~info-ais-sanmarino>\n"
-"Andreas SCHLAPSI <https://launchpad.net/~a-schlapsi>\n"
-"Michael MORONI <https://launchpad.net/~airon90>\n"
-"Serge LEBLANC <https://launchpad.net/~serge-leblanc>\n"
-"Sergio ALDANA <https://launchpad.net/~sangtrinkulo>\n"
-"William THEAKER <https://launchpad.net/~wsttrollboy>\n"
-"Carmen Bianca BAKKER <carmen@carmenbianca.eu>\n"
-"Tirifto <tirifto@posteo.cz>"
+"Dominique PELLÉ\n"
+"Kristjan SCHMIDT\n"
+"Denizo PRISKORN\n"
+"Daniel PUENTES\n"
+"Aisano\n"
+"Andreas SCHLAPSI\n"
+"Michael MORONI\n"
+"Serge LEBLANC\n"
+"Sergio ALDANA\n"
+"William THEAKER\n"
+"Carmen Bianca BAKKER <carmen@carmenbianca.eu>"
 
 #: shell/ev-window.c:4605
 msgid "Running in presentation mode"

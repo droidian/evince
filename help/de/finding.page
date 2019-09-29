@@ -35,7 +35,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@gmail.com</mal:email>
-      <mal:years>2011, 2014-2015, 2018</mal:years>
+      <mal:years>2011, 2014-2015, 2018,2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -78,10 +78,7 @@
     <p>Um Wörter nach Groß-/Kleinschreibung oder Vollständigkeit zu filtern, können Sie im Suchfeld rechtsklicken und <gui>Groß-/Kleinschreibung beachten</gui> sowie <gui>Nur ganze Wörter</gui> auswählen.</p>
   </note>
 
-  <p>If the word or phrase that you searched for is not found in the document,
-  you will see <media type="image" src="figures/search-not-found.png"/> in the
-  search box. However, if it appears in the document at least once, you will be
-  shown how many times the search result appears on the current page.</p>
+  <p>Falls das Wort oder der Suchbegriff im gesamten Dokument nicht vorkommen, so erscheint <media type="image" src="figures/search-not-found.png"/> im Suchfeld. Wenn es jedoch mindestens einmal vorkommt, dann wird die Anzahl der Suchtreffer auf der aktuellen Seite angezeigt.</p>
 
   <note>
     <p>Sie können nur PDF-Dokumente durchsuchen. Einige PDF-Dokumente können nicht durchsucht werden, weil der Text tatsächlich als digitales Bild im Dokument hinterlegt ist.</p>

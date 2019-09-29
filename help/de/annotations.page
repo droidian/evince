@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="annotations" xml:lang="de">
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="guide" style="task" id="annotations" xml:lang="de">
 
   <info>
     <link type="guide" xref="index#annotations"/>
@@ -29,7 +29,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@gmail.com</mal:email>
-      <mal:years>2011, 2014-2015, 2018</mal:years>
+      <mal:years>2011, 2014-2015, 2018,2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -59,15 +59,11 @@
 <p>So erstellen Sie eine Anmerkung:</p>
 <steps>
  <item>
-  <p>
-    Select <gui>Annotate the document</gui> from the header bar.
-  </p>
-    <media type="image" src="figures/add-text-annotation.png"/>
+  <p>Wählen Sie <gui>Das Dokument mit Anmerkungen versehen</gui> in der Titelleiste aus.</p>
+    <media type="image" src="figures/add-text-annotation.png" its:translate="no"/>
     <list>
      <item>
-      <p>
-        You should now see <gui>Add text annotation</gui> and <gui>Add highlight annotation</gui> buttons below the header bar.
-      </p>
+      <p>Sie sehen nun die Knöpfe <gui>Notiztext</gui> und <gui>Texthervorhebung</gui> unterhalb der Titelleiste.</p>
        <media type="image" src="figures/list-add-tabs.png"/>
      </item>
     </list>

@@ -30,7 +30,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Anders Jonsson</mal:name>
       <mal:email>anders.jonsson@norsjovallen.se</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   </info>
 
@@ -41,7 +41,7 @@
  <p>Skrivare skriver vanligtvis ut den första sidan först, och den sista sidan sist så sidor kommer ut i omvänd ordning när du tar dem.</p>
  <p>För att vända på ordningen:</p>
  <steps>
-  <item><p><guiseq><gui>Arkiv</gui><gui>Skriv ut</gui></guiseq></p></item>
+  <item><p>Tryck på menyknappen i fönstrets övre högra hörn och tryck på knappen <gui style="button">Skriv ut</gui>.</p></item>
   <item><p>I fliken <gui>Allmänt</gui> i fönstret Utskrift under <em>Kopior</em>, kontrollera <gui>Omvänd</gui>. Den sista sidan kommer att skrivas ut först och så vidare.</p></item>
  </steps>
 </section>
@@ -52,7 +52,7 @@
 
  <p>För att sortera:</p>
  <steps>
-  <item><p>Klicka på <guiseq><gui>Arkiv</gui><gui>Skriv ut</gui></guiseq></p></item>
+  <item><p>Tryck på menyknappen i fönstrets övre högra hörn och tryck på knappen <gui style="button">Skriv ut</gui>.</p></item>
   <item><p>I fliken <gui>Allmänt</gui> i fönstret Skriv ut, under <em>Kopior</em>, kryssa i <gui>Sortera</gui>.</p></item>
  </steps>
  <media type="image" src="figures/reverse-collate.png"/>

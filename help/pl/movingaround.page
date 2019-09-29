@@ -22,13 +22,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -87,13 +87,10 @@
       <p>Aby przejść do konkretnej strony:</p>
       <list>
         <item>
-          <p>Type a page number in <gui style="input">Select Page</gui> on the
-          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
+          <p>Wpisz numer strony w polu <gui style="input">Wybór strony</gui> na <link xref="headerbar">pasku nagłówka</link> i naciśnij klawisz <key>Enter</key>.</p>
         </item>
         <item>
-          <p>If you want to see the previously visited pages press
-          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
-          the header bar.</p>
+          <p>Aby wyświetlić poprzednio odwiedzone strony, kliknij przyciski <gui style="button">&lt;</gui> lub <gui style="button">&gt;</gui> na pasku nagłówka.</p>
         </item>
         <item>
           <p>Aby przejść na początek lub koniec dokumentu:</p>
@@ -154,7 +151,7 @@
     </item>
     <item>
       <p>wybrać procent powiększenia z rozwijanego menu nad oknem.</p>
-      <media type="image" src="figures/zoom.png"/>
+      <media type="image" src="figures/zoom.png" its:translate="no"/>
     </item>
   </list>
 

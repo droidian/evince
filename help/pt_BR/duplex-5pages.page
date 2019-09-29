@@ -41,22 +41,22 @@
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2017, 2018</mal:years>
+      <mal:name>Isaac Ferreira Filho</mal:name>
+      <mal:email>isaacmob@riseup.net</mal:email>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Isaac Ferreira Filho</mal:name>
-      <mal:email>isaacmob@riseup.net</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
 <title>Livreto de 5 páginas</title>
 <steps>
  <item>
-  <p>Clique no menu de <gui>Opções do arquivo</gui> no canto superior direito da janela e selecione <gui>Imprimir</gui>.</p>
+  <p>Pressione o botão de menu no canto superior direito da janela e pressione o botão <gui style="button">Imprimir</gui>.</p>
  </item>
 
 
@@ -78,7 +78,7 @@
   <p>Quando terminar a impressão, pegue o papel e coloque-o de volta, virado, na impressora, tomando o cuidado de orientá-lo corretamente (a página 2 deverá ser impressa atrás da 1).</p>
  </item>
  <item>
-  <p>Clique no menu de <gui>Opções do arquivo</gui> no canto superior direito da janela e selecione <gui>Imprimir</gui> novamente.</p>
+  <p>Pressione o botão de menu no canto superior direito da janela e pressione o botão <gui style="button">Imprimir</gui>.</p>
   <p>Escolha a aba <gui>Geral</gui>.</p>
   <p>Em <em>Intervalo</em>, selecione <gui>Páginas</gui> e entre com: 2</p>
  </item>
@@ -89,20 +89,22 @@
  </item>
 
  <item>
-  <p>Para imprimir a página 3, use a ação <gui>Imprimir</gui> novamente.</p>
+  <p>Para imprimir a página 3, pressione o botão de menu no canto superior direito da janela e pressione o <gui style="button">Imprimir</gui>.</p>
   <p>Na aba <gui>Geral</gui>, selecione <gui>Páginas</gui> e entre com número da página.</p>
  </item>
  <item>
- <p>Na aba <gui>Configurar página</gui>, selecione <gui>Direita para esquerda</gui> na opção <gui>Ordem das páginas</gui>.</p>
+ <p>Escolha a aba <gui>Configurar página</gui>.</p>
+ <p>Na opção <gui>Ordem das páginas</gui>, selecione <gui>Direita para esquerda</gui>.</p>
 <p>Clique em <gui>Imprimir</gui>.</p>
  </item>
  <item>
  <p>Quando terminar a impressão da página 3, pegue o papel e coloque-o de volta, virado, na impressora, tomando o cuidado de orientá-lo corretamente (as páginas 4 e 9 deverão ser impressas, sendo que a página 4 deve ficar atrás da 3).</p>
  </item>
  <item>
-  <p>Clique no menu de <gui>Opções do arquivo</gui> no canto superior direito da janela e selecione <gui>Imprimir</gui>.</p>
+  <p>Pressione o botão de menu no canto superior direito da janela e pressione o botão <gui style="button">Imprimir</gui>.</p>
   <p>Na aba <gui>Geral</gui>, selecione <gui>Páginas</gui> e entre com os valores 4, 9.</p>
-  <p>Na aba <gui>Configurar página</gui>, selecione <gui>Esquerda para direita</gui> na opção <gui>Ordem das páginas</gui>.</p>
+  <p>Escolha a aba <gui>Configurar página</gui>.</p>
+  <p>Na opção <gui>Ordem das páginas</gui>, selecione <gui>Esquerda para direita</gui>.</p>
  <p>Clique em <gui>Imprimir</gui>.</p>
  </item>
 </steps>

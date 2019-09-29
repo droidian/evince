@@ -26,7 +26,9 @@
 <title>Pasquín de 10 páxinas</title>
 <steps>
  <item>
-  <p>Prema <guiseq><gui>Ficheiro</gui><gui>Imprimir</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
 
  <item>
@@ -37,7 +39,9 @@
  </item>
  <item>
   <p>Seleccione a lapela <gui>Configuración da páxina</gui>.</p>
-  <p>Baixo <em>Distribución</em>, no menú <gui>Páxinas por cara</gui> seleccione <gui>2</gui>.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> option, select <gui>Short Edge (Flip)</gui>.
+  </p>
   <p>Ao lado de <gui>Contrasinal</gui>, prema <gui>Cambiar</gui>.</p>
   <p>No menú<gui>Ordenación de páxinas</gui>, elixa <gui>De esquerda a dereita</gui>.</p>
   <p>Prema <gui>Imprimir</gui>.</p>
@@ -49,7 +53,9 @@
  <p>Cando se impriman as páxinas colla a páxina 2 e volva a colocala na impresora, tendo coidado de orientala correctamente (a páxina 1 imprimirase na outra cara).</p>
  </item>
  <item>
-  <p>Prema <guiseq><gui>Ficheiro</gui><gui>Imprimir</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Seleccione a lapela <gui>Xeral</gui>.</p>

@@ -56,7 +56,9 @@
 <title>8-σέλιδο φυλλάδιο</title>
 <steps>
  <item>
-  <p>Κάντε κλικ στο <guiseq><gui>Αρχείο</gui><gui>Εκτύπωση</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
 
  <item>
@@ -67,7 +69,9 @@
  </item>
  <item>
   <p>Επιλέξτε την καρτέλα <gui>Διαμόρφωση σελίδας</gui>.</p>
-  <p>Στη <em>Διάταξη</em>, στο μενού <gui>Διπλή όψη</gui>, επιλέξτε <gui>Βραχύ άκρο (αναστροφή)</gui>.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>Short Edge (Flip)</gui>.
+  </p>
   <p>Στην επιλογή <gui>Σελίδες ανά φύλλο</gui>, επιλέξτε <gui>2</gui>.</p>
   <p>Στο μενού <gui>Σειρά σελίδων</gui>, επιλέξτε <gui>Αριστερά προς τα δεξιά</gui>.</p>
   <p>Κλικ <gui>Εκτύπωση</gui>.</p>

@@ -33,7 +33,9 @@
 
 <steps>
  <item>
-  <p>Spiediet <guiseq><gui>Datne</gui><gui>Drukāt</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
 
 
@@ -45,14 +47,18 @@
  </item>
  <item>
   <p>Izvēlies <gui>Lappuses iestatīšana</gui> cilni.</p>
-  <p><em>Izkārtojums</em> sadaļā, <gui>Divpusējs</gui> opcijā izvēlies <gui>Īsās malas iesējums</gui>.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> option, select <gui>Short Edge (Flip)</gui>.
+  </p>
   <p><gui>Lappuses vienā pusē</gui> opcijā izvēlieties <gui>2</gui>.</p>
   <p>Izvēlnē <gui>Lappušu secība</gui> izvēlieties <gui>No labās uz kreiso</gui>.</p>
  <p>Spied <gui>Drukāt</gui>.</p>
  </item>
 
  <item>
-  <p>Spiediet <guiseq><gui>Datne</gui><gui>Drukāt</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Izvēlies <gui>Vispārīgi</gui> cilni.</p>
@@ -62,7 +68,7 @@
 
 <item>
   <p>Izvēlies <gui>Lappuses iestatīšana</gui> cilni.</p>
-  <p><gui>Lappušu secības</gui> izvēlnē nomainiet opciju uz <gui>No kreisās uz labo</gui>.</p>
+  <p><gui>Lappušu secība</gui> izvēlnē izvēlies <gui>No kreisās uz labo</gui>.</p>
   <p>Spied <gui>Drukāt</gui>.</p>
  </item>
 </steps>

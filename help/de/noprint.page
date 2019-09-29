@@ -24,7 +24,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@gmail.com</mal:email>
-      <mal:years>2011, 2014-2015, 2018</mal:years>
+      <mal:years>2011, 2014-2015, 2018,2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -64,17 +64,16 @@
   <p>So prüfen Sie, ob Ihr Drucker ordnungsgemäß drucken kann:</p>
   <steps>
     <item>
-      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
-      overview and start typing <gui>Settings</gui>.</p>
+      <p>Öffnen Sie die <gui href="help:gnome-help/shell-introduction#activities">Aktivitäten</gui>-Übersicht und beginnen Sie mit der Eingabe von <gui>Einstellungen</gui>.</p>
     </item>
     <item>
-      <p>Click on <gui>Settings</gui>.</p>
+      <p>Klicken Sie auf <gui>Einstellungen</gui>.</p>
     </item>
     <item>
-      <p>Click <gui>Devices</gui> in the sidebar.</p>
+      <p>Klicken Sie auf <gui>Geräte</gui> in der Seitenleiste.</p>
     </item>
     <item>
-      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+      <p>Klicken Sie auf <gui>Drucker</gui> in der Seitenleiste, um das Panel zu öffnen.</p>
     </item>
    <item><p>Klicken Sie auf Ihren Drucker in der Liste.</p></item>
    <item><p>Klicken Sie auf <gui>Testseite drucken</gui>. Eine Seite sollte nun ausgedruckt werden.</p>

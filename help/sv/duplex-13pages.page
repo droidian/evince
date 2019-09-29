@@ -31,14 +31,14 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Anders Jonsson</mal:name>
       <mal:email>anders.jonsson@norsjovallen.se</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   </info>
 
 <title>13-sidors häfte</title>
 <steps>
  <item>
-  <p>Klicka på <guiseq><gui>Arkiv</gui><gui>Skriv ut</gui></guiseq>.</p>
+  <p>Tryck på menyknappen i fönstrets övre högra hörn och tryck på knappen <gui style="button">Skriv ut</gui>.</p>
  </item>
  <item>
   <p>Välj fliken <gui>Allmänt</gui>.</p>
@@ -48,7 +48,7 @@
 
  <item>
   <p>Välj fliken <gui>Sidinställningar</gui>.</p>
-  <p>Under <em>Layout</em> i menyn <gui>Tvåsidig</gui>, välj <gui>Kort kant (Vänd)</gui>.</p>
+  <p>Under <em>Layout</em> i menyn <gui>Tvåsidigt</gui>, välj <gui>Kort kant (Vänd)</gui>.</p>
   <p>I alternativet <gui>Sidor per blad</gui> välj <gui>2</gui>.</p>
 <p>I menyn <gui>Sidordning</gui>, välj <gui>Höger till vänster</gui>.</p>
 <p>Klicka på <gui>Skriv ut</gui>.</p>
@@ -58,32 +58,36 @@
   <p>När sidan har skrivits ut ta pappret och placera det tillbaka i skrivaren och kontrollera att du lägger i det korrekt (sida 2 kommer att skrivas ut på den andra sidan).</p>
  </item>
  <item>
-  <p>Klicka på <guiseq><gui>Arkiv</gui><gui>Skriv ut</gui></guiseq> igen.</p>
-<p>Välj fliken Allmänt.</p>
+  <p>Tryck på menyknappen i fönstrets övre högra hörn och tryck på knappen <gui style="button">Skriv ut</gui>.</p>
+<p>Välj fliken <gui>Allmänt</gui>.</p>
 <p>Under <em>Intervall</em>, välj <gui>Sidor</gui> och skriv: 2</p>
  </item>
  <item>
-  <p>Välj fliken <gui>Sidinställningar</gui> och i menyn <gui>Sidordning</gui> välj <gui>Vänster till höger</gui>.</p>
+  <p>Välj fliken <gui>Sidinställningar</gui>.</p>
+  <p>I menyn <gui>Sidordning</gui>, välj <gui>Vänster till höger</gui>.</p>
 <p>Klicka på <gui>Skriv ut</gui>.</p>
  </item>
  <item>
-  <p>För att skriva ut sida 3, klicka på <guiseq><gui>Arkiv</gui><gui>Skriv ut</gui></guiseq> igen.</p>
+  <p>För att skriva ut sida 3, tryck på menyknappen i fönstrets övre högra hörn och tryck på knappen <gui style="button">Skriv ut</gui>.</p>
 <p>I fliken <gui>Allmänt</gui>, mata in 3 under <gui>Sidor</gui>.</p>
-<p>I fliken <gui>Sidinställningar</gui>, ställ in <gui>Sidordning</gui> på <gui>Höger till vänster</gui>.</p>
+<p>Välj fliken <gui>Sidinställningar</gui>.</p>
+<p>I menyn <gui>Sidordning</gui>, välj <gui>Höger till vänster</gui>.</p>
 <p>Klicka på <gui>Skriv ut</gui>.</p>
  </item>
  <item>
   <p>När sidan 3 har skrivits ut, ta pappret och placera det tillbaka i skrivaren och kontrollera att du lägger i det korrekt (sidorna 4 och 13 kommer att skrivas ut på den andra sidan).</p>
  </item>
  <item>
-  <p>Klicka på <guiseq><gui>Arkiv</gui><gui>Skriv ut</gui></guiseq> igen.</p>
+  <p>Tryck på menyknappen i fönstrets övre högra hörn och tryck på knappen <gui style="button">Skriv ut</gui>.</p>
 <p>I fliken <gui>Allmänt</gui> mata in sidorna 4, 13 under <gui>Sidor</gui>.</p>
-<p>I fliken <gui>Sidinställningar</gui> ställ in <gui>Sidordning</gui> på <gui>Vänster till höger</gui>.</p>
+<p>Välj fliken <gui>Sidinställningar</gui>.</p>
+<p>I menyn <gui>Sidordning</gui>, välj <gui>Vänster till höger</gui>.</p>
 <p>Klicka på <gui>Skriv ut</gui>.</p>
  </item>
  <item>
-  <p>Klicka på <guiseq><gui>Arkiv</gui><gui>Skriv ut</gui></guiseq> igen.</p>
-  <p>Mata in sidorna 8, 9, 10, 7, 6, 11, 12, 5 i menyn <gui>Sidor</gui> och ställ in <gui>Sidordning</gui> på <gui>Vänster till höger</gui>.</p>
+  <p>Tryck på menyknappen i fönstrets övre högra hörn och tryck på knappen <gui style="button">Skriv ut</gui>.</p>
+  <p>Mata in sidorna 8, 9, 10, 7, 6, 11, 12, 5 i menyn <gui>Sidor</gui>.</p>
+  <p>I menyn <gui>Sidordning</gui>, välj <gui>Vänster till höger</gui>.</p>
   <p>Klicka på <gui>Skriv ut</gui>.</p>
  </item>
 </steps>

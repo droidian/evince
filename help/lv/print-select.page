@@ -32,7 +32,7 @@
 
 <p>Lai drukātu tikai noteiktas dokumenta lappuses:</p>
 <steps>
- <item><p>Spiediet <guiseq><gui>Datne</gui><gui>Drukāt</gui></guiseq></p></item>
+ <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
  <item><p><gui>Galvenā</gui> cilnē, drukāšanas logā izvēlies <gui>Lappuses</gui> no sadaļas <gui>Drukāt</gui>.</p></item>
 <item><p>Teksta laukā ievadiet lappuses, kuras vēlaties drukāt, atdalot ar komatiem. Izmantojiet domuzīmi, lai norādītu lappušu diapazonu.</p></item>
 </steps>

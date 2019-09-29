@@ -29,7 +29,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Anders Jonsson</mal:name>
       <mal:email>anders.jonsson@norsjovallen.se</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   </info>
 
@@ -38,7 +38,7 @@
 
 <p>För att bara skriva ut vissa sidor från dokumentet:</p>
 <steps>
- <item><p>Klicka på <guiseq><gui>Arkiv</gui><gui>Skriv ut</gui></guiseq></p></item>
+ <item><p>Tryck på menyknappen i fönstrets övre högra hörn och tryck på knappen <gui style="button">Skriv ut</gui>.</p></item>
  <item><p>I fliken <gui>Allmänt</gui> i fönstret Skriv ut, välj <gui>Sidor</gui> från avsnittet <gui>Intervall</gui>.</p></item>
 <item><p>Skriv numret på sidorna som du vill skriva ut i textrutan, separerade med kommatecken. Använd bindestreck för att beteckna ett intervall av sidor.</p></item>
 </steps>

@@ -56,7 +56,7 @@
 
 <p>Για να εκτυπώσετε συγκεκριμένες μόνο σελίδες από το έγγραφο:</p>
 <steps>
- <item><p>Κάντε κλικ στο <guiseq><gui>Αρχείο</gui><gui>Εκτύπωση</gui></guiseq></p></item>
+ <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
  <item><p>Στην καρτέλα <gui>Γενικά</gui> στο παράθυρο εκτύπωση επιλέξτε <gui>Σελίδες</gui> από την ενότητα <gui>Εύρος</gui>.</p></item>
 <item><p>Πληκτρολογήστε τους αριθμούς των σελίδων, που θέλετε να εκτυπώσετε, στο πεδίο κειμένου, διαχωρισμένους με κόμματα. Χρησιμοποιήστε μια παύλα για να δηλώσετε εύρος σελίδων.</p></item>
 </steps>

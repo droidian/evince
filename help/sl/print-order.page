@@ -23,7 +23,7 @@
  <p>Tiskalniki običajno najprej natisnejo prvo stran in nazadnje zadnjo stran zato bodo strani  v obratnem vrstnem redu, ko jih poberete s tiskalnika.</p>
  <p>Za obratni vrstni red:</p>
  <steps>
-  <item><p><guiseq><gui>Datoteka</gui><gui>Natisni</gui></guiseq></p></item>
+  <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
   <item><p>V zavihku <gui>Splošno</gui> okna tiskanja pod <em>Kopije</em> izberite <gui>Obratno</gui>. Najprej bo natisnjena zadnja stran in tako naprej.</p></item>
  </steps>
 </section>
@@ -34,7 +34,7 @@
 
  <p>Za zbiranje:</p>
  <steps>
-  <item><p>Kliknite <guiseq><gui>Datoteka</gui><gui>Natisni</gui></guiseq></p></item>
+  <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
   <item><p>V zavihku <gui>Splošno</gui> okna tiskanje pod <em>Kopije</em> izberite <gui>Zberi</gui>.</p></item>
  </steps>
  <media type="image" src="figures/reverse-collate.png"/>

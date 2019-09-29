@@ -22,7 +22,7 @@
 <steps>
  <item>
   <p>
-   Click <guiseq><gui>File</gui><gui>Print</gui></guiseq>.
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
   </p>
  </item>
 
@@ -44,7 +44,7 @@
    Choose the <gui>Page Setup</gui> tab.
   </p>
   <p>
-   Under <em>Layout</em>, in the <gui>Two-side</gui> option, select <gui>Short Edge (Flip)</gui>.
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> option, select <gui>Short Edge (Flip)</gui>.
   </p>
   <p>
    In the <gui>Pages per side</gui> option, select <gui>2</gui>.
@@ -59,7 +59,7 @@
 
  <item>
   <p>
-   Click <guiseq><gui>File</gui><gui>Print</gui></guiseq>.
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
   </p>
  </item>
  <item>
@@ -77,7 +77,7 @@
    Choose the <gui>Page Setup</gui> tab.
   </p>
   <p>
-   In the <gui>Page ordering</gui> menu, change the selection to <gui>Left to right</gui>.
+   In the <gui>Page ordering</gui> menu, select <gui>Left to right</gui>.
   </p>
   <p>
    Click <gui>Print</gui>.

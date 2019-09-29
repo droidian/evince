@@ -32,7 +32,9 @@
 <title>5 lappušu brošūra</title>
 <steps>
  <item>
-  <p>Spiediet <guiseq><gui>Datne</gui><gui>Drukāt</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
 
 
@@ -43,7 +45,9 @@
  </item>
  <item>
   <p>Izvēlies <gui>Lappuses iestatīšana</gui> cilni.</p>
-  <p><em>Izkārtojums</em> sadaļā, <gui>Divpusējs</gui> opcijā izvēlies <gui>Īsās malas iesējums</gui>.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> option, select <gui>Short Edge (Flip)</gui>.
+  </p>
  <p><gui>Lappuses vienā pusē</gui> opcijā izvēlieties <gui>2</gui>.</p>
   <p>Izvēlnē <gui>Lappušu secība</gui> izvēlieties <gui>No labās uz kreiso</gui>.</p>
   <p>Spied <gui>Drukāt</gui>.</p>
@@ -54,8 +58,10 @@
   <p>Kolīdz lapa ir izdrukāta, paņemiet lapu un ielieciet to atpakaļ printerī, pārliecinoties, ka ielikāt to pareizi (otrā lappuse tiks izdrukāta otrā pusē).</p>
  </item>
  <item>
-  <p>Atkal spiediet <guiseq><gui>Datne</gui><gui>Drukāt</gui></guiseq>.</p>
-  <p>Izvēlies „Vispārīgi“ cilni.</p>
+  <p>
+     Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
+  <p>Izvēlies <gui>Vispārīgi</gui> cilni.</p>
   <p>Sadaļā <em>Drukāt</em> izvēlieties <gui>Lappuses</gui> un ierakstiet: 2</p>
  </item>
  <item>
@@ -65,22 +71,28 @@
  </item>
 
  <item>
-  <p>Lai izdrukātu 3. lappusi, atkal spiediet <guiseq><gui>Datne</gui><gui>Drukāt</gui></guiseq>.</p>
+  <p>
+   To print page 3, press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
   <p>
     In the <gui>General</gui> tab enter the page number in the <gui>Pages</gui> selection.
   </p>
  </item>
  <item>
- <p>Cilnē <gui>Lappuses iestatīšana</gui> iestati <gui>Lappušu secība</gui> uz <gui>No labās uz kreiso</gui>.</p>
+ <p>Izvēlies <gui>Lappuses iestatīšana</gui> cilni.</p>
+ <p>Izvēlnē <gui>Lappušu secība</gui> izvēlieties <gui>No labās uz kreiso</gui>.</p>
 <p>Spied <gui>Drukāt</gui>.</p>
  </item>
  <item>
  <p>Kolīdz 3. lappuse ir izdrukāta, pareizi ievieto papīru atpakaļ printerī (4. un 9. lappuse tiks izdrukāta otrajā pusē).</p>
  </item>
  <item>
-  <p>Spiediet <guiseq><gui>Datne</gui><gui>Drukāt</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
   <p>Cilnē <gui>Vispārīgi</gui> sadaļā <gui>Lappuses</gui> ievadiet “4, 9”.</p>
-  <p>Cilnē <gui>Lappuses iestatīšana</gui> iestatiet <gui>Lappušu secība</gui> uz <gui>No kreisās uz labo</gui>.</p>
+  <p>Izvēlies <gui>Lappuses iestatīšana</gui> cilni.</p>
+  <p><gui>Lappušu secība</gui> izvēlnē izvēlies <gui>No kreisās uz labo</gui>.</p>
  <p>Spied <gui>Drukāt</gui>.</p>
  </item>
 </steps>

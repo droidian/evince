@@ -38,7 +38,9 @@
  <p>Para imprimir:</p>
   <steps>
  <item>
-  <p>Prema <guiseq><gui>Ficheiro</gui><gui>Imprimir</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Seleccione a lapela <gui>Xeral</gui>.</p>
@@ -49,7 +51,9 @@
  </item>
  <item>
   <p>Seleccione a lapela <gui>Configuración da páxina</gui>.</p>
-  <p>En <em>Deseño</em>, no menú <gui>Dobre cara</gui>, elixa <gui>Unha cara</gui>.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>One Sided</gui>.
+  </p>
   <p>No menú <gui>Páxinas por cara</gui> seleccione <gui>2</gui>.</p>
   <p>No menú<gui>Ordenación de páxinas</gui>, elixa <gui>De esquerda a dereita</gui>.</p>
   <p>No menú <gui>Só imprimir</gui>, elixa <gui>Páxinas impares</gui>.</p>
@@ -61,7 +65,9 @@
     <p>Cando se impriman todas as páxinas déalles a volta e póñaas outra vez na impresora. </p>
    </item>
    <item>
-    <p>Prema <guiseq><gui>Ficheiro</gui><gui>Imprimir</gui></guiseq>.</p>
+    <p>
+    Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+    </p>
    </item>
    <item>
     <p>Seleccione a lapela <gui>Configuración da páxina</gui>.</p>

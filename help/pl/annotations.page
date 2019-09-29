@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="annotations" xml:lang="pl">
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="guide" style="task" id="annotations" xml:lang="pl">
 
   <info>
     <link type="guide" xref="index#annotations"/>
@@ -23,13 +23,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -41,15 +41,11 @@
 <p>Aby utworzyć przypis:</p>
 <steps>
  <item>
-  <p>
-    Select <gui>Annotate the document</gui> from the header bar.
-  </p>
-    <media type="image" src="figures/add-text-annotation.png"/>
+  <p>Wybierz <gui>Dodaj przypis do dokumentu</gui> na pasku nagłówka.</p>
+    <media type="image" src="figures/add-text-annotation.png" its:translate="no"/>
     <list>
      <item>
-      <p>
-        You should now see <gui>Add text annotation</gui> and <gui>Add highlight annotation</gui> buttons below the header bar.
-      </p>
+      <p>Pod paskiem nagłówka powinny być widoczne przyciski <gui>Dodaj przypis tekstowy</gui> i <gui>Dodaj zakreślenie</gui>.</p>
        <media type="image" src="figures/list-add-tabs.png"/>
      </item>
     </list>

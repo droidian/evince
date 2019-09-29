@@ -47,7 +47,7 @@
  <p>Normaalisti tulostimet tulostavat ensimmäisen sivun ensimmäisenä ja viimeisen viimeisenä, mistä johtuen tulostetut sivut ovat noudettaessa käänteisessä järjestyksessä.</p>
  <p>Järjestyksen voi kääntää seuraavasti:</p>
  <steps>
-  <item><p><guiseq><gui>Tiedosto</gui><gui>Tulosta</gui></guiseq></p></item>
+  <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
   <item><p>Valitse <gui>Käänteinen</gui>-valintaruutu tulostusikkunan <gui>Yleiset</gui>-välilehdeltä <em>Kopioita</em> otsakkeen alta. Tällöin viimeinen sivu tulostetaan ensimmäisenä ja niin edelleen.</p></item>
  </steps>
 </section>
@@ -58,7 +58,7 @@
 
  <p>Kerätäksesi:</p>
  <steps>
-  <item><p>Valitse <guiseq><gui>Tiedosto</gui><gui>Tulosta</gui></guiseq></p></item>
+  <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
   <item><p>Valitse <gui>Kerää</gui> tulostusikkunan <gui>Yleiset</gui>-välilehden <em>Kopioita</em>-kohdasta.</p></item>
  </steps>
  <media type="image" src="figures/reverse-collate.png"/>

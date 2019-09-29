@@ -23,7 +23,9 @@
 
 <steps>
  <item>
-  <p>单击 <guiseq><gui>文件</gui><gui>打印</gui></guiseq>。</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>转到打印窗口的 <gui>页面设置</gui> 标签页，从下拉列表中选择 <gui>双面</gui> 该选项。</p>

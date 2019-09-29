@@ -32,7 +32,7 @@
 
 <p>Imprimir sólo determinadas páginas del documento:</p>
 <steps>
- <item><p>Pulse <guiseq><gui>Archivo</gui><gui> Imprimir</gui></guiseq></p></item>
+ <item><p>Pulse el botón de menú en la esquina superior derecha de la ventana y pulse el botón <gui style="button">Imprimir</gui>.</p></item>
  <item><p>En la pestaña <gui>General</gui>, en la ventana «Imprimir», elija <gui>Páginas</gui> de la sección <gui>Rango</gui>.</p></item>
 <item><p>Escriba los números de las páginas quiere imprimir en la caja de texto, separados por comas. Use un guión para indicar un rango de páginas.</p></item>
 </steps>

@@ -28,7 +28,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@gmail.com</mal:email>
-      <mal:years>2011, 2014-2015, 2018</mal:years>
+      <mal:years>2011, 2014-2015, 2018,2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -102,16 +102,13 @@
       <p>Drücken Sie die Tasten <keyseq><key>Strg</key><key>Bild auf</key></keyseq> oder <keyseq><key>Strg</key><key>Bild ab</key></keyseq> auf der Tastatur.</p>
     </item>
     <item>
-      <p>So gehen Sie zu einer bestimmten Seite:</p>
+      <p>So springen Sie zu einer bestimmten Seite:</p>
       <list>
         <item>
-          <p>Type a page number in <gui style="input">Select Page</gui> on the
-          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
+          <p>Tippen Sie die Seitennummer unter <gui style="input">Seite wählen</gui> in der <link xref="headerbar">Kopfleiste</link> ein und drücken Sie die <key>Eingabetaste</key>.</p>
         </item>
         <item>
-          <p>If you want to see the previously visited pages press
-          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
-          the header bar.</p>
+          <p>Um zuvor besuchte Seiten zu sehen, wählen Sie <gui style="button">&lt;</gui> oder <gui style="button">&gt;</gui> in der Kopfleiste.</p>
         </item>
         <item>
           <p>Wenn Sie zum Anfang oder das Ende des Dokuments springen möchten:</p>
@@ -172,7 +169,7 @@
     </item>
     <item>
       <p>Wählen Sie die gewünschte Vergrößerung in der Auswahlliste über dem Fenster.</p>
-      <media type="image" src="figures/zoom.png"/>
+      <media type="image" src="figures/zoom.png" its:translate="no"/>
     </item>
   </list>
 

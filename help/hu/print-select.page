@@ -11,7 +11,7 @@
       <email>philbull@gmail.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons – Így add tovább! 3.0</p>
     </license>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -25,6 +25,12 @@
       <mal:email>kelemeng at gnome dot hu</mal:email>
       <mal:years>2011, 2012, 2013, 2014, 2015.</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Úr Balázs</mal:name>
+      <mal:email>ur.balazs at fsf dot hu</mal:email>
+      <mal:years>2019.</mal:years>
+    </mal:credit>
   </info>
 
 <title>Csak bizonyos oldalak nyomtatása</title>
@@ -32,7 +38,7 @@
 
 <p>A dokumentum adott oldalainak nyomtatásához:</p>
 <steps>
- <item><p>Válassza a <guiseq><gui>Fájl</gui><gui>Nyomtatás</gui></guiseq> menüpontot.</p></item>
+ <item><p>Nyomja meg az ablak jobb felső sarkában lévő menügombot, majd nyomja meg a <gui style="button">Nyomtatás</gui> gombot.</p></item>
  <item><p>A Nyomtatás ablak <gui>Általános</gui> lapján válassza a <gui>Tartomány</gui> szakaszban az <gui>Oldalak</gui> elemet.</p></item>
 <item><p>A szövegmezőbe vesszőkkel elválasztva írja be a nyomtatni kívánt oldalak számait. Oldaltartomány jelzésére használja a - jelet.</p></item>
 </steps>

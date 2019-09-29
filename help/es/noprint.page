@@ -46,8 +46,7 @@
   <p>Para comprobar si su impresora imprime correctamente:</p>
   <steps>
     <item>
-      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
-      overview and start typing <gui>Settings</gui>.</p>
+      <p>Abra la vista de <gui href="help:gnome-help/shell-introduction#activities">Actividades</gui> y empiece a escribir <gui>Configuración</gui>.</p>
     </item>
     <item>
       <p>Pulse en <gui>Configuración</gui>.</p>
@@ -56,7 +55,7 @@
       <p>Pulse <gui>Dispositivos</gui> en la barra lateral.</p>
     </item>
     <item>
-      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+      <p>Abra <gui>Impresoras</gui> en la barra lateral para abrir el panel.</p>
     </item>
    <item><p>Doble pulsación en su impresora en la lista.</p></item>
    <item><p>Pulse en <gui>Imprimir página de prueba</gui>. Se debería enviar una página a su impresora.</p>

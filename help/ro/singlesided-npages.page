@@ -39,7 +39,9 @@
  <p>Pentru a tipări:</p>
   <steps>
  <item>
-  <p>Clic <guiseq><gui>Fișier</gui><gui>Tipărește</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Alegeți tabul <gui>General</gui>.</p>
@@ -54,7 +56,9 @@
  </item>
  <item>
   <p>Alegeți tabul <gui>Configurare pagină</gui>.</p>
-  <p>Sub <em>Aspect</em>, în meniul <gui>Două fețe</gui>, selectați <gui>O față</gui>.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>One Sided</gui>.
+  </p>
   <p>În meniul <gui>Pagini per față</gui>, selectați <gui>2</gui>.</p>
   <p>În meniul <gui>Ordonarea paginilor</gui>, selectați <gui>De la stânga la dreapta</gui>.</p>
   <p>În meniul <gui>Doar tipărire</gui>, selectați <gui>Foi impare</gui>.</p>
@@ -66,7 +70,9 @@
     <p>Când toate paginile s-au tipărit, întoarceți-le și așezați-le înapoi în imprimantă.</p>
    </item>
    <item>
-    <p>Clic <guiseq><gui>Fișier</gui><gui>Tipărește</gui></guiseq>.</p>
+    <p>
+    Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+    </p>
    </item>
    <item>
     <p>Alegeți tabul <gui>Configurare pagină</gui>.</p>

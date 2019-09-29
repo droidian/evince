@@ -25,7 +25,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@gmail.com</mal:email>
-      <mal:years>2011, 2014-2015, 2018</mal:years>
+      <mal:years>2011, 2014-2015, 2018,2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -51,26 +51,26 @@
 
 <steps>
  <item>
-  <p>Klicken Sie auf <guiseq><gui>Datei</gui><gui>Drucken</gui></guiseq>.</p>
+  <p>Öffnen Sie das Menü oben rechts im Fenster und wählen Sie dann <gui style="button">Drucken</gui>.</p>
  </item>
 
 
  <item>
   <p>Wählen Sie den Reiter <gui>Allgemein</gui>.</p>
-  <p>Wählen Sie unter <em>Bereich</em> die <gui>Seiten</gui>.</p>
+  <p>Wählen Sie unter <em>Seiten</em> die <gui>Seiten:</gui>.</p>
   <p>Geben Sie die Seitenzahl in dieser Reihenfolge ein: 7, 2, 1</p>
 
  </item>
  <item>
   <p>Wählen Sie den Reiter <gui>Seite einrichten</gui>.</p>
-  <p>Wählen Sie für <gui>Beidseitig</gui> unter <em>Layout</em> die Option <gui>Kurzer Rand (Umdrehen)</gui>.</p>
+  <p>Wählen Sie für <gui>Beidseitig</gui> unter <em>Layout</em> die Option <gui>Kurzer Rand (Umdrehen)</gui></p>
   <p>Wählen Sie <gui>2</gui> im Menü <gui>Seiten pro Blatt</gui>.</p>
   <p>Wählen Sie <gui>Rechts nach links</gui> im Menü <gui>Reihenfolge</gui>.</p>
  <p>Klicken Sie auf <gui>Drucken</gui>.</p>
  </item>
 
  <item>
-  <p>Klicken Sie auf <guiseq><gui>Datei</gui><gui>Drucken</gui></guiseq>.</p>
+  <p>Öffnen Sie das Menü oben rechts im Fenster und wählen Sie dann <gui style="button">Drucken</gui>.</p>
  </item>
  <item>
   <p>Wählen Sie den Reiter <gui>Allgemein</gui>.</p>
@@ -80,7 +80,7 @@
 
 <item>
   <p>Wählen Sie den Reiter <gui>Seite einrichten</gui>.</p>
-  <p>Wählen Sie im Menü <gui>Reihenfolge</gui> die Option <gui>Links nach rechts</gui>.</p>
+  <p>Wählen Sie <gui>Links nach rechts</gui> im Menü <gui>Reihenfolge</gui>.</p>
   <p>Klicken Sie auf <gui>Drucken</gui>.</p>
  </item>
 </steps>

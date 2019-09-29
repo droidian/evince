@@ -22,13 +22,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -44,10 +44,7 @@
     <title>Otwieranie dokumentu na konkretnej stronie</title>
     <p>Można użyć przełącznika <cmd>--page-label</cmd>, aby otworzyć dokument na konkretnej stronie. Na przykład, aby otworzyć dokument na 3. stronie, wpisz:</p>
     <screen>evince --page-label=3 plik.pdf</screen>
-    <p>
-    The page label should be in the same format as the page number displayed in
-    the <app>Document Viewer</app> header bar.
-    </p>
+    <p>Etykieta strony musi być w tym samym formacie, co numer strony wyświetlany na pasku nagłówka <app>Przeglądarki dokumentów</app>.</p>
 </section>
 <section id="fullsreen">
     <title>Otwieranie dokumentu w trybie pełnoekranowym</title>

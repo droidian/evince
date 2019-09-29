@@ -46,15 +46,15 @@
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2017, 2018</mal:years>
+      <mal:name>Isaac Ferreira Filho</mal:name>
+      <mal:email>isaacmob@riseup.net</mal:email>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Isaac Ferreira Filho</mal:name>
-      <mal:email>isaacmob@riseup.net</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -69,7 +69,7 @@
 <p>Consiste em abrir o arquivo no <app>Visualizador de documentos</app> e “imprimir” o documento como um arquivo PostScript.</p>
 <steps>
     <item>
-      <p>Clique no menu de <gui>Opções do arquivo</gui> no canto superior direito da janela e selecione <gui>Imprimir</gui> ou use o atalho de teclado <keyseq><key>Ctrl</key><key>P</key></keyseq>.</p>
+      <p>Clique no menu de <gui>Opções do arquivo</gui> no canto superior direito da janela e selecione <gui>Imprimir</gui> ou use o atalho de teclado <keyseq><key>Ctrl</key><key>P</key></keyseq> e vá à aba <gui>Geral</gui>.</p>
     </item>
     <item>
       <p>Selecione <gui>Imprimir para arquivo</gui> e escolha “PostScript” como o <gui>Formato da saída</gui>.</p>

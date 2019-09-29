@@ -22,7 +22,9 @@
 
 <steps>
  <item>
-  <p><guiseq><gui>ファイル</gui><gui>印刷</gui></guiseq>をクリックします。</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p><gui>全般</gui>タブを選択します。</p>
@@ -30,7 +32,9 @@
  </item>
  <item>
   <p><gui>ページの設定</gui>タブを選択します。</p>
-  <p><em>レイアウト</em>の下にある<gui>両面印刷</gui>というオプションで<gui>短辺 (折り返し)</gui>を選択します。</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> option, select <gui>Short Edge (Flip)</gui>.
+  </p>
   <p><gui>段組み印刷</gui>というオプションで <gui>2</gui> を選択します。</p>
   <p><gui>ページの順番</gui>というオプションで<gui>右から左へ</gui>を選択します。</p>
  </item>

@@ -40,15 +40,15 @@
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2017, 2018</mal:years>
+      <mal:name>Isaac Ferreira Filho</mal:name>
+      <mal:email>isaacmob@riseup.net</mal:email>
+      <mal:years>2018, 2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Isaac Ferreira Filho</mal:name>
-      <mal:email>isaacmob@riseup.net</mal:email>
-      <mal:years>2018</mal:years>
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -70,17 +70,16 @@
   <p>Para verificar se a impressora está imprimindo corretamente:</p>
   <steps>
     <item>
-      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
-      overview and start typing <gui>Settings</gui>.</p>
+      <p>Abra o panorama de <gui href="help:gnome-help/shell-introduction#activities">Atividades</gui> e comece a digitar <gui>Configurações</gui>.</p>
     </item>
     <item>
-      <p>Click on <gui>Settings</gui>.</p>
+      <p>Clique em <gui>Configurações</gui>.</p>
     </item>
     <item>
-      <p>Click <gui>Devices</gui> in the sidebar.</p>
+      <p>Clique em <gui>Dispositivos</gui> no painel lateral.</p>
     </item>
     <item>
-      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+      <p>Clique em <gui>Imprimir</gui> na barra lateral para abrir o painel.</p>
     </item>
    <item><p>Selecione sua impressora na lista.</p></item>
    <item><p>Clique em <gui>Imprimir página de teste</gui>. Uma página deve ser impressa em sua impressora.</p>

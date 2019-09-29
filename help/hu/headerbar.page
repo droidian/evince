@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#tips"/>
-    <desc>Using the header bar.</desc>
+    <desc>A fejlécsáv használata.</desc>
 
     <revision pkgversion="3.10" version="0.1" date="2013-11-04" status="final"/>
     <revision pkgversion="3.24" version="0.2" date="2017-09-17" status="final"/>
@@ -12,7 +12,7 @@
       <email its:translate="no">tiffany@antopolski.com</email>
     </credit>
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons – Így add tovább! 3.0</p>
     </license>
 
   
@@ -27,11 +27,17 @@
       <mal:email>kelemeng at gnome dot hu</mal:email>
       <mal:years>2011, 2012, 2013, 2014, 2015.</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Úr Balázs</mal:name>
+      <mal:email>ur.balazs at fsf dot hu</mal:email>
+      <mal:years>2019.</mal:years>
+    </mal:credit>
   </info>
 
-<title>Header bar</title>
+<title>Fejlécsáv</title>
 
-<p>The header bar contains:</p>
+<p>A fejlécsáv tartalmaz:</p>
   <list>
     <item>
       <p>Egy szövegmezőt <link xref="movingaround#between-pages">egy adott oldalra ugráshoz</link> vagy <link xref="finding">kereséshez</link> az <link xref="movingaround#navigating">indexben</link>.</p>

@@ -63,7 +63,9 @@
 <steps>
 
  <item>
-  <p>Cliquez sur <guiseq><gui>Fichier</gui><gui>Imprimer</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Sélectionnez l’onglet <gui>Général</gui>.</p>
@@ -74,7 +76,9 @@
 
  <item>
   <p>Sélectionnez l’onglet <gui>Mise en page</gui>.</p>
-<p>Sous <em>Mise en page</em>, dans le menu <gui>Recto-verso</gui>, choisissez <gui>Bord court (retourné)</gui>.</p>
+<p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>Short Edge (Flip)</gui>.
+  </p>
  <p>Pour l’option <gui>Pages par côté</gui>, choisissez <gui>2</gui>.</p>
  <p>Dans le menu <gui>Ordre des pages</gui>, sélectionnez <gui>Gauche à droite</gui>.</p>
  <p>Cliquez sur <gui>Imprimer</gui>.</p>
@@ -86,7 +90,9 @@
  <p>Une fois que les pages sont imprimées, prenez le papier sur lequel il y a 2 pages d’imprimées, replacez-le dans l’imprimante, en prenant soin de l’orienter correctement (la page 1 sera imprimée de l’autre côté).</p>
  </item>
  <item>
-  <p>Cliquez sur <guiseq><gui>Fichier</gui><gui>Imprimer</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Sélectionnez l’onglet <gui>Général</gui>.</p>

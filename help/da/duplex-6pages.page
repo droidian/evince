@@ -21,7 +21,9 @@
 <steps>
 
  <item>
-  <p>Klik på <guiseq><gui>Fil</gui><gui>Udskriv</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Vælg fanebladet <gui>Generelt</gui>.</p>
@@ -32,7 +34,9 @@
 
  <item>
   <p>Vælg fanebladet <gui>Sideopsætning</gui>.</p>
-<p>I <gui>Dobbeltsidet</gui> under <em>Layout</em> skal du vælge <gui>Kort kant (omvendt)</gui>.</p>
+<p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>Short Edge (Flip)</gui>.
+  </p>
  <p>Vælg <gui>2</gui> i <gui>Sider pr. ark</gui>.</p>
  <p>I menuen <gui>Sideorden</gui> skal du vælge <gui>Venstre mod højre</gui>.</p>
  <p>Klik på <gui>Udskriv</gui>.</p>
@@ -44,7 +48,9 @@
  <p>Når siderne er udskrevet, skal du tage papiret med side 2 og lægge det tilbage i printeren. Vær opmærksom på at du vender det rigtigt (side 1 udskrives på den anden side).</p>
  </item>
  <item>
-  <p>Klik på <guiseq><gui>Fil</gui><gui>Udskriv</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Vælg fanebladet <gui>Generelt</gui>.</p>

@@ -20,7 +20,9 @@
 <title>Буклет на 11 страниц</title>
 <steps>
  <item>
-  <p>Выберите <guiseq><gui>Файл</gui><gui>Печать</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
 
 
@@ -32,7 +34,9 @@
  </item>
  <item>
   <p>Выберите вкладку <gui>Параметры страницы</gui>.</p>
-  <p>Под <em>Размещением</em> в меню <gui>С двух сторон</gui> выберите <gui>По короткой стороне</gui>.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>Short Edge (Flip)</gui>.
+  </p>
   <p>В параметре <gui>Страниц на сторону</gui> выберите <gui>2</gui>.</p>
   <p>В меню <gui>Порядок страниц</gui> выберите <gui>Справа налево</gui>.</p>
   <p>Нажмите <gui>Печать</gui>.</p>
@@ -40,7 +44,9 @@
 
 
  <item>
-  <p>Выберите ещё раз <guiseq><gui>Файл</gui><gui>Печать</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
  <item>
   <p>Выберите вкладку <gui>Общие</gui>.</p>

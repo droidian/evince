@@ -18,13 +18,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2018</mal:years>
+      <mal:years>2017-2019</mal:years>
     </mal:credit>
   </info>
 
@@ -35,7 +35,7 @@
  <p>Drukarki zwykle drukują najpierw pierwszą stronę, a na końcu ostatnią stronę, więc strony są w odwrotnej kolejności.</p>
  <p>Aby odwrócić kolejność:</p>
  <steps>
-  <item><p>Kliknij <guiseq><gui>Plik</gui><gui>Wydrukuj</gui></guiseq>.</p></item>
+  <item><p>Kliknij przycisk menu w górnym prawym rogu okna i kliknij przycisk <gui style="button">Wydrukuj</gui>.</p></item>
   <item><p>W karcie <gui>Ogólne</gui> okna wydruku w sekcji <em>Kopie</em> zaznacz opcję <gui>Odwrotnie</gui>. Ostatnia strona zostanie wydrukowana najpierw, i tak dalej.</p></item>
  </steps>
 </section>
@@ -46,7 +46,7 @@
 
  <p>Aby posegregować:</p>
  <steps>
-  <item><p>Kliknij <guiseq><gui>Plik</gui><gui>Wydrukuj</gui></guiseq>.</p></item>
+  <item><p>Kliknij przycisk menu w górnym prawym rogu okna i kliknij przycisk <gui style="button">Wydrukuj</gui>.</p></item>
   <item><p>W karcie <gui>Ogólne</gui> okna wydruku w sekcji <em>Kopie</em> zaznacz opcję <gui>Posegregowane</gui>.</p></item>
  </steps>
  <media type="image" src="figures/reverse-collate.png"/>

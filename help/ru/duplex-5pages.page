@@ -20,7 +20,9 @@
 <title>Буклет на 5 страниц</title>
 <steps>
  <item>
-  <p>Выберите <guiseq><gui>Файл</gui><gui>Печать</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
  </item>
 
 
@@ -31,7 +33,9 @@
  </item>
  <item>
   <p>Выберите вкладку <gui>Параметры страницы</gui>.</p>
-  <p>Под <em>Размещением</em> в параметре <gui>С двух сторон</gui> выберите <gui>По короткой стороне</gui>.</p>
+  <p>
+   Under <em>Layout</em>, in the <gui>Two-sided</gui> option, select <gui>Short Edge (Flip)</gui>.
+  </p>
  <p>В параметре <gui>Страниц на сторону</gui> выберите <gui>2</gui>.</p>
   <p>В меню <gui>Порядок страниц</gui> выберите <gui>Справа налево</gui>.</p>
   <p>Нажмите <gui>Печать</gui>.</p>
@@ -42,8 +46,10 @@
   <p>После того, как будет напечатана страница, возьмите бумагу и поместите её обратно в принтер, соблюдая правильное положение страницы (страница 2 будет напечатана на другой стороне).</p>
  </item>
  <item>
-  <p>Выберите ещё раз <guiseq><gui>Файл</gui><gui>Печать</gui></guiseq>.</p>
-  <p>Выберите вкладку «Общие».</p>
+  <p>
+     Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
+  <p>Выберите вкладку <gui>Общие</gui>.</p>
   <p>Под <em>Диапазоном</em> выберите <gui>Страницы</gui> и введите: 2</p>
  </item>
  <item>
@@ -53,22 +59,28 @@
  </item>
 
  <item>
-  <p>Чтобы напечатать страницу с номером 3, снова выберите <guiseq><gui>Файл</gui><gui>Печать</gui></guiseq>.</p>
+  <p>
+   To print page 3, press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
   <p>
     In the <gui>General</gui> tab enter the page number in the <gui>Pages</gui> selection.
   </p>
  </item>
  <item>
- <p>В меню <gui>Настройка страницы</gui> установите параметр <gui>Порядок страниц</gui> в значение <gui>Справа налево</gui>.</p>
+ <p>Выберите вкладку <gui>Параметры страницы</gui>.</p>
+ <p>В меню <gui>Порядок страниц</gui> выберите <gui>Справа налево</gui>.</p>
 <p>Нажмите <gui>Печать</gui>.</p>
  </item>
  <item>
  <p>После того, как будет напечатана 3-я страница, возьмите бумагу и поместите её обратно в принтер, соблюдая правильное положение страницы (страницы 4 и 9 будут напечатаны на другой стороне).</p>
  </item>
  <item>
-  <p>Выберите <guiseq><gui>Файл</gui><gui>Печать</gui></guiseq>.</p>
+  <p>
+   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
+  </p>
   <p>На вкладке <gui>Общие</gui> введите 4, 9 в поле <gui>Страницы</gui>.</p>
-  <p>В меню <gui>Настройка страницы</gui> установите параметр <gui>Порядок страниц</gui> в значение <gui>Слева направо</gui>.</p>
+  <p>Выберите вкладку <gui>Параметры страницы</gui>.</p>
+  <p>В меню <gui>Порядок страниц</gui> выберите <gui>Слева направо</gui>.</p>
  <p>Нажмите <gui>Печать</gui>.</p>
  </item>
 </steps>

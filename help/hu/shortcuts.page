@@ -38,7 +38,7 @@
     </credit>
 
     <license>
-      <p>Creative Commons Share Alike 3.0</p>
+      <p>Creative Commons – Így add tovább! 3.0</p>
     </license>
 
   
@@ -52,6 +52,12 @@
       <mal:name>Kelemen Gábor</mal:name>
       <mal:email>kelemeng at gnome dot hu</mal:email>
       <mal:years>2011, 2012, 2013, 2014, 2015.</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Úr Balázs</mal:name>
+      <mal:email>ur.balazs at fsf dot hu</mal:email>
+      <mal:years>2019.</mal:years>
     </mal:credit>
   </info>
 
@@ -101,27 +107,23 @@
         <td><p><key>Page Up</key> / <key>Page Down</key></p></td>
     </tr>
     <tr>
-        <td><p>Go to the previous page.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Page Up</key></keyseq> /
-<key>P</key></p></td>
+        <td><p>Ugrás az előző oldalra.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Page Up</key></keyseq> / <key>P</key></p></td>
     </tr>
     <tr>
-        <td><p>Go to the next page.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Page Down</key></keyseq> /
-<key>N</key></p></td>
+        <td><p>Ugrás a következő oldalra.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Page Down</key></keyseq> / <key>N</key></p></td>
     </tr>
 <tr>
         <td><p>Ugrás az adott számú oldalra.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq>, majd az oldalszám, és <key>Enter</key></p></td>
 </tr>
     <tr>
-        <td><p>Go to the beginning of a page (beginning of the document if
-<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
+        <td><p>Ugrás az oldal elejére (a dokumentum elejére, ha a <gui>Folytonos</gui> ki van választva a <gui>Nézetbeállítások</gui> menüben).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
-        <td><p>Go to the end of a page (end of the document if
-<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
+        <td><p>Ugrás az oldal végére (a dokumentum végére, ha a <gui>Folytonos</gui> ki van választva a <gui>Nézetbeállítások</gui> menüben).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>
@@ -133,19 +135,19 @@
          <td><p><keyseq><key>Ctrl</key><key>End</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Add a bookmark in the current page.</p></td>
+        <td><p>Könyvjelző hozzáadása a jelenlegi oldalon.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Delete the bookmark in the current page if there is one.</p></td>
+        <td><p>A könyvjelző törlése a jelenlegi oldalon, ha létezik.</p></td>
         <td><p><keyseq><key>Shift</key><key>Ctrl</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
-    	<td><p>Display the side bar with a table of contents and bookmarks.</p></td>
+    	<td><p>Az oldalsáv megjelenítése tartalomjegyzékkel és könyvjelzőkkel.</p></td>
          <td><p><key>F9</key></p></td>
     </tr>
     <tr>
-        <td><p>Enable caret navigation placing a moveable cursor in text pages, allowing you to move around and select text with the keyboard.</p></td>
+        <td><p>A kurzornavigáció engedélyezése egy mozgatható kurzort tesz a szöveges oldalakra, lehetővé téve a mozgatást és a szöveg kijelölését a billentyűzettel.</p></td>
         <td><p><key>F7</key></p></td>
     </tr>
   </table>
@@ -169,13 +171,7 @@
     <title>Szöveg keresése</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>
-        Show the toolbar that lets you search for words in the document. The
-        search box is automatically highlighted when you press this, and the
-        search will start as soon as you type some text. If you select a text
-        in the document before searching, then the search will start using that
-        text as input.
-        </p></td>
+        <td><p>A dokumentumban való keresés eszköztár megjelenítése. A keresőmező automatikusan kiemelésre kerül, és a keresés a szöveg gépelésével egyidejűleg azonnal megkezdődik. Ha keresés előtt kijelöl egy szöveget a dokumentumban, akkor a kijelölt szöveget fogja használni bemenetként a keresés indításakor.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>F</key></keyseq> / <key>/</key></p></td>
     </tr>
     <tr>
@@ -201,74 +197,73 @@
         <td><p><keyseq><key>Ctrl</key><key>Jobbra nyíl</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Default zoom.</p></td>
+        <td><p>Alapértelmezett nagyítás.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>0</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Nagyítás</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>+</key></keyseq> / <key>=</key> /
-               <keyseq><key>Ctrl</key><key>=</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>+</key></keyseq> / <key>=</key> / <keyseq><key>Ctrl</key><key>=</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Kicsinyítés.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>-</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Fit the page into the window.</p></td>
+        <td><p>Oldal igazítása az ablakhoz.</p></td>
         <td><p><key>F</key></p></td>
     </tr>
     <tr>
-        <td><p>Fit the content width to the space available.</p></td>
+        <td><p>Tartalom szélességének igazítása az elérhető területhez.</p></td>
         <td><p><key>W</key></p></td>
     </tr>
     <tr>
-        <td><p>Automatic zoom.</p></td>
+        <td><p>Automatikus nagyítás.</p></td>
         <td><p><key>A</key></p></td>
     </tr>
 </table>
 </section>
 
 <section id="window">
-    <title>Window</title>
+    <title>Ablak</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Use the full screen to view the document.</p></td>
+        <td><p>A teljes képernyő használata a dokumentum megtekintéséhez.</p></td>
         <td><p><key>F11</key></p></td>
     </tr>
     <tr>
-        <td><p>Start a presentation.</p></td>
+        <td><p>Bemutató elindítása.</p></td>
         <td><p><key>F5</key> / <keyseq><key>Shift</key><key>F5</key></keyseq></p></td>
     </tr>
 </table>
 </section>
 
 <section id="document">
-    <title>Document view</title>
+    <title>Dokumentumnézet</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Invert background and text colors.</p></td>
+        <td><p>Háttér- és szövegszínek megfordítása.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>I</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Swap between continuous and page by page view of the document.</p></td>
+        <td><p>Váltás a dokumentum folytonos és két oszlopos nézete között.</p></td>
         <td><p><key>C</key></p></td>
     </tr>
     <tr>
-        <td><p>Display two pages side by side.</p></td>
+        <td><p>Két oldal megjelenítése egymás mellett.</p></td>
         <td><p><key>D</key></p></td>
     </tr>
 </table>
 </section>
 
 <section id="annotate">
-    <title>Annotate the document</title>
+    <title>A dokumentum jegyzetelése</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Add a post-it like note.</p></td>
+        <td><p>Egy ragadós cetlihez hasonló jegyzet hozzáadása.</p></td>
         <td><p><key>S</key></p></td>
     </tr>
     <tr>
-        <td><p>Highlight text.</p></td>
+        <td><p>Szöveg kiemelése.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>H</key></keyseq></p></td>
     </tr>
 </table>

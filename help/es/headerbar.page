@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#tips"/>
-    <desc>Using the header bar.</desc>
+    <desc>Usar la barra de cabecera.</desc>
 
     <revision pkgversion="3.10" version="0.1" date="2013-11-04" status="final"/>
     <revision pkgversion="3.24" version="0.2" date="2017-09-17" status="final"/>
@@ -29,9 +29,9 @@
     </mal:credit>
   </info>
 
-<title>Header bar</title>
+<title>Barra de cabecera</title>
 
-<p>The header bar contains:</p>
+<p>La barra de cabecera contiene:</p>
   <list>
     <item>
       <p>Un campo de texto para <link xref="movingaround#between-pages">ir a una página determinada</link> o para <link xref="finding">buscar</link> en el <link xref="movingaround#navigating">indice</link>.</p>
