@@ -233,6 +233,7 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_view_get_enable_spellchecking@Base 3.29.91
  ev_view_get_has_selection@Base 3.0.2
  ev_view_get_page_extents@Base 3.0.2
+ ev_view_get_page_extents_for_border@Base 3.34.1
  ev_view_get_selected_text@Base 3.29.91
  ev_view_get_type@Base 3.0.2
  ev_view_handle_link@Base 3.0.2
