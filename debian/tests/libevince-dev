@@ -18,6 +18,12 @@ export XDG_RUNTIME_DIR="$WORKDIR"
 trap 'cd /; rm -rf "$WORKDIR"' 0 INT QUIT ABRT PIPE TERM
 cd "$WORKDIR"
 
+if [ -n "${DEB_HOST_GNU_TYPE:-}" ]; then
+    CROSS_COMPILE="$DEB_HOST_GNU_TYPE-"
+else
+    CROSS_COMPILE=
+fi
+
 cat > document.c <<'EOF'
 #include <evince-document.h>
 
@@ -45,7 +51,7 @@ for lib in document view; do
 
     # Deliberately word-splitting pkg-config's output:
     # shellcheck disable=SC2046
-    gcc -o "${lib}-test" "${src}" $(pkg-config --cflags --libs "${pkg}")
+    "${CROSS_COMPILE}gcc" -o "${lib}-test" "${src}" $("${CROSS_COMPILE}pkg-config" --cflags --libs "${pkg}")
     echo "build $lib: OK"
     [ -x "${lib}-test" ]
     "./${lib}-test"
