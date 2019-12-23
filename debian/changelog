@@ -2,6 +2,7 @@ evince (3.34.1-2) UNRELEASED; urgency=medium
 
   * d/tests: Use correct compiler for proposed autopkgtest
     cross-architecture testing support
+  * d/tests: Remove unused ${srcdir}
 
  -- Simon McVittie <smcv@debian.org>  Mon, 23 Dec 2019 12:29:25 +0000
 

@@ -11,7 +11,6 @@ set -eux
 export GIO_USE_VFS=local
 export GIO_USE_VOLUME_MONITOR=unix
 
-srcdir="$(pwd)"
 WORKDIR="$(mktemp -d)"
 export HOME="$WORKDIR"
 export XDG_RUNTIME_DIR="$WORKDIR"
