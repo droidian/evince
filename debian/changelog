@@ -1,4 +1,4 @@
-evince (3.35.1-1) UNRELEASED; urgency=medium
+evince (3.35.1-1) experimental; urgency=medium
 
   [ Simon McVittie ]
   * d/tests: Use correct compiler for proposed autopkgtest
