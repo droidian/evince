@@ -395,15 +395,6 @@ static gchar *nautilus_sendto = NULL;
 
 G_DEFINE_TYPE_WITH_PRIVATE (EvWindow, ev_window, GTK_TYPE_APPLICATION_WINDOW)
 
-static gdouble
-get_screen_dpi (EvWindow *window)
-{
-	GdkScreen *screen;
-
-	screen = gtk_window_get_screen (GTK_WINDOW (window));
-	return ev_document_misc_get_screen_dpi (screen);
-}
-
 static gboolean
 ev_window_is_recent_view (EvWindow *ev_window)
 {
@@ -537,6 +528,8 @@ ev_window_update_actions_sensitivity (EvWindow *ev_window)
 				      !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "dual-page", has_pages &&
 				      !recent_view_mode);
+	ev_window_set_action_enabled (ev_window, "rtl", has_pages &&
+				      !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "reload", has_pages &&
 				      !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "auto-scroll", has_pages &&
@@ -567,19 +560,22 @@ ev_window_update_actions_sensitivity (EvWindow *ev_window)
 	ev_window_set_action_enabled (ev_window, "escape", !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "open-menu", !recent_view_mode);
 
-	/* Same for popups specific actions */
-	ev_window_set_action_enabled (ev_window, "annotate-selected-text", can_annotate &&
-				      !recent_view_mode);
-	ev_window_set_action_enabled (ev_window, "open-link", !recent_view_mode);
-	ev_window_set_action_enabled (ev_window, "open-link-new-window", !recent_view_mode);
-	ev_window_set_action_enabled (ev_window, "go-to-link", !recent_view_mode);
-	ev_window_set_action_enabled (ev_window, "copy-link-address", !recent_view_mode);
-	ev_window_set_action_enabled (ev_window, "save-image", !recent_view_mode);
-	ev_window_set_action_enabled (ev_window, "copy-image", !recent_view_mode);
-	ev_window_set_action_enabled (ev_window, "open-attachment", !recent_view_mode);
-	ev_window_set_action_enabled (ev_window, "save-attachment", !recent_view_mode);
-	ev_window_set_action_enabled (ev_window, "annot-properties", !recent_view_mode);
-	ev_window_set_action_enabled (ev_window, "remove-annot", !recent_view_mode);
+	/* Don't enable popup actions here because the page can change while a
+	 * popup is visible due to kinetic scrolling. The 'popup' functions
+	 * will enable appropriate actions when the popup is shown. */
+	if (recent_view_mode) {
+		ev_window_set_action_enabled (ev_window, "annotate-selected-text", FALSE);
+		ev_window_set_action_enabled (ev_window, "open-link", FALSE);
+		ev_window_set_action_enabled (ev_window, "open-link-new-window", FALSE);
+		ev_window_set_action_enabled (ev_window, "go-to-link", FALSE);
+		ev_window_set_action_enabled (ev_window, "copy-link-address", FALSE);
+		ev_window_set_action_enabled (ev_window, "save-image", FALSE);
+		ev_window_set_action_enabled (ev_window, "copy-image", FALSE);
+		ev_window_set_action_enabled (ev_window, "open-attachment", FALSE);
+		ev_window_set_action_enabled (ev_window, "save-attachment", FALSE);
+		ev_window_set_action_enabled (ev_window, "annot-properties", FALSE);
+		ev_window_set_action_enabled (ev_window, "remove-annot", FALSE);
+	}
 
 	can_find_in_page = ev_search_box_has_results (EV_SEARCH_BOX (priv->search_box));
 
@@ -1140,6 +1136,10 @@ ev_window_init_metadata_with_default_values (EvWindow *window)
 		ev_metadata_set_boolean (metadata, "dual-page-odd-left",
 					 g_settings_get_boolean (settings, "dual-page-odd-left"));
 	}
+	if (!ev_metadata_has_key (metadata, "rtl")) {
+		ev_metadata_set_boolean (metadata, "rtl",
+					 gtk_widget_get_default_direction () == GTK_TEXT_DIR_RTL ? TRUE : FALSE);
+	}
 	if (!ev_metadata_has_key (metadata, "inverted-colors")) {
 		ev_metadata_set_boolean (metadata, "inverted-colors",
 					 g_settings_get_boolean (settings, "inverted-colors"));
@@ -1207,6 +1207,7 @@ setup_model_from_metadata (EvWindow *window)
 	gboolean continuous = FALSE;
 	gboolean dual_page = FALSE;
 	gboolean dual_page_odd_left = FALSE;
+	gboolean rtl = FALSE;
 	gboolean fullscreen = FALSE;
 	EvWindowPrivate *priv = GET_PRIVATE (window);
 
@@ -1231,7 +1232,7 @@ setup_model_from_metadata (EvWindow *window)
 	/* Zoom */
 	if (ev_document_model_get_sizing_mode (priv->model) == EV_SIZING_FREE) {
 		if (ev_metadata_get_double (priv->metadata, "zoom", &zoom)) {
-			zoom *= get_screen_dpi (window) / 72.0;
+			zoom *= ev_document_misc_get_widget_dpi  (GTK_WIDGET (window)) / 72.0;
 			ev_document_model_set_scale (priv->model, zoom);
 		}
 	}
@@ -1273,6 +1274,11 @@ setup_model_from_metadata (EvWindow *window)
 	/* Dual page odd pages left */
 	if (ev_metadata_get_boolean (priv->metadata, "dual-page-odd-left", &dual_page_odd_left)) {
 		ev_document_model_set_dual_page_odd_pages_left (priv->model, dual_page_odd_left);
+	}
+
+	/* Right to left document */
+	if (ev_metadata_get_boolean (priv->metadata, "rtl", &rtl)) {
+		ev_document_model_set_rtl (priv->model, rtl);
 	}
 
 	/* Fullscreen */
@@ -1488,6 +1494,7 @@ ev_window_setup_default (EvWindow *ev_window)
 	ev_document_model_set_continuous (model, g_settings_get_boolean (settings, "continuous"));
 	ev_document_model_set_dual_page (model, g_settings_get_boolean (settings, "dual-page"));
 	ev_document_model_set_dual_page_odd_pages_left (model, g_settings_get_boolean (settings, "dual-page-odd-left"));
+	ev_document_model_set_rtl (model, gtk_widget_get_default_direction () == GTK_TEXT_DIR_RTL ? TRUE : FALSE);
 	ev_document_model_set_inverted_colors (model, g_settings_get_boolean (settings, "inverted-colors"));
 	ev_document_model_set_sizing_mode (model, g_settings_get_enum (settings, "sizing-mode"));
 	if (ev_document_model_get_sizing_mode (model) == EV_SIZING_FREE)
@@ -4148,6 +4155,19 @@ ev_window_cmd_dual_odd_pages_left (GSimpleAction *action,
 }
 
 static void
+ev_window_cmd_rtl (GSimpleAction *action,
+                   GVariant      *state,
+                   gpointer       user_data)
+{
+	EvWindow *window = user_data;
+	EvWindowPrivate *priv = GET_PRIVATE (window);
+
+	ev_document_model_set_rtl (priv->model,
+	                           g_variant_get_boolean (state));
+	g_simple_action_set_state (action, state);
+}
+
+static void
 ev_window_change_sizing_mode_action_state (GSimpleAction *action,
 					   GVariant      *state,
 					   gpointer       user_data)
@@ -4183,7 +4203,7 @@ ev_window_cmd_view_zoom (GSimpleAction *action,
 
 	ev_document_model_set_sizing_mode (priv->model, EV_SIZING_FREE);
 	ev_document_model_set_scale (priv->model,
-				     zoom * get_screen_dpi (ev_window) / 72.0);
+				     zoom * ev_document_misc_get_widget_dpi (GTK_WIDGET (ev_window)) / 72.0);
 }
 
 static void
@@ -4196,7 +4216,7 @@ ev_window_cmd_set_default_zoom (GSimpleAction *action,
 
 	ev_document_model_set_sizing_mode (priv->model, EV_SIZING_FREE);
 	ev_document_model_set_scale (priv->model,
-				     1. * get_screen_dpi (ev_window) / 72.0);
+				     1. * ev_document_misc_get_widget_dpi (GTK_WIDGET (ev_window)) / 72.0);
 }
 
 static void
@@ -4914,7 +4934,7 @@ ev_window_cmd_edit_save_settings (GSimpleAction *action,
 	if (sizing_mode == EV_SIZING_FREE) {
 		gdouble zoom = ev_document_model_get_scale (model);
 
-		zoom *= 72.0 / get_screen_dpi (ev_window);
+		zoom *= 72.0 / ev_document_misc_get_widget_dpi (GTK_WIDGET (ev_window));
 		g_settings_set_double (settings, "zoom", zoom);
 	}
 	g_settings_set_boolean (settings, "show-sidebar",
@@ -5235,7 +5255,7 @@ ev_window_zoom_changed_cb (EvDocumentModel *model, GParamSpec *pspec, EvWindow *
 		gdouble zoom;
 
 		zoom = ev_document_model_get_scale (model);
-		zoom *= 72.0 / get_screen_dpi (ev_window);
+		zoom *= 72.0 / ev_document_misc_get_widget_dpi (GTK_WIDGET (ev_window));
 		ev_metadata_set_double (priv->metadata, "zoom", zoom);
 	}
 }
@@ -5324,6 +5344,25 @@ ev_window_dual_mode_odd_pages_left_changed_cb (EvDocumentModel *model,
 	if (priv->metadata && !ev_window_is_empty (ev_window))
 		ev_metadata_set_boolean (priv->metadata, "dual-page-odd-left",
 					 odd_left);
+}
+
+static void
+ev_window_direction_changed_cb (EvDocumentModel *model,
+                          GParamSpec      *pspec,
+                          EvWindow        *ev_window)
+{
+	EvWindowPrivate *priv = GET_PRIVATE (ev_window);
+	gboolean rtl;
+	GAction *action;
+
+	rtl = ev_document_model_get_rtl (model);
+
+	action = g_action_map_lookup_action (G_ACTION_MAP (ev_window), "rtl");
+	g_simple_action_set_state (G_SIMPLE_ACTION (action), g_variant_new_boolean (rtl));
+
+	if (priv->metadata && !ev_window_is_empty (ev_window))
+		ev_metadata_set_boolean (priv->metadata, "rtl",
+					 rtl);
 }
 
 static void
@@ -6260,6 +6299,7 @@ static const GActionEntry actions[] = {
 	{ "continuous", NULL, NULL, "true", ev_window_cmd_continuous },
 	{ "dual-page", NULL, NULL, "false", ev_window_cmd_dual },
 	{ "dual-odd-left", NULL, NULL, "false", ev_window_cmd_dual_odd_pages_left },
+	{ "rtl", NULL, NULL, "false", ev_window_cmd_rtl },
 	{ "show-side-pane", NULL, NULL, "false", ev_window_view_cmd_toggle_sidebar },
 	{ "inverted-colors", NULL, NULL, "false", ev_window_cmd_view_inverted_colors },
 	{ "enable-spellchecking", NULL, NULL, "false", ev_window_cmd_view_enable_spellchecking },
@@ -7682,6 +7722,10 @@ ev_window_init (EvWindow *ev_window)
 	g_signal_connect (priv->model,
 			  "notify::dual-odd-left",
 			  G_CALLBACK (ev_window_dual_mode_odd_pages_left_changed_cb),
+			  ev_window);
+	g_signal_connect (priv->model,
+			  "notify::rtl",
+			  G_CALLBACK (ev_window_direction_changed_cb),
 			  ev_window);
 	g_signal_connect (priv->model,
 			  "notify::inverted-colors",
