@@ -22,6 +22,7 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_document_model_get_page@Base 3.0.2
  ev_document_model_get_page_layout@Base 3.7.90
  ev_document_model_get_rotation@Base 3.0.2
+ ev_document_model_get_rtl@Base 3.35.1
  ev_document_model_get_scale@Base 3.0.2
  ev_document_model_get_sizing_mode@Base 3.0.2
  ev_document_model_get_type@Base 3.0.2
@@ -39,6 +40,7 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_document_model_set_page_by_label@Base 3.0.2
  ev_document_model_set_page_layout@Base 3.7.90
  ev_document_model_set_rotation@Base 3.0.2
+ ev_document_model_set_rtl@Base 3.35.1
  ev_document_model_set_scale@Base 3.0.2
  ev_document_model_set_sizing_mode@Base 3.0.2
  ev_form_field_accessible_get_field@Base 3.13.91

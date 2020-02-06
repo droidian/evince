@@ -181,6 +181,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_misc_get_pointer_position@Base 3.3.90
  ev_document_misc_get_screen_dpi@Base 3.0.2
  ev_document_misc_get_thumbnail_frame@Base 3.0.2
+ ev_document_misc_get_widget_dpi@Base 3.35.1
  ev_document_misc_invert_pixbuf@Base 3.0.2
  ev_document_misc_invert_surface@Base 3.0.2
  ev_document_misc_paint_one_page@Base 3.0.2
