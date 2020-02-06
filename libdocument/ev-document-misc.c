@@ -506,9 +506,20 @@ ev_document_misc_invert_pixbuf (GdkPixbuf *pixbuf)
 	}
 }
 
+/**
+ * ev_document_misc_get_screen_dpi:
+ * @screen: a #GtkScreen
+ *
+ * Returns: The DPI of @screen, or 96 if the DPI is not available
+ *
+ * Deprecated: 3.36: This uses a deprecated GDK API. Use
+ * ev_document_misc_get_widget_dpi() instead, which uses GDK's per-monitor
+ * information.
+ */
 gdouble
 ev_document_misc_get_screen_dpi (GdkScreen *screen)
 {
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
 	gdouble dp, di;
 
 	/*diagonal in pixels*/
@@ -522,6 +533,55 @@ ev_document_misc_get_screen_dpi (GdkScreen *screen)
 		return 96;
 
 	return (dp / di);
+G_GNUC_END_IGNORE_DEPRECATIONS
+}
+
+/**
+ * ev_document_misc_get_widget_dpi:
+ * @widget: a #GtkWidget
+ *
+ * Returns DPI for monitor on which given widget has been realized.
+ * Returns DPI of primary monitor or DPI of first monitor in the list inside
+ * of GdkDisplay if the widget has not been realized yet.
+ * Returns 96 as fallback value.
+ *
+ * Returns: DPI as gdouble
+ */
+gdouble
+ev_document_misc_get_widget_dpi (GtkWidget *widget)
+{
+	GdkRectangle  geometry;
+	GdkDisplay   *display;
+	GdkMonitor   *monitor;
+	GdkWindow    *window;
+	gdouble       dp, di;
+
+	display = gtk_widget_get_display (widget);
+	window = gtk_widget_get_window (widget);
+	if (window != NULL) {
+		monitor = gdk_display_get_monitor_at_window (display, window);
+	} else {
+		monitor = gdk_display_get_primary_monitor (display);
+		if (monitor == NULL)
+			monitor = gdk_display_get_monitor (display, 0);
+	}
+
+	if (monitor != NULL) {
+		/* diagonal in pixels */
+		gdk_monitor_get_geometry (monitor, &geometry);
+		dp = hypot (geometry.width, geometry.height);
+		if (dp == 0)
+			return 96;
+
+		/* diagonal in inches */
+		di = hypot (gdk_monitor_get_width_mm (monitor), gdk_monitor_get_height_mm (monitor)) / 25.4;
+		if (di == 0)
+			return 96;
+
+		return (dp / di);
+	} else {
+		return 96;
+	}
 }
 
 /* Returns a locale specific date and time representation */

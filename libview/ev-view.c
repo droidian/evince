@@ -120,8 +120,6 @@ typedef struct {
 
 /*** Scrolling ***/
 static void       view_update_range_and_current_page         (EvView             *view);
-static void       ensure_rectangle_is_visible                (EvView             *view,
-							      GdkRectangle       *rect);
 
 /*** Geometry computations ***/
 static void       compute_border                             (EvView             *view,
@@ -254,7 +252,7 @@ static double	zoom_for_size_fit_page 			     (gdouble doc_width,
 							      gdouble doc_height,
 							      int     target_width,
 							      int     target_height);
-static double   zoom_for_size_automatic                      (GdkScreen *screen,
+static double   zoom_for_size_automatic                      (GtkWidget *widget,
 							      gdouble    doc_width,
 							      gdouble    doc_height,
 							      int        target_width,
@@ -526,14 +524,12 @@ is_dual_page (EvView   *view,
 
 	switch (view->page_layout) {
 	case EV_PAGE_LAYOUT_AUTOMATIC: {
-		GdkScreen    *screen;
 		double        scale;
 		double        doc_width;
 		double        doc_height;
 		GtkAllocation allocation;
 
-		screen = gtk_widget_get_screen (GTK_WIDGET (view));
-		scale = ev_document_misc_get_screen_dpi (screen) / 72.0;
+		scale = ev_document_misc_get_widget_dpi (GTK_WIDGET (view)) / 72.0;
 
 		ev_document_get_max_page_size (view->document, &doc_width, &doc_height);
 		gtk_widget_get_allocation (GTK_WIDGET (view), &allocation);
@@ -1132,8 +1128,8 @@ ev_view_scroll_internal (EvView        *view,
 
 #define MARGIN 5
 
-static void
-ensure_rectangle_is_visible (EvView *view, GdkRectangle *rect)
+void
+_ev_view_ensure_rectangle_is_visible (EvView *view, GdkRectangle *rect)
 {
 	GtkWidget *widget = GTK_WIDGET (view);
 	GtkAdjustment *adjustment;
@@ -1309,9 +1305,14 @@ real_ev_view_get_page_extents (EvView       *view,
 		max_width = max_width + border->left + border->right;
 		/* Get the location of the bounding box */
 		if (is_dual_page (view, &odd_left)) {
-			x = view->spacing + ((page % 2 == !odd_left) ? 0 : 1) * (max_width + view->spacing);
+			gboolean right_page;
+
+			right_page = (gtk_widget_get_direction (widget) == GTK_TEXT_DIR_LTR && page % 2 == !odd_left) ||
+			             (gtk_widget_get_direction (widget) == GTK_TEXT_DIR_RTL && page % 2 == odd_left);
+
+			x = view->spacing + (right_page ? 0 : 1) * (max_width + view->spacing);
 			x = x + MAX (0, allocation.width - (max_width * 2 + view->spacing * 3)) / 2;
-			if (page % 2 == !odd_left)
+			if (right_page)
 				x = x + (max_width - width - border->left - border->right);
 		} else {
 			x = view->spacing;
@@ -1355,7 +1356,8 @@ real_ev_view_get_page_extents (EvView       *view,
 			y = view->spacing;
 
 			/* Adjust for being the left or right page */
-			if (page % 2 == !odd_left)
+			if ((gtk_widget_get_direction (widget) == GTK_TEXT_DIR_LTR && page % 2 == !odd_left) ||
+			    (gtk_widget_get_direction (widget) == GTK_TEXT_DIR_RTL && page % 2 == odd_left))
 				x = x + max_width - width;
 			else
 				x = x + (max_width + overall_border.left + overall_border.right) + view->spacing;
@@ -2277,7 +2279,7 @@ _ev_view_set_focused_element (EvView *view,
 		ev_document_model_set_page (view->model, page);
 		view_rect.x += view->scroll_x;
 		view_rect.y += view->scroll_y;
-		ensure_rectangle_is_visible (view, &view_rect);
+		_ev_view_ensure_rectangle_is_visible (view, &view_rect);
 	}
 
 	if (region) {
@@ -3521,7 +3523,7 @@ ev_view_get_doc_points_from_selection_region (EvView  *view,
 					      EvPoint *begin,
 					      EvPoint *end)
 {
-	cairo_rectangle_int_t extents;
+	cairo_rectangle_int_t first, last;
 	GdkPoint start, stop;
 	cairo_region_t *region = NULL;
 
@@ -3533,12 +3535,15 @@ ev_view_get_doc_points_from_selection_region (EvView  *view,
 	if (!region)
 		return FALSE;
 
-	cairo_region_get_extents (region, &extents);
+	cairo_region_get_rectangle (region, 0, &first);
+	cairo_region_get_rectangle (region, cairo_region_num_rectangles(region) - 1, &last);
 
-	if (!get_doc_point_from_offset (view, page, extents.x, extents.y + (extents.height / 2), &(start.x), &(start.y)))
+	if (!get_doc_point_from_offset (view, page, first.x, first.y + (first.height / 2),
+					&(start.x), &(start.y)))
 		return FALSE;
 
-	if (!get_doc_point_from_offset (view, page, extents.x + extents.width, extents.y + (extents.height / 2), &(stop.x), &(stop.y)))
+	if (!get_doc_point_from_offset (view, page, last.x + last.width, last.y + (last.height / 2),
+					&(stop.x), &(stop.y)))
 		return FALSE;
 
 	begin->x = start.x;
@@ -3558,8 +3563,7 @@ ev_view_create_annotation_from_selection (EvView          *view,
 
 	/* Check if selection is of double/triple click type (STYLE_WORD and STYLE_LINE) and in that
 	 * case get the start/end points from the selection region of pixbuf cache. Issue #1119 */
-	if (selection->rect.x1 == selection->rect.x2 && selection->rect.y1 == selection->rect.y2 &&
-            (selection->style == EV_SELECTION_STYLE_WORD || selection->style == EV_SELECTION_STYLE_LINE)) {
+	if (selection->style == EV_SELECTION_STYLE_WORD || selection->style == EV_SELECTION_STYLE_LINE) {
 
 		if (!ev_view_get_doc_points_from_selection_region (view, selection->page,
 								   &doc_point_start, &doc_point_end))
@@ -6498,6 +6502,7 @@ ev_view_move_cursor (EvView         *view,
 	gint            prev_offset;
 	gint            prev_page;
 	cairo_region_t *damage_region;
+	gboolean        changed_page;
 	gboolean        clear_selections = FALSE;
 	const gboolean  forward = count >= 0;
 
@@ -6574,6 +6579,29 @@ ev_view_move_cursor (EvView         *view,
 	if (!get_caret_cursor_area (view, view->cursor_page, view->cursor_offset, &rect))
 		return TRUE;
 
+	if (!view->continuous) {
+		changed_page = FALSE;
+		if (prev_page < view->cursor_page) {
+			ev_view_next_page (view);
+			cursor_go_to_page_start (view);
+			changed_page = TRUE;
+		} else if (prev_page > view->cursor_page) {
+			ev_view_previous_page (view);
+			cursor_go_to_page_end (view);
+			_ev_view_ensure_rectangle_is_visible (view, &rect);
+			changed_page = TRUE;
+		}
+
+		if (changed_page) {
+                       rect.x += view->scroll_x;
+                       rect.y += view->scroll_y;
+                       _ev_view_ensure_rectangle_is_visible (view, &rect);
+			g_signal_emit (view, signals[SIGNAL_CURSOR_MOVED], 0, view->cursor_page, view->cursor_offset);
+			clear_selection (view);
+			return TRUE;
+		}
+	}
+
 	if (step == GTK_MOVEMENT_DISPLAY_LINES) {
 		const gint prev_cursor_offset = view->cursor_offset;
 
@@ -6607,7 +6635,7 @@ ev_view_move_cursor (EvView         *view,
 	rect.y += view->scroll_y;
 
 	ev_document_model_set_page (view->model, view->cursor_page);
-	ensure_rectangle_is_visible (view, &rect);
+	_ev_view_ensure_rectangle_is_visible (view, &rect);
 
 	g_signal_emit (view, signals[SIGNAL_CURSOR_MOVED], 0, view->cursor_page, view->cursor_offset);
 
@@ -7369,14 +7397,13 @@ view_update_scale_limits (EvView *view)
 	gdouble    max_scale;
 	gdouble    dpi;
 	gint       rotation;
-	GdkScreen *screen;
 
 	if (!view->document)
 		return;
 
 	rotation = ev_document_model_get_rotation (view->model);
-	screen = gtk_widget_get_screen (GTK_WIDGET (view));
-	dpi = ev_document_misc_get_screen_dpi (screen) / 72.0;
+
+	dpi = ev_document_misc_get_widget_dpi (GTK_WIDGET (view)) / 72.0;
 
 	ev_document_get_min_page_size (view->document, &min_width, &min_height);
 	width = (rotation == 0 || rotation == 180) ? min_width : min_height;
@@ -8561,6 +8588,17 @@ ev_view_dual_odd_left_changed_cb (EvDocumentModel *model,
 }
 
 static void
+ev_view_direction_changed_cb (EvDocumentModel *model,
+                              GParamSpec      *pspec,
+                              EvView          *view)
+{
+	gboolean rtl = ev_document_model_get_rtl (model);
+	gtk_widget_set_direction (GTK_WIDGET (view), rtl ? GTK_TEXT_DIR_RTL : GTK_TEXT_DIR_LTR);
+	view->pending_scroll = SCROLL_TO_PAGE_POSITION;
+	gtk_widget_queue_resize (GTK_WIDGET (view));
+}
+
+static void
 ev_view_fullscreen_changed_cb (EvDocumentModel *model,
 			       GParamSpec      *pspec,
 			       EvView          *view)
@@ -8593,6 +8631,7 @@ ev_view_set_model (EvView          *view,
 	view->scale = ev_document_model_get_scale (view->model);
 	view->continuous = ev_document_model_get_continuous (view->model);
 	view->page_layout = ev_document_model_get_page_layout (view->model);
+	gtk_widget_set_direction (GTK_WIDGET(view), ev_document_model_get_rtl (view->model));
 	view->fullscreen = ev_document_model_get_fullscreen (view->model);
 	ev_view_document_changed_cb (view->model, NULL, view);
 
@@ -8625,6 +8664,9 @@ ev_view_set_model (EvView          *view,
 			  view);
 	g_signal_connect (view->model, "notify::dual-odd-left",
 			  G_CALLBACK (ev_view_dual_odd_left_changed_cb),
+			  view);
+	g_signal_connect (view->model, "notify::rtl",
+			  G_CALLBACK (ev_view_direction_changed_cb),
 			  view);
 	g_signal_connect (view->model, "notify::fullscreen",
 			  G_CALLBACK (ev_view_fullscreen_changed_cb),
@@ -8742,7 +8784,7 @@ zoom_for_size_fit_page (gdouble doc_width,
 }
 
 static double
-zoom_for_size_automatic (GdkScreen *screen,
+zoom_for_size_automatic (GtkWidget *widget,
 			 gdouble    doc_width,
 			 gdouble    doc_height,
 			 int        target_width,
@@ -8761,7 +8803,7 @@ zoom_for_size_automatic (GdkScreen *screen,
 	} else {
 		double actual_scale;
 
-		actual_scale = ev_document_misc_get_screen_dpi (screen) / 72.0;
+		actual_scale = ev_document_misc_get_widget_dpi (widget) / 72.0;
 		scale = MIN (fit_width_scale, actual_scale);
 	}
 
@@ -8803,7 +8845,7 @@ ev_view_zoom_for_size_continuous_and_dual_page (EvView *view,
 		scale = zoom_for_size_fit_page (doc_width, doc_height, width - sb_size, height);
 		break;
 	case EV_SIZING_AUTOMATIC:
-		scale = zoom_for_size_automatic (gtk_widget_get_screen (GTK_WIDGET (view)),
+		scale = zoom_for_size_automatic (GTK_WIDGET (view),
 						 doc_width, doc_height, width - sb_size, height);
 		break;
 	default:
@@ -8847,7 +8889,7 @@ ev_view_zoom_for_size_continuous (EvView *view,
 		scale = zoom_for_size_fit_page (doc_width, doc_height, width - sb_size, height);
 		break;
 	case EV_SIZING_AUTOMATIC:
-		scale = zoom_for_size_automatic (gtk_widget_get_screen (GTK_WIDGET (view)),
+		scale = zoom_for_size_automatic (GTK_WIDGET (view),
 						 doc_width, doc_height, width - sb_size, height);
 		break;
 	default:
@@ -8897,7 +8939,7 @@ ev_view_zoom_for_size_dual_page (EvView *view,
 		break;
 	case EV_SIZING_AUTOMATIC:
 		sb_size = ev_view_get_scrollbar_size (view, GTK_ORIENTATION_VERTICAL);
-		scale = zoom_for_size_automatic (gtk_widget_get_screen (GTK_WIDGET (view)),
+		scale = zoom_for_size_automatic (GTK_WIDGET (view),
 						 doc_width, doc_height, width - sb_size, height);
 		break;
 	default:
@@ -8935,7 +8977,7 @@ ev_view_zoom_for_size_single_page (EvView *view,
 		break;
 	case EV_SIZING_AUTOMATIC:
 		sb_size = ev_view_get_scrollbar_size (view, GTK_ORIENTATION_VERTICAL);
-		scale = zoom_for_size_automatic (gtk_widget_get_screen (GTK_WIDGET (view)),
+		scale = zoom_for_size_automatic (GTK_WIDGET (view),
 						 doc_width, doc_height, width - sb_size, height);
 		break;
 	default:
@@ -9042,7 +9084,7 @@ jump_to_find_result (EvView *view)
 
 		rect = ev_view_find_get_result (view, page, view->find_result);
 		_ev_view_transform_doc_rect_to_view_rect (view, page, rect, &view_rect);
-		ensure_rectangle_is_visible (view, &view_rect);
+		_ev_view_ensure_rectangle_is_visible (view, &view_rect);
 		if (view->caret_enabled && view->rotation == 0)
 			position_caret_cursor_at_doc_point (view, page, rect->x1, rect->y1);
 
@@ -9276,7 +9318,7 @@ ev_view_highlight_forward_search (EvView       *view,
 	ev_document_model_set_page (view->model, page);
 
 	_ev_view_transform_doc_rect_to_view_rect (view, page, &mapping->area, &view_rect);
-	ensure_rectangle_is_visible (view, &view_rect);
+	_ev_view_ensure_rectangle_is_visible (view, &view_rect);
 	gtk_widget_queue_draw (GTK_WIDGET (view));
 }
 
@@ -9789,7 +9831,7 @@ ev_view_set_cursor (EvView *view, EvViewCursor new_cursor)
 	widget = gtk_widget_get_toplevel (GTK_WIDGET (view));
 	cursor = ev_view_cursor_new (gtk_widget_get_display (widget), new_cursor);
 	gdk_window_set_cursor (window, cursor);
-	gdk_flush ();
+	gdk_display_flush (gtk_widget_get_display (widget));
 	if (cursor)
 		g_object_unref (cursor);
 }
