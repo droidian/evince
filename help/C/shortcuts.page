@@ -107,12 +107,12 @@ document).</p></td>
 </tr>
     <tr>
         <td><p>Go to the beginning of a page (beginning of the document if
-<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
+<gui>Continuous</gui> is selected in the main menu in the top-right corner).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
         <td><p>Go to the end of a page (end of the document if
-<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
+<gui>Continuous</gui> is selected in the main menu in the top-right corner).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>
@@ -132,7 +132,7 @@ document).</p></td>
         <td><p><keyseq><key>Shift</key><key>Ctrl</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
-    	<td><p>Display the side bar with a table of contents and bookmarks.</p></td>
+         <td><p>Display the side pane with a table of contents and bookmarks.</p></td>
          <td><p><key>F9</key></p></td>
     </tr>
     <tr>

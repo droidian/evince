@@ -60,7 +60,10 @@
     <p>Abyste omezily slova jen na ta, která se shodují velikostí písmen nebo úplností, klikněte na vyhledávací pole pravým tlačítkem a vyberte <gui>Rozlišovat velikost písmen</gui> nebo <gui>Pouze celá slova</gui>.</p>
   </note>
 
-  <p>Pokud se hledané slovo nebo fráze nikde v dokumentu nenajde, zobrazí se ve vyhledávacím poli <media type="image" src="figures/search-not-found.png"/>. V případě, že se v něm nachází alespoň jednou, zobrazí se vám, kolikrát se hledané slovo vyskytuje na aktuální stránce.</p>
+  <p>If the word or phrase that you searched for is not found in the document,
+  you will see <media type="image" its:translate="no" src="figures/search-not-found.png"/> in the
+  search box. However, if it appears in the document at least once, you will be
+  shown how many times the search result appears on the current page.</p>
 
   <note>
     <p>Vyhledávat se dá pouze v dokumentech PDF. Ale můžete narazit i na dokumenty PDF, ve kterých vyhledávat nelze, protože text je v nich uložen v podobě obrázku.</p>

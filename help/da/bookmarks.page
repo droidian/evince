@@ -6,6 +6,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10" date="2013-11-04" status="final"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="final"/>
 
     <credit type="author">
       <name>Tiffany Antopolski</name>
@@ -29,8 +30,8 @@
 
   <p>Når man åbner en fil er der et sidepanel i vinduets venstre side. Hvis sidepanelet ikke er synligt, skal du klikke på tasten <key>F9</key>.</p>
 
-  <p>At the top of this side pane, there is a drop-down menu. To work with
-  bookmarks, select the <gui>Bookmarks</gui> option from this drop-down menu.</p>
+  <p>At the bottom of this side pane, select the <gui style="button">Bookmarks</gui>
+  button.</p>
 
   <links type="section"/>
 
@@ -42,11 +43,13 @@
       <p>Naviger til siden i PDF-dokumentet, hvor du ønsker at tilføje bogmærket.</p>
     </item>
     <item>
-      <p>In the side pane, select <gui>Bookmarks</gui> from the drop-down
-      menu.</p>
+      <p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+      at the bottom.</p>
     </item>
     <item>
-      <p>Klik på knappen <gui>Tilføj</gui> i bunden af sidepanelet. Standardnavnet, for bogmærket du lige tilføjede, er sidenummeret for dokumentet.</p>
+      <p>Press the <gui style="button">+</gui> button at the bottom of the side
+      pane. The default name of the bookmark you just added is the page number
+      of the document.</p>
     </item>
     <item>
       <p>Bogmærket vises nu i bogmærkelisten.</p>
@@ -59,6 +62,8 @@
   <title>Omdøb et bogmærke</title>
 
   <steps>
+    <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+    at the bottom.</p></item>
     <item><p>Vælg bogmærket i sidepanelet.</p></item>
     <item><p>Klik på bogmærkenavnet.</p></item>
     <item><p>Indtast det nye navn.</p></item>
@@ -71,8 +76,9 @@
   <title>Slet et bogmærke</title>
 
   <steps>
-   <item><p>Vælg bogmærket i sidepanelet.</p></item>
-   <item><p>Klik på knappen <gui>Fjern</gui> i bunden af sidepanelet.</p></item>
+   <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+   at the bottom.</p></item>
+   <item><p>Press the <gui style="button">-</gui> button at the bottom of the side pane.</p></item>
   </steps>
 
 </section>

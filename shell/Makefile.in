@@ -135,20 +135,20 @@ PROGRAMS = $(bin_PROGRAMS) $(libexec_PROGRAMS)
 am__evince_SOURCES_DIST = ev-annotation-properties-dialog.h \
 	ev-annotation-properties-dialog.c ev-annotations-toolbar.h \
 	ev-annotations-toolbar.c ev-bookmarks.h ev-bookmarks.c \
-	ev-bookmark-action.h ev-bookmark-action.c ev-application.c \
-	ev-application.h ev-file-monitor.h ev-file-monitor.c \
-	ev-find-sidebar.h ev-find-sidebar.c ev-history.c ev-history.h \
-	ev-keyring.h ev-keyring.c ev-loading-message.c \
-	ev-loading-message.h ev-message-area.c ev-message-area.h \
-	ev-metadata.c ev-metadata.h ev-password-view.h \
-	ev-password-view.c ev-progress-message-area.h \
-	ev-progress-message-area.c ev-properties-dialog.c \
-	ev-properties-dialog.h ev-properties-fonts.c \
-	ev-properties-fonts.h ev-properties-license.c \
-	ev-properties-license.h ev-recent-view.c ev-recent-view.h \
-	ev-toolbar.c ev-toolbar.h ev-utils.c ev-utils.h ev-window.c \
-	ev-window.h ev-window-title.c ev-window-title.h \
-	ev-zoom-action.c ev-zoom-action.h ev-sidebar.c ev-sidebar.h \
+	ev-application.c ev-application.h ev-file-monitor.h \
+	ev-file-monitor.c ev-find-sidebar.h ev-find-sidebar.c \
+	ev-history.c ev-history.h ev-keyring.h ev-keyring.c \
+	ev-loading-message.c ev-loading-message.h ev-message-area.c \
+	ev-message-area.h ev-metadata.c ev-metadata.h \
+	ev-password-view.h ev-password-view.c \
+	ev-progress-message-area.h ev-progress-message-area.c \
+	ev-properties-dialog.c ev-properties-dialog.h \
+	ev-properties-fonts.c ev-properties-fonts.h \
+	ev-properties-license.c ev-properties-license.h \
+	ev-recent-view.c ev-recent-view.h ev-toolbar.c ev-toolbar.h \
+	ev-utils.c ev-utils.h ev-window.c ev-window.h \
+	ev-window-title.c ev-window-title.h ev-zoom-action.c \
+	ev-zoom-action.h ev-sidebar.c ev-sidebar.h \
 	ev-sidebar-annotations.c ev-sidebar-annotations.h \
 	ev-sidebar-attachments.c ev-sidebar-attachments.h \
 	ev-sidebar-bookmarks.h ev-sidebar-bookmarks.c \
@@ -162,9 +162,7 @@ am__objects_1 =
 @ENABLE_DBUS_TRUE@	$(am__objects_1)
 am_evince_OBJECTS = evince-ev-annotation-properties-dialog.$(OBJEXT) \
 	evince-ev-annotations-toolbar.$(OBJEXT) \
-	evince-ev-bookmarks.$(OBJEXT) \
-	evince-ev-bookmark-action.$(OBJEXT) \
-	evince-ev-application.$(OBJEXT) \
+	evince-ev-bookmarks.$(OBJEXT) evince-ev-application.$(OBJEXT) \
 	evince-ev-file-monitor.$(OBJEXT) \
 	evince-ev-find-sidebar.$(OBJEXT) evince-ev-history.$(OBJEXT) \
 	evince-ev-keyring.$(OBJEXT) \
@@ -236,7 +234,6 @@ am__depfiles_remade =  \
 	./$(DEPDIR)/evince-ev-annotation-properties-dialog.Po \
 	./$(DEPDIR)/evince-ev-annotations-toolbar.Po \
 	./$(DEPDIR)/evince-ev-application.Po \
-	./$(DEPDIR)/evince-ev-bookmark-action.Po \
 	./$(DEPDIR)/evince-ev-bookmarks.Po \
 	./$(DEPDIR)/evince-ev-file-monitor.Po \
 	./$(DEPDIR)/evince-ev-find-sidebar.Po \
@@ -579,20 +576,20 @@ NULL =
 evince_SOURCES = ev-annotation-properties-dialog.h \
 	ev-annotation-properties-dialog.c ev-annotations-toolbar.h \
 	ev-annotations-toolbar.c ev-bookmarks.h ev-bookmarks.c \
-	ev-bookmark-action.h ev-bookmark-action.c ev-application.c \
-	ev-application.h ev-file-monitor.h ev-file-monitor.c \
-	ev-find-sidebar.h ev-find-sidebar.c ev-history.c ev-history.h \
-	ev-keyring.h ev-keyring.c ev-loading-message.c \
-	ev-loading-message.h ev-message-area.c ev-message-area.h \
-	ev-metadata.c ev-metadata.h ev-password-view.h \
-	ev-password-view.c ev-progress-message-area.h \
-	ev-progress-message-area.c ev-properties-dialog.c \
-	ev-properties-dialog.h ev-properties-fonts.c \
-	ev-properties-fonts.h ev-properties-license.c \
-	ev-properties-license.h ev-recent-view.c ev-recent-view.h \
-	ev-toolbar.c ev-toolbar.h ev-utils.c ev-utils.h ev-window.c \
-	ev-window.h ev-window-title.c ev-window-title.h \
-	ev-zoom-action.c ev-zoom-action.h ev-sidebar.c ev-sidebar.h \
+	ev-application.c ev-application.h ev-file-monitor.h \
+	ev-file-monitor.c ev-find-sidebar.h ev-find-sidebar.c \
+	ev-history.c ev-history.h ev-keyring.h ev-keyring.c \
+	ev-loading-message.c ev-loading-message.h ev-message-area.c \
+	ev-message-area.h ev-metadata.c ev-metadata.h \
+	ev-password-view.h ev-password-view.c \
+	ev-progress-message-area.h ev-progress-message-area.c \
+	ev-properties-dialog.c ev-properties-dialog.h \
+	ev-properties-fonts.c ev-properties-fonts.h \
+	ev-properties-license.c ev-properties-license.h \
+	ev-recent-view.c ev-recent-view.h ev-toolbar.c ev-toolbar.h \
+	ev-utils.c ev-utils.h ev-window.c ev-window.h \
+	ev-window-title.c ev-window-title.h ev-zoom-action.c \
+	ev-zoom-action.h ev-sidebar.c ev-sidebar.h \
 	ev-sidebar-annotations.c ev-sidebar-annotations.h \
 	ev-sidebar-attachments.c ev-sidebar-attachments.h \
 	ev-sidebar-bookmarks.h ev-sidebar-bookmarks.c \
@@ -818,7 +815,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evince-ev-annotation-properties-dialog.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evince-ev-annotations-toolbar.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evince-ev-application.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evince-ev-bookmark-action.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evince-ev-bookmarks.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evince-ev-file-monitor.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evince-ev-find-sidebar.Po@am__quote@ # am--include-marker
@@ -921,20 +917,6 @@ evince-ev-bookmarks.obj: ev-bookmarks.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='ev-bookmarks.c' object='evince-ev-bookmarks.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evince_CPPFLAGS) $(CPPFLAGS) $(evince_CFLAGS) $(CFLAGS) -c -o evince-ev-bookmarks.obj `if test -f 'ev-bookmarks.c'; then $(CYGPATH_W) 'ev-bookmarks.c'; else $(CYGPATH_W) '$(srcdir)/ev-bookmarks.c'; fi`
-
-evince-ev-bookmark-action.o: ev-bookmark-action.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evince_CPPFLAGS) $(CPPFLAGS) $(evince_CFLAGS) $(CFLAGS) -MT evince-ev-bookmark-action.o -MD -MP -MF $(DEPDIR)/evince-ev-bookmark-action.Tpo -c -o evince-ev-bookmark-action.o `test -f 'ev-bookmark-action.c' || echo '$(srcdir)/'`ev-bookmark-action.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/evince-ev-bookmark-action.Tpo $(DEPDIR)/evince-ev-bookmark-action.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='ev-bookmark-action.c' object='evince-ev-bookmark-action.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evince_CPPFLAGS) $(CPPFLAGS) $(evince_CFLAGS) $(CFLAGS) -c -o evince-ev-bookmark-action.o `test -f 'ev-bookmark-action.c' || echo '$(srcdir)/'`ev-bookmark-action.c
-
-evince-ev-bookmark-action.obj: ev-bookmark-action.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evince_CPPFLAGS) $(CPPFLAGS) $(evince_CFLAGS) $(CFLAGS) -MT evince-ev-bookmark-action.obj -MD -MP -MF $(DEPDIR)/evince-ev-bookmark-action.Tpo -c -o evince-ev-bookmark-action.obj `if test -f 'ev-bookmark-action.c'; then $(CYGPATH_W) 'ev-bookmark-action.c'; else $(CYGPATH_W) '$(srcdir)/ev-bookmark-action.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/evince-ev-bookmark-action.Tpo $(DEPDIR)/evince-ev-bookmark-action.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='ev-bookmark-action.c' object='evince-ev-bookmark-action.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evince_CPPFLAGS) $(CPPFLAGS) $(evince_CFLAGS) $(CFLAGS) -c -o evince-ev-bookmark-action.obj `if test -f 'ev-bookmark-action.c'; then $(CYGPATH_W) 'ev-bookmark-action.c'; else $(CYGPATH_W) '$(srcdir)/ev-bookmark-action.c'; fi`
 
 evince-ev-application.o: ev-application.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(evince_CPPFLAGS) $(CPPFLAGS) $(evince_CFLAGS) $(CFLAGS) -MT evince-ev-application.o -MD -MP -MF $(DEPDIR)/evince-ev-application.Tpo -c -o evince-ev-application.o `test -f 'ev-application.c' || echo '$(srcdir)/'`ev-application.c
@@ -1539,7 +1521,6 @@ distclean: distclean-am
 		-rm -f ./$(DEPDIR)/evince-ev-annotation-properties-dialog.Po
 	-rm -f ./$(DEPDIR)/evince-ev-annotations-toolbar.Po
 	-rm -f ./$(DEPDIR)/evince-ev-application.Po
-	-rm -f ./$(DEPDIR)/evince-ev-bookmark-action.Po
 	-rm -f ./$(DEPDIR)/evince-ev-bookmarks.Po
 	-rm -f ./$(DEPDIR)/evince-ev-file-monitor.Po
 	-rm -f ./$(DEPDIR)/evince-ev-find-sidebar.Po
@@ -1621,7 +1602,6 @@ maintainer-clean: maintainer-clean-am
 		-rm -f ./$(DEPDIR)/evince-ev-annotation-properties-dialog.Po
 	-rm -f ./$(DEPDIR)/evince-ev-annotations-toolbar.Po
 	-rm -f ./$(DEPDIR)/evince-ev-application.Po
-	-rm -f ./$(DEPDIR)/evince-ev-bookmark-action.Po
 	-rm -f ./$(DEPDIR)/evince-ev-bookmarks.Po
 	-rm -f ./$(DEPDIR)/evince-ev-file-monitor.Po
 	-rm -f ./$(DEPDIR)/evince-ev-find-sidebar.Po

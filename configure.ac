@@ -4,7 +4,7 @@
 
 m4_define([ev_major_version],[3])
 m4_define([ev_minor_version],[35])
-m4_define([ev_micro_version],[1])
+m4_define([ev_micro_version],[92])
 m4_define([ev_extra_version],[])
 m4_define([ev_version],[ev_major_version.ev_minor_version.ev_micro_version()ev_extra_version])
 
@@ -74,8 +74,10 @@ LT_LIB_M
 
 GNOME_CXX_WARNINGS
 
+# FIXME: Remove AM_GNU_GETTEXT_VERSION once autoreconf supports REQUIRE_VERSION
 AX_REQUIRE_DEFINED([AM_GNU_GETTEXT_VERSION])
 AM_GNU_GETTEXT_VERSION([0.19.8])
+AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
 
 AX_REQUIRE_DEFINED([AM_GNU_GETTEXT])
 AM_GNU_GETTEXT([external])
@@ -126,7 +128,7 @@ CAIRO_REQUIRED=1.10.0
 GLIB_REQUIRED=2.38.0
 LIBSECRET_REQUIRED=0.5
 GTK_REQUIRED=3.22.0
-NAUTILUS_REQUIRED=2.91.4
+NAUTILUS_REQUIRED=3.28.0
 GDK_PIXBUF_REQUIRED=2.36.5
 GSPELL_REQUIRED=1.6.0
 SYNCTEX_REQUIRED=1.19

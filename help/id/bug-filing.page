@@ -17,25 +17,15 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Andika Triwidada</mal:name>
       <mal:email>andika@gmail.com</mal:email>
-      <mal:years>2012-2014, 2016, 2017.</mal:years>
+      <mal:years>2012-2014, 2016, 2017, 2020.</mal:years>
     </mal:credit>
   </info>
 
 <title>Laporkan kutu atas <app>penilik dokumen</app></title>
-<p>
-   The <app>document viewer</app> is maintained by a volunteer community. You are welcome to participate.  If you notice a problem you can file a <em>bug report</em>. To file a bug, go to <link href="https://gitlab.gnome.org/GNOME/evince/issues/"/>.
-   </p>
+<p><app>penampil dokumen</app> dikembangkan dan dipelihara oleh komunitas relawan. Anda dipersilakan untuk berpartisipasi. Bila Anda menjumpai suatu masalah, Anda dapat <em>melaporkan bug</em>. Untuk melaporkan bug, silakan menuju <link href="https://gitlab.gnome.org/GNOME/evince/issues/"/>.</p>
    <p>Ini adalah sistem pelacakan bug dimana para pengguna dan pengembang dapat melaporkan rincian tent bug, crash, dan permintaan peningkatan.</p>
-   <p>
-   To participate you need an account which will give you the ability to gain access, file bugs, and make comments.  Also, you need to register so you can receive updates by e-mail about the status of your bug. If you don't already have an account, just click on the <gui>Sign in / Register</gui> link to create one.
-   </p>
-   <p>
-   Once you have an account, log in, and click on <gui>New issue</gui>.
-   Before reporting a bug, please read the <link href="https://wiki.gnome.org/Community/GettingInTouch/Bugzilla/Guidelines">bug writing guidelines</link>,  and please <link href="https://gitlab.gnome.org/GNOME/evince/issues">browse</link> for the bug to see if it already exists.
-   </p>
-   <p>
-   If you are requesting a new feature, choose <gui>1. Feature</gui> in the <gui>Labels</gui> menu.
-   Fill in the Title and Description sections and click <gui>Submit Issue</gui>.
-   </p>
+   <p>Untuk berpartisipasi Anda perlu suatu akun yang akan memberi Anda kemampuan mendapatkan akses, melaporkan bug, dan membuat komentar. Anda juga perlu mendaftar sehingga Anda dapat menerima berita terbaru lewat surel tentang status bug Anda. Bila Anda belum memiliki akun, klik saja pada taut <gui>Masuk / Mendaftar</gui> untuk membuatnya.</p>
+   <p>Setelah Anda memiliki akun, log masuk, klik pada <gui>New issue</gui>. Sebelum melaporkan suatu bug, harap baca <link href="https://wiki.gnome.org/Community/GettingInTouch/Bugzilla/Guidelines">panduan menulis bug</link>, dan mohon <link href="https://gitlab.gnome.org/GNOME/evince/issues">ramban</link> bug tersebut untuk melihat apakah sudah dilaporkan.</p>
+   <p>Bila Anda meminta fitur baru, pilih <gui>1. Feature</gui> dalam menu <gui>Labels</gui>. Isi seksi Title and Description dan klik <gui>Submit Issue</gui>.</p>
    <p>Laporan Anda akan diberi suatu nomor ID, dan statusnya akan dimutakhirkan ketika sedang ditangani.</p>
 </page>

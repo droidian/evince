@@ -6,6 +6,7 @@
     <desc>파일을 편집하려면 <app>문서 보기</app>를 사용할 수는 없습니다.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <revision pkgversion="3.34" version="0.2" date="2019-11-26" status="final"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -35,6 +36,10 @@
 
 
 <note>
- <p>PDF와 포스트스크립트(.ps) 파일은 보통 편집 용도가 아니지만, PDF 편집 프로그램은 있습니다. 예를 들어, <link href="http://pdfedit.cz/en/index.html">pdfedit</link>와 같은 소프트웨어를 사용해보십시오.</p>
+ <p>
+ PDF and PostScript (.ps) files are not usually intended to be edited, but PDF editing software is available. Try
+ <app>LibreOffice Draw</app> or <app>Okular</app>, for example.
+ Furthermore, <app>pdfarranger</app> allows rearranging or removing pages and merging files.
+ </p>
 </note>
 </page>

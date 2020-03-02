@@ -5,6 +5,7 @@
     <link type="guide" xref="index#reading"/>
     <revision pkgversion="3.2" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="review"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -84,9 +85,6 @@
 
   <list>
     <item>
-      <p>A jobb felső sarokban kattintson a <gui>Nézetbeállítások</gui> gombra, és válassza az <gui>Előző oldal</gui> vagy a <gui>Következő oldal</gui> menüpontot.</p>
-    </item>
-    <item>
       <p>Nyomja meg a <keyseq><key>Ctrl</key><key>Page Up</key></keyseq> vagy <keyseq><key>Ctrl</key><key>Page Down</key></keyseq> billentyűt.</p>
     </item>
     <item>
@@ -96,16 +94,15 @@
           <p>Írjon be egy oldalszámot a <link xref="headerbar">fejlécsávon</link> lévő <gui style="input">Oldal kiválasztása</gui> mezőbe, és nyomja meg az <key>Enter</key> billentyűt.</p>
         </item>
         <item>
-          <p>Ha szeretné látni a korábban már felkeresett oldalakat, akkor nyomja meg a fejlécsávon a <gui style="button">&lt;</gui> vagy <gui style="button">&gt;</gui> gombot.</p>
-        </item>
-        <item>
           <p>Ha a dokumentum elejére vagy végére szeretne ugrani:</p>
           <list>
             <item>
-              <p>Kattintson a <gui>Nézetbeállítások</gui> menüre a jobb felső sarokban, majd válassza az <gui>Első oldal</gui> menüpontot. Megnyomhatja a <keyseq><key>Ctrl</key><key>Home</key></keyseq> billentyűkombinációt is.</p>
+              <p>Press <keyseq><key>Ctrl</key><key>Home</key></keyseq> on your
+              keyboard.</p>
             </item>
             <item>
-              <p>Kattintson a <gui>Nézetbeállítások</gui> menüre a jobb felső sarokban, majd válassza az <gui>Utolsó oldal</gui> menüpontot, vagy nyomja meg a <keyseq><key>Ctrl</key><key>End</key></keyseq> billentyűkombinációt.</p>
+              <p>Press <keyseq><key>Ctrl</key><key>End</key></keyseq> on your
+              keyboard.</p>
             </item>
           </list>
         </item>
@@ -114,7 +111,10 @@
     <item>
       <p>Egyszerre tíz oldallal való továbblépéshez nyomja meg a <keyseq><key>Shift</key><key>Page Up</key></keyseq> vagy <keyseq><key>Shift</key><key>Page Down</key></keyseq> billentyűkombinációt.</p>
       <note style="tip">
-        <p>Alapesetben egyszerre csak egy oldalon belül mozoghat. Ha oldalak között is szeretne görgetéssel vagy húzással mozogni, akkor kattintson a jobb felső sarokban a <gui>Nézetbeállítások</gui> gombra, majd válassza a <gui>Folytonos</gui> menüpontot.</p>
+        <p>You can only move around one page at a time, by default. If you want
+        to move between pages just by scrolling or dragging, press the menu
+        button in the top-right corner of the window and select
+        <gui style="menuitem">Continuous</gui>.</p>
       </note>
     </item>
   </list>
@@ -124,7 +124,10 @@
 <section id="navigating">
   <title>Navigálás oldallistával vagy tartalomjegyzékkel</title>
 
-  <p>Az oldalsáv megjelenítéséhez kattintson a jobb felső sarokban a <gui>Nézetbeállítások</gui> gombra, majd válassza az <gui>Oldalsáv</gui> menüpontot, vagy nyomja meg az <key>F9</key> billentyűt. Ekkor megjelenik a dokumentum összes oldalának előnézete.</p>
+  <p>To make the side pane visible, select the <gui>Side pane</gui> button in
+  the top-left corner, or press <key>F9</key>
+  on the keyboard. You should see a preview of all of the pages in the
+  document.</p>
 
   <p>Az oldalak közt az oldalsávban azokra kattintva mozoghat.</p>
 
@@ -140,31 +143,28 @@
 <section id="zoom">
   <title>Nagyítás és kicsinyítés</title>
 
-  <list>
-    <item>
-      <p>A nagyításhoz kattintson a jobb felső sarokban a <gui>Nézetbeállítások</gui> gombra, majd válassza a <gui>Nagyítás</gui> menüpontot, vagy használja a <keyseq><key>Ctrl</key><key>+</key></keyseq> billentyűkombinációt.</p>
-    </item>
-    <item>
-      <p>A kicsinyítéshez kattintson a jobb felső sarokban a <gui>Nézetbeállítások</gui> gombra, majd válassza a <gui>Kicsinyítés</gui> menüpontot, vagy használja a <keyseq><key>Ctrl</key><key>-</key></keyseq> billentyűkombinációt.</p>
-    </item>
-  </list>
-
-  <p>Ennek alternatívájaként a következőket is teheti:</p>
+  <p>To adjust the zoom level:</p>
 
   <list>
     <item>
-      <p>Tartsa lenyomva a <key>Ctrl</key> billentyűt, és egérgörgőjével módosítsa a nagyítást.</p>
-    </item>
-    <item>
-      <p>Válassza ki a kívánt nagyítási arányt az eszköztáron lévő legördülő menüből.</p>
+      <p>Select the desired zoom percentage from the drop-down menu in the top-right corner.</p>
       <media type="image" src="figures/zoom.png" its:translate="no"/>
+    </item>
+    <item>
+      <p>Alternatively, use the keyboard shortcuts <keyseq><key>Ctrl</key><key>+</key></keyseq>
+      to zoom in, or <keyseq><key>Ctrl</key><key>-</key></keyseq> to zoom out.</p>
+    </item>
+    <item>
+      <p>Alternatively, hold down <key>Ctrl</key> and use your mouse scroll wheel to zoom.</p>
     </item>
   </list>
 
   <note>
     <p>A <gui>Teljes oldal</gui> lehetőség hatására a dokumentum egy oldala elfoglalja az ablak teljes <em>magasságát</em>.</p>
     <p>A <gui>Teljes szélesség</gui> lehetőség hatására a dokumentum egy oldala elfoglalja az ablak teljes <em>szélességét</em>.</p>
-    <p>Ha egymás mellett két oldalt szeretne látni, mint egy könyvben, akkor a jobb felső sarokban kattintson a <gui>Nézetbeállítások</gui> gombra, és válassza a <gui>Két oszlop</gui> menüpontot.</p>
+    <p>If you want to see two pages at once, side by side, like in a book,
+    press the menu button in the top-right corner of the window and select
+    <gui style="menuitem">Dual</gui>.</p>
     <p>Ha az allow-links-change-zoom gsetting hamisra van állítva, akkor a hivatkozások nem módosíthatják a nagyítási szintet.</p>
   </note>
 
@@ -172,18 +172,11 @@
 
   <list>
     <item>
-      <p>A jobb felső sarokban kattintson a <gui>Nézetbeállítások</gui> gombra, és válassza a <gui>Teljes képernyő</gui> menüpontot, vagy nyomja meg az <key>F11</key> billentyűt.</p>
+      <p>Press <key>F11</key>.</p>
     </item>
     <item>
       <p>A teljes képernyős módból való kilépéshez:</p>
-      <list>
-        <item>
-          <p>Nyomja meg az <key>F11</key> vagy <key>Escape</key> billentyűt.</p>
-        </item>
-        <item>
-          <p>Vagy a <gui>Teljes képernyős</gui> mód elhagyásához kattintson a jobb felső sarokban lévő  <gui>Nézetbeállítások</gui> gombra, és válassza a <gui>Teljes képernyő</gui> menüpontot.</p>
-        </item>
-      </list>
+      <p>Nyomja meg az <key>F11</key> vagy <key>Escape</key> billentyűt.</p>
     </item>
   </list>
 </section>

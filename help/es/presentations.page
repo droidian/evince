@@ -7,6 +7,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="review"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -23,7 +24,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2012 - 2019</mal:years>
+      <mal:years>2012 - 2020</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -42,7 +43,7 @@
   <p><link xref="opening">Abrir un archivo</link></p>
  </item>
  <item>
-   <p>Pulse el botón <gui>Ver opciones</gui> en la esquina superior derecha y elija <gui>Presentación</gui> (o pulse <key>F5</key>).</p>
+   <p>Pulse el botón de menú en la esquina superior derecha de la ventana y pulse el botón <gui style="menuitem">Presentar como diapositivas</gui> (o pulse <key>F5</key>).</p>
   <p>La presentación se mostrará a pantalla completa.</p>
  </item>
 </steps>
@@ -55,6 +56,13 @@
   <p>También puede usar la rueda del ratón para moverse hacia adelante y hacia atrás en la presentación.</p>
  </note>
  <p>Use <key>Esc</key> para salir de la presentación.</p>
+</section>
+
+<section id="blank-screen">
+<title>Mostrar una pantalla vacía</title>
+<p>Pulse <key>B</key> o <key>.</key> para mostrar una pantalla en negro.</p>
+<p>Pulse <key>W</key> para mostrar una pantalla en blanco.</p>
+<p>Pulse <key>B</key>, <key>.</key>, o <key>W</key> otra vez para mostrar la diapositiva.</p>
 </section>
 
 <section id="file-formats">

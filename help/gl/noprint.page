@@ -70,7 +70,7 @@
 
   <steps>
     <item>
-      <p>Prema <keyseq><key>Alt</key><key>F2</key></keyseq> para abrir a xanela de Executar aplicativo.</p>
+      <p>Prema <keyseq><key>Alt</key><key>F2</key></keyseq> para abrir a xanela de Executar aplicación.</p>
     </item>
     <item>
       <p>Escriba <input>gconf-editor</input> na caixa de texto e prema <gui>Executar</gui>. Abrirase o editor de configuración.</p>

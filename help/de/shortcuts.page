@@ -131,11 +131,13 @@
         <td><p><keyseq><key>Strg</key><key>L</key></keyseq> gefolgt von der Seitennummer und der <key>Eingabetaste</key></p></td>
 </tr>
     <tr>
-        <td><p>An den Anfang der Seite springen (Anfang des Dokuments, falls <gui>Fortlaufend</gui> ausgewählt ist im Menü).</p></td>
+        <td><p>Go to the beginning of a page (beginning of the document if
+<gui>Continuous</gui> is selected in the main menu in the top-right corner).</p></td>
          <td><p><key>Pos1</key></p></td>
     </tr>
     <tr>
-        <td><p>An das Ende der Seite springen (Ende des Dokuments, falls <gui>Fortlaufend</gui> ausgewählt ist im Menü).</p></td>
+        <td><p>Go to the end of a page (end of the document if
+<gui>Continuous</gui> is selected in the main menu in the top-right corner).</p></td>
         <td><p><key>Ende</key></p></td>
     </tr>
     <tr>
@@ -155,7 +157,7 @@
         <td><p><keyseq><key>Strg</key><key>Umschalttaste</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
-    	<td><p>Die Seitenliste mit einem Inhaltsverzeichnis und Lesezeichen anzeigen.</p></td>
+         <td><p>Display the side pane with a table of contents and bookmarks.</p></td>
          <td><p><key>F9</key></p></td>
     </tr>
     <tr>
@@ -263,6 +265,20 @@
     <tr>
         <td><p>Zwei Seiten nebeneinander anzeigen.</p></td>
         <td><p><key>D</key></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="presentation">
+    <title>Presentation mode</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Toggle black screen.</p></td>
+        <td><p><key>B</key> / <key>.</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Toggle white screen.</p></td>
+        <td><p><key>W</key></p></td>
     </tr>
 </table>
 </section>

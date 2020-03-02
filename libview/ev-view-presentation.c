@@ -723,6 +723,7 @@ ev_view_presentation_goto_window_create (EvViewPresentation *pview)
 	pview->goto_window = gtk_window_new (GTK_WINDOW_POPUP);
         goto_window = GTK_WINDOW (pview->goto_window);
 	gtk_window_set_screen (goto_window, gtk_widget_get_screen (GTK_WIDGET (pview)));
+	gtk_window_set_transient_for (goto_window, toplevel);
 
 	if (gtk_window_has_group (toplevel))
 		gtk_window_group_add_window (gtk_window_get_group (toplevel), goto_window);
@@ -779,14 +780,6 @@ ev_view_presentation_goto_window_send_key_event (EvViewPresentation *pview,
 						 GdkEvent           *event)
 {
 	GdkEventKey *new_event;
-	GdkScreen   *screen;
-
-	/* Move goto window off screen */
-	screen = gtk_widget_get_screen (GTK_WIDGET (pview));
-	gtk_window_move (GTK_WINDOW (pview->goto_window),
-			 gdk_screen_get_width (screen) + 1,
-			 gdk_screen_get_height (screen) + 1);
-	gtk_widget_show (pview->goto_window);
 
 	new_event = (GdkEventKey *) gdk_event_copy (event);
 	g_object_unref (new_event->window);
@@ -797,7 +790,6 @@ ev_view_presentation_goto_window_send_key_event (EvViewPresentation *pview,
 
 	gtk_widget_event (pview->goto_window, (GdkEvent *)new_event);
 	gdk_event_free ((GdkEvent *)new_event);
-	gtk_widget_hide (pview->goto_window);
 }
 
 /* Links */
@@ -1211,10 +1203,10 @@ ev_view_presentation_key_press_event (GtkWidget   *widget,
 		gint x, y;
 
 		ev_view_presentation_goto_window_create (pview);
-		ev_view_presentation_goto_window_send_key_event (pview, (GdkEvent *)event);
 		ev_document_misc_get_pointer_position (GTK_WIDGET (pview), &x, &y);
 		gtk_window_move (GTK_WINDOW (pview->goto_window), x, y);
 		gtk_widget_show (pview->goto_window);
+		ev_view_presentation_goto_window_send_key_event (pview, (GdkEvent *)event);
 		ev_view_presentation_goto_entry_grab_focus (pview);
 
 		return TRUE;
@@ -1285,14 +1277,18 @@ ev_view_presentation_motion_notify_event (GtkWidget      *widget,
 static void
 ev_view_presentation_update_monitor_geometry (EvViewPresentation *pview)
 {
-	GdkScreen          *screen = gtk_widget_get_screen (GTK_WIDGET (pview));
-	GdkRectangle        monitor;
-	gint                monitor_num;
+	GdkDisplay  *display;
+	GdkWindow   *window;
+	GdkMonitor  *monitor;
+	GdkRectangle geometry;
 
-	monitor_num = gdk_screen_get_monitor_at_window (screen, gtk_widget_get_window (GTK_WIDGET (pview)));
-	gdk_screen_get_monitor_geometry (screen, monitor_num, &monitor);
-	pview->monitor_width = monitor.width;
-	pview->monitor_height = monitor.height;
+	display = gtk_widget_get_display (GTK_WIDGET (pview));
+	window = gtk_widget_get_window (GTK_WIDGET (pview));
+	monitor = gdk_display_get_monitor_at_window (display, window);
+	gdk_monitor_get_geometry (monitor, &geometry);
+
+	pview->monitor_width = geometry.width;
+	pview->monitor_height = geometry.height;
 }
 
 static gboolean

@@ -5,6 +5,7 @@
     <link type="guide" xref="index#reading"/>
     <revision pkgversion="3.2" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="review"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -22,7 +23,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2012 - 2019</mal:years>
+      <mal:years>2012 - 2020</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -78,9 +79,6 @@
 
   <list>
     <item>
-      <p>Pulse el menú <gui>Opciones de la vista</gui> en la esquina superior derecha y elija <gui>Página anterior</gui> o <gui>Página siguiente</gui>.</p>
-    </item>
-    <item>
       <p>Pulse las teclas <keyseq><key>Ctrl</key><key>Re Pág</key></keyseq> o <keyseq><key>Ctrl</key><key>Av Pág</key></keyseq> en su teclado.</p>
     </item>
     <item>
@@ -90,16 +88,13 @@
           <p>Escriba un número de página en <gui style="input">Seleccionar página</gui> en la <link xref="titlebar">barra de cabecera</link> y pulse <key>Intro</key></p>
         </item>
         <item>
-          <p>Si quiere ver las páginas visitadas anteriormente, pulse <gui style="button">&lt;</gui> o <gui style="button">&gt;</gui> en la barra de cabecera.</p>
-        </item>
-        <item>
           <p>Si quiere ir al principio o al final del documento:</p>
           <list>
             <item>
-              <p>Pulse en el menú <gui>Opciones de la vista</gui> en la esquina superior derecha y elija <gui>Primera página</gui>. También puede pulsar <keyseq><key>Ctrl</key><key>Inicio</key></keyseq> en su teclado.</p>
+              <p>Pulse <keyseq><key>Ctrl</key><key>Inicio</key></keyseq> en su teclado.</p>
             </item>
             <item>
-              <p>Pulse en el menú <gui>Opciones de la vista</gui> en la esquina superior derecha y elija <gui>Última página</gui> o pulse <keyseq><key>Ctrl</key><key>Fin</key></keyseq> en su teclado.</p>
+              <p>Pulse <keyseq><key>Ctrl</key><key>Fin</key></keyseq> en su teclado.</p>
             </item>
           </list>
         </item>
@@ -108,7 +103,7 @@
     <item>
       <p>Para mover 10 páginas a la vez, pulse <keyseq><key>Mayús</key><key>Re Pág</key></keyseq> o <keyseq><key>Mayús</key><key>Av Pág</key></keyseq>.</p>
       <note style="tip">
-        <p>De manera predeterminada, sólo puede moverse alrededor de una página a la vez. Si quiere moverse entre páginas desplazándose o arrastrando, pulse el botón <gui>Opciones de la vista</gui> en la esquina superior derecha y elija <gui>Continuo</gui>.</p>
+        <p>De manera predeterminada, sólo puede moverse alrededor de una página a la vez. Si quiere moverse entre páginas desplazándose o arrastrando, pulse el botón de menú en la esquina superior derecha y elija <gui style="menuitem">Continuo</gui>.</p>
       </note>
     </item>
   </list>
@@ -118,7 +113,7 @@
 <section id="navigating">
   <title>Navegar con una lista de páginas o una tabla de contenidos</title>
 
-  <p>Para hacer visible el panel lateral, pulse el botón <gui>Opciones de la vista</gui> en la esquina superior derecha y elija <gui>Panel lateral</gui>, o pulse <key>F9</key> en el teclado. Debería ver una vista previa de todas las páginas del documento.</p>
+  <p>Para hacer visible el panel lateral, pulse el botón <gui>Panel lateral</gui> en la esquina superior derecha o pulse <key>F9</key> en el teclado. Debería ver una vista previa de todas las páginas del documento.</p>
 
   <p>Puede moverse entre las páginas pulsando sobre ellas en el panel lateral.</p>
 
@@ -134,31 +129,25 @@
 <section id="zoom">
   <title>Ampliar y reducir</title>
 
-  <list>
-    <item>
-      <p>Pulse el botón <gui>Opciones de la vista</gui> en la esquina superior derecha y elija <gui>Ampliar</gui> o use el atajo del teclado <keyseq><key>Ctrl</key><key>+</key></keyseq> para ampliar.</p>
-    </item>
-    <item>
-      <p>Pulse el botón <gui>Opciones de la vista</gui> en la esquina superior derecha y elija <gui>Reducir</gui> o use el atajo del teclado <keyseq><key>Ctrl</key><key>-</key></keyseq> para reducir.</p>
-    </item>
-  </list>
-
-  <p>Alternativamente, puede hacer una de las siguientes:</p>
+  <p>Para ajustar el nivel de ampliación:</p>
 
   <list>
     <item>
-      <p>mantenga pulsada la tecla <key>Ctrl</key> y use la rueda de su ratón para ampliar.</p>
-    </item>
-    <item>
-      <p>seleccione el porcentaje de ampliación que quiere desde el menú desplegable encima de la ventana.</p>
+      <p>Seleccione el porcentaje de ampliación que quiere desde el menú desplegable en la esquina superior derecha.</p>
       <media type="image" src="figures/zoom.png" its:translate="no"/>
+    </item>
+    <item>
+      <p>Alternativamente, use los atajos del teclado <keyseq><key>Ctrl</key><key>+</key></keyseq> para ampliar o <keyseq><key>Ctrl</key><key>-</key></keyseq> para alejar.</p>
+    </item>
+    <item>
+      <p>Alternativamente, mantenga pulsada la tecla <key>Ctrl</key> y use la rueda de su ratón para ampliar.</p>
     </item>
   </list>
 
   <note>
     <p>La opción <gui>Ajustar página</gui> hará que la página de un documento se ajuste a la <em>altura</em> total de la ventana.</p>
     <p>La opción <gui>Ajustar anchura</gui> hará que la página de un documento llene la <em>anchura</em> total de la ventana.</p>
-    <p>Si quiere ver dos páginas a la vez, lado a lado, como en un libro, pulse el botón <gui>Opciones de la vista</gui> en la esquina superior derecha y elija <gui>Dual</gui>.</p>
+    <p>Si quiere ver dos páginas a la vez, lado a lado, como en un libro, pulse el botón de menú en la esquina superior derecha y elija <gui style="menuitem">Dual</gui>.</p>
     <p>Si la configuración de gsettings «allow-links-change-zoom» es falsa, los enlaces no pueden cambiar el nivel ampliación.</p>
   </note>
 
@@ -166,18 +155,11 @@
 
   <list>
     <item>
-      <p>Pulse el botón <gui>Opciones de la vista</gui> en la esquina superior derecha y elija <gui>Pantalla completa</gui> o pulse <key>F11</key>.</p>
+      <p>Pulse <key>F11</key>.</p>
     </item>
     <item>
       <p>Para salir del modo a pantalla completa:</p>
-      <list>
-        <item>
-          <p>Pulse <key>F11</key> o <key>Escape</key></p>
-        </item>
-        <item>
-          <p>O desactive el modo a <gui>Pantalla completa</gui> pulsando en el botón <gui>Opciones de la vista</gui> en la esquina superior derecha y seleccionando <gui>Pantalla completa</gui>.</p>
-        </item>
-      </list>
+      <p>Pulse <key>F11</key> o <key>Escape</key></p>
     </item>
   </list>
 </section>

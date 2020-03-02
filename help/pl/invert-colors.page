@@ -8,6 +8,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="review"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -37,7 +38,8 @@
 <title>Odwracanie kolorów na stronie</title>
 
 
- <p>Aby zamienić czarny z białym, biały z czarnym i tak dalej, kliknij przycisk <gui>Opcje widoku</gui> w górnym prawym rogu i wybierz <gui>Odwrócone kolory</gui>.</p>
+ <p>To swap black for white, white for black, and so on, press the menu button in the
+ top-right corner of the window and select <gui style="menuitem">Night Mode</gui>.</p>
 
 
 <note style="tip">

@@ -7,6 +7,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="review"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -66,7 +67,8 @@
   <p><link xref="opening">Abra um documento</link></p>
  </item>
  <item>
-   <p>Marque a opção <gui>Apresentação</gui> no menu de <gui>Opções de visualização</gui> no canto superior direito da janela (ou use a tecla <key>F5</key> do teclado).</p>
+   <p>Press the menu button in the top-right corner of the window and select
+   <gui style="menuitem">Present as Slideshow</gui> (or press <key>F5</key>).</p>
   <p>A apresentação será exibida em tela cheia.</p>
  </item>
 </steps>
@@ -79,6 +81,14 @@
   <p>Você também pode usar a roda do mouse para navegar pela apresentação.</p>
  </note>
  <p>Use a tecla <key>Esc</key> para sair da apresentação.</p>
+</section>
+
+<section id="blank-screen">
+<title>Showing a blank screen</title>
+<p>Press <key>B</key> or <key>.</key> to show a black screen.</p>
+<p>Press <key>W</key> to show a white screen.</p>
+<p>Press <key>B</key>, <key>.</key>, or <key>W</key> again to show the
+slide.</p>
 </section>
 
 <section id="file-formats">

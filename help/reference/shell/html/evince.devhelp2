@@ -166,7 +166,6 @@
     <keyword type="function" name="ev_keyring_save_password ()" link="evince-ev-keyring.html#ev-keyring-save-password"/>
     <keyword type="function" name="ev_pixbuf_add_shadow ()" link="evince-ev-utils.html#ev-pixbuf-add-shadow"/>
     <keyword type="function" name="ev_print_region_contents ()" link="evince-ev-utils.html#ev-print-region-contents"/>
-    <keyword type="function" name="ev_gui_menu_position_tree_selection ()" link="evince-ev-utils.html#ev-gui-menu-position-tree-selection"/>
     <keyword type="function" name="file_chooser_dialog_add_writable_pixbuf_formats ()" link="evince-ev-utils.html#file-chooser-dialog-add-writable-pixbuf-formats"/>
     <keyword type="function" name="get_gdk_pixbuf_format_by_extension ()" link="evince-ev-utils.html#get-gdk-pixbuf-format-by-extension"/>
     <keyword type="constant" name="EV_WINDOW_MODE_NORMAL" link="EvWindow.html#EV-WINDOW-MODE-NORMAL:CAPS"/>

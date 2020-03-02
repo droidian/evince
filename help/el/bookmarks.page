@@ -6,6 +6,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10" date="2013-11-04" status="final"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="final"/>
 
     <credit type="author">
       <name>Tiffany Antopolski</name>
@@ -65,8 +66,8 @@
 
   <p>Όταν ανοίγετε ένα αρχείο, θα πρέπει να έχετε μια πλευρική στήλη στη αριστερή πλευρά του παραθύρου. Αν δεν έχετε μια ορατή πλευρική στήλη, πατήστε το πλήκτρο <key>F9</key>.</p>
 
-  <p>At the top of this side pane, there is a drop-down menu. To work with
-  bookmarks, select the <gui>Bookmarks</gui> option from this drop-down menu.</p>
+  <p>At the bottom of this side pane, select the <gui style="button">Bookmarks</gui>
+  button.</p>
 
   <links type="section"/>
 
@@ -78,11 +79,13 @@
       <p>Στο ίδιο το έγγραφο PDF, περιηγηθείτε στη σελίδα στην οποία θα θέλατε να προσθέσετε τον σελιδοδείκτη.</p>
     </item>
     <item>
-      <p>In the side pane, select <gui>Bookmarks</gui> from the drop-down
-      menu.</p>
+      <p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+      at the bottom.</p>
     </item>
     <item>
-      <p>Πατήστε το κουμπί <gui>Προσθήκη</gui> στο τέλος της πλευρικής στήλης. Το προεπιλεγμένο όνομα του σελιδοδείκτη που μόλις προσθέσατε είναι ο αριθμός σελίδας του εγγράφου.</p>
+      <p>Press the <gui style="button">+</gui> button at the bottom of the side
+      pane. The default name of the bookmark you just added is the page number
+      of the document.</p>
     </item>
     <item>
       <p>Ο σελιδοδείκτης είναι τώρα καταχωρημένος στην λίστα σελιδοδεικτών.</p>
@@ -95,6 +98,8 @@
   <title>Μετονομασία σελιδοδείκτη</title>
 
   <steps>
+    <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+    at the bottom.</p></item>
     <item><p>Επιλέξτε τον σελιδοδείκτη στην πλευρική στήλη.</p></item>
     <item><p>Πατήστε στο όνομα του σελιδοδείκτη.</p></item>
     <item><p>Εισάγετε το νέο όνομα.</p></item>
@@ -107,8 +112,9 @@
   <title>Διαγραφή ενός σελιδοδείκτη</title>
 
   <steps>
-   <item><p>Επιλέξτε τον σελιδοδείκτη στην πλευρική στήλη.</p></item>
-   <item><p>Πατήστε το κουμπί <gui>Αφαίρεση</gui> στο τέλος της πλευρικής στήλης.</p></item>
+   <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+   at the bottom.</p></item>
+   <item><p>Press the <gui style="button">-</gui> button at the bottom of the side pane.</p></item>
   </steps>
 
 </section>

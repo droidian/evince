@@ -70,17 +70,17 @@
 
   <list>
     <item>
-      <p>Double-cliquez sur le fichier dans <app>FIchiers</app> ou dans votre <app>gestionnaire de fichiers</app>.</p>
+      <p>Double-cliquez sur le fichier dans <app>Fichiers</app> ou dans votre <app>gestionnaire de fichiers</app>.</p>
       <note style="tip">
-        <p>Un double clic ouvre les fichiers PDF, PostScript, .djvu, .dvi et les archives Comic Book dans le <app>Visionneur de documents</app> par défaut.</p>
+        <p>Un double-clic ouvre les fichiers PDF, PostScript, .djvu, .dvi et les archives Comic Book dans le <app>Visionneur de documents</app> par défaut.</p>
       </note>
     </item>
     <item>
-      <p>Faites un clic-droit sur une icône de fichier dans le <app>gestionnaire de fichiers</app> et cliquez sur <guiseq><gui>Ouvrir avec</gui><gui>Visionneur de documents</gui></guiseq>.</p>
+      <p>Faites un clic droit sur une icône de fichier dans le <app>gestionnaire de fichiers</app> et cliquez sur <guiseq><gui>Ouvrir avec</gui><gui>Visionneur de documents</gui></guiseq>.</p>
     </item>
   </list>
 
-  <p>Si une fenêtre du <app>Visionneur de documents</app> est déjà ouverte vous pouvez :</p>
+  <p>Si une fenêtre du <app>Visionneur de documents</app> est déjà ouverte, vous pouvez :</p>
 
   <list>
     <item>

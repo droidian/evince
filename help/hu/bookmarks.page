@@ -6,6 +6,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10" date="2013-11-04" status="final"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="final"/>
 
     <credit type="author">
       <name>Tiffany Antopolski</name>
@@ -47,7 +48,8 @@
 
   <p>Fájl megnyitásakor az ablak bal oldalán található egy oldalsáv. Ha ez nem látható, akkor nyomja meg az <key>F9</key> billentyűt.</p>
 
-  <p>Az oldalsáv tetején található egy legördülő menü. Ha a könyvjelzőkkel szeretne valamilyen műveletet végezni, a legördülő menüből válassza a <gui>Könyvjelzők</gui> lehetőséget.</p>
+  <p>At the bottom of this side pane, select the <gui style="button">Bookmarks</gui>
+  button.</p>
 
   <links type="section"/>
 
@@ -59,10 +61,13 @@
       <p>A PDF dokumentumban navigáljon arra az oldalra, amelyhez könyvjelzőt kíván adni.</p>
     </item>
     <item>
-      <p>Az oldalsávon található legördülő menüből válassza a <gui>Könyvjelzők</gui> lehetőséget.</p>
+      <p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+      at the bottom.</p>
     </item>
     <item>
-      <p>Kattintson az oldalsáv alján található <gui>Hozzáadás</gui> gombra. A hozzáadott könyvjelző alapértelmezett neve annak az oldalnak a száma lesz, melyre utoljára navigált a dokumentumban.</p>
+      <p>Press the <gui style="button">+</gui> button at the bottom of the side
+      pane. The default name of the bookmark you just added is the page number
+      of the document.</p>
     </item>
     <item>
       <p>A könyvjelző meg fog jelenni a könyvjelzők listájában.</p>
@@ -75,6 +80,8 @@
   <title>Könyvjelző átnevezése</title>
 
   <steps>
+    <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+    at the bottom.</p></item>
     <item><p>Az oldalsávon válassza ki a könyvjelzőt.</p></item>
     <item><p>Kattintson a könyvjelző nevére.</p></item>
     <item><p>Adja meg az új nevet.</p></item>
@@ -87,8 +94,9 @@
   <title>Könyvjelző törlése</title>
 
   <steps>
-   <item><p>Az oldalsávon válassza ki a könyvjelzőt.</p></item>
-   <item><p>Az oldalsáv alján kattintson az <gui>Eltávolítás</gui> gombra.</p></item>
+   <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+   at the bottom.</p></item>
+   <item><p>Press the <gui style="button">-</gui> button at the bottom of the side pane.</p></item>
   </steps>
 
 </section>

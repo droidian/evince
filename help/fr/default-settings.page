@@ -6,6 +6,7 @@
     <desc>Enregistrer les paramètres actuels comme paramètres par défaut pour les nouveaux documents.</desc>
 
     <revision pkgversion="3.6.0" version="0.1" date="2012-12-09" status="draft"/>
+    <revision pkgversion="3.34.1" version="0.2" date="2019-11-26" status="draft"/>
     <credit type="author">
       <name>Sindhu S</name>
       <email>sindhus@live.in</email>
@@ -61,7 +62,9 @@
   <title>Modifier les paramètres par défaut</title>
 
   <p>Lorsqu’un document est ouvert pour la première fois, les paramètres par défaut, comme les préférences de zoom et d’affichage de la page, s’appliquent. Toutes modifications apportées à ces paramètres sont enregistrées pour le document.</p>
-  <p>Vous pouvez enregistrer les paramètres qui sont actuellement utilisés par défaut pour tous les nouveaux documents en sélectionnant <guiseq><gui style="menu">Édition</gui> <gui style="menuitem">Se souvenir des réglages actuels</gui></guiseq> ou appuyer sur <keyseq><key>Ctrl</key><key>T</key></keyseq>.</p>
+  <p>You can save the settings which you are currently using as default for all
+  new documents by pressing the menu button in the top-right corner of the window
+  and selecting <gui style="menuitem">Save Current Settings as Default</gui>.</p>
 
   <note style="important">
     <p>Les nouveaux paramètres par défaut ne remplacent pas les paramètres des documents précédemment ouverts, ils sont appliqués seulement aux documents ouverts pour la première fois.</p>

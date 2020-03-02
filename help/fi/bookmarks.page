@@ -6,6 +6,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10" date="2013-11-04" status="final"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="final"/>
 
     <credit type="author">
       <name>Tiffany Antopolski</name>
@@ -53,8 +54,8 @@
 
   <p>Kun avaat tiedoston, ikkunan vasemmassa reunassa tulisi olla sivupaneeli. Jos sivupaneelia ei näy, paina <key>F9</key>-näppäintä.</p>
 
-  <p>At the top of this side pane, there is a drop-down menu. To work with
-  bookmarks, select the <gui>Bookmarks</gui> option from this drop-down menu.</p>
+  <p>At the bottom of this side pane, select the <gui style="button">Bookmarks</gui>
+  button.</p>
 
   <links type="section"/>
 
@@ -66,11 +67,13 @@
       <p>Siirry PDF-asiakirjassa sivulle, jolle kirjanmerkki luodaan.</p>
     </item>
     <item>
-      <p>In the side pane, select <gui>Bookmarks</gui> from the drop-down
-      menu.</p>
+      <p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+      at the bottom.</p>
     </item>
     <item>
-      <p>Napsauta <gui>Lisää</gui>-painiketta sivupaneelin alareunassa. Luodun kirjanmerkin oletusnimi on asiakirjan sivunumero.</p>
+      <p>Press the <gui style="button">+</gui> button at the bottom of the side
+      pane. The default name of the bookmark you just added is the page number
+      of the document.</p>
     </item>
     <item>
       <p>Kirjanmerkki ilmestyy kirjanmerkkiluetteloon.</p>
@@ -83,6 +86,8 @@
   <title>Kirjanmerkin nimen muuttaminen</title>
 
   <steps>
+    <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+    at the bottom.</p></item>
     <item><p>Valitse kirjanmerkki sivupaneelista.</p></item>
     <item><p>Napsauta kirjanmerkin nimeä.</p></item>
     <item><p>Kirjoita uusi nimi.</p></item>
@@ -95,8 +100,9 @@
   <title>Kirjanmerkin poistaminen</title>
 
   <steps>
-   <item><p>Valitse kirjanmerkki sivupaneelista.</p></item>
-   <item><p>Napsauta <gui>Poista</gui>-painiketta sivupaneelin alareunasta.</p></item>
+   <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+   at the bottom.</p></item>
+   <item><p>Press the <gui style="button">-</gui> button at the bottom of the side pane.</p></item>
   </steps>
 
 </section>

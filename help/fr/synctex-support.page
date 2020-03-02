@@ -67,14 +67,10 @@
 <p>Les paquets suivants doivent être installés afin d’ajouter la prise en charge de SyncTeX :</p>
 <list>
   <item>
-    <p>
-      A LaTeX engine with SyncTeX support, such as <app>pdflatex</app>.
-    </p>
+    <p>Un moteur LaTeX avec la prise en charge de SyncTeX, tel que <app>pdflatex</app>.</p>
   </item>
   <item>
-    <p>
-      A text editor with SyncTeX support, such as <app>gedit</app> with gedit-plugins installed.
-    </p>
+    <p>Un éditeur de texte avec la prise en charge de SyncTeX, tel que <app>gedit</app> avec les greffons « gedit-plugins » installés.</p>
   </item>
 </list>
 

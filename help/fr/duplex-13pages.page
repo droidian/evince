@@ -113,7 +113,7 @@ Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>Short Edge 
   <p>
     Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
  </p>
-<p>Dans l’onglet <gui>Général</gui>, saisissez les pages 4, 13 dans la <gui>Pages</gui>.</p>
+<p>Dans l’onglet <gui>Général</gui>, saisissez les pages 4, 13 dans la sélection <gui>Pages</gui>.</p>
 <p>Sélectionnez l’onglet <gui>Mise en page</gui>.</p>
 <p>Dans le menu <gui>Ordre des pages</gui>, sélectionnez <gui>Gauche à droite</gui>.</p>
 <p>Cliquez sur <gui>Imprimer</gui>.</p>

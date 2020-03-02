@@ -6,6 +6,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10" date="2013-11-04" status="final"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="final"/>
 
     <credit type="author">
       <name>Tiffany Antopolski</name>
@@ -35,7 +36,8 @@
 
   <p>Als u een bestand opent, zou u een zijpaneel moeten zien aan de linkerkant van het venster. Als u geen zichtbaar zijpaneel heeft, druk dan op de <key>F9</key>-toets.</p>
 
-  <p>Aan de bovenkant van dit zijpaneel is een keuzemenu. Om te werken met bladwijzers, selecteer de <gui>Bladwijzers</gui>-optie vanuit dit keuzemenu.</p>
+  <p>At the bottom of this side pane, select the <gui style="button">Bookmarks</gui>
+  button.</p>
 
   <links type="section"/>
 
@@ -47,10 +49,13 @@
       <p>In het PDF-document zelf, blader naar de pagina waar u de bladwijzer wilt toevoegen.</p>
     </item>
     <item>
-      <p>In het zijpaneel, selecteer <gui>Bladwijzers</gui> vanuit het keuzemenu.</p>
+      <p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+      at the bottom.</p>
     </item>
     <item>
-      <p>Klik de <gui>Toevoegen</gui>-knop aan de onderkant van het zijpaneel. De standaardnaam van de bladwijzer die u zojuist heeft toegevoegd is het paginanummer van het document.</p>
+      <p>Press the <gui style="button">+</gui> button at the bottom of the side
+      pane. The default name of the bookmark you just added is the page number
+      of the document.</p>
     </item>
     <item>
       <p>De bladwijzer staat nu in de bladwijzerlijst.</p>
@@ -63,6 +68,8 @@
   <title>Een bladwijzer hernoemen</title>
 
   <steps>
+    <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+    at the bottom.</p></item>
     <item><p>Selecteer de bladwijzer in het zijpaneel.</p></item>
     <item><p>Klik op de bladwijzernaam.</p></item>
     <item><p>Voer de nieuwe naam in.</p></item>
@@ -75,8 +82,9 @@
   <title>Een bladwijzer verwijderen</title>
 
   <steps>
-   <item><p>Selecteer de bladwijzer in het zijpaneel.</p></item>
-   <item><p>Klik op de <gui>Verwijderen</gui>-knop aan de onderkant van het zijpaneel.</p></item>
+   <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+   at the bottom.</p></item>
+   <item><p>Press the <gui style="button">-</gui> button at the bottom of the side pane.</p></item>
   </steps>
 
 </section>

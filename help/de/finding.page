@@ -78,7 +78,10 @@
     <p>Um Wörter nach Groß-/Kleinschreibung oder Vollständigkeit zu filtern, können Sie im Suchfeld rechtsklicken und <gui>Groß-/Kleinschreibung beachten</gui> sowie <gui>Nur ganze Wörter</gui> auswählen.</p>
   </note>
 
-  <p>Falls das Wort oder der Suchbegriff im gesamten Dokument nicht vorkommen, so erscheint <media type="image" src="figures/search-not-found.png"/> im Suchfeld. Wenn es jedoch mindestens einmal vorkommt, dann wird die Anzahl der Suchtreffer auf der aktuellen Seite angezeigt.</p>
+  <p>If the word or phrase that you searched for is not found in the document,
+  you will see <media type="image" its:translate="no" src="figures/search-not-found.png"/> in the
+  search box. However, if it appears in the document at least once, you will be
+  shown how many times the search result appears on the current page.</p>
 
   <note>
     <p>Sie können nur PDF-Dokumente durchsuchen. Einige PDF-Dokumente können nicht durchsucht werden, weil der Text tatsächlich als digitales Bild im Dokument hinterlegt ist.</p>

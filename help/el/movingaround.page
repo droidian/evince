@@ -5,6 +5,7 @@
     <link type="guide" xref="index#reading"/>
     <revision pkgversion="3.2" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="review"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -102,10 +103,6 @@
 
   <list>
     <item>
-      <p>Click the <gui>View options</gui> menu in the top right corner
-      and select <gui>Previous Page</gui> or <gui>Next Page</gui>.</p>
-    </item>
-    <item>
       <p>Πατήστε τα κουμπιά <keyseq><key>Ctrl</key><key>Page Up</key></keyseq> ή <keyseq><key>Ctrl</key><key>Page Down</key></keyseq> στο πληκτρολόγιο.</p>
     </item>
     <item>
@@ -116,23 +113,14 @@
           <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
         </item>
         <item>
-          <p>If you want to see the previously visited pages press
-          <gui style="button">&lt;</gui> or <gui style="button">&gt;</gui> on
-          the header bar.</p>
-        </item>
-        <item>
           <p>Αν θέλετε να μεταβείτε στην αρχή ή το τέλος του εγγράφου:</p>
           <list>
             <item>
-              <p>Click the <gui>View options</gui> menu in the top right corner
-              and select <gui>First Page</gui>. You can also press
-              <keyseq><key>Ctrl</key><key>Home</key></keyseq> on your
+              <p>Press <keyseq><key>Ctrl</key><key>Home</key></keyseq> on your
               keyboard.</p>
             </item>
             <item>
-              <p>Click the <gui>View options</gui> menu in the top right corner
-              and select <gui>Last Page</gui> or press
-              <keyseq><key>Ctrl</key><key>End</key></keyseq> on your
+              <p>Press <keyseq><key>Ctrl</key><key>End</key></keyseq> on your
               keyboard.</p>
             </item>
           </list>
@@ -142,7 +130,10 @@
     <item>
       <p>Για να μετακινηθείτε δέκα σελίδες τη φορά, πατήστε <keyseq><key>Shift</key><key>Page Up</key></keyseq> ή <keyseq><key>Shift</key><key>Page Down</key></keyseq>.</p>
       <note style="tip">
-        <p>Μπορείτε να μετακινήστε μια σελίδα τη φορά, ως προεπιλογή. Αν επιθυμείτε να μετακινήστε μεταξύ των σελίδων απλά με κύλιση ή σύρσιμο, κάντε κλικ στο κουμπί <gui>Εμφάνιση επιλογών</gui> στην πάνω δεξιά γωνία και επιλέξτε <gui>Συνεχής</gui>.</p>
+        <p>You can only move around one page at a time, by default. If you want
+        to move between pages just by scrolling or dragging, press the menu
+        button in the top-right corner of the window and select
+        <gui style="menuitem">Continuous</gui>.</p>
       </note>
     </item>
   </list>
@@ -152,8 +143,8 @@
 <section id="navigating">
   <title>Περιήγηση με λίστα σελίδων ή πίνακα περιεχομένων</title>
 
-  <p>To make the side pane visible, click the <gui>View options</gui> button in
-  the top-right corner and select <gui>Side Panel</gui>, or press <key>F9</key>
+  <p>To make the side pane visible, select the <gui>Side pane</gui> button in
+  the top-left corner, or press <key>F9</key>
   on the keyboard. You should see a preview of all of the pages in the
   document.</p>
 
@@ -173,32 +164,28 @@
 <section id="zoom">
   <title>Μεγέθυνση και σμίκρυνση</title>
 
-  <list>
-    <item>
-      <p>Κάντε κλικ στο κουμπί <gui>Εμφάνιση επιλογών</gui> στην πάνω δεξιά γωνία και επιλέξτε <gui>Μεγέθυνση</gui> ή χρησιμοποιήστε τη συντόμευση πληκτρολογίου <keyseq><key>Ctrl</key><key>+</key></keyseq> για μεγέθυνση.</p>
-    </item>
-    <item>
-      <p>Κάντε κλικ στο κουμπί <gui>Εμφάνιση επιλογών</gui> στην πάνω δεξιά γωνία και επιλέξτε <gui>Σμίκρυνση</gui> ή χρησιμοποιήστε τη συντόμευση πληκτρολογίου <keyseq><key>Ctrl</key><key>-</key></keyseq> για σμίκρυνση.</p>
-    </item>
-  </list>
-
-  <p>Εναλλακτικά, μπορείτε να κάνετε ένα από τα ακόλουθα:</p>
+  <p>To adjust the zoom level:</p>
 
   <list>
     <item>
-      <p>κρατήστε πατημένο το <key>Ctrl</key> και χρησιμοποιήστε τον τροχό του ποντικιού για εστίαση.</p>
-    </item>
-    <item>
-      <p>select desired zoom percentage from the drop-down menu above the
-      window.</p>
+      <p>Select the desired zoom percentage from the drop-down menu in the top-right corner.</p>
       <media type="image" src="figures/zoom.png" its:translate="no"/>
+    </item>
+    <item>
+      <p>Alternatively, use the keyboard shortcuts <keyseq><key>Ctrl</key><key>+</key></keyseq>
+      to zoom in, or <keyseq><key>Ctrl</key><key>-</key></keyseq> to zoom out.</p>
+    </item>
+    <item>
+      <p>Alternatively, hold down <key>Ctrl</key> and use your mouse scroll wheel to zoom.</p>
     </item>
   </list>
 
   <note>
     <p>Η επιλογή <gui>Προσαρμογή στη σελίδα</gui> θα κάνει τη σελίδα του εγγράφου να προσαρμόζει ολόκληρο το <em>ύψος</em> του παραθύρου.</p>
     <p>Η επιλογή <gui>Προσαρμογή στο πλάτος</gui> θα κάνει τη σελίδα του εγγράφου να γεμίζει όλο το <em>πλάτος</em> του παραθύρου.</p>
-    <p>Αν θέλετε να βλέπετε δύο σελίδες ταυτόχρονα, τη μια δίπλα στην άλλη, όπως στα βιβλία, κάντε κλικ στο κουμπί <gui>Εμφάνιση επιλογών</gui> στην πάνω δεξιά γωνία και επιλέξτε <gui>Διπλή</gui>.</p>
+    <p>If you want to see two pages at once, side by side, like in a book,
+    press the menu button in the top-right corner of the window and select
+    <gui style="menuitem">Dual</gui>.</p>
     <p>Εάν η επιλογή allow-links-change-zoom στο gsettings έχει οριστεί σε false, έχουν φραγεί οι σύνδεσμοι από την αλλαγή του επιπέδου εστίασης.</p>
   </note>
 
@@ -206,18 +193,11 @@
 
   <list>
     <item>
-      <p>Κάντε κλικ στο κουμπί <gui>Εμφάνιση επιλογών</gui> στην πάνω δεξιά γωνία και επιλέξτε <gui>Πλήρης οθόνη</gui> ή πατήστε το <key>F11</key>.</p>
+      <p>Press <key>F11</key>.</p>
     </item>
     <item>
       <p>Για έξοδο από τη λειτουργία πλήρους οθόνης:</p>
-      <list>
-        <item>
-          <p>Πατήστε το <key>F11</key> ή το <key>Escape</key></p>
-        </item>
-        <item>
-          <p>Ή απενεργοποιήστε την <gui>Πλήρη οθόνη</gui> κάνοντας κλικ στο κουμπί <gui>Επιλογές προβολής</gui> στην πάνω δεξιά γωνία και επιλέξτε <gui>Πλήρης οθόνη</gui>.</p>
-        </item>
-      </list>
+      <p>Πατήστε το <key>F11</key> ή το <key>Escape</key></p>
     </item>
   </list>
 </section>

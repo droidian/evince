@@ -25,14 +25,11 @@
 <title>Porque non se copia de forma correcto o texto seleccionado?</title>
 
 
-<p>Se resalta e copia texto desde un documento usando o <app>Visor de documentos</app> e logo pégao noutro aplicativo, o formatado pode cambiar. Tamén pode conter caracteres distintos que a selección orixinal. Isto acontece en ocasións ao copiar texto desde un documento PDF con múltiples columnas</p>
+<p>Se resalta e copia texto desde un documento usando o <app>Visor de documentos</app> e logo pégao noutra aplicación, o formatado pode cambiar. Tamén pode conter caracteres distintos que a selección orixinal. Isto acontece en ocasións ao copiar texto desde un documento PDF con múltiples columnas</p>
 
 
  <p>Este problema acontece debido a como algúns documentos de texto xestionan o texto. O texto nun documento pode estar almacenado de forma diferente da que se mostra. Isto pode resulta que ao copiar e pegar non apareza o que agardaba.</p>
 
- <p>
-  Unfortunately, there is no real way of fixing this problem. Copying
-  less text at a time, or copying the text into a text editor (like <app>gedit</app>) may minimize the problem.
-  </p>
+ <p>Por desgraza, non hai unha forma real de arranxar este problema. Se copia menos texto de cada vez ou copia o texto nun editor de texto pode facer que o problema se reduza. Pode encontrar un editor de texto premendo <guiseq><gui>Aplicacións</gui><gui>Accesorios</gui><gui>Editor de texto</gui></guiseq>.</p>
 
 </page>
