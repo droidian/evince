@@ -131,14 +131,12 @@
         <td><p><key>Page Haut</key> / <key>Page bas</key></p></td>
     </tr>
     <tr>
-        <td><p>Go to the previous page.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Page Up</key></keyseq> /
-<key>P</key></p></td>
+        <td><p>Aller à la page précédente.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Page haut</key></keyseq> / <key>P</key></p></td>
     </tr>
     <tr>
-        <td><p>Go to the next page.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Page Down</key></keyseq> /
-<key>N</key></p></td>
+        <td><p>Aller à la page suivante.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Page bas</key></keyseq> / <key>N</key></p></td>
     </tr>
 <tr>
         <td><p>Aller au numéro de page.</p></td>
@@ -146,12 +144,12 @@
 </tr>
     <tr>
         <td><p>Go to the beginning of a page (beginning of the document if
-<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
+<gui>Continuous</gui> is selected in the main menu in the top-right corner).</p></td>
          <td><p><key>Origine</key></p></td>
     </tr>
     <tr>
         <td><p>Go to the end of a page (end of the document if
-<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
+<gui>Continuous</gui> is selected in the main menu in the top-right corner).</p></td>
         <td><p><key>Fin</key></p></td>
     </tr>
     <tr>
@@ -163,19 +161,19 @@
          <td><p><keyseq><key>Ctrl</key><key>Fin</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Add a bookmark in the current page.</p></td>
+        <td><p>Ajouter un signet dans la page actuelle.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Delete the bookmark in the current page if there is one.</p></td>
-        <td><p><keyseq><key>Shift</key><key>Ctrl</key><key>D</key></keyseq></p></td>
+        <td><p>Supprimer le signet dans la page actuelle (s’il y en a un).</p></td>
+        <td><p><keyseq><key>Maj</key><key>Ctrl</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
-    	<td><p>Display the side bar with a table of contents and bookmarks.</p></td>
+         <td><p>Display the side pane with a table of contents and bookmarks.</p></td>
          <td><p><key>F9</key></p></td>
     </tr>
     <tr>
-        <td><p>Enable caret navigation placing a moveable cursor in text pages, allowing you to move around and select text with the keyboard.</p></td>
+        <td><p>Activer la navigation au curseur en plaçant un curseur déplaçable dans les pages de texte, permettant ainsi de vous déplacer et de sélectionner du texte avec le clavier.</p></td>
         <td><p><key>F7</key></p></td>
     </tr>
   </table>
@@ -186,7 +184,7 @@
 <table frame="all" rules="cols" shade="rows">
     <tr>
         <td><p>Copier le texte sélectionné.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq> / <keyseq><key>Ctrl</key><key>Insert</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq> / <keyseq><key>Ctrl</key><key>Inser</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Sélectionner tout le texte d’un document.</p></td>
@@ -199,13 +197,7 @@
     <title>Recherche de texte</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>
-        Show the toolbar that lets you search for words in the document. The
-        search box is automatically highlighted when you press this, and the
-        search will start as soon as you type some text. If you select a text
-        in the document before searching, then the search will start using that
-        text as input.
-        </p></td>
+        <td><p>Afficher la barre d’outils qui vous permet de rechercher des mots dans le document. La boîte de recherche apparaît automatiquement lorsque vous utilisez ce raccourci et la recherche commence dès que vous saisissez du texte. Si vous sélectionnez du texte dans le document avant de rechercher, alors la recherche va débuter en utilisant le texte sélectionné.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>F</key></keyseq> / <key>/</key></p></td>
     </tr>
     <tr>
@@ -214,7 +206,7 @@
     </tr>
     <tr>
         <td><p>Aller à la précédente occurrence de recherche.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Shift</key><key>G</key></keyseq> / <keyseq><key>Shift</key><key>F3</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Maj</key><key>G</key></keyseq> / <keyseq><key>Maj</key><key>F3</key></keyseq></p></td>
     </tr>
 </table>
 </section>
@@ -231,74 +223,87 @@
         <td><p><keyseq><key>Ctrl</key><key>Flèche droite</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Default zoom.</p></td>
+        <td><p>Zoom par défaut.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>0</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Effectuer un zoom en avant.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>+</key></keyseq> / <key>=</key> /
-               <keyseq><key>Ctrl</key><key>=</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>+</key></keyseq> / <key>=</key> / <keyseq><key>Ctrl</key><key>=</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Effectuer un zoom en arrière.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>-</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Fit the page into the window.</p></td>
+        <td><p>Adapter la page à la fenêtre.</p></td>
         <td><p><key>F</key></p></td>
     </tr>
     <tr>
-        <td><p>Fit the content width to the space available.</p></td>
+        <td><p>Adapter la largeur du contenu à l’espace disponible.</p></td>
         <td><p><key>W</key></p></td>
     </tr>
     <tr>
-        <td><p>Automatic zoom.</p></td>
+        <td><p>Zoom automatique.</p></td>
         <td><p><key>A</key></p></td>
     </tr>
 </table>
 </section>
 
 <section id="window">
-    <title>Window</title>
+    <title>Fenêtre</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Use the full screen to view the document.</p></td>
+        <td><p>Utiliser le plein écran pour afficher le document.</p></td>
         <td><p><key>F11</key></p></td>
     </tr>
     <tr>
-        <td><p>Start a presentation.</p></td>
-        <td><p><key>F5</key> / <keyseq><key>Shift</key><key>F5</key></keyseq></p></td>
+        <td><p>Démarrer une présentation.</p></td>
+        <td><p><key>F5</key> / <keyseq><key>Maj</key><key>F5</key></keyseq></p></td>
     </tr>
 </table>
 </section>
 
 <section id="document">
-    <title>Document view</title>
+    <title>Vue du document</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Invert background and text colors.</p></td>
+        <td><p>Inverser les couleurs de texte et d’arrière-plan.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>I</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Swap between continuous and page by page view of the document.</p></td>
+        <td><p>Basculer entre l’affichage page par page et continu du document.</p></td>
         <td><p><key>C</key></p></td>
     </tr>
     <tr>
-        <td><p>Display two pages side by side.</p></td>
+        <td><p>Afficher deux pages côte à côte.</p></td>
         <td><p><key>D</key></p></td>
     </tr>
 </table>
 </section>
 
-<section id="annotate">
-    <title>Annotate the document</title>
+<section id="presentation">
+    <title>Presentation mode</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Add a post-it like note.</p></td>
+        <td><p>Toggle black screen.</p></td>
+        <td><p><key>B</key> / <key>.</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Toggle white screen.</p></td>
+        <td><p><key>W</key></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="annotate">
+    <title>Annotation du document</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Ajouter une annotation texte.</p></td>
         <td><p><key>S</key></p></td>
     </tr>
     <tr>
-        <td><p>Highlight text.</p></td>
+        <td><p>Surligner du texte.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>H</key></keyseq></p></td>
     </tr>
 </table>

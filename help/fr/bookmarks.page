@@ -6,6 +6,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10" date="2013-11-04" status="final"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="final"/>
 
     <credit type="author">
       <name>Tiffany Antopolski</name>
@@ -71,7 +72,8 @@
 
   <p>Lorsque vous ouvrez un fichier, vous devriez avoir un panneau latéral sur le côté gauche de la fenêtre. S’il n’est pas visible, appuyez sur la touche <key>F9</key> du clavier.</p>
 
-  <p>En haut de ce panneau latéral, il y a un menu déroulant. Pour travailler avec les signets, choisir l’option <gui>Signets</gui> dans ce menu déroulant.</p>
+  <p>At the bottom of this side pane, select the <gui style="button">Bookmarks</gui>
+  button.</p>
 
   <links type="section"/>
 
@@ -80,13 +82,16 @@
 
   <steps>
     <item>
-      <p>Dans le document PDF, déplacez vous vers la page que vous voulez ajouter en tant que signet.</p>
+      <p>Dans le document PDF, déplacez-vous vers la page que vous voulez ajouter en tant que signet.</p>
     </item>
     <item>
-      <p>Dans le panneau latéral, choisissez <gui>Signets</gui> dans le menu déroulant.</p>
+      <p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+      at the bottom.</p>
     </item>
     <item>
-      <p>Cliquer sur le bouton <gui>Ajouter</gui> en bas du panneau latéral. Le nom par défaut du signet que vous venez d’ajouter est le numéro de page du document.</p>
+      <p>Press the <gui style="button">+</gui> button at the bottom of the side
+      pane. The default name of the bookmark you just added is the page number
+      of the document.</p>
     </item>
     <item>
       <p>Le signet est maintenant présent dans la liste des signets.</p>
@@ -99,6 +104,8 @@
   <title>Renommer un signet</title>
 
   <steps>
+    <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+    at the bottom.</p></item>
     <item><p>Choisir le signet dans le panneau latéral.</p></item>
     <item><p>Cliquez sur le nom du signet.</p></item>
     <item><p>Entrez le nouveau nom.</p></item>
@@ -111,8 +118,9 @@
   <title>Effacer un signet</title>
 
   <steps>
-   <item><p>Choisir le signet dans le panneau latéral.</p></item>
-   <item><p>Cliquez sur le bouton <gui>Supprimer</gui> en bas du panneau latéral.</p></item>
+   <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+   at the bottom.</p></item>
+   <item><p>Press the <gui style="button">-</gui> button at the bottom of the side pane.</p></item>
   </steps>
 
 </section>

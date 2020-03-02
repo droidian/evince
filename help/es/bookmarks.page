@@ -6,6 +6,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10" date="2013-11-04" status="final"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="final"/>
 
     <credit type="author">
       <name>Tiffany Antopolski</name>
@@ -25,7 +26,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2012 - 2019</mal:years>
+      <mal:years>2012 - 2020</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -41,7 +42,7 @@
 
   <p>Cuando abre un archivo, debería ver un panel lateral en el lado izquierdo de la ventana. Si no tiene un panel lateral visible, pulse la tecla <key>F9</key>.</p>
 
-  <p>En la parte superior de este panel lateral hay un menú desplegable. Para trabajar con marcadores, seleccione la opción <gui>Marcadores</gui> en el menú desplegable.</p>
+  <p>En la parte inferior del panel lateral pulse el botón <gui style="button">Marcadores</gui>.</p>
 
   <links type="section"/>
 
@@ -53,10 +54,10 @@
       <p>En el propio documento PDF, vaya a la página para la que quiere añadir el marcador.</p>
     </item>
     <item>
-      <p>En el panel lateral, elija <gui>Marcadores</gui> en el menú desplegable.</p>
+      <p>En el panel lateral, pulse el botón <gui style="button">Marcadores</gui> en la parte inferior.</p>
     </item>
     <item>
-      <p>Pulse el botón <gui>Añadir</gui> en la parte inferior del panel lateral. El nombre predeterminado para el marcador que acaba de añadir es el número de la página del documento.</p>
+      <p>Pulse el botón <gui style="button">+</gui> en la parte inferior del panel lateral. El nombre predeterminado para el marcador que acaba de añadir es el número de la página del documento.</p>
     </item>
     <item>
       <p>Ahora aparece el marcador en la lista de marcadores.</p>
@@ -69,6 +70,7 @@
   <title>Renombrar un marcador</title>
 
   <steps>
+    <item><p>En el panel lateral, pulse el botón <gui style="button">Marcadores</gui> en la parte inferior.</p></item>
     <item><p>Seleccione el marcador en el panel lateral.</p></item>
     <item><p>Pulse sobre el nombre del marcador.</p></item>
     <item><p>Introduzca el nuevo nombre.</p></item>
@@ -81,8 +83,8 @@
   <title>Eliminar un marcador</title>
 
   <steps>
-   <item><p>Seleccione el marcador en el panel lateral.</p></item>
-   <item><p>Pulse el botón <gui>Quitar</gui> en la parte inferior del panel lateral.</p></item>
+   <item><p>En el panel lateral, pulse el botón <gui style="button">Marcadores</gui> en la parte inferior.</p></item>
+   <item><p>Pulse el botón <gui style="button">-</gui> en la parte inferior del panel lateral.</p></item>
   </steps>
 
 </section>

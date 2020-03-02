@@ -7,6 +7,7 @@
 
     <revision pkgversion="3.10" version="0.1" date="2013-11-04" status="final"/>
     <revision pkgversion="3.24" version="0.2" date="2017-09-17" status="final"/>
+    <revision pkgversion="3.35.1" version="0.3" date="2020-02-15" status="final"/>
     <credit type="author">
       <name>Tiffany Antopolski</name>
       <email its:translate="no">tiffany@antopolski.com</email>
@@ -64,13 +65,10 @@
 <p>The header bar contains:</p>
   <list>
     <item>
+      <p>A button to show or hide the side pane.</p>
+    </item>
+    <item>
       <p>Une zone de texte pour <link xref="movingaround#between-pages">aller à une certaine page</link> ou pour <link xref="finding">rechercher</link> dans le <link xref="movingaround#navigating">sommaire</link>.</p>
-    </item>
-    <item>
-      <p><gui>&lt;</gui> et <gui>&gt;</gui> pour se déplacer dans les éléments de l’historique.</p>
-    </item>
-    <item>
-      <p>Un <gui>Bouton de loupe</gui> pour <link xref="finding"> rechercher un mot ou une phrase dans le document</link>.</p>
     </item>
     <item>
       <p>Un bouton pour gérer les <link xref="annotations">annotations</link>.</p>
@@ -79,10 +77,10 @@
       <p>Une liste déroulante pour ajuster le niveau de <link xref="movingaround#zoom">zoom</link>.</p>
     </item>
     <item>
-      <p>Un bouton pour ouvrir le menu <gui>Options d’affichage</gui>.</p>
+      <p>Un <gui>Bouton de loupe</gui> pour <link xref="finding"> rechercher un mot ou une phrase dans le document</link>.</p>
     </item>
     <item>
-      <p>Un bouton pour ouvrir le menu <gui>Options des fichiers</gui>.</p>
+      <p>A button to open the main menu.</p>
     </item>
   </list>
 </page>

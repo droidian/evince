@@ -19,14 +19,12 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Andika Triwidada</mal:name>
       <mal:email>andika@gmail.com</mal:email>
-      <mal:years>2012-2014, 2016, 2017.</mal:years>
+      <mal:years>2012-2014, 2016, 2017, 2020.</mal:years>
     </mal:credit>
   </info>
 
  <title>Navigasi anotasi</title>
-   <p>
-     If you have created annotations on your document, you can use the side pane to display the list of all the annotations in the document. The list indicates the type, page number, author and date of the annotation.
-   </p>
+   <p>Jika Anda telah membuat anotasi pada dokumen Anda, Anda dapat menggunakan panel sisi untuk menampilkan daftar semua anotasi dalam dokumen. Daftar ini menunjukkan jenis, nomor halaman, penulis, dan tanggal anotasi.</p>
    <p>Untuk navigasi cepat ke lokasi dari anotasi tertentu, klik pada tanda panah di sebelah kiri nomor halaman. Anda akan melihat daftar anotasi pada halaman tersebut. Klik pada anotasi yand Anda tertarik, dan <app>penilik dokumen</app> akan menavigasi ke lokasi anotasi dalam dokumen.</p>
 <media type="image" src="figures/annotations-nav-to-page.png"/>
 </page>

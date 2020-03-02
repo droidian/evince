@@ -34,7 +34,7 @@
     </mal:credit>
   </info>
 
-<title>Cerqueu amb SyncTeX</title>
+<title>Cercar amb SyncTeX</title>
 <p>Després de <link xref="synctex-compile">compilar el fitxer TeX amb el SyncTeX</link>, hauríeu de ser capaç de cercar. El SyncTeX fins i tot permet cerques cap endavant i cap enrere des d'un fitxer inclòs.</p>
 
 <section id="forward-search">

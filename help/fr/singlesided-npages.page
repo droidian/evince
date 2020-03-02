@@ -84,7 +84,7 @@
   <p>Sélectionnez l’onglet <gui>Général</gui>.</p>
   <p>Sous <em>Plage</em>, sélectionnez <gui>Pages</gui>.</p>
   <tree>
-   <item>Saisissez le numéro des pages dans cet ordre : <item>n, 1, 2, n-1, n-2, 3, 4, n-3, n-4, 5, 6, n-5, n-6, 7, 8, n-7, n-8, 9, 10, n-9, n-10, 11, 12, n-11...</item> <item>... jusqu’à ce que vous ayez saisi un nombre n de pages.</item></item>
+   <item>Saisissez le numéro des pages dans cet ordre : <item>n, 1, 2, n-1, n-2, 3, 4, n-3, n-4, 5, 6, n-5, n-6, 7, 8, n-7, n-8, 9, 10, n-9, n-10, 11, 12, n-11…</item> <item>… jusqu’à ce que vous ayez saisi un nombre n de pages.</item></item>
   </tree>
  </item>
  <item>

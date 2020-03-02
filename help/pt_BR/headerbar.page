@@ -7,6 +7,7 @@
 
     <revision pkgversion="3.10" version="0.1" date="2013-11-04" status="final"/>
     <revision pkgversion="3.24" version="0.2" date="2017-09-17" status="final"/>
+    <revision pkgversion="3.35.1" version="0.3" date="2020-02-15" status="final"/>
     <credit type="author">
       <name>Tiffany Antopolski</name>
       <email its:translate="no">tiffany@antopolski.com</email>
@@ -58,13 +59,10 @@
 <p>A barra de cabeçalho contém:</p>
   <list>
     <item>
+      <p>A button to show or hide the side pane.</p>
+    </item>
+    <item>
       <p>Um campo de texto para <link xref="movingaround#between-pages">ir à uma determinada página</link> ou para <link xref="finding">procurar</link> no <link xref="movingaround#navigating">índice</link>.</p>
-    </item>
-    <item>
-      <p>Botões <gui>&lt;</gui> e <gui>&gt;</gui> para navegar entre itens do histórico.</p>
-    </item>
-    <item>
-      <p>Um <gui>Botão de lupa</gui> para <link xref="finding">encontrar uma palavra ou frase no documento</link>.</p>
     </item>
     <item>
       <p>Um botão para gerenciar <link xref="annotations">anotações</link>.</p>
@@ -73,10 +71,10 @@
       <p>Uma caixa para ajustar o nível de <link xref="movingaround#zoom">zoom</link>.</p>
     </item>
     <item>
-      <p>Um botão para abrir o menu de <gui>Opções de visualização</gui>.</p>
+      <p>Um <gui>Botão de lupa</gui> para <link xref="finding">encontrar uma palavra ou frase no documento</link>.</p>
     </item>
     <item>
-      <p>Um botão para abrir o menu das <gui>Opções de arquivo</gui>.</p>
+      <p>A button to open the main menu.</p>
     </item>
   </list>
 </page>

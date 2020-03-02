@@ -45,7 +45,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Andika Triwidada</mal:name>
       <mal:email>andika@gmail.com</mal:email>
-      <mal:years>2012-2014, 2016, 2017.</mal:years>
+      <mal:years>2012-2014, 2016, 2017, 2020.</mal:years>
     </mal:credit>
   </info>
 
@@ -95,14 +95,12 @@
         <td><p><key>Page Up</key> / <key>Page Down</key></p></td>
     </tr>
     <tr>
-        <td><p>Go to the previous page.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Page Up</key></keyseq> /
-<key>P</key></p></td>
+        <td><p>Menuju halaman sebelumnya.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Page Up</key></keyseq> / <key>P</key></p></td>
     </tr>
     <tr>
-        <td><p>Go to the next page.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>Page Down</key></keyseq> /
-<key>N</key></p></td>
+        <td><p>Menuju halaman selanjutnya.</p></td>
+        <td><p><keyseq><key>Ctrl</key><key>Page Down</key></keyseq> / <key>N</key></p></td>
     </tr>
 <tr>
         <td><p>Pergi ke nomor halaman.</p></td>
@@ -110,12 +108,12 @@
 </tr>
     <tr>
         <td><p>Go to the beginning of a page (beginning of the document if
-<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
+<gui>Continuous</gui> is selected in the main menu in the top-right corner).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
         <td><p>Go to the end of a page (end of the document if
-<gui>Continuous</gui> is selected in the <gui>View options</gui> menu).</p></td>
+<gui>Continuous</gui> is selected in the main menu in the top-right corner).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>
@@ -127,19 +125,19 @@
          <td><p><keyseq><key>Ctrl</key><key>End</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Add a bookmark in the current page.</p></td>
+        <td><p>Menambah markah di halaman saat ini.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Delete the bookmark in the current page if there is one.</p></td>
+        <td><p>Menghapus markah dalam halaman saat ini bila ada.</p></td>
         <td><p><keyseq><key>Shift</key><key>Ctrl</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
-    	<td><p>Display the side bar with a table of contents and bookmarks.</p></td>
+         <td><p>Display the side pane with a table of contents and bookmarks.</p></td>
          <td><p><key>F9</key></p></td>
     </tr>
     <tr>
-        <td><p>Enable caret navigation placing a moveable cursor in text pages, allowing you to move around and select text with the keyboard.</p></td>
+        <td><p>Mengaktifkan navigasi karet dengan menempatkan kursor yang dapat digerakkan di halaman teks, memungkinkan Anda untuk bergerak dan memilih teks dengan papan ketik.</p></td>
         <td><p><key>F7</key></p></td>
     </tr>
   </table>
@@ -163,13 +161,7 @@
     <title>Mencari teks</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>
-        Show the toolbar that lets you search for words in the document. The
-        search box is automatically highlighted when you press this, and the
-        search will start as soon as you type some text. If you select a text
-        in the document before searching, then the search will start using that
-        text as input.
-        </p></td>
+        <td><p>Menampilkan bilah alat yang memungkinkan Anda mencari kata dalam dokumen. Kotak pencarian otomatis disorot ketika Anda menekan ini, dan pencarian akan dimulai ketika Anda mengetikkan teks. Jika Anda memilih teks dalam dokumen sebelum mencari, maka pencarian akan dimulai memakai teks itu sebagai masukan.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>F</key></keyseq> / <key>/</key></p></td>
     </tr>
     <tr>
@@ -195,74 +187,87 @@
         <td><p><keyseq><key>Ctrl</key><key>Panah kanan</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Default zoom.</p></td>
+        <td><p>Zum baku.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>0</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Perbesar.</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>+</key></keyseq> / <key>=</key> /
-               <keyseq><key>Ctrl</key><key>=</key></keyseq></p></td>
+        <td><p><keyseq><key>Ctrl</key><key>+</key></keyseq> / <key>=</key> / <keyseq><key>Ctrl</key><key>=</key></keyseq></p></td>
     </tr>
     <tr>
         <td><p>Perkecil.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>-</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Fit the page into the window.</p></td>
+        <td><p>Paskan halaman ke dalam jendela.</p></td>
         <td><p><key>F</key></p></td>
     </tr>
     <tr>
-        <td><p>Fit the content width to the space available.</p></td>
+        <td><p>Paskan lebar konten ke ruang yang tersedia.</p></td>
         <td><p><key>W</key></p></td>
     </tr>
     <tr>
-        <td><p>Automatic zoom.</p></td>
+        <td><p>Zum otomatis.</p></td>
         <td><p><key>A</key></p></td>
     </tr>
 </table>
 </section>
 
 <section id="window">
-    <title>Window</title>
+    <title>Jendela</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Use the full screen to view the document.</p></td>
+        <td><p>Menggunakan layar penuh untuk menilik dokumen.</p></td>
         <td><p><key>F11</key></p></td>
     </tr>
     <tr>
-        <td><p>Start a presentation.</p></td>
+        <td><p>Memulai presentasi.</p></td>
         <td><p><key>F5</key> / <keyseq><key>Shift</key><key>F5</key></keyseq></p></td>
     </tr>
 </table>
 </section>
 
 <section id="document">
-    <title>Document view</title>
+    <title>Tilikan dokumen</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Invert background and text colors.</p></td>
+        <td><p>Balikkan warna latar belakang dan teks.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>I</key></keyseq></p></td>
     </tr>
     <tr>
-        <td><p>Swap between continuous and page by page view of the document.</p></td>
+        <td><p>Bertukar antara tilikan dokumen kontinyu dan halaman demi halaman.</p></td>
         <td><p><key>C</key></p></td>
     </tr>
     <tr>
-        <td><p>Display two pages side by side.</p></td>
+        <td><p>Menampilkan dua halaman berdampingan.</p></td>
         <td><p><key>D</key></p></td>
     </tr>
 </table>
 </section>
 
-<section id="annotate">
-    <title>Annotate the document</title>
+<section id="presentation">
+    <title>Mode presentasi</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Add a post-it like note.</p></td>
+        <td><p>Menjungkitkan layar hitam.</p></td>
+        <td><p><key>B</key> / <key>.</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Menjungkitkan layar putih.</p></td>
+        <td><p><key>W</key></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="annotate">
+    <title>Menganotasi dokumen</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Menambahkan catatan mirip post-it.</p></td>
         <td><p><key>S</key></p></td>
     </tr>
     <tr>
-        <td><p>Highlight text.</p></td>
+        <td><p>Menyorot teks.</p></td>
         <td><p><keyseq><key>Ctrl</key><key>H</key></keyseq></p></td>
     </tr>
 </table>

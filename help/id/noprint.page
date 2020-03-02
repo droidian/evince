@@ -18,7 +18,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Andika Triwidada</mal:name>
       <mal:email>andika@gmail.com</mal:email>
-      <mal:years>2012-2014, 2016, 2017.</mal:years>
+      <mal:years>2012-2014, 2016, 2017, 2020.</mal:years>
     </mal:credit>
   </info>
 
@@ -27,7 +27,7 @@
  <title>Kemungkinan alasan kegagalan mencetak</title>
 <p>Suatu dokumen mungkin tak dapat dicetak karena:</p>
  <list>
-  <item><p>Masalah printer, atau</p></item>
+  <item><p>Masalah pencetak atau,</p></item>
   <item><p>Pembatasan pencetakan PDF.</p></item>
  </list>
 </section>
@@ -40,17 +40,16 @@
   <p>Untuk memeriksa apakah pencetak Anda mencetak dengan benar:</p>
   <steps>
     <item>
-      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
-      overview and start typing <gui>Settings</gui>.</p>
+      <p>Buka ringkasan <gui href="help:gnome-help/shell-introduction#activities">Aktivitas</gui> dan mulai mengetik <gui>Setelan</gui>.</p>
     </item>
     <item>
-      <p>Click on <gui>Settings</gui>.</p>
+      <p>Klik <gui>Pengaturan</gui>.</p>
     </item>
     <item>
-      <p>Click <gui>Devices</gui> in the sidebar.</p>
+      <p>Klik <gui>Peranti</gui> di panel sisi.</p>
     </item>
     <item>
-      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+      <p>Klik <gui>Pencetak</gui> di panel sisi untuk membuka panel.</p>
     </item>
    <item><p>Klik pada pencetak Anda dalam daftar.</p></item>
    <item><p>Klik pada <gui>Cetak Halaman Uji</gui>. Suatu halaman mesti dikirim ke pencetak Anda.</p>

@@ -8,6 +8,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="review"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -37,7 +38,8 @@
 <title>페이지 색 반전하기</title>
 
 
- <p>흑백을 뒤바꾸려면 오른쪽 위의 <gui>보기 옵션</gui> 단추를 눌러 <gui>색 반전</gui>을 선택합니다.</p>
+ <p>To swap black for white, white for black, and so on, press the menu button in the
+ top-right corner of the window and select <gui style="menuitem">Night Mode</gui>.</p>
 
 
 <note style="tip">

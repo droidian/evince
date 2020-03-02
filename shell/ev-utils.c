@@ -212,89 +212,45 @@ ev_print_region_contents (cairo_region_t *region)
 	}
 }
 
-static gint
-get_monitor_number (GdkDisplay *display,
-		    GdkMonitor *monitor)
-{
-	gint i;
-
-	for (i = 0; i < gdk_display_get_n_monitors (display); i++) {
-		if (monitor == gdk_display_get_monitor (display, i))
-		    return i;
-	}
-	/* Assume monitor 0 if none */
-	return 0;
-}
-
-static void
-ev_gui_sanitise_popup_position (GtkMenu *menu,
-				GtkWidget *widget,
-				gint *x,
-				gint *y)
-{
-	GdkDisplay *display;
-	GdkMonitor *monitor;
-	GdkRectangle geometry;
-	gint monitor_num;
-	GtkRequisition req;
-
-	g_return_if_fail (widget != NULL);
-
-	gtk_widget_get_preferred_size (GTK_WIDGET (menu), &req, NULL);
-
-	display = gtk_widget_get_display (widget);
-	monitor = gdk_display_get_monitor_at_point (display, *x, *y);
-	monitor_num = get_monitor_number (display, monitor);
-	gtk_menu_set_monitor (menu, monitor_num);
-
-	gdk_monitor_get_geometry (monitor, &geometry);
-
-	*x = CLAMP (*x, geometry.x, geometry.x + MAX (0, geometry.width - req.width));
-	*y = CLAMP (*y, geometry.y, geometry.y + MAX (0, geometry.height - req.height));
-}
-
+/**
+ * ev_gui_menu_popup_at_tree_view_selection:
+ * @menu: a #GtkMenu to show
+ * @tree_view: a #GtkTreeView
+ *
+ * Opens a popup menu positioned at the currently selected row of @tree_view.
+ */
 void
-ev_gui_menu_position_tree_selection (GtkMenu   *menu,
-				     gint      *x,
-				     gint      *y,
-				     gboolean  *push_in,
-				     gpointer  user_data)
+ev_gui_menu_popup_at_tree_view_selection (GtkMenu     *menu,
+					  GtkTreeView *tree_view)
 {
 	GtkTreeSelection *selection;
-	GList *selected_rows;
-	GtkTreeModel *model;
-	GtkTreeView *tree_view = GTK_TREE_VIEW (user_data);
-	GtkWidget *widget = GTK_WIDGET (user_data);
-	GtkRequisition req;
-	GtkAllocation allocation;
-	GdkRectangle visible;
-
-	gtk_widget_get_preferred_size (GTK_WIDGET (menu), &req, NULL);
-	gdk_window_get_origin (gtk_widget_get_window (widget), x, y);
-	gtk_widget_get_allocation (widget, &allocation);
-
-	*x += (allocation.width - req.width) / 2;
-
-	/* Add on height for the treeview title */
-	gtk_tree_view_get_visible_rect (tree_view, &visible);
-	*y += allocation.height - visible.height;
+	GList            *selected_rows;
 
 	selection = gtk_tree_view_get_selection (tree_view);
-	selected_rows = gtk_tree_selection_get_selected_rows (selection, &model);
-	if (selected_rows)
-	{
-		GdkRectangle cell_rect;
+	selected_rows = gtk_tree_selection_get_selected_rows (selection, NULL);
+	if (selected_rows) {
+		GdkWindow     *window;
+		GdkRectangle   rect;
+		GtkAllocation  allocation;
 
+	        window = gtk_widget_get_window (GTK_WIDGET (tree_view));
 		gtk_tree_view_get_cell_area (tree_view, selected_rows->data,
-					     NULL, &cell_rect);
-
-		*y += CLAMP (cell_rect.y + cell_rect.height, 0, visible.height);
-
-		g_list_foreach (selected_rows, (GFunc)gtk_tree_path_free, NULL);
-		g_list_free (selected_rows);
+					     NULL, &rect);
+		gtk_tree_view_convert_bin_window_to_widget_coords (tree_view, 0, rect.y,
+								   NULL, &rect.y);
+		gtk_widget_get_allocation (GTK_WIDGET (tree_view), &allocation);
+		rect.width = allocation.width;
+		gtk_menu_popup_at_rect (menu, window, &rect,
+					GDK_GRAVITY_SOUTH_WEST,
+					GDK_GRAVITY_NORTH_WEST,
+					NULL);
+		g_list_free_full (selected_rows, (GDestroyNotify)gtk_tree_path_free);
+	} else {
+		gtk_menu_popup_at_widget (menu, GTK_WIDGET (tree_view),
+					  GDK_GRAVITY_CENTER,
+					  GDK_GRAVITY_CENTER,
+					  NULL);
 	}
-
-	ev_gui_sanitise_popup_position (menu, widget, x, y);
 }
 
 static void

@@ -24,7 +24,9 @@
 <title>Добавление аннотаций</title>
 <p>Аннотация — это заметка или комментарий, добавленные к документу PDF. <app>Приложение для просмотра документов</app> позволяет добавлять аннотации.</p>
 <p>
-  When you open a file, you should have a side pane on the left side of the window.  If you do not have a visible side pane, click the <gui>View options</gui> menu in the top right corner and select <gui>Side Panel</gui> or press <key>F9</key> on the keyboard.
+  When you open a file, you should have a side pane on the left side of the window.
+  If you do not have a visible side pane, select the <gui style="button">Side pane</gui>
+  button in the header bar, or press <key>F9</key> on the keyboard.
 </p>
 
 <p>
@@ -34,21 +36,20 @@
 <steps>
  <item>
   <p>
-    Select <gui>Annotate the document</gui> from the header bar.
+    Select the <gui style="button">Annotate the document</gui> button from the header bar:
   </p>
     <media type="image" src="figures/add-text-annotation.png" its:translate="no"/>
     <list>
      <item>
       <p>
-        You should now see <gui>Add text annotation</gui> and <gui>Add highlight annotation</gui> buttons below the header bar.
+        You should now see <gui style="button">Note text</gui> and <gui style="button">Highlight text</gui> buttons below the header bar.
       </p>
-       <media type="image" src="figures/list-add-tabs.png"/>
      </item>
     </list>
  </item>
  <item>
   <p>
-   Click on the first icon to add a text annotation.
+   Click on the first button to add a text annotation.
   </p>
  </item>
  <item>

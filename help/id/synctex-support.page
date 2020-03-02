@@ -23,7 +23,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Andika Triwidada</mal:name>
       <mal:email>andika@gmail.com</mal:email>
-      <mal:years>2012-2014, 2016, 2017.</mal:years>
+      <mal:years>2012-2014, 2016, 2017, 2020.</mal:years>
     </mal:credit>
   </info>
 
@@ -31,14 +31,10 @@
 <p>Paket-paket berikut perlu dipasang untuk menambah dukungan bagi SyncTeX:</p>
 <list>
   <item>
-    <p>
-      A LaTeX engine with SyncTeX support, such as <app>pdflatex</app>.
-    </p>
+    <p>Mesin LaTeX dengan dukungan SyncTeX, seperti <app>pdflatex</app>.</p>
   </item>
   <item>
-    <p>
-      A text editor with SyncTeX support, such as <app>gedit</app> with gedit-plugins installed.
-    </p>
+    <p>Sebuah penyunting teks dengan dukungan SyncTeX, seperti <app>gedit</app> dengan gedit-plugins yang terinstal.</p>
   </item>
 </list>
 

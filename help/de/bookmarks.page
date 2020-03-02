@@ -6,6 +6,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10" date="2013-11-04" status="final"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="final"/>
 
     <credit type="author">
       <name>Tiffany Antopolski</name>
@@ -59,7 +60,8 @@
 
   <p>Wenn Sie eine Datei öffnen, sollte links im Fenster eine Seitenleiste eingeblendet werden. Wenn keine Seitenleiste zu sehen ist, drücken Sie die Taste <key>F9</key>.</p>
 
-  <p>Oben in der Seitenleiste befindet sich eine Auswahlliste. Wählen Sie in der Auswahlliste <gui>Lesezeichen</gui>, um mit Lesezeichen zu arbeiten.</p>
+  <p>At the bottom of this side pane, select the <gui style="button">Bookmarks</gui>
+  button.</p>
 
   <links type="section"/>
 
@@ -71,10 +73,13 @@
       <p>Wechseln Sie im PDF-Dokument selbst zu der Seite, für die Sie ein Lesezeichen hinzufügen wollen.</p>
     </item>
     <item>
-      <p>Wählen Sie <gui>Lesezeichen</gui> in der Auswahlliste der Seitenleiste aus.</p>
+      <p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+      at the bottom.</p>
     </item>
     <item>
-      <p>Klicken Sie auf den Knopf <gui>Hinzufügen</gui> unten in der Seitenleiste. Der voreingestellte Name des neu hinzugefügten Lesezeichens ist die Seitenzahl des Dokuments.</p>
+      <p>Press the <gui style="button">+</gui> button at the bottom of the side
+      pane. The default name of the bookmark you just added is the page number
+      of the document.</p>
     </item>
     <item>
       <p>Das Lesezeichen ist nun in der Liste der Lesezeichen aufgeführt.</p>
@@ -87,6 +92,8 @@
   <title>Ein Lesezeichen umbenennen</title>
 
   <steps>
+    <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+    at the bottom.</p></item>
     <item><p>Wählen Sie das Lesezeichen in der Seitenleiste.</p></item>
     <item><p>Klicken Sie auf den Namen des Lesezeichens.</p></item>
     <item><p>Geben Sie den neuen Namen ein.</p></item>
@@ -99,8 +106,9 @@
   <title>Ein Lesezeichen löschen</title>
 
   <steps>
-   <item><p>Wählen Sie das Lesezeichen in der Seitenleiste.</p></item>
-   <item><p>Klicken Sie auf den Knopf <gui>Entfernen</gui> unten in der Seitenleiste.</p></item>
+   <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+   at the bottom.</p></item>
+   <item><p>Press the <gui style="button">-</gui> button at the bottom of the side pane.</p></item>
   </steps>
 
 </section>

@@ -6,6 +6,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10" date="2013-11-04" status="final"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="final"/>
 
     <credit type="author">
       <name>Tiffany Antopolski</name>
@@ -41,7 +42,8 @@
 
   <p>Když otevřete soubor, měli byste vidět na levé straně okna postranní panel. Pokud jej zobrazený nemáte, zmáčkněte <key>F9</key>.</p>
 
-  <p>V horní části postranního panelu je rozbalovací nabídka. Pro práci se záložkami v ní vyberte položku <gui>Záložky</gui>.</p>
+  <p>At the bottom of this side pane, select the <gui style="button">Bookmarks</gui>
+  button.</p>
 
   <links type="section"/>
 
@@ -53,10 +55,13 @@
       <p>V dotyčném dokumentu PDF se přesuňte na stránku, pro kterou si přejete vytvořit záložku.</p>
     </item>
     <item>
-      <p>V rozbalovací nabídce v postranním panelu vyberte <gui>Záložky</gui>.</p>
+      <p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+      at the bottom.</p>
     </item>
     <item>
-      <p>Klikněte na tlačítko <gui>Přidat</gui> v dolní části postranního panelu. Výchozím názvem záložky, kterou jste právě přidali, je číslo stránky dokumentu.</p>
+      <p>Press the <gui style="button">+</gui> button at the bottom of the side
+      pane. The default name of the bookmark you just added is the page number
+      of the document.</p>
     </item>
     <item>
       <p>Záložka nyní bude vypsána v seznamu záložek.</p>
@@ -69,6 +74,8 @@
   <title>Přejmenování záložky</title>
 
   <steps>
+    <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+    at the bottom.</p></item>
     <item><p>Vyberte záložku v postranním panelu.</p></item>
     <item><p>Klikněte na název záložky.</p></item>
     <item><p>Zadejte nový název.</p></item>
@@ -81,8 +88,9 @@
   <title>Smazání záložky</title>
 
   <steps>
-   <item><p>Vyberte záložku v postranním panelu.</p></item>
-   <item><p>Klikněte na tlačítko <gui>Odstranit</gui> v dolní části postranního panelu.</p></item>
+   <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+   at the bottom.</p></item>
+   <item><p>Press the <gui style="button">-</gui> button at the bottom of the side pane.</p></item>
   </steps>
 
 </section>

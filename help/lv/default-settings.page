@@ -6,6 +6,7 @@
     <desc>Saglabāt pašreizējos iestatījumus jauniem dokumentiem.</desc>
 
     <revision pkgversion="3.6.0" version="0.1" date="2012-12-09" status="draft"/>
+    <revision pkgversion="3.34.1" version="0.2" date="2019-11-26" status="draft"/>
     <credit type="author">
       <name>Sindhu S</name>
       <email>sindhus@live.in</email>
@@ -31,7 +32,9 @@
   <title>Mainīt noklusējuma iestatījumus</title>
 
   <p>Atverot dokumentu pirmo reizi, tiek izmantoti noklusējuma iestatījumi, piemēra, tuvinājuma un lappušu skata iestatījumi. Visas veiktās izmaiņas tiks saglabātas šim dokumentam.</p>
-  <p>Jūs varat saglabāt pašlaik izmantotos iestatījumus kā noklusējuma visiem dokumentiem, izvēloties <guiseq><gui style="menu">Rediģēt</gui> <gui style="menuitem">Saglabāt pašreizējos iestatījumus kā noklusējuma</gui></guiseq> vai spiediet <keyseq><key>Ctrl</key><key>T</key></keyseq>.</p>
+  <p>You can save the settings which you are currently using as default for all
+  new documents by pressing the menu button in the top-right corner of the window
+  and selecting <gui style="menuitem">Save Current Settings as Default</gui>.</p>
 
   <note style="important">
     <p>Jaunie noklusējuma iestatījumi nepārraksta iepriekš atvērto dokumentu iestatījumus, tie tiks izmantoti tikai pirmo reizi atvērtiem dokumentiem.</p>

@@ -5,6 +5,7 @@
     <link type="guide" xref="index#reading"/>
     <revision pkgversion="3.2" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="review"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -78,9 +79,6 @@
 
   <list>
     <item>
-      <p>Kliknij menu <gui>Opcje widoku</gui> w górnym prawym rogu i wybierz <gui>Poprzednia strona</gui> lub <gui>Następna strona</gui>.</p>
-    </item>
-    <item>
       <p>Naciśnij klawisze <keyseq><key>Ctrl</key><key>Page Up</key></keyseq> lub <keyseq><key>Ctrl</key><key>Page Down</key></keyseq>.</p>
     </item>
     <item>
@@ -90,16 +88,15 @@
           <p>Wpisz numer strony w polu <gui style="input">Wybór strony</gui> na <link xref="headerbar">pasku nagłówka</link> i naciśnij klawisz <key>Enter</key>.</p>
         </item>
         <item>
-          <p>Aby wyświetlić poprzednio odwiedzone strony, kliknij przyciski <gui style="button">&lt;</gui> lub <gui style="button">&gt;</gui> na pasku nagłówka.</p>
-        </item>
-        <item>
           <p>Aby przejść na początek lub koniec dokumentu:</p>
           <list>
             <item>
-              <p>Kliknij menu <gui>Opcje widoku</gui> w górnym prawym rogu i wybierz <gui>Pierwsza strona</gui>. Można także nacisnąć klawisze <keyseq><key>Ctrl</key><key>Home</key></keyseq>.</p>
+              <p>Press <keyseq><key>Ctrl</key><key>Home</key></keyseq> on your
+              keyboard.</p>
             </item>
             <item>
-              <p>Kliknij menu <gui>Opcje widoku</gui> w górnym prawym rogu i wybierz <gui>Ostatnia strona</gui> lub naciśnij klawisze <keyseq><key>Ctrl</key><key>End</key></keyseq>.</p>
+              <p>Press <keyseq><key>Ctrl</key><key>End</key></keyseq> on your
+              keyboard.</p>
             </item>
           </list>
         </item>
@@ -108,7 +105,10 @@
     <item>
       <p>Aby przejść o dziesięć stron naraz, naciśnij klawisze <keyseq><key>Shift</key><key>Page Up</key></keyseq> lub <keyseq><key>Shift</key><key>Page Down</key></keyseq>.</p>
       <note style="tip">
-        <p>Domyślnie można przechodzić tylko o jedną stronę. Aby przechodzić między stronami tylko za pomocą przewijania i przeciągania, kliknij przycisk <gui>Opcje widoku</gui> w górnym prawym rogu i wybierz <gui>Ciągły</gui>.</p>
+        <p>You can only move around one page at a time, by default. If you want
+        to move between pages just by scrolling or dragging, press the menu
+        button in the top-right corner of the window and select
+        <gui style="menuitem">Continuous</gui>.</p>
       </note>
     </item>
   </list>
@@ -118,7 +118,10 @@
 <section id="navigating">
   <title>Nawigacja za pomocą listy stron lub spisu treści</title>
 
-  <p>Aby wyświetlić boczny panel, kliknij przycisk <gui>Opcje widoku</gui> w górnym prawym rogu i wybierz <gui>Panel boczny</gui> lub naciśnij klawisz <key>F9</key>. Powinien zostać wyświetlony podgląd wszystkich stron dokumentu.</p>
+  <p>To make the side pane visible, select the <gui>Side pane</gui> button in
+  the top-left corner, or press <key>F9</key>
+  on the keyboard. You should see a preview of all of the pages in the
+  document.</p>
 
   <p>Można przechodzić między stronami klikając je w panelu bocznym.</p>
 
@@ -134,31 +137,28 @@
 <section id="zoom">
   <title>Powiększanie i pomniejszanie</title>
 
-  <list>
-    <item>
-      <p>Kliknij przycisk <gui>Opcje widoku</gui> w górnym prawym rogu i wybierz <gui>Powiększ</gui> lub użyj skrótu klawiszowego <keyseq><key>Ctrl</key><key>+</key></keyseq>.</p>
-    </item>
-    <item>
-      <p>Kliknij przycisk <gui>Opcje widoku</gui> w górnym prawym rogu i wybierz <gui>Pomniejsz</gui> lub użyj skrótu klawiszowego <keyseq><key>Ctrl</key><key>-</key></keyseq>.</p>
-    </item>
-  </list>
-
-  <p>Można także:</p>
+  <p>To adjust the zoom level:</p>
 
   <list>
     <item>
-      <p>przytrzymać klawisz <key>Ctrl</key> i użyć kółka myszy do przybliżania,</p>
-    </item>
-    <item>
-      <p>wybrać procent powiększenia z rozwijanego menu nad oknem.</p>
+      <p>Select the desired zoom percentage from the drop-down menu in the top-right corner.</p>
       <media type="image" src="figures/zoom.png" its:translate="no"/>
+    </item>
+    <item>
+      <p>Alternatively, use the keyboard shortcuts <keyseq><key>Ctrl</key><key>+</key></keyseq>
+      to zoom in, or <keyseq><key>Ctrl</key><key>-</key></keyseq> to zoom out.</p>
+    </item>
+    <item>
+      <p>Alternatively, hold down <key>Ctrl</key> and use your mouse scroll wheel to zoom.</p>
     </item>
   </list>
 
   <note>
     <p>Opcja <gui>Dopasowanie do strony</gui> spowoduje dopasowanie dokumentu do całej <em>wysokości</em> okna.</p>
     <p>Opcja <gui>Dopasowanie do szerokości</gui> spowoduje dopasowanie dokumentu do całej <em>szerokości</em> okna.</p>
-    <p>Aby wyświetlić dwie strony naraz, obok siebie, jak w książce, kliknij przycisk <gui>Opcje widoku</gui> w górnym prawym rogu i wybierz <gui>Podwójny</gui>.</p>
+    <p>If you want to see two pages at once, side by side, like in a book,
+    press the menu button in the top-right corner of the window and select
+    <gui style="menuitem">Dual</gui>.</p>
     <p>Jeśli ustawienie „allow-links-change-zoom” jest wyłączone, odnośniki nie mogą zmieniać poziomu powiększenia.</p>
   </note>
 
@@ -166,18 +166,11 @@
 
   <list>
     <item>
-      <p>Kliknij przycisk <gui>Opcje widoku</gui> w górnym prawym rogu i wybierz <gui>Pełny ekran</gui> lub naciśnij klawisz <key>F11</key>.</p>
+      <p>Press <key>F11</key>.</p>
     </item>
     <item>
       <p>Aby wyjść z trybu pełnoekranowego:</p>
-      <list>
-        <item>
-          <p>Naciśnij klawisz <key>F11</key> lub <key>Escape</key>,</p>
-        </item>
-        <item>
-          <p>lub wyłącz <gui>Pełny ekran</gui> klikając przycisk <gui>Opcje widoku</gui> w górnym prawym rogu i wybierając <gui>Pełny ekran</gui>.</p>
-        </item>
-      </list>
+      <p>Naciśnij klawisz <key>F11</key> lub <key>Escape</key>,</p>
     </item>
   </list>
 </section>

@@ -6,6 +6,7 @@
     <desc>Guardar la configuración actual como predeterminada para los documentos nuevos.</desc>
 
     <revision pkgversion="3.6.0" version="0.1" date="2012-12-09" status="draft"/>
+    <revision pkgversion="3.34.1" version="0.2" date="2019-11-26" status="draft"/>
     <credit type="author">
       <name>Sindhu S</name>
       <email>sindhus@live.in</email>
@@ -18,7 +19,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2012 - 2019</mal:years>
+      <mal:years>2012 - 2020</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -31,7 +32,7 @@
   <title>Cambiar la configuración predeterminada</title>
 
   <p>Cuando se abre un documento por primera vez, se aplica la configuración predeterminada como las preferencias de la ampliación o de la vista de página. Cualquier cambio que haga a esta configuración se guarda para el documento.</p>
-  <p>Puede guardar la configuración que está usando actualmente como predeterminada para todos los documentos nuevos seleccionando <guiseq><gui style="menu">Editar</gui> <gui style="menuitem">Guardar la configuración actual como predeterminada</gui></guiseq> o pulsando <keyseq><key>Ctrl</key><key>T</key></keyseq>.</p>
+  <p>Puede guardar la configuración que está usando actualmente como predeterminada para todos los documentos nuevos pulsando el botón de menú en la esquina superior derecha de la ventana y eligiendo <gui style="menuitem">Guardar la configuración actual como predeterminada</gui>.</p>
 
   <note style="important">
     <p>La nueva configuración predeterminada no sobreescribe la configuración de los documentos abiertos anteriormente, sólo se aplica a los documentos abiertos por primera vez.</p>

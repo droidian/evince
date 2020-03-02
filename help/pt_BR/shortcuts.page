@@ -137,11 +137,13 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> seguido do número da página e <key>Enter</key></p></td>
 </tr>
     <tr>
-        <td><p>Vai para o início de uma página (início do documento se <gui>Contínuo</gui> estiver selecione no menu de <gui>Opções de visualização</gui>).</p></td>
+        <td><p>Go to the beginning of a page (beginning of the document if
+<gui>Continuous</gui> is selected in the main menu in the top-right corner).</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
-        <td><p>vai para o final de uma página (final do documento se a opção <gui>Contínuo</gui> estiver selecionada no menu de <gui>Opções de visualização</gui>).</p></td>
+        <td><p>Go to the end of a page (end of the document if
+<gui>Continuous</gui> is selected in the main menu in the top-right corner).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>
@@ -161,7 +163,7 @@
         <td><p><keyseq><key>Shift</key><key>Ctrl</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
-    	<td><p>Exibe a barra lateral com uma tabela de conteúdo e marcadores.</p></td>
+         <td><p>Display the side pane with a table of contents and bookmarks.</p></td>
          <td><p><key>F9</key></p></td>
     </tr>
     <tr>
@@ -269,6 +271,20 @@
     <tr>
         <td><p>Exibe duas páginas lado a lado.</p></td>
         <td><p><key>D</key></p></td>
+    </tr>
+</table>
+</section>
+
+<section id="presentation">
+    <title>Presentation mode</title>
+<table frame="all" rules="cols" shade="rows">
+    <tr>
+        <td><p>Toggle black screen.</p></td>
+        <td><p><key>B</key> / <key>.</key></p></td>
+    </tr>
+    <tr>
+        <td><p>Toggle white screen.</p></td>
+        <td><p><key>W</key></p></td>
     </tr>
 </table>
 </section>

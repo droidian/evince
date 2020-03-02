@@ -6,6 +6,7 @@
     <desc><app>Dokumentu skatītāja</app> lietotni nevar izmantot datņu rediģēšanai.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <revision pkgversion="3.34" version="0.2" date="2019-11-26" status="final"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -37,7 +38,8 @@
 <note>
  <p>
  PDF and PostScript (.ps) files are not usually intended to be edited, but PDF editing software is available. Try
-<link href="http://pdfedit.cz/en/index.html">pdfedit</link>, for example.
+ <app>LibreOffice Draw</app> or <app>Okular</app>, for example.
+ Furthermore, <app>pdfarranger</app> allows rearranging or removing pages and merging files.
  </p>
 </note>
 </page>

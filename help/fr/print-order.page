@@ -66,13 +66,13 @@
  <p>Pour inverser l’ordre :</p>
  <steps>
   <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
-  <item><p>Dans l’onglet <gui>Général</gui> de la fenêtre d’impression, sélectionnez <gui>Inverser</gui> dans la partie <gui>Copies</gui>. La dernière page est alors imprimée en premier...</p></item>
+  <item><p>Dans l’onglet <gui>Général</gui> de la fenêtre d’impression, sélectionnez <gui>Inverser</gui> dans la partie <gui>Copies</gui>. La dernière page est alors imprimée en premier…</p></item>
  </steps>
 </section>
 
 <section id="collate">
  <title>Rassemblement</title>
- <p>Si vous imprimez plus d’une copie du document, la sortie papier est par défaut regroupée par numéro de page (par ex. les copies de la première page sortent, puis celles de la page deux...). Lorsque vous utilisez Rassembler, chaque copie du document sort avec ses pages regroupées ensemble.</p>
+ <p>Si vous imprimez plus d’une copie du document, la sortie papier est par défaut regroupée par numéro de page (par ex. les copies de la première page sortent, puis celles de la page deux…). Lorsque vous utilisez Rassembler, chaque copie du document sort avec ses pages regroupées ensemble.</p>
 
  <p>Pour rassembler :</p>
  <steps>

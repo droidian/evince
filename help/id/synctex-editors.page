@@ -18,7 +18,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Andika Triwidada</mal:name>
       <mal:email>andika@gmail.com</mal:email>
-      <mal:years>2012-2014, 2016, 2017.</mal:years>
+      <mal:years>2012-2014, 2016, 2017, 2020.</mal:years>
     </mal:credit>
   </info>
 
@@ -29,21 +29,13 @@
 </section>
 
 <section id="vim-latex"><title>Vim-latex</title>
-<p>
-The <app>gedit</app> plugin contains a python script (<file>evince_dbus.py</file>) that can be used to get SyncTeX working with Vim.
-In order to use vim-latex together with the <app>document viewer</app> you need to follow the next steps:
-</p>
+<p>Pengaya <app>gedit</app> memuat skrip python (<file>evince_dbus.py</file>) yang dapat dipakai agar SyncTeX bekerja dengan Vim. Untuk memakai vim-latex bersama dengan <app>penampil dokumen</app> Anda perlu mengikuti langkah-langkah berikut:</p>
 <steps>
  <item>
-  <p>
-     Copy the <file>evince_dbus.py</file> to some directory in your path and give it +x permissions.
-
- </p>
+  <p>Salin <file>evince_dbus.py</file> ke salah satu direktori pada path Anda dan berikan hak akses +x.</p>
  </item>
  <item>
-  <p>
-     Modify your <file>~/.vimrc</file> file and add the following lines.
-    </p>
+  <p>Ubah berkas <file>~/.vimrc</file> Anda dan tambahkan baris-baris berikut.</p>
 <code>
 let g:Tex_ViewRule_pdf = 'evince_dbus.py'
 let g:Tex_DefaultTargetFormat = 'pdf'

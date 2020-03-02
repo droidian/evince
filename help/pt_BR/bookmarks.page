@@ -6,6 +6,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10" date="2013-11-04" status="final"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="final"/>
 
     <credit type="author">
       <name>Tiffany Antopolski</name>
@@ -65,7 +66,8 @@
 
   <p>Quando você abre um arquivo, deve aparecer um painel lateral na esquerda da janela. Se você não ver um painel lateral, pressione a tecla <key>F9</key>.</p>
 
-  <p>No topo deste painel lateral, há um menu suspenso. Para trabalhar com marcadores, selecione a opção <gui>Marcadores</gui> deste menu suspenso.</p>
+  <p>At the bottom of this side pane, select the <gui style="button">Bookmarks</gui>
+  button.</p>
 
   <links type="section"/>
 
@@ -77,10 +79,13 @@
       <p>No documento PDF, navegue até a página para a qual você gostaria de adicionar o marcador.</p>
     </item>
     <item>
-      <p>No topo do painel lateral esquerdo, selecione a opção <gui>Marcadores</gui> no menu suspenso.</p>
+      <p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+      at the bottom.</p>
     </item>
     <item>
-      <p>Clique no botão <gui>Adicionar</gui> na parte inferior do painel lateral. O nome inicial do indicador que você acabou de adicionar é o número da página do documento.</p>
+      <p>Press the <gui style="button">+</gui> button at the bottom of the side
+      pane. The default name of the bookmark you just added is the page number
+      of the document.</p>
     </item>
     <item>
       <p>O marcador agora aparece na lista de marcadores.</p>
@@ -93,6 +98,8 @@
   <title>Renomeando um marcador</title>
 
   <steps>
+    <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+    at the bottom.</p></item>
     <item><p>Selecione o marcador no painel lateral.</p></item>
     <item><p>Clique sobre o nome do marcador.</p></item>
     <item><p>Digite o novo nome.</p></item>
@@ -105,8 +112,9 @@
   <title>Apagando um marcador</title>
 
   <steps>
-   <item><p>Selecione o marcador no painel lateral.</p></item>
-   <item><p>Clique no botão <gui>Remover</gui> na parte inferior do painel lateral.</p></item>
+   <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
+   at the bottom.</p></item>
+   <item><p>Press the <gui style="button">-</gui> button at the bottom of the side pane.</p></item>
   </steps>
 
 </section>

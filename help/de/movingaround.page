@@ -5,6 +5,7 @@
     <link type="guide" xref="index#reading"/>
     <revision pkgversion="3.2" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="review"/>
 
     <credit type="author">
       <name>Phil Bull</name>
@@ -96,9 +97,6 @@
 
   <list>
     <item>
-      <p>Klicken Sie auf den Knopf <gui>Ansichtsoptionen</gui> in der rechten oberen Ecke und wählen Sie <gui>Vorherige Seite</gui> oder <gui>Nächste Seite</gui>.</p>
-    </item>
-    <item>
       <p>Drücken Sie die Tasten <keyseq><key>Strg</key><key>Bild auf</key></keyseq> oder <keyseq><key>Strg</key><key>Bild ab</key></keyseq> auf der Tastatur.</p>
     </item>
     <item>
@@ -108,16 +106,15 @@
           <p>Tippen Sie die Seitennummer unter <gui style="input">Seite wählen</gui> in der <link xref="headerbar">Kopfleiste</link> ein und drücken Sie die <key>Eingabetaste</key>.</p>
         </item>
         <item>
-          <p>Um zuvor besuchte Seiten zu sehen, wählen Sie <gui style="button">&lt;</gui> oder <gui style="button">&gt;</gui> in der Kopfleiste.</p>
-        </item>
-        <item>
           <p>Wenn Sie zum Anfang oder das Ende des Dokuments springen möchten:</p>
           <list>
             <item>
-              <p>Klicken Sie auf den Knopf <gui>Dateioptionen</gui> in der rechten oberen Ecke des Fensters und wählen Sie dann <gui>Erste Seite</gui> oder drücken Sie auf der Tastatur <keyseq><key>Strg</key><key>Pos1</key></keyseq>.</p>
+              <p>Press <keyseq><key>Ctrl</key><key>Home</key></keyseq> on your
+              keyboard.</p>
             </item>
             <item>
-              <p>Klicken Sie auf den Knopf <gui>Ansichtsoptionen</gui> in der rechten oberen Ecke des Fensters und wählen Sie dann <gui>Letzte Seite</gui> oder drücken Sie auf der Tastatur <keyseq><key>Strg</key><key>Ende</key></keyseq>.</p>
+              <p>Press <keyseq><key>Ctrl</key><key>End</key></keyseq> on your
+              keyboard.</p>
             </item>
           </list>
         </item>
@@ -126,7 +123,10 @@
     <item>
       <p>Um zehn Seiten auf einmal weiter zu blättern, drücken Sie <keyseq><key>Umschalt</key><key>Bild auf</key></keyseq> bzw. <keyseq><key>Umschalt</key><key>Bild ab</key></keyseq>.</p>
       <note style="tip">
-        <p>Sie können standardmäßig nur jeweils eine Seite durchsuchen. Falls Sie sich durch die Seiten durch Rollen und Ziehen bewegen wollen, klicken Sie auf <gui>Ansichtsoptionen</gui> in der rechten oberen Ecke und wählen Sie <gui>Fortlaufend</gui>.</p>
+        <p>You can only move around one page at a time, by default. If you want
+        to move between pages just by scrolling or dragging, press the menu
+        button in the top-right corner of the window and select
+        <gui style="menuitem">Continuous</gui>.</p>
       </note>
     </item>
   </list>
@@ -136,7 +136,10 @@
 <section id="navigating">
   <title>Navigation mittels Seitenliste oder Inhaltsverzeichnis</title>
 
-  <p>Um die Seitenleiste einzublenden, klicken Sie auf den Knopf <gui>Ansichtsoptionen</gui> in der rechten oberen Ecke und wählen Sie <gui>Seitenleiste</gui>, oder drücken Sie <key>F9</key> auf der Tastatur. Sie sollten nun eine Vorschau aller Dokumentseiten sehen können.</p>
+  <p>To make the side pane visible, select the <gui>Side pane</gui> button in
+  the top-left corner, or press <key>F9</key>
+  on the keyboard. You should see a preview of all of the pages in the
+  document.</p>
 
   <p>Sie können zu Seiten wechseln, indem Sie auf die Vorschau in der Seitenleiste klicken.</p>
 
@@ -152,31 +155,28 @@
 <section id="zoom">
   <title>Vergrößern und verkleinern</title>
 
-  <list>
-    <item>
-      <p>Zum Vergrößern klicken Sie auf den Knopf <gui>Ansichtsoptionen</gui> in der rechten oberen Ecke und wählen Sie <gui>Vergrößern</gui>, oder verwenden Sie die Tastenkombination <keyseq><key>Strg</key><key>+</key></keyseq>.</p>
-    </item>
-    <item>
-      <p>Zum Verkleinern klicken Sie auf den Knopf <gui>Ansichtsoptionen</gui> in der rechten oberen Ecke und wählen Sie <gui>Verkleinern</gui>, oder verwenden Sie die Tastenkombination <keyseq><key>Strg</key><key>-</key></keyseq>.</p>
-    </item>
-  </list>
-
-  <p>Alternativ können Sie einen der folgenden Schritte ausführen:</p>
+  <p>To adjust the zoom level:</p>
 
   <list>
     <item>
-      <p>Halten Sie die <key>Strg</key>-Taste gedrückt und vergrößern/verkleinern Sie mit Hilfe des Mausrads.</p>
-    </item>
-    <item>
-      <p>Wählen Sie die gewünschte Vergrößerung in der Auswahlliste über dem Fenster.</p>
+      <p>Select the desired zoom percentage from the drop-down menu in the top-right corner.</p>
       <media type="image" src="figures/zoom.png" its:translate="no"/>
+    </item>
+    <item>
+      <p>Alternatively, use the keyboard shortcuts <keyseq><key>Ctrl</key><key>+</key></keyseq>
+      to zoom in, or <keyseq><key>Ctrl</key><key>-</key></keyseq> to zoom out.</p>
+    </item>
+    <item>
+      <p>Alternatively, hold down <key>Ctrl</key> and use your mouse scroll wheel to zoom.</p>
     </item>
   </list>
 
   <note>
     <p>Die Option <gui>An Seite anpassen</gui> passt die <em>Höhe</em> des Dokuments auf die des Fensters an.</p>
     <p>Die Option <gui>An Breite anpassen</gui> passt die <em>Breite</em> des Dokuments auf die des Fensters an.</p>
-    <p>Um zwei Seiten zugleich nebeneinander zu sehen, so wie in einem Buch, klicken Sie auf <gui>Ansichtsoptionen</gui> in der rechten oberen Ecke und wählen Sie <gui>Zweiseitig</gui>.</p>
+    <p>If you want to see two pages at once, side by side, like in a book,
+    press the menu button in the top-right corner of the window and select
+    <gui style="menuitem">Dual</gui>.</p>
     <p>Falls die gsetting-Einstellung »allow-links-change-zoom« auf falsch gesetzt ist, werden Verweise vom Ändern der Vergrößerungsstufe ausgeschlossen.</p>
   </note>
 
@@ -184,18 +184,11 @@
 
   <list>
     <item>
-      <p>Klicken Sie auf den Knopf <gui>Ansichtsoptionen</gui> in der rechten oberen Ecke und wählen Sie <gui>Vollbild</gui> oder drücken Sie <key>F11</key>.</p>
+      <p>Press <key>F11</key>.</p>
     </item>
     <item>
       <p>So verlassen Sie den Vollbildmodus:</p>
-      <list>
-        <item>
-          <p>Drücken Sie <key>F11</key> oder <key>Esc</key></p>
-        </item>
-        <item>
-          <p>Oder verlassen Sie <gui>Vollbild</gui> durch Klicken auf den Knopf <gui>Ansichtsoptionen</gui> in der rechten oberen Ecke und wählen Sie <gui>Vollbild</gui>.</p>
-        </item>
-      </list>
+      <p>Drücken Sie <key>F11</key> oder <key>Esc</key></p>
     </item>
   </list>
 </section>

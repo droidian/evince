@@ -7,6 +7,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="review"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -48,7 +49,8 @@
   <p><link xref="opening">Öppna en fil</link></p>
  </item>
  <item>
-   <p>Klicka på knappen <gui>Visningsalternativ</gui> i övre högra hörnet och välj <gui>Presentation</gui> (eller tryck på <key>F5</key>).</p>
+   <p>Press the menu button in the top-right corner of the window and select
+   <gui style="menuitem">Present as Slideshow</gui> (or press <key>F5</key>).</p>
   <p>Presentationen kommer att visas i helskärmsläge.</p>
  </item>
 </steps>
@@ -61,6 +63,14 @@
   <p>Du kan också använda rullningshjulet för att gå fram och tillbaka genom presentationen.</p>
  </note>
  <p>Använd <key>Esc</key> för att avsluta presentationen.</p>
+</section>
+
+<section id="blank-screen">
+<title>Showing a blank screen</title>
+<p>Press <key>B</key> or <key>.</key> to show a black screen.</p>
+<p>Press <key>W</key> to show a white screen.</p>
+<p>Press <key>B</key>, <key>.</key>, or <key>W</key> again to show the
+slide.</p>
 </section>
 
 <section id="file-formats">

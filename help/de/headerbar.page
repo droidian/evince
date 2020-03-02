@@ -7,6 +7,7 @@
 
     <revision pkgversion="3.10" version="0.1" date="2013-11-04" status="final"/>
     <revision pkgversion="3.24" version="0.2" date="2017-09-17" status="final"/>
+    <revision pkgversion="3.35.1" version="0.3" date="2020-02-15" status="final"/>
     <credit type="author">
       <name>Tiffany Antopolski</name>
       <email its:translate="no">tiffany@antopolski.com</email>
@@ -52,13 +53,10 @@
 <p>Die Kopfleiste enthält:</p>
   <list>
     <item>
+      <p>A button to show or hide the side pane.</p>
+    </item>
+    <item>
       <p>Ein Textfeld, um zu einer <link xref="movingaround#between-pages">bestimmten Seite zu gehen</link> oder zum <link xref="finding">Suchen</link> im <link xref="movingaround#navigating">Index</link>.</p>
-    </item>
-    <item>
-      <p><gui>&lt;</gui> und <gui>&gt;</gui> zum Springen zwischen Einträgen in der Chronik.</p>
-    </item>
-    <item>
-      <p>Ein <gui>Lupen-Knopf</gui> zum <link xref="finding">Suchen nach einem Wort oder Begriff im Dokument</link>.</p>
     </item>
     <item>
       <p>Ein Knopf zum Verwalten von <link xref="annotations">Anmerkungen</link>.</p>
@@ -67,10 +65,10 @@
       <p>Ein Auswahlfeld zum Anpassen der <link xref="movingaround#zoom">Vergrößerungsstufe</link>.</p>
     </item>
     <item>
-      <p>Ein Knopf zum Öffnen des Menüs <gui>Ansichtsoptionen</gui>.</p>
+      <p>Ein <gui>Lupen-Knopf</gui> zum <link xref="finding">Suchen nach einem Wort oder Begriff im Dokument</link>.</p>
     </item>
     <item>
-      <p>Ein Knopf zum Öffnen des Menüs <gui>Dateioptionen</gui>.</p>
+      <p>A button to open the main menu.</p>
     </item>
   </list>
 </page>

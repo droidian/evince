@@ -7,6 +7,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="review"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -23,7 +24,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Andika Triwidada</mal:name>
       <mal:email>andika@gmail.com</mal:email>
-      <mal:years>2012-2014, 2016, 2017.</mal:years>
+      <mal:years>2012-2014, 2016, 2017, 2020.</mal:years>
     </mal:credit>
   </info>
 
@@ -36,7 +37,8 @@
   <p><link xref="opening">Buka suatu berkas</link></p>
  </item>
  <item>
-   <p>Klik tombol <gui>Opsi tilik</gui> di pojok kanan atas dan pilih <gui>Presentasi</gui> (atau tekan <key>F5</key>).</p>
+   <p>Press the menu button in the top-right corner of the window and select
+   <gui style="menuitem">Present as Slideshow</gui> (or press <key>F5</key>).</p>
   <p>Presentasi akan ditampilkan pada layar penuh.</p>
  </item>
 </steps>
@@ -49,6 +51,13 @@
   <p>Anda juga dapat memakai roda penggulir mouse untuk bergerak maju dan mundur dalam presentasi.</p>
  </note>
  <p>Gunakan <key>Esc</key> untuk keluar dari presentasi.</p>
+</section>
+
+<section id="blank-screen">
+<title>Menampilkan layar kosong</title>
+<p>Tekan <key>B</key> atau <key>.</key> untuk menampilkan layar hitam.</p>
+<p>Tekan <key>W</key> untuk menampilkan layar putih.</p>
+<p>Tekan <key>B</key>, <key>.</key>, atau <key>W</key> lagi untuk menampilkan salindia.</p>
 </section>
 
 <section id="file-formats">

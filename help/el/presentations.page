@@ -7,6 +7,7 @@
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
+    <revision pkgversion="3.35.1" date="2020-02-15" status="review"/>
     <credit type="author">
       <name>Phil Bull</name>
       <email>philbull@gmail.com</email>
@@ -66,7 +67,8 @@
   <p><link xref="opening">Άνοιγμα ενός αρχείου</link></p>
  </item>
  <item>
-   <p>Κάντε κλικ στο κουμπί <gui>Εμφάνιση επιλογών</gui> στην πάνω δεξιά γωνία και επιλέξτε <gui>Παρουσίαση</gui> (ή πατήστε <key>F5</key>).</p>
+   <p>Press the menu button in the top-right corner of the window and select
+   <gui style="menuitem">Present as Slideshow</gui> (or press <key>F5</key>).</p>
   <p>Η παρουσίαση θα εμφανισθεί σε πλήρη οθόνη.</p>
  </item>
 </steps>
@@ -79,6 +81,14 @@
   <p>Μπορείτε επίσης να χρησιμοποιήσετε τη ροδέλα για να μετακινηθείτε μπροστά και πίσω στην παρουσίαση.</p>
  </note>
  <p>Χρησιμοποιήστε το <key>Esc</key> για έξοδο από την παρουσίαση.</p>
+</section>
+
+<section id="blank-screen">
+<title>Showing a blank screen</title>
+<p>Press <key>B</key> or <key>.</key> to show a black screen.</p>
+<p>Press <key>W</key> to show a white screen.</p>
+<p>Press <key>B</key>, <key>.</key>, or <key>W</key> again to show the
+slide.</p>
 </section>
 
 <section id="file-formats">

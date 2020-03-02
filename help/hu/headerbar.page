@@ -7,6 +7,7 @@
 
     <revision pkgversion="3.10" version="0.1" date="2013-11-04" status="final"/>
     <revision pkgversion="3.24" version="0.2" date="2017-09-17" status="final"/>
+    <revision pkgversion="3.35.1" version="0.3" date="2020-02-15" status="final"/>
     <credit type="author">
       <name>Tiffany Antopolski</name>
       <email its:translate="no">tiffany@antopolski.com</email>
@@ -40,13 +41,10 @@
 <p>A fejlécsáv tartalmaz:</p>
   <list>
     <item>
+      <p>A button to show or hide the side pane.</p>
+    </item>
+    <item>
       <p>Egy szövegmezőt <link xref="movingaround#between-pages">egy adott oldalra ugráshoz</link> vagy <link xref="finding">kereséshez</link> az <link xref="movingaround#navigating">indexben</link>.</p>
-    </item>
-    <item>
-      <p><gui>&lt;</gui> és <gui>&gt;</gui> az előzménylista elemei közötti mozgáshoz.</p>
-    </item>
-    <item>
-      <p>Egy <gui>Nagyító gombot</gui> egy <link xref="finding">szó vagy kifejezés kereséséhez a dokumentumban</link>.</p>
     </item>
     <item>
       <p>Egy gombot a <link xref="annotations">jegyzetek</link> kezeléséhez.</p>
@@ -55,10 +53,10 @@
       <p>Egy legördülő dobozt a <link xref="movingaround#zoom">nagyítási</link> szint módosításához.</p>
     </item>
     <item>
-      <p>Egy gombot a <gui>Nézetbeállítások</gui> menü megnyitásához.</p>
+      <p>Egy <gui>Nagyító gombot</gui> egy <link xref="finding">szó vagy kifejezés kereséséhez a dokumentumban</link>.</p>
     </item>
     <item>
-      <p>Egy gombot a <gui>Fájlbeállítások</gui> menü megnyitásához.</p>
+      <p>A button to open the main menu.</p>
     </item>
   </list>
 </page>
