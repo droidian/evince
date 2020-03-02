@@ -1,6 +1,8 @@
 evince (3.35.92-1) UNRELEASED; urgency=medium
 
   * New upstream release
+  * debian/control.in:
+    - updated nautilus requirement
 
  -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 02 Mar 2020 15:29:14 +0100
 
