@@ -1,4 +1,4 @@
-evince (3.35.92-1) UNRELEASED; urgency=medium
+evince (3.35.92-1) experimental; urgency=medium
 
   * New upstream release
   * debian/control.in:
