@@ -6,7 +6,7 @@ Source: evince
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Jeremy Bicha <jbicha@debian.org>
+Uploaders: Jeremy Bicha <jbicha@debian.org>, Laurent Bigonville <bigon@debian.org>
 Build-Depends: adwaita-icon-theme,
                appstream,
                debhelper-compat (= 12),
@@ -46,7 +46,7 @@ Build-Depends: adwaita-icon-theme,
                yelp-tools,
                zlib1g-dev
 Rules-Requires-Root: no
-Standards-Version: 4.4.0
+Standards-Version: 4.5.0
 Vcs-Browser: https://salsa.debian.org/gnome-team/evince
 Vcs-Git: https://salsa.debian.org/gnome-team/evince.git
 Homepage: https://wiki.gnome.org/Apps/Evince
