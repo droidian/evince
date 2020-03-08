@@ -3,8 +3,10 @@ evince (3.36.0-1) UNRELEASED; urgency=medium
   * New upstream release
   * debian/control.in: Bump Standards-Version to 4.5.0 (no further changes)
   * Move evinced executable to /usr/libexec
+  * debian/control.in: Add some -doc to the build-dependencies so the links
+    between documentation are properly resolved
 
- -- Laurent Bigonville <bigon@debian.org>  Sun, 08 Mar 2020 19:19:17 +0100
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 08 Mar 2020 19:24:59 +0100
 
 evince (3.35.92-1) experimental; urgency=medium
 
