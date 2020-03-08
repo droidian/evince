@@ -1,6 +1,6 @@
 usr/bin
 usr/lib/*/nautilus/*/*.so
-usr/lib/evince/evinced
+usr/libexec/evinced
 usr/lib/systemd/user/
 usr/share/GConf/gsettings
 usr/share/metainfo
