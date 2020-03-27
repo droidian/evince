@@ -44,6 +44,12 @@
   /usr/bin/dvipdfm Cx -> sanitized_helper,
   /usr/bin/dvipdfmx Cx -> sanitized_helper,
 
+  # gio-launch-desktop was replaced by a very small shell script
+  /{usr/,}bin/{dash,bash} ixr,
+  # With older GLib we might still be on the fallback code path
+  # (remove this after Debian 11 and Ubuntu 20.04)
+  /usr/lib/*/glib-2.0/gio-launch-desktop ixr,
+
   # supported archivers
   /{usr/,}bin/gzip ixr,
   /{usr/,}bin/bzip2 ixr,
