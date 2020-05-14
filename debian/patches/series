@@ -1,0 +1,5 @@
+# UI patches from Purism
+purism/0001-toolbar-Allow-to-toggle-the-sidebar-button.patch
+purism/0002-toolbar-Allow-hiding-zoom-annotation-and-page-widgets.patch
+purism/0003-properties-view-Reduce-the-label-width-chars.patch
+purism/0004-window-Port-it-to-phones.patch
