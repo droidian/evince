@@ -42,3 +42,10 @@ override_dh_install:
 
 override_dh_missing:
 	dh_missing --fail-missing
+
+# Hack since the upstream release tarball includes an outdated po/evince.pot
+# file. This makes dh_translations create a fresh one when building.
+# https://gitlab.gnome.org/GNOME/evince/-/issues/1387
+override_dh_translations:
+	rm po/evince.pot
+	dh_translations
