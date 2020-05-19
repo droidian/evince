@@ -5,7 +5,7 @@
     <link type="guide" xref="index#printing"/>
     <link type="seealso" xref="noprint"/>
 
-    <desc>Indique comment imprimer et répond aux questions courantes à propos de l’impression.</desc>
+    <desc>Comment imprimer et questions courantes concernant l’impression.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
@@ -63,6 +63,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>Impression d’un document</title>
@@ -71,7 +83,7 @@
  <item><p>Pour imprimer un document :</p>
   <steps>
     <item>
-      <p>Ouvrez <gui>Options du fichier</gui> dans le menu en haut à droite et cliquez sur <gui>Imprimer</gui>, ou faites le raccourci <keyseq><key>Ctrl</key><key>P</key></keyseq>.</p>
+      <p>Ouvrez le menu <gui>Options des fichiers</gui> situé dans le coin supérieur droit et sélectionnez <gui>Imprimer</gui>, ou appuyez sur les touches <keyseq><key>Ctrl</key><key>P</key></keyseq>.</p>
     </item>
     <item>
       <p>Sélectionnez votre imprimante dans la liste.</p>

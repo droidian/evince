@@ -36,8 +36,7 @@
 
   <p>Ketika Anda membuka suatu berkas, Anda akan melihat panel samping di sisi kiri jendela. Bila Anda tak memiliki panel sisi yang nampak, tekan <key>F9</key>.</p>
 
-  <p>At the bottom of this side pane, select the <gui style="button">Bookmarks</gui>
-  button.</p>
+  <p>Di bagian bawah panel sisi ini, pilih tombol <gui style="button">Markah</gui>.</p>
 
   <links type="section"/>
 
@@ -49,13 +48,10 @@
       <p>Dalam dokumen PDF itu, berpindahlah ke halaman yang ingin Anda tambahi markah.</p>
     </item>
     <item>
-      <p>In the side pane, select the <gui style="button">Bookmarks</gui> button
-      at the bottom.</p>
+      <p>Di panel sisi, pilih tombol <gui style="button">Markah</gui> di bagian bawah.</p>
     </item>
     <item>
-      <p>Press the <gui style="button">+</gui> button at the bottom of the side
-      pane. The default name of the bookmark you just added is the page number
-      of the document.</p>
+      <p>Tekan tombol <gui style="button">+</gui> di bagian bawah panel sisi. Nama baku markah yang baru saja ditambahkan adalah nomor halaman dokumen.</p>
     </item>
     <item>
       <p>Markah kini dicantumkan pada daftar markah.</p>
@@ -68,8 +64,7 @@
   <title>Ubah nama markah</title>
 
   <steps>
-    <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
-    at the bottom.</p></item>
+    <item><p>Di panel sisi, pilih tombol <gui style="button">Markah</gui> di bagian bawah.</p></item>
     <item><p>Pilih markah dalam panel sisi.</p></item>
     <item><p>Klik pada nama markah.</p></item>
     <item><p>Masukkan nama baru.</p></item>
@@ -82,9 +77,8 @@
   <title>Hapus markah</title>
 
   <steps>
-   <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
-   at the bottom.</p></item>
-   <item><p>Press the <gui style="button">-</gui> button at the bottom of the side pane.</p></item>
+   <item><p>Di panel sisi, pilih tombol <gui style="button">Markah</gui> di bagian bawah.</p></item>
+   <item><p>Tekan tombol <gui style="button">-</gui> di bagian bawah panel sisi.</p></item>
   </steps>
 
 </section>

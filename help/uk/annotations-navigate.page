@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#annotations"/>
-    <desc>How to navigate to annotations.</desc>
+    <desc>Навігація анотаціями.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.26" version="0.2" date="2017-08-03" status="final"/>
@@ -15,14 +15,22 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
- <title>Annotation navigation</title>
-   <p>
-     If you have created annotations on your document, you can use the side pane to display the list of all the annotations in the document. The list indicates the type, page number, author and date of the annotation.
-   </p>
-   <p>
-   To quickly navigate to the location of a particular annotation, click on the arrow to the left of the page number. You will see a list of annotations on that page.  Click on the annotation you are interested in, and the <app>document viewer</app> will navigate to the location of the annotation in the document.
-  </p>
+ <title>Навігація анотаціями</title>
+   <p>Якщо ви вже створили анотації у вашому документі, ви можете скористатися бічною панеллю для показу списку усіх анотацій у документі. У списку буде показано тип, номер сторінки, автора та дату створення анотації.</p>
+   <p>Щоб швидко перейти до розташування певної анотації, натисніть стрілочку ліворуч від номер сторінки. Ви побачите список анотацій відповідної сторінки. Кланціть на пункті потрібної вам анотації і <app>Переглядач документів</app> перейде до місця анотації у документі.</p>
 <media type="image" src="figures/annotations-nav-to-page.png"/>
 </page>

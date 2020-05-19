@@ -55,13 +55,25 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>Renseignement d’un bogue concernant le <app>Visionneur de documents</app></title>
 <p>Le <app>Visionneur de documents</app> est maintenu par une communauté de volontaires. Votre participation est la bienvenue. Si vous remarquez un problème, vous pouvez remplir un <em>rapport d’anomalie</em>. Pour signaler un bogue, visitez <link href="https://gitlab.gnome.org/GNOME/evince/issues/"/>.</p>
    <p>C’est un système de rapports de bogues où utilisateurs et développeurs peuvent enregistrer des détails à propos de bogues, crashes et demandes d’amélioration.</p>
-   <p>Pour participer, il est nécessaire d’avoir un compte qui vous permet de vous connecter, de signaler des bogues et de faire des commentaires. C’est également nécessaire afin de pouvoir recevoir des mises à jour du statut de votre bogue par courriel. Si vous n’avez pas déjà un compte, il est possible d’en créer un en cliquant sur le lien <gui>Sign in / Register</gui>.</p>
-   <p>Une fois inscrit, connectez-vous, puis cliquez sur <gui>New issue</gui>. Avant de signaler un bogue, il est important de lire le <link href="https://wiki.gnome.org/Community/GettingInTouch/Bugzilla/Guidelines">bug writing guidelines (guide sur les rapports de bogue)</link> et de faire une <link href="https://gitlab.gnome.org/GNOME/evince/issues">recherche</link> au sujet du bogue au cas où quelque chose de similaire existerait déjà.</p>
-   <p>Si vous demandez une nouvelle fonctionnalité, choisissez <gui>1. Feature</gui> dans le menu <gui>Labels</gui>. Remplissez les sections « Title » et « Description » et cliquez sur <gui>Submit Issue</gui>.</p>
+   <p>Pour participer, il est nécessaire d’avoir un compte qui vous permet de vous connecter, de signaler des bogues et de faire des commentaires. C’est également nécessaire afin de pouvoir recevoir des mises à jour du statut de votre bogue par courriel. Si vous n’avez pas déjà un compte, cliquez sur le lien <gui>Sign in / Register</gui> pour en créer un.</p>
+   <p>Une fois inscrit, connectez-vous, et cliquez sur <gui>New issue</gui>. Avant de signaler un bogue, il est important de lire le <link href="https://wiki.gnome.org/Community/GettingInTouch/Bugzilla/Guidelines">bug writing guidelines (guide sur le rapport de bogue)</link> et de cliquer sur <link href="https://gitlab.gnome.org/GNOME/evince/issues">Browse (rechercher)</link> pour voir si le bogue n’est pas déjà signalé.</p>
+   <p>Si vous demandez une nouvelle fonctionnalité, choisissez <gui>1. Feature (Fonctionnalité)</gui> dans le menu <gui>Labels (Étiquettes)</gui>. Remplissez les sections « Title » (Titre) et « Description » et cliquez sur <gui>Submit Issue (signaler un problème)</gui>.</p>
    <p>Votre signalement se voit attribuer un numéro d’identification (ID) et son statut est mis à jour lorsque votre bogue est traité.</p>
 </page>

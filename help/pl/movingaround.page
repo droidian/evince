@@ -23,13 +23,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2019</mal:years>
+      <mal:years>2017-2020</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2019</mal:years>
+      <mal:years>2017-2020</mal:years>
     </mal:credit>
   </info>
 
@@ -91,12 +91,10 @@
           <p>Aby przejść na początek lub koniec dokumentu:</p>
           <list>
             <item>
-              <p>Press <keyseq><key>Ctrl</key><key>Home</key></keyseq> on your
-              keyboard.</p>
+              <p>Naciśnij klawisze <keyseq><key>Ctrl</key><key>Home</key></keyseq>.</p>
             </item>
             <item>
-              <p>Press <keyseq><key>Ctrl</key><key>End</key></keyseq> on your
-              keyboard.</p>
+              <p>Naciśnij klawisze <keyseq><key>Ctrl</key><key>End</key></keyseq>.</p>
             </item>
           </list>
         </item>
@@ -105,10 +103,7 @@
     <item>
       <p>Aby przejść o dziesięć stron naraz, naciśnij klawisze <keyseq><key>Shift</key><key>Page Up</key></keyseq> lub <keyseq><key>Shift</key><key>Page Down</key></keyseq>.</p>
       <note style="tip">
-        <p>You can only move around one page at a time, by default. If you want
-        to move between pages just by scrolling or dragging, press the menu
-        button in the top-right corner of the window and select
-        <gui style="menuitem">Continuous</gui>.</p>
+        <p>Domyślnie można przechodzić tylko o jedną stronę. Aby przechodzić między stronami tylko za pomocą przewijania i przeciągania, kliknij przycisk menu w górnym prawym rogu okna i wybierz <gui style="menuitem">Ciągły</gui>.</p>
       </note>
     </item>
   </list>
@@ -118,10 +113,7 @@
 <section id="navigating">
   <title>Nawigacja za pomocą listy stron lub spisu treści</title>
 
-  <p>To make the side pane visible, select the <gui>Side pane</gui> button in
-  the top-left corner, or press <key>F9</key>
-  on the keyboard. You should see a preview of all of the pages in the
-  document.</p>
+  <p>Aby wyświetlić boczny panel, kliknij przycisk <gui>Panel boczny</gui> w górnym lewym rogu lub naciśnij klawisz <key>F9</key>. Powinien zostać wyświetlony podgląd wszystkich stron dokumentu.</p>
 
   <p>Można przechodzić między stronami klikając je w panelu bocznym.</p>
 
@@ -137,28 +129,25 @@
 <section id="zoom">
   <title>Powiększanie i pomniejszanie</title>
 
-  <p>To adjust the zoom level:</p>
+  <p>Aby dostosować poziom powiększenia:</p>
 
   <list>
     <item>
-      <p>Select the desired zoom percentage from the drop-down menu in the top-right corner.</p>
+      <p>Wybierz procent powiększenia z rozwijanego menu w górnym prawym rogu okna.</p>
       <media type="image" src="figures/zoom.png" its:translate="no"/>
     </item>
     <item>
-      <p>Alternatively, use the keyboard shortcuts <keyseq><key>Ctrl</key><key>+</key></keyseq>
-      to zoom in, or <keyseq><key>Ctrl</key><key>-</key></keyseq> to zoom out.</p>
+      <p>Można także użyć skrótów klawiszowych <keyseq><key>Ctrl</key><key>+</key></keyseq> do powiększenia lub <keyseq><key>Ctrl</key><key>-</key></keyseq> do pomniejszenia.</p>
     </item>
     <item>
-      <p>Alternatively, hold down <key>Ctrl</key> and use your mouse scroll wheel to zoom.</p>
+      <p>Można także przytrzymać klawisz <key>Ctrl</key> i użyć kółka myszy do przybliżania.</p>
     </item>
   </list>
 
   <note>
     <p>Opcja <gui>Dopasowanie do strony</gui> spowoduje dopasowanie dokumentu do całej <em>wysokości</em> okna.</p>
     <p>Opcja <gui>Dopasowanie do szerokości</gui> spowoduje dopasowanie dokumentu do całej <em>szerokości</em> okna.</p>
-    <p>If you want to see two pages at once, side by side, like in a book,
-    press the menu button in the top-right corner of the window and select
-    <gui style="menuitem">Dual</gui>.</p>
+    <p>Aby wyświetlić dwie strony naraz, obok siebie, jak w książce, kliknij przycisk menu w górnym prawym rogu okna i wybierz <gui style="menuitem">Podwójny</gui>.</p>
     <p>Jeśli ustawienie „allow-links-change-zoom” jest wyłączone, odnośniki nie mogą zmieniać poziomu powiększenia.</p>
   </note>
 
@@ -166,7 +155,7 @@
 
   <list>
     <item>
-      <p>Press <key>F11</key>.</p>
+      <p>Naciśnij klawisz <key>F11</key>.</p>
     </item>
     <item>
       <p>Aby wyjść z trybu pełnoekranowego:</p>

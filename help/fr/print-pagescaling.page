@@ -57,6 +57,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
   <title>Mise à l’échelle pour impression</title>
@@ -65,10 +77,10 @@
 
   <steps>
     <item>
-      <p>Ouvrez le menu en haut à droite de la fenêtre, puis cliquez sur <gui style="menuitem">Imprimer…</gui>.</p>
+      <p>Ouvrez le menu en haut à droite de la fenêtre, puis cliquez sur <gui style="menuitem">Imprimer</gui>.</p>
     </item>
     <item>
-      <p>Sélectionnez l’onglet <gui>Gestion des pages</gui>.</p>
+      <p>Sélectionnez l’onglet <gui style="tab">Gestion des pages</gui>.</p>
     </item>
     <item>
       <p>Choisissez une <em>Mise à l’échelle du papier</em> dans la liste déroulante.</p>

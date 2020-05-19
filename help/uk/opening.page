@@ -13,46 +13,51 @@
       <email its:translate="no">tiffany@antopolski.com</email>
     </credit>
     <credit type="editor">
-      <name>Ekaterina Gerasimova</name>
+      <name>Єкатерина Герасимова (Ekaterina Gerasimova)</name>
       <email its:translate="no">kittykat3756@gmail.com</email>
     </credit>
 
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal-unported.xml"/>
 
-    <desc>How to open a document.</desc>
+    <desc>Як відкрити документ.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-  <title>Open a document</title>
+  <title>Відкрити документ</title>
 
-  <p>You can open a document using any one of the following ways:</p>
+  <p>Ви можете відкрити документ в один з таких способів:</p>
 
   <list>
     <item>
-      <p>Double-click on the file in <app>Files</app> or your <em>file
-      manager</em>.</p>
+      <p>Двічі клацніть на пункті файла у <app>Файлах</app> або вашій улюбленій <em>програмі для керування файлами</em>.</p>
       <note style="tip">
-        <p>Double clicking PDF, PostScript, .djvu, .dvi and Comic Book
-        Archive files opens them in <app>Document Viewer</app> by default.</p>
+        <p>Подвійне клацання типово відкриває файли PDF, PostScript, .djvu, .dvi та архівів коміксів у <app>Переглядачі документів</app>.</p>
       </note>
     </item>
     <item>
-      <p>Right-click on a file icon in <app>Files</app> and click
-      <guiseq><gui>Open With</gui><gui>Document Viewer</gui></guiseq>.</p>
+      <p>Клацніть правою кнопкою миші на піктограмі файла у <app>Файлах</app> і виберіть пункт <guiseq><gui>Відкрити за допомогою</gui><gui>Переглядач документів</gui></guiseq>.</p>
     </item>
   </list>
 
-  <p>If a <app>Document Viewer</app> window is already open you can:</p>
+  <p>Якщо вікно <app>Переглядача документів</app> вже відкрито, ви можете:</p>
 
   <list>
     <item>
-      <p>Drag a file into the window from <app>Files</app>. The new file will
-      open in a new window.</p>
+      <p>Перетягнути позначку файла до вікна з <app>Файлів</app>. Новий файл буде відкрито у новому вікні.</p>
     </item>
     <item>
-      <p>Press the <gui>File options</gui> button in the top-right corner of
-      the window, then select <gui>Open…</gui>. In the <gui>Open Document</gui>
-      dialog, choose the file which you wish to open, and click
-      <gui>Open</gui>. The file will open in a new window.</p>
+      <p>Натиснути кнопку <gui>Дії з файлами</gui> у верхньому правому куті вікна програми, і вибрати пункт <gui>Відкрити…</gui>. У вікні <gui>Відкрити документ</gui> виберіть файл, який слід відкрити, і натисніть кнопку <gui>Відкрити</gui>. Файл буде відкрито у новому вікні програми.</p>
     </item>
   </list>
 

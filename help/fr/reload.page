@@ -57,11 +57,23 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>Pourquoi le document est constamment recharger ?</title>
+<title>Pourquoi le document est-il constamment rechargé ?</title>
 
-<p>Si le <app>Visionneur de documents</app> détecte que le document que vous avez ouvert, a été modifié (peut-être parce qu’un autre programme l’a modifié), il recharge automatiquement le document et affiche la version la plus récente pour vous.</p>
+<p>Si le <app>Visionneur de documents</app> détecte que le document que vous avez ouvert a été modifié (peut-être parce qu’un autre programme l’a modifié), il recharge automatiquement le document et affiche la version la plus récente pour vous.</p>
 
 <p>Si le document est supprimé alors que vous le regardez encore, il reste toujours ouvert.</p>
 

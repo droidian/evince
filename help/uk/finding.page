@@ -14,55 +14,56 @@
       <email its:translate="no">philbull@gmail.com</email>
     </credit>
     <credit type="editor">
-      <name>Anna Philips</name>
+      <name>Анна Філіпс (Anna Philips)</name>
       <email its:translate="no">anna.cs.au@gmail.com</email>
     </credit>
     <credit type="editor">
-      <name>Ekaterina Gerasimova</name>
+      <name>Єкатерина Герасимова (Ekaterina Gerasimova)</name>
       <email its:translate="no">kittykat3756@gmail.com</email>
     </credit>
 
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal-unported.xml"/>
 
-    <desc>Search for a word or phrase in a document.</desc>
+    <desc>Пошук слова або фрази у документі.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-  <title>Find text in a document</title>
+  <title>Пошук тексту у документі</title>
 
   <steps>
     <item>
-      <p>Click the <gui>Magnifying glass button</gui> or press
-      <keyseq><key>Ctrl</key><key>F</key></keyseq> or <key>/</key> to display a
-      search box.</p>
+      <p>Натисніть <gui>кнопку зі збільшувальним склом</gui>, комбінацію клавіш <keyseq><key>Ctrl</key><key>F</key></keyseq> або клавішу <key>/</key>, щоб відкрити панель пошуку.</p>
     </item>
     <item>
-      <p>Start typing into the search box and the search will start
-      automatically.</p>
+      <p>Почніть вводити текст до поля для пошуку. Пошук має розпочатися автоматично.</p>
     </item>
     <item>
-      <p>Use the <gui>∧</gui> and <gui>∨</gui> buttons to move to the previous
-      or next search result.</p>
+      <p>Скористайтеся кнопками <gui>∧</gui> і <gui>∨</gui> для переходу між попереднім і наступним результатами пошуку.</p>
     </item>
     <item>
-      <p>To hide the search bar, click the <gui>Magnifying glass button</gui>
-      again or press <key>Esc</key>.</p>
+      <p>Щоб приховати панель пошуку, натисніть <gui>кнопку зі збільшувальним склом</gui> ще раз або натисніть клавішу <key>Esc</key>.</p>
     </item>
   </steps>
 
   <note style="tip">
-    <p>To filter words by case or completion, you can right click on the search
-    box and select <gui>Case Sensitive</gui> or <gui>Whole Words
-    Only</gui>.</p>
+    <p>Щоб відфільтрувати слова за регістром або повнотою, можете клацнути правою кнопкою миші на панелі пошуку і вибрати <gui>З урахуванням регістру</gui> або <gui>Тільки цілі слова</gui>.</p>
   </note>
 
-  <p>If the word or phrase that you searched for is not found in the document,
-  you will see <media type="image" its:translate="no" src="figures/search-not-found.png"/> in the
-  search box. However, if it appears in the document at least once, you will be
-  shown how many times the search result appears on the current page.</p>
+  <p>Якщо слово або фразу, які ви шукали, у документі не буде знайдено, ви побачите <media type="image" its:translate="no" src="figures/search-not-found.png"/> у полі для пошуку. Якщо ж буде знайдено принаймні один відповідник, програма покаже дані щодо кількості знайдених результатів на поточній сторінці.</p>
 
   <note>
-    <p>Only PDF documents are searchable. Some PDF documents are not
-    searchable because their text is encoded in the document as an image.</p>
+    <p>Шукати можна лише у документах PDF. Пошук у деяких документах PDF неможливий, оскільки текст цих документів включено до документа як зображення.</p>
   </note>
 
 </page>

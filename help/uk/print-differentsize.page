@@ -12,54 +12,61 @@
       <email its:translate="no">philbull@gmail.com</email>
     </credit>
     <credit type="author">
-      <name>Ekaterina Gerasimova</name>
+      <name>Єкатерина Герасимова (Ekaterina Gerasimova)</name>
       <email its:translate="no">kittykat3756@gmail.com</email>
       <years>2015</years>
     </credit>
 
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
 
-    <desc>Printing a document on paper of a different size or
-    orientation.</desc>
+    <desc>Друк документа на папері із різним розміром або орієнтацією.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-  <title>Changing the paper size when printing</title>
+  <title>Зміна розміру паперу під час друку</title>
 
-  <p>If you want to change the paper size of your document (for example, print
-  a US Letter-sized PDF on A4 paper), you can change the printing format for
-  the document.</p>
+  <p>Якщо ви хочете змінити розмір паперу для вашого документа (наприклад, надрукувати PDF із розміром сторінки «US Letter» на папері A4), ви можете змінити формат друку для документа.</p>
 
   <steps>
     <item>
-      <p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p>
+      <p>Натисніть кнопку меню у верхньому правому куті вікна, а потім кнопку <gui style="button">Надрукувати</gui>.</p>
     </item>
     <item>
-      <p>Select the <gui>Page Setup</gui> tab.</p>
+      <p>Перейдіть до вкладки <gui>Параметри сторінки</gui>.</p>
     </item>
     <item>
-      <p>Under the <em>Paper</em> column, choose your <em>Paper size</em> from
-      the drop-down list.</p>
+      <p>У стовпчику <em>Папір</em> виберіть зі спадного списку <em>Розмір паперу</em> потрібний вам варіант.</p>
     </item>
     <item>
-      <p>Click <gui>Print</gui> and your document should print.</p>
+      <p>Натисніть кнопку <gui>Надрукувати</gui>. Має розпочатися друку вашого документа.</p>
     </item>
   </steps>
 
-  <p>You can also use the <em>Orientation</em> menu to choose a different
-  orientation:</p>
+  <p>Ви також можете скористатися меню <em>Орієнтація</em> для вибору іншої орієнтації паперу:</p>
 
   <list>
     <item>
-      <p><gui>Portrait</gui></p>
+      <p><gui>Книжкова</gui></p>
     </item>
     <item>
-      <p><gui>Landscape</gui></p>
+      <p><gui>Альбомна</gui></p>
     </item>
     <item>
-      <p><gui>Reverse portrait</gui></p>
+      <p><gui>Обернена книжкова</gui></p>
     </item>
     <item>
-      <p><gui>Reverse landscape</gui></p>
+      <p><gui>Обернена альбомна</gui></p>
     </item>
   </list>
 

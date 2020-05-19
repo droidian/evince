@@ -61,6 +61,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
   <title>Déplacement dans un document</title>
@@ -115,19 +127,16 @@
       <p>Pour aller à une page précise :</p>
       <list>
         <item>
-          <p>Type a page number in <gui style="input">Select Page</gui> on the
-          <link xref="headerbar">header bar</link> and press <key>Enter</key>.</p>
+          <p>Saisissez un numéro de page dans <gui style="input">Choisir la page</gui> dans la <link xref="headerbar">barre d’en-tête</link> et appuyez sur <key>Entrée</key>.</p>
         </item>
         <item>
           <p>Si vous voulez aller au début ou à la fin du document :</p>
           <list>
             <item>
-              <p>Press <keyseq><key>Ctrl</key><key>Home</key></keyseq> on your
-              keyboard.</p>
+              <p>Appuyez sur les touches <keyseq><key>Ctrl</key><key>Origine</key></keyseq> de votre clavier.</p>
             </item>
             <item>
-              <p>Press <keyseq><key>Ctrl</key><key>End</key></keyseq> on your
-              keyboard.</p>
+              <p>Appuyez sur les touches <keyseq><key>Ctrl</key><key>Fin</key></keyseq> de votre clavier.</p>
             </item>
           </list>
         </item>
@@ -136,10 +145,7 @@
     <item>
       <p>Pour se déplacer de 10 pages à la fois, appuyez sur <keyseq><key>Maj</key><key>Page haut</key></keyseq> ou <keyseq><key>Maj</key><key>Page bas</key></keyseq>.</p>
       <note style="tip">
-        <p>You can only move around one page at a time, by default. If you want
-        to move between pages just by scrolling or dragging, press the menu
-        button in the top-right corner of the window and select
-        <gui style="menuitem">Continuous</gui>.</p>
+        <p>Par défaut, vous ne pouvez vous déplacer que sur une page à la fois. Si vous voulez vous déplacer parmi les pages juste par défilement ou par glissement, cliquez sur le bouton de menu situé dans le coin supérieur droit de la fenêtre, et sélectionnez <gui style="menuitem">Continu</gui>.</p>
       </note>
     </item>
   </list>
@@ -149,17 +155,14 @@
 <section id="navigating">
   <title>Navigation avec une liste de pages ou une table des matières</title>
 
-  <p>To make the side pane visible, select the <gui>Side pane</gui> button in
-  the top-left corner, or press <key>F9</key>
-  on the keyboard. You should see a preview of all of the pages in the
-  document.</p>
+  <p>Pour ouvrir le panneau latéral, cliquez sur le bouton <gui>Panneau latéral</gui> situé dans le coin supérieur gauche, ou appuyez sur la touche <key>F9</key> du clavier. Un aperçu de toutes les pages du document s’affiche.</p>
 
   <p>Vous pouvez vous déplacer parmi les pages en cliquant dessus dans le panneau latéral.</p>
 
   <note>
     <p>Certains documents possèdent un sommaire ou une table des matières que vous pouvez afficher dans le panneau latéral. Cliquez sur la liste déroulante en haut du panneau latéral et sélectionnez <gui>Sommaire</gui> pour l’afficher.</p>
     <note style="tip">
-      <p>La plupart des documents n’utilisent pas cette fonctionnalité donc vous ne serez pas capable d’afficher leur sommaire dans le panneau latéral.</p>
+      <p>La plupart des documents n’utilisent pas cette fonctionnalité, vous ne serez donc pas capable d’afficher leur sommaire dans le panneau latéral.</p>
     </note>
   </note>
 
@@ -168,36 +171,33 @@
 <section id="zoom">
   <title>Zoom avant ou arrière</title>
 
-  <p>To adjust the zoom level:</p>
+  <p>Pour ajuster le niveau de zoom :</p>
 
   <list>
     <item>
-      <p>Select the desired zoom percentage from the drop-down menu in the top-right corner.</p>
+      <p>Sélectionnez le pourcentage de zoom désiré dans le menu déroulant situé dans le coin supérieur droit.</p>
       <media type="image" src="figures/zoom.png" its:translate="no"/>
     </item>
     <item>
-      <p>Alternatively, use the keyboard shortcuts <keyseq><key>Ctrl</key><key>+</key></keyseq>
-      to zoom in, or <keyseq><key>Ctrl</key><key>-</key></keyseq> to zoom out.</p>
+      <p>Vous pouvez également utiliser les raccourcis clavier <keyseq><key>Ctrl</key><key>+</key></keyseq> pour effectuer un zoom avant, ou <keyseq><key>Ctrl</key><key>-</key></keyseq> pour un zoom arrière.</p>
     </item>
     <item>
-      <p>Alternatively, hold down <key>Ctrl</key> and use your mouse scroll wheel to zoom.</p>
+      <p>Vous pouvez aussi maintenir enfoncée la touche <key>Ctrl</key> et utiliser la molette de la souris pour zoomer.</p>
     </item>
   </list>
 
   <note>
     <p>L’option <gui>Adapter à la page</gui> impose à la page du document d’être de la <em>hauteur</em> de la fenêtre.</p>
     <p>L’option <gui>Adapter à la largeur</gui> impose à la page du document d’être de la <em>largeur</em> de la fenêtre.</p>
-    <p>If you want to see two pages at once, side by side, like in a book,
-    press the menu button in the top-right corner of the window and select
-    <gui style="menuitem">Dual</gui>.</p>
-    <p>Si le gsetting allow-links-change-zoom est paramétré à faux, les liens ne peuvent pas changer le niveau de zoom.</p>
+    <p>Si vous voulez voir deux pages à la fois, côte à côte comme dans un livre, cliquez sur le bouton de menu situé dans le coin supérieur droit de la fenêtre, et sélectionnez <gui style="menuitem">Double</gui>.</p>
+    <p>Si l’option gsetting « allow-links-change-zoom » est paramétrée à faux, les liens ne peuvent pas changer le niveau de zoom.</p>
   </note>
 
   <p>Vous pouvez utiliser l’écran complet pour afficher le document :</p>
 
   <list>
     <item>
-      <p>Press <key>F11</key>.</p>
+      <p>Appuyez sur <key>F11</key>.</p>
     </item>
     <item>
       <p>Pour quitter le mode plein écran :</p>

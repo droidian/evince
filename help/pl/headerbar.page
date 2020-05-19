@@ -20,13 +20,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2019</mal:years>
+      <mal:years>2017-2020</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2019</mal:years>
+      <mal:years>2017-2020</mal:years>
     </mal:credit>
   </info>
 
@@ -35,7 +35,7 @@
 <p>Pasek nagłówka zawiera:</p>
   <list>
     <item>
-      <p>A button to show or hide the side pane.</p>
+      <p>Przycisk do wyświetlania i ukrywania panelu bocznego.</p>
     </item>
     <item>
       <p>Pole tekstowe do <link xref="movingaround#between-pages">przechodzenia do konkretnej strony</link> lub do <link xref="finding">wyszukiwania</link> w <link xref="movingaround#navigating">spisie treści</link>.</p>
@@ -50,7 +50,7 @@
       <p><gui>Przycisk z ikoną lupy</gui> do <link xref="finding">wyszukiwania słowa lub zdania w dokumencie</link>.</p>
     </item>
     <item>
-      <p>A button to open the main menu.</p>
+      <p>Przycisk do otwierania głównego menu.</p>
     </item>
   </list>
 </page>

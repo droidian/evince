@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#forms"/>
-    <desc>Working with fillable forms.</desc>
+    <desc>Робота з формами для заповнення.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -14,20 +14,26 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>Forms</title>
-<p>
-   When filling out an interactive form, you can navigate from field to field by clicking on a field with your mouse.  When you are finished filling out a text field, press <key>Enter</key>.
-</p>
+<title>Форми</title>
+<p>При заповненні інтерактивної форми ви можете переходити між полями за допомогою клацання у полі кнопкою миші. Після заповнення текстового поля натисніть клавішу <key>Enter</key>.</p>
 
-<p>
-   You can make a selection in a scrollable list box by clicking on the list box and scrolling to your choice with your mouse.
-</p>
+<p>Вибрати щось у спадному списку можна клацанням на полі списку із наступним гортанням до потрібного вам результату за допомогою миші.</p>
 <note style="tip">
- <p>
-There may be some parts of a form that you may need to fill out by hand <em>after</em> you print the form.  For example, you might have to circle certain things, or sign the form in one or more places.  If you wish to do this electronically, you may want to try <link href="http://www.g-loaded.eu/2008/05/03/how-to-annotate-pdf-files-in-linux-using-xournal/">Xournal</link>.
-</p>
+ <p>У формі можуть бути місця, які слід заповнити вручну <em>після</em> друку форми. Наприклад, деякі речі слід обвести ручкою, або форму слід підписати в одному або декількох місцях. Якщо ви хочете зробити це у електронному вигляді, вам варто спробувати <link href="http://www.g-loaded.eu/2008/05/03/how-to-annotate-pdf-files-in-linux-using-xournal/">Xournal</link>.</p>
 </note>
 
 

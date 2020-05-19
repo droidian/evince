@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#printing"/>
-    <desc>The author may have put printing restrictions on the document.</desc>
+    <desc>Автор може накладати обмеження на друк документа.</desc>
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.30.2" version="0.2" date="2018-11-25" status="final"/>
     <credit type="author">
@@ -14,47 +14,53 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>I can't print a document</title>
+<title>Не вдається надрукувати документ</title>
 <section id="why">
- <title>Possible reasons for printing failure</title>
-<p>A document might not print because of:</p>
+ <title>Можливі причини помилок при друці</title>
+<p>Причинами неможливості надрукувати документ можуть бути:</p>
  <list>
-  <item><p>Printer problems or, </p></item>
-  <item><p>PDF printing restrictions.</p></item>
+  <item><p>проблеми із принтером або</p></item>
+  <item><p>обмеження на друк у PDF.</p></item>
  </list>
 </section>
 
 
 <section id="printer-problems">
-  <title>Printer problems</title>
-  <p>
-  There are many reasons why your printer might not be working. For example, it
-  could be out of paper or ink, or unplugged or damaged.
-  </p>
+  <title>Проблеми з принтером</title>
+  <p>Причин непрацездатності принтера може бути багато. Наприклад, може закінчитися папір або чорнило, принтер може бути від'єднано від комп'ютера або пошкоджено.</p>
 
-  <p>To check if your printer is printing correctly:</p>
+  <p>Щоб перевірити, що ваш принтер може друкувати, виконайте такі дії:</p>
   <steps>
     <item>
-      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
-      overview and start typing <gui>Settings</gui>.</p>
+      <p>Відкрийте огляд <gui href="help:gnome-help/shell-introduction#activities">Діяльності</gui> і почніть вводити слово <gui>Параметри</gui>.</p>
     </item>
     <item>
-      <p>Click on <gui>Settings</gui>.</p>
+      <p>Натисніть пункт <gui>Параметри</gui>.</p>
     </item>
     <item>
-      <p>Click <gui>Devices</gui> in the sidebar.</p>
+      <p>Натисніть пункт <gui>Пристрої</gui> на бічній панелі.</p>
     </item>
     <item>
-      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+      <p>Натисніть пункт <gui>Принтери</gui> на бічній панелі, щоб відкрити панель.</p>
     </item>
-   <item><p>Click on your printer in the list.</p></item>
-   <item><p>Click on <gui>Print Test Page</gui>.  A page should be sent to your printer.</p>
+   <item><p>Натисніть пункт вашого принтера у списку.</p></item>
+   <item><p>Натисніть кнопку <gui>Надрукувати тестову сторінку</gui>. У відповідь має бути надіслано на друк тестову сторінку.</p>
 <note>
- <p>
-If this fails, see <link href="help:gnome-help/printing">Printing help</link>.  You may also need to see your printer's manual to see what else you can do.
-</p>
+ <p>Якщо ці дії не призведуть до бажаних наслідків, ознайомтеся із <link href="help:gnome-help/printing">довідкою щодо друку</link>. Крім того, ви можете переглянути підручник з вашого принтера, щоб дізнатися, чи не можна усунути проблеми в якийсь інший спосіб.</p>
 </note>
 
 </item>
@@ -64,37 +70,22 @@ If this fails, see <link href="help:gnome-help/printing">Printing help</link>.  
 </section>
 
 <section id="pdf-restrictions">
-  <title>PDF printing restrictions</title>
-  <p>
-  Some PDF documents have a setting which prevents you from printing them.
-  Authors can set this printing restriction when they write a document.
-  The <app>document viewer</app> overrides this restriction by default, but you may want to check
-  that it hasn't been disabled:
-  </p>
+  <title>Обмеження на друк у PDF</title>
+  <p>Для деяких документів PDF вказано параметр, який забороняє вам друк документа. Автори документів можуть встановлювати таке обмеження під час створення документа. Типово, <app>Переглядач документів</app> ігнорує таке обмеження, але ви можете перевірити, чи не було вимкнено відповідний параметр роботи програми:</p>
 
   <steps>
     <item>
-      <p>
-      Press <keyseq><key>Alt</key><key>F2</key></keyseq> to open the Run
-      Application window.
-      </p>
+      <p>Натисніть комбінацію клавіш <keyseq><key>Alt</key><key>F2</key></keyseq>, щоб відкрити вікно запуску програм.</p>
     </item>
     <item>
-      <p>
-      Type <input>dconf-editor</input> into the text box and click
-      <gui>Run</gui>. The Configuration Editor will open.
-      </p>
+      <p>Введіть <input>dconf-editor</input> у поле для введення тексту і натисніть кнопку <gui>Виконати</gui>. У відповідь має бути відкрито вікно редактора налаштувань.</p>
     </item>
-    <item><p>Browse to <sys>/org/gnome/evince</sys> using the side pane.</p></item>
+    <item><p>Перейдіть до пункту <sys>/org/gnome/evince</sys> за допомогою бічної панелі.</p></item>
     <item>
-      <p>
-      Make sure that the <gui>override_restrictions</gui> option is checked.
-      </p>
+      <p>Переконайтеся, що позначено пункт <gui>override_restrictions</gui>.</p>
     </item>
     <item>
-      <p>
-      Go back to the <app>Document Viewer</app> and try to print the document again.
-      </p>
+      <p>Поверніться до вікна <app>Переглядача документів</app> і спробуйте надрукувати документ ще раз.</p>
     </item>
   </steps>
 </section>

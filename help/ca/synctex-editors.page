@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#synctex" group="fourth"/>
-    <desc>Quin editor podeu fer servir per editar fitxers TEX?</desc>
+    <desc>Quin editor podeu fer servir per a editar fitxers TEX?</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">

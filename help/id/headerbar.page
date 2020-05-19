@@ -29,7 +29,7 @@
 <p>Bilah kepala memuat:</p>
   <list>
     <item>
-      <p>A button to show or hide the side pane.</p>
+      <p>Sebuah tombol untuk menampilkan atau menyembunyikan panel sisi.</p>
     </item>
     <item>
       <p>Ruas teks untuk <link xref="movingaround#between-pages">pergi ke halaman tertentu</link> atau untuk <link xref="finding">mencari</link> di <link xref="movingaround#navigating">indeks</link>.</p>
@@ -44,7 +44,7 @@
       <p>Sebuah <gui>Tombol kaca pembesar</gui> untuk <link xref="finding">mencari kata atau frase dalam dokumen</link>.</p>
     </item>
     <item>
-      <p>A button to open the main menu.</p>
+      <p>Sebuah tombol untuk membuka menu utama.</p>
     </item>
   </list>
 </page>

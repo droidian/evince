@@ -39,7 +39,7 @@
 
 <section id="forward-search">
     <title>Cerca cap endavant: des de TeX a PDF (des del <app>gedit</app> cap al <app>Visualitzador de documents</app>).</title>
-     <p>La cerca cap endavant us permet fer clic en una secció específica del codi font TeX i saltar cap a la posició associada al PDF. Per realitzar una cerca cap endavant:</p>
+     <p>La cerca cap endavant us permet fer clic en una secció específica del codi font TeX i saltar cap a la posició associada al PDF. Per a realitzar una cerca cap endavant:</p>
 <steps>
 <item>
 <p>Feu clic en una línia del fitxer TeX.</p>

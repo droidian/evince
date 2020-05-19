@@ -4,7 +4,7 @@
   <info>
     <link type="guide" xref="index#tips"/>
 
-    <desc>Inverser les couleurs peut faciliter la lecture de certain texte.</desc>
+    <desc>Inverser les couleurs peut faciliter la lecture de certains textes.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
@@ -63,13 +63,24 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>Inversion des couleurs de la page</title>
 
 
- <p>To swap black for white, white for black, and so on, press the menu button in the
- top-right corner of the window and select <gui style="menuitem">Night Mode</gui>.</p>
+ <p>Pour changer le blanc en noir et vice-versa, cliquez sur le bouton de menu situé dans le coin supérieur droit de la fenêtre, et sélectionnez <gui style="menuitem">Mode nuit</gui>.</p>
 
 
 <note style="tip">

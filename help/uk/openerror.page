@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#faq"/>
-    <desc>Error When Opening A File.</desc>
+    <desc>Помилка під час відкриття файла.</desc>
    <link type="seealso" xref="formats"/>
 
 
@@ -16,11 +16,22 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>Why can't I open a file?</title>
+<title>Чому не вдається відкрити файл?</title>
 
-<p>If you try to open a document of a format that the <app>document viewer</app> does not recognize, you will get an "Unable to open document" error message. Click <gui>Close</gui> to return to the <app>Document Viewer</app> window.
-</p>
+<p>Якщо ви спробуєте відкрити документ у форматі, який не може обробляти <app>Переглядач документів</app>, програма повідомить вам, що «Неможливо відкрити документ». Натисніть кнопку <gui>Закрити</gui>, щоб повернутися до головного вікна <app>Переглядача документів</app>.</p>
 
 </page>

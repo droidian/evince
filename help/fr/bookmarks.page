@@ -64,6 +64,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>Signets</title>
@@ -72,8 +84,7 @@
 
   <p>Lorsque vous ouvrez un fichier, vous devriez avoir un panneau latéral sur le côté gauche de la fenêtre. S’il n’est pas visible, appuyez sur la touche <key>F9</key> du clavier.</p>
 
-  <p>At the bottom of this side pane, select the <gui style="button">Bookmarks</gui>
-  button.</p>
+  <p>En bas de ce panneau latéral, sélectionnez le bouton <gui style="button">Signets</gui>.</p>
 
   <links type="section"/>
 
@@ -85,13 +96,10 @@
       <p>Dans le document PDF, déplacez-vous vers la page que vous voulez ajouter en tant que signet.</p>
     </item>
     <item>
-      <p>In the side pane, select the <gui style="button">Bookmarks</gui> button
-      at the bottom.</p>
+      <p>Dans ce panneau latéral, sélectionnez le bouton <gui style="button">Signets</gui> situé en bas.</p>
     </item>
     <item>
-      <p>Press the <gui style="button">+</gui> button at the bottom of the side
-      pane. The default name of the bookmark you just added is the page number
-      of the document.</p>
+      <p>Cliquez sur le bouton <gui style="button">+</gui> situé en bas du panneau latéral. Le nom par défaut du signet que vous venez d’ajouter est le numéro de page du document.</p>
     </item>
     <item>
       <p>Le signet est maintenant présent dans la liste des signets.</p>
@@ -104,12 +112,11 @@
   <title>Renommer un signet</title>
 
   <steps>
-    <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
-    at the bottom.</p></item>
-    <item><p>Choisir le signet dans le panneau latéral.</p></item>
+    <item><p>Dans ce panneau latéral, sélectionnez le bouton <gui style="button">Signets</gui> situé en bas.</p></item>
+    <item><p>Sélectionnez le signet dans le panneau latéral.</p></item>
     <item><p>Cliquez sur le nom du signet.</p></item>
     <item><p>Entrez le nouveau nom.</p></item>
-    <item><p>Appuyer sur la touche <key>Entrée</key>.</p></item>
+    <item><p>Appuyez sur la touche <key>Entrée</key>.</p></item>
   </steps>
 
 </section>
@@ -118,9 +125,8 @@
   <title>Effacer un signet</title>
 
   <steps>
-   <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
-   at the bottom.</p></item>
-   <item><p>Press the <gui style="button">-</gui> button at the bottom of the side pane.</p></item>
+   <item><p>Dans ce panneau latéral, sélectionnez le bouton <gui style="button">Signets</gui> situé en bas.</p></item>
+   <item><p>Cliquez sur le bouton <gui style="button">-</gui> situé en bas du panneau latéral.</p></item>
   </steps>
 
 </section>

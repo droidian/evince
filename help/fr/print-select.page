@@ -55,6 +55,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>Impression d’une partie des pages</title>
@@ -62,7 +74,7 @@
 
 <p>Pour imprimer seulement certaines pages du document :</p>
 <steps>
- <item><p>Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.</p></item>
+ <item><p>Cliquez sur le bouton menu dans le coin supérieur droit de la fenêtre, puis cliquez sur le bouton <gui style="button">Imprimer</gui>.</p></item>
  <item><p>Dans l’onglet <gui>Général</gui> de la fenêtre d’impression, sélectionnez <gui>Pages</gui> dans la partie <gui>Plage</gui>.</p></item>
 <item><p>Saisissez les numéros des pages que vous voulez imprimer dans la zone de saisie, séparés par des virgules. Utilisez un tiret pour indiquer une plage de pages.</p></item>
 </steps>

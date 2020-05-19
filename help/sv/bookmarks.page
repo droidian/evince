@@ -48,8 +48,7 @@
 
   <p>När du öppnar en fil bör du ha en sidopanel på den vänstra sidan av fönstret. Om du inte har en synlig sidopanel, tryck på <key>F9</key>-tangenten.</p>
 
-  <p>At the bottom of this side pane, select the <gui style="button">Bookmarks</gui>
-  button.</p>
+  <p>Välj knappen <gui style="button">Bokmärken</gui> längst ner på denna sidopanel.</p>
 
   <links type="section"/>
 
@@ -61,13 +60,10 @@
       <p>Navigera till den sida i PDF-dokumentet där du skulle vilja lägga till ett bokmärke.</p>
     </item>
     <item>
-      <p>In the side pane, select the <gui style="button">Bookmarks</gui> button
-      at the bottom.</p>
+      <p>I sidopanelen, välj knappen <gui style="button">Bokmärken</gui> längst ner.</p>
     </item>
     <item>
-      <p>Press the <gui style="button">+</gui> button at the bottom of the side
-      pane. The default name of the bookmark you just added is the page number
-      of the document.</p>
+      <p>Tryck på knappen <gui style="button">+</gui> längst ner i sidopanelen. Standardnamnet på bokmärket du just lagt till är sidnumret i dokumentet.</p>
     </item>
     <item>
       <p>Bokmärket listas nu i bokmärkeslistan.</p>
@@ -80,8 +76,7 @@
   <title>Byt namn på ett bokmärke</title>
 
   <steps>
-    <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
-    at the bottom.</p></item>
+    <item><p>I sidopanelen, välj knappen <gui style="button">Bokmärken</gui> längst ner.</p></item>
     <item><p>Välj bokmärket i sidopanelen.</p></item>
     <item><p>Klicka på bokmärkets namn.</p></item>
     <item><p>Mata in det nya namnet.</p></item>
@@ -94,9 +89,8 @@
   <title>Ta bort ett bokmärke</title>
 
   <steps>
-   <item><p>In the side pane, select the <gui style="button">Bookmarks</gui> button
-   at the bottom.</p></item>
-   <item><p>Press the <gui style="button">-</gui> button at the bottom of the side pane.</p></item>
+   <item><p>I sidopanelen, välj knappen <gui style="button">Bokmärken</gui> längst ner.</p></item>
+   <item><p>Tryck på knappen <gui style="button">-</gui> längst ner i sidopanelen.</p></item>
   </steps>
 
 </section>

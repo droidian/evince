@@ -7,50 +7,55 @@
     <revision pkgversion="3.16" date="2015-01-27" status="incomplete"/>
 
     <credit type="author">
-      <name>Ekaterina Gerasimova</name>
+      <name>Єкатерина Герасимова (Ekaterina Gerasimova)</name>
       <email its:translate="no">kittykat3756@gmail.com</email>
       <years>2015</years>
     </credit>
 
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal-unported.xml"/>
 
-    <desc>Shrink or expand the document to fit the paper size.</desc>
+    <desc>Стискання або розтягування сторінки документа за розміром аркуша паперу.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-  <title>Scale page for printing</title>
+  <title>Масштабування сторінки для друку</title>
 
-  <p>If you want to change the paper size of your document (for example, print
-  a US Letter-sized PDF on A4 paper), you can change the printing format for
-  the document.</p>
+  <p>Якщо ви хочете змінити розмір паперу для вашого документа (наприклад, надрукувати PDF із розміром сторінки «US Letter» на папері A4), ви можете змінити формат друку для документа.</p>
 
   <steps>
     <item>
-      <p>Open the menu at the top-right of the window, then select
-      <gui style="menuitem">Print…</gui>.</p>
+      <p>Відкрийте меню у верхній правій частині вікна програми і виберіть пункт <gui style="menuitem">Надрукувати…</gui>.</p>
     </item>
     <item>
-      <p>Select the <gui style="tab">Page Handling</gui> tab.</p>
+      <p>Перейдіть на вкладку <gui style="tab">Оброблення сторінок</gui>.</p>
     </item>
     <item>
-      <p>Choose a <em>Paper Scaling</em> from the drop-down list.</p>
+      <p>Виберіть зі спадного списку <em>Масштаб сторінки</em>.</p>
       <list>
         <item>
-          <p><em>None</em>: do not perform page scaling.</p>
+          <p><em>Немає</em>: не виконувати масштабування сторінки.</p>
         </item>
         <item>
-          <p><em>Shrink to Printable Area</em>: document pages larger than the
-          printable area are reduced to fit the printable area of the printer
-          page.</p>
+          <p><em>Скоротити до ділянки друку</em>: сторінки документа, розмір яких перевищує розміри ділянки друку, буде зменшено до розмірів ділянки друку на сторінці принтера.</p>
         </item>
         <item>
-          <p><em>Fit to Printable Area</em>: document pages are enlarged or
-          reduced as required to fit the printable area of the printer
-          page.</p>
+          <p><em>Умістити у ділянці друку</em>: сторінки документа буде збільшено або зменшено так, щоб вони умістилися у ділянці друку на сторінці принтера.</p>
         </item>
       </list>
     </item>
     <item>
-      <p>Click <gui>Print</gui> to print your document.</p>
+      <p>Натисніть кнопку <gui>Надрукувати</gui>, щоб надрукувати документ.</p>
     </item>
   </steps>
 

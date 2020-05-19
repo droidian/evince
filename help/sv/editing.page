@@ -42,10 +42,6 @@
 
 
 <note>
- <p>
- PDF and PostScript (.ps) files are not usually intended to be edited, but PDF editing software is available. Try
- <app>LibreOffice Draw</app> or <app>Okular</app>, for example.
- Furthermore, <app>pdfarranger</app> allows rearranging or removing pages and merging files.
- </p>
+ <p>PDF- och Postscript-filer (.ps) är vanligtvis inte avsedda att redigeras, men PDF-redigeringsprogram existerar. Prova till exempel <app>LibreOffice Draw</app> eller <app>Okular</app>. Vidare tillåter <app>pdfarranger</app> att byta plats på eller ta bort sidor samt att slå ihop filer.</p>
 </note>
 </page>

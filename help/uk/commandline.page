@@ -3,8 +3,8 @@
 
   <info>
     <link type="guide" xref="index#advanced"/>
-    <title type="sort">Command line</title>
-    <desc>The <cmd>evince</cmd> command can open any number of files, at specific pages and in various modes.</desc>
+    <title type="sort">Командний рядок</title>
+    <desc>Програма <cmd>evince</cmd> може відкривати довільну кількість файлів на вказаних вами сторінках у вказаних вами режимах.</desc>
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.24" version="0.2" date="2017-09-17" status="final"/>
     <credit type="author">
@@ -18,45 +18,44 @@
     <license>
       <p>Creative Commons Share Alike 3.0</p>
     </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>The command line</title>
-<p>
-To start the <app>Document Viewer</app> from the command line, type <cmd>evince</cmd>. You
-can open a specific file by typing the filename after the evince command:
-</p>
+<title>Командний рядок</title>
+<p>Щоб запустити <app>Переглядач документів</app> з командного рядка, слід віддати команду <cmd>evince</cmd>. Ви можете наказати програмі відкрити певний файл, якщо впишете назву файла після команди evince:</p>
 
-<screen>evince file.pdf</screen>
-<p>
-You can open multiple files by typing the filenames after the evince command, separating the filenames by a space:
-</p>
-<screen>evince file1.pdf file2.pdf</screen>
-<p>
-The <app>document viewer</app> also supports the handling of files on the web.  For example, after the evince command you can give the location of a file on the web:
-</p>
+<screen>evince файл.pdf</screen>
+<p>Ви можете наказати програмі відкрити декілька файлів, вписавши назви файлів після команди evince. Назви файлів слід відокремлювати пробілами:</p>
+<screen>evince файл1.pdf файл2.pdf</screen>
+<p>Крім того, <app>Переглядач документів</app> може працювати із файлами у мережі. Наприклад, після команди evince ви можете вказати адресу файла в інтернеті:</p>
 <screen>evince http://www.claymath.org/millennium/P_vs_NP/pvsnp.pdf</screen>
 <section id="open">
-    <title>Opening a document at a specific page</title>
-    <p>
-    You can use the <cmd>--page-label</cmd> switch to open a document at a
-    specific page. For example, to open a document to page 3, you would type:
-    </p>
-    <screen>evince --page-label=3 file.pdf</screen>
-    <p>
-    The page label should be in the same format as the page number displayed in
-    the <app>Document Viewer</app> header bar.
-    </p>
+    <title>Відкриття документа на вказаній сторінці</title>
+    <p>Для відкриття документа на вказаній сторінці ви можете скористатися параметром командного рядка <cmd>--page-label</cmd>. Наприклад, щоб відкрити документ на сторінці 3, слід віддати команду:</p>
+    <screen>evince --page-label=3 файл.pdf</screen>
+    <p>Мітку сторінки слід вказувати у тому самому форматі, у якому її показано на панелі заголовка <app>Переглядача документів</app>.</p>
 </section>
 <section id="fullsreen">
-    <title>Opening a document in fullscreen mode</title>
-    <screen>evince --fullscreen file.pdf</screen>
+    <title>Відкриття документа у повноекранному режимі</title>
+    <screen>evince --fullscreen файл.pdf</screen>
 </section>
 <section id="presentation">
-    <title>Opening a document in presentation mode</title>
-    <screen>evince --presentation file.pdf</screen>
+    <title>Відкриття документа у режимі презентації</title>
+    <screen>evince --presentation файл.pdf</screen>
 </section>
 <section id="preview">
-    <title>Opening a document in preview mode</title>
-    <screen>evince --preview file.pdf</screen>
+    <title>Відкриття документа у режимі попереднього перегляду</title>
+    <screen>evince --preview файл.pdf</screen>
 </section>
 </page>

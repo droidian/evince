@@ -23,44 +23,34 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2019</mal:years>
+      <mal:years>2017-2020</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2019</mal:years>
+      <mal:years>2017-2020</mal:years>
     </mal:credit>
   </info>
 
 <title>Dodawanie przypisów</title>
 <p>Przypis to notatka lub komentarz dodany do dokumentu PDF. Można je dodawać za pomocą <app>Przeglądarki dokumentów</app>.</p>
-<p>
-  When you open a file, you should have a side pane on the left side of the window.
-  If you do not have a visible side pane, select the <gui style="button">Side pane</gui>
-  button in the header bar, or press <key>F9</key> on the keyboard.
-</p>
+<p>Po otwarciu pliku po lewej stronie okna powinien być otwarty panel boczny. Jeśli nie jest on widoczny, kliknij przycisk <gui style="button">Panel boczny</gui> na pasku nagłówka lub naciśnij klawisz <key>F9</key>.</p>
 
 <p>Na górze tego panelu znajduje się rozwijane menu z opcjami <gui>Miniatury</gui>, <gui>Konspekt</gui> i <gui>Przypisy</gui> (część z nich może być nieaktywna dla niektórych dokumentów).</p>
 <p>Aby utworzyć przypis:</p>
 <steps>
  <item>
-  <p>
-    Select the <gui style="button">Annotate the document</gui> button from the header bar:
-  </p>
+  <p>Kliknij przycisk <gui style="button">Dodaj przypis do dokumentu</gui> na pasku nagłówka:</p>
     <media type="image" src="figures/add-text-annotation.png" its:translate="no"/>
     <list>
      <item>
-      <p>
-        You should now see <gui style="button">Note text</gui> and <gui style="button">Highlight text</gui> buttons below the header bar.
-      </p>
+      <p>Pod paskiem nagłówka powinny być widoczne przyciski <gui style="button">Dodaj notatkę</gui> i <gui style="button">Zakreśl tekst</gui>.</p>
      </item>
     </list>
  </item>
  <item>
-  <p>
-   Click on the first button to add a text annotation.
-  </p>
+  <p>Kliknij pierwszy przycisk, aby dodać przypis tekstowy.</p>
  </item>
  <item>
   <p>Kliknij miejsce w oknie dokumentu, w którym dodać przypis. Zostanie otwarte okno <em>przypisu</em>.</p>

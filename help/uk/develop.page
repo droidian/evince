@@ -3,7 +3,7 @@
 
   <info>
    <link type="guide" xref="index#getInvolved"/>
-   <desc>Improve the <app>Document Viewer</app>.</desc> 
+   <desc>Удосконалення <app>Переглядача документів</app>.</desc> 
     <revision pkgversion="3.4" version="0.1" date="2012-03-08" status="final"/>
     <credit type="author copyright">
       <name>Tiffany Antopolski</name>
@@ -13,15 +13,22 @@
     <license>
       <p>Creative Commons Share Alike 3.0</p>
     </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>Help develop</title>
- <p>
-  The <app>Document Viewer</app> is developed and maintained by a volunteer community.  You are welcome to participate.
- </p>
- <p>
-   If you would like to <link href="https://wiki.gnome.org/Apps/Evince">help develop</link> the <app>Document Viewer</app>, you can get in touch with the developers using <link href="https://cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fevince">irc</link>, or via our <link href="https://mail.gnome.org/mailman/listinfo/evince-list">mailing list</link>. 
-
- </p>
+<title>Допомога у розробці</title>
+ <p>Розробкою і супроводом <app>Переглядача документів</app> переймається спільнота добровольців. Ми будемо раді вашій участі у ній.</p>
+ <p>Якщо ви хочете допомогти у <link href="https://wiki.gnome.org/Apps/Evince">розробці</link> <app>Переглядача документів</app>, можете зв'язатися із нашими розробниками за допомогою <link href="https://cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fevince">irc</link> або нашого <link href="https://mail.gnome.org/mailman/listinfo/evince-list">списку листування</link>.</p>
 
 </page>

@@ -57,6 +57,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>Livret de 5 à 8 pages</title>
@@ -74,9 +86,7 @@
  <p>Pour imprimer :</p>
   <steps>
  <item>
-  <p>
-   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
-  </p>
+  <p>Cliquez sur le bouton menu dans le coin supérieur droit de la fenêtre, puis cliquez sur le bouton <gui style="button">Imprimer</gui>.</p>
  </item>
 
 
@@ -87,11 +97,9 @@
  </item>
  <item>
   <p>Sélectionnez l’onglet <gui>Mise en page</gui>.</p>
-  <p>
-   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>One Sided</gui>.
-  </p>
+  <p>Sous <em>Mise en page</em>, dans le menu <gui>Recto verso</gui>, choisissez <gui>Recto</gui>.</p>
   <p>Dans le menu <gui>Pages par côté</gui>, sélectionnez <gui>2</gui>.</p>
-  <p>Dans le menu <gui>Ordre des pages</gui>, sélectionnez <gui>Gauche à droite</gui>.</p>
+  <p>Dans le menu <gui>Ordre des pages</gui>, sélectionnez <gui>De gauche à droite</gui>.</p>
   <p>Dans le menu <gui>Imprimer seulement</gui>, sélectionnez <gui>Pages impaires</gui>.</p>
  </item>
  <item>
@@ -101,9 +109,7 @@
     <p>Quand toutes les pages sont imprimées, retournez les pages et replacez-les dans l’imprimante.</p>
    </item>
    <item>
-    <p>
-    Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
-    </p>
+    <p>Cliquez sur le bouton menu dans le coin supérieur droit de la fenêtre, puis cliquez sur le bouton <gui style="button">Imprimer</gui>.</p>
    </item>
    <item>
     <p>Sélectionnez l’onglet <gui>Mise en page</gui>.</p>

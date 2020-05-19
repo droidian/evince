@@ -37,8 +37,7 @@
   <p><link xref="opening">Buka suatu berkas</link></p>
  </item>
  <item>
-   <p>Press the menu button in the top-right corner of the window and select
-   <gui style="menuitem">Present as Slideshow</gui> (or press <key>F5</key>).</p>
+   <p>Tekan tombol menu di pojok kanan atas jendela dan pilih <gui style="menuitem">Sajikan sebagai Salindia</gui> (atau tekan <key>F5</key>).</p>
   <p>Presentasi akan ditampilkan pada layar penuh.</p>
  </item>
 </steps>

@@ -29,32 +29,22 @@
 
 <title>Menambah anotasi</title>
 <p>Suatu anotasi dalam catatan atau komentar yang ditambahkan ke dokumen PDF. Anda dapat menambah anotasi memakai <app>penampil dokumen</app>.</p>
-<p>
-  When you open a file, you should have a side pane on the left side of the window.
-  If you do not have a visible side pane, select the <gui style="button">Side pane</gui>
-  button in the header bar, or press <key>F9</key> on the keyboard.
-</p>
+<p>Ketika Anda membuka suatu berkas, Anda mesti memiliki panel samping di sisi kiri jendela. Bila Anda tak memiliki panel sisi yang nampak, pilih tombol <gui>Panel sisi</gui> di bilah kepala, atau tekan <key>F9</key> pada papan ketik.</p>
 
 <p>Di puncak panel sisi ini, ada menu tarik turun dengan opsi seperti <gui>Gambar Mini</gui>, <gui>Garis Besar</gui>, dan <gui>Anotasi</gui> (beberapa diantaranya mungkin <em>diredupkan</em> bagi beberapa dokumen).</p>
 <p>Untuk membuat anotasi:</p>
 <steps>
  <item>
-  <p>
-    Select the <gui style="button">Annotate the document</gui> button from the header bar:
-  </p>
+  <p>Pilih tombol <gui>Anotasikan dokumen</gui> dari bilah kepala:</p>
     <media type="image" src="figures/add-text-annotation.png" its:translate="no"/>
     <list>
      <item>
-      <p>
-        You should now see <gui style="button">Note text</gui> and <gui style="button">Highlight text</gui> buttons below the header bar.
-      </p>
+      <p>Anda kini mesti melihat tombol <gui style="button">Catat teks</gui> dan <gui style="button">Sorot teks</gui> di bawah bilah kepala.</p>
      </item>
     </list>
  </item>
  <item>
-  <p>
-   Click on the first button to add a text annotation.
-  </p>
+  <p>Klik pada tombol pertama untuk menambahkan anotasi teks.</p>
  </item>
  <item>
   <p>Klik pada titik dalam jendela dokumen yang ingin Anda tambahi anotasi. Jendela <em>anotasi</em> Anda akan terbuka.</p>

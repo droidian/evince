@@ -91,12 +91,10 @@
           <p>Když chcete přejít na začátek nebo konec dokumentu:</p>
           <list>
             <item>
-              <p>Press <keyseq><key>Ctrl</key><key>Home</key></keyseq> on your
-              keyboard.</p>
+              <p>Zmáčkněte na klávesnici <keyseq><key>Ctrl</key><key>Home</key></keyseq>.</p>
             </item>
             <item>
-              <p>Press <keyseq><key>Ctrl</key><key>End</key></keyseq> on your
-              keyboard.</p>
+              <p>Zmáčkněte na klávesnici <keyseq><key>Ctrl</key><key>End</key></keyseq>.</p>
             </item>
           </list>
         </item>
@@ -105,10 +103,7 @@
     <item>
       <p>Pro posun o deset strán naráz zmáčkněte <keyseq><key>Shift</key><key>Page Up</key></keyseq> nebo <keyseq><key>Shift</key><key>Page Down</key></keyseq>.</p>
       <note style="tip">
-        <p>You can only move around one page at a time, by default. If you want
-        to move between pages just by scrolling or dragging, press the menu
-        button in the top-right corner of the window and select
-        <gui style="menuitem">Continuous</gui>.</p>
+        <p>Standardně se můžete přesouvat jen o celé stránky naráz. Chcete-li mezi stránkami přecházet plynule posuvem nebo tažením, zmáčkněte tlačítko nabídky v pravém horním rohu okna a vyberte <gui>Souvislý</gui>.</p>
       </note>
     </item>
   </list>
@@ -118,10 +113,7 @@
 <section id="navigating">
   <title>Pohybujte se pomocí seznamu stránek nebo obsahu</title>
 
-  <p>To make the side pane visible, select the <gui>Side pane</gui> button in
-  the top-left corner, or press <key>F9</key>
-  on the keyboard. You should see a preview of all of the pages in the
-  document.</p>
+  <p>Pro zobrazení postranního panelu zmáčkněte tlačítko <gui>Postranní panel</gui> v levém horním rohu, nebo zmáčkněte <key>F9</key> na klávesnici. Měli byste vidět náhledy všech stránek dokumentu.</p>
 
   <p>Mezi stránkami se můžete přesouvat kliknutím na ně v postranním panelu.</p>
 
@@ -137,28 +129,25 @@
 <section id="zoom">
   <title>Přibližování a oddalování</title>
 
-  <p>To adjust the zoom level:</p>
+  <p>Když chcete upravit úroveň přiblížení:</p>
 
   <list>
     <item>
-      <p>Select the desired zoom percentage from the drop-down menu in the top-right corner.</p>
+      <p>vyberte požadovaná procenta přiblížení z rozbalovací nabídky v pravém horním rohu.</p>
       <media type="image" src="figures/zoom.png" its:translate="no"/>
     </item>
     <item>
-      <p>Alternatively, use the keyboard shortcuts <keyseq><key>Ctrl</key><key>+</key></keyseq>
-      to zoom in, or <keyseq><key>Ctrl</key><key>-</key></keyseq> to zoom out.</p>
+      <p>Případně zmáčkněte na klávesnici kombinaci kláves <keyseq><key>Ctrl</key><key>+</key></keyseq> pro přiblížení nebo <keyseq><key>Ctrl</key><key>-</key></keyseq> pro oddálení.</p>
     </item>
     <item>
-      <p>Alternatively, hold down <key>Ctrl</key> and use your mouse scroll wheel to zoom.</p>
+      <p>Případně držte zmáčknutou klávesu <key>Ctrl</key> a pro přiblížení/oddálení použijte kolečko myši.</p>
     </item>
   </list>
 
   <note>
     <p>Volba <gui>Přizpůsobit šířce</gui> nastaví přiblížení tak, aby stránka dokumentu vyplnila celou <em>výšku</em> okna.</p>
     <p>Volba <gui>Přizpůsobit stránce</gui> nastaví přiblížení tak, aby stránka dokumentu vyplnila celou <em>šířku</em> okna.</p>
-    <p>If you want to see two pages at once, side by side, like in a book,
-    press the menu button in the top-right corner of the window and select
-    <gui style="menuitem">Dual</gui>.</p>
+    <p>Pokud chcete vidět dvě stránky naráz, jednu vedle druhé podobně jako v knize, zmáčkněte tlačítko nabídky v pravém horním rohu a vyberte <gui style="menuitem">Dvojstrana</gui>.</p>
     <p>Když je v gsettings nastaveno allow-links-change-zoom na NEPRAVDA, mají odkazy zablokovánu možnost měnit vaši úroveň přiblížení.</p>
   </note>
 
@@ -166,7 +155,7 @@
 
   <list>
     <item>
-      <p>Press <key>F11</key>.</p>
+      <p>Zmáčkněte <key>F11</key>.</p>
     </item>
     <item>
       <p>Když chcete režim celé obrazovky opustit:</p>

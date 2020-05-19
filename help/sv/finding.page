@@ -66,10 +66,7 @@
     <p>För att filtrera ord efter skiftläge eller hela ord, kan du högerklicka på sökrutan och välja <gui>Skiftlägeskänslig</gui> eller <gui>Enbart hela ord</gui>.</p>
   </note>
 
-  <p>If the word or phrase that you searched for is not found in the document,
-  you will see <media type="image" its:translate="no" src="figures/search-not-found.png"/> in the
-  search box. However, if it appears in the document at least once, you will be
-  shown how many times the search result appears on the current page.</p>
+  <p>Om ordet eller frasen som du söker efter inte finns i dokumentet kommer du att se <media type="image" its:translate="no" src="figures/search-not-found.png"/> i sökrutan. Om det däremot finns i dokumentet på minst ett ställe kommer du att få se hur många gånger sökresultatet finns på den aktuella sidan.</p>
 
   <note>
     <p>Endast PDF-dokument är sökbara. Vissa PDF-dokument är inte sökbara eftersom deras text kodats som en bild i dokument.</p>

@@ -4,7 +4,7 @@
   <info>
     <link type="guide" xref="printing"/>
 
-    <desc>Printing two-sided and multi-page per sheet.</desc>
+    <desc>Друк з обох боків аркуша та друк декількох сторінок на одному аркуші.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -15,29 +15,33 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>Two-sided and multiple pages per side layout for printing</title>
+<title>Компонування для друку на обох боках аркуша або друку декількох сторінок на аркуші</title>
 
-<p>
- You can print on both sides of each sheet of paper:
-</p>
+<p>Ви можете друкувати сторінки на обох боках аркушів паперу:</p>
 
 <steps>
  <item>
-  <p>
-   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
-  </p>
+  <p>Натисніть кнопку меню у верхньому правому куті вікна, а потім кнопку <gui style="button">Надрукувати</gui>.</p>
  </item>
  <item>
-  <p>
-   Go to the <gui>Page Setup</gui> tab of the Print window and choose an option from the <gui>Two-sided</gui> drop-down list.
-  </p>
+  <p>Перейдіть на вкладку <gui>Параметри сторінки</gui> у вікні друку і виберіть пункт зі спадного списку <gui>З двох сторін</gui>.</p>
  </item>
  <item>
-  <p>
-   You can print more than one page of the document per <em>side</em> of paper too. Use the <gui>Pages per side</gui> option to do this.
-  </p>
+  <p>Ви можете також друкувати декілька сторінок документа на одному <em>боці</em> аркуша паперу. Для цього скористайтеся пунктом <gui>Сторінок на сторону</gui>.</p>
  </item>
 </steps>
 

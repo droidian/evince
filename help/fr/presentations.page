@@ -62,6 +62,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>Présentations</title>
@@ -70,11 +82,10 @@
 <p>Pour démarrer une présentation :</p>
 <steps>
  <item>
-  <p><link xref="opening">Ouvrir un fichier</link></p>
+  <p><link xref="opening">Ouvrez un fichier</link></p>
  </item>
  <item>
-   <p>Press the menu button in the top-right corner of the window and select
-   <gui style="menuitem">Present as Slideshow</gui> (or press <key>F5</key>).</p>
+   <p>Cliquez sur le bouton menu dans le coin supérieur droit de la fenêtre, puis sélectionnez <gui style="menuitem">Présenter en diaporama</gui> (ou appuyez sur <key>F5</key>).</p>
   <p>La présentation sera affichée en mode plein écran.</p>
  </item>
 </steps>
@@ -90,11 +101,10 @@
 </section>
 
 <section id="blank-screen">
-<title>Showing a blank screen</title>
-<p>Press <key>B</key> or <key>.</key> to show a black screen.</p>
-<p>Press <key>W</key> to show a white screen.</p>
-<p>Press <key>B</key>, <key>.</key>, or <key>W</key> again to show the
-slide.</p>
+<title>Affichage d’un écran vide</title>
+<p>Appuyez sur <key>B</key> ou <key>.</key> pour afficher un écran noir.</p>
+<p>Appuyez sur <key>W</key> pour afficher un écran blanc.</p>
+<p>Appuyez sur <key>B</key>, <key>.</key> ou <key>W</key> à nouveau pour afficher la diapositive.</p>
 </section>
 
 <section id="file-formats">

@@ -4,7 +4,7 @@
   <info>
     <link type="guide" xref="print-booklet#doubleSided"/>
 
-    <desc>Print a 11 page booklet.</desc>
+    <desc>Друк буклета із 11 сторінками.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -15,93 +15,67 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>11-page booklet</title>
+<title>11-сторінковий буклет</title>
 <steps>
  <item>
-  <p>
-   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
-  </p>
+  <p>Натисніть кнопку меню у верхньому правому куті вікна, а потім кнопку <gui style="button">Надрукувати</gui>.</p>
  </item>
 
 
  <item>
-  <p>
-   Choose the <gui>General</gui> tab.
-  </p>
-  <p>
-   Under <em>Range</em>, choose <gui>Pages</gui>.
-  </p>
-  <p>
-   Type the numbers of the pages in this order: 11, 2, 1
-  </p>
+  <p>Перейдіть на вкладку <gui>Загальне</gui>.</p>
+  <p>У розділі <em>Діапазон</em> виберіть варіант <gui>Сторінки</gui>.</p>
+  <p>Введіть номери сторінок у такому порядку: 11, 2, 1</p>
 
  </item>
  <item>
-  <p>
-   Choose the <gui>Page Setup</gui> tab.
-  </p>
-  <p>
-   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>Short Edge (Flip)</gui>.
-  </p>
-  <p>
-   In the <gui>Pages per side</gui> option, select <gui>2</gui>.
-  </p>
-  <p>
-   In the <gui>Page ordering</gui> menu, select <gui>Right to left</gui>.
-  </p>
-  <p>
-   Click <gui>Print</gui>.
-  </p>
+  <p>Перейдіть до вкладки <gui>Параметри сторінки</gui>.</p>
+  <p>У розділі <em>Компонування</em> у списку <gui>З двох сторін</gui> виберіть варіант <gui>Впродовж короткої сторони (з переворотом)</gui>.</p>
+  <p>У списку <gui>Сторінок на сторону</gui> виберіть пункт <gui>2</gui>.</p>
+  <p>У списку <gui>Порядок сторінок</gui> виберіть варіант <gui>Справа ліворуч</gui>.</p>
+  <p>Натисніть <gui>Надрукувати</gui>.</p>
  </item>
 
 
  <item>
-  <p>
-   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
-  </p>
+  <p>Натисніть кнопку меню у верхньому правому куті вікна, а потім кнопку <gui style="button">Надрукувати</gui>.</p>
  </item>
  <item>
-  <p>
-   Choose the <gui>General</gui> tab.
-  </p>
-  <p>
-   Type the numbers of the remaining pages in this order: 10, 3, 4, 9, 8, 5, 6, 7
-  </p>
+  <p>Перейдіть на вкладку <gui>Загальне</gui>.</p>
+  <p>Введіть номери решти сторінок у такому порядку: 10, 3, 4, 9, 8, 5, 6, 7</p>
  </item>
 <item>
-  <p>
-   Choose the <gui>Page Setup</gui> tab.
-  </p>
-  <p>
-   In the <gui>Page ordering</gui> menu, select <gui>Left to right</gui>.
-  </p>
-  <p>
-   Click <gui>Print</gui>.
-  </p>
+  <p>Перейдіть до вкладки <gui>Параметри сторінки</gui>.</p>
+  <p>У списку <gui>Порядок сторінок</gui> виберіть варіант <gui>Зліва праворуч</gui>.</p>
+  <p>Натисніть <gui>Надрукувати</gui>.</p>
  </item>
 </steps>
 <note>
-   <p>
-    It is easier to print a 12-page booklet.  You may wish to add a blank page to your PDF document to make it 12-pages.  To do so, you can:
-   </p>
+   <p>Буклет із 12 сторінок надрукувати простіше. Варто додати порожню сторінку до вашого документа PDF, щоб зробити його дванадцятисторінковим. Зробити це можна так:</p>
 <steps>
  <item>
-  <p>
-    Create a blank PDF document using <app>LibreOffice Writer</app>.
-  </p>
+  <p>Створити порожній документ у форматі PDF за допомогою <app>LibreOffice Writer</app>.</p>
  </item>
  <item>
-  <p>
-   Merge the blank PDF with your PDF document using <app>PDF-Shuffler</app>  placing the blank page at the end.
-  </p>
+  <p>Об'єднайте порожній PDF із вашим документом PDF за допомогою <app>PDF Arranger</app>, розташувавши порожню сторінку наприкінці документа.</p>
 
  </item>
  <item>
-  <p>
-   Follow the steps for printing a <link xref="duplex-12page">12-page booklet</link>.
-  </p>
+  <p>Виконайте кроки із друку <link xref="duplex-12page">дванадцятисторінкового буклета</link>.</p>
  </item>
 </steps>
 </note>

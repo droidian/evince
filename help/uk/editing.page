@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#faq"/>
-    <desc>You can't use the <app>document viewer</app> to edit files.</desc>
+    <desc><app>Переглядач документів</app> не можна використовувати для редагування файлів.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.34" version="0.2" date="2019-11-26" status="final"/>
@@ -15,21 +15,27 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>Can I edit documents in the document viewer?</title>
+<title>Чи можна редагувати документи за допомогою «Переглядача документів»?</title>
 
 
- <p>
-  The <app>document viewer</app> can't be used to make changes to documents. You need to use the appropriate editing application for the type of file you want to change.
- </p>
+ <p><app>Переглядачем документів</app> не можна скористатися для внесення змін до документів. Вам слід скористатися відповідною програмою для редагування типу файлів, до якого ви хочете внести зміни.</p>
 
 
 <note>
- <p>
- PDF and PostScript (.ps) files are not usually intended to be edited, but PDF editing software is available. Try
- <app>LibreOffice Draw</app> or <app>Okular</app>, for example.
- Furthermore, <app>pdfarranger</app> allows rearranging or removing pages and merging files.
- </p>
+ <p>Зазвичай, файли PDF і PostScript (.ps) не призначено для редагування, але існують програми, які можуть вносити зміни до PDF. Спробуйте, наприклад, <app>LibreOffice Draw</app> або <app>Okular</app>. Крім того, перевпорядковувати і вилучати сторінки, а також об'єднувати файли може <app>pdfarranger</app>.</p>
 </note>
 </page>

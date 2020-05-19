@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#synctex" group="second"/>
-    <desc>How to add support for SyncTeX.</desc>
+    <desc>Як додати підтримку SyncTeX.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.28" version="0.2" date="2018-06-28" status="final"/>
@@ -19,38 +19,38 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>Set-up SyncTeX</title>
-<p>
-The following packages need to be installed in order to add support for SyncTeX:
-</p>
+<title>Налаштовування SyncTeX</title>
+<p>Для того, щоб можна було скористатися підтримкою SyncTeX слід встановити такі пакунки:</p>
 <list>
   <item>
-    <p>
-      A LaTeX engine with SyncTeX support, such as <app>pdflatex</app>.
-    </p>
+    <p>Рушій обробки LaTeX із підтримкою SyncTeX, зокрема <app>pdflatex</app>.</p>
   </item>
   <item>
-    <p>
-      A text editor with SyncTeX support, such as <app>gedit</app> with gedit-plugins installed.
-    </p>
+    <p>Текстовий редактор із підтримкою SyncTeX, зокрема <app>gedit</app> із встановленими gedit-plugins.</p>
   </item>
 </list>
 
-<p>
-  In <app>gedit</app>, enable the SyncTeX Plugin:
-</p>
+<p>У <app>gedit</app> увімкніть додаток SyncTeX:</p>
 <steps>
    <item>
-    <p>
-     Click <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Plugins</gui></guiseq> tab.
-    </p>
+    <p>Перейдіть на вкладку <guiseq><gui>Зміни</gui><gui>Параметри</gui><gui>Додатки</gui></guiseq>.</p>
    </item>
    <item>
-    <p>
-     Check <gui>SyncTeX</gui>.
-    </p>
+    <p>Позначте <gui>SyncTeX</gui>.</p>
    </item>
 </steps>
 </page>
