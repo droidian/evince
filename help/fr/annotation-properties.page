@@ -56,6 +56,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
  <title>Personnalisation des annotations</title>
@@ -65,7 +77,7 @@
   <p>Faites un clic droit sur l’icône annotation dans le document.</p>
  </item>
  <item>
-  <p>Choisissez <gui>Propriétés de l’annotation…</gui>.</p>
+  <p>Choisissez <gui>Propriétés de l’annotation</gui>.</p>
  </item>
  <item>
   <p>Dans la fenêtre <gui>Propriétés de l’annotation</gui>, vous pouvez modifier l’auteur, la couleur, le style et l’icône de votre note.</p>

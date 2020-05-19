@@ -34,7 +34,7 @@
   </info>
 
 <title>Beamer amb SyncTeX</title>
-<p>La Beamer és una classe de LaTeX per crear diapositives per presentacions.</p>
+<p>La Beamer és una classe de LaTeX per a crear diapositives per presentacions.</p>
 <p>
    You can perform forward and backward search in a <em>Beamer-LaTeX</em> presentation in a similar fashion to <link xref="synctex-search">searching</link> through other TeX files compiled with SyncTeX.  However the search brings you to the corresponding frame (slide), not necessarily the associated line of text.  This difference is outlined in detail below.
 </p>

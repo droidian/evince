@@ -57,6 +57,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 
@@ -64,21 +76,17 @@
 
 <steps>
  <item>
-  <p>
-   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
-  </p>
+  <p>Cliquez sur le bouton menu dans le coin supérieur droit de la fenêtre, puis cliquez sur le bouton <gui style="button">Imprimer</gui>.</p>
  </item>
  <item>
   <p>Sélectionnez l’onglet <gui>Général</gui>.</p>
-  <p>Sous <em>Plage</em>, choisissez <gui>Pages</gui>. Saisissez les numéros des pages dans cet ordre : 3, 2, 1.</p>
+  <p>Sous <em>Plage</em>, choisissez <gui>Pages</gui>. Saisissez les numéros des pages dans cet ordre : 3, 2, 1</p>
  </item>
  <item>
   <p>Sélectionnez l’onglet <gui>Mise en page</gui>.</p>
-  <p>
-   Under <em>Layout</em>, in the <gui>Two-sided</gui> option, select <gui>Short Edge (Flip)</gui>.
-  </p>
+  <p>Sous <em>Mise en page</em>, dans l’option <gui>Recto verso</gui>, choisissez <gui>Bord court (retourné)</gui>.</p>
   <p>Pour l’option <gui>Pages par côté</gui>, choisissez <gui>2</gui>.</p>
-  <p>Dans le menu <gui>Ordre des pages</gui>, choisissez <gui>Droite à gauche</gui>.</p>
+  <p>Dans le menu <gui>Ordre des pages</gui>, choisissez <gui>De droite à gauche</gui>.</p>
  </item>
  <item>
   <p>Cliquez sur <gui>Imprimer</gui>.</p>

@@ -57,14 +57,24 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-  <title>Modifier les paramètres par défaut</title>
+  <title>Modification des paramètres par défaut</title>
 
   <p>Lorsqu’un document est ouvert pour la première fois, les paramètres par défaut, comme les préférences de zoom et d’affichage de la page, s’appliquent. Toutes modifications apportées à ces paramètres sont enregistrées pour le document.</p>
-  <p>You can save the settings which you are currently using as default for all
-  new documents by pressing the menu button in the top-right corner of the window
-  and selecting <gui style="menuitem">Save Current Settings as Default</gui>.</p>
+  <p>Vous pouvez enregistrer les paramètres qui sont actuellement utilisés par défaut pour tous les nouveaux documents en cliquant sur le bouton de menu situé dans le coin supérieur droit de la fenêtre, puis en sélectionnant <gui style="menuitem">Se souvenir des réglages actuels</gui>.</p>
 
   <note style="important">
     <p>Les nouveaux paramètres par défaut ne remplacent pas les paramètres des documents précédemment ouverts, ils sont appliqués seulement aux documents ouverts pour la première fois.</p>

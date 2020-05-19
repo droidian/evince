@@ -32,9 +32,7 @@
   <title>Změna výchozího nastavení</title>
 
   <p>Když nějaký dokument otevřete poprvé, použijí se pro něj výchozí nastavení, jako jsou úroveň přiblížení nebo předvolby zobrazení stránky. Pokud v těchto nastaveních provedete nějaké změny, uloží se pro tento dokument.</p>
-  <p>You can save the settings which you are currently using as default for all
-  new documents by pressing the menu button in the top-right corner of the window
-  and selecting <gui style="menuitem">Save Current Settings as Default</gui>.</p>
+  <p>Nastavení, která právě používáte, si můžete uložit jako výchozí pro všechny dokumenty tak, že zmáčknete tlačítko nabídky v pravém horním rohu okna a pak vyberete <gui style="menuitem">Uložit současné nastavení jako výchozí</gui>.</p>
 
   <note style="important">
     <p>Nové výchozí nastavení nepřepíše nastavení dříve otevřených dokumentů, použije se pouze pro dokumenty, které budete otevírat poprvé.</p>

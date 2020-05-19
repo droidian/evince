@@ -3,8 +3,8 @@
 
   <info>
     <title type="link" role="trail"><media type="image" its:translate="no" src="figures/evince-trail.png"/></title>
-    <title type="link">Evince Document Viewer</title>
-    <title type="text">Evince Document Viewer</title>
+    <title type="link">Переглядач документів Evince</title>
+    <title type="text">Переглядач документів Evince</title>
     <revision pkgversion="3.2" date="2011-09-05" status="final"/>
     <revision pkgversion="3.12" date="2014-02-28" status="final"/>
 
@@ -19,47 +19,54 @@
 
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal-unported.xml"/>
 
-    <desc><app>Document Viewer</app>, formally known as <app>Evince</app>, is
-    made for viewing PDF documents. Learn how to get started with <app>Document
-    Viewer</app> and its features.</desc>
+    <desc><app>Переглядач документів</app>, який має формальну назву <app>Evince</app>, створено для перегляду документів PDF. Ознайомтеся із основами роботи у <app>Переглядачі документів</app> та можливостями програми.</desc>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-  <title>
-    <media type="image" its:translate="no" src="figures/evincelogo.png"/>
-    Document Viewer Help
-  </title>
+  <title><media type="image" its:translate="no" src="figures/evincelogo.png"/> Довідка з «Переглядача документів»</title>
 
 <section id="reading" style="2column">
-    <title>Reading documents</title>
+    <title>Читання документів</title>
 </section>
 
 <section id="pres" style="2column">
-    <title>Presentations and other supported formats</title>
+    <title>Презентації та інші підтримувані формати</title>
 </section>
 
 <section id="printing" style="2column">
-    <title>Printing</title>
+    <title>Друкування</title>
 </section>
 
 <section id="annotations" style="2column">
-    <title>Annotations and bookmarks</title>
+    <title>Анотації і закладки</title>
 </section>
 
 <section id="forms" style="2column">
-    <title>Interactive forms</title>
+    <title>Інтерактивні форми</title>
 </section>
 
 <section id="faq" style="2column">
-    <title>Frequently asked questions</title>
+    <title>Поширені питання та відповіді на них</title>
 </section>
 
 <section id="advanced" style="2column">
-   <title>Advanced</title>
+   <title>Додатково</title>
 </section>
 
 <section id="tips" style="2column">
-    <title>Tips and tricks</title>
+    <title>Підказки і настанови</title>
 </section>
 
 <section id="synctex">
@@ -68,6 +75,6 @@
 </section>
 
 <section id="getInvolved" style="2column">
-    <title>Get involved</title>
+    <title>Участь у команді</title>
 </section>
 </page>

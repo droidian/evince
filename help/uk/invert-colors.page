@@ -4,9 +4,7 @@
   <info>
     <link type="guide" xref="index#tips"/>
 
-    <desc>
-    Inverting the colors can make it easier to read some text.
-    </desc>
+    <desc>Інвертування кольорів може полегшити читання деяких текстів.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
@@ -16,25 +14,34 @@
       <email>philbull@gmail.com</email>
     </credit>
     <credit type="editor">
-      <name>Anna Philips</name>
+      <name>Анна Філіпс (Anna Philips)</name>
       <email>anna.cs.au@gmail.com</email>
     </credit>
     <license>
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>Invert colors on a page</title>
+<title>Інвертування кольорів сторінки</title>
 
 
- <p>To swap black for white, white for black, and so on, press the menu button in the
- top-right corner of the window and select <gui style="menuitem">Night Mode</gui>.</p>
+ <p>Щоб поміняти чорне на біле, а біле на чорне, натисніть кнопку меню у верхньому правому куті вікна програми і виберіть пункт <gui style="menuitem">Нічний режим</gui>.</p>
 
 
 <note style="tip">
- <p>
-  Doing this can make it easier to read text, especially in the case of certain kinds of visual impairment.
- </p>
+ <p>Цей режим може полегшити читання, особливо якщо у читача є певні вади зору.</p>
 </note>
 </page>

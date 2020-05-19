@@ -4,7 +4,7 @@
   <info>
     <link type="guide" xref="print-booklet#doubleSided"/>
 
-    <desc>Print a 12 page booklet.</desc>
+    <desc>Друк буклета із 12 сторінками.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -15,44 +15,38 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>12-page booklet</title>
+<title>12-сторінковий буклет</title>
 <steps>
  <item>
-  <p>
-   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
-  </p>
+  <p>Натисніть кнопку меню у верхньому правому куті вікна, а потім кнопку <gui style="button">Надрукувати</gui>.</p>
  </item>
 
  <item>
-  <p>
-   Choose the <gui>General</gui> tab.
-  </p>
-  <p>
-   Under <em>Range</em>, choose <gui>Pages</gui>.
-  </p>
-  <p>
-   Type the numbers of the pages in this order: 12, 1, 2, 11, 10, 3, 4, 9, 8, 5, 6, 7
-  </p>
+  <p>Перейдіть на вкладку <gui>Загальне</gui>.</p>
+  <p>У розділі <em>Діапазон</em> виберіть варіант <gui>Сторінки</gui>.</p>
+  <p>Введіть номери сторінок у такому порядку: 12, 1, 2, 11, 10, 3, 4, 9, 8, 5, 6, 7</p>
 
  </item>
  <item>
-  <p>
-   Choose the <gui>Page Setup</gui> tab.
-  </p>
- <p>
-   Under <em>Layout</em>, in the <gui>Two-sided</gui> option, select <gui>Short Edge (Flip)</gui>.
-  </p>
-  <p>
-   In the <gui>Pages per side</gui> option, select <gui>2</gui>.
-  </p>
-  <p>
-   In the <gui>Page ordering</gui> menu, select <gui>Left to right</gui>.
-  </p>
-  <p>
-   Click <gui>Print</gui>.
-  </p>
+  <p>Перейдіть до вкладки <gui>Параметри сторінки</gui>.</p>
+ <p>У розділі <em>Компонування</em> у списку <gui>З двох сторін</gui> виберіть варіант <gui>Впродовж короткої сторони (з переворотом)</gui>.</p>
+  <p>У списку <gui>Сторінок на сторону</gui> виберіть пункт <gui>2</gui>.</p>
+  <p>У списку <gui>Порядок сторінок</gui> виберіть варіант <gui>Зліва праворуч</gui>.</p>
+  <p>Натисніть <gui>Надрукувати</gui>.</p>
  </item>
 </steps>
 </page>

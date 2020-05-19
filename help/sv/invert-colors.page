@@ -44,8 +44,7 @@
 <title>Invertera färgerna på en sida</title>
 
 
- <p>To swap black for white, white for black, and so on, press the menu button in the
- top-right corner of the window and select <gui style="menuitem">Night Mode</gui>.</p>
+ <p>För att ersätta svart med vitt och vitt med svart o.s.v., klicka på menyknappen i fönstrets övre högra hörn och välj <gui style="menuitem">Nattläge</gui>.</p>
 
 
 <note style="tip">

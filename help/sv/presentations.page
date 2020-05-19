@@ -49,8 +49,7 @@
   <p><link xref="opening">Öppna en fil</link></p>
  </item>
  <item>
-   <p>Press the menu button in the top-right corner of the window and select
-   <gui style="menuitem">Present as Slideshow</gui> (or press <key>F5</key>).</p>
+   <p>Tryck på menyknappen i fönstrets övre högra hörn och välj <gui style="menuitem">Presentera som bildspel</gui> (eller tryck <key>F5</key>).</p>
   <p>Presentationen kommer att visas i helskärmsläge.</p>
  </item>
 </steps>
@@ -66,11 +65,10 @@
 </section>
 
 <section id="blank-screen">
-<title>Showing a blank screen</title>
-<p>Press <key>B</key> or <key>.</key> to show a black screen.</p>
-<p>Press <key>W</key> to show a white screen.</p>
-<p>Press <key>B</key>, <key>.</key>, or <key>W</key> again to show the
-slide.</p>
+<title>Visa en tom skärm</title>
+<p>Tryck på <key>B</key> eller <key>.</key> för att visa en svart skärm.</p>
+<p>Tryck på <key>W</key> för att visa en vit skärm.</p>
+<p>Tryck <key>B</key>, <key>.</key> eller <key>W</key> igen för att visa bilden.</p>
 </section>
 
 <section id="file-formats">

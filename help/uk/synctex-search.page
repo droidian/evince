@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#synctex" group="fifth"/>
-    <desc>Flip between the <app>document viewer</app> and <app>gedit</app>.</desc>
+    <desc>Перехід між <app>Переглядачем документів</app> і <app>gedit</app>.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -14,56 +14,48 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>Search with SyncTeX</title>
-<p>
-   After you <link xref="synctex-compile">compile your TeX file with SyncTeX</link>, you will be able to search.  SyncTeX even supports forward and backward search from an included file.
-</p>
+<title>Пошук із SyncTeX</title>
+<p>Після <link xref="synctex-compile">збирання вашого файла TeX з використанням SyncTeX</link>, ви зможете виконувати пошук. У SyncTeX навіть передбачено прямий і зворотний пошук у включеному файлі.</p>
 
 <section id="forward-search">
-    <title>Forward search: from TeX to PDF (from <app>gedit</app> to the <app>document viewer</app>)</title>
-     <p>
-     Forward search allows you to click on a specific section of TeX source code, and jump to the associated position in the PDF.  To perform forward search:
- </p>
+    <title>Прямий пошук: з TeX до PDF (з <app>gedit</app> до <app>Переглядача документів</app>)</title>
+     <p>У режимі прямого пошуку ви можете клацнути на певному розділі у початковому коді TeX і перейти до пов'язаної із ним позиції у PDF. Прямий пошук можна виконати так:</p>
 <steps>
 <item>
-<p>
-  Click on a line in the TeX file.
-</p>
+<p>Клацніть на рядку у файлі TeX.</p>
 </item>
 <item>
-<p>
-  In <app>gedit</app>, click <guiseq><gui>Tools</gui> <gui>Forward Search</gui></guiseq>. The corresponding line in the PDF will be outlined in red.
-</p>
-<p>
-Alternatively, you can press <keyseq><key>Ctrl</key><key>Alt</key><key>F</key></keyseq>, or <keyseq><key>Ctrl</key>left click</keyseq>. The corresponding line in the PDF will be outlined in red.
-</p>
+<p>У <app>gedit</app> виберіть пункт меню <guiseq><gui>Засоби</gui> <gui>Пошук вперед</gui></guiseq>. У відповідь має бути позначено червоним відповідний рядок у PDF.</p>
+<p>Крім того, ви можете натиснути <keyseq><key>Ctrl</key><key>Alt</key><key>F</key></keyseq> або скористатися комбінацією <keyseq><key>Ctrl</key>клацання лівою кнопкою миші</keyseq>. У відповідь має бути позначено червоним відповідний рядок у PDF.</p>
 </item>
 </steps>
 <note>
-<p>
-   If the corresponding PDF file is not open, performing a forward search will open the PDF in the <app>document viewer</app>.
-</p>
+<p>Якщо відповідний файл PDF не відкрито, виконання прямого пошуку призведе до відкриття PDF у <app>Переглядачі документів</app>.</p>
 </note>
-<p>
- If you have a complex project with several TeX files you can put
-</p>
+<p>Якщо ви працюєте зі складним проєктом із декількома файлами TeX, ви можете вставити</p>
 <code>% mainfile: mainfile.tex</code>
-<p>
-either in the first or last three lines of each included TeX file, and forward search will work. Backward search should always work, even if you don't add the modeline.
-</p>
+<p>у перші або останні три рядки до кожного включеного файла TeX, і прямий пошук запрацює. Зворотний пошук має працювати завжди, навіть якщо ви не додаватимете цей рядок.</p>
 
 </section>
 
 <section id="backward-search">
-    <title>Backward search: from PDF to TeX (from the <app>document viewer</app> to <app>gedit</app>)</title>
-     <p>
- Backward search allows you to click on a specific line in the PDF file, and jump to the associated line in the TeX source code.
-</p>
-<p>
-You can perform a backward search by pressing <keyseq><key>Ctrl</key>left click</keyseq> in the <app>document viewer</app>. The corresponding line in the TeX source code will be highlighted.
-     </p>
+    <title>Зворотний пошук: з PDF до TeX (з <app>Переглядача документів</app> до <app>gedit</app>)</title>
+     <p>У режимі зворотного пошуку ви можете клацнути на якомусь рядку у файлі PDF, а програма автоматично перейде до пов'язаного із ним рядка у початковому коді TeX.</p>
+<p>Виконати зворотний пошук можна за допомогою комбінації <keyseq><key>Ctrl</key>клацання лівою кнопкою миші</keyseq> у вікні <app>Переглядача документів</app>. У відповідь на цю комбінацію буде підсвічено відповідний рядок у початковому коді TeX.</p>
 </section>
 
 </page>

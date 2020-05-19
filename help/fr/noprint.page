@@ -56,6 +56,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>Impossible d’imprimer un document</title>
@@ -63,8 +75,8 @@
  <title>Causes possibles d’échec d’impression</title>
 <p>Un document peut ne pas s’imprimer pour une des raisons suivantes :</p>
  <list>
-  <item><p>problèmes d’imprimante ou</p></item>
-  <item><p>restrictions d’impression PDF.</p></item>
+  <item><p>Problèmes d’imprimante ou</p></item>
+  <item><p>Restrictions d’impression PDF.</p></item>
  </list>
 </section>
 
@@ -76,17 +88,16 @@
   <p>Pour vérifier que votre imprimante imprime correctement :</p>
   <steps>
     <item>
-      <p>Open the <gui href="help:gnome-help/shell-introduction#activities">Activities</gui> 
-      overview and start typing <gui>Settings</gui>.</p>
+      <p>Ouvrez la vue d’ensemble des <gui href="help:gnome-help/shell-introduction#activities">Activités</gui> et commencez à saisir <gui>Paramètres</gui>.</p>
     </item>
     <item>
-      <p>Click on <gui>Settings</gui>.</p>
+      <p>Cliquez sur <gui>Paramètres</gui>.</p>
     </item>
     <item>
-      <p>Click <gui>Devices</gui> in the sidebar.</p>
+      <p>Cliquez sur <gui>Périphériques</gui> dans la barre latérale.</p>
     </item>
     <item>
-      <p>Click <gui>Printers</gui> in the sidebar to open the panel.</p>
+      <p>Cliquez sur <gui>Imprimantes</gui> dans la barre latérale pour ouvrir le panneau.</p>
     </item>
    <item><p>Cliquez sur votre imprimante dans la liste.</p></item>
    <item><p>Cliquez sur <gui>Imprimer une page de test</gui>. Une page devrait être envoyée à votre imprimante.</p>

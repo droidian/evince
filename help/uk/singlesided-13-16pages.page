@@ -4,7 +4,7 @@
   <info>
     <link type="guide" xref="print-booklet#singleSided"/>
 
-    <desc>Print a 13, 14, 15 or 16 page booklet.</desc>
+    <desc>Друк буклета з 13, 14, 15 або 16 сторінок.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -15,95 +15,68 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>13-page to 16-page booklet</title>
+<title>Буклет, у якому від 13 до 16 сторінок</title>
 
- <p>
-  If you have a 13, 14 or 15 page PDF document you should add the appropriate number of blank pages to make it 16-pages.  To do so, you can:
-   </p>
+ <p>Якщо ви маєте справу із документом PDF, що складається з 13, 14 або 15 сторінок, вам слід додати відповідну кількість порожніх сторінок, щоб зробити з нього документ із 16 сторінками. Виконайте такі дії:</p>
  <steps>
  <item>
-  <p>
-    Create a blank PDF using <app>LibreOffice Writer</app>.
-  </p>
+  <p>Створити порожній документ у форматі PDF за допомогою <app>LibreOffice Writer</app>.</p>
  </item>
  <item>
-  <p>
-   Merge the blank pages with your PDF document using <app>PDF-Shuffler</app> placing the blank pages at the end.
-  </p>
+  <p>Об'єднайте порожній PDF із вашим документом PDF за допомогою <app>PDF Arranger</app>, розташувавши порожні сторінки наприкінці документа.</p>
  </item>
 </steps>
 
- <p>
-  To print:
- </p>
+ <p>Для друку виконайте такі дії:</p>
   <steps>
  <item>
-  <p>
-   Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
-  </p>
+  <p>Натисніть кнопку меню у верхньому правому куті вікна, а потім кнопку <gui style="button">Надрукувати</gui>.</p>
  </item>
 
 
  <item>
-  <p>
-   Choose the <gui>General</gui> tab.
-  </p>
-  <p>
-   Under <em>Range</em>, choose <gui>Pages</gui>.
-  </p>
+  <p>Перейдіть на вкладку <gui>Загальне</gui>.</p>
+  <p>У розділі <em>Діапазон</em> виберіть варіант <gui>Сторінки</gui>.</p>
   <tree>
-   <item>
-   Type the numbers of the pages in this order:
-       <item>16, 1, 2, 15, 14, 3, 4, 13, 12, 5, 6, 11, 10, 7, 8, 9</item>
-    </item>
+   <item>Введіть номери сторінок у такому порядку: <item>16, 1, 2, 15, 14, 3, 4, 13, 12, 5, 6, 11, 10, 7, 8, 9</item></item>
   </tree>
  </item>
  <item>
-  <p>
-   Choose the <gui>Page Setup</gui> tab.
-  </p>
-  <p>
-   Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>One Sided</gui>.
-  </p>
-  <p>
-   In the <gui>Pages per side</gui> menu, select <gui>2</gui>.
-  </p>
-  <p>
-   In the <gui>Page ordering</gui> menu, select <gui>Left to right</gui>.
-  </p>
-  <p>
-   In the <gui>Only print</gui> menu, select <gui>Odd sheets</gui>.
-  </p>
+  <p>Перейдіть до вкладки <gui>Параметри сторінки</gui>.</p>
+  <p>У розділі <em>Компонування</em> у списку <gui>З двох сторін</gui> виберіть варіант <gui>З однієї сторони</gui>.</p>
+  <p>У списку <gui>Сторінок на сторону</gui> виберіть пункт <gui>2</gui>.</p>
+  <p>У списку <gui>Порядок сторінок</gui> виберіть варіант <gui>Зліва праворуч</gui>.</p>
+  <p>У меню <gui>Друкувати лише</gui> виберіть пункт <gui>Непарні сторінки</gui>.</p>
  </item>
  <item>
-  <p>
-   Click <gui>Print</gui>.
-  </p>
+  <p>Натисніть <gui>Надрукувати</gui>.</p>
  </item>
    <item>
-    <p>
-     When all the pages have printed, flip the pages over and place them back in the printer.
-    </p>
+    <p>Коли всі сторінки буде надруковано, переверніть стос сторінок і покладіть його до вхідного лотка принтера.</p>
    </item>
    <item>
-    <p>
-     Press the menu button in the top-right corner of the window and press the <gui style="button">Print</gui> button.
-    </p>
+    <p>Натисніть кнопку меню у верхньому правому куті вікна, а потім кнопку <gui style="button">Надрукувати</gui>.</p>
    </item>
    <item>
-    <p>
-      Choose the <gui>Page Setup</gui> tab.
-    </p>
-     <p>
-      In the <gui>Only print</gui> menu, select <gui>Even sheets</gui>.
-     </p>
+    <p>Перейдіть до вкладки <gui>Параметри сторінки</gui>.</p>
+     <p>У меню <gui>Друкувати лише</gui> виберіть пункт <gui>Парні сторінки</gui>.</p>
    </item>
    <item>
-    <p>
-     Click <gui>Print</gui>.
-    </p>
+    <p>Натисніть <gui>Надрукувати</gui>.</p>
    </item>
 
   </steps>

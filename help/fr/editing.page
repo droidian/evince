@@ -57,19 +57,27 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>Est-il possible de modifier les documents dans le <app>Visionneur de documents</app> ?</title>
+<title>Est-il possible de modifier les documents dans le Visionneur de documents ?</title>
 
 
- <p>Le <app>Visionneur de documents</app> ne peux pas être utiliser pour apporter des modifications aux documents. Vous devez utiliser l’application d’édition appropriée au type de fichier que vous voulez modifier.</p>
+ <p>Le <app>Visionneur de documents</app> ne peut pas être utilisé pour apporter des modifications aux documents. Vous devez utiliser l’application d’édition appropriée au type de fichier que vous voulez modifier.</p>
 
 
 <note>
- <p>
- PDF and PostScript (.ps) files are not usually intended to be edited, but PDF editing software is available. Try
- <app>LibreOffice Draw</app> or <app>Okular</app>, for example.
- Furthermore, <app>pdfarranger</app> allows rearranging or removing pages and merging files.
- </p>
+ <p>Les fichiers PDF et PostScript (.ps) ne sont généralement pas prévus pour être modifiés mais des logiciels d’édition de PDF sont disponibles. Essayez par exemple <app>LibreOffice Draw</app> ou <app>Okular</app>. Par ailleurs, <app>pdfarranger</app> permet de réorganiser ou de supprimer des pages et de fusionner des fichiers.</p>
 </note>
 </page>

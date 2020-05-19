@@ -19,13 +19,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Piotr Drąg</mal:name>
       <mal:email>piotrdrag@gmail.com</mal:email>
-      <mal:years>2017-2019</mal:years>
+      <mal:years>2017-2020</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Aviary.pl</mal:name>
       <mal:email>community-poland@mozilla.org</mal:email>
-      <mal:years>2017-2019</mal:years>
+      <mal:years>2017-2020</mal:years>
     </mal:credit>
   </info>
 
@@ -36,10 +36,6 @@
 
 
 <note>
- <p>
- PDF and PostScript (.ps) files are not usually intended to be edited, but PDF editing software is available. Try
- <app>LibreOffice Draw</app> or <app>Okular</app>, for example.
- Furthermore, <app>pdfarranger</app> allows rearranging or removing pages and merging files.
- </p>
+ <p>Pliki PDF i PostScript (.ps) zwykle nie są przeznaczone do modyfikacji, ale dostępne jest oprogramowanie do edycji plików PDF, na przykład <app>LibreOffice Draw</app> i <app>Okular</app>. <app>pdfarranger</app> umożliwia zmienianie kolejności i usuwanie stron oraz łączenie plików.</p>
 </note>
 </page>

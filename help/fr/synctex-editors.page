@@ -56,6 +56,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>Éditeurs pris en charge</title>
@@ -71,7 +83,7 @@
   <p>Copiez le fichier <file>evince_dbus.py</file> dans un répertoire contenu dans votre variable d’environnement PATH et donnez-lui les permissions +x.</p>
  </item>
  <item>
-  <p>Modifiez votre fichier <file>~/.vimrc</file> et ajoutez les lignes suivantes.</p>
+  <p>Modifiez votre fichier <file>~/.vimrc</file> et ajoutez les lignes suivantes :</p>
 <code>
 let g:Tex_ViewRule_pdf = 'evince_dbus.py'
 let g:Tex_DefaultTargetFormat = 'pdf'

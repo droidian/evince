@@ -59,15 +59,27 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 <title>Enregistrement d’une copie d’un document PDF annoté</title>
- <p>Pour enregistrer une copie de votre PDF annoté afin de l’afficher plus tard en utilisant le <app>Visionneur de documents</app> ou n’importe quel autre visionneur de PDF <em>qui prennent en charge les annotations</em> :</p>
+ <p>Pour enregistrer une copie de votre PDF annoté afin de l’afficher plus tard en utilisant le <app>Visionneur de documents</app> ou n’importe quel autre visionneur de PDF <em>qui prend en charge les annotations</em> :</p>
   <steps>
    <item>
-     <p>Cliquez sur <guiseq><gui>Options des fichiers</gui><gui>Enregistrer sous…</gui></guiseq></p>
+     <p>Cliquez sur <guiseq><gui>Options des fichiers</gui><gui>Enregistrer sous</gui></guiseq></p>
    </item>
    <item>
-     <p>Choisissez un nom et un dossier où enregistrer le fichier, puis cliquez sur <gui>Enregistrer</gui>. Le PDF est enregistré dans le dossier que vous aviez choisi.</p>
+     <p>Choisissez un nom et un dossier où enregistrer le fichier, puis cliquez sur <gui>Enregistrer</gui>. Le PDF est enregistré dans le dossier que vous avez choisi.</p>
     </item>
    </steps>
    <p>Les annotations sont ajoutées en respectant les spécifications PDF. Par conséquent, la plupart des lecteurs de PDF devraient être capables de les lire. Adobe Reader les prend en charge.</p>

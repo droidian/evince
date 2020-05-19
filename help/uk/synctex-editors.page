@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#synctex" group="fourth"/>
-    <desc>Which editor can you use to edit your TEX file?</desc>
+    <desc>Яким редактором можна користуватися для редагування ваших файлів TeX?</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <credit type="author">
@@ -14,32 +14,34 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>Supported editors</title>
+<title>Підтримувані редактори</title>
 
 <section id="gedit"><title><app>gedit</app></title>
-<p>
-<link xref="synctex-search#forward-search">Forward Search</link> (from <app>gedit</app> to the <app>document viewer</app>) and <link xref="synctex-search#backward-search">Backward search</link> (from the <app>document viewer</app> to <app>gedit</app>) are both supported.
-</p>
+<p>Передбачено підтримку <link xref="synctex-search#forward-search">прямого пошуку</link> (з <app>gedit</app> до <app>Переглядача документів</app>) та <link xref="synctex-search#backward-search">зворотного пошуку</link> (з <app>Переглядача документів</app> до <app>gedit</app>).</p>
 </section>
 
 <section id="vim-latex"><title>Vim-latex</title>
-<p>
-The <app>gedit</app> plugin contains a python script (<file>evince_dbus.py</file>) that can be used to get SyncTeX working with Vim.
-In order to use vim-latex together with the <app>document viewer</app> you need to follow the next steps:
-</p>
+<p>У додатку <app>gedit</app> міститься скрипт мовою python (<file>evince_dbus.py</file>), яким можна скористатися для уможливлення роботи SyncTeX із Vim. Щоб скористатися vim-latex у поєднанні із <app>Переглядачем документів</app>, слід виконати такі дії:</p>
 <steps>
  <item>
-  <p>
-     Copy the <file>evince_dbus.py</file> to some directory in your path and give it +x permissions.
-
- </p>
+  <p>Скопіюйте <file>evince_dbus.py</file> до якогось із каталогів, описаних у змінній PATH, і надайте йому права доступу для виконання (+x).</p>
  </item>
  <item>
-  <p>
-     Modify your <file>~/.vimrc</file> file and add the following lines.
-    </p>
+  <p>Додайте вказані нижче рядки наприкінці вашого файла <file>~/.vimrc</file>.</p>
 <code>
 let g:Tex_ViewRule_pdf = 'evince_dbus.py'
 let g:Tex_DefaultTargetFormat = 'pdf'
@@ -48,9 +50,7 @@ let g:Tex_CompileRule_pdf = 'pdflatex --synctex=1 -interaction=nonstopmode $*'
 
   </item>
   <item>
-   <p>
-     Now you can use Forward search from vim-latex by typing \ls. Backward search is not yet supported.
-   </p>
+   <p>Тепер ви можете користуватися прямим пошуком з vim-latex за допомогою введення комбінації \ls. Підтримки зворотного пошуку ще не передбачено.</p>
   </item>
 </steps>
 </section>

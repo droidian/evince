@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#forms"/>
-    <desc>Vérifiez que vous avez enregistré le formulaire sinon toutes les informations que vous avez saisies seront perdues.</desc>
+    <desc>Vérifiez que vous avez enregistré le formulaire, sinon toutes les informations que vous avez saisies seront perdues.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
@@ -61,6 +61,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>Enregistrement d’un formulaire</title>
@@ -71,23 +83,23 @@
 <item><p>Pour enregistrer un copie qui pourra être modifiée dans le futur (le formulaire restant interactif) :</p>
    <steps>
       <item>
-        <p>Ouvrez le menu <gui>Options du fichier</gui> en haut à droite et cliquez sur <gui>Enregistrer sous…</gui>, ou faites le raccourci <keyseq><key>Ctrl</key><key>S</key></keyseq> sur votre clavier.</p>
+        <p>Ouvrez le menu <gui>Options des fichiers</gui> situé dans le coin supérieur droit et sélectionnez <gui>Enregistrer sous</gui>, ou appuyez sur les touches <keyseq><key>Ctrl</key><key>S</key></keyseq> de votre clavier.</p>
      </item>
  <item>
-      <p>Choisissez un nom et un dossier où enregistrer le fichier, puis cliquez sur <gui>Enregistrer</gui>. Le PDF est enregistré dans le dossier que vous aviez choisi.</p>
+      <p>Choisissez un nom et un dossier où enregistrer le fichier, puis cliquez sur <gui>Enregistrer</gui>. Le PDF est enregistré dans le dossier que vous avez choisi.</p>
     </item>
    </steps>
 </item>
 <item><p>Pour enregistrer une copie qui ne peut plus être modifiée (par exemple, pour envoyer le formulaire par courriel ou le soumettre en ligne) :</p>
    <steps>
     <item>
-        <p>Ouvrez le menu <gui>Options du fichier</gui> en haut à droite et cliquez sur <gui>Imprimer</gui>, ou faites le raccourci <keyseq><key>Ctrl</key><key>P</key></keyseq> sur votre clavier.</p>
+        <p>Ouvrez le menu <gui>Options des fichiers</gui> situé dans le coin supérieur droit et sélectionnez <gui>Imprimer</gui>, ou appuyez sur les touches <keyseq><key>Ctrl</key><key>P</key></keyseq>.</p>
     </item>
     <item>
       <p>Choisissez <gui>Imprimer dans un fichier</gui> et choisissez PDF comme <gui>Format de sortie</gui>.</p>
     </item>
     <item>
-      <p>Choisissez un nom et un dossier où enregistrer le fichier, puis cliquez sur <gui>Imprimer</gui>. Le PDF est enregistré dans le dossier que vous aviez choisi.</p>
+      <p>Choisissez un nom et un dossier où enregistrer le fichier, puis cliquez sur <gui>Imprimer</gui>. Le PDF est enregistré dans le dossier que vous avez choisi.</p>
     </item>
    </steps>
 </item>

@@ -60,6 +60,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>La ligne de commande</title>
@@ -74,10 +86,7 @@
     <title>Ouverture d’un document à une page précise</title>
     <p>Vous pouvez utiliser l’option <cmd>--page-label</cmd> pour ouvrir un document à une page précise. Par exemple, pour ouvrir un document à la page 3, vous devez saisir :</p>
     <screen>evince --page-label=3 fichier.pdf</screen>
-    <p>
-    The page label should be in the same format as the page number displayed in
-    the <app>Document Viewer</app> header bar.
-    </p>
+    <p>L’étiquette de page doit être dans le même format que le numéro de page affiché dans la barre d’en-tête du <app>Visionneur de documents</app>.</p>
 </section>
 <section id="fullsreen">
     <title>Ouverture d’un document en mode plein écran</title>

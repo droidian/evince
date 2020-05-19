@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#tips"/>
-    <desc>You can convert a document to PDF by "printing" it to a file.</desc>
+    <desc>Ви можете перетворити документ на PDF «надрукувавши» його до файла.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.10.3" date="2014-03-22" status="review"/>
@@ -13,55 +13,48 @@
       <email>philbull@gmail.com</email>
     </credit>
     <credit type="editor">
-      <name>Anna Philips</name>
+      <name>Анна Філіпс (Anna Philips)</name>
       <email>anna.cs.au@gmail.com</email>
     </credit>
     <license>
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>Converting a document to PDF</title>
+<title>Перетворення документа на PDF</title>
 
-<p>
-You can convert documents of the following format types into PDF format:
-</p>
+<p>Перетворити до формату PDF можна документи таких типів:</p>
 <list>
- <item><p>Device Independent file format (.dvi)</p></item>
+ <item><p>Незалежний від пристроїв формат файлів (.dvi)</p></item>
  <item><p>PostScript (.ps)</p></item>
 </list>
-<p>
-This works by opening the file in <app>Document Viewer</app> and "printing" the document as a PDF file.
-</p>
+<p>Зробити це можна відкривши файл у <app>Переглядачі документів</app> і «надрукувавши» документ як файл PDF.</p>
 <steps>
     <item>
-          <p>Click the <gui>File options</gui> menu in the top right corner and
-          select <gui>Print</gui> or press
-          <keyseq><key>Ctrl</key><key>P</key></keyseq> on your keyboard.</p>
+          <p>Натисніть кнопку меню <gui>Дії з файлами</gui> у верхньому правому куті вікна програми і виберіть пункт <gui>Надрукувати</gui> або натисніть комбінацію клавіш <keyseq><key>Ctrl</key><key>P</key></keyseq> на клавіатурі.</p>
     </item>
     <item>
-      <p>
-      Select <gui>Print to File</gui> and choose PDF as the
-      <gui>Output format</gui>.
-      </p>
+      <p>Виберіть <gui>Друкувати у файл</gui> і виберіть PDF як <gui>Формат виводу</gui>.</p>
     </item>
     <item>
-      <p>
-      Choose a name and folder in which to save the file, then click <gui>Print</gui>.
-      The PDF will be saved in the folder you chose.
-      </p>
+      <p>Виберіть назву і теку, у якій слід зберегти файл, а потім натисніть кнопку <gui>Надрукувати</gui>. PDF буде збережено у вибраній вами теці.</p>
     </item>
 </steps>
 <note>
-<p>
-You can't select text in PostScript or .dvi files, but you usually can do
-this in PDF files. Converting .dvi or PostScript files to PDF will not make
-the text selectable. This is because the text itself isn't stored in the file
-(it's just an image of what the text looks like), so there is no way to recover
-it and put it in the PDF. You can use <em>Optical Character Recognition</em>
-(OCR) software to extract the text from files if you need to.
-</p>
+<p>Ви не можете позначати текст у файлах PostScript або .dvi, але, зазвичай, ви можете це робити у файлах PDF. Перетворення файлів .dvi або PostScript на PDF не надасть вам змоги позначати текст. Причиною є те, що у файлі не зберігаються текстові дані (це просто зображення-знімок тексту), тому не існує способу відновити текст і записати його до PDF. Для видобування тексту з таких файлів ви можете скористатися програмним забезпеченням з <em>оптичного розпізнавання тексту</em>.</p>
 </note>
 
 </page>

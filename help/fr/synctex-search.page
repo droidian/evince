@@ -56,6 +56,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>Recherche avec SyncTeX</title>
@@ -76,7 +88,7 @@
 <note>
 <p>Si le fichier PDF correspondant n’est pas ouvert, la réalisation d’une recherche en avant ouvre le PDF dans le <app>Visionneur de documents</app>.</p>
 </note>
-<p>Si vous avez un projet complexe contenant plusieurs fichiers TeX, vous pouvez mettre </p>
+<p>Si vous avez un projet complexe contenant plusieurs fichiers TeX, vous pouvez mettre</p>
 <code>% mainfile: mainfile.tex</code>
 <p>soit en première ligne ou dans les trois dernières lignes de chaque fichier TeX inclus et la recherche en avant fonctionnera. La recherche en arrière doit toujours fonctionner même si vous n’ajoutez pas le modificateur.</p>
 

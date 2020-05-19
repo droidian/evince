@@ -62,6 +62,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>Conversion d’un document en PDF</title>
@@ -74,7 +86,7 @@
 <p>Il suffit d’ouvrir le fichier dans le <app>Visionneur de documents</app> et « d’imprimer » le document en tant que fichier PDF.</p>
 <steps>
     <item>
-          <p>Ouvrez le menu <gui>Options du fichier</gui> en haut à droite et cliquez sur <gui>Imprimer</gui>, ou faites le raccourci <keyseq><key>Ctrl</key><key>P</key></keyseq> sur votre clavier.</p>
+          <p>Ouvrez le menu <gui>Options des fichiers</gui> situé dans le coin supérieur droit et sélectionnez <gui>Imprimer</gui>, ou appuyez sur les touches <keyseq><key>Ctrl</key><key>P</key></keyseq>.</p>
     </item>
     <item>
       <p>Choisissez <gui>Imprimer dans un fichier</gui> et choisissez PDF comme <gui>Format de sortie</gui>.</p>

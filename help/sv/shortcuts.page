@@ -119,13 +119,11 @@
         <td><p><keyseq><key>Ctrl</key><key>L</key></keyseq> följt av sidnumret och <key>Retur</key></p></td>
 </tr>
     <tr>
-        <td><p>Go to the beginning of a page (beginning of the document if
-<gui>Continuous</gui> is selected in the main menu in the top-right corner).</p></td>
+        <td><p>Gå till början av en sida (början av dokumentet om <gui>Sammanhängande</gui> är markerat i huvudmenyn i det övre högra hörnet.</p></td>
          <td><p><key>Home</key></p></td>
     </tr>
     <tr>
-        <td><p>Go to the end of a page (end of the document if
-<gui>Continuous</gui> is selected in the main menu in the top-right corner).</p></td>
+        <td><p>Gå till slutet av en sida (slutet av dokumentet om <gui>Sammanhängande</gui> är markerat i huvudmenyn i det övre högra hörnet).</p></td>
         <td><p><key>End</key></p></td>
     </tr>
     <tr>
@@ -145,7 +143,7 @@
         <td><p><keyseq><key>Skift</key><key>Ctrl</key><key>D</key></keyseq></p></td>
     </tr>
     <tr>
-         <td><p>Display the side pane with a table of contents and bookmarks.</p></td>
+         <td><p>Visa sidopanelen med innehållsförteckning och bokmärken.</p></td>
          <td><p><key>F9</key></p></td>
     </tr>
     <tr>
@@ -258,14 +256,14 @@
 </section>
 
 <section id="presentation">
-    <title>Presentation mode</title>
+    <title>Presentationsläge</title>
 <table frame="all" rules="cols" shade="rows">
     <tr>
-        <td><p>Toggle black screen.</p></td>
+        <td><p>Växla till/från svart skärm.</p></td>
         <td><p><key>B</key> / <key>.</key></p></td>
     </tr>
     <tr>
-        <td><p>Toggle white screen.</p></td>
+        <td><p>Växla till/från vit skärm.</p></td>
         <td><p><key>W</key></p></td>
     </tr>
 </table>

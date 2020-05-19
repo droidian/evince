@@ -15,7 +15,7 @@
 
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal-unported.xml"/>
 
-    <desc>Supprime les annotations d’un document PDF.</desc>
+    <desc>Supprimer les annotations d’un document PDF.</desc>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Jonathan Ernst</mal:name>
@@ -58,6 +58,18 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
   <title>Suppression d’annotations</title>
@@ -66,13 +78,13 @@
 
   <steps>
     <item>
-      <p>Voir une page qui contient une annotation. Si vous ne savez pas quelles pages ont des annotations, vous pouvez les trouver via le <link xref="annotations-navigate">panneau latéral des annotations</link>.</p>
+      <p>Sélectionnez une page qui contient une annotation. Si vous ne savez pas quelles pages ont des annotations, vous pouvez les trouver via le <link xref="annotations-navigate">panneau latéral des annotations</link>.</p>
     </item>
     <item>
       <p>Faites un clic droit sur l’icône annotation dans le document, et cliquez sur <gui style="menuitem">Enlever l’annotation</gui>.</p>
     </item>
     <item>
-      <p>Enregistrez les modifications apportées à un nouveau document en cliquant sur le bouton menu en haut à droite, puis sur <gui style="menuitem">Enregistrer sous…</gui>.</p>
+      <p>Enregistrez les modifications apportées à un nouveau document en cliquant sur le bouton menu en haut à droite, puis sur <gui style="menuitem">Enregistrer sous</gui>.</p>
     </item>
   </steps>
 

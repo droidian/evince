@@ -35,7 +35,7 @@
 <p>Záhlavní lišta obsahuje:</p>
   <list>
     <item>
-      <p>A button to show or hide the side pane.</p>
+      <p>Tlačítko pro zobrazení nebo skrytí postranního panelu.</p>
     </item>
     <item>
       <p>Testové pole <link xref="movingaround#between-pages">pro přechod na konkrétní stránku</link> nebo <link xref="finding">hledání</link> v <link xref="movingaround#navigating">rejstříku</link>.</p>
@@ -50,7 +50,7 @@
       <p><gui>Tlačítko s lupou</gui> pro <link xref="finding">hledání slov nebo frází v dokumentu</link>.</p>
     </item>
     <item>
-      <p>A button to open the main menu.</p>
+      <p>Tlačítko pro otevření hlavní nabídky.</p>
     </item>
   </list>
 </page>

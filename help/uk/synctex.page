@@ -3,7 +3,7 @@
 
   <info>
     <link type="guide" xref="index#synctex" group="first"/>
-    <desc>SyncTeX support is available.</desc>
+    <desc>Доступна підтримка SyncTeX.</desc>
 
     <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
     <revision pkgversion="3.12" date="2014-02-10" status="final"/>
@@ -14,11 +14,21 @@
     <license>
       <p>Creative Commons Share Alike 3.0</p>
     </license>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Максим Дзюманенко</mal:name>
+      <mal:email>dziumanenko@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Юрій Чорноіван</mal:name>
+      <mal:email>yurchor@ukr.net</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
-<title>What is SyncTeX?</title>
-<p>
-   SyncTeX is a method that enables synchronization between a TeX source file and the resulting PDF output.
-</p>
+<title>Що таке SyncTeX?</title>
+<p>SyncTeX — спосіб синхронізації між початковим кодом TeX і результатом обробки коду у форматі PDF.</p>
 
 </page>

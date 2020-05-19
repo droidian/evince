@@ -34,7 +34,7 @@
   </info>
 
 <title>Compilació de TeX amb SyncTeX</title>
-<p>Només cal que afegiu la línia <em>\synctex=1</em> al preàmbul dels fitxers TeX per activar la sincronització amb SyncTeX.</p>
+<p>Només cal que afegiu la línia <em>\synctex=1</em> al preàmbul dels fitxers TeX per a activar la sincronització amb SyncTeX.</p>
 <code>
 \documentclass{article}
 \synctex=1

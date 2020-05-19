@@ -19,7 +19,7 @@
 
     <include xmlns="http://www.w3.org/2001/XInclude" href="legal-unported.xml"/>
 
-    <desc><app>Visionneur de documents</app>, anciennement connu sous le nom <app>Evince</app>, est fait pour afficher les documents PDF. Apprenez comment démarrer avec le <app>Visionneur de documents</app> et ses fonctionnalités.</desc>
+    <desc><app>Visionneur de documents</app>, anciennement connu sous le nom de <app>Evince</app>, est fait pour afficher les documents PDF. Apprenez comment démarrer avec le <app>Visionneur de documents</app> et ses fonctionnalités.</desc>
 
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -62,6 +62,18 @@
       <mal:name>Guillaume Bernard</mal:name>
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
     </mal:credit>
   </info>
 

@@ -38,9 +38,7 @@
   <title>Ändra standardinställningar</title>
 
   <p>När ett dokument öppnas för första gången kommer standardinställningar så som zoom och visningsinställningar att appliceras. Ändringar du gör för dessa inställningar sparas för dokumentet.</p>
-  <p>You can save the settings which you are currently using as default for all
-  new documents by pressing the menu button in the top-right corner of the window
-  and selecting <gui style="menuitem">Save Current Settings as Default</gui>.</p>
+  <p>Du kan spara inställningarna som du använder för närvarande som standard för alla nya dokument genom att trycka på menyknappen i fönstrets övre högra hörn och välja <gui style="menuitem">Spara aktuella inställningar som standard</gui>.</p>
 
   <note style="important">
     <p>De nya standardinställningarna kommer inte att åsidosätta inställningar för tidigare öppnade dokument, de appliceras bara på dokument som öppnas för första gången.</p>

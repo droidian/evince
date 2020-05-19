@@ -41,7 +41,7 @@
 <p>Rubrikraden innehåller:</p>
   <list>
     <item>
-      <p>A button to show or hide the side pane.</p>
+      <p>En knapp för att visa eller dölja sidopanelen.</p>
     </item>
     <item>
       <p>Ett textfält för att <link xref="movingaround#between-pages">gå till en specifik sida</link> eller för att <link xref="finding">söka</link> i <link xref="movingaround#navigating">indexet</link>.</p>
@@ -56,7 +56,7 @@
       <p>En <gui>förstoringsglasknapp</gui> för att <link xref="finding">hitta ett ord eller en mening i dokumentet</link>.</p>
     </item>
     <item>
-      <p>A button to open the main menu.</p>
+      <p>En knapp för att öppna huvudmenyn.</p>
     </item>
   </list>
 </page>

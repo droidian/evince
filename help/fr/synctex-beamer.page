@@ -55,14 +55,26 @@
       <mal:email>associations@guillaume-bernard.fr</mal:email>
       <mal:years>2018</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>J-Paul Bérard</mal:name>
+      <mal:email>arverne@wanadoo.fr</mal:email>
+      <mal:years>2019</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Charles Monzat</mal:name>
+      <mal:email>charles.monzat@free.fr</mal:email>
+      <mal:years>2020</mal:years>
+    </mal:credit>
   </info>
 
 <title>Classe Beamer avec SyncTeX</title>
-<p>Beamer est une classe LaTeX pour créer des diapositives pour faire des présentations.</p>
+<p>Beamer est une classe LaTeX qui permet de créer des diapositives pour faire des présentations.</p>
 <p>Vous pouvez réaliser des recherches en avant et en arrière dans une présentation <em>Beamer-LaTeX</em> de la même manière qu’une <link xref="synctex-search">recherche</link> à travers d’autres fichiers TeX compilés avec SyncTeX. Cependant, la recherche vous place dans la diapositive correspondante (« frame ») et pas nécessairement à la ligne associée au texte. Cette différence est expliquée en détail ci-dessous.</p>
 <section id="forward-search">
     <title>Recherche en avant : d’une source Beamer-LaTeX vers PDF (de <app>gedit</app> vers le <app>Visionneur de documents</app>)</title>
-    <p>Avec <link xref="synctex-search#forward-search">Recherche en avant</link>, vous pouvez cliquer sur une ligne spécifique du code source Beamer-LaTeX. Le <em>haut</em> de la diapositive correspondante dans le PDF est mis en surbrillance en rouge. C’est très souvent le <em>titre de la diapositive</em> (frametitle).</p>
+    <p>Avec <link xref="synctex-search#forward-search">Recherche en avant</link>, vous pouvez cliquer sur une ligne spécifique du code source Beamer-LaTeX. Le <em>haut</em> de la diapositive correspondante dans le PDF est entouré en rouge. C’est très souvent le <em>titre de la diapositive</em> (frametitle).</p>
 </section>
 
 <section id="backward-search">
