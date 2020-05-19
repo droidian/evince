@@ -1,10 +1,11 @@
-evince (3.36.0-3) UNRELEASED; urgency=medium
+evince (3.36.1-1) UNRELEASED; urgency=medium
 
   * debian/rules:
     - override the dh_translations call to delete the outdated template
       which is provided by upstream (lp: #1877401)
+  * New upstream release
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 18 May 2020 23:13:09 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 19 May 2020 12:08:14 +0200
 
 evince (3.36.0-2) unstable; urgency=medium
 
