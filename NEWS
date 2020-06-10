@@ -1,4 +1,58 @@
 ================
+Evince    3.36.4
+================
+
+* pdf: Rever "support 'de facto' tooltip feature" (#1414)
+  Reopens issues #1409 and #1410.
+
+================
+Evince    3.36.3
+================
+
+================
+Evince    3.36.3
+================
+
+Fix Evince on MacOS
+
+backends:
+  *  Annotate functions that wraps formatting strings (#1410, Germán Poo-Caamaño)
+  *  Fix -Wformat-zero-length warning (Germán Poo-Caamaño)
+
+build:
+  *  use so suffix on macOS (Tom Schoonjans)
+
+ci:
+  *  Fix meson targets (Germán Poo-Caamaño)
+
+cut-n-paste:
+  *  Annotate functions that wraps formatting strings (#1410, Germán Poo-Caamaño)
+
+Developers:
+  * Germán Poo-Caamaño, Tom Schoonjans
+
+================
+Evince    3.36.2
+================
+
+shell:
+  *  check type of window/sidebar objects (#1409, Ilario Gelmetti)
+
+build:
+  *  Use lowercase for project name in meson (Germán Poo-Caamaño)
+
+ci:
+  *  build with meson by default and autotools manually (Germán Poo-Caamaño)
+
+flatpak: Update Poppler to 0.88.0 (Casey Jao)
+
+Developers:
+  * Casey Jao, Germán Poo-Caamaño, Ilario Gelmetti
+
+Translations:
+  * sicklylife (Japanese)
+
+================
 Evince    3.36.1
 ================
 
