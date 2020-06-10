@@ -1,6 +1,6 @@
 project(
-  'Evince', ['c', 'cpp'],
-  version: '3.36.1',
+  'evince', ['c', 'cpp'],
+  version: '3.36.4',
   license: 'GPL2',
   default_options: 'buildtype=debugoptimized',
   meson_version: '>= 0.50.0',
@@ -60,7 +60,7 @@ ev_backends_binary_version = ev_binary_version
 ev_backends_subdir = join_paths(ev_name, ev_backends_binary_version.to_string(), 'backends')
 ev_backendsdir = join_paths(ev_libdir, ev_backends_subdir)
 
-ev_namespace = 'org.gnome.' + meson.project_name()
+ev_namespace = 'org.gnome.Evince'
 
 ev_code_prefix = 'Ev'
 
@@ -105,6 +105,13 @@ if build_machine.system() == 'windows'
   common_flags += '-D_WIN32_WINNT=0x0500'
 
   common_ldflags = cc.get_supported_link_arguments('-mwindows')
+endif
+
+# GLib on macOS expects so as shared_module suffix, while meson uses dylib by default
+if host_machine.system() == 'darwin'
+  name_suffix = 'so'
+else
+  name_suffix = []
 endif
 
 if ev_debug
