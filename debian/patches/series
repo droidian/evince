@@ -1,1 +1,2 @@
 Fix-path-of-the-libnautilus-extension-with-multi-arch.patch
+git_armhf_build.patch
