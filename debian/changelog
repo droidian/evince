@@ -1,3 +1,11 @@
+evince (3.36.7-1) UNRELEASED; urgency=medium
+
+  * New upstream release (lp: #1886565)
+  * debian/patches/git_armhf_build.patch:
+    - removed, included in the new version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 06 Jul 2020 21:35:49 +0200
+
 evince (3.36.5-2) unstable; urgency=medium
 
   * debian/patches/git_armhf_build.patch:
