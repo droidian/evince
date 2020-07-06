@@ -1,4 +1,4 @@
-evince (3.36.7-1) UNRELEASED; urgency=medium
+evince (3.36.7-1) unstable; urgency=medium
 
   * New upstream release (lp: #1886565)
   * debian/patches/git_armhf_build.patch:
