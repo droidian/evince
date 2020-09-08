@@ -318,7 +318,17 @@ ev_document_misc_get_page_border_size (gint       page_width,
 	}
 }
 
-
+/**
+ * ev_document_misc_paint_one_page:
+ * @cr: a #cairo_tEvannotation
+ * @widget a #GtkWidget
+ * @area: a #GdkRectangle
+ * @border: a #GtkBorder
+ * @highlight: whether to highlight the text
+ * @inverted_colors: whether to invert colors
+ *
+ * Deprecated: 3.10.
+ */
 void
 ev_document_misc_paint_one_page (cairo_t      *cr,
 				 GtkWidget    *widget,
@@ -327,6 +337,7 @@ ev_document_misc_paint_one_page (cairo_t      *cr,
 				 gboolean      highlight,
 				 gboolean      inverted_colors)
 {
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
 	GtkStyleContext *context = gtk_widget_get_style_context (widget);
 	GtkStateFlags state = gtk_widget_get_state_flags (widget);
         GdkRGBA fg, bg, shade_bg;
@@ -364,6 +375,7 @@ ev_document_misc_paint_one_page (cairo_t      *cr,
 			 border->right - border->left,
 			 border->right - border->left);
 	cairo_fill (cr);
+G_GNUC_END_IGNORE_DEPRECATIONS
 }
 
 cairo_surface_t *
@@ -584,30 +596,41 @@ ev_document_misc_get_widget_dpi (GtkWidget *widget)
 	}
 }
 
-/* Returns a locale specific date and time representation */
+/**
+ * ev_document_misc_format_date:
+ * @utime: a #GTime
+ *
+ * Returns: (transfer full): a locale specific date and time representation.
+ *
+ * Deprecated: 3.38: use ev_document_misc_format_datetime instead as GTime is
+ *                   deprecated because it is not year-2038 safe.
+ */
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
 gchar *
 ev_document_misc_format_date (GTime utime)
 {
-	time_t time = (time_t) utime;
-	char s[256];
-	const char fmt_hack[] = "%c";
-	size_t len;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wformat-y2k"
-#ifdef HAVE_LOCALTIME_R
-	struct tm t;
-	if (time == 0 || !localtime_r (&time, &t)) return NULL;
-	len = strftime (s, sizeof (s), fmt_hack, &t);
-#else
-	struct tm *t;
-	if (time == 0 || !(t = localtime (&time)) ) return NULL;
-	len = strftime (s, sizeof (s), fmt_hack, t);
-#endif
-#pragma GCC diagnostic pop
+	g_autoptr (GDateTime) dt = g_date_time_new_from_unix_utc ((gint64)utime);
+	return ev_document_misc_format_datetime (dt);
+}
+G_GNUC_END_IGNORE_DEPRECATIONS
 
-	if (len == 0 || s[0] == '\0') return NULL;
-
-	return g_locale_to_utf8 (s, -1, NULL, NULL, NULL);
+/**
+ * ev_document_misc_format_datetime:
+ * @dt: a #GDateTime
+ *
+ * Determine the preferred date and time representation for the current locale
+ * for @dt.
+ *
+ * Returns: (transfer full): a new allocated string or NULL in the case
+ * that there was an error (such as a format specifier not being supported
+ * in the current locale). The string should be freed with g_free().
+ *
+ * Since: 3.38
+ */
+gchar *
+ev_document_misc_format_datetime (GDateTime *dt)
+{
+	return g_date_time_format (dt, "%c");
 }
 
 /**
