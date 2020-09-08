@@ -11,6 +11,8 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_annotation_window_set_enable_spellchecking@Base 3.29.91
  ev_annotation_window_set_rectangle@Base 3.0.2
  ev_annotation_window_ungrab_focus@Base 3.0.2
+ ev_color_contrast_get_best_foreground_color@Base 3.37.3
+ ev_color_contrast_get_most_readable_color@Base 3.37.3
  ev_document_model_get_continuous@Base 3.0.2
  ev_document_model_get_document@Base 3.0.2
  ev_document_model_get_dual_page@Base 3.0.2

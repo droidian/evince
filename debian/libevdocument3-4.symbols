@@ -50,6 +50,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_annotation_text_set_icon@Base 3.0.2
  ev_annotation_text_set_is_open@Base 3.0.2
  ev_annotation_type_get_type@Base 3.0.2
+ ev_annotations_over_markup_get_type@Base 3.37.3
  ev_annotations_save_mask_get_type@Base 3.0.2
  ev_async_renderer_get_type@Base 3.0.2
  ev_async_renderer_render_pixbuf@Base 3.0.2
@@ -74,6 +75,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_annotations_document_is_modified@Base 3.0.2
  ev_document_annotations_get_annotations@Base 3.0.2
  ev_document_annotations_get_type@Base 3.0.2
+ ev_document_annotations_over_markup@Base 3.37.3
  ev_document_annotations_remove_annotation@Base 3.13.91
  ev_document_annotations_save_annotation@Base 3.0.2
  ev_document_attachments_get_attachments@Base 3.0.2
@@ -176,6 +178,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_media_get_media_mapping@Base 3.18.0
  ev_document_media_get_type@Base 3.18.0
  ev_document_misc_format_date@Base 3.0.2
+ ev_document_misc_format_datetime@Base 3.37.90
  ev_document_misc_get_loading_thumbnail@Base 3.0.2
  ev_document_misc_get_page_border_size@Base 3.0.2
  ev_document_misc_get_pointer_position@Base 3.3.90

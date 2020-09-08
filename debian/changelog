@@ -1,3 +1,18 @@
+evince (3.37.90-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+  * debian/control.in:
+    - updated the gdk-pixbuf version requirement
+  * d/p/Fix-path-of-the-libnautilus-extension-with-multi-arch.patch:
+    - removed, it doesn't seem to be needed anymore
+  * d/p/gitlab_backends_build.patch:
+    - use the correct libraries to build the backends
+  * debian/rules:
+    - remove the dh_translations override which is not needed anymore
+    - updated to meson
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 06 Aug 2020 16:50:44 +0200
+
 evince (3.36.7-1) unstable; urgency=medium
 
   * New upstream release (lp: #1886565)
