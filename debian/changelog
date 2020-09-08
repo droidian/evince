@@ -1,4 +1,4 @@
-evince (3.37.90-1) UNRELEASED; urgency=medium
+evince (3.37.90-1) experimental; urgency=medium
 
   * New upstream release
   * debian/control.in:
@@ -11,7 +11,7 @@ evince (3.37.90-1) UNRELEASED; urgency=medium
     - remove the dh_translations override which is not needed anymore
     - updated to meson
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 06 Aug 2020 16:50:44 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 08 Sep 2020 17:37:08 +0200
 
 evince (3.36.7-1) unstable; urgency=medium
 
