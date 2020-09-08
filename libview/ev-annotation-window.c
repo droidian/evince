@@ -22,8 +22,10 @@
 #include "config.h"
 
 #include <string.h>
+#include <math.h>
 
 #include "ev-annotation-window.h"
+#include "ev-color-contrast.h"
 #include "ev-stock-icons.h"
 #include "ev-view-marshal.h"
 #include "ev-document-misc.h"
@@ -122,24 +124,27 @@ static void
 ev_annotation_window_set_color (EvAnnotationWindow *window,
 				GdkRGBA            *color)
 {
-        GtkStyleProperties *properties;
-        GtkStyleProvider   *provider;
+	GtkCssProvider     *css_provider = gtk_css_provider_new ();
+	g_autofree char    *rgba_str = gdk_rgba_to_string (color);
+	g_autofree char    *css_data = NULL;
+	g_autoptr (GError)  error = NULL;
+	g_autoptr (GdkRGBA) icon_color = ev_color_contrast_get_best_foreground_color (color);
+	g_autofree char    *icon_color_str = gdk_rgba_to_string (icon_color);
+	css_data = g_strdup_printf ("button {border-color: %1$s; color: %2$s; -gtk-icon-shadow:0 0; box-shadow:0 0;}\n\
+				     button:hover {background: lighter(%1$s); border-color: darker(%1$s);}\n\
+				     button:active {background: darker(%1$s);}\n\
+				     evannotationwindow.background, button {background: %1$s}",
+				    rgba_str, icon_color_str);
 
-        properties = gtk_style_properties_new ();
-        gtk_style_properties_set (properties, 0,
-                                  "background-color", color,
-                                  NULL);
+	gtk_css_provider_load_from_data (css_provider, css_data, strlen (css_data), &error);
+	if (error != NULL)
+		g_error ("%s", error->message);
 
-        provider = GTK_STYLE_PROVIDER (properties);
-        gtk_style_context_add_provider (gtk_widget_get_style_context (GTK_WIDGET (window)),
-                                        provider, GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
-        gtk_style_context_add_provider (gtk_widget_get_style_context (window->close_button),
-                                        provider, GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
-        gtk_style_context_add_provider (gtk_widget_get_style_context (window->resize_se),
-                                        provider, GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
-        gtk_style_context_add_provider (gtk_widget_get_style_context (window->resize_sw),
-                                        provider, GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
-        g_object_unref (properties);
+	gtk_style_context_add_provider (gtk_widget_get_style_context (GTK_WIDGET (window)),
+					GTK_STYLE_PROVIDER (css_provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+	gtk_style_context_add_provider (gtk_widget_get_style_context (window->close_button),
+					GTK_STYLE_PROVIDER (css_provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+	gtk_style_context_add_class (gtk_widget_get_style_context (window->close_button), "circular");
 }
 
 static void
@@ -333,18 +338,10 @@ ev_annotation_window_init (EvAnnotationWindow *window)
 	gtk_box_pack_start (GTK_BOX (hbox), header, TRUE, TRUE, 0);
 	gtk_widget_show (header);
 
-	window->close_button = gtk_button_new ();
-	gtk_button_set_relief (GTK_BUTTON (window->close_button), GTK_RELIEF_NONE);
-	gtk_container_set_border_width (GTK_CONTAINER (window->close_button), 0);
+	window->close_button = gtk_button_new_from_icon_name ("window-close-symbolic", GTK_ICON_SIZE_BUTTON);
 	g_signal_connect_swapped (window->close_button, "clicked",
 				  G_CALLBACK (ev_annotation_window_close),
 				  window);
-	pixbuf = gtk_icon_theme_load_icon (icon_theme, EV_STOCK_CLOSE, 8,
-					   GTK_ICON_LOOKUP_FORCE_SIZE, NULL);
-	icon = gtk_image_new_from_pixbuf (pixbuf);
-	g_object_unref (pixbuf);
-	gtk_container_add (GTK_CONTAINER (window->close_button), icon);
-	gtk_widget_show (icon);
 
 	gtk_box_pack_start (GTK_BOX (hbox), window->close_button, FALSE, FALSE, 0);
 	gtk_widget_show (window->close_button);

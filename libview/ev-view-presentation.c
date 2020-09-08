@@ -260,9 +260,9 @@ ev_view_presentation_transition_start (EvViewPresentation *pview)
 							     pview->current_page);
 	if (duration >= 0) {
 		        pview->trans_timeout_id =
-				g_timeout_add_seconds (duration,
-						       (GSourceFunc) transition_next_page,
-						       pview);
+				g_timeout_add (duration * 1000,
+					       (GSourceFunc) transition_next_page,
+					       pview);
 	}
 }
 
@@ -930,7 +930,7 @@ ev_view_presentation_set_cursor (EvViewPresentation *pview,
 
 	cursor = ev_view_cursor_new (gtk_widget_get_display (widget), view_cursor);
 	gdk_window_set_cursor (gtk_widget_get_window (widget), cursor);
-	gdk_flush ();
+	gdk_display_flush (gtk_widget_get_display (widget));
 	if (cursor)
 		g_object_unref (cursor);
 }

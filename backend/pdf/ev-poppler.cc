@@ -68,12 +68,25 @@
 #define HAVE_CAIRO_PRINT
 #endif
 
-/* fields from the XMP Rights Management Schema, XMP Specification Sept 2005, pag. 45 */
+/* Fields for checking the license info suggested by Creative Commons 
+ * Main reference: http://wiki.creativecommons.org/XMP */
+
+/* fields from the XMP Rights Management Schema, XMP Specification Sept 2005, pag. 42 */
 #define LICENSE_MARKED "/rdf:RDF/rdf:Description/xmpRights:Marked"
-#define LICENSE_TEXT "/rdf:RDF/rdf:Description/dc:rights/rdf:Alt/rdf:li[lang('%s')]"
+#define LICENSE_TEXT "/x:xmpmeta/rdf:RDF/rdf:Description/xmpRights:UsageTerms/rdf:Alt/rdf:li[lang('%s')]"
 #define LICENSE_WEB_STATEMENT "/rdf:RDF/rdf:Description/xmpRights:WebStatement"
 /* license field from Creative Commons schema, http://creativecommons.org/ns */
 #define LICENSE_URI "/rdf:RDF/rdf:Description/cc:license/@rdf:resource"
+
+/* alternative field from the Dublic Core Schema for checking the informal rights statement 
+ * as suggested by the Creative Commons template [1]. This field has been replaced or 
+ * complemented by its XMP counterpart [2].
+ * References: 
+ *    [1] http://wiki.creativecommons.org/XMP_help_for_Adobe_applications 
+ *    [2] http://code.creativecommons.org/issues/issue505 */
+#define LICENSE_TEXT_ALT "/x:xmpmeta/rdf:RDF/rdf:Description/dc:rights/rdf:Alt/rdf:li[lang('%s')]"
+#define GET_LICENSE_TEXT(a) ( (a < 1) ? LICENSE_TEXT : LICENSE_TEXT_ALT )
+
 /* fields for authors and keywords */
 #define AUTHORS "/rdf:RDF/rdf:Description/dc:creator/rdf:Seq/rdf:li"
 #define KEYWORDS "/rdf:RDF/rdf:Description/dc:subject/rdf:Bag/rdf:li"
@@ -921,7 +934,11 @@ pdf_document_get_license_from_metadata (xmlXPathContextPtr xpathCtx)
 		 * Schema. This field is recomended to be checked by Creative
 		 * Commons */
 		/* 1) checking for a suitable localized string */
-		license->text = pdf_document_get_localized_object_from_metadata (xpathCtx, LICENSE_TEXT);
+		int lt;
+
+		for (lt = 0; !license->text && lt < 2; lt++)
+			license->text = pdf_document_get_localized_object_from_metadata (xpathCtx,
+											 GET_LICENSE_TEXT (lt));
 
 		/* Checking the license URI as defined by the Creative Commons
 		 * Schema. This field is recomended to be checked by Creative
@@ -2665,11 +2682,15 @@ ev_form_field_from_poppler_field (PdfDocument      *pdf_document,
 	gdouble      font_size;
 	gboolean     is_read_only;
 	PopplerAction *action;
+	gchar       *alt_ui_name = NULL;
 
 	id = poppler_form_field_get_id (poppler_field);
 	font_size = poppler_form_field_get_font_size (poppler_field);
 	is_read_only = poppler_form_field_is_read_only (poppler_field);
 	action = poppler_form_field_get_action (poppler_field);
+#if POPPLER_CHECK_VERSION(0, 88, 0)
+	alt_ui_name = poppler_form_field_get_alternate_ui_name (poppler_field);
+#endif
 
 	switch (poppler_form_field_get_field_type (poppler_field)) {
 	        case POPPLER_FORM_FIELD_TEXT: {
@@ -2730,7 +2751,7 @@ ev_form_field_from_poppler_field (PdfDocument      *pdf_document,
 			        case POPPLER_FORM_CHOICE_COMBO:
 					ev_choice_type = EV_FORM_FIELD_CHOICE_COMBO;
 					break;
-			        case EV_FORM_FIELD_CHOICE_LIST:
+			        case POPPLER_FORM_CHOICE_LIST:
 					ev_choice_type = EV_FORM_FIELD_CHOICE_LIST;
 					break;
 			}
@@ -2759,16 +2780,10 @@ ev_form_field_from_poppler_field (PdfDocument      *pdf_document,
 
 	ev_field->font_size = font_size;
 	ev_field->is_read_only = is_read_only;
+	ev_field->alt_ui_name = alt_ui_name;
 
 	if (action)
 		ev_field->activation_link = ev_link_from_action (pdf_document, action);
-
-#if POPPLER_CHECK_VERSION(0, 88, 0)
-	gchar *alt_name = poppler_form_field_get_alternate_ui_name (poppler_field);
-	if (alt_name) {
-		g_object_set_data_full (G_OBJECT (ev_field), "alt-name", alt_name, (GDestroyNotify) g_free);
-	}
-#endif
 
 	return ev_field;
 }
@@ -3928,6 +3943,88 @@ pdf_document_annotations_save_annotation (EvDocumentAnnotations *document_annota
 	ev_document_set_modified (EV_DOCUMENT (document_annotations), TRUE);
 }
 
+/* Creates a vector from points @p1 and @p2 and stores it on @vector */
+static inline void
+set_vector (PopplerPoint *p1,
+	    PopplerPoint *p2,
+	    PopplerPoint *vector)
+{
+	vector->x = p2->x - p1->x;
+	vector->y = p2->y - p1->y;
+}
+
+/* Returns the dot product of the passed vectors @v1 and @v2 */
+static inline gdouble
+dot_product (PopplerPoint *v1,
+	     PopplerPoint *v2)
+{
+	return v1->x * v2->x + v1->y * v2->y;
+}
+
+/* Algorithm: https://math.stackexchange.com/a/190203
+   Implementation: https://stackoverflow.com/a/37865332 */
+static gboolean
+point_over_poppler_quadrilateral (PopplerQuadrilateral *quad,
+				  PopplerPoint         *M)
+{
+	PopplerPoint AB, AM, BC, BM;
+	gdouble dotABAM, dotABAB, dotBCBM, dotBCBC;
+
+	/* We interchange p3 and p4 because algorithm expects clockwise eg. p1 -> p2
+	   while pdf quadpoints are defined as p1 -> p2                     p4 <- p3
+	                                       p3 -> p4 (https://stackoverflow.com/q/9855814) */
+	set_vector (&quad->p1, &quad->p2, &AB);
+	set_vector (&quad->p1, M, &AM);
+	set_vector (&quad->p2, &quad->p4, &BC);
+	set_vector (&quad->p2, M, &BM);
+
+	dotABAM = dot_product (&AB, &AM);
+	dotABAB = dot_product (&AB, &AB);
+	dotBCBM = dot_product (&BC, &BM);
+	dotBCBC = dot_product (&BC, &BC);
+
+	return 0 <= dotABAM && dotABAM <= dotABAB && 0 <= dotBCBM && dotBCBM <= dotBCBC;
+}
+
+static EvAnnotationsOverMarkup
+pdf_document_annotations_over_markup (EvDocumentAnnotations *document_annotations,
+				      EvAnnotation          *annot,
+				      gdouble                x,
+				      gdouble                y)
+{
+	EvPage       *page;
+	PopplerAnnot *poppler_annot;
+	GArray       *quads;
+	PopplerPoint  M;
+	guint         quads_len;
+	gdouble       height;
+
+	poppler_annot = POPPLER_ANNOT (g_object_get_data (G_OBJECT (annot), "poppler-annot"));
+
+	if (!poppler_annot || !POPPLER_IS_ANNOT_TEXT_MARKUP (poppler_annot))
+		return EV_ANNOTATION_OVER_MARKUP_UNKNOWN;
+
+	quads = poppler_annot_text_markup_get_quadrilaterals (POPPLER_ANNOT_TEXT_MARKUP (poppler_annot));
+	quads_len = quads->len;
+
+	page = ev_annotation_get_page (annot);
+	poppler_page_get_size (POPPLER_PAGE (page->backend_page), NULL, &height);
+	M.x = x;
+	M.y = height - y;
+
+	for (guint i = 0; i < quads_len; ++i) {
+		PopplerQuadrilateral *quadrilateral = &g_array_index (quads, PopplerQuadrilateral, i);
+
+		if (point_over_poppler_quadrilateral (quadrilateral, &M)) {
+			g_array_unref (quads);
+			return EV_ANNOTATION_OVER_MARKUP_YES;
+		}
+	}
+	g_array_unref (quads);
+
+	return EV_ANNOTATION_OVER_MARKUP_NOT;
+}
+
 static void
 pdf_document_document_annotations_iface_init (EvDocumentAnnotationsInterface *iface)
 {
@@ -3936,6 +4033,7 @@ pdf_document_document_annotations_iface_init (EvDocumentAnnotationsInterface *if
 	iface->add_annotation = pdf_document_annotations_add_annotation;
 	iface->save_annotation = pdf_document_annotations_save_annotation;
 	iface->remove_annotation = pdf_document_annotations_remove_annotation;
+	iface->over_markup = pdf_document_annotations_over_markup;
 }
 
 /* Media */

@@ -1,7 +1,7 @@
 project(
   'evince', ['c', 'cpp'],
-  version: '3.36.7',
-  license: 'GPL2',
+  version: '3.37.90',
+  license: 'GPL2+',
   default_options: 'buildtype=debugoptimized',
   meson_version: '>= 0.50.0',
 )
@@ -78,8 +78,6 @@ config_h.set_quoted('VERSION', ev_version)
 config_h.set_quoted('GETTEXT_PACKAGE', ev_name)
 config_h.set('ENABLE_NLS', true)
 
-config_h.set('HAVE_LOCALTIME_R', cc.has_function('localtime_r'))
-
 # portability checks
 # FIXME: there is no use of backtrace in the code
 # for backtrace()
@@ -144,10 +142,13 @@ po_dir = join_paths(source_root, 'po')
 
 top_inc = include_directories('.')
 
-glib_req_version = '>= 2.38.0'
+glib_req_version = '>= 2.44.0'
 gtk_req_version = '>= 3.22.0'
 
-gdk_pixbuf_dep = dependency('gdk-pixbuf-2.0', version: '>= 2.36.5')
+gdk_pixbuf_dep = dependency('gdk-pixbuf-2.0', version: '>= 2.40.0')
+config_h.set_quoted('EXTRA_GDK_PIXBUF_LOADERS_DIR',
+                    join_paths (ev_libdir, ev_name, 'gdk-pixbuf', gdk_pixbuf_dep.get_pkgconfig_variable('gdk_pixbuf_binary_version')))
+
 gio_dep = dependency('gio-2.0', version: glib_req_version)
 glib_dep = dependency('glib-2.0', version: glib_req_version)
 gmodule_dep = dependency('gmodule-2.0')
@@ -159,7 +160,7 @@ m_dep = cc.find_library('m')
 
 # Although GTK+ 3.10 includes hi-dpi functionality, it does not require a cairo with
 # cairo_surface_set_device_scale(), which we also need if we're to support hi-dpi,
-# so we need check for that explicity.
+# so we need check for that explicitly.
 cairo_dep = dependency('cairo', version: '>= 1.10.0')
 config_h.set('HAVE_HIDPI_SUPPORT', cc.has_function('cairo_surface_set_device_scale', dependencies: cairo_dep))
 
@@ -534,6 +535,7 @@ output += 'TIFF .....................:  ' + enable_tiff.to_string() + '\n'
 output += 'XPS ......................:  ' + enable_xps.to_string() + '\n\n\n'
 output += 'FEATURES\n\n'
 output += 'GTK Doc reference ........:  ' + enable_gtk_doc.to_string() + '\n'
+output += 'User documentation .......:  ' + enable_user_doc.to_string() + '\n'
 output += 'GObject Introspection ....:  ' + enable_introspection.to_string() + '\n'
 output += 'DBUS communication .......:  ' + enable_dbus.to_string() + '\n'
 output += 'systemd units installation:  ' + systemd_user_unit_dir + '\n'
