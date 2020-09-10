@@ -43,6 +43,7 @@ Build-Depends: adwaita-icon-theme,
                libtiff-dev,
                libx11-dev,
                libxml2-dev (>= 2.5.0),
+               meson (>= 0.50),
                yelp-tools,
                zlib1g-dev
 Rules-Requires-Root: no
