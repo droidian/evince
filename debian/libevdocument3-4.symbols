@@ -237,7 +237,9 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_form_field_choice_get_type@Base 3.0.2
  ev_form_field_choice_new@Base 3.0.2
  ev_form_field_choice_type_get_type@Base 3.0.2
+ ev_form_field_get_alternate_name@Base 3.38.0
  ev_form_field_get_type@Base 3.0.2
+ ev_form_field_set_alternate_name@Base 3.38.0
  ev_form_field_signature_get_type@Base 3.0.2
  ev_form_field_signature_new@Base 3.0.2
  ev_form_field_text_get_type@Base 3.0.2
