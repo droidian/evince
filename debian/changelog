@@ -1,4 +1,4 @@
-evince (3.38.0-1) UNRELEASED; urgency=medium
+evince (3.38.0-1) unstable; urgency=medium
 
   * New upstream release:
     - dvi: minus sign doesn't appear with mathdesign fonts
@@ -6,7 +6,7 @@ evince (3.38.0-1) UNRELEASED; urgency=medium
   * debian/patches: Drop (applied upstream)
   * debian/libevdocument3-4.symbols: Update symbols
 
- -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Mon, 14 Sep 2020 13:54:03 +0200
+ -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Mon, 14 Sep 2020 13:54:37 +0200
 
 evince (3.37.90-2) experimental; urgency=medium
 
