@@ -1,3 +1,11 @@
+evince (3.38.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release:
+    - dvi: minus sign doesn't appear with mathdesign fonts
+    - pdf: Reimplement 'de facto' tooltip with no ABI break
+
+ -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Mon, 14 Sep 2020 13:49:23 +0200
+
 evince (3.37.90-2) experimental; urgency=medium
 
   * debian/control.in:
