@@ -1,8 +1,19 @@
 evince (3.38.0-2) UNRELEASED; urgency=medium
 
-  * debian/rules: Enable all auto features (except t1lib)
+  [ Jeremy Bicha ]
+  * debian/rules: Enable all auto features (except t1lib).
+    This allows simplifying our configure rules.
+  * Stop using -Wl,--as-needed, which is the bullseye toolchain's default
+  * Remove remnants of the Autotools build that are no longer necessary
 
- -- Jeremy Bicha <jbicha@debian.org>  Tue, 29 Sep 2020 23:02:28 -0400
+  [ Simon McVittie ]
+  * Remove obsolete gnome-common build-dependency.
+    This has been unnecessary ever since evince moved to the Meson build
+    system. (Closes: #829976)
+  * Add patch from Chris Lamb to make the build reproducible
+    (Closes: #970383)
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 13 Oct 2020 10:38:48 +0100
 
 evince (3.38.0-1) unstable; urgency=medium
 
