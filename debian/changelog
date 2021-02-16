@@ -1,11 +1,20 @@
 evince (3.38.2-1) UNRELEASED; urgency=medium
 
+  * New upstream stable release (Closes: #982938)
+    - Fix regression with presentations on a scaled X11 display
+    - Unescape URIs to display them in tooltips
+    - Make Esc cancel any annotation in progress
+    - If a search match is not in the page, iterate to the next
+    - Take device scale into account for link previews
+    - Don't trust X11 or Wayland DPI values
+    - Don't use compatibility canonicalization when copying to clipboard
+    - Translation updates
   * d/watch: Only watch for stable-branch releases
   * Use upstream/3.38.x branch for upstream source.
     The first 3.39.x versions have already been released.
-  * New upstream release
+  * Drop patch that was applied upstream
 
- -- Simon McVittie <smcv@debian.org>  Tue, 16 Feb 2021 23:05:29 +0000
+ -- Simon McVittie <smcv@debian.org>  Tue, 16 Feb 2021 23:06:05 +0000
 
 evince (3.38.0-3) unstable; urgency=medium
 
