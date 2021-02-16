@@ -1,5 +1,6 @@
-evince (3.38.2-1) UNRELEASED; urgency=medium
+evince (3.38.2-1) unstable; urgency=medium
 
+  * Team upload
   * New upstream stable release (Closes: #982938)
     - Fix regression with presentations on a scaled X11 display
     - Unescape URIs to display them in tooltips
@@ -14,7 +15,7 @@ evince (3.38.2-1) UNRELEASED; urgency=medium
     The first 3.39.x versions have already been released.
   * Drop patch that was applied upstream
 
- -- Simon McVittie <smcv@debian.org>  Tue, 16 Feb 2021 23:06:05 +0000
+ -- Simon McVittie <smcv@debian.org>  Tue, 16 Feb 2021 23:46:35 +0000
 
 evince (3.38.0-3) unstable; urgency=medium
 
