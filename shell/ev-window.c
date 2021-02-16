@@ -403,6 +403,7 @@ static void     recent_view_item_activated_cb           (EvRecentView     *recen
 static void     ev_window_fullscreen_show_toolbar       (EvWindow         *ev_window);
 static void     ev_window_begin_add_annot               (EvWindow         *ev_window,
 							 EvAnnotationType  annot_type);
+static void	ev_window_cancel_add_annot		(EvWindow *window);
 
 static gchar *nautilus_sendto = NULL;
 
@@ -5333,8 +5334,13 @@ ev_window_cmd_escape (GSimpleAction *action,
 		ev_window_stop_fullscreen (window, TRUE);
 	else if (EV_WINDOW_IS_PRESENTATION (priv))
 		ev_window_stop_presentation (window, TRUE);
-	else
+	else {
+		/* Cancel any annotation in progress and untoggle the
+		 * toolbar button. */
+		ev_window_cancel_add_annot (window);
+		ev_annotations_toolbar_add_annot_finished (EV_ANNOTATIONS_TOOLBAR (priv->annots_toolbar));
 		gtk_widget_grab_focus (priv->view);
+	}
 }
 
 static void
@@ -6697,62 +6703,9 @@ window_configure_event_cb (EvWindow *window, GdkEventConfigure *event, gpointer 
 static void
 launch_action (EvWindow *window, EvLinkAction *action)
 {
-	EvWindowPrivate *priv = GET_PRIVATE (window);
-	const char *filename = ev_link_action_get_filename (action);
-	GAppInfo *app_info;
-	GFile *file;
-	GList file_list = {NULL};
-	GdkAppLaunchContext *context;
-	GdkScreen *screen;
-	GError *error = NULL;
-
-	if (filename == NULL)
-		return;
-
-	if (g_path_is_absolute (filename)) {
-		file = g_file_new_for_path (filename);
-	} else {
-		GFile *base_file;
-		gchar *dir;
-
-		dir = g_path_get_dirname (priv->uri);
-		base_file = g_file_new_for_uri (dir);
-		g_free (dir);
-		
-		file = g_file_resolve_relative_path (base_file, filename);
-		g_object_unref (base_file);
-	}
-
-	app_info = g_file_query_default_handler (file, NULL, &error);
-	if (!app_info) {
-		ev_window_error_message (window, error,
-					 "%s",
-					 _("Unable to launch external application."));
-		g_object_unref (file);
-		g_error_free (error);
-
-		return;
-	}
-
-	screen = gtk_window_get_screen (GTK_WINDOW (window));
-	context = gdk_display_get_app_launch_context (gdk_screen_get_display (screen));
-	gdk_app_launch_context_set_screen (context, screen);
-	gdk_app_launch_context_set_timestamp (context, gtk_get_current_event_time ());
-
-	file_list.data = file;
-	if (!g_app_info_launch (app_info, &file_list, G_APP_LAUNCH_CONTEXT (context), &error)) {
-		ev_window_error_message (window, error,
-					 "%s",
-					 _("Unable to launch external application."));
-		g_error_free (error);
-	}
-
-	g_object_unref (app_info);
-	g_object_unref (file);
-        /* FIXMEchpe: unref launch context? */
-
-	/* According to the PDF spec filename can be an executable. I'm not sure
-	   allowing to launch executables is a good idea though. -- marco */
+	/* Do nothing, https://gitlab.gnome.org/GNOME/evince/-/issues/1333 */
+	g_warning ("Security alert: this document has been prevented from opening the file “%s”",
+	           ev_link_action_get_filename (action));
 }
 
 static void
