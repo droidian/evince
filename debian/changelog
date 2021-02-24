@@ -1,3 +1,9 @@
+evince (3.39.2-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 24 Feb 2021 13:41:12 +0100
+
 evince (3.38.2-1) unstable; urgency=medium
 
   * Team upload
