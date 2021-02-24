@@ -1,6 +1,8 @@
 evince (3.39.2-1) UNRELEASED; urgency=medium
 
   * New upstream release
+  * debian/control.in:
+    - build with libhandy
 
  -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 24 Feb 2021 13:41:12 +0100
 
