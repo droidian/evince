@@ -82,6 +82,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_attachments_get_type@Base 3.0.2
  ev_document_attachments_has_attachments@Base 3.0.2
  ev_document_check_dimensions@Base 3.0.2
+ ev_document_contains_js_get_type@Base 3.39.2
  ev_document_doc_mutex_lock@Base 3.0.2
  ev_document_doc_mutex_trylock@Base 3.0.2
  ev_document_doc_mutex_unlock@Base 3.0.2
@@ -120,6 +121,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_forms_form_field_text_set_text@Base 3.0.2
  ev_document_forms_get_form_fields@Base 3.0.2
  ev_document_forms_get_type@Base 3.0.2
+ ev_document_forms_reset_form@Base 3.39.2
  ev_document_get_backend_info@Base 3.0.2
  ev_document_get_info@Base 3.0.2
  ev_document_get_max_label_len@Base 3.0.2
@@ -262,10 +264,12 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_link_action_equal@Base 3.7.90
  ev_link_action_get_action_type@Base 3.0.2
  ev_link_action_get_dest@Base 3.0.2
+ ev_link_action_get_exclude_reset_fields@Base 3.39.2
  ev_link_action_get_filename@Base 3.0.2
  ev_link_action_get_hide_list@Base 3.0.2
  ev_link_action_get_name@Base 3.0.2
  ev_link_action_get_params@Base 3.0.2
+ ev_link_action_get_reset_fields@Base 3.39.2
  ev_link_action_get_show_list@Base 3.0.2
  ev_link_action_get_toggle_list@Base 3.0.2
  ev_link_action_get_type@Base 3.0.2
@@ -276,6 +280,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_link_action_new_layers_state@Base 3.0.2
  ev_link_action_new_named@Base 3.0.2
  ev_link_action_new_remote@Base 3.0.2
+ ev_link_action_new_reset_form@Base 3.39.2
  ev_link_action_type_get_type@Base 3.0.2
  ev_link_dest_equal@Base 3.7.90
  ev_link_dest_get_bottom@Base 3.0.2
