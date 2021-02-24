@@ -9,10 +9,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: evince gnome-3-38\n"
+"Project-Id-Version: evince master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/evince/issues\n"
-"POT-Creation-Date: 2020-12-02 10:21+0000\n"
-"PO-Revision-Date: 2020-12-04 13:49+0700\n"
+"POT-Creation-Date: 2020-12-03 08:02+0000\n"
+"PO-Revision-Date: 2020-12-04 13:54+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
 "Language: vi\n"
@@ -651,49 +651,53 @@ msgstr "Cuộn khung xem xuống"
 msgid "Document View"
 msgstr "Khung xem tài liệu"
 
-#: libview/ev-view.c:2109
+#: libview/ev-view.c:2110
 msgid "Go to first page"
 msgstr "Về trang đầu tiên"
 
-#: libview/ev-view.c:2111
+#: libview/ev-view.c:2112
 msgid "Go to previous page"
 msgstr "Quay về trang kế trước"
 
-#: libview/ev-view.c:2113
+#: libview/ev-view.c:2114
 msgid "Go to next page"
 msgstr "Chuyển đến trang kế tiếp"
 
-#: libview/ev-view.c:2115
+#: libview/ev-view.c:2116
 msgid "Go to last page"
 msgstr "Chuyển đến trang cuối cùng"
 
-#: libview/ev-view.c:2117
+#: libview/ev-view.c:2118
 msgid "Go to page"
 msgstr "Nhảy đến trang"
 
-#: libview/ev-view.c:2119
+#: libview/ev-view.c:2120
 msgid "Find"
 msgstr "Tìm"
 
-#: libview/ev-view.c:2147
+#: libview/ev-view.c:2148
 #, c-format
 msgid "Go to page %s"
 msgstr "Nhảy đến trang %s"
 
-#: libview/ev-view.c:2153
+#: libview/ev-view.c:2154
 #, c-format
 msgid "Go to %s on file “%s”"
 msgstr "Tới %s trên tập tin “%s”"
 
-#: libview/ev-view.c:2156
+#: libview/ev-view.c:2157
 #, c-format
 msgid "Go to file “%s”"
 msgstr "Tới tập tin “%s”"
 
-#: libview/ev-view.c:2164
+#: libview/ev-view.c:2165
 #, c-format
 msgid "Launch %s"
 msgstr "Khởi chạy %s"
+
+#: libview/ev-view.c:2172
+msgid "Reset form"
+msgstr ""
 
 #: libview/ev-view-presentation.c:753
 msgid "Jump to page:"
@@ -1215,7 +1219,7 @@ msgstr "Yêu cầu nhập mật khẩu"
 
 #: shell/ev-password-view.c:252 shell/ev-sidebar-attachments.c:493
 #: shell/ev-window.c:2882 shell/ev-window.c:3180 shell/ev-window.c:4061
-#: shell/ev-window.c:7049 shell/ev-window.c:7273
+#: shell/ev-window.c:7064 shell/ev-window.c:7288
 msgid "_Cancel"
 msgstr "_Thôi"
 
@@ -1285,7 +1289,7 @@ msgstr "Tài liệu không có chú thích"
 msgid "Page %d"
 msgstr "Trang %d"
 
-#: shell/ev-sidebar-annotations.c:651 shell/ev-window.c:7674
+#: shell/ev-sidebar-annotations.c:651 shell/ev-window.c:7689
 msgid "Annotations"
 msgstr "Chú thích"
 
@@ -1305,7 +1309,7 @@ msgstr ""
 msgid "_Replace"
 msgstr "Tha_y thế"
 
-#: shell/ev-sidebar-attachments.c:899 shell/ev-window.c:7698
+#: shell/ev-sidebar-attachments.c:899 shell/ev-window.c:7713
 msgid "Attachments"
 msgstr "Đính kèm"
 
@@ -1317,22 +1321,22 @@ msgstr "Thêm đánh dấu"
 msgid "Remove bookmark"
 msgstr "Xóa đánh dấu"
 
-#: shell/ev-sidebar-bookmarks.c:628 shell/ev-window.c:7682
+#: shell/ev-sidebar-bookmarks.c:628 shell/ev-window.c:7697
 msgid "Bookmarks"
 msgstr "Đánh dấu"
 
-#: shell/ev-sidebar-layers.c:444 shell/ev-window.c:7710
+#: shell/ev-sidebar-layers.c:444 shell/ev-window.c:7725
 msgid "Layers"
 msgstr "Lớp"
 
 #. Translators: This is the title for the sidebar pane that
 #. * shows the Outline or Table of Contents of the document.
 #.
-#: shell/ev-sidebar-links.c:1023 shell/ev-window.c:7662
+#: shell/ev-sidebar-links.c:1023 shell/ev-window.c:7677
 msgid "Outline"
 msgstr "Biên dạng"
 
-#: shell/ev-sidebar-thumbnails.c:1038 shell/ev-window.c:7645
+#: shell/ev-sidebar-thumbnails.c:1038 shell/ev-window.c:7660
 msgid "Thumbnails"
 msgstr "Hình thu nhỏ"
 
@@ -1464,7 +1468,7 @@ msgstr "Đang tải lên ảnh (%d%%)"
 msgid "Save As…"
 msgstr "Lưu dạng…"
 
-#: shell/ev-window.c:3179 shell/ev-window.c:7048 shell/ev-window.c:7272
+#: shell/ev-window.c:3179 shell/ev-window.c:7063 shell/ev-window.c:7287
 msgid "_Save"
 msgstr "_Lưu"
 
@@ -1592,27 +1596,33 @@ msgstr ""
 msgid "Don’t show this message again"
 msgstr "Đừng hiện lời nhắc này nữa"
 
+#: shell/ev-window.c:6701
+#, c-format
+msgid ""
+"Security alert: this document has been prevented from opening the file “%s”"
+msgstr "Cảnh báo bảo mật: tài liệu này đã bị ngăn không cho mở tệp “%s”"
+
 #: shell/ev-window.c:6755
 msgid "Unable to open external link"
 msgstr "Không thể mở liên kết bên ngoài"
 
-#: shell/ev-window.c:6977
+#: shell/ev-window.c:6992
 msgid "Couldn’t find appropriate format to save image"
 msgstr "Không thể tìm thấy dạng thức phù hợp để lưu ảnh"
 
-#: shell/ev-window.c:7009
+#: shell/ev-window.c:7024
 msgid "The image could not be saved."
 msgstr "Không thể ghi lại ảnh."
 
-#: shell/ev-window.c:7045
+#: shell/ev-window.c:7060
 msgid "Save Image"
 msgstr "Lưu ảnh"
 
-#: shell/ev-window.c:7201
+#: shell/ev-window.c:7216
 msgid "Unable to open attachment"
 msgstr "Không thể mở phần đính kèm"
 
-#: shell/ev-window.c:7269
+#: shell/ev-window.c:7284
 msgid "Save Attachment"
 msgstr "Lưu phần đính kèm"
 
@@ -1948,8 +1958,8 @@ msgstr "Hiển thị trợ giúp"
 
 #: shell/help-overlay.ui:381
 msgctxt "shortcut window"
-msgid "Show primary menu"
-msgstr "Hiện trình đơn chính"
+msgid "Toggle primary menu"
+msgstr "Hiện/tắt trình đơn chính"
 
 #: shell/help-overlay.ui:388
 msgctxt "shortcut window"
