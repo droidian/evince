@@ -1,3 +1,4 @@
+/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8; c-indent-level: 8 -*- */
 /* this file is part of evince, a gnome document viewer
  *
  *  Copyright (C) 2004 Martin Kretzschmar
@@ -25,6 +26,7 @@
 
 #include <glib.h>
 #include <gtk/gtk.h>
+#include <libhandy-1/handy.h>
 
 #include "ev-link.h"
 #include "ev-history.h"
@@ -62,11 +64,11 @@ typedef struct _EvWindowClass EvWindowClass;
 
 
 struct _EvWindow {
-	GtkApplicationWindow base_instance;
+	HdyApplicationWindow base_instance;
 };
 
 struct _EvWindowClass {
-	GtkApplicationWindowClass base_class;
+	HdyApplicationWindowClass base_class;
 };
 
 GType		ev_window_get_type	                 (void) G_GNUC_CONST;
@@ -99,6 +101,8 @@ EvMetadata     *ev_window_get_metadata			 (EvWindow	 *ev_window);
 gint            ev_window_get_metadata_sidebar_size      (EvWindow       *ev_window);
 GtkWidget      *ev_window_get_sidebar			 (EvWindow	 *ev_window);
 GtkWidget      *ev_window_get_find_sidebar		 (EvWindow	 *ev_window);
+void            ev_window_set_divider_position		 (EvWindow	 *ev_window,
+							  gint		  sidebar_width);
 
 G_END_DECLS
 

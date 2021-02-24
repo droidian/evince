@@ -30,6 +30,7 @@
 #include <glib/gi18n.h>
 #include <glib/gstdio.h>
 #include <gtk/gtk.h>
+#include <libhandy-1/handy.h>
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
 #endif
@@ -968,7 +969,7 @@ ev_application_startup (GApplication *gapplication)
           "win.sizing-mode::fit-width", "w", NULL,
           "win.sizing-mode::automatic", "a", NULL,
           "win.default-zoom",           "<Ctrl>0", NULL,
-          "win.open-menu",              "F10", NULL,
+          "win.toggle-menu",            "F10", NULL,
           "win.caret-navigation",       "F7", NULL,
           "win.zoom-in",                "plus", "<Ctrl>plus", "KP_Add", "<Ctrl>KP_Add", "equal", "<Ctrl>equal", NULL,
           "win.zoom-out",               "minus", "<Ctrl>minus", "KP_Subtract", "<Ctrl>KP_Subtract", NULL,
@@ -994,6 +995,8 @@ ev_application_startup (GApplication *gapplication)
 	g_application_set_resource_base_path (gapplication, "/org/gnome/evince");
 
         G_APPLICATION_CLASS (ev_application_parent_class)->startup (gapplication);
+
+        hdy_init ();
 
         for (it = action_accels; it[0]; it += g_strv_length ((gchar **)it) + 1)
                 gtk_application_set_accels_for_action (GTK_APPLICATION (application), it[0], &it[1]);

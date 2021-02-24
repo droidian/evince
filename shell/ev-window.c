@@ -40,6 +40,7 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 #include <gtk/gtk.h>
+#include <libhandy-1/handy.h>
 
 #include "dzl-file-manager.h"
 #include "ev-find-sidebar.h"
@@ -163,14 +164,6 @@ typedef struct {
 	guint progress_idle;
 	GCancellable *progress_cancellable;
 
-	/* Fullscreen */
-	GtkWidget *fs_overlay;
-	GtkWidget *fs_eventbox;
-	GtkWidget *fs_revealer;
-	GtkWidget *fs_toolbar;
-	gboolean   fs_pointer_on_toolbar;
-	guint      fs_timeout_id;
-
 	/* Loading message */
 	guint loading_message_timeout;
 
@@ -213,6 +206,9 @@ typedef struct {
 	EvMetadata *metadata;
 	EvBookmarks *bookmarks;
 	GMenu *bookmarks_menu;
+
+	/* Has the document been modified? */
+	gboolean is_modified;
 
 	/* Load params */
 	EvLinkDest       *dest;
@@ -311,8 +307,13 @@ static void     ev_window_set_page_mode                 (EvWindow         *windo
 							 EvWindowPageMode  page_mode);
 static void	ev_window_load_job_cb  			(EvJob            *job,
 							 gpointer          data);
+static gboolean ev_window_check_document_modified 	(EvWindow         *ev_window,
+							 EvWindowAction    command);
 static void     ev_window_reload_document               (EvWindow         *window,
 							 EvLinkDest *dest);
+static void	ev_window_document_modified_cb		(EvDocument *document,
+                                                         GParamSpec *pspec,
+                                                         EvWindow   *ev_window);
 static void     ev_window_reload_job_cb                 (EvJob            *job,
 							 EvWindow         *window);
 static void     ev_window_save_job_cb                   (EvJob            *save,
@@ -400,14 +401,13 @@ static void     ev_window_destroy_recent_view           (EvWindow         *ev_wi
 static void     recent_view_item_activated_cb           (EvRecentView     *recent_view,
                                                          const char       *uri,
                                                          EvWindow         *ev_window);
-static void     ev_window_fullscreen_show_toolbar       (EvWindow         *ev_window);
 static void     ev_window_begin_add_annot               (EvWindow         *ev_window,
 							 EvAnnotationType  annot_type);
 static void	ev_window_cancel_add_annot		(EvWindow *window);
 
 static gchar *nautilus_sendto = NULL;
 
-G_DEFINE_TYPE_WITH_PRIVATE (EvWindow, ev_window, GTK_TYPE_APPLICATION_WINDOW)
+G_DEFINE_TYPE_WITH_PRIVATE (EvWindow, ev_window, HDY_TYPE_APPLICATION_WINDOW)
 
 static gboolean
 ev_window_is_recent_view (EvWindow *ev_window)
@@ -572,7 +572,7 @@ ev_window_update_actions_sensitivity (EvWindow *ev_window)
 	ev_window_set_action_enabled (ev_window, "sizing-mode", !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "zoom", !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "escape", !recent_view_mode);
-	ev_window_set_action_enabled (ev_window, "open-menu", !recent_view_mode);
+	ev_window_set_action_enabled (ev_window, "toggle-menu", !recent_view_mode);
 
 	/* Don't enable popup actions here because the page can change while a
 	 * popup is visible due to kinetic scrolling. The 'popup' functions
@@ -674,9 +674,6 @@ update_chrome_visibility (EvWindow *window)
 
 	set_widget_visibility (priv->toolbar, toolbar);
 	set_widget_visibility (priv->sidebar, sidebar);
-
-	if (toolbar && ev_document_model_get_fullscreen (priv->model))
-		ev_window_fullscreen_show_toolbar (window);
 }
 
 static void
@@ -762,7 +759,7 @@ ev_window_set_message_area (EvWindow  *window,
 			    FALSE, FALSE, 0);
         /* Pack the message area right after the search bar */
         gtk_box_reorder_child (GTK_BOX (priv->main_box),
-                               priv->message_area, 2);
+                               priv->message_area, 3);
 	g_object_add_weak_pointer (G_OBJECT (priv->message_area),
 				   (gpointer) &(priv->message_area));
 }
@@ -1776,6 +1773,9 @@ ev_window_set_document (EvWindow *ev_window, EvDocument *document)
 		ev_window_run_presentation (ev_window);
 	}
 
+	priv->is_modified = FALSE;
+	g_signal_connect (document, "notify::modified", G_CALLBACK (ev_window_document_modified_cb), ev_window);
+
 	if (priv->setup_document_idle > 0)
 		g_source_remove (priv->setup_document_idle);
 
@@ -2396,6 +2396,8 @@ ev_window_open_uri (EvWindow       *ev_window,
 
 	if (priv->uri &&
 	    g_ascii_strcasecmp (priv->uri, uri) == 0) {
+		if (ev_window_check_document_modified (ev_window, EV_WINDOW_ACTION_RELOAD))
+			return;
 		ev_window_reload_document (ev_window, dest);
 		return;
 	}
@@ -3914,10 +3916,10 @@ ev_window_check_document_modified (EvWindow      *ev_window,
 
 	if (EV_IS_DOCUMENT_FORMS (document) &&
 	    ev_document_forms_document_is_modified (EV_DOCUMENT_FORMS (document))) {
-		secondary_text = _("Document contains form fields that have been filled out. ");
+		secondary_text = _("Document contains form fields that have been filled out.");
 	} else if (EV_IS_DOCUMENT_ANNOTATIONS (document) &&
 		   ev_document_annotations_document_is_modified (EV_DOCUMENT_ANNOTATIONS (document))) {
-		secondary_text = _("Document contains new or modified annotations. ");
+		secondary_text = _("Document contains new or modified annotations.");
 	} else {
 		return FALSE;
 	}
@@ -4207,7 +4209,7 @@ ev_window_cmd_focus_page_selector (GSimpleAction *action,
 	update_chrome_flag (window, EV_CHROME_RAISE_TOOLBAR, TRUE);
 	update_chrome_visibility (window);
 
-	toolbar = priv->fs_toolbar ? EV_TOOLBAR (priv->fs_toolbar) : EV_TOOLBAR (priv->toolbar);
+	toolbar = EV_TOOLBAR (priv->toolbar);
 	page_selector = ev_toolbar_get_page_selector (toolbar);
 	ev_page_action_widget_grab_focus (EV_PAGE_ACTION_WIDGET (page_selector));
 }
@@ -4512,10 +4514,6 @@ ev_window_update_links_model (EvWindow *window)
 
 	page_selector = ev_toolbar_get_page_selector (EV_TOOLBAR (priv->toolbar));
 	ev_page_action_widget_update_links_model (EV_PAGE_ACTION_WIDGET (page_selector), model);
-	if (priv->fs_toolbar) {
-		page_selector = ev_toolbar_get_page_selector (EV_TOOLBAR (priv->fs_toolbar));
-		ev_page_action_widget_update_links_model (EV_PAGE_ACTION_WIDGET (page_selector), model);
-	}
 	g_object_unref (model);
 }
 
@@ -4532,91 +4530,6 @@ ev_window_update_fullscreen_action (EvWindow *window)
 }
 
 static void
-ev_window_fullscreen_hide_toolbar (EvWindow *window)
-{
-	EvWindowPrivate *priv = GET_PRIVATE (window);
-
-	if (!ev_toolbar_has_visible_popups (EV_TOOLBAR (priv->fs_toolbar)))
-		gtk_revealer_set_reveal_child (GTK_REVEALER (priv->fs_revealer), FALSE);
-}
-
-static gboolean
-fullscreen_toolbar_timeout_cb (EvWindow *window)
-{
-	EvWindowPrivate *priv = GET_PRIVATE (window);
-
-	ev_window_fullscreen_hide_toolbar (window);
-
-	if (!gtk_revealer_get_reveal_child (GTK_REVEALER (priv->fs_revealer))) {
-		priv->fs_timeout_id = 0;
-		return FALSE;
-	}
-
-	return TRUE;
-}
-
-static void
-ev_window_remove_fullscreen_timeout (EvWindow *window)
-{
-	EvWindowPrivate *priv = GET_PRIVATE (window);
-
-	if (priv->fs_timeout_id)
-		g_source_remove (priv->fs_timeout_id);
-	priv->fs_timeout_id = 0;
-}
-
-static void
-ev_window_add_fullscreen_timeout (EvWindow *window)
-{
-	EvWindowPrivate *priv = GET_PRIVATE (window);
-
-	ev_window_remove_fullscreen_timeout (window);
-	priv->fs_timeout_id =
-		g_timeout_add_seconds (FULLSCREEN_POPUP_TIMEOUT,
-				       (GSourceFunc)fullscreen_toolbar_timeout_cb, window);
-}
-
-static void
-ev_window_fullscreen_show_toolbar (EvWindow *window)
-{
-	EvWindowPrivate *priv = GET_PRIVATE (window);
-
-	ev_window_remove_fullscreen_timeout (window);
-	if (gtk_revealer_get_reveal_child (GTK_REVEALER (priv->fs_revealer)))
-		return;
-
-	gtk_revealer_set_reveal_child (GTK_REVEALER (priv->fs_revealer), TRUE);
-	if (!priv->fs_pointer_on_toolbar)
-		ev_window_add_fullscreen_timeout (window);
-}
-
-static gboolean
-ev_window_fullscreen_toolbar_enter_notify (GtkWidget *widget,
-					   GdkEvent  *event,
-					   EvWindow  *window)
-{
-	EvWindowPrivate *priv = GET_PRIVATE (window);
-
-	priv->fs_pointer_on_toolbar = TRUE;
-	ev_window_fullscreen_show_toolbar (window);
-
-	return FALSE;
-}
-
-static gboolean
-ev_window_fullscreen_toolbar_leave_notify (GtkWidget *widget,
-					   GdkEvent  *event,
-					   EvWindow  *window)
-{
-	EvWindowPrivate *priv = GET_PRIVATE (window);
-
-	priv->fs_pointer_on_toolbar = FALSE;
-	ev_window_add_fullscreen_timeout (window);
-
-	return FALSE;
-}
-
-static void
 ev_window_run_fullscreen (EvWindow *window)
 {
 	EvWindowPrivate *priv = GET_PRIVATE (window);
@@ -4630,53 +4543,12 @@ ev_window_run_fullscreen (EvWindow *window)
 		fullscreen_window = FALSE;
 	}
 
-	priv->fs_overlay = gtk_overlay_new ();
-	priv->fs_eventbox = gtk_event_box_new ();
-	priv->fs_revealer = gtk_revealer_new ();
-	g_signal_connect (priv->fs_eventbox, "enter-notify-event",
-			  G_CALLBACK (ev_window_fullscreen_toolbar_enter_notify),
-			  window);
-	g_signal_connect (priv->fs_eventbox, "leave-notify-event",
-			  G_CALLBACK (ev_window_fullscreen_toolbar_leave_notify),
-			  window);
-
-	gtk_widget_set_size_request (priv->fs_eventbox, -1, 1);
-	gtk_widget_set_valign (priv->fs_eventbox, GTK_ALIGN_START);
-	gtk_revealer_set_transition_duration (GTK_REVEALER (priv->fs_revealer), FULLSCREEN_TRANSITION_DURATION);
-
-	g_object_ref (priv->main_box);
-	gtk_container_remove (GTK_CONTAINER (window), priv->main_box);
-	gtk_container_add (GTK_CONTAINER (priv->fs_overlay),
-			   priv->main_box);
-	g_object_unref (priv->main_box);
-
-	priv->fs_toolbar = ev_toolbar_new (window);
-	ev_toolbar_set_mode (EV_TOOLBAR (priv->fs_toolbar),
-		             EV_TOOLBAR_MODE_FULLSCREEN);
-
 	ev_window_update_links_model (window);
-	g_signal_connect (ev_toolbar_get_page_selector (EV_TOOLBAR (priv->fs_toolbar)),
-			  "activate-link",
-			  G_CALLBACK (activate_link_cb),
-			  window);
-	gtk_container_add (GTK_CONTAINER (priv->fs_revealer),
-			   priv->fs_toolbar);
-	gtk_widget_show (priv->fs_toolbar);
-
-	gtk_container_add (GTK_CONTAINER (priv->fs_eventbox),
-			   priv->fs_revealer);
-	gtk_widget_show (priv->fs_revealer);
-	gtk_overlay_add_overlay (GTK_OVERLAY (priv->fs_overlay),
-				 priv->fs_eventbox);
-	gtk_widget_show (priv->fs_eventbox);
-
-	gtk_container_add (GTK_CONTAINER (window), priv->fs_overlay);
-	gtk_widget_show (priv->fs_overlay);
 
 	ev_document_model_set_fullscreen (priv->model, TRUE);
 	ev_window_update_fullscreen_action (window);
 
-	ev_window_fullscreen_show_toolbar (window);
+	hdy_header_bar_set_show_close_button (HDY_HEADER_BAR (priv->toolbar), FALSE);
 
 	if (fullscreen_window)
 		gtk_window_fullscreen (GTK_WINDOW (window));
@@ -4695,26 +4567,10 @@ ev_window_stop_fullscreen (EvWindow *window,
 	if (!ev_document_model_get_fullscreen (priv->model))
 		return;
 
-	gtk_container_remove (GTK_CONTAINER (priv->fs_revealer),
-			      priv->fs_toolbar);
-	priv->fs_toolbar = NULL;
-	gtk_container_remove (GTK_CONTAINER (priv->fs_eventbox),
-			      priv->fs_revealer);
-	gtk_container_remove (GTK_CONTAINER (priv->fs_overlay),
-			      priv->fs_eventbox);
-
-	g_object_ref (priv->main_box);
-	gtk_container_remove (GTK_CONTAINER (priv->fs_overlay),
-			      priv->main_box);
-	gtk_container_remove (GTK_CONTAINER (window), priv->fs_overlay);
-	priv->fs_overlay = NULL;
-	gtk_container_add (GTK_CONTAINER (window), priv->main_box);
-	g_object_unref (priv->main_box);
-
-	ev_window_remove_fullscreen_timeout (window);
-
 	ev_document_model_set_fullscreen (priv->model, FALSE);
 	ev_window_update_fullscreen_action (window);
+
+	hdy_header_bar_set_show_close_button (HDY_HEADER_BAR (priv->toolbar), TRUE);
 
 	if (unfullscreen_window)
 		gtk_window_unfullscreen (GTK_WINDOW (window));
@@ -5369,6 +5225,31 @@ ev_window_document_changed_cb (EvDocumentModel *model,
 }
 
 static void
+ev_window_document_modified_cb (EvDocument *document,
+                                GParamSpec *pspec,
+                                EvWindow   *ev_window)
+{
+	EvWindowPrivate *priv = GET_PRIVATE (ev_window);
+	HdyHeaderBar *toolbar = HDY_HEADER_BAR (ev_window_get_toolbar (ev_window));
+	const gchar *title = hdy_header_bar_get_title (toolbar);
+	gchar *new_title;
+
+	if (priv->is_modified)
+		return;
+
+	priv->is_modified = TRUE;
+	if (gtk_widget_get_direction (GTK_WIDGET (ev_window)) == GTK_TEXT_DIR_RTL)
+		new_title = g_strconcat ("• ", title, NULL);
+	else
+		new_title = g_strconcat (title, " •", NULL);
+
+	if (new_title) {
+		hdy_header_bar_set_title (toolbar, new_title);
+		g_free (new_title);
+	}
+}
+
+static void
 ev_window_sizing_mode_changed_cb (EvDocumentModel *model,
 				  GParamSpec      *pspec,
 		 		  EvWindow        *ev_window)
@@ -5520,8 +5401,8 @@ ev_window_cmd_action_menu (GSimpleAction *action,
 	EvWindowPrivate *priv = GET_PRIVATE (ev_window);
 	EvToolbar *toolbar;
 
-	toolbar = priv->fs_toolbar ? EV_TOOLBAR (priv->fs_toolbar) : EV_TOOLBAR (priv->toolbar);
-	ev_toolbar_action_menu_popup (toolbar);
+	toolbar = EV_TOOLBAR (priv->toolbar);
+	ev_toolbar_action_menu_toggle (toolbar);
 }
 
 static void
@@ -6206,8 +6087,6 @@ ev_window_dispose (GObject *object)
 		priv->loading_message_timeout = 0;
 	}
 
-	ev_window_remove_fullscreen_timeout (window);
-
 	if (priv->monitor) {
 		g_object_unref (priv->monitor);
 		priv->monitor = NULL;
@@ -6494,7 +6373,7 @@ static const GActionEntry actions[] = {
 	{ "zoom", ev_window_cmd_view_zoom, "d" },
 	{ "default-zoom", ev_window_cmd_set_default_zoom },
 	{ "escape", ev_window_cmd_escape },
-	{ "open-menu", ev_window_cmd_action_menu },
+	{ "toggle-menu", ev_window_cmd_action_menu },
 	{ "caret-navigation", NULL, NULL, "false", ev_window_cmd_view_toggle_caret_navigation },
 	{ "add-annotation", NULL, NULL, "false", ev_window_cmd_add_annotation },
 	{ "highlight-annotation", NULL, NULL, "false", ev_window_cmd_add_highlight_annotation },
@@ -6703,9 +6582,9 @@ window_configure_event_cb (EvWindow *window, GdkEventConfigure *event, gpointer 
 static void
 launch_action (EvWindow *window, EvLinkAction *action)
 {
-	/* Do nothing, https://gitlab.gnome.org/GNOME/evince/-/issues/1333 */
-	g_warning ("Security alert: this document has been prevented from opening the file “%s”",
-	           ev_link_action_get_filename (action));
+	ev_window_warning_message (window,
+                                   _("Security alert: this document has been prevented from opening the file “%s”"),
+				   ev_link_action_get_filename (action));
 }
 
 static void
@@ -6821,6 +6700,18 @@ do_action_named (EvWindow *window, EvLinkAction *action)
 }
 
 static void
+reset_form (EvWindow *window, EvLinkAction *action)
+{
+	EvWindowPrivate *priv = GET_PRIVATE (window);
+	EvDocument      *document = priv->document;
+
+	if (EV_IS_DOCUMENT_FORMS (document)) {
+		ev_document_forms_reset_form (EV_DOCUMENT_FORMS (document), action);
+		ev_view_reload (EV_VIEW (priv->view));
+	}
+}
+
+static void
 view_external_link_cb (EvWindow *window, EvLinkAction *action)
 {
 	switch (ev_link_action_get_action_type (action)) {
@@ -6845,6 +6736,9 @@ view_external_link_cb (EvWindow *window, EvLinkAction *action)
 			break;
 	        case EV_LINK_ACTION_TYPE_NAMED:
 			do_action_named (window, action);
+			break;
+	        case EV_LINK_ACTION_TYPE_RESET_FORM:
+			reset_form (window, action);
 			break;
 	        default:
 			g_assert_not_reached ();
@@ -7563,8 +7457,8 @@ ev_window_init (EvWindow *ev_window)
 
 	priv->toolbar = ev_toolbar_new (ev_window);
 	gtk_widget_set_no_show_all (priv->toolbar, TRUE);
-	gtk_header_bar_set_show_close_button (GTK_HEADER_BAR (priv->toolbar), TRUE);
-	gtk_window_set_titlebar (GTK_WINDOW (ev_window), priv->toolbar);
+	hdy_header_bar_set_show_close_button (HDY_HEADER_BAR (priv->toolbar), TRUE);
+	gtk_box_pack_start (GTK_BOX (priv->main_box), priv->toolbar, FALSE, TRUE, 0);
 	gtk_widget_show (priv->toolbar);
 
 	/* Window title */
@@ -7590,7 +7484,6 @@ ev_window_init (EvWindow *ev_window)
 
 	/* Search Bar */
 	priv->search_bar = gtk_search_bar_new ();
-	gtk_search_bar_set_show_close_button (GTK_SEARCH_BAR (priv->search_bar), TRUE);
 
 	priv->search_box = ev_search_box_new (priv->model);
 	search_entry = GTK_ENTRY (ev_search_box_get_entry (EV_SEARCH_BOX (priv->search_box)));
@@ -8078,4 +7971,18 @@ ev_window_get_metadata_sidebar_size (EvWindow *ev_window)
 		return sidebar_size;
 
 	return 0;
+}
+
+/* Sets the position of the divider between the sidebar and the main view */
+void
+ev_window_set_divider_position (EvWindow *ev_window,
+				gint sidebar_width)
+{
+	EvWindowPrivate *priv;
+
+	g_return_if_fail (EV_WINDOW (ev_window));
+
+	priv = GET_PRIVATE (ev_window);
+
+	gtk_paned_set_position (GTK_PANED (priv->hpaned), sidebar_width);
 }

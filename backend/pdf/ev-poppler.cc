@@ -24,6 +24,9 @@
 
 #include <math.h>
 #include <string.h>
+#ifdef _WIN32
+#include <io.h>
+#endif
 #include <gtk/gtk.h>
 #include <poppler.h>
 #include <poppler-document.h>
@@ -1080,6 +1083,7 @@ pdf_document_get_info (EvDocument *document)
 			    EV_DOCUMENT_INFO_N_PAGES |
 			    EV_DOCUMENT_INFO_SECURITY |
 		            EV_DOCUMENT_INFO_PAPER_SIZE |
+			    EV_DOCUMENT_INFO_CONTAINS_JS |
 			    EV_DOCUMENT_INFO_LICENSE;
 
 	g_object_get (PDF_DOCUMENT (document)->document,
@@ -1206,6 +1210,13 @@ pdf_document_get_info (EvDocument *document)
 	}
 
 	info->linearized = linearized ? g_strdup (_("Yes")) : g_strdup (_("No"));
+
+#if POPPLER_CHECK_VERSION(0, 90, 0)
+	info->contains_js = poppler_document_has_javascript (PDF_DOCUMENT (document)->document) ?
+	                    EV_DOCUMENT_CONTAINS_JS_YES : EV_DOCUMENT_CONTAINS_JS_NO;
+#else
+	info->contains_js = EV_DOCUMENT_CONTAINS_JS_UNKNOWN;
+#endif
 
 	return info;
 }
@@ -1721,6 +1732,23 @@ ev_link_from_action (PdfDocument   *pdf_document,
 	        case POPPLER_ACTION_JAVASCRIPT:
 			unimplemented_action = "POPPLER_ACTION_JAVASCRIPT";
 			break;
+#if POPPLER_CHECK_VERSION(0, 90, 0)
+	        case POPPLER_ACTION_RESET_FORM: {
+			gboolean  exclude_reset_fields;
+			GList    *reset_fields = NULL;
+			GList    *iter;
+
+			for (iter = action->reset_form.fields; iter; iter = iter->next)
+				reset_fields = g_list_prepend (reset_fields, g_strdup ((char *) iter->data));
+
+			exclude_reset_fields = action->reset_form.exclude;
+
+			/* The action takes the ownership of the list */
+			ev_action = ev_link_action_new_reset_form (g_list_reverse (reset_fields),
+								   exclude_reset_fields);
+			break;
+		}
+#endif
 	        case POPPLER_ACTION_UNKNOWN:
 			unimplemented_action = "POPPLER_ACTION_UNKNOWN";
 	}
@@ -2845,6 +2873,17 @@ pdf_document_forms_document_is_modified (EvDocumentForms *document)
 	return PDF_DOCUMENT (document)->forms_modified;
 }
 
+static void
+pdf_document_forms_reset_form (EvDocumentForms *document,
+                               EvLinkAction    *action)
+{
+#if POPPLER_CHECK_VERSION(0, 90, 0)
+	poppler_document_reset_form (PDF_DOCUMENT (document)->document,
+	                             ev_link_action_get_reset_fields (action),
+	                             ev_link_action_get_exclude_reset_fields (action));
+#endif
+}
+
 static gchar *
 pdf_document_forms_form_field_text_get_text (EvDocumentForms *document,
 					     EvFormField     *field)
@@ -3044,6 +3083,7 @@ pdf_document_document_forms_iface_init (EvDocumentFormsInterface *iface)
 {
 	iface->get_form_fields = pdf_document_forms_get_form_fields;
 	iface->document_is_modified = pdf_document_forms_document_is_modified;
+	iface->reset_form = pdf_document_forms_reset_form;
 	iface->form_field_text_get_text = pdf_document_forms_form_field_text_get_text;
 	iface->form_field_text_set_text = pdf_document_forms_form_field_text_set_text;
 	iface->form_field_button_set_state = pdf_document_forms_form_field_button_set_state;
