@@ -77,7 +77,6 @@ if enable_user_doc
     'print-pagescaling.page',
     'print-select.page',
     'reload.page',
-    'shortcuts.page',
     'singlesided-13-16pages.page',
     'singlesided-17-20pages.page',
     'singlesided-3-4pages.page',
@@ -97,6 +96,7 @@ if enable_user_doc
   media = [
     'figures/add-text-annotation.png',
     'figures/annotations-nav-to-page.png',
+    'figures/emblem-system-symbolic.svg',
     'figures/evincelogo.png',
     'figures/evince-trail.png',
     'figures/print-select.png',

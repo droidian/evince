@@ -91,7 +91,6 @@ sources = files(
 version_conf = configuration_data()
 version_conf.set('EV_MAJOR_VERSION', ev_major_version)
 version_conf.set('EV_MINOR_VERSION', ev_minor_version)
-version_conf.set('EV_MICRO_VERSION', ev_micro_version)
 
 version = 'ev-version.h'
 
@@ -139,7 +138,7 @@ cflags = [
 ]
 
 libevdocument = shared_library(
-  'evdocument' + ev_major_version.to_string(),
+  'evdocument3',
   version: ev_document_version,
   sources: sources + enum_sources + [version_header],
   include_directories: top_inc,
