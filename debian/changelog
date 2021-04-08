@@ -1,3 +1,9 @@
+evince (40.1-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 08 Apr 2021 16:39:01 +0200
+
 evince (3.39.2-1) experimental; urgency=medium
 
   * New upstream release
