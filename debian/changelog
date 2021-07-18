@@ -1,8 +1,12 @@
-evince (40.4-1) UNRELEASED; urgency=medium
+evince (40.4-1) experimental; urgency=medium
 
   * New upstream release
+  * Revert "debian/control.in: workaround gnome-pkg-tools"
+  * debian/control.in: Build-Depend on dh-sequence-gnome >= 22
+    for updated gnome:NextVersion
+  * debian/watch: Update for GNOME 40 style version numbering
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Sun, 18 Jul 2021 11:36:56 -0400
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 18 Jul 2021 12:12:39 -0400
 
 evince (40.2-1) experimental; urgency=medium
 
