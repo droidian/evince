@@ -54,9 +54,8 @@ Homepage: https://wiki.gnome.org/Apps/Evince
 
 Package: evince
 Architecture: any
-# ${gnome:NextVersion} isn't working with GNOME 40 yet
-Depends: evince-common (<< 41),
-         evince-common (>= 40),
+Depends: evince-common (<< ${gnome:NextVersion}),
+         evince-common (>= ${gnome:Version}),
          gsettings-desktop-schemas,
          libevdocument3-4 (= ${binary:Version}),
          libevview3-3 (= ${binary:Version}),
