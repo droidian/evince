@@ -3,6 +3,7 @@ include /usr/share/dpkg/buildflags.mk
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,-O1 -Wl,-z,defs
+export DPKG_GENSYMBOLS_CHECK_LEVEL = 4
 
 %:
 	dh $@
@@ -19,11 +20,9 @@ override_dh_auto_configure:
 override_dh_makeshlibs:
 	dh_makeshlibs \
 		-X /usr/lib/$(DEB_HOST_MULTIARCH)/nautilus/ \
-		-X /usr/lib/$(DEB_HOST_MULTIARCH)/evince/ \
-		-V -- -c4
+		-X /usr/lib/$(DEB_HOST_MULTIARCH)/evince/
 
-override_dh_install:
-	dh_install
+execute_after_dh_install:
 	install -m 0644 -D debian/apparmor-profile debian/evince/etc/apparmor.d/usr.bin.evince
 	install -m 0644 -D debian/apparmor-profile.abstraction debian/evince/etc/apparmor.d/abstractions/evince
 	install -m 0644 -D debian/evince.apport debian/evince/usr/share/apport/package-hooks/source_evince.py
