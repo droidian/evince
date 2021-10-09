@@ -40,7 +40,7 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 #include <gtk/gtk.h>
-#include <libhandy-1/handy.h>
+#include <handy.h>
 
 #include "dzl-file-manager.h"
 #include "ev-find-sidebar.h"
@@ -531,6 +531,10 @@ ev_window_update_actions_sensitivity (EvWindow *ev_window)
 	ev_window_set_action_enabled (ev_window, "find", can_find &&
 				      !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "toggle-find", can_find &&
+				      !recent_view_mode);
+	ev_window_set_action_enabled (ev_window, "add-annotation", can_annotate &&
+				      !recent_view_mode);
+	ev_window_set_action_enabled (ev_window, "highlight-annotation", can_annotate &&
 				      !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "toggle-edit-annots", can_annotate &&
 				      !recent_view_mode);
@@ -4212,7 +4216,7 @@ ev_window_cmd_about (GSimpleAction *action,
                                "authors", authors,
                                "documenters", documenters,
                                "translator-credits", _("translator-credits"),
-                               "logo-icon-name", "org.gnome.Evince",
+                               "logo-icon-name", PACKAGE_ICON_NAME,
                                NULL);
 }
 
@@ -6504,6 +6508,17 @@ view_annot_added (EvView       *view,
 }
 
 static void
+view_annot_changed (EvView       *view,
+		    EvAnnotation *annot,
+		    EvWindow     *window)
+{
+	EvWindowPrivate *priv = GET_PRIVATE (window);
+
+	ev_sidebar_annotations_annot_changed (EV_SIDEBAR_ANNOTATIONS (priv->sidebar_annots),
+					      annot);
+}
+
+static void
 view_annot_removed (EvView       *view,
 		    EvAnnotation *annot,
 		    EvWindow     *window)
@@ -7090,6 +7105,8 @@ ev_window_popup_cmd_annot_properties (GSimpleAction *action,
 
 		/* FIXME: update annot region only */
 		ev_view_reload (EV_VIEW (priv->view));
+
+		ev_sidebar_annotations_annot_changed (EV_SIDEBAR_ANNOTATIONS (priv->sidebar_annots), annot);
 	}
 
 	gtk_widget_destroy (GTK_WIDGET (dialog));
@@ -7713,6 +7730,9 @@ ev_window_init (EvWindow *ev_window)
 				 ev_window, 0);
 	g_signal_connect_object (priv->view, "annot-added",
 				 G_CALLBACK (view_annot_added),
+				 ev_window, 0);
+	g_signal_connect_object (priv->view, "annot-changed",
+				 G_CALLBACK (view_annot_changed),
 				 ev_window, 0);
 	g_signal_connect_object (priv->view, "annot-removed",
 				 G_CALLBACK (view_annot_removed),

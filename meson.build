@@ -1,17 +1,23 @@
 project(
-  'evince', ['c', 'cpp'],
-  version: '40.4',
+  'evince', ['c'],
+  version: '41.1',
   license: 'GPL2+',
   default_options: 'buildtype=debugoptimized',
-  meson_version: '>= 0.50.0',
+  meson_version: '>= 0.53.0',
 )
+
+if get_option('development')
+  app_id = 'org.gnome.Evince.Devel'
+else
+  app_id = 'org.gnome.Evince'
+endif
 
 ev_name = meson.project_name().to_lower()
 
 ev_version = meson.project_version()
 version_array = ev_version.split('.')
 ev_major_version = version_array[0].to_int()
-ev_minor_version = version_array[1].to_int()
+ev_minor_version = version_array[1]
 
 ev_prefix = get_option('prefix')
 ev_bindir = join_paths(ev_prefix, get_option('bindir'))
@@ -66,10 +72,11 @@ ev_code_prefix = 'Ev'
 ev_debug = get_option('buildtype').contains('debug')
 
 cc = meson.get_compiler('c')
-cpp = meson.get_compiler('cpp')
 
 config_h = configuration_data()
+
 # package
+config_h.set_quoted('PACKAGE_ICON_NAME', app_id)
 config_h.set_quoted('PACKAGE_VERSION', ev_version)
 config_h.set_quoted('VERSION', ev_version)
 
@@ -155,7 +162,8 @@ gmodule_dep = dependency('gmodule-2.0')
 gmodule_no_export_dep = dependency('gmodule-no-export-2.0', version: glib_req_version)
 gtk_dep = dependency('gtk+-3.0', version: gtk_req_version)
 gthread_dep = dependency('gthread-2.0', version: glib_req_version)
-hdy_dep = dependency('libhandy-1', version: hdy_req_version)
+# Keep the version here synchronised with subprojects/libhandy.wrap
+hdy_dep = dependency('libhandy-1', version: hdy_req_version, fallback: ['libhandy', 'libhandy_dep'])
 
 m_dep = cc.find_library('m')
 
@@ -250,8 +258,16 @@ gsettings_desktop_schemas_dep = dependency('gsettings-desktop-schemas', required
 config_h.set('HAVE_DESKTOP_SCHEMAS', gsettings_desktop_schemas_dep.found())
 
 # *** libsynctex ***
-synctex_dep = dependency('synctex', version: '>= 1.19', required: false)
-external_synctex = synctex_dep.found()
+if get_option('internal_synctex') == 'true'
+  external_synctex = false
+else
+  synctex_dep = dependency('synctex', version: '>= 1.19', required: false)
+  external_synctex = synctex_dep.found()
+
+  if not external_synctex and get_option('internal_synctex') == 'false'
+    error('External synctex requested but not found')
+  endif
+endif
 
 # *** Mime types list ***
 mime_types_list = {
@@ -375,7 +391,7 @@ elif get_option('dvi').auto()
 endif
 
 # *** PDF ***
-poppler_req_version = '>= 0.33.0'
+poppler_req_version = '>= 0.86.0'
 poppler_glib_dep = dependency('poppler-glib', version: poppler_req_version, required: get_option('pdf'))
 
 libxml_req_version = '>= 2.5.0'
@@ -406,14 +422,13 @@ elif not get_option('ps').disabled()
 endif
 
 # *** TIFF ***
-# FIXME: libtiff-4 supports required features by default, so probably there is no need for header and function checks
 libtiff_dep = dependency('libtiff-4', required: get_option('tiff'))
-enable_tiff = libtiff_dep.found() and cc.has_header('tiff.h', dependencies: libtiff_dep) and cc.has_function('TIFFOpen', dependencies: libtiff_dep) and cc.has_function('TIFFReadRGBAImageOriented', dependencies: libtiff_dep)
+enable_tiff = libtiff_dep.found()
 if enable_tiff
   backends += {'tiff': mime_types_list.get('tiff')}
   evince_mime_types += mime_types_list.get('tiff')
 elif get_option('tiff').auto()
-  warning('Tiff support is disabled since tiff library version 3.6 or newer not found')
+  warning('Tiff support is disabled since tiff library version 4.0 or newer not found')
 endif
 
 # *** XPS ***
@@ -437,6 +452,7 @@ endif
 
 mime_types_conf = configuration_data()
 mime_types_conf.set('EVINCE_MIME_TYPES', ';'.join(evince_mime_types))
+mime_types_conf.set('PACKAGE_ICON_NAME', app_id)
 
 subdir('cut-n-paste')
 subdir('libdocument')
@@ -466,17 +482,6 @@ if enable_previewer
   subdir('previewer')
 endif
 
-# *** Browser Plugin ***
-enable_browser_plugin = get_option('browser_plugin')
-if enable_browser_plugin
-  browser_plugin_dir = get_option('browser_plugin_dir')
-  if not browser_plugin_dir.startswith('/')
-    browser_plugin_dir = join_paths(ev_libdir, browser_plugin_dir)
-  endif
-
-  subdir('browser-plugin')
-endif
-
 subdir('data')
 
 headers = files(
@@ -501,11 +506,6 @@ i18n.merge_file(
   install_dir: ev_appstreamdir,
 )
 
-run_target(
-  'ChangeLog',
-  command: [find_program('generate-changelog.sh'), source_root, 'ChangeLog'],
-)
-
 configure_file(
   output: 'config.h',
   configuration: config_h,
@@ -516,34 +516,32 @@ meson.add_install_script(
   ev_datadir,
 )
 
-output = '\n' + meson.project_name() + ' configure summary\n'
-output += '========================\n\n'
-output += 'Platform .................:  ' + ev_platform + '\n'
-output += 'Debug mode ...............:  ' + ev_debug.to_string() + '\n\n\n'
-output += 'FRONTENDS\n\n'
-output += 'Viewer ...................:  ' + enable_viewer.to_string() + '\n'
-output += 'Previewer ................:  ' + enable_previewer.to_string() + '\n'
-output += 'Thumbnailer ..............:  ' + enable_thumbnailer.to_string() + '\n'
-output += 'Nautilus Extensions ......:  ' + enable_nautilus.to_string() + '\n'
-output += 'Browser Plugin ...........:  ' + enable_browser_plugin.to_string() + '\n\n\n'
-output += 'BACKENDS\n\n'
-output += 'Comics ...................:  ' + enable_comics.to_string() + '\n'
-output += 'DJVU .....................:  ' + enable_djvu.to_string() + '\n'
-output += 'DVI ......................:  ' + enable_dvi.to_string() + '\n'
-output += 'PDF ......................:  ' + enable_pdf.to_string() + '\n'
-output += 'PostScript ...............:  ' + enable_ps.to_string() + '\n'
-output += 'TIFF .....................:  ' + enable_tiff.to_string() + '\n'
-output += 'XPS ......................:  ' + enable_xps.to_string() + '\n\n\n'
-output += 'FEATURES\n\n'
-output += 'GTK Doc reference ........:  ' + enable_gtk_doc.to_string() + '\n'
-output += 'User documentation .......:  ' + enable_user_doc.to_string() + '\n'
-output += 'GObject Introspection ....:  ' + enable_introspection.to_string() + '\n'
-output += 'DBUS communication .......:  ' + enable_dbus.to_string() + '\n'
-output += 'systemd units installation:  ' + systemd_user_unit_dir + '\n'
-output += 'Keyring integration ......:  ' + enable_keyring.to_string() + '\n'
-output += 'GTK+ Unix Print ..........:  ' + enable_gtk_unix_print.to_string() + '\n'
-output += 'Thumbnail cache ..........:  ' + enable_thumbnail_cache.to_string() + '\n'
-output += 'Multimedia ...............:  ' + enable_multimedia.to_string() + '\n'
-output += 'Spell Checker ............:  ' + enable_gspell.to_string() + '\n'
-output += 'SyncTex ..................:  ' + external_synctex.to_string('external', 'internal')
-message(output)
+
+summary({'Platform...................': ev_platform,
+         'Debug mode.................': ev_debug,
+        }, section: 'General', bool_yn: true)
+summary({'Viewer.....................': enable_viewer,
+         'Previewer..................': enable_previewer,
+         'Thumbnailer................': enable_thumbnailer,
+         'Nautilus extension.........': enable_nautilus,
+        }, section: 'Frontends', bool_yn: true)
+summary({'Comics.....................': enable_comics,
+         'DJVU.......................': enable_djvu,
+         'DVI........................': enable_dvi,
+         'PDF........................': enable_pdf,
+         'PostScript.................': enable_ps,
+         'TIFF.......................': enable_tiff,
+         'XPS........................': enable_xps,
+        }, section: 'Backends', bool_yn: true)
+summary({'Gtk-doc reference..........': enable_gtk_doc,
+         'User documentation.........': enable_user_doc,
+         'GObject introspection......': enable_introspection,
+         'DBus communication.........': enable_dbus,
+         'Systemd units installation.': systemd_user_unit_dir,
+         'Keyring integration........': enable_keyring,
+         'GTK+ Unix print ...........': enable_gtk_unix_print,
+         'Thumbnail cache ...........': enable_thumbnail_cache,
+         'Multimedia ................': enable_multimedia,
+         'Spell checker .............': enable_gspell,
+         'SyncTex ...................': external_synctex.to_string('external', 'internal'),
+        }, section: 'Features', bool_yn: true)

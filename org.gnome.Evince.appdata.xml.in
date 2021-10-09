@@ -42,7 +42,7 @@
   <url type="homepage">https://wiki.gnome.org/Apps/Evince</url>
   <url type="bugtracker">https://wiki.gnome.org/Apps/Evince/ReportingBugs</url>
   <url type="translate">https://wiki.gnome.org/TranslationProject</url>
-  <url type="donation">https://www.gnome.org/support-gnome/</url>
+  <url type="donation">https://www.gnome.org/donate/</url>
   <project_group>GNOME</project_group>
   <update_contact>evince-list@gnome.org</update_contact>
   <kudos>
@@ -81,13 +81,43 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
-    <release version="40.4" date="2021-07-15" />
-  </releases>
-  <releases>
-    <release version="40.3" date="2021-07-12">
+    <release version="41.1" type="stable" date="2021-10-09" />
+    <release version="41.0" type="stable" date="2021-10-09">
       <issues>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/220">#220</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/386">#386</issue>
         <issue url="https://gitlab.gnome.org/GNOME/evince/issues/602">#602</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/637">#637</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/736">#736</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/968">#968</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1004">#1004</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1004">#1004</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1351">#1351</issue>
         <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1549">#1549</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1557">#1557</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1570">#1570</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1571">#1571</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1587">#1587</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1618">#1618</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1638">#1638</issue>
+      </issues>
+    </release>
+    <release version="41.alpha" type="development" date="2021-07-12">
+      <issues>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/220">#220</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/386">#386</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/602">#602</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/637">#637</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/736">#736</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/968">#968</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1004">#1004</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1351">#1351</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1549">#1549</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1557">#1557</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1570">#1570</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1571">#1571</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1587">#1587</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1618">#1618</issue>
       </issues>
     </release>
     <release version="40.2" date="2021-06-08">
@@ -107,87 +137,87 @@
     </release>
     <release version="3.39.2" date="2021-02-14">
       <issues>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/336</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/1085</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/1403</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/1442</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/1541</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/1543</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/336">#336</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1085">#1085</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1403">#1403</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1442">#1442</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1541">#1541</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/1543">#1543</issue>
       </issues>
     </release>
     <release version="3.39.1" date="2021-01-25">
       <issues>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#46</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#221</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#445</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1416</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1328</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1333</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1504</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1545</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#46">#46</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#221">#221</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#445">#445</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1416">#1416</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1328">#1328</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1333">#1333</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1504">#1504</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1545">#1545</issue>
       </issues>
     </release>
     <release version="3.38.0" date="2020-09-12">
       <issues>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#842</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1477</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#842">#842</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1477">#1477</issue>
       </issues>
     </release>
     <release version="3.37.90" date="2020-08-22">
       <issues>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#53</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#53">#53</issue>
       </issues>
     </release>
     <release version="3.37.3" date="2020-07-04">
       <issues>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#128</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#623</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#637</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#662</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#680</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#810</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1010</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1147</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1344</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1345</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1418</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1426</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1429</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#128">#128</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#623">#623</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#637">#637</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#662">#662</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#680">#680</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#810">#810</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1010">#1010</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1147">#1147</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1344">#1344</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1345">#1345</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1418">#1418</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1426">#1426</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1429">#1429</issue>
       </issues>
     </release>
     <release version="3.37.2" date="2020-05-30">
       <issues>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1410</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1410">#1410</issue>
       </issues>
     </release>
     <release version="3.37.1" date="2020-05-30">
       <issues>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#795</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#860</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1275</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1409</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#795">#795</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#860">#860</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1275">#1275</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1409">#1409</issue>
       </issues>
     </release>
     <release version="3.36.1" date="2020-05-19">
       <issues>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#842</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#570</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1339</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1364</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1365</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1373</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#842">#842</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#570">#570</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1339">#1339</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1364">#1364</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1365">#1365</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1373">#1373</issue>
       </issues>
     </release>
     <release version="3.36.0" date="2020-03-07" />
     <release version="3.35.92" date="2020-02-22">
       <issues>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#943</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1010</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1023</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1278</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1312</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1314</issue>
-        <issue>https://gitlab.gnome.org/GNOME/evince/issues/#1316</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#943">#943</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1010">#1010</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1023">#1023</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1278">#1278</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1312">#1312</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1314">#1314</issue>
+        <issue url="https://gitlab.gnome.org/GNOME/evince/issues/#1316">#1316</issue>
       </issues>
     </release>
     <release version="3.35.1" date="2019-11-23">
