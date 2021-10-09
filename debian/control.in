@@ -5,7 +5,7 @@ Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.
 Uploaders: @GNOME_TEAM@
 Build-Depends: adwaita-icon-theme,
                appstream,
-               debhelper-compat (= 12),
+               debhelper-compat (= 13),
                dh-apparmor,
                dh-sequence-gir,
                dh-sequence-gnome (>= 0.22),
