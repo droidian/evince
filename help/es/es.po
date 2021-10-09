@@ -4,19 +4,20 @@
 # spanish transtation for evince
 # Jorge González <jorgegonz@svn.gnome.org>, 2006, 2007, 2009, 2010, 2011.
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2010-2021.
+# Daniel Mustieles García <daniel.mustieles@gmail.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: evince.help.master\n"
-"POT-Creation-Date: 2021-05-06 10:50+0000\n"
-"PO-Revision-Date: 2021-05-10 11:44+0200\n"
-"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
+"POT-Creation-Date: 2021-09-13 08:48+0000\n"
+"PO-Revision-Date: 2021-09-13 10:50+0200\n"
+"Last-Translator: Daniel Mustieles García <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: Gtranslator 40.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -944,14 +945,43 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/opening.page:47
-#, fuzzy
-#| msgid "If a <app>Document Viewer</app> window is already open you can:"
 msgid "If an empty <app>Document Viewer</app> window is already open you can:"
 msgstr ""
-"Si la ventana del <app>Visor de documentos</app> ya está abierta, puede:"
+"Si una ventana vacía del <app>Visor de documentos</app> ya está abierta, "
+"puede:"
 
 #. (itstool) path: item/p
-#: C/opening.page:51 C/opening.page:66
+#: C/opening.page:51
+msgid ""
+"Drag a file into the window from <app>Files</app>. The new file will open in "
+"the same window."
+msgstr ""
+"Arrastre un archivo dentro de la ventana desde <app>Archivos</app>. El "
+"archivo nuevo se abrirá en la misma ventana."
+
+#. (itstool) path: item/p
+#: C/opening.page:55
+msgid ""
+"Press the <gui>Open…</gui> button in the top-left corner of the window. In "
+"the <gui>Open Document</gui> dialog, choose the file which you wish to open, "
+"and click <gui>Open</gui>. The file will open in the same window."
+msgstr ""
+"Pulse el botón <gui>Abrir…</gui> en la esquina superior izquierda de la "
+"ventana. En el diálogo <gui>Abrir documento</gui>, elija el archivo que "
+"quiere abrir y pulse <gui>Abrir</gui>. El archivo se abrirá en la misma "
+"ventana."
+
+#. (itstool) path: page/p
+#: C/opening.page:62
+msgid ""
+"If a document is already opened in a <app>Document Viewer</app> window you "
+"can:"
+msgstr ""
+"Si ya hay un documento abierto en la ventana del <app>Visor de documentos</"
+"app>, puede:"
+
+#. (itstool) path: item/p
+#: C/opening.page:66
 msgid ""
 "Drag a file into the window from <app>Files</app>. The new file will open in "
 "a new window."
@@ -960,50 +990,15 @@ msgstr ""
 "archivo nuevo se abrirá en una ventana nueva."
 
 #. (itstool) path: item/p
-#: C/opening.page:55
-#, fuzzy
-#| msgid ""
-#| "Press the <gui>File options</gui> button in the top-right corner of the "
-#| "window, then select <gui>Open…</gui>. In the <gui>Open Document</gui> "
-#| "dialog, choose the file which you wish to open, and click <gui>Open</"
-#| "gui>. The file will open in a new window."
-msgid ""
-"Press the <gui>Open…</gui> button in the top-left corner of the window. In "
-"the <gui>Open Document</gui> dialog, choose the file which you wish to open, "
-"and click <gui>Open</gui>. The file will open in a new window."
-msgstr ""
-"Pulse el botón de <gui>Opciones del archivo</gui> en la esquina superior "
-"derecha de la ventana y seleccione <gui>Abrir…</gui>. En el diálogo "
-"<gui>Abrir documento</gui> elija el archivo que quiere abrir y pulse "
-"<gui>Abrir</gui>. El archivo aparecerá en una ventana nueva."
-
-#. (itstool) path: page/p
-#: C/opening.page:62
-#, fuzzy
-#| msgid "If a <app>Document Viewer</app> window is already open you can:"
-msgid ""
-"If a document is already opened in a <app>Document Viewer</app> window you "
-"can:"
-msgstr ""
-"Si la ventana del <app>Visor de documentos</app> ya está abierta, puede:"
-
-#. (itstool) path: item/p
 #: C/opening.page:70
-#, fuzzy
-#| msgid ""
-#| "Press the <gui>File options</gui> button in the top-right corner of the "
-#| "window, then select <gui>Open…</gui>. In the <gui>Open Document</gui> "
-#| "dialog, choose the file which you wish to open, and click <gui>Open</"
-#| "gui>. The file will open in a new window."
 msgid ""
 "Press <keyseq><key>Ctrl</key><key>O</key></keyseq>. In the <gui>Open "
 "Document</gui> dialog, choose the file which you wish to open, and click "
 "<gui>Open</gui>. The file will open in a new window."
 msgstr ""
-"Pulse el botón de <gui>Opciones del archivo</gui> en la esquina superior "
-"derecha de la ventana y seleccione <gui>Abrir…</gui>. En el diálogo "
-"<gui>Abrir documento</gui> elija el archivo que quiere abrir y pulse "
-"<gui>Abrir</gui>. El archivo aparecerá en una ventana nueva."
+"Pulse <keyseq><key>Ctrl</key><key>O</key></keyseq>. En el diálogo <gui>Abrir "
+"documento</gui>, elija el archivo que quiere abrir y pulse <gui>Abrir</gui>. "
+"El archivo se abrirá en una ventana nueva."
 
 #. (itstool) path: info/desc
 #: C/noprint.page:9
@@ -1033,7 +1028,7 @@ msgstr "Problemas con la impresora o,"
 #. (itstool) path: item/p
 #: C/noprint.page:29
 msgid "PDF printing restrictions."
-msgstr "restricciones de impresión del PDF."
+msgstr "Restricciones de impresión del PDF."
 
 #. (itstool) path: section/title
 #: C/noprint.page:35
@@ -1070,13 +1065,11 @@ msgstr "Pulse en <gui>Configuración</gui>."
 
 #. (itstool) path: item/p
 #: C/noprint.page:51
-#| msgid "Click <gui>Devices</gui> in the sidebar."
 msgid "Click <gui>Printers</gui> in the sidebar."
 msgstr "Pulse <gui>Impresoras</gui> en la barra lateral."
 
 #. (itstool) path: media/span
 #: C/noprint.page:54
-#| msgid "Settings"
 msgid "settings"
 msgstr "configuración"
 
@@ -1087,16 +1080,12 @@ msgstr "Pulse el botón <_:media-1/> junto a la impresora."
 
 #. (itstool) path: item/p
 #: C/noprint.page:58
-#| msgid "Select the <gui style=\"tab\">Page Handling</gui> tab."
 msgid "Select <gui style=\"menuitem\">Printing Options</gui>."
 msgstr ""
 "Seleccione la pestaña <gui style=\"menuitem\">Opciones de impresión</gui>."
 
 #. (itstool) path: item/p
 #: C/noprint.page:61
-#| msgid ""
-#| "Click on <gui>Print Test Page</gui>. A page should be sent to your "
-#| "printer."
 msgid "Click on <gui>Test Page</gui>. A page should be sent to your printer."
 msgstr ""
 "Pulse en <gui>Imprimir página de prueba</gui>. Se debería enviar una página "
@@ -1130,18 +1119,15 @@ msgstr ""
 "imprimirlos. Los autores puede configurar esta restricción de impresión "
 "cuando escriben el documento. De manera predeterminada, el <app>Visor de "
 "documentos</app> omite esta restricción, pero puede querer comprobar que no "
-"se ha desactivado."
+"se ha desactivado:"
 
 #. (itstool) path: note/p
 #: C/noprint.page:83
-#| msgid ""
-#| "You need to have the <app>dconf Editor</app> installed on your computer "
-#| "to change this setting."
 msgid ""
 "You need to have <app>dconf Editor</app> installed on your computer to "
 "change this setting."
 msgstr ""
-"Necesita tener instalado el <app>editor dconf</app> en su equipo para "
+"Necesita tener instalado el <app>Editor de dconf</app> en su equipo para "
 "modificar esta opción."
 
 #. (itstool) path: if/p
@@ -1155,33 +1141,25 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/noprint.page:93
-#, fuzzy
-#| msgid ""
-#| "Open the <gui href=\"help:gnome-help/shell-introduction#activities"
-#| "\">Activities</gui> overview and start typing <gui>Settings</gui>."
 msgid ""
 "Open the <gui href=\"help:gnome-help/shell-introduction#activities"
 "\">Activities</gui> overview and start typing <gui>dconf Editor</gui>."
 msgstr ""
 "Abra la vista de <gui href=\"help:gnome-help/shell-introduction#activities"
-"\">Actividades</gui> y empiece a escribir <gui>Configuración</gui>."
+"\">Actividades</gui> y empiece a escribir <gui>Editor de dconf</gui>."
 
 #. (itstool) path: item/p
 #: C/noprint.page:97
-#| msgid "Click <gui>Print</gui>."
 msgid "Click on <gui>dconf Editor</gui>."
-msgstr "Pulse <gui>Editor dconf</gui>."
+msgstr "Pulse <gui>Editor de dconf</gui>."
 
 #. (itstool) path: item/p
 #: C/noprint.page:100
-#| msgid "Browse to <sys>/org/gnome/evince</sys> using the side pane."
 msgid "Browse to <sys>/org/gnome/evince</sys>."
 msgstr "Navegue hasta <sys>/org/gnome/evince</sys>."
 
 #. (itstool) path: item/p
 #: C/noprint.page:103
-#| msgid ""
-#| "Make sure that the <gui>override_restrictions</gui> option is checked."
 msgid "Make sure that the <gui>override-restrictions</gui> option is checked."
 msgstr ""
 "Asegúrese de que la opción <gui>Saltarse las restricciones</gui> está "
@@ -1981,7 +1959,7 @@ msgid ""
 "Unported license."
 msgstr ""
 "Este trabajo está licenciado bajo una Licencia Creative Commons Atribución - "
-"Compartir igual 3.0 sin soporte."
+"Compartir igual 3.0 no portada."
 
 #. (itstool) path: page/p
 #: C/license.page:20
@@ -1996,7 +1974,7 @@ msgstr "<em>Compartir</em>"
 #. (itstool) path: item/p
 #: C/license.page:26
 msgid "To copy, distribute and transmit the work."
-msgstr "Copiar, distribuir y comunicar públicamente la obra"
+msgstr "Copiar, distribuir y comunicar públicamente la obra."
 
 #. (itstool) path: item/title
 #: C/license.page:29
@@ -2145,7 +2123,7 @@ msgstr "Folleto de 09 o 12 páginas"
 #. (itstool) path: info/desc
 #: C/singlesided-9-12pages.page:8
 msgid "Print a 9, 10, 11 or 12 page booklet."
-msgstr "Imprimir un folleto de 9, 10, 11 o 12 páginas"
+msgstr "Imprimir un folleto de 9, 10, 11 o 12 páginas."
 
 #. (itstool) path: page/title
 #: C/singlesided-9-12pages.page:21
@@ -2361,7 +2339,6 @@ msgstr "Seleccione la pestaña <gui>Configuración de página</gui>."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:37
-#| msgid "Choose a <em>Paper Scaling</em> from the drop-down list."
 msgid "Choose a <em>Page Scaling</em> from the drop-down list."
 msgstr "Seleccione un <em>Escalado de página</em> en la lista desplegable."
 
@@ -2636,18 +2613,13 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/forms-saving.page:39
-#, fuzzy
-#| msgid ""
-#| "Click the <gui>File options</gui> menu in the top right corner and select "
-#| "<gui>Save as</gui> or press <keyseq><key>Ctrl</key><key>S</key></keyseq> "
-#| "on your keyboard."
 msgid ""
 "Click the <gui>File options</gui> menu in the top right corner and select "
 "<gui>Save As…</gui> or press <keyseq><key>Ctrl</key><key>S</key></keyseq> on "
 "your keyboard."
 msgstr ""
 "Pulse en el menú <gui>Opciones del archivo</gui> en la esquina superior "
-"derecha y elija <gui>Guardar como</gui> o pulse <keyseq><key>Ctrl</"
+"derecha y elija <gui>Guardar como…</gui> o pulse <keyseq><key>Ctrl</"
 "key><key>S</key></keyseq> en su teclado."
 
 #. (itstool) path: item/p
@@ -2760,7 +2732,7 @@ msgid ""
 "\"menuitem\">Remove Annotation</gui>."
 msgstr ""
 "Pulse con el botón derecho del ratón sobre el icono de anotación en el "
-"documento y pulse <gui style=\"menuitem\">Quitar anotación</gui>"
+"documento y pulse <gui style=\"menuitem\">Quitar anotación</gui>."
 
 #. (itstool) path: item/p
 #: C/annotations-delete.page:39
@@ -2774,7 +2746,7 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/bug-filing.page:7
 msgid "How and where to report problems."
-msgstr "Cómo y dónde informar de un error"
+msgstr "Cómo y dónde informar de un error."
 
 #. (itstool) path: page/title
 #: C/bug-filing.page:19
@@ -2824,15 +2796,15 @@ msgstr ""
 msgid ""
 "Once you have an account, log in, and click on <gui>New issue</gui>. Before "
 "reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
-"Community/GettingInTouch/Bugzilla/Guidelines\">bug writing guidelines</"
-"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/evince/issues"
-"\">browse</link> for the bug to see if it already exists."
+"GettingInTouch/BugReportingGuidelines\">bug writing guidelines</link>, and "
+"please <link href=\"https://gitlab.gnome.org/GNOME/evince/issues\">browse</"
+"link> for the bug to see if it already exists."
 msgstr ""
 "Una vez que tenga su cuenta, inicie sesión y pulse en <gui>New issue</gui>. "
 "Antes de informar de un error, lea la <link href=\"https://wiki.gnome.org/"
-"Community/GettingInTouch/Bugzilla/Guidelines\">guía para informar de un "
-"error</link> y <link href=\"https://gitlab.gnome.org/GNOME/evince/issues"
-"\">busque</link> el error para ver si ya existe."
+"GettingInTouch/BugReportingGuidelines\">guía para informar de un error</"
+"link> y <link href=\"https://gitlab.gnome.org/GNOME/evince/issues\">busque</"
+"link> el error para ver si ya existe."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:33
@@ -2891,7 +2863,7 @@ msgid ""
 "You can move around each page of a document by any of the following methods:"
 msgstr ""
 "Puede moverse por cada página de un documento usando cualquiera de los "
-"siguientes métodos."
+"siguientes métodos:"
 
 #. (itstool) path: item/p
 #: C/movingaround.page:34
@@ -2996,7 +2968,7 @@ msgid ""
 msgstr ""
 "Escriba un número de página en <gui style=\"input\">Seleccionar página</gui> "
 "en la <link xref=\"titlebar\">barra de cabecera</link> y pulse <key>Intro</"
-"key>"
+"key>."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:92
@@ -3043,12 +3015,6 @@ msgstr "Navegar con una lista de páginas o una tabla de contenidos"
 #. (itstool) path: section/p
 #. (itstool) path: page/p
 #: C/movingaround.page:124 C/annotations.page:30 C/bookmarks.page:34
-#, fuzzy
-#| msgid ""
-#| "When you open a file, you should have a side pane on the left side of the "
-#| "window. If you do not have a visible side pane, select the <gui style="
-#| "\"button\">Side pane</gui> button in the header bar, or press <key>F9</"
-#| "key> on the keyboard."
 msgid ""
 "When you open a file, you should have a side pane on the left side of the "
 "window. If you do not have a visible side pane, click the <gui style=\"button"
@@ -3057,15 +3023,15 @@ msgid ""
 msgstr ""
 "Cuando abre un archivo, debería tener un panel lateral en el lado izquierdo "
 "de la ventana. Si no tiene un panel lateral visible, pulse el botón <gui "
-"style=\"button\">Panel lateral</gui> en la barra de cabecera o pulse "
-"<key>F9</key> en el teclado."
+"style=\"button\">Panel lateral</gui> en la esquina superior izquierda o "
+"pulse <key>F9</key> en el teclado."
 
 #. (itstool) path: section/p
 #: C/movingaround.page:128
-#, fuzzy
-#| msgid "You should see a preview of all of the pages in the document."
 msgid "The side pane shows a preview of all of the pages in the document."
-msgstr "Debería ver una previsualización de todas las páginas del documento."
+msgstr ""
+"El panel lateral muestra una previsualización de todas las páginas del "
+"documento."
 
 #. (itstool) path: section/p
 #: C/movingaround.page:130
@@ -3075,19 +3041,14 @@ msgstr ""
 
 #. (itstool) path: note/p
 #: C/movingaround.page:133
-#, fuzzy
-#| msgid ""
-#| "Some documents have an index or table of contents, which you can display "
-#| "in the side pane. Click the drop-down list at the top of the side pane "
-#| "and select <gui>Outline</gui> to view it."
 msgid ""
 "Some documents have an index or table of contents, which you can display in "
 "the side pane. Select the <gui>Outline</gui> button at the bottom of the "
 "side pane to view it."
 msgstr ""
 "Algunos documentos tienen un índice o una tabla de contenidos, que puede "
-"mostrar en el panel lateral. Pulse en la lista desplegable en la parte "
-"superior del panel lateral y seleccione <gui>Índice</gui> para verlo."
+"mostrar en el panel lateral. Seleccione el botón <gui>Índice</gui> en la "
+"parte inferior del panel lateral para verlo."
 
 #. (itstool) path: note/p
 #: C/movingaround.page:137
@@ -3281,7 +3242,7 @@ msgstr "Iniciar una presentación"
 #. (itstool) path: section/p
 #: C/presentations.page:29
 msgid "To start a presentation:"
-msgstr "Iniciar una presentación"
+msgstr "Para iniciar una presentación:"
 
 #. (itstool) path: item/p
 #: C/presentations.page:32
@@ -3435,7 +3396,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/annotation-properties.page:29
 msgid "Select <gui>Annotation Properties…</gui>."
-msgstr "Seleccione <gui>Propiedades de la anotación…</gui>"
+msgstr "Seleccione <gui>Propiedades de la anotación…</gui>."
 
 #. (itstool) path: item/p
 #: C/annotation-properties.page:34
@@ -3672,21 +3633,16 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/annotations.page:36
-#, fuzzy
-#| msgid ""
-#| "At the top of this side pane, there is a drop-down menu with options like "
-#| "<gui>Thumbnails</gui>, <gui>Outline</gui> and <gui>Annotations</gui> "
-#| "(some of which may be <em>dimmed</em> for some documents)."
 msgid ""
 "At the bottom of the side pane, the buttons <gui>Thumbnails</gui>, "
 "<gui>Outline</gui>, <gui>Annotations</gui> and <gui>Bookmarks</gui> let you "
 "choose what to display in the side pane. (Some options may not be available "
 "for some documents)."
 msgstr ""
-"En la parte superior de este panel lateral hay un menú desplegable con "
-"opciones como <gui>Miniaturas</gui>, <gui>Índice</gui> y <gui>Anotaciones</"
-"gui> (algunas de las cuales pueden estar <em>sombreadas</em> para algunos "
-"documentos)."
+"En la parte inferior del panel lateral, los botones <gui>Miniaturas</gui>, "
+"<gui>Índice</gui>, <gui>Anotaciones</gui> y <gui>Marcadores</gui> le permite "
+"elegir qué mostrar en el panel lateral. (Puede que algunas opciones no estén "
+"disponibles para algunos documentos)."
 
 #. (itstool) path: page/p
 #: C/annotations.page:39
@@ -3729,7 +3685,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/annotations.page:67
 msgid "Type your text into the <em>annotation</em> window."
-msgstr "Escriba su texto en la ventana <em>anotación</em>"
+msgstr "Escriba su texto en la ventana <em>anotación</em>."
 
 #. (itstool) path: note/p
 #: C/annotations.page:71
@@ -3790,7 +3746,7 @@ msgid ""
 "in this order: 3, 2, 1"
 msgstr ""
 "En <em>Rango</em>, elija <gui>Páginas</gui>. Escriba los números de las "
-"páginas en este orden: 3, 2, 1."
+"páginas en este orden: 3, 2, 1"
 
 #. (itstool) path: note/p
 #: C/duplex-3pages.page:61
@@ -3809,7 +3765,13 @@ msgid ""
 "link>."
 msgstr ""
 "Siga los pasos para imprimir un <link xref=\"duplex-4page\">folleto de 4 "
-"páginas</link>"
+"páginas</link>."
+
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link:trail"
+msgid "Evince Document Viewer"
+msgstr "Visor de documentos Evince"
 
 #. (itstool) path: info/title
 #: C/index.page:8
@@ -4655,7 +4617,7 @@ msgstr ""
 
 #~ msgid "Creative Commons Attribution-Share Alike 3.0 United States License"
 #~ msgstr ""
-#~ "Creative Commons Atribución - Compartir igual 3.0 sin soporte de Estados "
+#~ "Creative Commons Atribución - Compartir igual 3.0 no portada de Estados "
 #~ "Unidos."
 
 #~ msgid "This work is licensed under a <_:link-1/>."
@@ -4673,7 +4635,7 @@ msgstr ""
 
 #~ msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 #~ msgstr ""
-#~ "Licencia Creative Commons de Atribución-Compartir Igual 3.0 sin soporte"
+#~ "Licencia Creative Commons de Atribución-Compartir Igual 3.0 no portada"
 
 #~ msgid "Reverse"
 #~ msgstr "Invertir"

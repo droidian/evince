@@ -773,6 +773,7 @@ pdf_document_get_keywords_from_metadata (xmlXPathContextPtr xpathCtx)
 	return result;
 }
 
+__attribute__((__format__ (__printf__, 2, 0)))
 static char *
 pdf_document_get_localized_object_from_metadata (xmlXPathContextPtr xpathCtx,
                                                  const char* xpath)
@@ -804,7 +805,10 @@ pdf_document_get_localized_object_from_metadata (xmlXPathContextPtr xpathCtx,
 			g_free (tag);
 			tag = tag_aux;
 		}
+		#pragma GCC diagnostic push
+		#pragma GCC diagnostic ignored "-Wformat-nonliteral"
 		aux = g_strdup_printf (xpath, tag);
+		#pragma GCC diagnostic pop
 		loc_object = (gchar *)pdf_document_get_xmptag_from_path (xpathCtx, aux);
 		g_free (tag);
 		g_free (aux);
@@ -813,7 +817,10 @@ pdf_document_get_localized_object_from_metadata (xmlXPathContextPtr xpathCtx,
 
 	/* 2) if not, use the default string */
 	if (!loc_object) {
+		#pragma GCC diagnostic push
+		#pragma GCC diagnostic ignored "-Wformat-nonliteral"
 		aux = g_strdup_printf (xpath, "x-default");
+		#pragma GCC diagnostic pop
 		loc_object = (gchar *)pdf_document_get_xmptag_from_path (xpathCtx, aux);
 		g_free (aux);
 	}
@@ -874,40 +881,6 @@ pdf_document_get_dates_from_metadata (GTime *result, xmlXPathContextPtr xpathCtx
 	xmlFree (modifydate);
 	xmlFree (createdate);
 	xmlFree (metadate);
-}
-
-static char *
-pdf_document_get_creatortool_from_metadata (xmlXPathContextPtr xpathCtx)
-{
-	xmlChar *creatortool = NULL;
-	char *result = NULL;
-
-	/* reads CreatorTool */
-	creatortool = pdf_document_get_xmptag_from_path (xpathCtx, CREATOR);
-	if (creatortool != NULL) {
-		result = g_strdup_printf ("%s", creatortool);
-	}
-
-	/* Cleanup */
-	xmlFree (creatortool);
-	return result;
-}
-
-static char *
-pdf_document_get_producer_from_metadata (xmlXPathContextPtr xpathCtx)
-{
-	xmlChar *producer = NULL;
-	char *result = NULL;
-
-	/* reads Producer  */
-	producer = pdf_document_get_xmptag_from_path (xpathCtx, PRODUCER);
-	if (producer != NULL) {
-		result = g_strdup_printf ("%s", producer);
-	}
-
-	/* Cleanup */
-	xmlFree (producer);
-	return result;
 }
 
 static EvDocumentLicense *
@@ -1027,13 +1000,13 @@ pdf_document_parse_metadata (const gchar    *metadata,
 			info->subject = subject;
 		}
 
-		creatortool = pdf_document_get_creatortool_from_metadata (xpathCtx);
+		creatortool = (char*)pdf_document_get_xmptag_from_path (xpathCtx, CREATOR);
 		if (creatortool != NULL) {
 			g_free (info->creator);
 			info->creator = creatortool;
 		}
 
-		producer = pdf_document_get_producer_from_metadata (xpathCtx);
+		producer = (char*)pdf_document_get_xmptag_from_path (xpathCtx, PRODUCER);
 		if (producer != NULL) {
 			g_free (info->producer);
 			info->producer = producer;
@@ -1961,7 +1934,7 @@ pdf_document_images_get_image_mapping (EvDocumentImages *document_images,
 	return ev_mapping_list_new (page->index, g_list_reverse (retval), (GDestroyNotify)g_object_unref);
 }
 
-GdkPixbuf *
+static GdkPixbuf *
 pdf_document_images_get_image (EvDocumentImages *document_images,
 			       EvImage          *image)
 {
@@ -2663,6 +2636,7 @@ pdf_document_get_effect (EvDocumentTransition *trans,
 					   "alignment", page_transition->alignment,
 					   "direction", page_transition->direction,
 					   "duration", page_transition->duration,
+					   "duration-real", page_transition->duration_real,
 					   "angle", page_transition->angle,
 					   "scale", page_transition->scale,
 					   "rectangular", page_transition->rectangular,
@@ -4281,7 +4255,7 @@ attachment_save_to_buffer_callback (const gchar  *buf,
 				    gpointer      user_data,
 				    GError      **error)
 {
-	struct SaveToBufferData *sdata = (SaveToBufferData *)user_data;
+	struct SaveToBufferData *sdata = (struct SaveToBufferData *)user_data;
 	gchar *new_buffer;
 	gsize new_max;
 
