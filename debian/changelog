@@ -1,3 +1,9 @@
+evince (41.2-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 10 Oct 2021 07:19:12 -0400
+
 evince (41.1-1) unstable; urgency=medium
 
   * New upstream release
