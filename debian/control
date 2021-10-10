@@ -8,7 +8,6 @@ Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Uploaders: Jeremy Bicha <jbicha@debian.org>, Laurent Bigonville <bigon@debian.org>
 Build-Depends: adwaita-icon-theme,
-               appstream,
                debhelper-compat (= 13),
                dh-apparmor,
                dh-sequence-gir,
@@ -47,7 +46,6 @@ Build-Depends: adwaita-icon-theme,
                libx11-dev,
                libxml2-dev (>= 2.5.0),
                meson (>= 0.50),
-               yelp-tools,
                zlib1g-dev
 Rules-Requires-Root: no
 Standards-Version: 4.6.0
