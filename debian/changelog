@@ -1,8 +1,9 @@
-evince (41.2-1) UNRELEASED; urgency=medium
+evince (41.2-1) unstable; urgency=medium
 
   * New upstream release
+  * debian/control.in: Drop obsolete Build-Depends on appstream & yelp-tools
 
- -- Jeremy Bicha <jbicha@debian.org>  Sun, 10 Oct 2021 07:19:12 -0400
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 10 Oct 2021 07:47:05 -0400
 
 evince (41.1-1) unstable; urgency=medium
 
