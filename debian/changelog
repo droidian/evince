@@ -1,3 +1,11 @@
+evince (41.2-2) UNRELEASED; urgency=medium
+
+  * debian/apparmor-profile:
+    - use the exo abstraction rather than listing the binaries directly
+      (lp: #1891338)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 27 Oct 2021 12:08:25 +0200
+
 evince (41.2-1) unstable; urgency=medium
 
   * New upstream release
