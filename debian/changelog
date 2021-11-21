@@ -1,14 +1,14 @@
-evince (41.3-1) UNRELEASED; urgency=medium
+evince (41.3-1) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * New upstream release
 
   [ Sebastien Bacher ]
   * debian/apparmor-profile:
     - use the exo abstraction rather than listing the binaries directly
       (lp: #1891338)
 
-  [ Jeremy Bicha ]
-  * New upstream release
-
- -- Jeremy Bicha <jbicha@debian.org>  Sun, 21 Nov 2021 13:00:19 -0500
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 21 Nov 2021 13:03:23 -0500
 
 evince (41.2-1) unstable; urgency=medium
 
