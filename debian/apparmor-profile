@@ -313,7 +313,7 @@
   /**.[xX][pP][mM]     r,
   /**.[gG][zZ]         r,
   /**.[bB][zZ]2        r,
-  /**.[cC][bB][rRzZ7]  r,
+  /**.[cC][bB][rRtTzZ7]  r,
   /**.[xX][zZ]         r,
 
   owner @{HOME}/.texlive*/** r,
