@@ -1,1 +1,5 @@
 Remove-incorrect-args-for-i18n.merge_file.patch
+sidebar-annotations-Make-icons-recolorable.patch
+annotation-window-Fix-title-color.patch
+application-Support-dark-style-preference.patch
+previewer-Support-dark-style-preference.patch

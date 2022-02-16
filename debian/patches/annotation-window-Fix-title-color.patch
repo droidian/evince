@@ -1,0 +1,45 @@
+From: Alexander Mikhaylenko <alexm@gnome.org>
+Date: Wed, 5 Jan 2022 23:21:45 +0500
+Subject: annotation-window: Fix title color
+
+Use the same color for title as for the button instead of hardcoded black.
+Remove the css that was leaking out to the context menu.
+
+(cherry picked from commit 70916d5ed58d942893f9506c6c39ef7e38f95c77)
+---
+ libview/ev-annotation-window.c | 2 ++
+ shell/evince.css               | 8 --------
+ 2 files changed, 2 insertions(+), 8 deletions(-)
+
+diff --git a/libview/ev-annotation-window.c b/libview/ev-annotation-window.c
+index 4119212..4380403 100644
+--- a/libview/ev-annotation-window.c
++++ b/libview/ev-annotation-window.c
+@@ -133,6 +133,8 @@ ev_annotation_window_set_color (EvAnnotationWindow *window,
+ 	css_data = g_strdup_printf ("button {border-color: %1$s; color: %2$s; -gtk-icon-shadow:0 0; box-shadow:0 0;}\n\
+ 				     button:hover {background: lighter(%1$s); border-color: darker(%1$s);}\n\
+ 				     button:active {background: darker(%1$s);}\n\
++				     evannotationwindow.background { color: %2$s; }\n\
++				     evannotationwindow.background:backdrop { color: alpha(%2$s, .75); }\n\
+ 				     evannotationwindow.background, button {background: %1$s}",
+ 				    rgba_str, icon_color_str);
+ 
+diff --git a/shell/evince.css b/shell/evince.css
+index 83e281c..20b59d1 100644
+--- a/shell/evince.css
++++ b/shell/evince.css
+@@ -81,14 +81,6 @@ evpresentationview.white-mode {
+     border-radius: 0;
+ }
+ 
+-evannotationwindow label:backdrop {
+-	color: grey;
+-}
+-
+-evannotationwindow label {
+-	color: black;
+-}
+-
+ .content-view .combo {
+     padding-left: 2px;
+     padding-right: 2px;
