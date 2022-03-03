@@ -32,6 +32,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_annotation_set_contents@Base 3.0.2
  ev_annotation_set_modified@Base 3.0.2
  ev_annotation_set_modified_from_time@Base 3.0.2
+ ev_annotation_set_modified_from_time_t@Base 42~beta
  ev_annotation_set_name@Base 3.0.2
  ev_annotation_set_rgba@Base 3.5.3
  ev_annotation_text_get_icon@Base 3.0.2
@@ -90,6 +91,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_error_quark@Base 3.0.2
  ev_document_factory_add_filters@Base 3.0.2
  ev_document_factory_get_document@Base 3.0.2
+ ev_document_factory_get_document_for_fd@Base 42~beta
  ev_document_factory_get_document_for_gfile@Base 3.5.2
  ev_document_factory_get_document_for_stream@Base 3.5.2
  ev_document_factory_get_document_full@Base 3.25.4
@@ -146,7 +148,13 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_info_copy@Base 3.0.2
  ev_document_info_fields_get_type@Base 3.0.2
  ev_document_info_free@Base 3.0.2
+ ev_document_info_get_created_datetime@Base 42~beta
+ ev_document_info_get_modified_datetime@Base 42~beta
  ev_document_info_get_type@Base 3.0.2
+ ev_document_info_new@Base 42~beta
+ ev_document_info_set_from_xmp@Base 42~beta
+ ev_document_info_take_created_datetime@Base 42~beta
+ ev_document_info_take_modified_datetime@Base 42~beta
  ev_document_is_page_size_uniform@Base 3.0.2
  ev_document_layers_get_layers@Base 3.0.2
  ev_document_layers_get_type@Base 3.0.2
@@ -173,6 +181,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_links_get_type@Base 3.0.2
  ev_document_links_has_document_links@Base 3.0.2
  ev_document_load@Base 3.0.2
+ ev_document_load_fd@Base 42~beta
  ev_document_load_flags_get_type@Base 3.5.2
  ev_document_load_full@Base 3.25.4
  ev_document_load_gfile@Base 3.5.2
@@ -230,6 +239,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_file_exporter_get_capabilities@Base 3.0.2
  ev_file_exporter_get_type@Base 3.0.2
  ev_file_get_mime_type@Base 3.0.2
+ ev_file_get_mime_type_from_fd@Base 42~beta
  ev_file_is_temp@Base 3.0.2
  ev_file_uncompress@Base 3.0.2
  ev_find_options_get_type@Base 3.5.3
@@ -349,6 +359,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_selection_get_type@Base 3.0.2
  ev_selection_render_selection@Base 3.0.2
  ev_selection_style_get_type@Base 3.0.2
+ ev_should_use_portal@Base 42~beta
  ev_shutdown@Base 3.0.2
  ev_source_link_copy@Base 3.3.90
  ev_source_link_free@Base 3.3.90

@@ -1,18 +1,5 @@
 libevview3.so.3 libevview3-3 #MINVER#
 * Build-Depends-Package: libevince-dev
- ev_annotation_window_get_annotation@Base 3.0.2
- ev_annotation_window_get_enable_spellchecking@Base 3.29.91
- ev_annotation_window_get_rectangle@Base 3.0.2
- ev_annotation_window_get_type@Base 3.0.2
- ev_annotation_window_grab_focus@Base 3.0.2
- ev_annotation_window_is_open@Base 3.0.2
- ev_annotation_window_new@Base 3.0.2
- ev_annotation_window_set_annotation@Base 3.0.2
- ev_annotation_window_set_enable_spellchecking@Base 3.29.91
- ev_annotation_window_set_rectangle@Base 3.0.2
- ev_annotation_window_ungrab_focus@Base 3.0.2
- ev_color_contrast_get_best_foreground_color@Base 3.37.3
- ev_color_contrast_get_most_readable_color@Base 3.37.3
  ev_document_model_get_continuous@Base 3.0.2
  ev_document_model_get_document@Base 3.0.2
  ev_document_model_get_dual_page@Base 3.0.2
@@ -45,12 +32,6 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_document_model_set_rtl@Base 3.35.1
  ev_document_model_set_scale@Base 3.0.2
  ev_document_model_set_sizing_mode@Base 3.0.2
- ev_form_field_accessible_get_field@Base 3.13.91
- ev_form_field_accessible_get_type@Base 3.13.91
- ev_form_field_accessible_new@Base 3.13.91
- ev_form_field_accessible_update_state@Base 3.13.91
- ev_image_accessible_get_type@Base 3.13.91
- ev_image_accessible_new@Base 3.13.91
  ev_job_annots_get_type@Base 3.0.2
  ev_job_annots_new@Base 3.0.2
  ev_job_attachments_get_type@Base 3.0.2
@@ -80,6 +61,14 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_job_links_get_model@Base 3.5.92
  ev_job_links_get_type@Base 3.0.2
  ev_job_links_new@Base 3.0.2
+ ev_job_load_fd_get_type@Base 42~beta
+ ev_job_load_fd_new@Base 42~beta
+ ev_job_load_fd_new_take@Base 42~beta
+ ev_job_load_fd_set_fd@Base 42~beta
+ ev_job_load_fd_set_load_flags@Base 42~beta
+ ev_job_load_fd_set_mime_type@Base 42~beta
+ ev_job_load_fd_set_password@Base 42~beta
+ ev_job_load_fd_take_fd@Base 42~beta
  ev_job_load_get_type@Base 3.0.2
  ev_job_load_gfile_get_type@Base 3.5.2
  ev_job_load_gfile_new@Base 3.5.2
@@ -92,6 +81,7 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_job_load_stream_get_type@Base 3.5.2
  ev_job_load_stream_new@Base 3.5.2
  ev_job_load_stream_set_load_flags@Base 3.5.2
+ ev_job_load_stream_set_mime_type@Base 42~beta
  ev_job_load_stream_set_password@Base 3.5.2
  ev_job_load_stream_set_stream@Base 3.5.2
  ev_job_page_data_flags_get_type@Base 3.0.2
@@ -120,50 +110,7 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_job_thumbnail_new_with_target_size@Base 3.13.91
  ev_job_thumbnail_set_has_frame@Base 3.7.90
  ev_job_thumbnail_set_output_format@Base 3.13.91
- ev_link_accessible_get_type@Base 3.7.90
- ev_link_accessible_new@Base 3.7.90
- ev_media_player_get_media@Base 3.18.0
- ev_media_player_get_type@Base 3.18.0
- ev_media_player_new@Base 3.18.0
- ev_page_accessible_get_accessible_for_mapping@Base 3.13.91
- ev_page_accessible_get_page@Base 3.12.1
- ev_page_accessible_get_type@Base 3.12.1
- ev_page_accessible_get_view@Base 3.12.1
- ev_page_accessible_get_view_accessible@Base 3.12.1
- ev_page_accessible_new@Base 3.12.1
- ev_page_accessible_update_element_state@Base 3.13.91
- ev_page_cache_ensure_page@Base 3.12.1
- ev_page_cache_get_annot_mapping@Base 3.0.2
- ev_page_cache_get_flags@Base 3.0.2
- ev_page_cache_get_form_field_mapping@Base 3.0.2
- ev_page_cache_get_image_mapping@Base 3.0.2
- ev_page_cache_get_link_mapping@Base 3.0.2
- ev_page_cache_get_media_mapping@Base 3.18.0
- ev_page_cache_get_text@Base 3.0.2
- ev_page_cache_get_text_attrs@Base 3.10.0
- ev_page_cache_get_text_layout@Base 3.0.2
- ev_page_cache_get_text_log_attrs@Base 3.10.0
- ev_page_cache_get_text_mapping@Base 3.0.2
- ev_page_cache_get_type@Base 3.0.2
- ev_page_cache_is_page_cached@Base 3.13.91
- ev_page_cache_mark_dirty@Base 3.0.2
- ev_page_cache_new@Base 3.0.2
- ev_page_cache_set_flags@Base 3.0.2
- ev_page_cache_set_page_range@Base 3.0.2
  ev_page_layout_get_type@Base 3.7.90
- ev_pixbuf_cache_clear@Base 3.0.2
- ev_pixbuf_cache_get_selection_list@Base 3.0.2
- ev_pixbuf_cache_get_selection_region@Base 3.10.0
- ev_pixbuf_cache_get_selection_surface@Base 3.0.2
- ev_pixbuf_cache_get_surface@Base 3.0.2
- ev_pixbuf_cache_get_type@Base 3.0.2
- ev_pixbuf_cache_new@Base 3.0.2
- ev_pixbuf_cache_reload_page@Base 3.0.2
- ev_pixbuf_cache_set_inverted_colors@Base 3.0.2
- ev_pixbuf_cache_set_max_size@Base 3.0.2
- ev_pixbuf_cache_set_page_range@Base 3.0.2
- ev_pixbuf_cache_set_selection_list@Base 3.0.2
- ev_pixbuf_cache_style_changed@Base 3.0.2
  ev_print_operation_cancel@Base 3.0.2
  ev_print_operation_exists_for_document@Base 3.0.2
  ev_print_operation_get_default_page_setup@Base 3.0.2
@@ -185,34 +132,6 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_stock_icons_init@Base 3.0.2
  ev_stock_icons_set_screen@Base 3.0.2
  ev_stock_icons_shutdown@Base 3.0.2
- ev_timeline_get_duration@Base 3.0.2
- ev_timeline_get_fps@Base 3.0.2
- ev_timeline_get_loop@Base 3.0.2
- ev_timeline_get_progress@Base 3.0.2
- ev_timeline_get_type@Base 3.0.2
- ev_timeline_is_running@Base 3.0.2
- ev_timeline_new@Base 3.0.2
- ev_timeline_pause@Base 3.0.2
- ev_timeline_rewind@Base 3.0.2
- ev_timeline_set_duration@Base 3.0.2
- ev_timeline_set_fps@Base 3.0.2
- ev_timeline_set_loop@Base 3.0.2
- ev_timeline_start@Base 3.0.2
- ev_transition_animation_get_type@Base 3.0.2
- ev_transition_animation_new@Base 3.0.2
- ev_transition_animation_paint@Base 3.0.2
- ev_transition_animation_ready@Base 3.0.2
- ev_transition_animation_set_dest_surface@Base 3.0.2
- ev_transition_animation_set_origin_surface@Base 3.0.2
- ev_view_accessible_get_n_pages@Base 3.12.1
- ev_view_accessible_get_relevant_page@Base 3.12.1
- ev_view_accessible_get_type@Base 3.7.90
- ev_view_accessible_is_doc_rect_showing@Base 3.13.91
- ev_view_accessible_new@Base 3.7.90
- ev_view_accessible_set_focused_element@Base 3.13.91
- ev_view_accessible_set_model@Base 3.10.0
- ev_view_accessible_set_page_range@Base 3.12.2
- ev_view_accessible_update_element_state@Base 3.13.91
  ev_view_add_text_markup_annotation_for_selected_text@Base 3.29.91
  ev_view_autoscroll_start@Base 3.0.2
  ev_view_autoscroll_stop@Base 3.0.2
@@ -222,7 +141,7 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_view_cancel_add_annotation@Base 3.0.2
  ev_view_copy@Base 3.0.2
  ev_view_copy_link_address@Base 3.0.2
- ev_view_cursor_new@Base 3.0.2
+ ev_view_current_event_is_type@Base 42~beta
  ev_view_find_cancel@Base 3.0.2
  ev_view_find_changed@Base 3.0.2
  ev_view_find_next@Base 3.0.2
