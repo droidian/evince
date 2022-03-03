@@ -1,6 +1,5 @@
-/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8; c-indent-level: 8 -*- */
 /*
- *  Copyright (C) 2005, Red Hat, Inc. 
+ *  Copyright (C) 2005, Red Hat, Inc.
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,15 +17,15 @@
  *
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef EV_DOCUMENT_FACTORY_H
-#define EV_DOCUMENT_FACTORY_H
-
 #include <gtk/gtk.h>
 
+#include "ev-macros.h"
 #include "ev-document.h"
 
 G_BEGIN_DECLS
@@ -34,22 +33,31 @@ G_BEGIN_DECLS
 gboolean   _ev_document_factory_init         (void);
 void       _ev_document_factory_shutdown     (void);
 
+EV_PUBLIC
 EvDocument* ev_document_factory_get_document (const char *uri, GError **error);
+EV_PUBLIC
 EvDocument *ev_document_factory_get_document_full (const char           *uri,
 						   EvDocumentLoadFlags   flags,
 						   GError              **error);
+EV_PUBLIC
 EvDocument* ev_document_factory_get_document_for_gfile (GFile *file,
                                                         EvDocumentLoadFlags flags,
                                                         GCancellable *cancellable,
                                                         GError **error);
+EV_PUBLIC
 EvDocument* ev_document_factory_get_document_for_stream (GInputStream *stream,
                                                          const char *mime_type,
                                                          EvDocumentLoadFlags flags,
                                                          GCancellable *cancellable,
                                                          GError **error);
+EV_PUBLIC
+EvDocument* ev_document_factory_get_document_for_fd (int fd,
+                                                     const char *mime_type,
+                                                     EvDocumentLoadFlags flags,
+                                                     GCancellable *cancellable,
+                                                     GError **error);
 
+EV_PUBLIC
 void 	    ev_document_factory_add_filters  (GtkWidget *chooser, EvDocument *document);
 
 G_END_DECLS
-
-#endif

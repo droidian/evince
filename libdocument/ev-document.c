@@ -1,7 +1,7 @@
-/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8; c-indent-level: 8 -*- */
 /*
  *  Copyright (C) 2009 Carlos Garcia Campos
  *  Copyright (C) 2004 Marco Pesenti Gritti
+ *  Copyright © 2018 Christian Persch
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -23,6 +23,9 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <fcntl.h>
+#include <sys/stat.h>
+#include <errno.h>
 
 #include "ev-document.h"
 #include "ev-document-misc.h"
@@ -102,7 +105,7 @@ ev_document_impl_get_page (EvDocument *document,
 static EvDocumentInfo *
 ev_document_impl_get_info (EvDocument *document)
 {
-	return g_new0 (EvDocumentInfo, 1);
+	return ev_document_info_new ();
 }
 
 static void
@@ -564,13 +567,99 @@ ev_document_load_gfile (EvDocument         *document,
 }
 
 /**
+ * ev_document_load_fd:
+ * @document: a #EvDocument
+ * @fd: a file descriptor
+ * @flags: flags from #EvDocumentLoadFlags
+ * @cancellable: (allow-none): a #GCancellable, or %NULL
+ * @error: (allow-none): a #GError location to store an error, or %NULL
+ *
+ * Synchronously loads the document from @fd, which must refer to
+ * a regular file.
+ *
+ * Note that this function takes ownership of @fd; you must not ever
+ * operate on it again. It will be closed automatically if the document
+ * is destroyed, or if this function returns %NULL.
+ *
+ * See ev_document_load() for more information.
+ *
+ * Returns: %TRUE if loading succeeded, or %FALSE on error with @error filled in
+ *
+ * Since: 42.0
+ */
+gboolean
+ev_document_load_fd (EvDocument         *document,
+                     int                 fd,
+                     EvDocumentLoadFlags flags,
+                     GCancellable       *cancellable,
+                     GError            **error)
+{
+        EvDocumentClass *klass;
+        struct stat statbuf;
+        int fd_flags;
+
+        g_return_val_if_fail (EV_IS_DOCUMENT (document), FALSE);
+        g_return_val_if_fail (fd != -1, FALSE);
+        g_return_val_if_fail (cancellable == NULL || G_IS_CANCELLABLE (cancellable), FALSE);
+        g_return_val_if_fail (error == NULL || *error == NULL, FALSE);
+
+        klass = EV_DOCUMENT_GET_CLASS (document);
+        if (!klass->load_fd) {
+                g_set_error_literal (error, G_IO_ERROR, G_IO_ERROR_NOT_SUPPORTED,
+                                     "Backend does not support loading from file descriptor");
+                close (fd);
+                return FALSE;
+        }
+
+        if (fstat(fd, &statbuf) == -1 ||
+            (fd_flags = fcntl (fd, F_GETFL, &flags)) == -1) {
+                int errsv = errno;
+                g_set_error_literal (error, G_FILE_ERROR,
+                                     g_file_error_from_errno (errsv),
+                                     g_strerror (errsv));
+                close (fd);
+                return FALSE;
+        }
+
+        if (!S_ISREG(statbuf.st_mode)) {
+                g_set_error_literal (error, G_FILE_ERROR, G_FILE_ERROR_BADF,
+                                     "Not a regular file.");
+                close (fd);
+                return FALSE;
+        }
+
+        switch (fd_flags & O_ACCMODE) {
+        case O_RDONLY:
+        case O_RDWR:
+                break;
+        case O_WRONLY:
+        default:
+                g_set_error_literal (error, G_FILE_ERROR, G_FILE_ERROR_BADF,
+                                     "Not a readable file descriptor.");
+                close (fd);
+                return FALSE;
+        }
+
+        if (!klass->load_fd (document, fd, flags, cancellable, error))
+                return FALSE;
+
+        document->priv->info = _ev_document_get_info (document);
+        document->priv->n_pages = _ev_document_get_n_pages (document);
+
+        if (!(flags & EV_DOCUMENT_LOAD_FLAG_NO_CACHE))
+                ev_document_setup_cache (document);
+
+        return TRUE;
+}
+
+/**
  * ev_document_save:
  * @document: a #EvDocument
  * @uri: the target URI
  * @error: a #GError location to store an error, or %NULL
  *
  * Saves @document to @uri.
- * 
+ *
  * Returns: %TRUE on success, or %FALSE on error with @error filled in
  */
 gboolean
@@ -1164,121 +1253,6 @@ ev_source_link_free (EvSourceLink *link)
 
 	g_free (link->filename);
 	g_slice_free (EvSourceLink, link);
-}
-
-/* EvDocumentInfo */
-G_DEFINE_BOXED_TYPE (EvDocumentInfo, ev_document_info, ev_document_info_copy, ev_document_info_free)
-
-EvDocumentInfo *
-ev_document_info_copy (EvDocumentInfo *info)
-{
-	EvDocumentInfo *copy;
-	
-	g_return_val_if_fail (info != NULL, NULL);
-
-	copy = g_new0 (EvDocumentInfo, 1);
-	copy->title = g_strdup (info->title);
-	copy->format = g_strdup (info->format);
-	copy->author = g_strdup (info->author);
-	copy->subject = g_strdup (info->subject);
-	copy->keywords = g_strdup (info->keywords);
-	copy->security = g_strdup (info->security);
-	copy->creator = g_strdup (info->creator);
-	copy->producer = g_strdup (info->producer);
-	copy->linearized = g_strdup (info->linearized);
-	
-	copy->creation_date = info->creation_date;
-	copy->modified_date = info->modified_date;
-	copy->layout = info->layout;
-	copy->mode = info->mode;
-	copy->ui_hints = info->ui_hints;
-	copy->permissions = info->permissions;
-	copy->n_pages = info->n_pages;
-	copy->license = ev_document_license_copy (info->license);
-
-	copy->fields_mask = info->fields_mask;
-
-	return copy;
-}
-
-void
-ev_document_info_free (EvDocumentInfo *info)
-{
-	if (info == NULL)
-		return;
-
-	g_free (info->title);
-	g_free (info->format);
-	g_free (info->author);
-	g_free (info->subject);
-	g_free (info->keywords);
-	g_free (info->creator);
-	g_free (info->producer);
-	g_free (info->linearized);
-	g_free (info->security);
-	ev_document_license_free (info->license);
-
-	g_free (info);
-}
-
-/* EvDocumentLicense */
-G_DEFINE_BOXED_TYPE (EvDocumentLicense, ev_document_license, ev_document_license_copy, ev_document_license_free)
-
-EvDocumentLicense *
-ev_document_license_new (void)
-{
-	return g_new0 (EvDocumentLicense, 1);
-}
-
-EvDocumentLicense *
-ev_document_license_copy (EvDocumentLicense *license)
-{
-	EvDocumentLicense *new_license;
-
-	if (!license)
-		return NULL;
-
-	new_license = ev_document_license_new ();
-
-	if (license->text)
-		new_license->text = g_strdup (license->text);
-	if (license->uri)
-		new_license->uri = g_strdup (license->uri);
-	if (license->web_statement)
-		new_license->web_statement = g_strdup (license->web_statement);
-
-	return new_license;
-}
-
-void
-ev_document_license_free (EvDocumentLicense *license)
-{
-	if (!license)
-		return;
-
-	g_free (license->text);
-	g_free (license->uri);
-	g_free (license->web_statement);
-
-	g_free (license);
-}
-
-const gchar *
-ev_document_license_get_text (EvDocumentLicense *license)
-{
-	return license->text;
-}
-
-const gchar *
-ev_document_license_get_uri (EvDocumentLicense *license)
-{
-	return license->uri;
-}
-
-const gchar *
-ev_document_license_get_web_statement (EvDocumentLicense *license)
-{
-	return license->web_statement;
 }
 
 /* EvRectangle */

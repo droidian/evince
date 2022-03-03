@@ -130,10 +130,12 @@ ev_annotation_window_set_color (EvAnnotationWindow *window,
 	g_autoptr (GError)  error = NULL;
 	g_autoptr (GdkRGBA) icon_color = ev_color_contrast_get_best_foreground_color (color);
 	g_autofree char    *icon_color_str = gdk_rgba_to_string (icon_color);
-	css_data = g_strdup_printf ("button {border-color: %1$s; color: %2$s; -gtk-icon-shadow:0 0; box-shadow:0 0;}\n\
-				     button:hover {background: lighter(%1$s); border-color: darker(%1$s);}\n\
-				     button:active {background: darker(%1$s);}\n\
-				     evannotationwindow.background, button {background: %1$s}",
+	css_data = g_strdup_printf ("button {border-color: %1$s; color: %2$s; -gtk-icon-shadow:0 0; box-shadow:0 0;}\n"
+				    "button:hover {background: lighter(%1$s); border-color: darker(%1$s);}\n"
+				    "button:active {background: darker(%1$s);}\n"
+				    "evannotationwindow.background { color: %2$s; }\n"
+				    "evannotationwindow.background:backdrop { color: alpha(%2$s, .75); }\n"
+				    "evannotationwindow.background, button {background: %1$s}",
 				    rgba_str, icon_color_str);
 
 	gtk_css_provider_load_from_data (css_provider, css_data, strlen (css_data), &error);
@@ -574,9 +576,7 @@ ev_annotation_window_class_init (EvAnnotationWindowClass *klass)
 	gtk_widget_class->focus_out_event = ev_annotation_window_focus_out_event;
         gtk_widget_class->key_press_event = ev_annotation_window_key_press_event;
 
-#if GTK_CHECK_VERSION(3, 20, 0)
 	gtk_widget_class_set_css_name (gtk_widget_class, "evannotationwindow");
-#endif
 	g_object_class_install_property (g_object_class,
 					 PROP_ANNOTATION,
 					 g_param_spec_object ("annotation",

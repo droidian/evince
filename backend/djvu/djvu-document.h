@@ -16,9 +16,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef __DJVU_DOCUMENT_H__
-#define __DJVU_DOCUMENT_H__
+#pragma once
 
+#include "ev-macros.h"
 #include "ev-document.h"
 
 G_BEGIN_DECLS
@@ -31,8 +31,7 @@ typedef struct _DjvuDocument DjvuDocument;
 
 GType                 djvu_document_get_type  (void) G_GNUC_CONST;
 
-G_MODULE_EXPORT GType register_evince_backend (GTypeModule *module);
-     
-G_END_DECLS
+EV_PUBLIC
+GType                 register_evince_backend (GTypeModule *module);
 
-#endif /* __DJVU_DOCUMENT_H__ */
+G_END_DECLS

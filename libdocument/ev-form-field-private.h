@@ -18,25 +18,24 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef EV_FORM_FIELD_PRIVATE_H
-#define EV_FORM_FIELD_PRIVATE_H
-
 //#include <glib-object.h>
 
+#include "ev-macros.h"
 #include "ev-form-field.h"
 
 G_BEGIN_DECLS
 
 /* EvFormField base class */
+EV_PRIVATE
 gchar *ev_form_field_get_alternate_name (EvFormField *field);
+EV_PRIVATE
 void   ev_form_field_set_alternate_name (EvFormField *field,
 					 gchar       *alternative_text);
 
 G_END_DECLS
-
-#endif /* !EV_FORM_FIELD_PRIVATE_H */
-

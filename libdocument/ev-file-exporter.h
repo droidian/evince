@@ -20,15 +20,15 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef EV_FILE_EXPORTER_H
-#define EV_FILE_EXPORTER_H
-
 #include <glib-object.h>
 
+#include "ev-macros.h"
 #include "ev-render-context.h"
 
 G_BEGIN_DECLS
@@ -88,16 +88,21 @@ struct _EvFileExporterInterface {
 	EvFileExporterCapabilities (* get_capabilities) (EvFileExporter        *exporter);
 };
 
+EV_PUBLIC
 GType                      ev_file_exporter_get_type         (void) G_GNUC_CONST;
+EV_PUBLIC
 void                       ev_file_exporter_begin            (EvFileExporter        *exporter,
 							      EvFileExporterContext *fc);
+EV_PUBLIC
 void                       ev_file_exporter_begin_page       (EvFileExporter        *exporter);
+EV_PUBLIC
 void                       ev_file_exporter_do_page          (EvFileExporter        *exporter,
 							      EvRenderContext       *rc);
+EV_PUBLIC
 void                       ev_file_exporter_end_page         (EvFileExporter        *exporter);
+EV_PUBLIC
 void                       ev_file_exporter_end              (EvFileExporter        *exporter);
+EV_PUBLIC
 EvFileExporterCapabilities ev_file_exporter_get_capabilities (EvFileExporter        *exporter);
 
 G_END_DECLS
-
-#endif

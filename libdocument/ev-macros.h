@@ -16,8 +16,7 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef EV_MACROS_H
-#define EV_MACROS_H
+#pragma once
 
 #if defined(EV_DISABLE_DEPRECATION_WARNINGS) || defined(EVINCE_COMPILATION)
 #define EV_DEPRECATED
@@ -29,4 +28,13 @@
 #define EV_UNAVAILABLE(maj,min) G_UNAVAILABLE(maj,min)
 #endif
 
-#endif /* #ifndef EV_MACROS_H */
+#ifdef __has_attribute
+#if __has_attribute(__visibility__)
+#define EV_PUBLIC __attribute__((__visibility__("default"))) extern
+#endif
+#endif
+#ifndef EV_PUBLIC
+#define EV_PUBLIC extern
+#endif
+
+#define EV_PRIVATE EV_PUBLIC

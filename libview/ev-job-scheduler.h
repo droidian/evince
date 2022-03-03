@@ -18,14 +18,15 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_VIEW_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-view.h> can be included directly."
 #endif
 
-#ifndef EV_JOB_SCHEDULER_H
-#define EV_JOB_SCHEDULER_H
-
 #include <glib.h>
+
+#include <evince-document.h>
 #include "ev-jobs.h"
 
 G_BEGIN_DECLS
@@ -38,12 +39,13 @@ typedef enum {
 	EV_JOB_N_PRIORITIES
 } EvJobPriority;
 
+EV_PUBLIC
 void   ev_job_scheduler_push_job               (EvJob        *job,
                                                 EvJobPriority priority);
+EV_PUBLIC
 void   ev_job_scheduler_update_job             (EvJob        *job,
                                                 EvJobPriority priority);
+EV_PUBLIC
 EvJob *ev_job_scheduler_get_running_thread_job (void);
 
 G_END_DECLS
-
-#endif /* EV_JOB_SCHEDULER_H */

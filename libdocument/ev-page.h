@@ -17,14 +17,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef EV_PAGE_H
-#define EV_PAGE_H
 
 #include <glib-object.h>
+
+#include "ev-macros.h"
 
 G_BEGIN_DECLS
 
@@ -54,10 +56,10 @@ struct _EvPageClass {
 	GObjectClass base_class;
 };
 
+EV_PUBLIC
 GType   ev_page_get_type (void) G_GNUC_CONST;
 
+EV_PUBLIC
 EvPage *ev_page_new      (gint index);
 
 G_END_DECLS
-
-#endif /* EV_PAGE_H */

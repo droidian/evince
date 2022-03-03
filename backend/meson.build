@@ -11,9 +11,6 @@ backends_cflags = [
   '-DGTK_MULTIHEAD_SAFE',
 ]
 
-backends_symbol_map = join_paths(meson.current_source_dir(), 'backend-symbol.map')
-backends_ldflags = cc.get_supported_link_arguments('-Wl,--version-script,' + backends_symbol_map)
-
 foreach backend, backend_mime_types: backends
   backend_name = backend + 'document'
 
@@ -53,7 +50,6 @@ foreach backend, backend_mime_types: backends
   )
 
   i18n.merge_file(
-    appstream,
     input: appstream_in,
     output: appstream,
     po_dir: po_dir,

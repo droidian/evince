@@ -17,8 +17,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef __EV_ARCHIVE_H__
-#define __EV_ARCHIVE_H__
+#pragma once
 
 #include <glib-object.h>
 
@@ -30,7 +29,6 @@ G_DECLARE_FINAL_TYPE (EvArchive, ev_archive, EV, ARCHIVE, GObject)
 typedef enum {
 	EV_ARCHIVE_TYPE_NONE = 0,
 	EV_ARCHIVE_TYPE_RAR,
-	EV_ARCHIVE_TYPE_RAR5,
 	EV_ARCHIVE_TYPE_ZIP,
 	EV_ARCHIVE_TYPE_7Z,
 	EV_ARCHIVE_TYPE_TAR
@@ -45,6 +43,7 @@ gboolean       ev_archive_open_filename      (EvArchive     *archive,
 					      GError       **error);
 gboolean       ev_archive_read_next_header   (EvArchive     *archive,
 					      GError       **error);
+gboolean       ev_archive_at_entry           (EvArchive     *archive);
 const char    *ev_archive_get_entry_pathname (EvArchive     *archive);
 gint64         ev_archive_get_entry_size     (EvArchive     *archive);
 gboolean       ev_archive_get_entry_is_encrypted (EvArchive *archive);
@@ -55,5 +54,3 @@ gssize         ev_archive_read_data          (EvArchive     *archive,
 void           ev_archive_reset              (EvArchive     *archive);
 
 G_END_DECLS
-
-#endif /* __EV_ARCHIVE_H__ */

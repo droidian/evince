@@ -1,9 +1,14 @@
 project(
   'evince', ['c'],
-  version: '41.3',
-  license: 'GPL2+',
-  default_options: 'buildtype=debugoptimized',
+  version: '42.beta',
+  license: 'GPL-2.0-or-later',
   meson_version: '>= 0.53.0',
+  default_options: [
+    'buildtype=debugoptimized',
+    'libhandy:vapi=false',
+    'libhandy:introspection=disabled',
+    'libhandy:tests=false',
+  ]
 )
 
 if get_option('development')
@@ -74,6 +79,7 @@ ev_debug = get_option('buildtype').contains('debug')
 cc = meson.get_compiler('c')
 
 config_h = configuration_data()
+config_h.set10('_GNU_SOURCE', true)
 
 # package
 config_h.set_quoted('PACKAGE_ICON_NAME', app_id)
@@ -83,11 +89,6 @@ config_h.set_quoted('VERSION', ev_version)
 # i18n
 config_h.set_quoted('GETTEXT_PACKAGE', ev_name)
 config_h.set('ENABLE_NLS', true)
-
-# portability checks
-# FIXME: there is no use of backtrace in the code
-# for backtrace()
-cc.has_header('execinfo.h')
 
 # Support for nl_langinfo (_NL_MEASUREMENT_MEASUREMENT) (optional)
 langinfo_measurement_src = '''
@@ -101,7 +102,9 @@ config_h.set('HAVE__NL_MEASUREMENT_MEASUREMENT', cc.compiles(langinfo_measuremen
              description: 'Define if _NL_MEASUREMENT_MEASUREMENT is available')
 
 # compiler flags
-common_flags = ['-DHAVE_CONFIG_H']
+common_flags = ['-DHAVE_CONFIG_H'] + cc.get_supported_arguments([
+  '-Wno-deprecated-declarations',
+])
 
 common_ldflags = []
 
@@ -134,9 +137,6 @@ endif
 
 add_project_arguments(common_flags, language: 'c')
 
-lib_symbol_map = join_paths(meson.current_source_dir(), 'lib-symbol.map')
-lib_ldflags = cc.get_supported_link_arguments('-Wl,--version-script,' + lib_symbol_map)
-
 gnome = import('gnome')
 i18n = import('i18n')
 pkg = import('pkgconfig')
@@ -150,7 +150,7 @@ top_inc = include_directories('.')
 
 glib_req_version = '>= 2.44.0'
 gtk_req_version = '>= 3.22.0'
-hdy_req_version = '>= 1.0.0'
+hdy_req_version = '>= 1.5.0'
 
 gdk_pixbuf_dep = dependency('gdk-pixbuf-2.0', version: '>= 2.40.0')
 config_h.set_quoted('EXTRA_GDK_PIXBUF_LOADERS_DIR',
@@ -166,6 +166,10 @@ gthread_dep = dependency('gthread-2.0', version: glib_req_version)
 hdy_dep = dependency('libhandy-1', version: hdy_req_version, fallback: ['libhandy', 'libhandy_dep'])
 
 m_dep = cc.find_library('m')
+
+gidocgen_dep = dependency('gi-docgen', version: '>= 2021.1',
+			  fallback: ['gi-docgen', 'dummy_dep'],
+			  required: get_option('gtk_doc'))
 
 # Although GTK+ 3.10 includes hi-dpi functionality, it does not require a cairo with
 # cairo_surface_set_device_scale(), which we also need if we're to support hi-dpi,
@@ -200,7 +204,6 @@ if ev_platform == 'gnome'
   if enable_dbus
     # Check for dbus service dir
     dbus_service_dir = dependency('dbus-1').get_pkgconfig_variable('session_bus_services_dir', define_variable: ['datadir', ev_datadir])
-    gio_unix_dep = dependency('gio-unix-2.0', version: glib_req_version)
   endif
   config_h.set('ENABLE_DBUS', enable_dbus)
 
@@ -213,12 +216,21 @@ if ev_platform == 'gnome'
   gtk_unix_print_dep = dependency('gtk+-unix-print-3.0', version: gtk_req_version, required: get_option('gtk_unix_print'))
   enable_gtk_unix_print = gtk_unix_print_dep.found()
   config_h.set10('GTKUNIXPRINT_ENABLED', enable_gtk_unix_print)
+
+  if enable_dbus or enable_gtk_unix_print
+    gio_unix_dep = dependency('gio-unix-2.0', version: glib_req_version)
+  else
+    gio_unix_dep = dependency('', required: false)
+  endif
+
 else
   message('Evince has a soft run-time dependency on hicolor-icon-theme. You are advised to have this theme installed when running Evince.')
   enable_nautilus = false
   enable_dbus = false
   enable_keyring = false
   enable_gtk_unix_print = false
+  gio_unix_dep = dependency('', required: false)
+  gtk_unix_print_dep = dependency('', required: false)
 endif
 
 # *** GObject Introspection ***
@@ -286,7 +298,7 @@ mime_types_list = {
   'djvu': [
     'application/x-ext-djv',
     'application/x-ext-djvu',
-    'image/vnd.djvu+multipage',
+    'image/vnd.djvu',
   ],
   'dvi': [
     'application/x-bzdvi',
@@ -337,7 +349,7 @@ else
 endif
 
 # *** Comic Book ***
-libarchive_req_version = '>= 3.2.0'
+libarchive_req_version = '>= 3.6.0'
 libarchive_dep = dependency('libarchive', version: libarchive_req_version, required: get_option('comics'))
 enable_comics = libarchive_dep.found()
 if enable_comics
@@ -360,7 +372,7 @@ endif
 
 # *** DVI ***
 kpathsea_dep = cc.find_library('kpathsea', required: get_option('dvi'))
-enable_dvi = libspectre_dep.found() and kpathsea_dep.found() and cc.has_function('kpse_init_prog', dependencies: kpathsea_dep)
+enable_dvi = kpathsea_dep.found() and cc.has_function('kpse_init_prog', dependencies: kpathsea_dep)
 if enable_dvi
   config_h.set10('STDC_HEADERS', true)
 
@@ -380,18 +392,14 @@ if enable_dvi
     config_h.set('SIZEOF_' + type[1], cc.sizeof(type[0]))
   endforeach
 
-  t1_dep = cc.find_library('t1', required: get_option('t1lib'))
-  enable_t1lib = t1_dep.found() and cc.has_function('T1_InitLib', dependencies: t1_dep)
-  config_h.set('WITH_TYPE1_FONTS', enable_t1lib)
-
   backends += {'dvi': mime_types_list.get('dvi')}
   evince_mime_types += mime_types_list.get('dvi')
 elif get_option('dvi').auto()
-  warning('Dvi support is disabled since kpathsea library or libspectre are not found. Check your installation.')
+  warning('Dvi support is disabled since kpathsea library was not found. Check your installation.')
 endif
 
 # *** PDF ***
-poppler_req_version = '>= 0.86.0'
+poppler_req_version = '>= 22.02.0'
 poppler_glib_dep = dependency('poppler-glib', version: poppler_req_version, required: get_option('pdf'))
 
 libxml_req_version = '>= 2.5.0'
@@ -498,7 +506,6 @@ install_headers(
 appdata = ev_namespace + '.appdata.xml'
 
 i18n.merge_file(
-  appdata,
   input: appdata + '.in',
   output: appdata,
   po_dir: po_dir,

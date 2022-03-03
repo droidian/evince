@@ -18,16 +18,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef EV_DOCUMENT_MEDIA_H
-#define EV_DOCUMENT_MEDIA_H
-
 #include <glib-object.h>
 #include <glib.h>
 
+#include "ev-macros.h"
 #include "ev-document.h"
 #include "ev-media.h"
 #include "ev-mapping-list.h"
@@ -52,10 +52,10 @@ struct _EvDocumentMediaInterface {
                                               EvPage          *page);
 };
 
+EV_PUBLIC
 GType          ev_document_media_get_type          (void) G_GNUC_CONST;
+EV_PUBLIC
 EvMappingList *ev_document_media_get_media_mapping (EvDocumentMedia *document_media,
                                                     EvPage          *page);
 
 G_END_DECLS
-
-#endif /* EV_DOCUMENT_MEDIA_H */

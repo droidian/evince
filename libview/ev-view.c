@@ -59,6 +59,7 @@ enum {
 	SIGNAL_SELECTION_CHANGED,
 	SIGNAL_SYNC_SOURCE,
 	SIGNAL_ANNOT_ADDED,
+	SIGNAL_ANNOT_CANCEL_ADD,
 	SIGNAL_ANNOT_CHANGED,
 	SIGNAL_ANNOT_REMOVED,
 	SIGNAL_LAYERS_CHANGED,
@@ -302,6 +303,10 @@ static gboolean	ev_view_page_fits			       (EvView         *view,
 /*** Cursors ***/
 static void       ev_view_set_cursor                         (EvView             *view,
 							      EvViewCursor        new_cursor);
+static void       handle_cursor_over_link                    (EvView *view,
+							      EvLink *link,
+							      gint x,
+							      gint y);
 static void       ev_view_handle_cursor_over_xy              (EvView *view,
 							      gint x,
 							      gint y);
@@ -2182,6 +2187,128 @@ tip_from_link (EvView *view, EvLink *link)
 	return msg;
 }
 
+gboolean
+ev_view_current_event_is_type (EvView *view, GdkEventType type)
+{
+	GdkEvent *event;
+	gboolean ret = FALSE;
+
+	event = gtk_get_current_event ();
+	if (event) {
+		if (event->type == type &&
+		    gdk_event_get_window (event) == gtk_widget_get_window (GTK_WIDGET (view))) {
+			ret = TRUE;
+		}
+		gdk_event_free (event);
+	}
+	return ret;
+}
+
+static void
+handle_cursor_over_link (EvView *view, EvLink *link, gint x, gint y)
+{
+	GdkRectangle     link_area;
+	EvLinkAction    *action;
+	EvLinkDest      *dest;
+	EvLinkDestType   type;
+	GtkWidget       *popover, *spinner;
+	GdkEvent        *event;
+	cairo_surface_t *page_surface = NULL;
+	guint            link_dest_page;
+	EvPoint          link_dest_doc;
+	GdkPoint         link_dest_view;
+	gint             device_scale = 1;
+	gboolean         from_motion = FALSE;
+
+	ev_view_set_cursor (view, EV_VIEW_CURSOR_LINK);
+
+	if (link == view->link_preview.link)
+		return;
+
+	/* Display thumbnail, if applicable */
+	action = ev_link_get_action (link);
+	if (!action)
+		return;
+
+	dest = ev_link_action_get_dest (action);
+	if (!dest)
+		return;
+
+	event = gtk_get_current_event ();
+	if (event) {
+		if (event->type == GDK_MOTION_NOTIFY &&
+			gdk_event_get_window (event) == gtk_widget_get_window (GTK_WIDGET (view))) {
+			from_motion = TRUE;
+		}
+		gdk_event_free (event);
+	}
+	/* Show preview popups only for motion events - Issue #1666 */
+	if (!from_motion)
+		return;
+
+	type = ev_link_dest_get_dest_type (dest);
+	if (type == EV_LINK_DEST_TYPE_NAMED) {
+		dest = ev_document_links_find_link_dest (EV_DOCUMENT_LINKS (view->document),
+							 ev_link_dest_get_named_dest (dest));
+	}
+
+	ev_view_link_preview_popover_cleanup (view);
+
+	/* Init popover */
+	view->link_preview.popover = popover = gtk_popover_new (GTK_WIDGET (view));
+	get_link_area (view, x, y, link, &link_area);
+	gtk_popover_set_pointing_to (GTK_POPOVER (popover), &link_area);
+	gtk_popover_set_modal (GTK_POPOVER (popover), FALSE);
+	g_signal_connect_swapped (popover, "motion-notify-event",
+				  G_CALLBACK (link_preview_popover_motion_notify),
+				  view);
+
+	spinner = gtk_spinner_new ();
+	gtk_spinner_start (GTK_SPINNER (spinner));
+	gtk_container_add (GTK_CONTAINER (popover) , spinner);
+	gtk_widget_show (spinner);
+
+	/* Start thumbnailing job async */
+	link_dest_page = ev_link_dest_get_page (dest);
+#ifdef HAVE_HIDPI_SUPPORT
+	device_scale = gtk_widget_get_scale_factor (GTK_WIDGET (view));
+#endif
+	view->link_preview.job = ev_job_thumbnail_new (view->document,
+						       link_dest_page,
+						       view->rotation,
+						       view->scale * device_scale);
+	ev_job_thumbnail_set_output_format (EV_JOB_THUMBNAIL (view->link_preview.job),
+					    EV_JOB_THUMBNAIL_SURFACE);
+
+	link_dest_doc.x = ev_link_dest_get_left (dest, NULL);
+	link_dest_doc.y = ev_link_dest_get_top (dest, NULL);
+	_ev_view_transform_doc_point_by_rotation_scale (view, link_dest_page,
+							&link_dest_doc, &link_dest_view);
+	view->link_preview.left = link_dest_view.x;
+	view->link_preview.top = link_dest_view.y;
+	view->link_preview.link = link;
+
+	page_surface = ev_pixbuf_cache_get_surface (view->pixbuf_cache, link_dest_page);
+
+	if (page_surface)
+		link_preview_show_thumbnail (page_surface, view);
+	else {
+		g_signal_connect (view->link_preview.job, "finished",
+				  G_CALLBACK (link_preview_job_finished_cb),
+				  view);
+		ev_job_scheduler_push_job (view->link_preview.job, EV_JOB_PRIORITY_LOW);
+	}
+
+	if (type == EV_LINK_DEST_TYPE_NAMED)
+		g_object_unref (dest);
+
+	view->link_preview.delay_timeout_id = g_timeout_add (LINK_PREVIEW_DELAY_MS,
+							     (GSourceFunc)link_preview_delayed_show,
+							     view);
+	g_source_set_name_by_id (view->link_preview.delay_timeout_id,
+				 "[evince] link_preview_timeout");
+}
+
 static void
 ev_view_handle_cursor_over_xy (EvView *view, gint x, gint y)
 {
@@ -2216,92 +2343,7 @@ ev_view_handle_cursor_over_xy (EvView *view, gint x, gint y)
 
 	link = ev_view_get_link_at_location (view, x, y);
 	if (link) {
-		GdkRectangle     link_area;
-		EvLinkAction    *action;
-		EvLinkDest      *dest;
-		EvLinkDestType   type;
-		GtkWidget       *popover, *spinner;
-		cairo_surface_t *page_surface = NULL;
-		guint            link_dest_page;
-		EvPoint          link_dest_doc;
-		GdkPoint         link_dest_view;
-		gint             device_scale = 1;
-
-		ev_view_set_cursor (view, EV_VIEW_CURSOR_LINK);
-
-		if (link == view->link_preview.link)
-			return;
-
-		/* Display thumbnail, if applicable */
-		action = ev_link_get_action (link);
-		if (!action)
-			return;
-
-		dest = ev_link_action_get_dest (action);
-		if (!dest)
-			return;
-
-		type = ev_link_dest_get_dest_type (dest);
-		if (type == EV_LINK_DEST_TYPE_NAMED) {
-			dest = ev_document_links_find_link_dest (EV_DOCUMENT_LINKS (view->document),
-								 ev_link_dest_get_named_dest (dest));
-		}
-
-		ev_view_link_preview_popover_cleanup (view);
-
-		/* Init popover */
-		view->link_preview.popover = popover = gtk_popover_new (GTK_WIDGET (view));
-		get_link_area (view, x, y, link, &link_area);
-		gtk_popover_set_pointing_to (GTK_POPOVER (popover), &link_area);
-		gtk_popover_set_modal (GTK_POPOVER (popover), FALSE);
-		g_signal_connect_swapped (popover, "motion-notify-event",
-					  G_CALLBACK (link_preview_popover_motion_notify),
-					  view);
-
-		spinner = gtk_spinner_new ();
-		gtk_spinner_start (GTK_SPINNER (spinner));
-		gtk_container_add (GTK_CONTAINER (popover) , spinner);
-		gtk_widget_show (spinner);
-
-		/* Start thumbnailing job async */
-		link_dest_page = ev_link_dest_get_page (dest);
-#ifdef HAVE_HIDPI_SUPPORT
-		device_scale = gtk_widget_get_scale_factor (GTK_WIDGET (view));
-#endif
-		view->link_preview.job = ev_job_thumbnail_new (view->document,
-							       link_dest_page,
-							       view->rotation,
-							       view->scale * device_scale);
-		ev_job_thumbnail_set_output_format (EV_JOB_THUMBNAIL (view->link_preview.job),
-						    EV_JOB_THUMBNAIL_SURFACE);
-
-		link_dest_doc.x = ev_link_dest_get_left (dest, NULL);
-		link_dest_doc.y = ev_link_dest_get_top (dest, NULL);
-		_ev_view_transform_doc_point_by_rotation_scale (view, link_dest_page,
-							        &link_dest_doc, &link_dest_view);
-		view->link_preview.left = link_dest_view.x;
-		view->link_preview.top = link_dest_view.y;
-		view->link_preview.link = link;
-
-		page_surface = ev_pixbuf_cache_get_surface (view->pixbuf_cache, link_dest_page);
-
-		if (page_surface)
-			link_preview_show_thumbnail (page_surface, view);
-		else {
-			g_signal_connect (view->link_preview.job, "finished",
-					  G_CALLBACK (link_preview_job_finished_cb),
-					  view);
-			ev_job_scheduler_push_job (view->link_preview.job, EV_JOB_PRIORITY_LOW);
-		}
-
-		if (type == EV_LINK_DEST_TYPE_NAMED)
-			g_object_unref (dest);
-
-		view->link_preview.delay_timeout_id = g_timeout_add (LINK_PREVIEW_DELAY_MS,
-								     (GSourceFunc)link_preview_delayed_show,
-								     view);
-		g_source_set_name_by_id (view->link_preview.delay_timeout_id,
-					 "[evince] link_preview_timeout");
+		handle_cursor_over_link (view, link, x, y);
 	} else {
 		ev_view_link_preview_popover_cleanup (view);
 		view->link_preview.link = NULL;
@@ -2335,9 +2377,6 @@ ev_view_handle_cursor_over_xy (EvView *view, gint x, gint y)
 				ev_view_set_cursor (view, EV_VIEW_CURSOR_NORMAL);
 		}
 	}
-
-	if (link || annot || (field && ev_form_field_get_alternate_name (field)))
-		g_object_set (view, "has-tooltip", TRUE, NULL);
 }
 
 /*** Images ***/
@@ -3401,6 +3440,9 @@ show_annotation_windows (EvView *view,
 {
 	EvMappingList *annots;
 	GList         *l;
+	GtkWindow     *parent;
+
+	parent = GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (view)));
 
 	annots = ev_page_cache_get_annot_mapping (view->page_cache, page);
 
@@ -3419,6 +3461,8 @@ show_annotation_windows (EvView *view,
 		window = get_window_for_annot (view, annot);
 		if (window) {
 			ev_view_window_child_move_with_parent (view, window);
+		} else {
+			ev_view_create_annotation_window (view, annot, parent);
 		}
 	}
 }
@@ -3857,9 +3901,22 @@ void
 ev_view_cancel_add_annotation (EvView *view)
 {
 	gint x, y;
+	guint annot_page;
 
 	if (!view->adding_annot_info.adding_annot)
 		return;
+
+	if (view->adding_annot_info.annot && view->pressed_button == GDK_BUTTON_PRIMARY) {
+		annot_page = ev_annotation_get_page_index (view->adding_annot_info.annot);
+		ev_document_doc_mutex_lock ();
+		ev_document_annotations_remove_annotation (EV_DOCUMENT_ANNOTATIONS (view->document),
+							   view->adding_annot_info.annot);
+		ev_document_doc_mutex_unlock ();
+		ev_page_cache_mark_dirty (view->page_cache, annot_page, EV_PAGE_DATA_INCLUDE_ANNOTS);
+		view->adding_annot_info.annot = NULL;
+		view->pressed_button = -1;
+		ev_view_reload_page (view, annot_page, NULL);
+	}
 
 	view->adding_annot_info.adding_annot = FALSE;
 	g_assert(!view->adding_annot_info.annot);
@@ -6448,6 +6505,8 @@ ev_view_button_release_event (GtkWidget      *widget,
 		view->adding_annot_info.stop.y = event->y + view->scroll_y;
 		if (annot_added)
 			g_signal_emit (view, signals[SIGNAL_ANNOT_ADDED], 0, view->adding_annot_info.annot);
+		else
+			g_signal_emit (view, signals[SIGNAL_ANNOT_CANCEL_ADD], 0, NULL);
 
 		view->adding_annot_info.adding_annot = FALSE;
 		view->adding_annot_info.annot = NULL;
@@ -8165,9 +8224,7 @@ ev_view_class_init (EvViewClass *class)
 	widget_class->parent_set = ev_view_parent_set;
 	widget_class->hierarchy_changed = ev_view_hierarchy_changed;
 
-#if GTK_CHECK_VERSION(3, 20, 0)
 	gtk_widget_class_set_css_name (widget_class, "evview");
-#endif
 
 	container_class->remove = ev_view_remove;
 	container_class->forall = ev_view_forall;
@@ -8281,6 +8338,14 @@ ev_view_class_init (EvViewClass *class)
 		         g_cclosure_marshal_VOID__OBJECT,
 		         G_TYPE_NONE, 1,
 			 EV_TYPE_ANNOTATION);
+	signals[SIGNAL_ANNOT_CANCEL_ADD] = g_signal_new ("annot-cancel-add",
+                         G_TYPE_FROM_CLASS (object_class),
+                         G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION,
+                         G_STRUCT_OFFSET (EvViewClass, annot_cancel_add),
+                         NULL, NULL,
+			 g_cclosure_marshal_VOID__VOID,
+                         G_TYPE_NONE, 0,
+                         G_TYPE_NONE);
 	signals[SIGNAL_ANNOT_CHANGED] = g_signal_new ("annot-changed",
 		         G_TYPE_FROM_CLASS (object_class),
 		         G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION,
@@ -8454,6 +8519,7 @@ ev_view_init (EvView *view)
 	gtk_widget_set_has_window (GTK_WIDGET (view), TRUE);
 	gtk_widget_set_can_focus (GTK_WIDGET (view), TRUE);
 	gtk_widget_set_redraw_on_allocate (GTK_WIDGET (view), FALSE);
+	gtk_widget_set_has_tooltip (GTK_WIDGET (view), TRUE);
 
 	context = gtk_widget_get_style_context (GTK_WIDGET (view));
 	gtk_style_context_add_class (context, "content-view");

@@ -45,6 +45,7 @@
         "*.a"
     ],
     "modules": [
+        "python3-gi-docgen-dependencies.json",
         {
             "name": "webp-pixbuf-loader",
             "buildsystem": "meson",
@@ -77,8 +78,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://poppler.freedesktop.org/poppler-data-0.4.10.tar.gz",
-                    "sha256": "6e2fcef66ec8c44625f94292ccf8af9f1d918b410d5aa69c274ce67387967b30",
+                    "url": "https://poppler.freedesktop.org/poppler-data-0.4.11.tar.gz",
+                    "sha256": "2cec05cd1bb03af98a8b06a1e22f6e6e1a65b1e2f3816cb3069bb0874825f08c",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 3687,
@@ -95,11 +96,12 @@
                 "-DCMAKE_INSTALL_INCLUDEDIR=/app/include",
                 "-DBUILD_GTK_TESTS=OFF",
                 "-DBUILD_CPP_TESTS=OFF",
-                "-DENABLE_SPLASH=OFF",
-                "-DENABLE_UTILS=OFF",
                 "-DENABLE_CPP=OFF",
+                "-DENABLE_BOOST=OFF",
                 "-DENABLE_GOBJECT_INTROSPECTION=OFF",
-                "-DENABLE_LIBOPENJPEG=openjpeg2"
+                "-DENABLE_LIBOPENJPEG=openjpeg2",
+                "-DENABLE_QT5=OFF",
+                "-DENABLE_QT6=OFF"
             ],
             "cleanup": [
                 "/bin"
@@ -107,8 +109,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://poppler.freedesktop.org/poppler-21.06.1.tar.xz",
-                    "sha256": "86b09e5a02de40081a3916ef8711c5128eaf4b1fc59d5f87d0ec66f04f595db4",
+                    "url": "https://poppler.freedesktop.org/poppler-22.02.0.tar.xz",
+                    "sha256": "e390c8b806f6c9f0e35c8462033e0a738bb2460ebd660bdb8b6dca01556193e1",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 3686,
@@ -170,6 +172,19 @@
             ]
         },
         {
+            "name": "libarchive",
+            "cleanup": [
+                "/bin"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://libarchive.org/downloads/libarchive-3.6.0.tar.xz",
+                    "sha256": "df283917799cb88659a5b33c0a598f04352d61936abcd8a48fe7b64e74950de7"
+                }
+            ]
+        },
+        {
             "name": "gnome-desktop",
             "buildsystem": "meson",
             "config-opts": [
@@ -183,8 +198,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-desktop/40/gnome-desktop-40.0.tar.xz",
-                    "sha256": "20abfd3f831e4e8092b55839311661dc73b2bf13fc9bef71c4a5a4475da9ee04"
+                    "url": "https://download.gnome.org/sources/gnome-desktop/41/gnome-desktop-41.1.tar.xz",
+                    "sha256": "be8aafa64d7ba2fd31079eed639d39fda1ea77ef77d35a678f019c4d91d473c2"
                 }
             ]
         },
@@ -194,14 +209,15 @@
             "config-opts": [
                 "-Dnautilus=false",
                 "-Dthumbnailer=false",
-                "-Dgtk_doc=false",
-                "-Dintrospection=false",
+                "-Dgtk_doc=true",
+                "-Dintrospection=true",
                 "-Duser_doc=false",
                 "-Ddevelopment=true"
             ],
             "sources": [
                 {
                     "type": "git",
+                    "branch": "main",
                     "url": "https://gitlab.gnome.org/GNOME/evince.git"
                 }
             ]

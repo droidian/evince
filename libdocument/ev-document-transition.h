@@ -18,15 +18,15 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef EV_DOCUMENT_TRANSITION_H
-#define EV_DOCUMENT_TRANSITION_H
-
 #include <glib-object.h>
 
+#include "ev-macros.h"
 #include "ev-document.h"
 #include "ev-transition-effect.h"
 
@@ -53,12 +53,13 @@ struct _EvDocumentTransitionInterface
 						    gint                  page);
 };
 
+EV_PUBLIC
 GType                ev_document_transition_get_type          (void) G_GNUC_CONST;
+EV_PUBLIC
 gdouble              ev_document_transition_get_page_duration (EvDocumentTransition *document_trans,
 							       gint                  page);
+EV_PUBLIC
 EvTransitionEffect * ev_document_transition_get_effect        (EvDocumentTransition *document_trans,
 							       gint                  page);
 
 G_END_DECLS
-
-#endif /* EV_DOCUMENT_TRANSITION_H */

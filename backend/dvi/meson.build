@@ -11,7 +11,6 @@ deps = backends_deps + [
   libmdvi_dep,
   libspectre_dep,
   kpathsea_dep,
-  t1_dep,
   m_dep
 ]
 
@@ -21,8 +20,7 @@ shared_module(
   include_directories: backends_incs,
   dependencies: deps,
   c_args: backends_cflags,
-  link_args: backends_ldflags,
-  link_depends: backends_symbol_map,
+  gnu_symbol_visibility: 'hidden',
   install: true,
   install_dir: ev_backendsdir,
   name_suffix: name_suffix,
