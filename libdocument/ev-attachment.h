@@ -17,15 +17,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef __EV_ATTACHMENT_H__
-#define __EV_ATTACHMENT_H__
-
 #include <glib-object.h>
 #include <gio/gio.h>
+
+#include "ev-macros.h"
 
 G_BEGIN_DECLS
 
@@ -49,9 +50,13 @@ struct _EvAttachmentClass {
 	GObjectClass base_class;
 };
 
+EV_PUBLIC
 GType         ev_attachment_get_type             (void) G_GNUC_CONST;
+EV_PUBLIC
 GQuark        ev_attachment_error_quark          (void) G_GNUC_CONST;
+
 G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+EV_PUBLIC
 EvAttachment *ev_attachment_new                  (const gchar  *name,
 						  const gchar  *description,
 						  GTime         mtime,
@@ -60,21 +65,28 @@ EvAttachment *ev_attachment_new                  (const gchar  *name,
 						  gpointer      data);
 G_GNUC_END_IGNORE_DEPRECATIONS
 
+EV_PUBLIC
 const gchar *ev_attachment_get_name              (EvAttachment *attachment);
+EV_PUBLIC
 const gchar *ev_attachment_get_description       (EvAttachment *attachment);
+
 G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+EV_PUBLIC
 GTime        ev_attachment_get_modification_date (EvAttachment *attachment);
+EV_PUBLIC
 GTime        ev_attachment_get_creation_date     (EvAttachment *attachment);
 G_GNUC_END_IGNORE_DEPRECATIONS
+
+EV_PUBLIC
 const gchar *ev_attachment_get_mime_type         (EvAttachment *attachment);
+EV_PUBLIC
 gboolean     ev_attachment_save                  (EvAttachment *attachment,
 						  GFile        *file,
 						  GError      **error);
+EV_PUBLIC
 gboolean     ev_attachment_open                  (EvAttachment *attachment,
 						  GdkScreen    *screen,
 						  guint32       timestamp,
 						  GError      **error);
 
 G_END_DECLS
-
-#endif /* __EV_ATTACHMENT_H__ */

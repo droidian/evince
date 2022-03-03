@@ -979,6 +979,7 @@ ev_application_startup (GApplication *gapplication)
           "win.presentation",           "F5", "<Shift>F5", NULL,
           "win.continuous",             "c", NULL,
           "win.dual-page",              "d", NULL,
+          "win.dual-odd-left",          "o", NULL,
           "win.rotate-left",            "<Ctrl>Left", NULL,
           "win.rotate-right",           "<Ctrl>Right", NULL,
           "win.inverted-colors",        "<Ctrl>I", NULL,
@@ -998,6 +999,8 @@ ev_application_startup (GApplication *gapplication)
         G_APPLICATION_CLASS (ev_application_parent_class)->startup (gapplication);
 
         hdy_init ();
+        hdy_style_manager_set_color_scheme (hdy_style_manager_get_default (),
+                                            HDY_COLOR_SCHEME_PREFER_LIGHT);
 
         for (it = action_accels; it[0]; it += g_strv_length ((gchar **)it) + 1)
                 gtk_application_set_accels_for_action (GTK_APPLICATION (application), it[0], &it[1]);

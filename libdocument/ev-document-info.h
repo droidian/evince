@@ -1,6 +1,6 @@
-/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8; c-indent-level: 8 -*- */
 /*
  *  Copyright (C) 2000-2003 Marco Pesenti Gritti
+ *  Copyright © 2021 Christian Persch
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,15 +18,16 @@
  *
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef EV_DOCUMENT_INFO_H
-#define EV_DOCUMENT_INFO_H
-
 #include <glib-object.h>
 #include <glib.h>
+
+#include "ev-macros.h"
 
 G_BEGIN_DECLS
 
@@ -108,8 +109,8 @@ typedef enum
 	EV_DOCUMENT_INFO_SECURITY = 1 << 15,
 	EV_DOCUMENT_INFO_PAPER_SIZE = 1 << 16,
 	EV_DOCUMENT_INFO_LICENSE = 1 << 17,
-	EV_DOCUMENT_INFO_CONTAINS_JS = 1 << 18
-
+	EV_DOCUMENT_INFO_CONTAINS_JS = 1 << 18,
+	_EV_DOCUMENT_INFO_EXTENDED = 1 << 30 /*< skip >*/
 } EvDocumentInfoFields;
 
 G_GNUC_BEGIN_IGNORE_DEPRECATIONS
@@ -124,8 +125,8 @@ struct _EvDocumentInfo
 	char *producer;
 	char *linearized;
         char *security;
-	GTime creation_date;
-	GTime modified_date;
+	GTime creation_date G_GNUC_DEPRECATED_FOR(ev_document_info_get_created_datetime);
+	GTime modified_date G_GNUC_DEPRECATED_FOR(ev_document_info_get_modified_datetime);
 	EvDocumentLayout layout;
 	EvDocumentMode mode;
 	guint ui_hints;
@@ -141,9 +142,29 @@ struct _EvDocumentInfo
 };
 G_GNUC_END_IGNORE_DEPRECATIONS
 
+EV_PUBLIC
 GType           ev_document_info_get_type (void) G_GNUC_CONST;
+EV_PUBLIC
+EvDocumentInfo* ev_document_info_new      (void);
+EV_PUBLIC
 EvDocumentInfo *ev_document_info_copy     (EvDocumentInfo *info);
+EV_PUBLIC
 void            ev_document_info_free     (EvDocumentInfo *info);
+EV_PUBLIC
+GDateTime      *ev_document_info_get_created_datetime   (const EvDocumentInfo *info);
+EV_PUBLIC
+GDateTime      *ev_document_info_get_modified_datetime  (const EvDocumentInfo *info);
+
+EV_PRIVATE
+void            ev_document_info_take_created_datetime  (EvDocumentInfo *info,
+                                                         GDateTime      *datetime);
+EV_PRIVATE
+void            ev_document_info_take_modified_datetime (EvDocumentInfo *info,
+                                                         GDateTime      *datetime);
+EV_PRIVATE
+gboolean        ev_document_info_set_from_xmp           (EvDocumentInfo *info,
+                                                         const char     *xmp,
+                                                         gssize          size);
 
 /* EvDocumentLicense */
 #define EV_TYPE_DOCUMENT_LICENSE (ev_document_license_get_type())
@@ -152,14 +173,19 @@ struct _EvDocumentLicense {
 	gchar *uri;
 	gchar *web_statement;
 };
+EV_PUBLIC
 GType              ev_document_license_get_type          (void) G_GNUC_CONST;
+EV_PUBLIC
 EvDocumentLicense *ev_document_license_new               (void);
+EV_PUBLIC
 EvDocumentLicense *ev_document_license_copy              (EvDocumentLicense *license);
+EV_PUBLIC
 void               ev_document_license_free              (EvDocumentLicense *license);
+EV_PUBLIC
 const gchar       *ev_document_license_get_text          (EvDocumentLicense *license);
+EV_PUBLIC
 const gchar       *ev_document_license_get_uri           (EvDocumentLicense *license);
+EV_PUBLIC
 const gchar       *ev_document_license_get_web_statement (EvDocumentLicense *license);
 
 G_END_DECLS
-
-#endif /* EV_DOCUMENT_INFO_H */

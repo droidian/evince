@@ -276,7 +276,7 @@ typedef struct {
 #define THUMBNAILS_SIDEBAR_ICON "view-grid-symbolic"
 #define ATTACHMENTS_SIDEBAR_ICON "mail-attachment-symbolic"
 #define LAYERS_SIDEBAR_ICON "view-paged-symbolic"
-#define ANNOTS_SIDEBAR_ICON "accessories-text-editor-symbolic"
+#define ANNOTS_SIDEBAR_ICON "annotations-text-symbolic"
 #define BOOKMARKS_SIDEBAR_ICON "user-bookmarks-symbolic"
 
 #define EV_PRINT_SETTINGS_FILE  "print-settings"
@@ -1052,6 +1052,15 @@ scroll_child_history_cb (GtkScrolledWindow *scrolled_window,
 
 		}
 	}
+}
+
+static gboolean
+scrolled_window_focus_in_cb (GtkScrolledWindow *scrolled_window,
+			     GdkEventFocus     *event,
+			     EvWindow          *window)
+{
+	ev_window_focus_view (window);
+	return GDK_EVENT_STOP;
 }
 
 static void
@@ -1837,6 +1846,7 @@ ev_window_password_view_cancelled (EvWindow *ev_window)
 	if (ev_window_is_recent_view (ev_window)) {
 		ev_window_clear_load_job (ev_window);
 		ev_application_clear_uri (EV_APP);
+		ev_window_title_set_type (priv->title, EV_WINDOW_TITLE_RECENT);
 	}
 }
 
@@ -4209,7 +4219,7 @@ ev_window_cmd_about (GSimpleAction *action,
         gtk_show_about_dialog (GTK_WINDOW (ev_window),
                                "name", _("Evince"),
                                "version", VERSION,
-                               "copyright", _("© 1996–2020 The Evince authors"),
+                               "copyright", _("© 1996–2022 The Evince document viewer authors"),
                                "license-type", GTK_LICENSE_GPL_2_0,
                                "website", "https://wiki.gnome.org/Apps/Evince",
                                "comments", _("Evince is a simple document viewer for GNOME"),
@@ -6508,6 +6518,14 @@ view_annot_added (EvView       *view,
 }
 
 static void
+view_annot_cancel_add (EvView   *view,
+		       EvWindow *window)
+{
+	EvWindowPrivate *priv = GET_PRIVATE (window);
+	ev_annotations_toolbar_add_annot_finished (EV_ANNOTATIONS_TOOLBAR (priv->annots_toolbar));
+}
+
+static void
 view_annot_changed (EvView       *view,
 		    EvAnnotation *annot,
 		    EvWindow     *window)
@@ -6628,12 +6646,88 @@ window_configure_event_cb (EvWindow *window, GdkEventConfigure *event, gpointer 
 	return FALSE;
 }
 
-static void
-launch_action (EvWindow *window, EvLinkAction *action)
+static gchar *
+get_uri (const char *filename, EvWindow *window)
 {
-	ev_window_warning_message (window,
-                                   _("Security alert: this document has been prevented from opening the file “%s”"),
-				   ev_link_action_get_filename (action));
+	EvWindowPrivate *priv = GET_PRIVATE (window);
+	gchar *ret;
+
+	if (g_path_is_absolute (filename)) {
+		ret =  g_strdup (filename);
+	} else {
+		GFile *base_file, *file;
+		gchar *dir;
+
+		dir = g_path_get_dirname (priv->uri);
+		base_file = g_file_new_for_uri (dir);
+		file = g_file_resolve_relative_path (base_file, filename);
+		ret = g_file_get_uri (file);
+
+		g_free (dir);
+		g_object_unref (base_file);
+		g_object_unref (file);
+	}
+
+	return ret;
+}
+
+static gboolean
+file_is_pdf (const char *uri)
+{
+	GFile *file;
+	GFileInfo *file_info;
+	gboolean ret = FALSE;
+
+	file = g_file_new_for_uri (uri);
+	file_info = g_file_query_info (file,
+				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+				       G_FILE_QUERY_INFO_NONE, NULL, NULL);
+	if (file_info != NULL) {
+		const gchar *content_type;
+		content_type = g_file_info_get_content_type (file_info);
+		if (content_type) {
+			gchar *mime_type;
+			mime_type = g_content_type_get_mime_type (content_type);
+			if (g_ascii_strcasecmp (mime_type, "application/pdf") == 0)
+				ret = TRUE;
+			g_free (mime_type);
+		}
+		g_object_unref (file_info);
+	}
+	g_object_unref (file);
+
+	return ret;
+}
+
+static void
+launch_action (EvWindow *ev_window, EvLinkAction *action)
+{
+	EvView *view;
+	EvWindowPrivate *priv = GET_PRIVATE (ev_window);
+	const char *filename = ev_link_action_get_filename (action);
+	gchar *uri;
+
+	if (filename == NULL)
+		return;
+
+	uri = get_uri (filename, ev_window);
+	view = EV_VIEW (priv->view);
+
+	if (!file_is_pdf (uri) || !ev_view_current_event_is_type (view, GDK_BUTTON_RELEASE)) {
+		ev_window_warning_message (ev_window,
+			_("Security alert: this document has been prevented from opening the file “%s”"),
+			filename);
+		return;
+	}
+	/* We are asked to open a PDF file, from a click event, proceed with that - Issue #48
+	 * This spawns new Evince process or if already opened presents its window */
+	ev_application_open_uri_at_dest (EV_APP, uri,
+					 gtk_window_get_screen (GTK_WINDOW (ev_window)),
+					 ev_link_action_get_dest (action),
+					 priv->window_mode, NULL,
+					 gtk_get_current_event_time ());
+	g_free (uri);
+
 }
 
 static void
@@ -7728,8 +7822,14 @@ ev_window_init (EvWindow *ev_window)
 	g_signal_connect_object (priv->scrolled_window, "scroll-child",
 				 G_CALLBACK (scroll_child_history_cb),
 				 ev_window, 0);
+	g_signal_connect_object (priv->scrolled_window, "focus-in-event",
+				 G_CALLBACK (scrolled_window_focus_in_cb),
+				 ev_window, 0);
 	g_signal_connect_object (priv->view, "annot-added",
 				 G_CALLBACK (view_annot_added),
+				 ev_window, 0);
+	g_signal_connect_object (priv->view, "annot-cancel-add",
+				 G_CALLBACK (view_annot_cancel_add),
 				 ev_window, 0);
 	g_signal_connect_object (priv->view, "annot-changed",
 				 G_CALLBACK (view_annot_changed),

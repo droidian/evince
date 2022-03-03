@@ -18,15 +18,15 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef EV_DOCUMENT_ANNOTATIONS_H
-#define EV_DOCUMENT_ANNOTATIONS_H
-
 #include <glib-object.h>
 
+#include "ev-macros.h"
 #include "ev-document.h"
 #include "ev-annotation.h"
 #include "ev-mapping-list.h"
@@ -98,27 +98,33 @@ struct _EvDocumentAnnotationsInterface
 						 gdouble                 y);
 };
 
+EV_PUBLIC
 GType          ev_document_annotations_get_type             (void) G_GNUC_CONST;
+EV_PUBLIC
 EvMappingList *ev_document_annotations_get_annotations      (EvDocumentAnnotations *document_annots,
 							     EvPage                *page);
+EV_PUBLIC
 gboolean       ev_document_annotations_document_is_modified (EvDocumentAnnotations *document_annots);
+EV_PUBLIC
 void           ev_document_annotations_add_annotation       (EvDocumentAnnotations *document_annots,
 							     EvAnnotation          *annot,
 							     EvRectangle           *rect);
+EV_PUBLIC
 void           ev_document_annotations_remove_annotation    (EvDocumentAnnotations *document_annots,
                                                              EvAnnotation          *annot);
 
+EV_PUBLIC
 void           ev_document_annotations_save_annotation      (EvDocumentAnnotations *document_annots,
 							     EvAnnotation          *annot,
 							     EvAnnotationsSaveMask  mask);
+EV_PUBLIC
 gboolean       ev_document_annotations_can_add_annotation    (EvDocumentAnnotations *document_annots);
+EV_PUBLIC
 gboolean       ev_document_annotations_can_remove_annotation (EvDocumentAnnotations *document_annots);
+EV_PUBLIC
 EvAnnotationsOverMarkup ev_document_annotations_over_markup  (EvDocumentAnnotations *document_annots,
 							      EvAnnotation          *annot,
 							      gdouble                x,
 							      gdouble                y);
 
 G_END_DECLS
-
-#endif /* EV_DOCUMENT_ANNOTATIONS_H */
-

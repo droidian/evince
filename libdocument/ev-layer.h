@@ -17,14 +17,15 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef __EV_LAYER_H__
-#define __EV_LAYER_H__
-
 #include <glib-object.h>
+
+#include "ev-macros.h"
 
 G_BEGIN_DECLS
 
@@ -49,12 +50,14 @@ struct _EvLayerClass {
 	GObjectClass base_class;
 };
 
+EV_PUBLIC
 GType     ev_layer_get_type     (void) G_GNUC_CONST;
+EV_PUBLIC
 EvLayer  *ev_layer_new          (gboolean is_parent,
 				 gint     rb_group);
+EV_PUBLIC
 gboolean  ev_layer_is_parent    (EvLayer *layer);
+EV_PUBLIC
 gint      ev_layer_get_rb_group (EvLayer *layer);
 
 G_END_DECLS
-
-#endif /* __EV_LAYER_H__ */

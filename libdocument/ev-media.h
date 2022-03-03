@@ -17,14 +17,15 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef __EV_MEDIA_H__
-#define __EV_MEDIA_H__
-
 #include <glib-object.h>
+
+#include "ev-macros.h"
 #include "ev-page.h"
 
 G_BEGIN_DECLS
@@ -50,16 +51,20 @@ struct _EvMediaClass {
         GObjectClass base_class;
 };
 
+EV_PUBLIC
 GType        ev_media_get_type          (void) G_GNUC_CONST;
 
+EV_PUBLIC
 EvMedia     *ev_media_new_for_uri       (EvPage      *page,
                                          const gchar *uri);
+EV_PUBLIC
 const gchar *ev_media_get_uri           (EvMedia     *media);
+EV_PUBLIC
 guint        ev_media_get_page_index    (EvMedia     *media);
+EV_PUBLIC
 gboolean     ev_media_get_show_controls (EvMedia     *media);
+EV_PUBLIC
 void         ev_media_set_show_controls (EvMedia     *media,
                                          gboolean     show_controls);
 
 G_END_DECLS
-
-#endif /* __EV_MEDIA_H__ */

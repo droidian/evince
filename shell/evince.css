@@ -81,15 +81,11 @@ evpresentationview.white-mode {
     border-radius: 0;
 }
 
-evannotationwindow label:backdrop {
-	color: grey;
-}
-
-evannotationwindow label {
-	color: black;
-}
-
 .content-view .combo {
     padding-left: 2px;
     padding-right: 2px;
+}
+
+.tnum {
+    font-feature-settings: "tnum 1";
 }

@@ -15,21 +15,19 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- *
- *  $Id$
  */
+
+#pragma once
 
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef EV_DOCUMENT_TEXT_H
-#define EV_DOCUMENT_TEXT_H
-
 #include <glib-object.h>
 #include <glib.h>
 #include <gdk/gdk.h>
 
+#include "ev-macros.h"
 #include "ev-document.h"
 
 G_BEGIN_DECLS
@@ -61,18 +59,21 @@ struct _EvDocumentTextInterface
 					      EvPage           *page);
 };
 
+EV_PUBLIC
 GType           ev_document_text_get_type         (void) G_GNUC_CONST;
 
+EV_PUBLIC
 gchar          *ev_document_text_get_text         (EvDocumentText  *document_text,
 						   EvPage          *page);
+EV_PUBLIC
 gboolean        ev_document_text_get_text_layout  (EvDocumentText  *document_text,
 						   EvPage          *page,
 						   EvRectangle    **areas,
 						   guint           *n_areas);
+EV_PUBLIC
 cairo_region_t *ev_document_text_get_text_mapping (EvDocumentText  *document_text,
 						   EvPage          *page);
+EV_PUBLIC
 PangoAttrList  *ev_document_text_get_text_attrs   (EvDocumentText  *document_text,
 						   EvPage          *page);
 G_END_DECLS
-
-#endif /* EV_DOCUMENT_TEXT_H */

@@ -17,15 +17,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef __EV_IMAGE_H__
-#define __EV_IMAGE_H__
-
 #include <glib-object.h>
 #include <gdk/gdk.h>
+
+#include "ev-macros.h"
 
 G_BEGIN_DECLS
 
@@ -50,19 +51,24 @@ struct _EvImageClass {
 	GObjectClass base_class;
 };
 
+EV_PUBLIC
 GType        ev_image_get_type         (void) G_GNUC_CONST;
+EV_PUBLIC
 EvImage     *ev_image_new              (gint             page,
 					gint             img_id);
+EV_PUBLIC
 EvImage     *ev_image_new_from_pixbuf  (GdkPixbuf       *pixbuf);
 
+EV_PUBLIC
 gint         ev_image_get_id           (EvImage         *image);
+EV_PUBLIC
 gint         ev_image_get_page         (EvImage         *image);
+EV_PUBLIC
 GdkPixbuf   *ev_image_get_pixbuf       (EvImage         *image);
+EV_PUBLIC
 const gchar *ev_image_save_tmp         (EvImage         *image,
 					GdkPixbuf       *pixbuf);
+EV_PUBLIC
 const gchar *ev_image_get_tmp_uri      (EvImage         *image);
 
-
 G_END_DECLS
-
-#endif /* __EV_IMAGE_H__ */

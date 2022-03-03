@@ -18,12 +18,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_VIEW_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-view.h> can be included directly."
 #endif
-
-#ifndef __EV_VIEW_PRESENTATION_H__
-#define __EV_VIEW_PRESENTATION_H__
 
 #include <gtk/gtk.h>
 
@@ -41,19 +40,24 @@ G_BEGIN_DECLS
 typedef struct _EvViewPresentation       EvViewPresentation;
 typedef struct _EvViewPresentationClass  EvViewPresentationClass;
 
+EV_PUBLIC
 GType		ev_view_presentation_get_type	      (void) G_GNUC_CONST;
 
+EV_PUBLIC
 GtkWidget      *ev_view_presentation_new	      (EvDocument         *document,
 						       guint               current_page,
 						       guint               rotation,
 						       gboolean            inverted_colors);
+EV_PUBLIC
 guint           ev_view_presentation_get_current_page (EvViewPresentation *pview);
+EV_PUBLIC
 void            ev_view_presentation_next_page        (EvViewPresentation *pview);
+EV_PUBLIC
 void            ev_view_presentation_previous_page    (EvViewPresentation *pview);
+EV_PUBLIC
 void            ev_view_presentation_set_rotation     (EvViewPresentation *pview,
                                                        gint                rotation);
+EV_PUBLIC
 guint           ev_view_presentation_get_rotation     (EvViewPresentation *pview);
 
 G_END_DECLS
-
-#endif /* __EV_VIEW_PRESENTATION_H__ */

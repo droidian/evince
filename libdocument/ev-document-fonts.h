@@ -21,17 +21,17 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
-
-#ifndef EV_DOCUMENT_FONTS_H
-#define EV_DOCUMENT_FONTS_H
 
 #include <glib-object.h>
 #include <glib.h>
 #include <gtk/gtk.h>
 
+#include "ev-macros.h"
 #include "ev-document.h"
 #include "ev-link.h"
 
@@ -67,14 +67,17 @@ struct _EvDocumentFontsInterface
         const gchar *(* get_fonts_summary) (EvDocumentFonts *document_fonts);
 };
 
+EV_PUBLIC
 GType        ev_document_fonts_get_type          (void);
+EV_PUBLIC
 gboolean     ev_document_fonts_scan              (EvDocumentFonts *document_fonts,
                                                   int              n_pages);
+EV_PUBLIC
 double       ev_document_fonts_get_progress      (EvDocumentFonts *document_fonts);
+EV_PUBLIC
 void         ev_document_fonts_fill_model        (EvDocumentFonts *document_fonts,
                                                   GtkTreeModel    *model);
+EV_PUBLIC
 const gchar *ev_document_fonts_get_fonts_summary (EvDocumentFonts *document_fonts);
 
 G_END_DECLS
-
-#endif

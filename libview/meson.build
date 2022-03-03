@@ -4,12 +4,12 @@ include_subdir = join_paths(ev_include_subdir, 'libview')
 
 headers = files(
   'ev-document-model.h',
-  'ev-jobs.h',
   'ev-job-scheduler.h',
+  'ev-jobs.h',
   'ev-print-operation.h',
   'ev-stock-icons.h',
+  'ev-view-presentation.h',
   'ev-view.h',
-  'ev-view-presentation.h'
 )
 
 install_headers(
@@ -88,15 +88,14 @@ libevview = shared_library(
   include_directories: top_inc,
   dependencies: deps,
   c_args: cflags,
-  link_args: lib_ldflags,
-  link_depends: lib_symbol_map,
   install: true,
+  gnu_symbol_visibility: 'hidden',
 )
 
 libevview_dep = declare_dependency(
-  sources: enum_sources[1],
+  sources: headers + [enum_sources[1]],
   include_directories: libview_inc,
-  dependencies: libevdocument_dep,
+  dependencies: deps,
   link_with: libevview,
 )
 
@@ -125,7 +124,7 @@ if enable_introspection
     libevdocument_gir[0],
   ]
 
-  gnome.generate_gir(
+  libevview_gir = gnome.generate_gir(
     [libevview, libevdocument],
     sources: sources + headers + [enum_sources[1]],
     includes: incs,

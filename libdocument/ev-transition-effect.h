@@ -18,14 +18,15 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_DOCUMENT_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-document.h> can be included directly."
 #endif
 
-#ifndef __EV_TRANSITION_EFFECT_H__
-#define __EV_TRANSITION_EFFECT_H__
-
 #include <glib-object.h>
+
+#include "ev-macros.h"
 
 G_BEGIN_DECLS
 
@@ -75,12 +76,12 @@ struct _EvTransitionEffectClass
 	GObjectClass parent_class;
 };
 
+EV_PUBLIC
 GType                 ev_transition_effect_get_type           (void) G_GNUC_CONST;
 
+EV_PUBLIC
 EvTransitionEffect   *ev_transition_effect_new                (EvTransitionEffectType  type,
 							       const gchar            *first_property_name,
 							       ...);
 
 G_END_DECLS
-
-#endif /* __EV_TRANSITION_EFFECT_H__ */

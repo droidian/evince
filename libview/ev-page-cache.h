@@ -17,12 +17,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#if !defined (__EV_EVINCE_VIEW_H_INSIDE__) && !defined (EVINCE_COMPILATION)
-#error "Only <evince-view.h> can be included directly."
-#endif
+#pragma once
 
-#ifndef EV_PAGE_CACHE_H
-#define EV_PAGE_CACHE_H
+#if !defined (EVINCE_COMPILATION)
+#error "This is a private header."
+#endif
 
 #include <glib-object.h>
 #include <gdk/gdk.h>
@@ -82,5 +81,3 @@ void               ev_page_cache_ensure_page            (EvPageCache       *cach
 gboolean           ev_page_cache_is_page_cached         (EvPageCache       *cache,
                                                          gint               page);
 G_END_DECLS
-
-#endif /* EV_PAGE_CACHE_H */

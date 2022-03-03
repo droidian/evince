@@ -18,12 +18,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#pragma once
+
 #if !defined (__EV_EVINCE_VIEW_H_INSIDE__) && !defined (EVINCE_COMPILATION)
 #error "Only <evince-view.h> can be included directly."
 #endif
-
-#ifndef __EV_JOBS_H__
-#define __EV_JOBS_H__
 
 #include <gio/gio.h>
 #include <gtk/gtk.h>
@@ -65,6 +64,9 @@ typedef struct _EvJobLoadStreamClass EvJobLoadStreamClass;
 
 typedef struct _EvJobLoadGFile EvJobLoadGFile;
 typedef struct _EvJobLoadGFileClass EvJobLoadGFileClass;
+
+typedef struct _EvJobLoadFd EvJobLoadFd;
+typedef struct _EvJobLoadFdClass EvJobLoadFdClass;
 
 typedef struct _EvJobSave EvJobSave;
 typedef struct _EvJobSaveClass EvJobSaveClass;
@@ -158,6 +160,13 @@ typedef struct _EvJobPrintClass EvJobPrintClass;
 #define EV_JOB_LOAD_GFILE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), EV_TYPE_JOB_LOAD_GFILE, EvJobLoadGFileClass))
 #define EV_IS_JOB_LOAD_GFILE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EV_TYPE_JOB_LOAD_GFILE))
 #define EV_JOB_LOAD_GFILE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), EV_TYPE_JOB_LOAD_GFILE, EvJobLoadGFileClass))
+
+#define EV_TYPE_JOB_LOAD_FD            (ev_job_load_fd_get_type())
+#define EV_JOB_LOAD_FD(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), EV_TYPE_JOB_LOAD_FD, EvJobLoadFd))
+#define EV_IS_JOB_LOAD_FD(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EV_TYPE_JOB_LOAD_FD))
+#define EV_JOB_LOAD_FD_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), EV_TYPE_JOB_LOAD_FD, EvJobLoadFdClass))
+#define EV_IS_JOB_LOAD_FD_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EV_TYPE_JOB_LOAD_FD))
+#define EV_JOB_LOAD_FD_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), EV_TYPE_JOB_LOAD_FD, EvJobLoadFdClass))
 
 #define EV_TYPE_JOB_SAVE            (ev_job_save_get_type())
 #define EV_JOB_SAVE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), EV_TYPE_JOB_SAVE, EvJobSave))
@@ -416,6 +425,21 @@ struct _EvJobLoadGFileClass
         EvJobClass parent_class;
 };
 
+struct _EvJobLoadFd
+{
+        EvJob parent;
+
+        char *mime_type;
+        char *password;
+        int fd;
+        EvDocumentLoadFlags flags;
+};
+
+struct _EvJobLoadFdClass
+{
+        EvJobClass parent_class;
+};
+
 struct _EvJobSave
 {
 	EvJob parent;
@@ -491,142 +515,235 @@ struct _EvJobPrintClass
 };
 
 /* Base job class */
+EV_PUBLIC
 GType           ev_job_get_type           (void) G_GNUC_CONST;
+EV_PUBLIC
 gboolean        ev_job_run                (EvJob          *job);
+EV_PUBLIC
 void            ev_job_cancel             (EvJob          *job);
+EV_PUBLIC
 void            ev_job_failed             (EvJob          *job,
 					   GQuark          domain,
 					   gint            code,
 					   const gchar    *format,
 					   ...) G_GNUC_PRINTF (4, 5);
+EV_PUBLIC
 void            ev_job_failed_from_error  (EvJob          *job,
 					   GError         *error);
+EV_PUBLIC
 void            ev_job_succeeded          (EvJob          *job);
+EV_PUBLIC
 gboolean        ev_job_is_finished        (EvJob          *job);
+EV_PUBLIC
 gboolean        ev_job_is_failed          (EvJob          *job);
+EV_PUBLIC
 EvJobRunMode    ev_job_get_run_mode       (EvJob          *job);
+EV_PUBLIC
 void            ev_job_set_run_mode       (EvJob          *job,
 					   EvJobRunMode    run_mode);
 
 /* EvJobLinks */
+EV_PUBLIC
 GType           ev_job_links_get_type     (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob          *ev_job_links_new          (EvDocument     *document);
+EV_PUBLIC
 GtkTreeModel   *ev_job_links_get_model    (EvJobLinks     *job);
 
 /* EvJobAttachments */
+EV_PUBLIC
 GType           ev_job_attachments_get_type (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob          *ev_job_attachments_new      (EvDocument     *document);
 
 /* EvJobAnnots */
+EV_PUBLIC
 GType           ev_job_annots_get_type      (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob          *ev_job_annots_new           (EvDocument     *document);
 
 /* EvJobRender */
+EV_PUBLIC
 GType           ev_job_render_get_type    (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob          *ev_job_render_new         (EvDocument      *document,
 					   gint             page,
 					   gint             rotation,
 					   gdouble          scale,
 					   gint             width,
 					   gint             height);
+EV_PUBLIC
 void     ev_job_render_set_selection_info (EvJobRender     *job,
 					   EvRectangle     *selection_points,
 					   EvSelectionStyle selection_style,
 					   GdkColor        *text,
 					   GdkColor        *base);
 /* EvJobPageData */
+EV_PUBLIC
 GType           ev_job_page_data_get_type (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob          *ev_job_page_data_new      (EvDocument      *document,
 					   gint             page,
 					   EvJobPageDataFlags flags);
 
 /* EvJobThumbnail */
+EV_PUBLIC
 GType           ev_job_thumbnail_get_type      (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob          *ev_job_thumbnail_new           (EvDocument      *document,
                                                 gint             page,
                                                 gint             rotation,
                                                 gdouble          scale);
+EV_PUBLIC
 EvJob	       *ev_job_thumbnail_new_with_target_size (EvDocument      *document,
 						       gint		page,
 						       gint		rotation,
 						       gint		target_width,
 						       gint		target_height);
+EV_PUBLIC
 void            ev_job_thumbnail_set_has_frame (EvJobThumbnail  *job,
                                                 gboolean         has_frame);
+EV_PUBLIC
 void            ev_job_thumbnail_set_output_format (EvJobThumbnail      *job,
                                                     EvJobThumbnailFormat format);
 /* EvJobFonts */
+EV_PUBLIC
 GType 		ev_job_fonts_get_type 	  (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob 	       *ev_job_fonts_new 	  (EvDocument      *document);
 
 /* EvJobLoad */
+EV_PUBLIC
 GType 		ev_job_load_get_type 	  (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob 	       *ev_job_load_new 	  (const gchar 	   *uri);
+EV_PUBLIC
 void            ev_job_load_set_uri       (EvJobLoad       *load,
 					   const gchar     *uri);
+EV_PUBLIC
 void            ev_job_load_set_password  (EvJobLoad       *job,
 					   const gchar     *password);
 
 /* EvJobLoadStream */
+EV_PUBLIC
 GType           ev_job_load_stream_get_type       (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob          *ev_job_load_stream_new            (GInputStream       *stream,
                                                    EvDocumentLoadFlags flags);
+EV_PUBLIC
 void            ev_job_load_stream_set_stream     (EvJobLoadStream    *job,
                                                    GInputStream       *stream);
+EV_PUBLIC
+void            ev_job_load_stream_set_mime_type  (EvJobLoadStream    *job,
+                                                   const char         *mime_type);
+EV_PUBLIC
 void            ev_job_load_stream_set_load_flags (EvJobLoadStream    *job,
                                                    EvDocumentLoadFlags flags);
+EV_PUBLIC
 void            ev_job_load_stream_set_password   (EvJobLoadStream    *job,
                                                    const gchar        *password);
 
 /* EvJobLoadGFile */
+EV_PUBLIC
 GType           ev_job_load_gfile_get_type        (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob          *ev_job_load_gfile_new             (GFile              *gfile,
                                                    EvDocumentLoadFlags flags);
+EV_PUBLIC
 void            ev_job_load_gfile_set_gfile       (EvJobLoadGFile     *job,
                                                    GFile              *gfile);
+EV_PUBLIC
 void            ev_job_load_gfile_set_load_flags  (EvJobLoadGFile     *job,
                                                    EvDocumentLoadFlags flags);
+EV_PUBLIC
 void            ev_job_load_gfile_set_password    (EvJobLoadGFile     *job,
                                                    const gchar        *password);
 
+
+/* EvJobLoadFd */
+EV_PUBLIC
+GType           ev_job_load_fd_get_type       (void) G_GNUC_CONST;
+EV_PUBLIC
+EvJob          *ev_job_load_fd_new            (int                 fd,
+                                               const char         *mime_type,
+                                               EvDocumentLoadFlags flags,
+                                               GError            **error);
+EV_PUBLIC
+EvJob          *ev_job_load_fd_new_take       (int                 fd,
+                                               const char         *mime_type,
+                                               EvDocumentLoadFlags flags);
+EV_PUBLIC
+gboolean        ev_job_load_fd_set_fd         (EvJobLoadFd        *job,
+                                               int                 fd,
+                                               GError            **error);
+EV_PUBLIC
+void            ev_job_load_fd_take_fd        (EvJobLoadFd        *job,
+                                               int                 fd);
+EV_PUBLIC
+void            ev_job_load_fd_set_mime_type  (EvJobLoadFd        *job,
+                                               const char         *mime_type);
+EV_PUBLIC
+void            ev_job_load_fd_set_load_flags (EvJobLoadFd        *job,
+                                               EvDocumentLoadFlags flags);
+EV_PUBLIC
+void            ev_job_load_fd_set_password   (EvJobLoadFd        *job,
+                                               const gchar        *password);
+
 /* EvJobSave */
+EV_PUBLIC
 GType           ev_job_save_get_type      (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob          *ev_job_save_new           (EvDocument      *document,
 					   const gchar     *uri,
 					   const gchar     *document_uri);
 /* EvJobFind */
+EV_PUBLIC
 GType           ev_job_find_get_type      (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob          *ev_job_find_new           (EvDocument      *document,
 					   gint             start_page,
 					   gint             n_pages,
 					   const gchar     *text,
 					   gboolean         case_sensitive);
+EV_PUBLIC
 void            ev_job_find_set_options   (EvJobFind       *job,
                                            EvFindOptions    options);
+EV_PUBLIC
 EvFindOptions   ev_job_find_get_options   (EvJobFind       *job);
+EV_PUBLIC
 gint            ev_job_find_get_n_results (EvJobFind       *job,
 					   gint             pages);
+EV_PUBLIC
 gdouble         ev_job_find_get_progress  (EvJobFind       *job);
+EV_PUBLIC
 gboolean        ev_job_find_has_results   (EvJobFind       *job);
+EV_PUBLIC
 GList         **ev_job_find_get_results   (EvJobFind       *job);
 
 /* EvJobLayers */
+EV_PUBLIC
 GType           ev_job_layers_get_type    (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob          *ev_job_layers_new         (EvDocument     *document);
 
 /* EvJobExport */
+EV_PUBLIC
 GType           ev_job_export_get_type    (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob          *ev_job_export_new         (EvDocument     *document);
+EV_PUBLIC
 void            ev_job_export_set_page    (EvJobExport    *job,
 					   gint            page);
 /* EvJobPrint */
+EV_PUBLIC
 GType           ev_job_print_get_type    (void) G_GNUC_CONST;
+EV_PUBLIC
 EvJob          *ev_job_print_new         (EvDocument     *document);
+EV_PUBLIC
 void            ev_job_print_set_page    (EvJobPrint     *job,
 					  gint            page);
+EV_PUBLIC
 void            ev_job_print_set_cairo   (EvJobPrint     *job,
 					  cairo_t        *cr);
 
 G_END_DECLS
-
-#endif /* __EV_JOBS_H__ */

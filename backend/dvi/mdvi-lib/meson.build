@@ -17,7 +17,6 @@ sources = files(
   'setup.c',
   'special.c',
   'sp-epsf.c',
-  't1.c',
   'tfm.c',
   'tfmfile.c',
   'tt.c',
@@ -29,6 +28,7 @@ libmdvi = static_library(
   'mdvi',
   sources: sources,
   include_directories: top_inc,
+  gnu_symbol_visibility: 'hidden',
 )
 
 libmdvi_dep = declare_dependency(
