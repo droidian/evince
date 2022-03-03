@@ -51,8 +51,7 @@ Homepage: https://wiki.gnome.org/Apps/Evince
 
 Package: evince
 Architecture: any
-Depends: evince-common (<< ${gnome:NextVersion}),
-         evince-common (>= ${gnome:Version}),
+Depends: evince-common (>= ${source:Version}),
          gsettings-desktop-schemas,
          libevdocument3-4 (= ${binary:Version}),
          libevview3-3 (= ${binary:Version}),
