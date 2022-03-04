@@ -1,8 +1,15 @@
-evince (42~beta-1) UNRELEASED; urgency=medium
+evince (42~beta-1) experimental; urgency=medium
 
-  * New upstream release
+  * New upstream release (LP: #1963241)
+  * Drop all patches: applied in new release
+  * Update debian/*symbols files
+  * debian/control.in: Use source:Version for Depends: evince-common
+  * debian/control.in: Bump minimum poppler to 22.02 & GTK3 to 3.22
+  * debian/control.in: Build-Depend on gi-docgen instead of gtk-doc-tools
+  * debian/libevince-dev.install: Update docs install location
+  * Revert 2 commits that require libarchive 3.6 since it's not in Debian yet
 
- -- Jeremy Bicha <jeremy.bicha@canonical.com>  Thu, 03 Mar 2022 10:26:40 +0100
+ -- Jeremy Bicha <jeremy.bicha@canonical.com>  Thu, 03 Mar 2022 15:34:26 +0100
 
 evince (41.3-3) unstable; urgency=medium
 
