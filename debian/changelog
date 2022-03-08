@@ -1,4 +1,4 @@
-evince (42~rc-1) UNRELEASED; urgency=medium
+evince (42~rc-1) experimental; urgency=medium
 
   * New upstream release (LP: #1963241)
 
