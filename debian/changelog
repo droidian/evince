@@ -1,8 +1,9 @@
-evince (42.0-1) UNRELEASED; urgency=medium
+evince (42.0-1) unstable; urgency=medium
 
   * New upstream release
+  * Release to unstable
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 18 Mar 2022 11:10:45 -0400
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 18 Mar 2022 11:10:55 -0400
 
 evince (42~rc-1) experimental; urgency=medium
 
