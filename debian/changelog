@@ -1,3 +1,10 @@
+evince (42.1-2) unstable; urgency=medium
+
+  * debian/control.in: Bump minimum libarchive to 3.6.0
+  * Drop libarchive revert commits (LP: #1967127)
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 30 Mar 2022 08:17:47 -0400
+
 evince (42.1-1) unstable; urgency=medium
 
   * New upstream release
