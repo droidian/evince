@@ -1,0 +1,61 @@
+From: Bastien Nocera <hadess@hadess.net>
+Date: Mon, 4 Apr 2022 13:08:33 +0200
+Subject: comics: Fix use-after-free
+
+Fix use-after-free when attempting to access files after the archive
+has been reset. We would try to avoid reopening the archive but it was
+already closed and the entry was pointing to invalid memory.
+
+==12603== Invalid read of size 8
+==12603==    at 0x154303FF: archive_entry_pathname (archive_entry.c:575)
+==12603==    by 0x15411059: archive_reopen_if_needed.constprop.0 (comics-document.c:156)
+==12603==    by 0x1541111F: comics_document_get_page_size (comics-document.c:444)
+==12603==    by 0x486EAE1: _ev_document_get_page_size (ev-document.c:860)
+==12603==    by 0x486EAE1: ev_document_get_page_size (ev-document.c:897)
+==12603==    by 0x4029C3: evince_thumbnail_pngenc_get (evince-thumbnailer.c:207)
+==12603==    by 0x4024F1: main (evince-thumbnailer.c:329)
+==12603==  Address 0x6aa08b0 is 0 bytes inside a block of size 1,280 free'd
+==12603==    at 0x48480E4: free (vg_replace_malloc.c:872)
+==12603==    by 0x1543E6DA: _archive_read_free (archive_read.c:1123)
+==12603==    by 0x1543E6DA: _archive_read_free (archive_read.c:1070)
+==12603==    by 0x15412056: ev_archive_reset (ev-archive.c:311)
+==12603==    by 0x15410C1B: comics_document_list (comics-document.c:272)
+==12603==    by 0x15410C1B: comics_document_load (comics-document.c:379)
+==12603==    by 0x486DF51: ev_document_load_full (ev-document.c:415)
+==12603==    by 0x48702C5: ev_document_factory_get_document_full (ev-document-factory.c:320)
+==12603==    by 0x40247C: evince_thumbnailer_get_document (evince-thumbnailer.c:170)
+==12603==    by 0x40247C: main (evince-thumbnailer.c:297)
+==12603==  Block was alloc'd at
+==12603==    at 0x484A464: calloc (vg_replace_malloc.c:1328)
+==12603==    by 0x1542FD1A: archive_entry_new2 (archive_entry.c:269)
+==12603==    by 0x1543DB26: archive_read_new (archive_read.c:102)
+==12603==    by 0x15411743: libarchive_set_archive_type (ev-archive.c:78)
+==12603==    by 0x1541195E: ev_archive_set_archive_type (ev-archive.c:113)
+==12603==    by 0x15410D4E: comics_check_decompress_support (comics-document.c:301)
+==12603==    by 0x15410D4E: comics_document_load (comics-document.c:372)
+==12603==    by 0x486DF51: ev_document_load_full (ev-document.c:415)
+==12603==    by 0x48702C5: ev_document_factory_get_document_full (ev-document-factory.c:320)
+==12603==    by 0x40247C: evince_thumbnailer_get_document (evince-thumbnailer.c:170)
+==12603==    by 0x40247C: main (evince-thumbnailer.c:297)
+
+Fixes: b1732c19af3d4adf1fc481e0e72a0cbf34240c18
+Closes: #1776
+
+(cherry picked from commit b4bdbc420c8d7bec29a710a43deb8e8368275b8d)
+(cherry picked from commit 15b8e3ceaf7c70aefb16b1aa0c41dfef7b6b1967)
+---
+ backend/comics/ev-archive.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/backend/comics/ev-archive.c b/backend/comics/ev-archive.c
+index 6586482..568e162 100644
+--- a/backend/comics/ev-archive.c
++++ b/backend/comics/ev-archive.c
+@@ -310,6 +310,7 @@ ev_archive_reset (EvArchive *archive)
+ 	case EV_ARCHIVE_TYPE_TAR:
+ 		g_clear_pointer (&archive->libar, archive_free);
+ 		libarchive_set_archive_type (archive, archive->type);
++		archive->libar_entry = NULL;
+ 		break;
+ 	default:
+ 		g_assert_not_reached ();
