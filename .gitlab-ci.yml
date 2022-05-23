@@ -1,0 +1,57 @@
+include: 'https://gitlab.gnome.org/GNOME/citemplates/raw/master/flatpak/flatpak_ci_initiative.yml'
+
+stages:
+    - build
+    - deploy
+
+variables:
+    BUNDLE: "org.gnome.Evince.flatpak"
+
+meson:
+    image: registry.gitlab.gnome.org/gnome/evince/x86_64-ubuntu:poppler
+    stage: build
+
+    script:
+        - >
+            meson 
+            -Dlibhandy:examples=false -Dlibhandy:tests=false -Dlibhandy:vapi=false 
+            -Dlibhandy:glade_catalog=disabled -Dlibhandy:introspection=disabled 
+            _build
+        - ninja -C _build all
+
+    artifacts:
+        when: on_failure
+        paths:
+        - _build/meson-logs/meson-log.txt
+        expire_in: 2 days
+
+meson-internal-synctex:
+    image: registry.gitlab.gnome.org/gnome/evince/x86_64-ubuntu:poppler
+    stage: build
+
+    script:
+        - meson -Dinternal_synctex=true _build
+        - ninja -C _build all
+
+    artifacts:
+        when: on_failure
+        paths:
+        - _build/meson-logs/meson-log.txt
+        expire_in: 2 days
+
+flatpak:
+    image: registry.gitlab.gnome.org/gnome/gnome-runtime-images/gnome:master
+    stage: build
+
+    variables:
+        MANIFEST_PATH: "build-aux/flatpak/org.gnome.Evince.json"
+        RUNTIME_REPO: "https://nightly.gnome.org/gnome-nightly.flatpakrepo"
+        FLATPAK_MODULE: "evince"
+        MESON_ARGS: "-Dnautilus=false -Dgtk_doc=false"
+        APP_ID: "org.gnome.Evince"
+    extends: .flatpak
+
+nightly:
+    dependencies:
+        - flatpak
+    extends: .publish_nightly
