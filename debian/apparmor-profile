@@ -113,6 +113,10 @@
   owner /{,var/}run/user/*/at-spi2-*/   rw,
   owner /{,var/}run/user/*/at-spi2-*/** rw,
 
+  # Allow access to the non-abstract D-Bus socket used by at-spi > 2.42.0
+  #   https://gitlab.gnome.org/GNOME/at-spi2-core/-/issues/43
+  owner /{,var/}run/user/*/at-spi/bus* rw,
+
   # from http://live.gnome.org/Evince/SupportedDocumentFormats. Allow
   # read and write for all supported file formats
   /**.[aA][iI]         rw,
