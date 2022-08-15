@@ -46,8 +46,6 @@ struct _EvZoomActionClass {
 
 GType      ev_zoom_action_get_type        (void);
 
-GtkWidget *ev_zoom_action_new             (EvDocumentModel *model,
-                                           GMenu           *menu);
-gboolean   ev_zoom_action_get_popup_shown (EvZoomAction    *action);
+GtkWidget *ev_zoom_action_new             (EvDocumentModel *model);
 
 G_END_DECLS

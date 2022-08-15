@@ -233,6 +233,10 @@ _ev_document_factory_init (void)
 	if (ev_backends_list)
 		return TRUE;
 
+        if (g_getenv ("EV_BACKENDS_DIR") != NULL)
+                ev_backends_dir = g_strdup (g_getenv ("EV_BACKENDS_DIR"));
+
+	if (!ev_backends_dir) {
 #ifdef G_OS_WIN32
 {
         gchar *dir;
@@ -246,6 +250,7 @@ _ev_document_factory_init (void)
 #else
         ev_backends_dir = g_strdup (EV_BACKENDSDIR);
 #endif
+	}
 
         ev_backends_list = _ev_backend_info_load_from_dir (ev_backends_dir);
 
@@ -697,11 +702,23 @@ ev_backends_manager_get_document_module_name (EvDocument  *document)
         return info->module_name;
 }
 
+/**
+ * ev_backends_manager_get_document_type_info: (skip)
+ * @document: a #EvDocument
+ *
+ * Returns: a EvTypeInfo
+ */
 EvTypeInfo *ev_backends_manager_get_document_type_info (EvDocument  *document)
 {
         return (EvTypeInfo *) get_backend_info_for_document (document);
 }
 
+/**
+ * ev_backends_manager_get_all_types_info: (skip)
+ *
+ * Returns: @list: (element-type EvBackendInfo): a shallow copy of #GList
+ *    containing #EvBackendInfo objects
+ */
 GList *
 ev_backends_manager_get_all_types_info       (void)
 {

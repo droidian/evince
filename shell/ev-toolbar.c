@@ -250,10 +250,8 @@ ev_toolbar_constructed (GObject *object)
                           ev_toolbar);
 
         /* Zoom selector */
-        vbox = ev_zoom_action_new (ev_window_get_document_model (priv->window),
-                                   G_MENU (gtk_builder_get_object (builder, "zoom-menu")));
+        vbox = ev_zoom_action_new (ev_window_get_document_model (priv->window));
         priv->zoom_action = vbox;
-        gtk_widget_set_tooltip_text (vbox, _("Select or set the zoom level of the document"));
         atk_object_set_name (gtk_widget_get_accessible (vbox), _("Set zoom level"));
         g_signal_connect (vbox, "activated",
                           G_CALLBACK (zoom_selector_activated),
@@ -298,26 +296,6 @@ ev_toolbar_new (EvWindow *window)
         return GTK_WIDGET (g_object_new (EV_TYPE_TOOLBAR,
                                          "window", window,
                                          NULL));
-}
-
-gboolean
-ev_toolbar_has_visible_popups (EvToolbar *ev_toolbar)
-{
-        GtkPopover       *popover;
-        EvToolbarPrivate *priv;
-
-        g_return_val_if_fail (EV_IS_TOOLBAR (ev_toolbar), FALSE);
-
-        priv = GET_PRIVATE (ev_toolbar);
-
-        popover = gtk_menu_button_get_popover (GTK_MENU_BUTTON (priv->action_menu_button));
-        if (gtk_widget_get_visible (GTK_WIDGET (popover)))
-                return TRUE;
-
-        if (ev_zoom_action_get_popup_shown (EV_ZOOM_ACTION (priv->zoom_action)))
-                return TRUE;
-
-        return FALSE;
 }
 
 void

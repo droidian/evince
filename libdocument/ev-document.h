@@ -102,7 +102,7 @@ struct _EvDocumentClass
 	EvPage          * (* get_page)              (EvDocument          *document,
 						     gint                 index);
         void              (* get_page_size)         (EvDocument          *document,
-						     EvPage              *page,
+						     EvPage              *page_index,
 						     double              *width,
 						     double              *height);
         gchar           * (* get_page_label)        (EvDocument          *document,
@@ -143,8 +143,6 @@ GQuark           ev_document_error_quark          (void);
 
 /* Document mutex */
 EV_PUBLIC
-GMutex          *ev_document_get_doc_mutex        (void);
-EV_PUBLIC
 void             ev_document_doc_mutex_lock       (void);
 EV_PUBLIC
 void             ev_document_doc_mutex_unlock     (void);
@@ -152,8 +150,6 @@ EV_PUBLIC
 gboolean         ev_document_doc_mutex_trylock    (void);
 
 /* FontConfig mutex */
-EV_PUBLIC
-GMutex          *ev_document_get_fc_mutex         (void);
 EV_PUBLIC
 void             ev_document_fc_mutex_lock        (void);
 EV_PUBLIC
