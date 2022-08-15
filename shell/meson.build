@@ -36,6 +36,14 @@ resource_data = files(
   'evince.css',
   '../data/thumbnail-frame.png',
   'evince-menus.ui',
+  'evince-message-area.ui',
+  'evince-password-view.ui',
+  'evince-properties-fonts.ui',
+  'evince-progress-message-area.ui',
+  'evince-recent-view.ui',
+  'evince-sidebar.ui',
+  'evince-sidebar-bookmarks.ui',
+  'evince-zoom-action.ui',
   'help-overlay.ui',
 )
 

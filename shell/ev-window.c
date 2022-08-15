@@ -2416,6 +2416,7 @@ ev_window_open_uri (EvWindow       *ev_window,
 {
 	EvWindowPrivate *priv = GET_PRIVATE (ev_window);
 	GFile *source_file;
+	g_autofree char *path = NULL;
 
 	priv->in_reload = FALSE;
 
@@ -2432,27 +2433,27 @@ ev_window_open_uri (EvWindow       *ev_window,
 		return;
 	}
 
-	if (priv->monitor) {
-		g_object_unref (priv->monitor);
-		priv->monitor = NULL;
-	}
-	
+	g_clear_object (&priv->monitor);
+
 	ev_window_close_dialogs (ev_window);
 	ev_window_clear_load_job (ev_window);
 	ev_window_clear_local_uri (ev_window);
 
 	priv->window_mode = mode;
 
-	if (priv->uri)
-		g_free (priv->uri);
-	priv->uri = g_strdup (uri);
-
-	if (priv->metadata)
-		g_object_unref (priv->metadata);
-	if (priv->bookmarks)
-		g_object_unref (priv->bookmarks);
-
 	source_file = g_file_new_for_uri (uri);
+
+	g_clear_pointer (&priv->uri, g_free);
+	path = g_file_get_path (source_file);
+	/* Try to use FUSE-backed files if possible to avoid downloading */
+	if (path)
+		priv->uri = g_filename_to_uri (path, NULL, NULL);
+	else
+		priv->uri = g_strdup (uri);
+
+	g_clear_object (&priv->metadata);
+	g_clear_object (&priv->bookmarks);
+
 	if (ev_is_metadata_supported_for_file (source_file)) {
 		priv->metadata = ev_metadata_new (source_file);
 		ev_window_init_metadata_with_default_values (ev_window);
@@ -2472,21 +2473,20 @@ ev_window_open_uri (EvWindow       *ev_window,
 		priv->bookmarks = NULL;
 	}
 
-	if (priv->dest)
-		g_object_unref (priv->dest);
+	g_clear_object (&priv->dest);
 	priv->dest = dest ? g_object_ref (dest) : NULL;
 
 	set_filenames (ev_window, source_file);
 	setup_size_from_metadata (ev_window);
 	setup_model_from_metadata (ev_window);
 
-	priv->load_job = ev_job_load_new (uri);
+	priv->load_job = ev_job_load_new (priv->uri);
 	g_signal_connect (priv->load_job,
 			  "finished",
 			  G_CALLBACK (ev_window_load_job_cb),
 			  ev_window);
 
-	if (!g_file_is_native (source_file) && !priv->local_uri) {
+	if (path == NULL && !priv->local_uri) {
 		ev_window_load_file_remote (ev_window, source_file);
 	} else {
 		ev_window_show_loading_message (ev_window);
