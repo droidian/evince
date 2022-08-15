@@ -42,6 +42,7 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_job_export_set_page@Base 3.0.2
  ev_job_failed@Base 3.0.2
  ev_job_failed_from_error@Base 3.0.2
+ ev_job_find_get_n_main_results@Base 43~alpha
  ev_job_find_get_n_results@Base 3.0.2
  ev_job_find_get_options@Base 3.5.3
  ev_job_find_get_progress@Base 3.0.2
@@ -102,6 +103,7 @@ libevview3.so.3 libevview3-3 #MINVER#
  ev_job_scheduler_get_running_thread_job@Base 3.0.2
  ev_job_scheduler_push_job@Base 3.0.2
  ev_job_scheduler_update_job@Base 3.0.2
+ ev_job_scheduler_wait@Base 43~alpha
  ev_job_set_run_mode@Base 3.0.2
  ev_job_succeeded@Base 3.0.2
  ev_job_thumbnail_format_get_type@Base 3.13.91

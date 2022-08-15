@@ -99,6 +99,7 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_document_fc_mutex_trylock@Base 3.0.2
  ev_document_fc_mutex_unlock@Base 3.0.2
  ev_document_find_find_text@Base 3.0.2
+ ev_document_find_find_text_extended@Base 43~alpha
  ev_document_find_find_text_with_options@Base 3.5.3
  ev_document_find_get_supported_options@Base 3.5.3
  ev_document_find_get_type@Base 3.0.2
@@ -243,6 +244,10 @@ libevdocument3.so.4 libevdocument3-4 #MINVER#
  ev_file_is_temp@Base 3.0.2
  ev_file_uncompress@Base 3.0.2
  ev_find_options_get_type@Base 3.5.3
+ ev_find_rectangle_copy@Base 43~alpha
+ ev_find_rectangle_free@Base 43~alpha
+ ev_find_rectangle_get_type@Base 43~alpha
+ ev_find_rectangle_new@Base 43~alpha
  ev_form_field_button_get_type@Base 3.0.2
  ev_form_field_button_new@Base 3.0.2
  ev_form_field_button_type_get_type@Base 3.0.2
