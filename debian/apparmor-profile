@@ -68,6 +68,9 @@
   /usr/bin/krusader Cx -> sanitized_helper, # KDE
   /usr/bin/thunar Cx -> sanitized_helper,   # XFCE
 
+  # Print Dialog
+  /usr/lib/@{multiarch}/libproxy/*/pxgsettings Cx -> sanitized_helper,
+
   # For Xubuntu to launch the browser
   #include <abstractions/exo-open>
 
