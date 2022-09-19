@@ -3,12 +3,13 @@ include: 'https://gitlab.gnome.org/GNOME/citemplates/raw/master/flatpak/flatpak_
 stages:
     - build
     - deploy
+    - image
 
 variables:
     BUNDLE: "org.gnome.Evince.flatpak"
 
 meson:
-    image: registry.gitlab.gnome.org/gnome/evince/x86_64-ubuntu:poppler
+    image: registry.gitlab.gnome.org/gnome/evince/x86_64-ubuntu:latest
     stage: build
 
     script:
@@ -26,7 +27,7 @@ meson:
         expire_in: 2 days
 
 meson-internal-synctex:
-    image: registry.gitlab.gnome.org/gnome/evince/x86_64-ubuntu:poppler
+    image: registry.gitlab.gnome.org/gnome/evince/x86_64-ubuntu:latest
     stage: build
 
     script:
@@ -40,7 +41,7 @@ meson-internal-synctex:
         expire_in: 2 days
 
 flatpak:
-    image: registry.gitlab.gnome.org/gnome/gnome-runtime-images/gnome:master
+    extends: .flatpak
     stage: build
 
     variables:
@@ -49,7 +50,6 @@ flatpak:
         FLATPAK_MODULE: "evince"
         MESON_ARGS: "-Dnautilus=false -Dgtk_doc=false"
         APP_ID: "org.gnome.Evince"
-    extends: .flatpak
     artifacts:
         # Rewrite paths and reports to "remove" testlog.txt and junit files, 
         # which do not exists in evince build, yet.
@@ -64,3 +64,29 @@ nightly:
     dependencies:
         - flatpak
     extends: .publish_nightly
+
+update image:
+    variables:
+        IMAGE_TAG: $CI_REGISTRY_IMAGE/x86_64-ubuntu
+        # Tell 'docker:dind' to enable TLS (recommended)
+        # and generate certificates in the specified directory.
+        DOCKER_TLS_CERTDIR: "/certs"
+        STORAGE_DRIVER: vfs
+        BUILDAH_FORMAT: docker
+        BUILDAH_ISOLATION: chroot
+    image: alpine:latest
+    stage: image
+    script:
+        - apk add --no-cache buildah runc
+        - buildah bud --tag $IMAGE_TAG -f .gitlab-ci/ubuntu.Dockerfile
+        - buildah tag $IMAGE_TAG "$IMAGE_TAG:v$CI_JOB_ID"
+        - buildah login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+        - buildah push --creds $CI_REGISTRY_USER:$CI_REGISTRY_PASSWORD $IMAGE_TAG
+        - buildah push --creds $CI_REGISTRY_USER:$CI_REGISTRY_PASSWORD "$IMAGE_TAG:v$CI_JOB_ID"
+    when: manual
+    only:
+       - web
+       - main
+    except:
+       variables:
+           - $CI_PROJECT_NAMESPACE != "GNOME"

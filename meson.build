@@ -1,8 +1,8 @@
 project(
   'evince', ['c'],
-  version: '43.alpha',
+  version: '43.0',
   license: 'GPL-2.0-or-later',
-  meson_version: '>= 0.53.0',
+  meson_version: '>= 0.57.0',
   default_options: [
     'buildtype=debugoptimized',
     'libhandy:vapi=false',
@@ -195,7 +195,7 @@ if ev_platform == 'gnome'
   # *** Nautilus property page build ***
   enable_nautilus = get_option('nautilus')
   if enable_nautilus
-    libnautilus_extension_dep = dependency('libnautilus-extension', version: '>= 3.28.0')
+    libnautilus_extension_dep = dependency('libnautilus-extension', version: ['>= 3.28.0', '< 42.20'])
     nautilus_extension_dir = libnautilus_extension_dep.get_pkgconfig_variable('extensiondir', define_variable: ['libdir', ev_libdir])
   endif
 
@@ -518,9 +518,9 @@ configure_file(
   configuration: config_h,
 )
 
-meson.add_install_script(
-  'meson_post_install.py',
-  ev_datadir,
+gnome.post_install(
+  glib_compile_schemas: true,
+  gtk_update_icon_cache: true,
 )
 
 
