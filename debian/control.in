@@ -40,7 +40,7 @@ Build-Depends: adwaita-icon-theme,
                libtiff-dev (>= 4),
                libx11-dev,
                libxml2-dev (>= 2.5.0),
-               meson (>= 0.50),
+               meson (>= 0.57.0),
                zlib1g-dev
 Rules-Requires-Root: no
 Standards-Version: 4.6.0
