@@ -12,14 +12,12 @@ override_dh_auto_configure:
 	dh_auto_configure -- \
 		-Dauto_features=enabled \
 		-Dinternal_synctex=false \
-		-Dnautilus=false \
 		-Dps=enabled \
 		-Dintrospection=true \
 		-Dgtk_doc=true
 
 override_dh_makeshlibs:
 	dh_makeshlibs \
-		-X /usr/lib/$(DEB_HOST_MULTIARCH)/nautilus/ \
 		-X /usr/lib/$(DEB_HOST_MULTIARCH)/evince/
 
 execute_after_dh_install:
