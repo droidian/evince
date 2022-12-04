@@ -36,12 +36,12 @@ git branch -u origin/main
 git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 ```
 
-[gnome]: https://www.gnome.org/start/
+[gnome]: https://www.gnome.org/
 [poppler]: https://poppler.freedesktop.org/
 [ghostscript]: https://www.freedesktop.org/wiki/Software/libspectre/
 [djvulibre]: https://djvulibre.djvuzone.org/
 [dvi]: https://tug.org/texinfohtml/kpathsea.html
-[comics]: http://libarchive.org/
+[comics]: https://libarchive.org/
 [tiff]: http://libtiff.org/
 [xps]: https://wiki.gnome.org/Projects/libgxps
 [license]: COPYING
