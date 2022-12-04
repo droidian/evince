@@ -1,8 +1,13 @@
-evince (43.1-1) UNRELEASED; urgency=medium
+evince (43.1-1) unstable; urgency=medium
 
+  [ Anders Jonsson ]
+  * debian/apparmor-profile: Allow .cbt files for thumbnailer
+
+  [ Andreas Henriksson ]
   * New upstream release
+  * Drop override, nautilus extension now disabled by default
 
- -- Andreas Henriksson <andreas@fatal.se>  Sun, 04 Dec 2022 13:51:41 +0100
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 04 Dec 2022 13:56:51 +0100
 
 evince (43.0-1) unstable; urgency=medium
 
