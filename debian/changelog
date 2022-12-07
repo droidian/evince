@@ -1,3 +1,11 @@
+evince (43.1-2) unstable; urgency=medium
+
+  [ Andrej Shadura ]
+  * Print dialog requires access to libproxy’s pxgsettings (Closes: #1002725)
+    (LP: #1915910)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 07 Dec 2022 11:20:50 +0100
+
 evince (43.1-1) unstable; urgency=medium
 
   [ Anders Jonsson ]
