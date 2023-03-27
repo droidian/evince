@@ -3024,7 +3024,6 @@ pdf_document_annotations_get_annotations (EvDocumentAnnotations *document_annota
 	GList *annots;
 	GList *list;
 	gdouble height;
-	gint i = 0;
 
 	pdf_document = PDF_DOCUMENT (document_annotations);
 	poppler_page = POPPLER_PAGE (page->backend_page);
@@ -3049,8 +3048,6 @@ pdf_document_annotations_get_annotations (EvDocumentAnnotations *document_annota
 		ev_annot = ev_annot_from_poppler_annot (mapping->annot, page);
 		if (!ev_annot)
 			continue;
-
-		i++;
 
 		/* Make sure annot has a unique name */
 		if (!ev_annotation_get_name (ev_annot))
@@ -4023,6 +4020,10 @@ build_layers_tree (PdfDocument       *pdf_document,
 			gchar *title;
 
 			title = poppler_layers_iter_get_title (iter);
+
+			if (title == NULL)
+				continue;
+
 			markup = g_markup_escape_text (title, -1);
 			g_free (title);
 

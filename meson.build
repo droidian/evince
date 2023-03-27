@@ -1,8 +1,8 @@
 project(
   'evince', ['c'],
-  version: '43.0',
+  version: '44.1',
   license: 'GPL-2.0-or-later',
-  meson_version: '>= 0.57.0',
+  meson_version: '>= 0.59.0',
   default_options: [
     'buildtype=debugoptimized',
     'libhandy:vapi=false',
@@ -154,7 +154,7 @@ hdy_req_version = '>= 1.5.0'
 
 gdk_pixbuf_dep = dependency('gdk-pixbuf-2.0', version: '>= 2.40.0')
 config_h.set_quoted('EXTRA_GDK_PIXBUF_LOADERS_DIR',
-                    join_paths (ev_libdir, ev_name, 'gdk-pixbuf', gdk_pixbuf_dep.get_pkgconfig_variable('gdk_pixbuf_binary_version')))
+                    join_paths (ev_libdir, ev_name, 'gdk-pixbuf', gdk_pixbuf_dep.get_variable(pkgconfig: 'gdk_pixbuf_binary_version')))
 
 gio_dep = dependency('gio-2.0', version: glib_req_version)
 glib_dep = dependency('glib-2.0', version: glib_req_version)
@@ -169,7 +169,8 @@ m_dep = cc.find_library('m')
 
 gidocgen_dep = dependency('gi-docgen', version: '>= 2021.1',
 			  fallback: ['gi-docgen', 'dummy_dep'],
-			  required: get_option('gtk_doc'))
+			  required: get_option('gtk_doc'),
+			  native: true)
 
 # Although GTK+ 3.10 includes hi-dpi functionality, it does not require a cairo with
 # cairo_surface_set_device_scale(), which we also need if we're to support hi-dpi,
@@ -196,14 +197,14 @@ if ev_platform == 'gnome'
   enable_nautilus = get_option('nautilus')
   if enable_nautilus
     libnautilus_extension_dep = dependency('libnautilus-extension', version: ['>= 3.28.0', '< 42.20'])
-    nautilus_extension_dir = libnautilus_extension_dep.get_pkgconfig_variable('extensiondir', define_variable: ['libdir', ev_libdir])
+    nautilus_extension_dir = libnautilus_extension_dep.get_variable(pkgconfig: 'extensiondir', pkgconfig_define: ['libdir', ev_libdir])
   endif
 
   # *** DBUS ***
   enable_dbus = get_option('dbus')
   if enable_dbus
     # Check for dbus service dir
-    dbus_service_dir = dependency('dbus-1').get_pkgconfig_variable('session_bus_services_dir', define_variable: ['datadir', ev_datadir])
+    dbus_service_dir = dependency('dbus-1').get_variable(pkgconfig: 'session_bus_services_dir', pkgconfig_define: ['datadir', ev_datadir])
   endif
   config_h.set('ENABLE_DBUS', enable_dbus)
 
@@ -235,8 +236,12 @@ endif
 
 # *** GObject Introspection ***
 enable_introspection = get_option('introspection')
+enable_gtk_doc = get_option('gtk_doc')
 if enable_introspection
   dependency('gobject-introspection-1.0', version: '>= 1.0')
+else
+  warning('Disable gtk_doc due to introspection is disabled')
+  enable_gtk_doc = false
 endif
 
 # *** GNOME Desktop (Thumbnail cache) ***
@@ -521,6 +526,7 @@ configure_file(
 gnome.post_install(
   glib_compile_schemas: true,
   gtk_update_icon_cache: true,
+  update_desktop_database: true,
 )
 
 
