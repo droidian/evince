@@ -1,8 +1,10 @@
-evince (44.1-1) UNRELEASED; urgency=medium
+evince (44.1-1) experimental; urgency=medium
 
   * New upstream release
+  * debian/control.in: Bump minimum meson to 0.59.0
+  * debian/control.in: Build-Depend on desktop-file-utils
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Mon, 27 Mar 2023 06:54:27 -0400
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Mon, 27 Mar 2023 07:02:08 -0400
 
 evince (43.1-2) unstable; urgency=medium
 
