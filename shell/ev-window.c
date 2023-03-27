@@ -205,7 +205,6 @@ typedef struct {
 	EvWindowTitle *title;
 	EvMetadata *metadata;
 	EvBookmarks *bookmarks;
-	GMenu *bookmarks_menu;
 
 	/* Has the document been modified? */
 	gboolean is_modified;
@@ -395,7 +394,6 @@ static void     ev_window_media_player_key_pressed      (EvWindow         *windo
 static void	ev_window_emit_closed			(EvWindow         *window);
 static void 	ev_window_emit_doc_loaded		(EvWindow	  *window);
 #endif
-static void     ev_window_setup_bookmarks               (EvWindow         *window);
 
 static void     ev_window_show_find_bar                 (EvWindow         *ev_window,
 							 gboolean          restart);
@@ -573,7 +571,6 @@ ev_window_update_actions_sensitivity (EvWindow *ev_window)
 	 */
 	ev_window_set_action_enabled (ev_window, "save-settings", !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "show-side-pane", !recent_view_mode);
-	ev_window_set_action_enabled (ev_window, "goto-bookmark", !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "scroll-forward", !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "scroll-backwards", !recent_view_mode);
 	ev_window_set_action_enabled (ev_window, "sizing-mode", !recent_view_mode);
@@ -796,15 +793,15 @@ ev_window_error_message (EvWindow    *window,
 	va_start (args, format);
 	msg = g_strdup_vprintf (format, args);
 	va_end (args);
-	
+
 	area = ev_message_area_new (GTK_MESSAGE_ERROR,
 				    msg,
 				    NULL);
 	g_free (msg);
-	
+
 	if (error)
 		ev_message_area_set_secondary_text (EV_MESSAGE_AREA (area), error->message);
-	g_signal_connect (area, "response",
+	g_signal_connect (ev_message_area_get_info_bar (EV_MESSAGE_AREA (area)), "response",
 			  G_CALLBACK (ev_window_message_area_response_cb),
 			  window);
 	gtk_widget_show (area);
@@ -832,8 +829,8 @@ ev_window_warning_message (EvWindow    *window,
 				    msg,
 				    NULL);
 	g_free (msg);
-	
-	g_signal_connect (area, "response",
+
+	g_signal_connect (ev_message_area_get_info_bar (EV_MESSAGE_AREA (area)), "response",
 			  G_CALLBACK (ev_window_message_area_response_cb),
 			  window);
 	gtk_widget_show (area);
@@ -2166,7 +2163,7 @@ show_loading_progress (EvWindow *ev_window)
 					     _("C_ancel"),
 					     GTK_RESPONSE_CANCEL,
 					     NULL);
-	g_signal_connect (area, "response",
+	g_signal_connect (ev_message_area_get_info_bar (EV_MESSAGE_AREA (area)), "response",
 			  G_CALLBACK (ev_window_progress_response_cb),
 			  ev_window);
 	gtk_widget_show (area);
@@ -2466,10 +2463,6 @@ ev_window_open_uri (EvWindow       *ev_window,
 		priv->bookmarks = ev_bookmarks_new (priv->metadata);
 		ev_sidebar_bookmarks_set_bookmarks (EV_SIDEBAR_BOOKMARKS (priv->sidebar_bookmarks),
 						    priv->bookmarks);
-		g_signal_connect_swapped (priv->bookmarks, "changed",
-					  G_CALLBACK (ev_window_setup_bookmarks),
-					  ev_window);
-		ev_window_setup_bookmarks (ev_window);
 	} else {
 		priv->bookmarks = NULL;
 	}
@@ -2638,7 +2631,7 @@ show_reloading_progress (EvWindow *ev_window)
 					     _("C_ancel"),
 					     GTK_RESPONSE_CANCEL,
 					     NULL);
-	g_signal_connect (area, "response",
+	g_signal_connect (ev_message_area_get_info_bar (EV_MESSAGE_AREA (area)), "response",
 			  G_CALLBACK (ev_window_progress_response_cb),
 			  ev_window);
 	gtk_widget_show (area);
@@ -3004,7 +2997,7 @@ show_saving_progress (GFile *dst)
 					     _("C_ancel"),
 					     GTK_RESPONSE_CANCEL,
 					     NULL);
-	g_signal_connect (area, "response",
+	g_signal_connect (ev_message_area_get_info_bar (EV_MESSAGE_AREA (area)), "response",
 			  G_CALLBACK (ev_window_progress_response_cb),
 			  ev_window);
 	gtk_widget_show (area);
@@ -3741,7 +3734,7 @@ ev_window_print_operation_status_changed (EvPrintOperation *op,
 						     GTK_RESPONSE_CANCEL,
 						     NULL);
 		ev_window_print_update_pending_jobs_message (ev_window, 1);
-		g_signal_connect (area, "response",
+		g_signal_connect (ev_message_area_get_info_bar (EV_MESSAGE_AREA (area)), "response",
 				  G_CALLBACK (ev_window_print_progress_response_cb),
 				  ev_window);
 		gtk_widget_show (area);
@@ -4602,7 +4595,7 @@ ev_window_run_fullscreen (EvWindow *window)
 	ev_document_model_set_fullscreen (priv->model, TRUE);
 	ev_window_update_fullscreen_action (window);
 
-	hdy_header_bar_set_show_close_button (HDY_HEADER_BAR (priv->toolbar), FALSE);
+	hdy_header_bar_set_show_close_button (ev_toolbar_get_header_bar (EV_TOOLBAR (priv->toolbar)), FALSE);
 
 	if (fullscreen_window)
 		gtk_window_fullscreen (GTK_WINDOW (window));
@@ -5119,42 +5112,6 @@ ev_window_cmd_go_backwards (GSimpleAction *action,
 	}
 }
 
-static gint
-compare_bookmarks (EvBookmark *a,
-		   EvBookmark *b)
-{
-	if (a->page < b->page)
-		return -1;
-	if (a->page > b->page)
-		return 1;
-	return 0;
-}
-
-static void
-ev_window_setup_bookmarks (EvWindow *window)
-{
-	EvWindowPrivate *priv = GET_PRIVATE (window);
-	GList *items, *it;
-
-	g_menu_remove_all (priv->bookmarks_menu);
-
-	items = g_list_sort (ev_bookmarks_get_bookmarks (priv->bookmarks),
-			     (GCompareFunc) compare_bookmarks);
-
-	for (it = items; it; it = it->next) {
-		EvBookmark *bookmark = it->data;
-		GMenuItem *item;
-
-		item = g_menu_item_new (bookmark->title, NULL);
-		g_menu_item_set_action_and_target (item, "win.goto-bookmark", "u", bookmark->page);
-		g_menu_append_item (priv->bookmarks_menu, item);
-
-		g_object_unref (item);
-	}
-
-	g_list_free (items);
-}
-
 static void
 ev_window_cmd_bookmarks_add (GSimpleAction *action,
 			     GVariant      *parameter,
@@ -5187,21 +5144,6 @@ ev_window_cmd_bookmarks_delete (GSimpleAction *action,
 	bm.title = NULL;
 
 	ev_bookmarks_delete (priv->bookmarks, &bm);
-}
-
-static void
-ev_window_activate_goto_bookmark_action (GSimpleAction *action,
-					 GVariant      *parameter,
-					 gpointer       user_data)
-{
-	EvWindow *window = user_data;
-	EvWindowPrivate *priv = GET_PRIVATE (window);
-	gint old_page = ev_document_model_get_page (priv->model);
-
-	ev_history_add_page (priv->history, old_page);
-	ev_history_add_page (priv->history, g_variant_get_uint32 (parameter));
-
-	ev_document_model_set_page (priv->model, g_variant_get_uint32 (parameter));
 }
 
 static void
@@ -5284,7 +5226,7 @@ ev_window_document_modified_cb (EvDocument *document,
                                 EvWindow   *ev_window)
 {
 	EvWindowPrivate *priv = GET_PRIVATE (ev_window);
-	HdyHeaderBar *toolbar = HDY_HEADER_BAR (ev_window_get_toolbar (ev_window));
+	HdyHeaderBar *toolbar = ev_window_get_toolbar (ev_window);
 	const gchar *title = hdy_header_bar_get_title (toolbar);
 	gchar *new_title;
 
@@ -6052,7 +5994,7 @@ ev_window_cmd_view_toggle_caret_navigation (GSimpleAction *action,
 	box = _ev_message_area_get_main_box (EV_MESSAGE_AREA (message_area));
 	gtk_box_pack_start (GTK_BOX (box), hbox, TRUE, TRUE, 0);
 
-	g_signal_connect (message_area, "response",
+	g_signal_connect (ev_message_area_get_info_bar (EV_MESSAGE_AREA (message_area)), "response",
 			  G_CALLBACK (ev_window_caret_navigation_message_area_response_cb),
 			  window);
 
@@ -6121,15 +6063,8 @@ ev_window_dispose (GObject *object)
 	}
 #endif /* ENABLE_DBUS */
 
-	if (priv->bookmarks) {
-		g_object_unref (priv->bookmarks);
-		priv->bookmarks = NULL;
-	}
-
-	if (priv->metadata) {
-		g_object_unref (priv->metadata);
-		priv->metadata = NULL;
-	}
+	g_clear_object (&priv->bookmarks);
+	g_clear_object (&priv->metadata);
 
 	if (priv->setup_document_idle > 0) {
 		g_source_remove (priv->setup_document_idle);
@@ -6141,17 +6076,13 @@ ev_window_dispose (GObject *object)
 		priv->loading_message_timeout = 0;
 	}
 
-	if (priv->monitor) {
-		g_object_unref (priv->monitor);
-		priv->monitor = NULL;
-	}
+	g_clear_object (&priv->monitor);
 
 	if (priv->title) {
 		ev_window_title_free (priv->title);
 		priv->title = NULL;
 	}
 
-	g_clear_object (&priv->bookmarks_menu);
 	g_clear_object (&priv->view_popup_menu);
 	g_clear_object (&priv->attachment_popup_menu);
 
@@ -6159,44 +6090,23 @@ ev_window_dispose (GObject *object)
 		priv->recent_manager = NULL;
 	}
 
-	if (priv->settings) {
-		g_object_unref (priv->settings);
-		priv->settings = NULL;
-	}
-
+	g_clear_object (&priv->settings);
 	if (priv->default_settings) {
 		g_settings_apply (priv->default_settings);
-		g_object_unref (priv->default_settings);
-		priv->default_settings = NULL;
+		g_clear_object (&priv->default_settings);
 	}
-
-	if (priv->lockdown_settings) {
-		g_object_unref (priv->lockdown_settings);
-		priv->lockdown_settings = NULL;
-	}
+	g_clear_object (&priv->lockdown_settings);
 
 	if (priv->model) {
 		g_signal_handlers_disconnect_by_func (priv->model,
 						      ev_window_page_changed_cb,
 						      window);
-		g_object_unref (priv->model);
-		priv->model = NULL;
+		g_clear_object (&priv->model);
 	}
 
-	if (priv->document) {
-		g_object_unref (priv->document);
-		priv->document = NULL;
-	}
-
-	if (priv->view) {
-		g_object_unref (priv->view);
-		priv->view = NULL;
-	}
-
-	if (priv->password_view) {
-		g_object_unref (priv->password_view);
-		priv->password_view = NULL;
-	}
+	g_clear_object (&priv->document);
+	g_clear_object (&priv->view);
+	g_clear_object (&priv->password_view);
 
 	if (priv->load_job) {
 		ev_window_clear_load_job (window);
@@ -6216,60 +6126,30 @@ ev_window_dispose (GObject *object)
 	}
 
 	ev_window_clear_progress_idle (window);
-	if (priv->progress_cancellable) {
-		g_object_unref (priv->progress_cancellable);
-		priv->progress_cancellable = NULL;
-	}
+	g_clear_object (&priv->progress_cancellable);
 
 	ev_window_close_dialogs (window);
 
-	if (priv->link) {
-		g_object_unref (priv->link);
-		priv->link = NULL;
-	}
-
-	if (priv->image) {
-		g_object_unref (priv->image);
-		priv->image = NULL;
-	}
-
-	if (priv->annot) {
-		g_object_unref (priv->annot);
-		priv->annot = NULL;
-	}
+	g_clear_object (&priv->link);
+	g_clear_object (&priv->image);
+	g_clear_object (&priv->annot);
 
 	if (priv->attach_list) {
 		g_list_free_full (priv->attach_list, g_object_unref);
 		priv->attach_list = NULL;
 	}
 
-	if (priv->uri) {
-		g_free (priv->uri);
-		priv->uri = NULL;
-	}
+	g_clear_pointer (&priv->uri, g_free);
 
 	g_clear_pointer (&priv->display_name, g_free);
 	g_clear_pointer (&priv->edit_name, g_free);
 
-	if (priv->search_string) {
-		g_free (priv->search_string);
-		priv->search_string = NULL;
-	}
+	g_clear_pointer (&priv->search_string, g_free);
 
-	if (priv->dest) {
-		g_object_unref (priv->dest);
-		priv->dest = NULL;
-	}
+	g_clear_object (&priv->dest);
+	g_clear_object (&priv->history);
 
-	if (priv->history) {
-		g_object_unref (priv->history);
-		priv->history = NULL;
-	}
-
-	if (priv->print_queue) {
-		g_queue_free (priv->print_queue);
-		priv->print_queue = NULL;
-	}
+	g_clear_pointer (&priv->print_queue, g_queue_free);
 
 	G_OBJECT_CLASS (ev_window_parent_class)->dispose (object);
 }
@@ -6287,28 +6167,25 @@ static gboolean
 ev_window_key_press_event (GtkWidget   *widget,
 			   GdkEventKey *event)
 {
-	GtkWidget *sidebar;
-	GtkWidget *find_sidebar;
+	GtkWindow *window = GTK_WINDOW (widget);
+	EvWindowPrivate *priv = GET_PRIVATE (EV_WINDOW (widget));
 	GtkWidget *focus_widget;
 	gboolean skip_sending_accel_to_sidebar = FALSE;
 	static gpointer grand_parent_class = NULL;
-	GtkWindow *window = GTK_WINDOW (widget);
 
 	if (grand_parent_class == NULL)
-                grand_parent_class = g_type_class_peek_parent (ev_window_parent_class);
+		grand_parent_class = g_type_class_peek_parent (ev_window_parent_class);
 
 	/* Don't send Ctrl and Alt accels to sidebar, as they may be handled by
 	 * GtkTreeView or other sidebar focused widgets, while we want them to reach
 	 * the main EvApplication accels. Issues #860 and #795 */
 	if (event->state & GDK_CONTROL_MASK || event->state & GDK_MOD1_MASK) {
-		sidebar = ev_window_get_sidebar (EV_WINDOW (widget));
-		find_sidebar = ev_window_get_find_sidebar (EV_WINDOW (widget));
 		focus_widget = gtk_window_get_focus (window);
 
 		if (focus_widget && gtk_widget_has_focus (focus_widget) &&
 		    !GTK_IS_ENTRY (focus_widget) &&
-		    (gtk_widget_is_ancestor (focus_widget, sidebar)
-		     || gtk_widget_is_ancestor (focus_widget, find_sidebar)))
+		    (gtk_widget_is_ancestor (focus_widget, priv->sidebar)
+		     || gtk_widget_is_ancestor (focus_widget, priv->find_sidebar)))
 			skip_sending_accel_to_sidebar = TRUE;
 	}
 
@@ -6419,7 +6296,6 @@ static const GActionEntry actions[] = {
 	{ "auto-scroll", ev_window_cmd_view_autoscroll },
 	{ "add-bookmark", ev_window_cmd_bookmarks_add },
 	{ "delete-bookmark", ev_window_cmd_bookmarks_delete },
-	{ "goto-bookmark", ev_window_activate_goto_bookmark_action, "u" },
 	{ "close", ev_window_cmd_file_close_window },
 	{ "scroll-forward", ev_window_cmd_scroll_forward },
 	{ "scroll-backwards", ev_window_cmd_scroll_backwards },
@@ -7525,7 +7401,6 @@ ev_window_init (EvWindow *ev_window)
 	GError *error = NULL;
 	GtkWidget *sidebar_widget;
 	GtkWidget *overlay;
-	GtkWidget *searchbar_revealer;
 	GObject *mpkeys;
 	guint page_cache_mb;
 	gboolean allow_links_change_zoom;
@@ -7588,8 +7463,6 @@ ev_window_init (EvWindow *ev_window)
                           G_CALLBACK (history_changed_cb),
                           ev_window);
 
-	priv->bookmarks_menu = g_menu_new ();
-
 	app_info = g_app_info_get_default_for_uri_scheme ("mailto");
 	priv->has_mailto_handler = app_info != NULL;
 	g_clear_object (&app_info);
@@ -7608,7 +7481,7 @@ ev_window_init (EvWindow *ev_window)
 
 	priv->toolbar = ev_toolbar_new (ev_window);
 	gtk_widget_set_no_show_all (priv->toolbar, TRUE);
-	hdy_header_bar_set_show_close_button (HDY_HEADER_BAR (priv->toolbar), TRUE);
+	hdy_header_bar_set_show_close_button (ev_toolbar_get_header_bar (EV_TOOLBAR (priv->toolbar)), TRUE);
 	gtk_box_pack_start (GTK_BOX (priv->main_box), priv->toolbar, FALSE, TRUE, 0);
 	gtk_widget_show (priv->toolbar);
 
@@ -7644,21 +7517,11 @@ ev_window_init (EvWindow *ev_window)
 			   priv->search_box);
 	gtk_widget_show (priv->search_box);
 
-	/* Wrap search bar in a revealer.
-	 * Workaround for the gtk+ bug: https://bugzilla.gnome.org/show_bug.cgi?id=724096
-	 */
-	searchbar_revealer = gtk_revealer_new ();
-	g_object_bind_property (G_OBJECT (searchbar_revealer), "reveal-child",
-				G_OBJECT (priv->search_bar), "search-mode-enabled",
-				G_BINDING_BIDIRECTIONAL);
-	gtk_container_add (GTK_CONTAINER (searchbar_revealer), priv->search_bar);
-	gtk_widget_show (GTK_WIDGET (searchbar_revealer));
-
 	/* We don't use gtk_search_bar_connect_entry, because it clears the entry when the
 	 * search is closed, but we want to keep the current search.
 	 */
 	gtk_box_pack_start (GTK_BOX (priv->main_box),
-			    searchbar_revealer, FALSE, TRUE, 0);
+			    priv->search_bar, FALSE, TRUE, 0);
 	gtk_widget_show (priv->search_bar);
 
 	/* Add the main area */
@@ -8023,30 +7886,6 @@ ev_window_get_dbus_object_path (EvWindow *ev_window)
 #endif
 }
 
-GMenuModel *
-ev_window_get_bookmarks_menu (EvWindow *ev_window)
-{
-	EvWindowPrivate *priv;
-
-	g_return_val_if_fail (EV_WINDOW (ev_window), NULL);
-
-	priv = GET_PRIVATE (ev_window);
-
-	return G_MENU_MODEL (priv->bookmarks_menu);
-}
-
-EvHistory *
-ev_window_get_history (EvWindow *ev_window)
-{
-	EvWindowPrivate *priv;
-
-	g_return_val_if_fail (EV_WINDOW (ev_window), NULL);
-
-	priv = GET_PRIVATE (ev_window);
-
-	return priv->history;
-}
-
 EvDocumentModel *
 ev_window_get_document_model (EvWindow *ev_window)
 {
@@ -8059,7 +7898,7 @@ ev_window_get_document_model (EvWindow *ev_window)
 	return priv->model;
 }
 
-GtkWidget *
+HdyHeaderBar *
 ev_window_get_toolbar (EvWindow *ev_window)
 {
 	EvWindowPrivate *priv;
@@ -8068,31 +7907,7 @@ ev_window_get_toolbar (EvWindow *ev_window)
 
 	priv = GET_PRIVATE (ev_window);
 
-	return priv->toolbar;
-}
-
-GtkWidget *
-ev_window_get_sidebar (EvWindow *ev_window)
-{
-	EvWindowPrivate *priv;
-
-	g_return_val_if_fail (EV_WINDOW (ev_window), NULL);
-
-	priv = GET_PRIVATE (ev_window);
-
-	return priv->sidebar;
-}
-
-GtkWidget *
-ev_window_get_find_sidebar (EvWindow *ev_window)
-{
-	EvWindowPrivate *priv;
-
-	g_return_val_if_fail (EV_WINDOW (ev_window), NULL);
-
-	priv = GET_PRIVATE (ev_window);
-
-	return priv->find_sidebar;
+	return ev_toolbar_get_header_bar (EV_TOOLBAR (priv->toolbar));
 }
 
 void
