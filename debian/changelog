@@ -1,3 +1,13 @@
+evince (44.1-2) experimental; urgency=medium
+
+  [ Georgia Garcia ]
+  * Allow evince to spawn browsers distributed as snaps (LP: #1794064)
+    - debian/apparmor-profile: include snap-browsers abstracted profile
+      and allow transitions to them in evince
+  * Note that this fix requires a corresponding change in apparmor
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Mon, 12 Jun 2023 15:20:51 -0400
+
 evince (44.1-1) experimental; urgency=medium
 
   * New upstream release
