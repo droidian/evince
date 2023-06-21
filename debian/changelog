@@ -1,5 +1,6 @@
-evince (44.2-1) UNRELEASED; urgency=medium
+evince (44.2-1) experimental; urgency=medium
 
+  * Team upload
   * New upstream release
     - data:
       + Fix years on 44.x releases
