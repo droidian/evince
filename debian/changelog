@@ -1,8 +1,9 @@
 evince (44.2-1) UNRELEASED; urgency=medium
 
   * New upstream release
+  * Update standards version to 4.6.2, no changes needed
 
- -- Amin Bandali <bandali@ubuntu.com>  Wed, 21 Jun 2023 00:30:49 -0400
+ -- Amin Bandali <bandali@ubuntu.com>  Wed, 21 Jun 2023 00:35:09 -0400
 
 evince (44.1-2) experimental; urgency=medium
 
