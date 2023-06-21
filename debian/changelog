@@ -1,9 +1,20 @@
 evince (44.2-1) UNRELEASED; urgency=medium
 
   * New upstream release
+    - data:
+      + Fix years on 44.x releases
+        (https://gitlab.gnome.org/GNOME/evince/-/issues/1950,
+        Germán Poo-Caamaño)
+    - shell:
+      + Fix crash when instantiating .ui template
+        (https://gitlab.gnome.org/GNOME/evince/-/issues/1930,
+        Nelson Benítez León)
+      + Fix restoring close button after fullscreen
+        (https://gitlab.gnome.org/GNOME/evince/-/issues/1929,
+        Nelson Benítez León)
   * Update standards version to 4.6.2, no changes needed
 
- -- Amin Bandali <bandali@ubuntu.com>  Wed, 21 Jun 2023 00:35:09 -0400
+ -- Amin Bandali <bandali@ubuntu.com>  Wed, 21 Jun 2023 00:39:39 -0400
 
 evince (44.1-2) experimental; urgency=medium
 
