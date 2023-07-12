@@ -1,3 +1,9 @@
+evince (44.3-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- jardon <jarred.wilson@canonical.com>  Wed, 12 Jul 2023 13:32:28 -0400
+
 evince (44.2-1) experimental; urgency=medium
 
   * Team upload
