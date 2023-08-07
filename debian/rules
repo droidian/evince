@@ -5,6 +5,12 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,-O1 -Wl,-z,defs
 export DPKG_GENSYMBOLS_CHECK_LEVEL = 4
 
+configure_options :=
+
+ifeq ($(DEB_HOST_ARCH),$(DEB_BUILD_ARCH))
+configure_options += --native-file=$(CURDIR)/debian/meson/no-exe-wrapper.ini
+endif
+
 %:
 	dh $@
 
@@ -14,6 +20,7 @@ override_dh_auto_configure:
 		-Dinternal_synctex=false \
 		-Dps=enabled \
 		-Dintrospection=true \
+		$(configure_options) \
 		-Dgtk_doc=true
 
 override_dh_makeshlibs:
