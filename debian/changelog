@@ -1,3 +1,9 @@
+evince (44.3-3) unstable; urgency=high
+
+  * d/rules, d/meson/no-exe-wrapper.ini: Work around FTBFS on mips64el
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Mon, 07 Aug 2023 13:46:39 -0400
+
 evince (44.3-2) unstable; urgency=medium
 
   * Release to unstable
