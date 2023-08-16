@@ -1,8 +1,11 @@
-evince (45~alpha-1) UNRELEASED; urgency=medium
+evince (45~alpha-1) experimental; urgency=medium
 
   * New upstream release
+  * debian/control.in: Bump minimum poppler to 22.05
+  * debian/control.in: Don't Build-Depend on adwaita-icon-theme
+  * debian/evince.install: Drop long obsolete gconf migration file
 
- -- Jeremy Bícha <jbicha@ubuntu.com>  Wed, 16 Aug 2023 11:29:56 -0400
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Wed, 16 Aug 2023 11:40:22 -0400
 
 evince (44.3-3) unstable; urgency=high
 
