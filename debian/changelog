@@ -1,3 +1,9 @@
+evince (45~alpha-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Wed, 16 Aug 2023 11:29:56 -0400
+
 evince (44.3-3) unstable; urgency=high
 
   * d/rules, d/meson/no-exe-wrapper.ini: Work around FTBFS on mips64el
