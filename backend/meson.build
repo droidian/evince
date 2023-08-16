@@ -1,12 +1,8 @@
-msgfmt = find_program('msgfmt')
-
 backends_common_incs = [top_inc]
 backends_common_deps = [libevdocument_dep]
 backends_common_cflags = [
   '-DGNOMELOCALEDIR="@0@"'.format(ev_localedir),
   '-DEVINCE_COMPILATION',
-  '-DGDK_MULTIHEAD_SAFE',
-  '-DGTK_MULTIHEAD_SAFE',
 ]
 
 foreach backend, backend_mime_types: backends
@@ -34,12 +30,12 @@ foreach backend, backend_mime_types: backends
   backend_mime_types_conf = configuration_data()
   backend_mime_types_conf.set(backend.to_upper() + '_MIME_TYPES', ';'.join(backend_mime_types))
 
-  appdata_mime_types = ''
+  metainfo_mime_types = ''
   foreach type: backend_mime_types
-    appdata_mime_types += '\t<mimetype>@0@</mimetype>\n'.format(type)
+    metainfo_mime_types += '\t<mimetype>@0@</mimetype>\n'.format(type)
   endforeach
 
-  backend_mime_types_conf.set('APPDATA_@0@_MIME_TYPES'.format(backend.to_upper()), appdata_mime_types)
+  backend_mime_types_conf.set('METAINFO_@0@_MIME_TYPES'.format(backend.to_upper()), metainfo_mime_types)
 
   backend_desc = backend_name + '.evince-backend'
 
@@ -75,3 +71,9 @@ foreach backend, backend_mime_types: backends
     install_dir: ev_appstreamdir,
   )
 endforeach
+
+if ev_debug
+  devenv = environment()
+  devenv.set('EV_BACKENDS_DIR', meson.current_build_dir())
+  meson.add_devenv(devenv)
+endif

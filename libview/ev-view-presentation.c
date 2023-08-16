@@ -222,7 +222,7 @@ transition_next_page (EvViewPresentation *pview)
 	pview->trans_timeout_id = 0;
 	ev_view_presentation_next_page (pview);
 
-	return FALSE;
+	return G_SOURCE_REMOVE;
 }
 
 static void
@@ -257,10 +257,7 @@ ev_view_presentation_transition_start (EvViewPresentation *pview)
 static void
 ev_view_presentation_animation_cancel (EvViewPresentation *pview)
 {
-	if (pview->animation) {
-		g_object_unref (pview->animation);
-		pview->animation = NULL;
-	}
+	g_clear_object (&pview->animation);
 }
 
 static void
@@ -413,20 +410,9 @@ ev_view_presentation_delete_job (EvViewPresentation *pview,
 static void
 ev_view_presentation_reset_jobs (EvViewPresentation *pview)
 {
-        if (pview->curr_job) {
-                ev_view_presentation_delete_job (pview, pview->curr_job);
-                pview->curr_job = NULL;
-        }
-
-        if (pview->prev_job) {
-                ev_view_presentation_delete_job (pview, pview->prev_job);
-                pview->prev_job = NULL;
-        }
-
-        if (pview->next_job) {
-                ev_view_presentation_delete_job (pview, pview->next_job);
-                pview->next_job = NULL;
-        }
+	ev_view_presentation_delete_job (pview, pview->curr_job);
+	ev_view_presentation_delete_job (pview, pview->prev_job);
+	ev_view_presentation_delete_job (pview, pview->next_job);
 }
 
 static void
@@ -939,7 +925,7 @@ hide_cursor_timeout_cb (EvViewPresentation *pview)
 	ev_view_presentation_set_cursor (pview, EV_VIEW_CURSOR_HIDDEN);
 	pview->hide_cursor_timeout_id = 0;
 
-	return FALSE;
+	return G_SOURCE_REMOVE;
 }
 
 static void
@@ -978,29 +964,18 @@ ev_view_presentation_dispose (GObject *object)
 {
 	EvViewPresentation *pview = EV_VIEW_PRESENTATION (object);
 
-	if (pview->document) {
-		g_object_unref (pview->document);
-		pview->document = NULL;
-	}
+	g_clear_object (&pview->document);
 
 	ev_view_presentation_animation_cancel (pview);
 	ev_view_presentation_transition_stop (pview);
 	ev_view_presentation_hide_cursor_timeout_stop (pview);
         ev_view_presentation_reset_jobs (pview);
 
-	if (pview->current_surface) {
-		cairo_surface_destroy (pview->current_surface);
-		pview->current_surface = NULL;
-	}
-
-	if (pview->page_cache) {
-		g_object_unref (pview->page_cache);
-		pview->page_cache = NULL;
-	}
+	g_clear_pointer (&pview->current_surface, cairo_surface_destroy);
+	g_clear_object (&pview->page_cache);
 
 	if (pview->goto_window) {
-		gtk_widget_destroy (pview->goto_window);
-		pview->goto_window = NULL;
+		g_clear_pointer (&pview->goto_window, gtk_widget_destroy);
 		pview->goto_entry = NULL;
 	}
 
@@ -1031,6 +1006,7 @@ ev_view_presentation_draw_end_page (EvViewPresentation *pview,
 	PangoLayout *layout;
 	PangoFontDescription *font_desc;
 	gchar *markup;
+	int text_width, text_height, x_center;
 	const gchar *text = _("End of presentation. Press Esc or click to exit.");
 
 	if (pview->state != EV_PRESENTATION_END)
@@ -1044,9 +1020,9 @@ ev_view_presentation_draw_end_page (EvViewPresentation *pview,
 	font_desc = pango_font_description_new ();
 	pango_font_description_set_size (font_desc, 16 * PANGO_SCALE);
 	pango_layout_set_font_description (layout, font_desc);
-
-        gtk_render_layout (gtk_widget_get_style_context (widget),
-                           cr, 15, 15, layout);
+	pango_layout_get_pixel_size (layout, &text_width, &text_height);
+	x_center = gtk_widget_get_allocated_width (widget) / 2 - text_width / 2;
+	gtk_render_layout (gtk_widget_get_style_context (widget), cr, x_center, 15, layout);
 
 	pango_font_description_free (font_desc);
 	g_object_unref (layout);
@@ -1300,7 +1276,7 @@ init_presentation (GtkWidget *widget)
 	ev_view_presentation_update_current_page (pview, pview->current_page);
 	ev_view_presentation_hide_cursor_timeout_start (pview);
 
-	return FALSE;
+	return G_SOURCE_REMOVE;
 }
 
 static void
@@ -1338,8 +1314,6 @@ ev_view_presentation_realize (GtkWidget *widget)
 
 	gdk_window_set_user_data (window, widget);
 	gtk_widget_set_window (widget, window);
-        gtk_style_context_set_background (gtk_widget_get_style_context (widget),
-                                          window);
 
 	g_idle_add ((GSourceFunc)init_presentation, widget);
 }

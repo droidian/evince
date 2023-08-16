@@ -181,7 +181,7 @@ get_compression_from_mime_type (const gchar *mime_type)
  * fast or slow MIME type detection. If a document could be created,
  * @compression is filled in with the document's compression type.
  * On error, %NULL is returned and @error filled in.
- * 
+ *
  * Returns: a new #EvDocument instance, or %NULL on error with @error filled in
  */
 static EvDocument *
@@ -206,7 +206,7 @@ new_document_for_uri (const char        *uri,
 	*compression = get_compression_from_mime_type (mime_type);
 
 	g_free (mime_type);
-	
+
         return document;
 }
 
@@ -265,17 +265,10 @@ _ev_document_factory_init (void)
 void
 _ev_document_factory_shutdown (void)
 {
-	g_list_foreach (ev_backends_list, (GFunc) _ev_backend_info_unref, NULL);
-	g_list_free (ev_backends_list);
-	ev_backends_list = NULL;
+	g_list_free_full (g_steal_pointer (&ev_backends_list), (GDestroyNotify) _ev_backend_info_unref);
 
-	if (ev_module_hash != NULL) {
-		g_hash_table_unref (ev_module_hash);
-		ev_module_hash = NULL;
-	}
-
-	g_free (ev_backends_dir);
-        ev_backends_dir = NULL;
+	g_clear_pointer (&ev_module_hash, g_hash_table_unref);
+	g_clear_pointer (&ev_backends_dir, g_free);
 }
 
 /**
@@ -336,8 +329,7 @@ ev_document_factory_get_document_full (const char           *uri,
 			return document;
 		}
 
-		g_object_unref (document);
-		document = NULL;
+		g_clear_object (&document);
 	}
 
 	/* Try again with slow mime detection */
@@ -381,9 +373,7 @@ ev_document_factory_get_document_full (const char           *uri,
 			return document;
 		}
 
-		g_object_unref (document);
-		document = NULL;
-
+		g_clear_object (&document);
 		g_propagate_error (error, err);
 	}
 
@@ -625,9 +615,9 @@ file_filter_add_mime_types (EvBackendInfo *info, GtkFileFilter *filter)
  * @document: a #EvDocument, or %NULL
  *
  * Adds some file filters to @chooser.
- 
+
  * Always add a "All documents" format.
- * 
+ *
  * If @document is not %NULL, adds a #GtkFileFilter for @document's MIME type.
  *
  * If @document is %NULL, adds a #GtkFileFilter for each document type that evince

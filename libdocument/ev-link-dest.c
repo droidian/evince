@@ -45,7 +45,7 @@ typedef enum {
 
 struct _EvLinkDest {
 	GObject base_instance;
-	
+
 	EvLinkDestPrivate *priv;
 };
 
@@ -92,7 +92,7 @@ ev_link_dest_get_top (EvLinkDest *self,
 
 	if (change_top)
 		*change_top = (self->priv->change & EV_DEST_CHANGE_TOP);
-	
+
 	return self->priv->top;
 }
 
@@ -255,14 +255,8 @@ ev_link_dest_finalize (GObject *object)
 
 	priv = EV_LINK_DEST (object)->priv;
 
-	if (priv->named) {
-		g_free (priv->named);
-		priv->named = NULL;
-	}
-	if (priv->page_label) {
-		g_free (priv->page_label);
-		priv->page_label = NULL;
-	}
+	g_clear_pointer (&priv->named, g_free);
+	g_clear_pointer (&priv->page_label, g_free);
 
 	G_OBJECT_CLASS (ev_link_dest_parent_class)->finalize (object);
 }
@@ -421,7 +415,7 @@ ev_link_dest_new_xyz (gint     page,
 		change |= EV_DEST_CHANGE_TOP;
 	if (change_zoom)
 		change |= EV_DEST_CHANGE_ZOOM;
-	
+
 	return EV_LINK_DEST (g_object_new (EV_TYPE_LINK_DEST,
 					   "page", page,
 					   "type", EV_LINK_DEST_TYPE_XYZ,
@@ -450,7 +444,7 @@ ev_link_dest_new_fith (gint     page,
 
 	if (change_top)
 		change |= EV_DEST_CHANGE_TOP;
-	
+
 	return EV_LINK_DEST (g_object_new (EV_TYPE_LINK_DEST,
 					   "page", page,
 					   "type", EV_LINK_DEST_TYPE_FITH,
@@ -485,7 +479,7 @@ ev_link_dest_new_fitr (gint    page,
 		       gdouble top)
 {
 	EvDestChange change = EV_DEST_CHANGE_TOP | EV_DEST_CHANGE_LEFT;
-	
+
 	return EV_LINK_DEST (g_object_new (EV_TYPE_LINK_DEST,
 					   "page", page,
 					   "type", EV_LINK_DEST_TYPE_FITR,

@@ -67,10 +67,6 @@
 #define HAVE_CAIRO_PRINT
 #endif
 
-#if POPPLER_CHECK_VERSION (21, 12, 0)
-#define HAVE_POPPLER_LOAD_FD
-#endif
-
 typedef struct {
 	EvFileExporterFormat format;
 
@@ -319,7 +315,6 @@ pdf_document_load_gfile (EvDocument          *document,
         return TRUE;
 }
 
-#ifdef HAVE_POPPLER_LOAD_FD
 static gboolean
 pdf_document_load_fd (EvDocument          *document,
                       int                  fd,
@@ -343,7 +338,6 @@ pdf_document_load_fd (EvDocument          *document,
 
         return TRUE;
 }
-#endif
 
 static int
 pdf_document_get_n_pages (EvDocument *document)
@@ -736,13 +730,9 @@ pdf_document_get_info (EvDocument *document)
 
 	info->linearized = linearized ? g_strdup (_("Yes")) : g_strdup (_("No"));
 
-#if POPPLER_CHECK_VERSION(0, 90, 0)
 	info->contains_js = poppler_document_has_javascript (PDF_DOCUMENT (document)->document) ?
 	                    EV_DOCUMENT_CONTAINS_JS_YES : EV_DOCUMENT_CONTAINS_JS_NO;
         info->fields_mask |= EV_DOCUMENT_INFO_CONTAINS_JS;
-#else
-	info->contains_js = EV_DOCUMENT_CONTAINS_JS_UNKNOWN;
-#endif
 
 	return info;
 }
@@ -798,9 +788,7 @@ pdf_document_class_init (PdfDocumentClass *klass)
 	ev_document_class->get_info = pdf_document_get_info;
 	ev_document_class->get_backend_info = pdf_document_get_backend_info;
 	ev_document_class->support_synctex = pdf_document_support_synctex;
-#ifdef HAVE_POPPLER_LOAD_FD
         ev_document_class->load_fd = pdf_document_load_fd;
-#endif
 }
 
 /* EvDocumentSecurity */
@@ -1261,7 +1249,6 @@ ev_link_from_action (PdfDocument   *pdf_document,
 	        case POPPLER_ACTION_JAVASCRIPT:
 			unimplemented_action = "POPPLER_ACTION_JAVASCRIPT";
 			break;
-#if POPPLER_CHECK_VERSION(0, 90, 0)
 	        case POPPLER_ACTION_RESET_FORM: {
 			gboolean  exclude_reset_fields;
 			GList    *reset_fields = NULL;
@@ -1277,7 +1264,6 @@ ev_link_from_action (PdfDocument   *pdf_document,
 								   exclude_reset_fields);
 			break;
 		}
-#endif
 	        case POPPLER_ACTION_UNKNOWN:
 			unimplemented_action = "POPPLER_ACTION_UNKNOWN";
 	}
@@ -1540,11 +1526,10 @@ pdf_document_find_find_text_with_options (EvDocumentFind *document_find,
 
         if (options & EV_FIND_CASE_SENSITIVE)
                 find_flags |= POPPLER_FIND_CASE_SENSITIVE;
-#if POPPLER_CHECK_VERSION(0, 76, 0)
         else    /* When search is not case sensitive, do also ignore diacritics
                 to broaden our search in order to match on more expected results */
                 find_flags |= POPPLER_FIND_IGNORE_DIACRITICS;
-#endif
+
         if (options & EV_FIND_WHOLE_WORDS_ONLY)
                 find_flags |= POPPLER_FIND_WHOLE_WORDS_ONLY;
         matches = poppler_page_find_text_with_options (poppler_page, text, (PopplerFindFlags)find_flags);
@@ -1591,18 +1576,15 @@ pdf_document_find_find_text_extended (EvDocumentFind *document_find,
 
 	if (options & EV_FIND_CASE_SENSITIVE)
 		find_flags |= POPPLER_FIND_CASE_SENSITIVE;
-#if POPPLER_CHECK_VERSION(0, 76, 0)
 	else    /* When search is not case sensitive, do also ignore diacritics
 	        to broaden our search in order to match on more expected results */
 		find_flags |= POPPLER_FIND_IGNORE_DIACRITICS;
-#endif
+
 	if (options & EV_FIND_WHOLE_WORDS_ONLY)
 		find_flags |= POPPLER_FIND_WHOLE_WORDS_ONLY;
 
-#if POPPLER_CHECK_VERSION(22, 05, 0)
 	/* Allow to match on text spanning from one line to the next */
 	find_flags |= POPPLER_FIND_MULTILINE;
-#endif
 	matches = poppler_page_find_text_with_options (poppler_page, text, (PopplerFindFlags)find_flags);
 	if (!matches)
 		return NULL;
@@ -1617,13 +1599,8 @@ pdf_document_find_find_text_extended (EvDocumentFind *document_find,
 		/* Invert this for X-style coordinates */
 		ev_rect->y1 = height - rect->y2;
 		ev_rect->y2 = height - rect->y1;
-#if POPPLER_CHECK_VERSION(22, 05, 0)
 		ev_rect->next_line = poppler_rectangle_find_get_match_continued (rect);
 		ev_rect->after_hyphen = ev_rect->next_line && poppler_rectangle_find_get_ignored_hyphen (rect);
-#else
-		ev_rect->next_line = FALSE;
-		ev_rect->after_hyphen = FALSE;
-#endif
 		retval = g_list_prepend (retval, ev_rect);
 	}
 
@@ -2027,36 +2004,25 @@ pdf_selection_get_selected_text (EvSelection     *selection,
 }
 
 static cairo_region_t *
-create_region_from_poppler_region (GList *region, gdouble xscale, gdouble yscale)
+create_region_from_poppler_region (cairo_region_t *region,
+				   gdouble         xscale,
+				   gdouble         yscale)
 {
-	GList *l;
+	int n_rects;
 	cairo_region_t *retval;
 
 	retval = cairo_region_create ();
 
-	for (l = region; l; l = g_list_next (l)) {
-		PopplerRectangle   *rectangle;
+	n_rects = cairo_region_num_rectangles (region);
+	for (int i = 0; i < n_rects; i++) {
 		cairo_rectangle_int_t rect;
 
-		rectangle = (PopplerRectangle *)l->data;
-		if (rectangle->x2 < rectangle->x1) {
-			double tmp = rectangle->x2;
-			rectangle->x2 = rectangle->x1;
-			rectangle->x1 = tmp;
-		}
-		if (rectangle->y2 < rectangle->y1) {
-			double tmp = rectangle->y2;
-			rectangle->y2 = rectangle->y1;
-			rectangle->y1 = tmp;
-		}
-
-		rect.x = (gint) ((rectangle->x1 * xscale) + 0.5);
-		rect.y = (gint) ((rectangle->y1 * yscale) + 0.5);
-		rect.width  = (gint) ((rectangle->x2 * xscale) + 0.5) - rect.x;
-		rect.height = (gint) ((rectangle->y2 * yscale) + 0.5) - rect.y;
+		cairo_region_get_rectangle (region, i, &rect);
+		rect.x = (int) (rect.x * xscale + 0.5);
+		rect.y = (int) (rect.y * yscale + 0.5);
+		rect.width = (int) (rect.width * xscale + 0.5);
+		rect.height = (int) (rect.height * yscale + 0.5);
 		cairo_region_union_rectangle (retval, &rect);
-
-		poppler_rectangle_free (rectangle);
 	}
 
 	return retval;
@@ -2069,21 +2035,21 @@ pdf_selection_get_selection_region (EvSelection     *selection,
 				    EvRectangle     *points)
 {
 	PopplerPage    *poppler_page;
-	cairo_region_t *retval;
-	GList          *region;
+	cairo_region_t *retval, *region;
 	double page_width, page_height;
 	double xscale, yscale;
 
 	poppler_page = POPPLER_PAGE (rc->page->backend_page);
-	region = poppler_page_get_selection_region (poppler_page,
-						    1.0,
-						    (PopplerSelectionStyle)style,
-						    (PopplerRectangle *) points);
+	region = poppler_page_get_selected_region (poppler_page,
+						   1.0,
+						   (PopplerSelectionStyle)style,
+						   (PopplerRectangle *)points);
+
 	poppler_page_get_size (poppler_page,
 			       &page_width, &page_height);
 	ev_render_context_compute_scales (rc, page_width, page_height, &xscale, &yscale);
 	retval = create_region_from_poppler_region (region, xscale, yscale);
-	g_list_free (region);
+	cairo_region_destroy (region);
 
 	return retval;
 }
@@ -2305,9 +2271,7 @@ ev_form_field_from_poppler_field (PdfDocument      *pdf_document,
 	font_size = poppler_form_field_get_font_size (poppler_field);
 	is_read_only = poppler_form_field_is_read_only (poppler_field);
 	action = poppler_form_field_get_action (poppler_field);
-#if POPPLER_CHECK_VERSION(0, 88, 0)
 	alt_ui_name = poppler_form_field_get_alternate_ui_name (poppler_field);
-#endif
 
 	switch (poppler_form_field_get_field_type (poppler_field)) {
 	        case POPPLER_FORM_FIELD_TEXT: {
@@ -2465,11 +2429,9 @@ static void
 pdf_document_forms_reset_form (EvDocumentForms *document,
                                EvLinkAction    *action)
 {
-#if POPPLER_CHECK_VERSION(0, 90, 0)
 	poppler_document_reset_form (PDF_DOCUMENT (document)->document,
 	                             ev_link_action_get_reset_fields (action),
 	                             ev_link_action_get_exclude_reset_fields (action));
-#endif
 }
 
 static gchar *
@@ -3144,7 +3106,7 @@ get_quads_for_area (PopplerPage      *page,
 		    EvRectangle      *area,
 		    PopplerRectangle *bbox)
 {
-	GList  *rects, *l;
+	cairo_region_t *region;
 	guint   n_rects;
 	guint   i;
 	GArray *quads;
@@ -3160,28 +3122,29 @@ get_quads_for_area (PopplerPage      *page,
 
 	poppler_page_get_size (page, NULL, &height);
 
-	rects = poppler_page_get_selection_region (page, 1.0, POPPLER_SELECTION_GLYPH,
+	region = poppler_page_get_selected_region (page, 1.0, POPPLER_SELECTION_GLYPH,
 						   (PopplerRectangle *)area);
-	n_rects = g_list_length (rects);
+	n_rects = cairo_region_num_rectangles (region);
+	g_debug ("Number rects: %d", n_rects);
 
 	quads = g_array_sized_new (TRUE, TRUE,
 				   sizeof (PopplerQuadrilateral),
 				   n_rects);
 	g_array_set_size (quads, MAX (1, n_rects));
 
-	for (l = rects, i = 0; i < n_rects; i++, l = l->next) {
-		PopplerRectangle     *r = (PopplerRectangle *) l->data;
+	for (i = 0; i < n_rects; i++) {
+		cairo_rectangle_int_t r;
 		PopplerQuadrilateral *quad = &g_array_index (quads, PopplerQuadrilateral, i);
+		cairo_region_get_rectangle (region, i, &r);
 
-		quad->p1.x = r->x1;
-		quad->p1.y = height - r->y1;
-		quad->p2.x = r->x2;
-		quad->p2.y = height - r->y1;
-		quad->p3.x = r->x1;
-		quad->p3.y = height - r->y2;
-		quad->p4.x = r->x2;
-		quad->p4.y = height - r->y2;
-		poppler_rectangle_free (r);
+		quad->p1.x = r.x;
+		quad->p1.y = height - r.y;
+		quad->p2.x = r.x + r.width;
+		quad->p2.y = height - r.y;
+		quad->p3.x = r.x;
+		quad->p3.y = height - (r.y + r.height);
+		quad->p4.x = r.x + r.width;
+		quad->p4.y = height - (r.y + r.height);
 
 		if (!bbox)
 			continue;
@@ -3200,7 +3163,7 @@ get_quads_for_area (PopplerPage      *page,
 		if (max_y > bbox->y2)
 			bbox->y2 = max_y;
 	}
-	g_list_free (rects);
+	cairo_region_destroy (region);
 
 	if (n_rects == 0 && bbox) {
 		bbox->x1 = 0;

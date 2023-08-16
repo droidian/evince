@@ -32,28 +32,11 @@ evince_sources = files(
   'main.c',
 )
 
-resource_data = files(
-  'evince.css',
-  '../data/thumbnail-frame.png',
-  'evince-menus.ui',
-  'evince-message-area.ui',
-  'evince-password-view.ui',
-  'evince-properties-fonts.ui',
-  'evince-progress-message-area.ui',
-  'evince-recent-view.ui',
-  'evince-sidebar.ui',
-  'evince-sidebar-bookmarks.ui',
-  'evince-toolbar.ui',
-  'evince-zoom-action.ui',
-  'help-overlay.ui',
-)
-
 evince_sources += gnome.compile_resources(
   'ev-resources',
   'evince.gresource.xml',
   source_dir: data_dir,
   c_name: ev_code_prefix.to_lower(),
-  dependencies: resource_data,
 )
 
 evince_deps = [
@@ -72,26 +55,10 @@ evince_deps = [
 
 evince_cflags = [
   '-DBINDIR="@0@"'.format(ev_bindir),
-  '-DGNOMEDATADIR="@0@"'.format(ev_datadir),
   '-DEVINCE_COMPILATION',
-  '-DGDK_MULTIHEAD_SAFE',
-  '-DGTK_MULTIHEAD_SAFE',
 ]
 
 evince_ldflags = common_ldflags
-
-if ev_platform == 'win32'
-  resource = 'evince-icon.o'
-
-  evince_ldflag += custom_target(
-    resource,
-    input: 'evince-icon.rc',
-    output: resource,
-    command: [find_program('windres'), '@INPUT@', '-I', data_dir, '@OUTPUT@'],
-  )
-else
-  evince_deps += adwaita_icon_theme_dep
-endif
 
 if enable_dbus
   evince_sources += files('ev-media-player-keys.c')

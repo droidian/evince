@@ -15,7 +15,7 @@
  *
  * You should have received a copy of the GNU Library General Public
  * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, 
+ * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  */
 
@@ -165,13 +165,13 @@ ev_timeline_run_frame (EvTimeline *timeline)
 			}
 
 			g_signal_emit (timeline, signals [FINISHED], 0);
-			return FALSE;
+			return G_SOURCE_REMOVE;
 		} else {
 			ev_timeline_rewind (timeline);
 		}
 	}
 
-	return TRUE;
+	return G_SOURCE_CONTINUE;
 }
 
 static void
