@@ -9,13 +9,13 @@
 # Mickael Albertus <mickael.albertus@gmail.com>, 2012, 2013.
 # Guillaume Bernard <associations@guillaume-bernard.fr>, 2018-2020.
 # Charles Monzat <charles.monzat@free.fr>, 2017-2021.
-# Irénée THIRION <irenee.thirion@e.email>, 2022.
+# Irénée THIRION <irenee.thirion@e.email>, 2022-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: evince-doc\n"
-"POT-Creation-Date: 2023-03-11 14:42+0000\n"
-"PO-Revision-Date: 2023-05-17 23:51+0200\n"
+"POT-Creation-Date: 2023-03-04 13:43+0000\n"
+"PO-Revision-Date: 2023-03-16 09:48+0100\n"
 "Last-Translator: Irénée Thirion <irenee.thirion@e.email>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -40,10 +40,10 @@ msgstr ""
 "Mickael Albertus <mickael.albertus@gmail.com>, 2012-2013\n"
 "Michael Scherer <misc@zarb.org>, 2014\n"
 "Leonor Palazzo <leonor.palazzo@gmail.com>, 2015\n"
-"Irénée Thirion <irenee.thirion@e.email>, 2023\n"
 "Guillaume Bernard <associations@guillaume-bernard.fr>, 2018\n"
 "J-Paul Bérard <arverne@wanadoo.fr>, 2019\n"
-"Charles Monzat <charles.monzat@free.fr>, 2020-2021"
+"Charles Monzat <charles.monzat@free.fr>, 2020-2021\n"
+"Irénée Thirion <irenee.thirion@e.email>, 2023"
 
 #. (itstool) path: info/desc
 #: C/synctex-beamer.page:7
@@ -826,7 +826,7 @@ msgid ""
 "org/tag/documentation\">GNOME Discourse</link>."
 msgstr ""
 "Pour contribuer au projet de documentation, n’hésitez pas à prendre contact "
-"avec nous en utilisant <link href=\"https://cbe005.chat.mibbit.com/?"
+"avec nous en utilisant <link href=\"https://cbe003.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">irc</link> ou via <link "
 "href=\"https://discourse.gnome.org/tag/documentation\">Discourse de GNOME</"
 "link>."

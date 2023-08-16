@@ -176,7 +176,7 @@ ev_spawn (const char     *uri,
 
 	g_string_append_printf (cmd, " %s", path);
 	g_free (path);
-	
+
 	/* Page label */
 	if (dest) {
                 switch (ev_link_dest_get_dest_type (dest)) {
@@ -810,142 +810,6 @@ ev_application_open_uri_list (EvApplication *application,
 }
 
 static void
-ev_application_accel_map_save (EvApplication *application)
-{
-	gchar *accel_map_file;
-	gchar *tmp_filename;
-	gint   fd;
-
-        accel_map_file = g_build_filename (application->dot_dir, "accels", NULL);
-	tmp_filename = g_strdup_printf ("%s.XXXXXX", accel_map_file);
-
-	fd = g_mkstemp (tmp_filename);
-	if (fd == -1) {
-		g_free (accel_map_file);
-		g_free (tmp_filename);
-
-		return;
-	}
-	gtk_accel_map_save_fd (fd);
-	close (fd);
-
-        g_mkdir_with_parents (application->dot_dir, 0700);
-	if (g_rename (tmp_filename, accel_map_file) == -1) {
-		/* FIXME: win32? */
-		g_unlink (tmp_filename);
-	}
-
-	g_free (accel_map_file);
-	g_free (tmp_filename);
-}
-
-static void
-ev_application_accel_map_load (EvApplication *application)
-{
-	gchar *accel_map_file;
-
-        accel_map_file = g_build_filename (application->dot_dir, "accels", NULL);
-	gtk_accel_map_load (accel_map_file);
-	g_free (accel_map_file);
-}
-
-static void
-ev_application_migrate_config_dir (EvApplication *application)
-{
-        const gchar        *userdir;
-        gchar              *old_dot_dir;
-        gchar              *old_accels;
-        GError             *error;
-        gint                i;
-        gboolean            dir_created = FALSE;
-        static const gchar *config_files[] = {
-                "evince_toolbar.xml",
-                "print-settings",
-                NULL
-        };
-
-        userdir = g_getenv ("GNOME22_USER_DIR");
-        if (userdir) {
-                old_dot_dir = g_build_filename (userdir, "evince", NULL);
-                old_accels = g_build_filename (userdir, "accels", "evince", NULL);
-        } else {
-                old_dot_dir = g_build_filename (g_get_home_dir (),
-                                                ".gnome2",
-                                                "evince",
-                                                NULL);
-                old_accels = g_build_filename (g_get_home_dir (),
-                                               ".gnome2", "accels",
-                                               "evince", NULL);
-        }
-
-        if (g_file_test (old_dot_dir, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_DIR)) {
-                for (i = 0; config_files[i]; i++) {
-                        gchar   *old_filename;
-                        gchar   *new_filename;
-                        GFile   *old_file;
-                        GFile   *new_file;
-
-                        old_filename = g_build_filename (old_dot_dir, config_files[i], NULL);
-                        if (!g_file_test (old_filename, G_FILE_TEST_EXISTS)) {
-                                g_free (old_filename);
-                                continue;
-                        }
-
-                        if (!dir_created) {
-                                g_mkdir_with_parents (application->dot_dir, 0700);
-                                dir_created = TRUE;
-                        }
-
-                        new_filename = g_build_filename (application->dot_dir, config_files[i], NULL);
-                        old_file = g_file_new_for_path (old_filename);
-                        new_file = g_file_new_for_path (new_filename);
-
-                        error = NULL;
-                        g_file_move (old_file, new_file, 0, NULL, NULL, NULL, &error);
-                        if (error) {
-                                g_printerr ("Error migrating config file %s: %s\n",
-                                            old_filename, error->message);
-                                g_error_free (error);
-                        }
-
-                        g_free (old_filename);
-                        g_free (new_filename);
-                        g_object_unref (old_file);
-                        g_object_unref (new_file);
-                }
-        }
-
-        g_free (old_dot_dir);
-
-        if (g_file_test (old_accels, G_FILE_TEST_EXISTS)) {
-                gchar *new_accels;
-                GFile *old_accels_file;
-                GFile *new_accels_file;
-
-                if (!dir_created)
-                        g_mkdir_with_parents (application->dot_dir, 0700);
-
-                new_accels = g_build_filename (application->dot_dir, "accels", NULL);
-                old_accels_file = g_file_new_for_path (old_accels);
-                new_accels_file = g_file_new_for_path (new_accels);
-
-                error = NULL;
-                g_file_move (old_accels_file, new_accels_file, 0, NULL, NULL, NULL, &error);
-                if (error) {
-                        g_printerr ("Error migrating accelerator specifications file %s: %s\n",
-                                    old_accels, error->message);
-                        g_error_free (error);
-                }
-
-                g_free (new_accels);
-                g_object_unref (old_accels_file);
-                g_object_unref (new_accels_file);
-        }
-
-        g_free (old_accels);
-}
-
-static void
 ev_application_startup (GApplication *gapplication)
 {
         const gchar *action_accels[] = {
@@ -956,7 +820,6 @@ ev_application_startup (GApplication *gapplication)
           "win.show-properties",        "<alt>Return", NULL,
           "win.copy",                   "<Ctrl>C", "<Ctrl>Insert", NULL,
           "win.select-all",             "<Ctrl>A", NULL,
-          "win.save-settings",          "<Ctrl>T", NULL,
           "win.add-bookmark",           "<Ctrl>D", NULL,
           "win.delete-bookmark",        "<Ctrl><Shift>D", NULL,
           "win.close",                  "<Ctrl>W", NULL,
@@ -1016,19 +879,14 @@ ev_application_shutdown (GApplication *gapplication)
 {
         EvApplication *application = EV_APPLICATION (gapplication);
 
-	if (application->uri) {
 #ifdef ENABLE_DBUS
+	if (application->uri)
 		ev_application_unregister_uri (application,
 					       application->uri);
 #endif
-		g_free (application->uri);
-		application->uri = NULL;
-	}
+	g_clear_pointer (&application->uri, g_free);
 
-	ev_application_accel_map_save (application);
-
-        g_free (application->dot_dir);
-        application->dot_dir = NULL;
+	g_clear_pointer (&application->dot_dir, g_free);
 
         G_APPLICATION_CLASS (ev_application_parent_class)->shutdown (gapplication);
 }
@@ -1093,14 +951,11 @@ ev_application_dbus_unregister (GApplication    *gapplication,
 {
         EvApplication *application = EV_APPLICATION (gapplication);
 
-        if (application->keys) {
-                g_object_unref (application->keys);
-                application->keys = NULL;
-        }
+	g_clear_object (&application->keys);
+
         if (application->skeleton != NULL) {
                 g_dbus_interface_skeleton_unexport (G_DBUS_INTERFACE_SKELETON (application->skeleton));
-                g_object_unref (application->skeleton);
-                application->skeleton = NULL;
+		g_clear_object (&application->skeleton);
         }
 
         G_APPLICATION_CLASS (ev_application_parent_class)->dbus_unregister (gapplication,
@@ -1130,10 +985,6 @@ ev_application_init (EvApplication *ev_application)
 {
         ev_application->dot_dir = g_build_filename (g_get_user_config_dir (),
                                                     "evince", NULL);
-        if (!g_file_test (ev_application->dot_dir, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_DIR))
-                ev_application_migrate_config_dir (ev_application);
-
-	ev_application_accel_map_load (ev_application);
 }
 
 gboolean

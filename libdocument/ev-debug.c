@@ -4,7 +4,7 @@
  *
  * Copyright (C) 1998, 1999 Alex Roberts, Evan Lawrence
  * Copyright (C) 2000, 2001 Chema Celorio, Paolo Maggi
- * Copyright (C) 2002 - 2005 Paolo Maggi  
+ * Copyright (C) 2002 - 2005 Paolo Maggi
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,10 +21,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  */
- 
+
 /*
- * Modified by the gedit Team, 1998-2005. See the AUTHORS file for a 
- * list of people on the gedit Team.  
+ * Modified by the gedit Team, 1998-2005. See the AUTHORS file for a
+ * list of people on the gedit Team.
  * See the ChangeLog files for a list of changes.
  *
  * $Id: gedit-debug.c 4809 2006-04-08 14:46:31Z pborelli $
@@ -100,10 +100,7 @@ _ev_debug_init (void)
 void
 _ev_debug_shutdown (void)
 {
-	if (timers) {
-		g_hash_table_destroy (timers);
-		timers = NULL;
-	}
+	g_clear_pointer (&timers, g_hash_table_destroy);
 }
 
 void
@@ -118,13 +115,13 @@ ev_debug_message (EvDebugSection  section,
 
 		if (format) {
 			va_list args;
-			
+
 			va_start (args, format);
 			msg = g_strdup_vprintf (format, args);
 			va_end (args);
 		}
 
-		g_print ("%s:%d (%s) %s\n", file, line, function, msg ? msg : "");	
+		g_print ("%s:%d (%s) %s\n", file, line, function, msg ? msg : "");
 
 		fflush (stdout);
 
@@ -174,11 +171,11 @@ ev_profiler_stop (EvProfileSection section,
 		va_start (args, format);
 		name = g_strdup_vprintf (format, args);
 		va_end (args);
-		
+
 		timer = g_hash_table_lookup (timers, name);
 		if (!timer)
 			return;
-		
+
 		g_timer_stop (timer);
 		seconds = g_timer_elapsed (timer, NULL);
 		g_print ("[ %s ] %f s elapsed\n", name, seconds);

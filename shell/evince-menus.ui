@@ -95,7 +95,7 @@
     </section>
     <section>
       <item>
-        <attribute name="label" translatable="yes">Annotation _Properties…</attribute>
+        <attribute name="label" translatable="yes">Annotation _Properties</attribute>
         <attribute name="action">win.annot-properties</attribute>
         <attribute name='hidden-when'>action-disabled</attribute>
       </item>
@@ -108,7 +108,7 @@
     <section>
       <item>
         <attribute name="label" translatable="yes">_Highlight Selected Text</attribute>
-        <attribute name="action">win.annotate-selected-text</attribute>
+        <attribute name="action">win.highlight-annotation</attribute>
         <attribute name='hidden-when'>action-disabled</attribute>
       </item>
       <item>
@@ -167,7 +167,7 @@
   <menu id="annotation-popup">
     <section>
       <item>
-        <attribute name="label" translatable="yes">Annotation Properties…</attribute>
+        <attribute name="label" translatable="yes">Annotation Properties</attribute>
         <attribute name="action">win.annot-properties</attribute>
         <attribute name='hidden-when'>action-disabled</attribute>
       </item>
@@ -211,7 +211,11 @@
   <menu id="links-popup">
     <section>
       <item>
-        <attribute name="label" translatable="yes">Print…</attribute>
+        <attribute name="label" translatable="yes">Search in the outline…</attribute>
+        <attribute name="action">links.search-outline</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Print this section…</attribute>
         <attribute name="action">links.print-section</attribute>
       </item>
       <item>

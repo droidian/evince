@@ -113,27 +113,11 @@ ev_document_finalize (GObject *object)
 {
 	EvDocument *document = EV_DOCUMENT (object);
 
-	if (document->priv->uri) {
-		g_free (document->priv->uri);
-		document->priv->uri = NULL;
-	}
-
-	if (document->priv->page_sizes) {
-		g_free (document->priv->page_sizes);
-		document->priv->page_sizes = NULL;
-	}
-
+	g_clear_pointer (&document->priv->uri, g_free);
+	g_clear_pointer (&document->priv->page_sizes, g_free);
 	g_clear_pointer (&document->priv->page_labels, g_strfreev);
-
-	if (document->priv->info) {
-		ev_document_info_free (document->priv->info);
-		document->priv->info = NULL;
-	}
-
-	if (document->priv->synctex_scanner) {
-		synctex_scanner_free (document->priv->synctex_scanner);
-		document->priv->synctex_scanner = NULL;
-	}
+	g_clear_pointer (&document->priv->info, ev_document_info_free);
+	g_clear_pointer (&document->priv->synctex_scanner, synctex_scanner_free);
 
 	G_OBJECT_CLASS (ev_document_parent_class)->finalize (object);
 }
@@ -392,7 +376,7 @@ ev_document_initialize_synctex (EvDocument  *document,
  * @error: a #GError location to store an error, or %NULL
  *
  * Loads @document from @uri.
- * 
+ *
  * On failure, %FALSE is returned and @error is filled in.
  * If the document is encrypted, EV_DEFINE_ERROR_ENCRYPTED is returned.
  * If the backend cannot load the specific document, EV_DOCUMENT_ERROR_INVALID
@@ -743,7 +727,7 @@ ev_document_synctex_backward_search (EvDocument *document,
 			const gchar *filename;
 
 			filename = synctex_scanner_get_name (scanner, synctex_node_tag (node));
-			
+
 			if (filename) {
 				result = ev_source_link_new (filename,
 							     synctex_node_line (node),
