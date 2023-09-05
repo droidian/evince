@@ -1,35 +1,29 @@
-# Translators:
-# Jordi Mas i Hernàndez <jmas@softcatala.org>, 2020
-# Assumpta, 2020
-# Jaume Jorba <jaume.jorba@gmail.com>, 2020
+# Persian translation for evince.
+# Copyright (C) 2023 evince's COPYRIGHT HOLDER
+# This file is distributed under the same license as the evince package.
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: evince\n"
-"POT-Creation-Date: 2023-03-04 13:43+0000\n"
-"PO-Revision-Date: 2023-08-23 17:19+0200\n"
-"Last-Translator: Jordi Mas i Herǹandez <jmas@softcatala.org>\n"
-"Language-Team: Catalan (https://www.transifex.com/softcatala/teams/62837/"
-"ca/)\n"
-"Language: ca\n"
+"Project-Id-Version: evince main\n"
+"POT-Creation-Date: 2023-07-28 18:22+0000\n"
+"PO-Revision-Date: 2023-07-29 03:47+0330\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr ""
-"Carles Ferrando Garcia <carles.ferrando@gmail.com>, 2010\n"
-"Xavier Roijals <xavier.roijals@gmail.com>, 2011\n"
-"Gil Forcada <gilforcada@guifi.net>, 2013"
+msgstr "دانیال بهزادی <dani.behzi@ubuntu.com>"
 
 #. (itstool) path: info/desc
 #: C/synctex-beamer.page:7
 msgid "Using SyncTeX with the LaTeX Beamer class."
-msgstr "Utilització del SyncTex amb la classe LaTeX Beamer."
+msgstr ""
 
 #. (itstool) path: credit/name
 #: C/synctex-beamer.page:11 C/openerror.page:13 C/duplex-7pages.page:12
@@ -50,7 +44,7 @@ msgstr "Utilització del SyncTex amb la classe LaTeX Beamer."
 #: C/duplex-3pages.page:12 C/index.page:18 C/bookmarks.page:14 C/forms.page:11
 #: C/synctex-search.page:11
 msgid "Tiffany Antopolski"
-msgstr "Tiffany Antopolski"
+msgstr "تیفانی آنتوپولسکی"
 
 #. (itstool) path: license/p
 #: C/synctex-beamer.page:15 C/openerror.page:17 C/duplex-7pages.page:16
@@ -75,33 +69,28 @@ msgstr "Tiffany Antopolski"
 #: C/print-2sided.page:16 C/convertpdf.page:21 C/invert-colors.page:24
 #: C/forms.page:15 C/synctex-search.page:15
 msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Compartir Igual 3.0"
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/synctex-beamer.page:19
 msgid "Beamer with SyncTeX"
-msgstr "Beamer amb SyncTeX"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/synctex-beamer.page:20
 msgid "Beamer is a LaTeX class for creating slides for presentations."
 msgstr ""
-"La Beamer és una classe de LaTeX per a crear diapositives per presentacions."
 
 #. (itstool) path: page/p
 #: C/synctex-beamer.page:23
 msgid ""
 "You can perform forward and backward search in a <em>Beamer-LaTeX</em> "
-"presentation in a similar fashion to <link xref=\"synctex-search"
-"\">searching</link> through other TeX files compiled with SyncTeX. However "
-"the search brings you to the corresponding frame (slide), not necessarily "
-"the associated line of text. This difference is outlined in detail below."
+"presentation in a similar fashion to <link xref=\"synctex-"
+"search\">searching</link> through other TeX files compiled with SyncTeX. "
+"However the search brings you to the corresponding frame (slide), not "
+"necessarily the associated line of text. This difference is outlined in "
+"detail below."
 msgstr ""
-"Podeu realitzar la cerca endavant i endarrere en una presentació <em>Beamer-"
-"LaTeX</em> de manera similar a <link xref=\"synctex-search\">cercar</link> a "
-"altres fitxers TeX compilats amb SyncTeX. Tanmateix, la cerca us porta al "
-"marc (diapositiva) corresponent, no necessàriament a la línia de text "
-"associada. Aquesta diferència s'explica detalladament a continuació."
 
 #. (itstool) path: section/title
 #: C/synctex-beamer.page:27
@@ -109,8 +98,6 @@ msgid ""
 "Forward search: from Beamer-LaTeX source to PDF (<app>gedit</app> to the "
 "<app>document viewer</app>)"
 msgstr ""
-"Cerca cap endavant: des d'una font Beamer-LaTeX a PDF (<app>gedit</app> cap "
-"al <app>Visualitzador de documents</app>)"
 
 #. (itstool) path: section/p
 #: C/synctex-beamer.page:28
@@ -120,10 +107,6 @@ msgid ""
 "of the corresponding slide in the PDF will be outlined in red. This will "
 "often be the <em>frametitle</em>."
 msgstr ""
-"Amb <link xref=\"synctex-search#forward-search\">cercar endavant</link>, "
-"podeu fer clic en una línia específica del codi font de Beamer-LaTeX. La "
-"<em>part superior</em> de la diapositiva corresponent al PDF es perfilarà en "
-"vermell. Aquesta serà sovint el <em>títol del marc</em>."
 
 #. (itstool) path: section/title
 #: C/synctex-beamer.page:35
@@ -131,8 +114,6 @@ msgid ""
 "Backward search: from PDF to Beamer-LaTeX source (from the <app>document "
 "viewer</app> to <app>gedit</app>)"
 msgstr ""
-"Cerca cap enrere: des del PDF a Beamer-LaTeX (des del <app>Visualitzador de "
-"documents</app> cap a <app>gedit</app>)"
 
 #. (itstool) path: section/p
 #: C/synctex-beamer.page:36
@@ -142,30 +123,27 @@ msgid ""
 "that ends that particular frame is highlighted. This will usually be the "
 "line:"
 msgstr ""
-"Amb <link xref=\"synctex-search#backward-search\">cercar enrere</link>, "
-"podeu fer clic al text en un marc, i la línia corresponent al codi LaTeX que "
-"acaba aquest marc concret es destacarà. Aquesta serà sovint la línia:"
 
 #. (itstool) path: section/code
 #: C/synctex-beamer.page:39
 #, no-wrap
 msgid "\\end{frame}"
-msgstr "\\end{frame}"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/synctex-beamer.page:40
 msgid "corresponding to the frame you clicked on."
-msgstr "que correspon al marc en què heu fet clic."
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/openerror.page:7
 msgid "Error When Opening A File."
-msgstr "Error obrint un fitxer."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/openerror.page:22
 msgid "Why can't I open a file?"
-msgstr "Per què no puc obrir un fitxer?"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/openerror.page:24
@@ -175,26 +153,22 @@ msgid ""
 "message. Click <gui>Close</gui> to return to the <app>Document Viewer</app> "
 "window."
 msgstr ""
-"Si intenteu obrir un document d'un format que el <app>visualitzador de "
-"documents</app> no reconegui, rebreu el missatge d'error \"No s'ha pogut "
-"obrir el document\". Feu clic a <gui>Tanca</gui> per a tornar a la finestra "
-"del <app>Visualitzador de documents</app>."
 
 #. (itstool) path: info/title
 #: C/duplex-7pages.page:7
 msgctxt "sort"
 msgid "07-Page Booklet"
-msgstr "Llibret de 7 pàgines"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/duplex-7pages.page:8
 msgid "Print a 7 page booklet."
-msgstr "Imprimir un llibret de 7 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-7pages.page:21
 msgid "7-page booklet"
-msgstr "Llibret de 7 pàgines"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:25 C/duplex-7pages.page:62 C/duplex-4pages.page:24
@@ -218,8 +192,6 @@ msgid ""
 "Press the menu button in the top-right corner of the window and press the "
 "<gui style=\"button\">Print</gui> button."
 msgstr ""
-"Premeu el botó de menú a la cantonada superior dreta de la finestra i premeu "
-"el botó <gui style=\"button\">Imprimeix</gui>."
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:32 C/duplex-7pages.page:67 C/duplex-4pages.page:31
@@ -234,7 +206,7 @@ msgstr ""
 #: C/singlesided-5-8pages.page:51 C/duplex-8pages.page:30
 #: C/duplex-11pages.page:31 C/duplex-11pages.page:67 C/duplex-3pages.page:31
 msgid "Choose the <gui>General</gui> tab."
-msgstr "Trieu la pestanya <gui>General</gui>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:35 C/duplex-4pages.page:34 C/duplex-12pages.page:33
@@ -244,12 +216,12 @@ msgstr "Trieu la pestanya <gui>General</gui>."
 #: C/singlesided-9-12pages.page:54 C/singlesided-5-8pages.page:54
 #: C/duplex-8pages.page:33 C/duplex-11pages.page:34
 msgid "Under <em>Range</em>, choose <gui>Pages</gui>."
-msgstr "A <em>Rang</em>, seleccioneu <gui>Pàgines</gui>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:38
 msgid "Type the numbers of the pages in this order: 7, 2, 1"
-msgstr "Escriviu els números de les pàgines en aquest ordre: 7, 2, 1"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:44 C/duplex-7pages.page:77 C/duplex-4pages.page:42
@@ -270,7 +242,7 @@ msgstr "Escriviu els números de les pàgines en aquest ordre: 7, 2, 1"
 #: C/duplex-8pages.page:42 C/duplex-11pages.page:43 C/duplex-11pages.page:75
 #: C/duplex-3pages.page:39
 msgid "Choose the <gui>Page Setup</gui> tab."
-msgstr "Trieu la pestanya <gui>Disseny de pàgina</gui>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:47 C/duplex-12pages.page:45 C/duplex-5pages.page:43
@@ -280,8 +252,6 @@ msgid ""
 "Under <em>Layout</em>, in the <gui>Two-sided</gui> option, select <gui>Short "
 "Edge (Flip)</gui>."
 msgstr ""
-"A <em>Maquetació</em>, a l'opció <gui>Dues cares</gui>, seleccioneu "
-"<gui>Cantó curt (capgirat)</gui>."
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:50 C/duplex-4pages.page:48 C/duplex-12pages.page:48
@@ -290,7 +260,7 @@ msgstr ""
 #: C/duplex-6pages.page:49 C/duplex-9pages.page:46 C/duplex-8pages.page:48
 #: C/duplex-11pages.page:49 C/duplex-3pages.page:45
 msgid "In the <gui>Pages per side</gui> option, select <gui>2</gui>."
-msgstr "A l'opció <gui>Pàgines per cara</gui>, seleccioneu <gui>2</gui>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:53 C/duplex-5pages.page:49 C/duplex-5pages.page:98
@@ -299,8 +269,6 @@ msgstr "A l'opció <gui>Pàgines per cara</gui>, seleccioneu <gui>2</gui>."
 #: C/duplex-9pages.page:99 C/duplex-11pages.page:52 C/duplex-3pages.page:48
 msgid "In the <gui>Page ordering</gui> menu, select <gui>Right to left</gui>."
 msgstr ""
-"Al menú <gui>Ordre de les pàgines</gui>, seleccioneu <gui>De dreta a "
-"esquerra</gui>."
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:56 C/duplex-7pages.page:83 C/duplex-4pages.page:56
@@ -322,13 +290,12 @@ msgstr ""
 #: C/duplex-8pages.page:54 C/duplex-11pages.page:55 C/duplex-11pages.page:81
 #: C/duplex-3pages.page:53
 msgid "Click <gui>Print</gui>."
-msgstr "Feu clic a <gui>Imprimeix</gui>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:70
 msgid "Type the numbers of the remaining pages in this order: 6, 3, 4, 5"
 msgstr ""
-"Escriviu els números de les pàgines restants en aquest ordre: 6, 3, 4, 5"
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:80 C/duplex-4pages.page:51 C/duplex-12pages.page:51
@@ -343,8 +310,6 @@ msgstr ""
 #: C/duplex-11pages.page:78
 msgid "In the <gui>Page ordering</gui> menu, select <gui>Left to right</gui>."
 msgstr ""
-"Al menú <gui>Ordre de les pàgines</gui>, seleccioneu <gui>D'esquerra a "
-"dreta</gui>."
 
 #. (itstool) path: note/p
 #: C/duplex-7pages.page:89
@@ -352,14 +317,11 @@ msgid ""
 "It is easier to print a 8-page booklet. You may wish to add a blank page to "
 "your PDF document to make it 8-pages. To do so, you can:"
 msgstr ""
-"És més fàcil imprimir un llibret de 8 pàgines. Podeu afegir una pàgina en "
-"blanc al document PDF per a convertir-lo en un de 8 pàgines. Per a fer-ho, "
-"podeu:"
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:94 C/duplex-11pages.page:92
 msgid "Create a blank PDF document using <app>LibreOffice Writer</app>."
-msgstr "Creeu un document PDF en blanc amb <app>LibreOffice Writer</app>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:99 C/duplex-11pages.page:97
@@ -367,8 +329,6 @@ msgid ""
 "Merge the blank PDF with your PDF document using <app>PDF-Shuffler</app> "
 "placing the blank page at the end."
 msgstr ""
-"Combina el PDF en blanc amb el document PDF mitjançant <app>PDF-Shuffler</"
-"app> col·locant la pàgina en blanc al final."
 
 #. (itstool) path: item/p
 #: C/duplex-7pages.page:105 C/duplex-5pages.page:145 C/duplex-6pages.page:112
@@ -376,13 +336,11 @@ msgid ""
 "Follow the steps for printing a <link xref=\"duplex-8page\">8-page booklet</"
 "link>."
 msgstr ""
-"Seguiu els passos per a imprimir un <link xref=\"duplex-8page\">llibret de 8 "
-"pàgines</link>."
 
 #. (itstool) path: info/desc
 #: C/convertSVG.page:7
 msgid "You can convert a document to SVG by \"printing\" it to a file."
-msgstr "Podeu convertir un document a SVG «imprimint-lo» en un fitxer."
+msgstr ""
 
 #. (itstool) path: credit/name
 #: C/convertSVG.page:12 C/convertPostScript.page:13 C/noprint.page:14
@@ -393,39 +351,37 @@ msgstr "Podeu convertir un document a SVG «imprimint-lo» en un fitxer."
 #: C/commandline.page:12 C/index.page:14 C/print-2sided.page:12
 #: C/convertpdf.page:13 C/invert-colors.page:16
 msgid "Phil Bull"
-msgstr "Phil Bull"
+msgstr "فیل بول"
 
 #. (itstool) path: credit/name
 #: C/convertSVG.page:16 C/convertPostScript.page:17 C/finding.page:19
 #: C/printing.page:18 C/forms-saving.page:19 C/movingaround.page:17
 #: C/presentations.page:17 C/convertpdf.page:17 C/invert-colors.page:20
 msgid "Anna Philips"
-msgstr "Anna Philips"
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/convertSVG.page:25
 msgid "Converting a document to SVG"
-msgstr "Conversió d'un document a SVG"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/convertSVG.page:26
 msgid "You can convert documents of the following format types to SVG files:"
-msgstr "Podeu convertir els documents dels formats següents a format SVG:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/convertSVG.page:30 C/convertPostScript.page:33 C/formats.page:37
 #: C/printing.page:51 C/presentations.page:81
 msgid "Portable Document Format (.pdf)"
-msgstr "Format de document portable (.pdf)"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/convertSVG.page:32
 msgid ""
-"This works by opening the file in <app>Document Viewer</app> and \"printing"
-"\" the document as an SVG file."
+"This works by opening the file in <app>Document Viewer</app> and "
+"\"printing\" the document as an SVG file."
 msgstr ""
-"Ho podeu fer si obriu el document amb el <app>Visualitzador de documents</"
-"app> i «imprimiu» el document com a fitxer SVG."
 
 #. (itstool) path: item/p
 #: C/convertSVG.page:37 C/printing.page:33
@@ -433,9 +389,6 @@ msgid ""
 "Click the <gui>File options</gui> menu in the top right corner and select "
 "<gui>Print</gui> or press <keyseq><key>Ctrl</key><key>P</key></keyseq>."
 msgstr ""
-"Feu clic al menú <gui>Opcions de fitxer</gui> a la cantonada superior dreta "
-"i seleccioneu <gui>Imprimeix</gui> o premeu <keyseq><key>Ctrl</key><key>P</"
-"key></keyseq>."
 
 #. (itstool) path: item/p
 #: C/convertSVG.page:42
@@ -443,8 +396,6 @@ msgid ""
 "Select <gui>Print to File</gui> and choose SVG as the <gui>Output format</"
 "gui>."
 msgstr ""
-"Seleccioneu <gui>Imprimeix a un fitxer</gui> i trieu SVG com a <gui>Format "
-"de sortida</gui>."
 
 #. (itstool) path: item/p
 #: C/convertSVG.page:48
@@ -452,45 +403,40 @@ msgid ""
 "Choose a name and folder in which to save the file, then click <gui>Print</"
 "gui>. The SVG file will be saved in the folder you chose."
 msgstr ""
-"Trieu un nom i una carpeta on desar el fitxer i, a continuació, feu clic a "
-"<gui>Imprimeix</gui>. El fitxer SVG es desarà a la carpeta que trieu."
 
 #. (itstool) path: info/desc
 #: C/convertPostScript.page:7
 msgid "You can convert a document to PostScript."
-msgstr "Podeu convertir un document a PostScript."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/convertPostScript.page:26
 msgid "Converting a document to PostScript"
-msgstr "Conversió d'un document a PostScript"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/convertPostScript.page:28
 msgid ""
 "You can convert documents of the following format types to PostScript files:"
 msgstr ""
-"Podeu convertir els documents dels formats següents a fitxers PostScript:"
 
 #. (itstool) path: item/p
 #: C/convertPostScript.page:32 C/formats.page:35 C/printing.page:50
 #: C/presentations.page:79
 msgid "DjVu (.djvu, .djv)"
-msgstr "DjVu (.djvu, .djv)"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/convertPostScript.page:34 C/printing.page:53
 msgid "Tagged Image File Format (.tiff, .tif)"
-msgstr "Format de fitxer d'imatge etiquetada (.tiff, .tif)"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/convertPostScript.page:36
 msgid ""
-"This works by opening the file in <app>Document Viewer</app> and \"printing"
-"\" the document as a PostScript file."
+"This works by opening the file in <app>Document Viewer</app> and "
+"\"printing\" the document as a PostScript file."
 msgstr ""
-"Ho podeu fer si obriu el document amb el <app>Visualitzador de documents</"
-"app> i «imprimiu» el document com a fitxer PostScript."
 
 #. (itstool) path: item/p
 #: C/convertPostScript.page:41
@@ -499,9 +445,6 @@ msgid ""
 "<gui>Print</gui> or press <keyseq><key>Ctrl</key><key>P</key></keyseq> and "
 "go to the <gui>General</gui> tab."
 msgstr ""
-"Feu clic al menú <gui>Opcions de fitxer</gui> a la cantonada superior dreta "
-"i seleccioneu <gui>Imprimeix</gui> o premeu <keyseq><key>Ctrl</key><key>P</"
-"key></keyseq> i aneu a la pestanya <gui>General</gui>."
 
 #. (itstool) path: item/p
 #: C/convertPostScript.page:47
@@ -509,8 +452,6 @@ msgid ""
 "Select <gui>Print to File</gui> and choose PostScript as the <gui>Output "
 "format</gui>."
 msgstr ""
-"Seleccioneu <gui>Imprimeix a un fitxer</gui> i trieu PostScript com a "
-"<gui>Format de sortida</gui>."
 
 #. (itstool) path: item/p
 #: C/convertPostScript.page:53
@@ -518,29 +459,27 @@ msgid ""
 "Choose a name and folder in which to save the file, then click <gui>Print</"
 "gui>. The PostScript file will be saved in the folder you chose."
 msgstr ""
-"Trieu un nom i una carpeta on desar el fitxer i, a continuació, feu clic a "
-"<gui>Imprimeix</gui>. El fitxer PostScript es desarà a la carpeta que trieu."
 
 #. (itstool) path: info/title
 #: C/duplex-4pages.page:7
 msgctxt "sort"
 msgid "04-Page Booklet"
-msgstr "Llibret de 4 pàgines"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/duplex-4pages.page:8
 msgid "Print a 4 page booklet."
-msgstr "Imprimeix un llibret de 4 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-4pages.page:21
 msgid "4-page booklet"
-msgstr "Llibret de 4 pàgines"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-4pages.page:37 C/singlesided-3-4pages.page:57
 msgid "Type the numbers of the pages in this order: 4, 1, 2, 3"
-msgstr "Escriviu el número de pàgines en aquest ordre: 4, 1, 2, 3"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-4pages.page:45 C/duplex-npages.page:71 C/duplex-16pages.page:46
@@ -550,18 +489,16 @@ msgid ""
 "Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>Short "
 "Edge (Flip)</gui>."
 msgstr ""
-"A <em>Disposició</em>, al menú <gui>Dues cares</gui>, seleccioneu <gui>Cantó "
-"curt (capgirat)</gui>."
 
 #. (itstool) path: info/desc
 #: C/introduction.page:18
 msgid "Introduction to the <em>Evince Document Viewer</em>."
-msgstr "Introducció al <em>Visualitzador de documents Evince</em>."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/introduction.page:21
 msgid "Introduction"
-msgstr "Introducció"
+msgstr "دیباچه"
 
 #. (itstool) path: page/p
 #: C/introduction.page:23
@@ -569,19 +506,16 @@ msgid ""
 "<app>Evince</app> is a document viewer. See <link xref=\"formats\"/> for a "
 "list of file types you can view."
 msgstr ""
-"<app>Evince</app> és un visualitzador de documents. Consulteu <link xref="
-"\"formats\"/> per a veure la llista de tipus de fitxers que podeu "
-"visualitzar."
 
 #. (itstool) path: info/desc
 #: C/duplex-12pages.page:8
 msgid "Print a 12 page booklet."
-msgstr "Imprimeix un llibret de 12 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-12pages.page:21
 msgid "12-page booklet"
-msgstr "Llibret de 12 pàgines"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-12pages.page:36 C/singlesided-9-12pages.page:57
@@ -589,24 +523,22 @@ msgid ""
 "Type the numbers of the pages in this order: 12, 1, 2, 11, 10, 3, 4, 9, 8, "
 "5, 6, 7"
 msgstr ""
-"Type the numbers of the pages in this order: 12, 1, 2, 11, 10, 3, 4, 9, 8, "
-"5, 6, 7"
 
 #. (itstool) path: info/title
 #: C/singlesided-3-4pages.page:7
 msgctxt "sort"
 msgid "03-Page or 4-Page Booklet"
-msgstr "Llibret de 03 a 4 pàgines"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/singlesided-3-4pages.page:8
 msgid "Print a 3 or 4 page booklet."
-msgstr "Imprimir un llibret de 3 o 4 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/singlesided-3-4pages.page:21
 msgid "3-page or 4-page booklet"
-msgstr "Llibret de 3 a 4 pàgines"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/singlesided-3-4pages.page:23
@@ -614,8 +546,6 @@ msgid ""
 "If you have a 3-Page PDF document you should add a blank page to make it 4-"
 "pages. To do so, you can:"
 msgstr ""
-"Si teniu un document PDF de 3 pàgines, heu d'afegir una pàgina en blanc per "
-"a convertir-lo en un de 4 pàgines. Per a fer-ho, podeu:"
 
 #. (itstool) path: item/p
 #: C/singlesided-3-4pages.page:28 C/singlesided-17-20pages.page:28
@@ -624,7 +554,7 @@ msgstr ""
 #: C/singlesided-9-12pages.page:28 C/singlesided-5-8pages.page:28
 #: C/duplex-3pages.page:66
 msgid "Create a blank PDF using <app>LibreOffice Writer</app>."
-msgstr "Creeu un document PDF en blanc amb <app>LibreOffice Writer</app>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/singlesided-3-4pages.page:33 C/duplex-15pages.page:34
@@ -633,15 +563,13 @@ msgid ""
 "Merge the blank page with your PDF document using <app>PDF-Shuffler</app> "
 "placing the blank page at the end."
 msgstr ""
-"Combina el PDF en blanc amb el document PDF mitjançant <app>PDF-Shuffler</"
-"app> col·locant la pàgina en blanc al final."
 
 #. (itstool) path: page/p
 #: C/singlesided-3-4pages.page:39 C/singlesided-17-20pages.page:39
 #: C/singlesided-npages.page:44 C/singlesided-13-16pages.page:39
 #: C/singlesided-9-12pages.page:39 C/singlesided-5-8pages.page:39
 msgid "To print:"
-msgstr "Imprimir:"
+msgstr "برای چاپ:"
 
 #. (itstool) path: item/p
 #: C/singlesided-3-4pages.page:65 C/singlesided-17-20pages.page:66
@@ -651,15 +579,13 @@ msgid ""
 "Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>One "
 "Sided</gui>."
 msgstr ""
-"A <em>Maquetació</em>, al menú <gui>Dues cares</gui>, seleccioneu <gui>Una "
-"cara</gui>."
 
 #. (itstool) path: item/p
 #: C/singlesided-3-4pages.page:68 C/singlesided-17-20pages.page:69
 #: C/singlesided-npages.page:75 C/singlesided-13-16pages.page:71
 #: C/singlesided-9-12pages.page:68 C/singlesided-5-8pages.page:68
 msgid "In the <gui>Pages per side</gui> menu, select <gui>2</gui>."
-msgstr "Al menú <gui>Pàgines per cara</gui>, seleccioneu <gui>2</gui>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/singlesided-3-4pages.page:74 C/singlesided-17-20pages.page:75
@@ -667,7 +593,6 @@ msgstr "Al menú <gui>Pàgines per cara</gui>, seleccioneu <gui>2</gui>."
 #: C/singlesided-9-12pages.page:74 C/singlesided-5-8pages.page:74
 msgid "In the <gui>Only print</gui> menu, select <gui>Odd sheets</gui>."
 msgstr ""
-"Al menú <gui>Només imprimir</gui>, seleccioneu <gui>Fulls senars</gui>."
 
 #. (itstool) path: item/p
 #: C/singlesided-3-4pages.page:84 C/singlesided-17-20pages.page:85
@@ -677,8 +602,6 @@ msgid ""
 "When all the pages have printed, flip the pages over and place them back in "
 "the printer."
 msgstr ""
-"Quan s'hagin imprès totes les pàgines, gireu-les i poseu-les de nou a la "
-"impressora."
 
 #. (itstool) path: item/p
 #: C/singlesided-3-4pages.page:97 C/singlesided-17-20pages.page:98
@@ -686,17 +609,16 @@ msgstr ""
 #: C/singlesided-9-12pages.page:97 C/singlesided-5-8pages.page:97
 msgid "In the <gui>Only print</gui> menu, select <gui>Even sheets</gui>."
 msgstr ""
-"Al menú <gui>Només imprimir</gui>, seleccioneu <gui>Fulls parells</gui>."
 
 #. (itstool) path: info/desc
 #: C/synctex.page:7
 msgid "SyncTeX support is available."
-msgstr "La compatibilitat amb SyncTeX està disponible."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/synctex.page:20
 msgid "What is SyncTeX?"
-msgstr "Què és el SyncTeX?"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/synctex.page:21
@@ -704,23 +626,21 @@ msgid ""
 "SyncTeX is a method that enables synchronization between a TeX source file "
 "and the resulting PDF output."
 msgstr ""
-"El SyncTeX és un mètode que permet la sincronització entre un fitxer de codi "
-"TeX i la sortida corresponent en PDF."
 
 #. (itstool) path: info/desc
 #: C/annotations-save.page:7
 msgid "How to save your annotations."
-msgstr "Com desar les anotacions."
+msgstr ""
 
 #. (itstool) path: credit/name
 #: C/annotations-save.page:16
 msgid "Shobha Tyagi"
-msgstr "Shobha Tyagi"
+msgstr "شوبها تیاگی"
 
 #. (itstool) path: page/title
 #: C/annotations-save.page:23
 msgid "Save a copy of an annotated PDF"
-msgstr "Desar una còpia d'un PDF amb anotacions"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/annotations-save.page:24
@@ -729,16 +649,11 @@ msgid ""
 "<app>document viewer</app> or any other PDF viewer <em>that supports "
 "annotations</em>:"
 msgstr ""
-"Per a desar una còpia del vostre PDF amb anotacions per a la seva futura "
-"visualització mitjançant el <app>visualitzador de documents</app> o en algun "
-"altre visor <em>que les suporti</em>:"
 
 #. (itstool) path: item/p
 #: C/annotations-save.page:31
 msgid "Click <guiseq><gui>File options</gui><gui>Save As…</gui></guiseq>"
 msgstr ""
-"Feu clic a <guiseq><gui>Opcions del fitxer</gui><gui>Anomena i desa…</gui></"
-"guiseq>"
 
 #. (itstool) path: item/p
 #: C/annotations-save.page:36
@@ -746,8 +661,6 @@ msgid ""
 "Choose a name and folder in which to save the file, then click <gui>Save</"
 "gui>. The PDF will be saved in the folder you chose."
 msgstr ""
-"Trieu un nom i una carpeta on desar el fitxer i, a continuació, feu clic a "
-"<gui>Desa</gui>. El PDF es desarà a la carpeta que trieu."
 
 #. (itstool) path: page/p
 #: C/annotations-save.page:42
@@ -755,23 +668,21 @@ msgid ""
 "Annotations are added according to the PDF specification. Therefore, most "
 "PDF readers should be able to read them. Adobe Reader is known to work."
 msgstr ""
-"Les anotacions s'afegeixen segons l'especificació PDF. Per tant, la majoria "
-"de lectors de PDF haurien de poder llegir-los. A Adobe Reader funciona."
 
 #. (itstool) path: info/desc
 #: C/documentation.page:7
 msgid "Contact the Documentation Team."
-msgstr "Poseu-vos en contacte amb l'equip de documentació."
+msgstr ""
 
 #. (itstool) path: credit/years
 #: C/documentation.page:11 C/translate.page:12 C/develop.page:12
 msgid "2011"
-msgstr "2011"
+msgstr "۲۰۱۱"
 
 #. (itstool) path: page/title
 #: C/documentation.page:18
 msgid "Help write documentation"
-msgstr "Ajudar a escriure documentació"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/documentation.page:20
@@ -779,8 +690,6 @@ msgid ""
 "The <app>Document Viewer</app> documentation is maintained by a volunteer "
 "community. You are welcome to participate."
 msgstr ""
-"La documentació sobre el <app>visualitzador de documents</app> la manté una "
-"comunitat voluntària. Us convidem a participar-hi."
 
 #. (itstool) path: page/p
 #: C/documentation.page:23
@@ -790,34 +699,28 @@ msgid ""
 "gnome.org%2Fdocs\">irc</link>, or via <link href=\"https://discourse.gnome."
 "org/tag/documentation\">GNOME Discourse</link>."
 msgstr ""
-"Per a contribuir al projecte de documentació, no dubteu en contactar amb "
-"nosaltres mitjançant <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A"
-"%2F%2Firc.gnome.org%2Fdocs\">irc</link>, o utilitzant el <link href="
-"\"https://discourse.gnome.org/tag/documentation\">GNOME Discourse</link>."
 
 #. (itstool) path: page/p
 #: C/documentation.page:25
 msgid ""
-"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
+"Our <link href=\"https://live.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
 msgstr ""
-"La nostra pàgina <link href=\"https://live.gnome.org/DocumentationProject/"
-"Contributing\">wiki</link> conté informació útil."
 
 #. (itstool) path: info/desc
 #: C/synctex-editors.page:7
 msgid "Which editor can you use to edit your TEX file?"
-msgstr "Quin editor podeu fer servir per a editar fitxers TEX?"
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/synctex-editors.page:20
 msgid "Supported editors"
-msgstr "Editors compatibles"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/synctex-editors.page:22
 msgid "<app>gedit</app>"
-msgstr "<app>gedit</app>"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/synctex-editors.page:23
@@ -827,16 +730,11 @@ msgid ""
 "search#backward-search\">Backward search</link> (from the <app>document "
 "viewer</app> to <app>gedit</app>) are both supported."
 msgstr ""
-"També es poden realitzar la <link xref=\"synctex-search#forward-search"
-"\">Cerca cap endavant</link> (des de l'editor de text <app>gedit</app> al "
-"<app>Visualitzador de document</app>) i la <link xref=\"synctex-"
-"search#backward-search\">Cerca cap enrere</link> (des del <app>Visualitzador "
-"de document</app> cap al <app>gedit</app>)."
 
 #. (itstool) path: section/title
 #: C/synctex-editors.page:28
 msgid "Vim-latex"
-msgstr "Vim-latex"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/synctex-editors.page:29
@@ -846,10 +744,6 @@ msgid ""
 "latex together with the <app>document viewer</app> you need to follow the "
 "next steps:"
 msgstr ""
-"El connector del <app>gedit</app> conté un script de python "
-"(<file>evince_dbus.py</file>) que es pot fer servir per a fer treballar el "
-"SyncTeX amb el Vim. Per tal de fer servir el vim-latex juntament amb el "
-"<app>Visualitzador de documents</app> us cal seguir els passos següents:"
 
 #. (itstool) path: item/p
 #: C/synctex-editors.page:35
@@ -857,15 +751,11 @@ msgid ""
 "Copy the <file>evince_dbus.py</file> to some directory in your path and give "
 "it +x permissions."
 msgstr ""
-"Copieu l'<file>script evince_dbus.py</file> a algun directori que estigui al "
-"vostre camí i doneu-li permisos +x."
 
 #. (itstool) path: item/p
 #: C/synctex-editors.page:41
 msgid "Modify your <file>~/.vimrc</file> file and add the following lines."
 msgstr ""
-"Modifiqueu el vostre fitxer <file>~/.vimrc</file> i afegiu les següents "
-"línies."
 
 #. (itstool) path: item/code
 #: C/synctex-editors.page:44
@@ -876,10 +766,6 @@ msgid ""
 "let g:Tex_DefaultTargetFormat = 'pdf'\n"
 "let g:Tex_CompileRule_pdf = 'pdflatex --synctex=1 -interaction=nonstopmode $*'\n"
 msgstr ""
-"\n"
-"let g:Tex_ViewRule_pdf = 'evince_dbus.py'\n"
-"let g:Tex_DefaultTargetFormat = 'pdf'\n"
-"let g:Tex_CompileRule_pdf = 'pdflatex --synctex=1 -interaction=nonstopmode $*'\n"
 
 #. (itstool) path: item/p
 #: C/synctex-editors.page:52
@@ -887,38 +773,34 @@ msgid ""
 "Now you can use Forward search from vim-latex by typing \\ls. Backward "
 "search is not yet supported."
 msgstr ""
-"Ara ja podeu fer servir la cerca cap endavant amb el vim-latex si teclegeu "
-"\\ls. La cerca cap enrere encara no està implementada."
 
 #. (itstool) path: credit/name
 #: C/opening.page:19 C/print-differentsize.page:17 C/finding.page:23
 #: C/formats.page:18 C/password.page:16 C/print-pagescaling.page:12
 #: C/bookmarks.page:18
 msgid "Ekaterina Gerasimova"
-msgstr "Ekaterina Gerasimova"
+msgstr "اکاترینا گراسیموفا"
 
 #. (itstool) path: info/desc
 #: C/opening.page:25
 msgid "How to open a document."
-msgstr "Com s'obre un document."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/opening.page:28
 msgid "Open a document"
-msgstr "Obrir un document"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/opening.page:30
 msgid "You can open a document using any one of the following ways:"
-msgstr "Podeu obrir un document de totes aquestes maneres:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/opening.page:34
 msgid ""
 "Double-click on the file in <app>Files</app> or your <em>file manager</em>."
 msgstr ""
-"Feu un doble clic a la icona del fitxer en el <app>Fitxers</app> i "
-"<em>gestor de fitxers</em>."
 
 #. (itstool) path: note/p
 #: C/opening.page:37
@@ -926,9 +808,6 @@ msgid ""
 "Double clicking PDF, PostScript, .djvu, .dvi and Comic Book Archive files "
 "opens them in <app>Document Viewer</app> by default."
 msgstr ""
-"Fent doble clic a fitxers PDF, PostScript, .djvu, .dvi i Comic Book Archive "
-"aquests s'obriran de forma predeterminada amb el <app>Visualitzador de "
-"documents</app>."
 
 #. (itstool) path: item/p
 #: C/opening.page:42
@@ -936,15 +815,11 @@ msgid ""
 "Right-click on a file icon in <app>Files</app> and click <guiseq><gui>Open "
 "With</gui><gui>Document Viewer</gui></guiseq>."
 msgstr ""
-"Feu clic amb el botó dret a la icona <app>Fitxers</app> i feu clic a "
-"<guiseq><gui>Obre amb</gui><gui>Visualitzador de documents</gui></guiseq>."
 
 #. (itstool) path: page/p
 #: C/opening.page:47
 msgid "If an empty <app>Document Viewer</app> window is already open you can:"
 msgstr ""
-"Si ja hi ha una finestra buida del <app>Visualitzador de documents</app> "
-"oberta podeu:"
 
 #. (itstool) path: item/p
 #: C/opening.page:51
@@ -952,8 +827,6 @@ msgid ""
 "Drag a file into the window from <app>Files</app>. The new file will open in "
 "the same window."
 msgstr ""
-"Arrossegueu un fitxer cap a dins de la finestra des de <app>Fitxers</app>. "
-"El fitxer nou s'obrirà en una finestra nova."
 
 #. (itstool) path: item/p
 #: C/opening.page:55
@@ -962,10 +835,6 @@ msgid ""
 "the <gui>Open Document</gui> dialog, choose the file which you wish to open, "
 "and click <gui>Open</gui>. The file will open in the same window."
 msgstr ""
-"Premeu el botó <gui>Obre…</gui> a la cantonada superior esquerra de la "
-"finestra. En el diàleg <gui>Obre el document</gui>, trieu el fitxer que "
-"voleu obrir i feu clic a <gui>Obre</gui>. El fitxer s'obrirà en una finestra "
-"nova."
 
 #. (itstool) path: page/p
 #: C/opening.page:62
@@ -973,8 +842,6 @@ msgid ""
 "If a document is already opened in a <app>Document Viewer</app> window you "
 "can:"
 msgstr ""
-"Si ja hi ha una finestra del <app>Visualitzador de documents</app> oberta "
-"podeu:"
 
 #. (itstool) path: item/p
 #: C/opening.page:66
@@ -982,8 +849,6 @@ msgid ""
 "Drag a file into the window from <app>Files</app>. The new file will open in "
 "a new window."
 msgstr ""
-"Arrossegar un fitxer cap a dins de la finestra des de <app>Fitxers</app>. El "
-"fitxer nou s'obrirà en una finestra nova."
 
 #. (itstool) path: item/p
 #: C/opening.page:70
@@ -992,44 +857,41 @@ msgid ""
 "Document</gui> dialog, choose the file which you wish to open, and click "
 "<gui>Open</gui>. The file will open in a new window."
 msgstr ""
-"Premeu <keyseq><key>Ctrl</key><key>O</key></keyseq>. En el diàleg <gui>Obre "
-"el document</gui>, trieu el fitxer que voleu obrir i feu clic a <gui>Obre</"
-"gui>). El fitxer s'obrirà en una finestra nova."
 
 #. (itstool) path: info/desc
 #: C/noprint.page:9
 msgid "The author may have put printing restrictions on the document."
-msgstr "L'autor pot haver establert restriccions al document."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/noprint.page:23
 msgid "I can't print a document"
-msgstr "No puc imprimir un document"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/noprint.page:25
 msgid "Possible reasons for printing failure"
-msgstr "Possibles raons pels errors d'impressió"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/noprint.page:26
 msgid "A document might not print because of:"
-msgstr "Un document pot no poder-se imprimir per:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/noprint.page:28
 msgid "Printer problems or,"
-msgstr "Problemes d'impressora, o"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/noprint.page:29
 msgid "PDF printing restrictions."
-msgstr "Restriccions en la impressió de PDFs."
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/noprint.page:35
 msgid "Printer problems"
-msgstr "Problemes d'impressió"
+msgstr "مشکلات چاپگر"
 
 #. (itstool) path: section/p
 #: C/noprint.page:36
@@ -1037,55 +899,49 @@ msgid ""
 "There are many reasons why your printer might not be working. For example, "
 "it could be out of paper or ink, or unplugged or damaged."
 msgstr ""
-"Si la impressora no funciona, pot ser per molts motius. Per exemple, es pot "
-"haver acabat el paper o la tinta, o pot estar desendollada o avariada."
 
 #. (itstool) path: section/p
 #: C/noprint.page:41
 msgid "To check if your printer is printing correctly:"
-msgstr "Per a comprovar si la impressora funciona correctament:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/noprint.page:44
 msgid ""
-"Open the <gui href=\"help:gnome-help/shell-introduction#activities"
-"\">Activities</gui> overview and start typing <gui>Settings</gui>."
+"Open the <gui href=\"help:gnome-help/shell-"
+"introduction#activities\">Activities</gui> overview and start typing "
+"<gui>Settings</gui>."
 msgstr ""
-"Obriu la vista general d'<gui href=\"help:gnome-help/shell-"
-"introduction#activities\">Activitats</gui> i comenceu a escriure "
-"<gui>Configuració</gui>."
 
 #. (itstool) path: item/p
 #: C/noprint.page:48
 msgid "Click on <gui>Settings</gui>."
-msgstr "Feu clic a <gui>Configuració</gui>."
+msgstr "روی <gui> تنظیمات </gui> کلیک کنید."
 
 #. (itstool) path: item/p
 #: C/noprint.page:51
 msgid "Click <gui>Printers</gui> in the sidebar."
-msgstr "Feu clic a <gui>Impressores</gui> a la barra lateral."
+msgstr ""
 
 #. (itstool) path: media/span
 #: C/noprint.page:54
 msgid "settings"
-msgstr "paràmetres"
+msgstr "تنظیمات"
 
 #. (itstool) path: item/p
 #: C/noprint.page:54
 msgid "Click the <_:media-1/> button next to the printer."
-msgstr "Feu clic al botó <_:media-1/> al costat de la impressora."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/noprint.page:58
 msgid "Select <gui style=\"menuitem\">Printing Options</gui>."
-msgstr "Seleccioneu <gui style=\"menuitem\">Opcions d'impressió</gui>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/noprint.page:61
 msgid "Click on <gui>Test Page</gui>. A page should be sent to your printer."
 msgstr ""
-"Feu clic a <gui>Pàgina de prova</gui>. Hauria d'enviar-se una pàgina a la "
-"impressora."
 
 #. (itstool) path: note/p
 #: C/noprint.page:63
@@ -1094,14 +950,11 @@ msgid ""
 "link>. You may also need to see your printer's manual to see what else you "
 "can do."
 msgstr ""
-"Si això falla, consulteu <link href=\"help:gnome-help/printing\">Ajuda a la "
-"impressió</link>. També és possible que hàgiu de consultar el manual de la "
-"impressora per a veure què més podeu fer."
 
 #. (itstool) path: section/title
 #: C/noprint.page:74
 msgid "PDF printing restrictions"
-msgstr "Restriccions en la impressió de PDF"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/noprint.page:75
@@ -1111,11 +964,6 @@ msgid ""
 "<app>document viewer</app> overrides this restriction by default, but you "
 "may want to check that it hasn't been disabled:"
 msgstr ""
-"Alguns documents PDF estan configurats de tal manera que no es poden "
-"imprimir. Els autors poden configurar aquesta restricció d'impressió quan "
-"escriuen un document. El <app>Visualitzador de documents</app> anul·la "
-"aquesta restricció per defecte, però si voleu podeu comprovar que no estigui "
-"deshabilitat:"
 
 #. (itstool) path: note/p
 #: C/noprint.page:83
@@ -1123,8 +971,6 @@ msgid ""
 "You need to have <app>dconf Editor</app> installed on your computer to "
 "change this setting."
 msgstr ""
-"Heu de tenir <app>dconf Editor</app> instal·lat a l'ordinador per a canviar "
-"aquesta configuració."
 
 #. (itstool) path: if/p
 #: C/noprint.page:86
@@ -1132,35 +978,29 @@ msgid ""
 "<link style=\"button\" action=\"install:dconf-editor\">Install <app>dconf "
 "Editor</app></link>"
 msgstr ""
-"<link style=\"button\" action=\"install:dconf-editor\">Instal·la <app>dconf "
-"Editor</app></link>"
 
 #. (itstool) path: item/p
 #: C/noprint.page:93
 msgid ""
-"Open the <gui href=\"help:gnome-help/shell-introduction#activities"
-"\">Activities</gui> overview and start typing <gui>dconf Editor</gui>."
+"Open the <gui href=\"help:gnome-help/shell-"
+"introduction#activities\">Activities</gui> overview and start typing "
+"<gui>dconf Editor</gui>."
 msgstr ""
-"Obriu la vista general <gui href=\"help:gnome-help/shell-"
-"introduction#activities\">Activitats</gui> i comenceu a escriure <gui>dconf "
-"Editor</gui>)."
 
 #. (itstool) path: item/p
 #: C/noprint.page:97
 msgid "Click on <gui>dconf Editor</gui>."
-msgstr "Feu clic a <gui>dconf Editor</gui>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/noprint.page:100
 msgid "Browse to <sys>/org/gnome/evince</sys>."
-msgstr "Navegueu fins a <sys>/org/gnome/evince</sys>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/noprint.page:103
 msgid "Make sure that the <gui>override-restrictions</gui> option is checked."
 msgstr ""
-"Assegureu-vos que l'opció <gui>override-restrictions</gui> estigui "
-"seleccionada."
 
 #. (itstool) path: item/p
 #: C/noprint.page:108
@@ -1168,18 +1008,16 @@ msgid ""
 "Go back to the <app>Document Viewer</app> and try to print the document "
 "again."
 msgstr ""
-"Torneu al <app>Visualitzador de documents</app> i proveu d'imprimir el "
-"document una altra vegada."
 
 #. (itstool) path: info/desc
 #: C/singlesided-17-20pages.page:8
 msgid "Print a 17, 18, 19 or 20 page booklet."
-msgstr "Imprimir un llibret de 17, 18, 19 o 20 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/singlesided-17-20pages.page:21
 msgid "17-page to 20-page booklet"
-msgstr "Llibret de 17 a 20 pàgines"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/singlesided-17-20pages.page:23
@@ -1187,8 +1025,6 @@ msgid ""
 "If you have a 17, 18 or 19 page PDF document you should add the appropriate "
 "number of blank pages to make it 20-pages. To do so, you can:"
 msgstr ""
-"Si teniu un document PDF de 17, 18 o 19 pàgines, heu d'afegir el nombre "
-"adequat de pàgines en blanc per a arribar a 20. Per a fer-ho, podeu:"
 
 #. (itstool) path: item/p
 #: C/singlesided-17-20pages.page:33 C/singlesided-npages.page:38
@@ -1198,34 +1034,32 @@ msgid ""
 "Merge the blank pages with your PDF document using <app>PDF-Shuffler</app> "
 "placing the blank pages at the end."
 msgstr ""
-"Combinar el PDF en blanc amb el document PDF mitjançant <app>PDF-Shuffler</"
-"app> col·locant les pàgines en blanc al final."
 
 #. (itstool) path: item/item
 #: C/singlesided-17-20pages.page:58
 msgid "20, 1, 2, 19, 18, 3, 4, 17, 16, 5, 6, 15, 14, 7, 8, 13, 12, 9, 10, 11"
-msgstr "20, 1, 2, 19, 18, 3, 4, 17, 16, 5, 6, 15, 14, 7, 8, 13, 12, 9, 10, 11"
+msgstr ""
 
 #. (itstool) path: tree/item
 #: C/singlesided-17-20pages.page:56 C/duplex-16pages.page:36
 #: C/singlesided-13-16pages.page:58
 msgid "Type the numbers of the pages in this order: <_:item-1/>"
-msgstr "Escriviu el nombre de pàgines en aquest ordre: <_:item-1/>"
+msgstr ""
 
 #. (itstool) path: credit/years
 #: C/print-differentsize.page:19 C/print-pagescaling.page:14
 msgid "2015"
-msgstr "2015"
+msgstr "۲۰۱۵"
 
 #. (itstool) path: info/desc
 #: C/print-differentsize.page:24
 msgid "Printing a document on paper of a different size or orientation."
-msgstr "Imprimir un document en un paper de diferent mida o orientació."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/print-differentsize.page:28
 msgid "Changing the paper size when printing"
-msgstr "Canviar la mida del paper a l'imprimir"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/print-differentsize.page:30 C/print-pagescaling.page:24
@@ -1234,14 +1068,11 @@ msgid ""
 "US Letter-sized PDF on A4 paper), you can change the printing format for the "
 "document."
 msgstr ""
-"Si voleu canviar la mida del paper del vostre document (per exemple, "
-"imprimir un PDF amb una carta en paper A4), podeu canviar el format "
-"d'impressió del document."
 
 #. (itstool) path: item/p
 #: C/print-differentsize.page:39
 msgid "Select the <gui>Page Setup</gui> tab."
-msgstr "Seleccioneu la pestanya <gui>Configuració de la pàgina</gui>."
+msgstr "زبانهٔ <gui>برپایی صفحه</gui> را برگزینید."
 
 #. (itstool) path: item/p
 #: C/print-differentsize.page:42
@@ -1249,13 +1080,11 @@ msgid ""
 "Under the <em>Paper</em> column, choose your <em>Paper size</em> from the "
 "drop-down list."
 msgstr ""
-"Sota la columna <em>Paper</em>, trieu la <em>Mida del paper</em> de la "
-"llista desplegable."
 
 #. (itstool) path: item/p
 #: C/print-differentsize.page:46
 msgid "Click <gui>Print</gui> and your document should print."
-msgstr "Feu clic a <gui>Imprimeix</gui> per a imprimir el vostre document."
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/print-differentsize.page:50
@@ -1263,43 +1092,41 @@ msgid ""
 "You can also use the <em>Orientation</em> menu to choose a different "
 "orientation:"
 msgstr ""
-"També podeu utilitzar la llista desplegable <em>Orientació</em> per a "
-"canviar l'orientació:"
 
 #. (itstool) path: item/p
 #: C/print-differentsize.page:55
 msgid "<gui>Portrait</gui>"
-msgstr "<gui>Vertical</gui>"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/print-differentsize.page:58
 msgid "<gui>Landscape</gui>"
-msgstr "<gui>Apaïsat</gui>"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/print-differentsize.page:61
 msgid "<gui>Reverse portrait</gui>"
-msgstr "<gui>Vertical invertit</gui>"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/print-differentsize.page:64
 msgid "<gui>Reverse landscape</gui>"
-msgstr "<gui>Apaïsat invertit</gui>"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/singlesided-npages.page:8
 msgid "Print a booklet over 20 pages."
-msgstr "Imprimir un llibret de més de 20 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/singlesided-npages.page:21 C/duplex-npages.page:21
 msgid "n-page booklet"
-msgstr "Llibret d'n-pàgines"
+msgstr ""
 
 #. (itstool) path: note/p
 #: C/singlesided-npages.page:23 C/duplex-npages.page:23
 msgid "<em>n</em> is a multiple of 4."
-msgstr "<em>n</em>és múltiple de 4."
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/singlesided-npages.page:27
@@ -1308,9 +1135,6 @@ msgid ""
 "should add the appropriate number of blank pages (1, 2 or 3) to make it a "
 "multiple of 4. To do so, you can:"
 msgstr ""
-"Si el nombre de pàgines del document PDF no és múltiple de 4, heu d'afegir "
-"el nombre adequat de pàgines en blanc (1, 2 o 3) per a fer-lo múltiple de 4. "
-"Per a fer-ho, podeu:"
 
 #. (itstool) path: item/item
 #: C/singlesided-npages.page:63 C/duplex-npages.page:62
@@ -1318,34 +1142,31 @@ msgid ""
 "n, 1, 2, n-1, n-2, 3, 4, n-3, n-4, 5, 6, n-5, n-6, 7, 8, n-7, n-8, 9, 10, "
 "n-9, n-10, 11, 12, n-11..."
 msgstr ""
-"n, 1, 2, n-1, n-2, 3, 4, n-3, n-4, 5, 6, n-5, n-6, 7, 8, n-7, n-8, 9, 10, "
-"n-9, n-10, 11, 12, n-11…"
 
 #. (itstool) path: item/item
 #: C/singlesided-npages.page:64 C/duplex-npages.page:63
 msgid "...until you have typed n-number of pages."
-msgstr "... fins que hàgiu escrit el número de pàgines n."
+msgstr ""
 
 #. (itstool) path: tree/item
 #: C/singlesided-npages.page:61 C/duplex-npages.page:60
 msgid "Type the numbers of the pages in this order: <_:item-1/> <_:item-2/>"
 msgstr ""
-"Escriviu els números de les pàgines en aquest ordre: <_:item-1/><_:item-2/>"
 
 #. (itstool) path: info/desc
 #: C/synctex-support.page:7
 msgid "How to add support for SyncTeX."
-msgstr "Com afegir compatibilitat amb SyncTeX."
+msgstr ""
 
 #. (itstool) path: credit/name
 #: C/synctex-support.page:16
 msgid "Germán Poo-Caamaño"
-msgstr "Germán Poo-Caamaño"
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/synctex-support.page:25
 msgid "Set-up SyncTeX"
-msgstr "Instal·lació de SyncTeX"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/synctex-support.page:26
@@ -1353,13 +1174,11 @@ msgid ""
 "The following packages need to be installed in order to add support for "
 "SyncTeX:"
 msgstr ""
-"Per tal de permetre l'ús de SyncTeX cal instal·lar els següents paquets "
-"informàtics:"
 
 #. (itstool) path: item/p
 #: C/synctex-support.page:31
 msgid "A LaTeX engine with SyncTeX support, such as <app>pdflatex</app>."
-msgstr "Un motor LaTeX amb suport per SyncTeX, com <app>pdflatex</app>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/synctex-support.page:36
@@ -1367,13 +1186,11 @@ msgid ""
 "A text editor with SyncTeX support, such as <app>gedit</app> with gedit-"
 "plugins installed."
 msgstr ""
-"Un editor de text amb suport per SyncTeX, com <app>gedit</app> amb els "
-"connectors de Gedit instal·lats."
 
 #. (itstool) path: page/p
 #: C/synctex-support.page:42
 msgid "In <app>gedit</app>, enable the SyncTeX Plugin:"
-msgstr "Activeu el connector de SyncTex al <app>gedit</app>:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/synctex-support.page:47
@@ -1381,23 +1198,21 @@ msgid ""
 "Press the menu button in the top-right corner of the window and select <gui "
 "style=\"menuitem\">Preferences</gui>."
 msgstr ""
-"Premeu el botó de menú a la part superior dreta de la finestra i seleccioneu "
-"<gui style=\"menuitem\">Preferències</gui>."
 
 #. (itstool) path: item/p
 #: C/synctex-support.page:50
 msgid "Select the <gui>Plugins</gui> tab."
-msgstr "Seleccioneu la pestanya <gui>Connectors</gui>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/synctex-support.page:55
 msgid "Check <gui>SyncTeX</gui>."
-msgstr "Feu clic a <gui>SyncTeX</gui>."
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/duplex-npages.page:8
 msgid "Print a booklet over 16 pages."
-msgstr "Imprimir un llibret de més de 16 pàgines."
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/duplex-npages.page:28
@@ -1406,19 +1221,16 @@ msgid ""
 "should add the appropriate number of blank pages (1,2 or 3) to make it a "
 "multiple of 4. To do so, you can:"
 msgstr ""
-"Si el nombre de pàgines del document PDF no és múltiple de 4, heu d'afegir "
-"el nombre adequat de pàgines en blanc (1,2 o 3) per a fer-lo múltiple de 4. "
-"Per a fer-ho, podeu:"
 
 #. (itstool) path: info/desc
 #: C/finding.page:29
 msgid "Search for a word or phrase in a document."
-msgstr "Cerca d'una paraula o una frase en un document."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/finding.page:32
 msgid "Find text in a document"
-msgstr "Cercar text en documents"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/finding.page:36
@@ -1426,15 +1238,12 @@ msgid ""
 "Click the <gui>Magnifying glass button</gui> or press <keyseq><key>Ctrl</"
 "key><key>F</key></keyseq> or <key>/</key> to display a search box."
 msgstr ""
-"Feu clic al <gui>botó de la lupa</gui> o premeu <keyseq><key>Ctrl</key> "
-"<key>F</key></keyseq> o <key>/</key> per a mostrar un quadre de cerca."
 
 #. (itstool) path: item/p
 #: C/finding.page:41
 msgid ""
 "Start typing into the search box and the search will start automatically."
 msgstr ""
-"Comenceu a escriure al quadre de cerca i la cerca s'iniciarà automàticament."
 
 #. (itstool) path: item/p
 #: C/finding.page:45
@@ -1442,8 +1251,6 @@ msgid ""
 "Use the <gui>∧</gui> and <gui>∨</gui> buttons to move to the previous or "
 "next search result."
 msgstr ""
-"Utilitzeu els botons <gui>∧</gui> i <gui>∨</gui> per a anar al resultat de "
-"la cerca anterior o següent."
 
 #. (itstool) path: item/p
 #: C/finding.page:49
@@ -1451,8 +1258,6 @@ msgid ""
 "To hide the search bar, click the <gui>Magnifying glass button</gui> again "
 "or press <key>Esc</key>."
 msgstr ""
-"Per a amagar la barra de cerca, torneu a fer clic al <gui>botó de la lupa</"
-"gui> o premeu <key>Esc</key>."
 
 #. (itstool) path: note/p
 #: C/finding.page:55
@@ -1460,9 +1265,6 @@ msgid ""
 "To filter words by case or completion, you can right click on the search box "
 "and select <gui>Case Sensitive</gui> or <gui>Whole Words Only</gui>."
 msgstr ""
-"Per a filtrar paraules per majúscules/minúscules o per compleció, podeu fer "
-"clic amb el botó dret al quadre de cerca i seleccionar <gui>Distingeix entre "
-"majúscules i minúscules</gui> o <gui>Només paraules senceres</gui>."
 
 #. (itstool) path: page/p
 #: C/finding.page:60
@@ -1472,10 +1274,6 @@ msgid ""
 "document at least once, you will be shown how many times the search result "
 "appears on the current page."
 msgstr ""
-"Si la paraula o la frase que heu cercat no es troba al document, veureu <_:"
-"media-1/> al quadre de text de cerca. Tanmateix, si apareix al document si "
-"més no una vegada, es mostrarà quantes vegades apareix el resultat de la "
-"cerca a la pàgina actual."
 
 #. (itstool) path: note/p
 #: C/finding.page:66
@@ -1483,38 +1281,36 @@ msgid ""
 "Only PDF documents are searchable. Some PDF documents are not searchable "
 "because their text is encoded in the document as an image."
 msgstr ""
-"Només es poden cercar documents PDF. Alguns documents PDF no són cercables "
-"perquè el seu text està codificat en el document com una imatge."
 
 #. (itstool) path: info/desc
 #: C/duplex-16pages.page:8
 msgid "Print a 16 page booklet."
-msgstr "Imprimir un llibret de 16 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-16pages.page:21
 msgid "16-page booklet"
-msgstr "Llibret de 16 pàgines"
+msgstr ""
 
 #. (itstool) path: item/item
 #: C/duplex-16pages.page:38 C/singlesided-13-16pages.page:60
 msgid "16, 1, 2, 15, 14, 3, 4, 13, 12, 5, 6, 11, 10, 7, 8, 9"
-msgstr "16, 1, 2, 15, 14, 3, 4, 13, 12, 5, 6, 11, 10, 7, 8, 9"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/translate.page:7
 msgid "Localize the <app>Document Viewer.</app>"
-msgstr "Traduïu el <app>Visualitzador de documents.</app>"
+msgstr ""
 
 #. (itstool) path: credit/name
 #: C/translate.page:15
 msgid "Michael Hill"
-msgstr "Michael Hill"
+msgstr "مایکل هیل"
 
 #. (itstool) path: page/title
 #: C/translate.page:23
 msgid "Help translate"
-msgstr "Ajudar a la traducció"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/translate.page:24
@@ -1523,9 +1319,6 @@ msgid ""
 "translated by a world-wide volunteer community. You are welcome to "
 "participate."
 msgstr ""
-"Una comunitat internacional de voluntaris tradueixen la interfície d'usuari "
-"i la documentació del <app>Visualitzador de documents</app>. Us convidem a "
-"participar-hi."
 
 #. (itstool) path: page/p
 #: C/translate.page:27
@@ -1533,21 +1326,15 @@ msgid ""
 "There are <link href=\"http://l10n.gnome.org/module/evince/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"Encara hi ha <link href=\"http://l10n.gnome.org/module/evince/\">molts "
-"idiomes</link> en els quals no està traduït."
 
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"http://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
-"teams/\">translation team</link> for your language. This will give you the "
-"ability to upload new translations."
+"To start translating you will need to <link href=\"http://l10n.gnome."
+"org\">create an account</link> and join the <link href=\"http://l10n.gnome."
+"org/teams/\">translation team</link> for your language. This will give you "
+"the ability to upload new translations."
 msgstr ""
-"Per a poder començar a traduir, heu de <link href=\"http://l10n.gnome.org"
-"\">crear-vos un compte</link> i apuntar-vos a l'<link href=\"http://l10n."
-"gnome.org/teams/\">equip de traducció</link> del vostre idioma. Això us "
-"permetrà pujar traduccions noves."
 
 #. (itstool) path: page/p
 #: C/translate.page:34
@@ -1557,11 +1344,6 @@ msgid ""
 "channel are located worldwide, so you may not get an immediate response as a "
 "result of timezone differences."
 msgstr ""
-"Podeu xatejar amb els traductors del GNOME mitjançant <link href=\"https://"
-"cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">IRC</link>. "
-"Els participants d'aquest canal es troben distribuïts per tot el món, així "
-"que pot ser que no obtingueu una resposta immediatament degut a diferències "
-"entre zones horàries."
 
 #. (itstool) path: page/p
 #: C/translate.page:37
@@ -1569,25 +1351,21 @@ msgid ""
 "Alternatively, you can contact the Internationalization Team using <link "
 "href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
 msgstr ""
-"Si ho preferiu, podeu contactar amb l'equip d'internacionalització "
-"utilitzant el <link href=\"https://discourse.gnome.org/tag/i18n\">GNOME "
-"Discourse</link>."
 
 #. (itstool) path: info/desc
 #: C/default-settings.page:7
 msgid "Save current settings as default for new documents."
 msgstr ""
-"Desa la configuració actual com a predeterminada per als documents nous."
 
 #. (itstool) path: credit/name
 #: C/default-settings.page:12
 msgid "Sindhu S"
-msgstr "Sindhu S"
+msgstr "سیندو اس"
 
 #. (itstool) path: page/title
 #: C/default-settings.page:21
 msgid "Change default settings"
-msgstr "Canviar la configuració predeterminada"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/default-settings.page:23
@@ -1596,9 +1374,6 @@ msgid ""
 "and page view preferences, are applied. Any changes you make to these "
 "settings are saved for the document."
 msgstr ""
-"Quan un document s'obre per primera vegada, s'apliquen les opcions "
-"predeterminades, com ara les preferències de zoom i de visualització de "
-"pàgina. Qualsevol canvi que feu a aquests paràmetres es desa per al document."
 
 #. (itstool) path: page/p
 #: C/default-settings.page:26
@@ -1608,10 +1383,6 @@ msgid ""
 "window and selecting <gui style=\"menuitem\">Save Current Settings as "
 "Default</gui>."
 msgstr ""
-"Podeu desar la configuració que esteu utilitzant actualment com a "
-"predeterminada per a tots els documents nous prement el botó de menú de la "
-"cantonada superior dreta de la finestra i seleccionant <gui style=\"menuitem"
-"\">Desa la configuració actual com a predeterminada</gui>."
 
 #. (itstool) path: note/p
 #: C/default-settings.page:31
@@ -1619,9 +1390,6 @@ msgid ""
 "The new default settings do not override settings of previously opened "
 "documents, they are applied only to documents opened for the first time."
 msgstr ""
-"La nova configuració predeterminada no anul·la la configuració dels "
-"documents oberts prèviament i s'aplica només als documents oberts per "
-"primera vegada."
 
 #. (itstool) path: info/desc
 #: C/textselection.page:7
@@ -1629,13 +1397,11 @@ msgid ""
 "When you copy text, the text that is pasted might be different from what you "
 "had selected."
 msgstr ""
-"Si copieu text dels documents, pot ser que quan l'enganxeu no sigui el "
-"mateix que heu seleccionat."
 
 #. (itstool) path: page/title
 #: C/textselection.page:20
 msgid "Why didn't the text I selected copy properly?"
-msgstr "Per què el text que he seleccionat no s'ha copiat correctament?"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/textselection.page:23
@@ -1646,11 +1412,6 @@ msgid ""
 "This often happens when copying text from a PDF document with multiple "
 "columns."
 msgstr ""
-"Si seleccioneu i copieu text des d'un document fent servir el "
-"<app>Visualitzador de documents</app> i llavors el copieu a una altra "
-"aplicació, la formatació podria sofrir canvis. Pot contenir caràcters "
-"diferents que la selecció original de text. Això passa sovint quan es copia "
-"text des de documents en format PDF amb columnes múltiples."
 
 #. (itstool) path: page/p
 #: C/textselection.page:29
@@ -1659,10 +1420,6 @@ msgid ""
 "actual text in the document is stored differently from the way it is "
 "displayed. This may result in a copy that does not appear as expected."
 msgstr ""
-"El problema succeeix degut a la manera com alguns formats de document "
-"gestionen el text. El text real en aquest document s'emmagatzema de manera "
-"diferent a com es visualitza. Per aquest motiu pot passar que la còpia que "
-"es fa no resulti ser l'esperada."
 
 #. (itstool) path: page/p
 #: C/textselection.page:35
@@ -1671,20 +1428,16 @@ msgid ""
 "text at a time, or copying the text into a text editor (like <app>gedit</"
 "app>) may minimize the problem."
 msgstr ""
-"Malauradament, no hi ha cap manera definitiva per a solucionar aquest "
-"problema. Per a minimitzar-lo, podeu copiar petits trossos de text cada "
-"vegada, o copiar-lo a un editor de text. Podeu trobar un editor de text (com "
-"<app>gedit</app>) que us pot minimitzar el problema."
 
 #. (itstool) path: info/desc
 #: C/synctex-compile.page:7
 msgid "How to compile your TeX document with SyncTeX"
-msgstr "Com compilar documents de TeX amb SyncTeX"
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/synctex-compile.page:19
 msgid "Compile TeX with SyncTeX"
-msgstr "Compilació de TeX amb SyncTeX"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/synctex-compile.page:20
@@ -1692,8 +1445,6 @@ msgid ""
 "Adding the line <em>\\synctex=1</em> in the preamble of your TeX file will "
 "trigger synchronization with SyncTeX."
 msgstr ""
-"Només cal que afegiu la línia <em>\\synctex=1</em> al preàmbul dels fitxers "
-"TeX per a activar la sincronització amb SyncTeX."
 
 #. (itstool) path: page/code
 #: C/synctex-compile.page:23
@@ -1707,13 +1458,6 @@ msgid ""
 "...\n"
 "\\end{document}\n"
 msgstr ""
-"\n"
-"\\documentclass{article}\n"
-"\\synctex=1\n"
-"\\usepackage{fullpage}\n"
-"\\begin{document}\n"
-"...\n"
-"\\end{document}\n"
 
 #. (itstool) path: page/p
 #: C/synctex-compile.page:31
@@ -1721,34 +1465,33 @@ msgid ""
 "Alternatively, you can run the pdflatex command with the <em>-synctex=1</em> "
 "option:"
 msgstr ""
-"També podeu executar l'ordre «pdflatex» amb l'opció <em>-synctex=1</em>:"
 
 #. (itstool) path: page/screen
 #: C/synctex-compile.page:34
 #, no-wrap
 msgid "pdflatex -synctex=1 yourFile.tex"
-msgstr "pdflatex -synctex=1 elVostreFitxer.tex"
+msgstr ""
 
 #. (itstool) path: info/title
 #: C/duplex-5pages.page:7
 msgctxt "sort"
 msgid "05-Page Booklet"
-msgstr "Llibret de 5 pàgines"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/duplex-5pages.page:8
 msgid "Print a 5 page booklet."
-msgstr "Imprimir un llibret de 5 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-5pages.page:21
 msgid "5-page booklet"
-msgstr "Llibret de 5 pàgines"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-5pages.page:34 C/duplex-13pages.page:32 C/duplex-9pages.page:34
 msgid "Under <em>Range</em>, select <gui>Pages</gui> and type: 1"
-msgstr "A <em>Rang</em> seleccioneu l'opció <gui>Pàgines</gui> i escriviu: 1"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-5pages.page:59 C/duplex-13pages.page:57 C/duplex-9pages.page:59
@@ -1757,14 +1500,11 @@ msgid ""
 "taking care to orient it correctly (page 2 will be printed on the other "
 "side)."
 msgstr ""
-"Un cop impresa la pàgina, agafeu el paper i poseu-lo de nou a la impressora, "
-"tenint cura d'orientar-lo correctament (la pàgina 2 s'imprimirà a l'altra "
-"cara)."
 
 #. (itstool) path: item/p
 #: C/duplex-5pages.page:70 C/duplex-13pages.page:68 C/duplex-9pages.page:70
 msgid "Under <em>Range</em>, select <gui>Pages</gui> and type: 2"
-msgstr "A <em>Rang</em> seleccioneu l'opció <gui>Pàgines</gui> i escriviu: 2"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-5pages.page:87 C/duplex-13pages.page:84
@@ -1772,8 +1512,6 @@ msgid ""
 "To print page 3, press the menu button in the top-right corner of the window "
 "and press the <gui style=\"button\">Print</gui> button."
 msgstr ""
-"Per a imprimir la pàgina 3, premeu el botó de menú a l'extrem superior dret "
-"de la finestra i premeu el botó <gui style=\"button\">Imprimeix</gui>."
 
 #. (itstool) path: item/p
 #: C/duplex-5pages.page:90
@@ -1781,8 +1519,6 @@ msgid ""
 "In the <gui>General</gui> tab enter the page number in the <gui>Pages</gui> "
 "selection."
 msgstr ""
-"A la pestanya <gui>General</gui>, escriviu el número de pàgina al selector "
-"de <gui>Pàgines</gui>."
 
 #. (itstool) path: item/p
 #: C/duplex-5pages.page:106 C/duplex-9pages.page:107
@@ -1790,9 +1526,6 @@ msgid ""
 "Once page 3 has printed, place the paper back in the printer taking care to "
 "orient it correctly (pages 4 and 9 will be printed on the other side)."
 msgstr ""
-"Quan la pàgina 3 s'hagi imprès, introduïu el paper de nou a la impressora "
-"tenint cura d'orientar-lo correctament (les pàgines 4 i 9 s'imprimiran a "
-"l'altra cara)."
 
 #. (itstool) path: item/p
 #: C/duplex-5pages.page:114 C/duplex-9pages.page:115
@@ -1800,8 +1533,6 @@ msgid ""
 "In the <gui>General</gui> tab enter pages 4, 9 in the <gui>Pages</gui> "
 "selection."
 msgstr ""
-"A la pestanya <gui>General</gui>, escriviu 4, 9 al selector de <gui>Pàgines</"
-"gui>."
 
 #. (itstool) path: note/p
 #: C/duplex-5pages.page:129
@@ -1809,16 +1540,12 @@ msgid ""
 "It is easier to print a 8-page booklet. You may wish to add 3 blank pages to "
 "your PDF document to make it 8-pages. To do so, you can:"
 msgstr ""
-"És més fàcil imprimir un llibret de 8 pàgines. Podeu afegir tres pàgines en "
-"blanc al document PDF per a convertir-lo en un de 8 pàgines. Per a fer-ho, "
-"podeu:"
 
 #. (itstool) path: item/p
 #: C/duplex-5pages.page:134 C/duplex-13pages.page:143 C/duplex-9pages.page:150
 msgid ""
 "Create a blank PDF document 3-pages long using <app>LibreOffice Writer</app>."
 msgstr ""
-"Creeu un document PDF en blanc de 3 pàgines a <app>LibreOffice Writer</app>."
 
 #. (itstool) path: item/p
 #: C/duplex-5pages.page:139 C/duplex-14pages.page:103 C/duplex-13pages.page:148
@@ -1827,45 +1554,43 @@ msgid ""
 "Merge the blank PDF with your PDF document using <app>PDF-Shuffler</app> "
 "placing the blank pages at the end."
 msgstr ""
-"Combina el PDF en blanc amb el document PDF mitjançant <app>PDF-Shuffler</"
-"app> col·locant les pàgines en blanc al final."
 
 #. (itstool) path: info/desc
 #: C/formats.page:10
 msgid "PDF, PostScript and many others are."
-msgstr "PDF, PostScript i molts altres ho són."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/formats.page:27
 msgid "Supported formats"
-msgstr "Formats admesos"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/formats.page:29
 msgid "The <app>document viewer</app> supports the following formats:"
-msgstr "El <app>Visualitzador de documents</app> admet els formats següents:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/formats.page:33
 msgid "Comic Book Archive (.cb7, .cbr, .cbt, and .cbz)"
-msgstr "Arxiu de llibre de còmic (.cb7, .cbr, .cbt, and .cbz)"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/formats.page:34 C/printing.page:49 C/presentations.page:78
 #: C/convertpdf.page:32
 msgid "Device Independent file format (.dvi)"
-msgstr "Format de fitxer independent del dispositiu (.dvi)"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/formats.page:36
 msgid "Open XML Paper Specification (.oxps, .xps)"
-msgstr "Open XML Paper Specification (.oxps, .xps)"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/formats.page:38 C/printing.page:52 C/presentations.page:82
 #: C/convertpdf.page:33
 msgid "PostScript (.ps)"
-msgstr "PostScript (.ps)"
+msgstr ""
 
 #. (itstool) path: note/p
 #: C/formats.page:41
@@ -1873,9 +1598,6 @@ msgid ""
 "In some Linux distributions, not all formats are supported by default, so "
 "you might not be able to view all the formats listed above."
 msgstr ""
-"En algunes distribucions de Linux, no tots els formats són compatibles de "
-"manera predeterminada, de manera que és possible que no pugueu veure tots "
-"els formats mostrats anteriorment."
 
 #. (itstool) path: note/p
 #: C/formats.page:44
@@ -1884,19 +1606,16 @@ msgid ""
 "\"Unable to Open Document\", you may wish to check whether the backend "
 "package for the format is installed."
 msgstr ""
-"El suport per a un format s'anomena <em>rerefons</em>. Si rebeu l'error \"No "
-"es pot obrir el document\", haureu de comprovar si hi ha instal·lat el "
-"paquet rerefons pel format."
 
 #. (itstool) path: info/desc
 #: C/password.page:22
 msgid "Handling password protected PDFs."
-msgstr "Gestió dels PDF protegits amb contrasenya."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/password.page:25
 msgid "Password-protected documents"
-msgstr "Documents protegits per contrasenya"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/password.page:27
@@ -1905,26 +1624,21 @@ msgid ""
 "window will appear asking you to enter the document password. Enter the "
 "password and click <gui>Unlock Document</gui>."
 msgstr ""
-"Si intenteu obrir un document PDF que està protegit amb una contrasenya, "
-"apareixerà una finestra que us demanarà que introduïu la contrasenya del "
-"document. Introduïu la contrasenya i feu clic a <gui>Desbloqueja el "
-"document</gui>."
 
 #. (itstool) path: note/p
 #: C/password.page:50
 msgid "Passwords can be set by the person who created or edited the document."
 msgstr ""
-"La contrasenya la pot establir la persona que ha creat o editat el document."
 
 #. (itstool) path: info/desc
 #: C/duplex-15pages.page:8
 msgid "Print a 15 page booklet."
-msgstr "Imprimir un llibret de 15 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-15pages.page:21
 msgid "15-page booklet"
-msgstr "Llibret de 15 pàgines"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/duplex-15pages.page:24
@@ -1932,8 +1646,6 @@ msgid ""
 "It is easier to print a 16-page booklet. You may wish to add a blank page to "
 "your PDF document to make it 16-pages. To do so, you can:"
 msgstr ""
-"És més fàcil imprimir un fulletó de 16 pàgines. Podeu afegir una pàgina en "
-"blanc al document PDF per a convertir-lo en 16 pàgines. Per a fer-ho, podeu:"
 
 #. (itstool) path: item/p
 #: C/duplex-15pages.page:40 C/duplex-14pages.page:109 C/duplex-13pages.page:154
@@ -1941,18 +1653,16 @@ msgid ""
 "Follow the steps for printing a <link xref=\"duplex-16page\">16-page "
 "booklet</link>."
 msgstr ""
-"Seguiu els passos per a imprimir un <link xref=\"duplex-16page\">llibret de "
-"16 pàgines</link>."
 
 #. (itstool) path: info/desc
 #: C/license.page:8
 msgid "Legal information."
-msgstr "Informació legal."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/license.page:11
 msgid "License"
-msgstr "Llicència"
+msgstr "پروانه"
 
 #. (itstool) path: page/p
 #: C/license.page:12
@@ -1960,43 +1670,41 @@ msgid ""
 "This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
 "Unported license."
 msgstr ""
-"Aquesta obra es distribueix sota llicència no adaptada CreativeCommons "
-"Reconeixement-Compartir Igual 3.0."
 
 #. (itstool) path: page/p
 #: C/license.page:20
 msgid "You are free:"
-msgstr "Podeu:"
+msgstr ""
 
 #. (itstool) path: item/title
 #: C/license.page:25
 msgid "<em>To share</em>"
-msgstr "<em>Compartir</em>"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/license.page:26
 msgid "To copy, distribute and transmit the work."
-msgstr "Per a copiar, distribuir i trametre el material."
+msgstr ""
 
 #. (itstool) path: item/title
 #: C/license.page:29
 msgid "<em>To remix</em>"
-msgstr "<em>Combinar</em>"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/license.page:30
 msgid "To adapt the work."
-msgstr "Per a adaptar la feina."
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/license.page:33
 msgid "Under the following conditions:"
-msgstr "Amb les següents condicions:"
+msgstr ""
 
 #. (itstool) path: item/title
 #: C/license.page:38
 msgid "<em>Attribution</em>"
-msgstr "<em>Reconeixement</em>"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/license.page:39
@@ -2005,14 +1713,11 @@ msgid ""
 "licensor (but not in any way that suggests that they endorse you or your use "
 "of the work)."
 msgstr ""
-"Heu de reconèixer l'autoria del material de la forma especificada per "
-"l'autor o llicenciant (però no d'una manera que suggereixi que el "
-"llicenciador us dona suport o patrocina l'ús que en feu)."
 
 #. (itstool) path: item/title
 #: C/license.page:46
 msgid "<em>Share Alike</em>"
-msgstr "<em>Compartir Igual</em>"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/license.page:47
@@ -2020,8 +1725,6 @@ msgid ""
 "If you alter, transform, or build upon this work, you may distribute the "
 "resulting work only under the same, similar or a compatible license."
 msgstr ""
-"Si remescleu, transformeu o creeu a partir del material, heu de difondre les "
-"vostres creacions amb la mateixa llicència o similar que l'obra original."
 
 #. (itstool) path: page/p
 #: C/license.page:53
@@ -2031,20 +1734,16 @@ msgid ""
 "link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\">Commons Deed</link>."
 msgstr ""
-"Per al text complet de la llicència, veieu el <link href=\"http://"
-"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons web</"
-"link>, o llegiu el <link href=\"http://creativecommons.org/licenses/by-"
-"sa/3.0/\">Document complet de l'acte</link>."
 
 #. (itstool) path: info/desc
 #: C/singlesided-13-16pages.page:8
 msgid "Print a 13, 14, 15 or 16 page booklet."
-msgstr "Imprimir un llibret de 13, 14, 15 o 16 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/singlesided-13-16pages.page:21
 msgid "13-page to 16-page booklet"
-msgstr "Llibret de 13 pàgines a 16 pàgines"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/singlesided-13-16pages.page:23
@@ -2052,19 +1751,16 @@ msgid ""
 "If you have a 13, 14 or 15 page PDF document you should add the appropriate "
 "number of blank pages to make it 16-pages. To do so, you can:"
 msgstr ""
-"Si teniu un document PDF de 13, 14 o 15 pàgines, heu d'afegir el nombre "
-"adequat de pàgines en blanc per a convertir-lo en 16 pàgines. Per a fer-ho, "
-"podeu:"
 
 #. (itstool) path: info/desc
 #: C/develop.page:7
 msgid "Improve the <app>Document Viewer</app>."
-msgstr "Milloreu el <app>Visualitzador de documents</app>."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/develop.page:19
 msgid "Help develop"
-msgstr "Ajudar en el desenvolupament"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/develop.page:20
@@ -2072,65 +1768,57 @@ msgid ""
 "The <app>Document Viewer</app> is developed and maintained by a volunteer "
 "community. You are welcome to participate."
 msgstr ""
-"Una comunitat de voluntaris desenvolupa i mantén el <app>Visualitzador de "
-"documents</app>. Us convidem a participar-hi."
 
 #. (itstool) path: page/p
 #: C/develop.page:23
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Evince\">help "
 "develop</link> the <app>Document Viewer</app>, you can get in touch with the "
-"developers using <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
-"%2Firc.gnome.org%2Fevince\">irc</link>, or via <link href=\"https://"
-"discourse.gnome.org/tag/evince\">GNOME Discourse</link>."
+"developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fevince\">irc</link>, or via <link "
+"href=\"https://discourse.gnome.org/tag/evince\">GNOME Discourse</link>."
 msgstr ""
-"Si voleu <link href=\"https://wiki.gnome.org/Apps/Evince\">ajudar a "
-"desenvolupar</link> el <app>Visualitzador de documents</app>, podeu posar-"
-"vos en contacte amb els desenvolupadors mitjançant <link href=\"https://"
-"cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fevince\">irc</link>, "
-"o utilitzant el <link href=\"https://discourse.gnome.org/tag/evince\">GNOME "
-"Discourse</link>."
 
 #. (itstool) path: info/desc
 #: C/printing.page:9
 msgid "How to print, and common questions about printing."
-msgstr "Com imprimir, i preguntes més habituals sobre impressió."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/printing.page:27
 msgid "Printing a document"
-msgstr "Imprimir un document"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/printing.page:30
 msgid "To print a document:"
-msgstr "Per a imprimir un document:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/printing.page:38
 msgid "Choose your printer from the list."
-msgstr "Trieu la plantilla de la llista."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/printing.page:47
 msgid "Printing is enabled for the following file formats:"
-msgstr "La impressió està habilitada per als formats de fitxer següents:"
+msgstr ""
 
 #. (itstool) path: info/title
 #: C/singlesided-9-12pages.page:7
 msgctxt "sort"
 msgid "09-Page or 12-Page Booklet"
-msgstr "Llibret de 09 a 12 pàgines"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/singlesided-9-12pages.page:8
 msgid "Print a 9, 10, 11 or 12 page booklet."
-msgstr "Imprimir un llibret de 9, 10, 11 o 12 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/singlesided-9-12pages.page:21
 msgid "9-page to 12-page booklet"
-msgstr "Llibret de 9 a 12 pàgines"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/singlesided-9-12pages.page:23
@@ -2138,23 +1826,21 @@ msgid ""
 "If you have a 9, 10 or 11 page PDF document you should add the appropriate "
 "number of blank pages to make it 12-pages. To do so, you can:"
 msgstr ""
-"Si teniu un document PDF de 9, 10 o 11 pàgines, heu d'afegir el nombre "
-"adequat de pàgines en blanc per a arribar a 12. Per a fer-ho, podeu:"
 
 #. (itstool) path: info/desc
 #: C/duplex-14pages.page:8
 msgid "Print a 14 page booklet."
-msgstr "Imprimeix un llibret de 14 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-14pages.page:21
 msgid "14-page booklet"
-msgstr "Llibret de 14 pàgines"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-14pages.page:32 C/duplex-10pages.page:33 C/duplex-6pages.page:33
 msgid "Under <em>Range</em>, select <gui>Pages</gui>."
-msgstr "A <em>Rang</em>, seleccioneu <gui>Pàgines</gui>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-14pages.page:35
@@ -2162,8 +1848,6 @@ msgid ""
 "Type the numbers of the pages in this order: 14, 3, 4, 13, 12, 5, 6, 11, 10, "
 "7, 8, 9, 2"
 msgstr ""
-"Escriviu els números de les pàgines en aquest ordre: 14, 3, 4, 13, 12, 5, 6, "
-"11, 10, 7, 8, 9, 2"
 
 #. (itstool) path: item/p
 #: C/duplex-14pages.page:61 C/duplex-10pages.page:62 C/duplex-6pages.page:63
@@ -2172,14 +1856,11 @@ msgid ""
 "in the printer, taking care to orient it correctly (page 1 will be printed "
 "on the other side)."
 msgstr ""
-"Quan les pàgines s'hagin imprès, agafeu el paper amb la pàgina 2 al damunt, "
-"poseu-lo de nou a la impressora, tenint cura d'orientar-lo correctament (la "
-"pàgina 1 s'imprimirà a l'altra cara)."
 
 #. (itstool) path: item/p
 #: C/duplex-14pages.page:74 C/duplex-10pages.page:75 C/duplex-6pages.page:76
 msgid "Under <em>Range</em> select the <gui>Pages</gui> option and type: 1"
-msgstr "A <em>Rang</em> seleccioneu l'opció <gui>Pàgines</gui> i escriviu: 1"
+msgstr ""
 
 #. (itstool) path: note/p
 #: C/duplex-14pages.page:93
@@ -2187,34 +1868,28 @@ msgid ""
 "It is easier to print a 16-page booklet. You may wish to add 2 blank pages "
 "to your PDF document to make it 16-pages. To do so, you can:"
 msgstr ""
-"És més fàcil imprimir un fulletó de 16 pàgines. Podeu afegir dues pàgines en "
-"blanc al document PDF per a convertir-lo en un de 16 pàgines. Per a fer-ho, "
-"podeu:"
 
 #. (itstool) path: item/p
 #: C/duplex-14pages.page:98 C/duplex-10pages.page:99 C/duplex-6pages.page:101
 msgid ""
 "Create a blank PDF document 2-pages long using <app>LibreOffice Writer</app>."
 msgstr ""
-"Creeu un document PDF en blanc de 2 pàgines a <app>LibreOffice Writer</app>."
 
 #. (itstool) path: info/desc
 #: C/duplex-13pages.page:8
 msgid "Print a 13 page booklet."
-msgstr "Imprimeix un llibret de 13 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-13pages.page:21
 msgid "13-page booklet"
-msgstr "Llibret de 13 pàgines"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-13pages.page:87
 msgid ""
 "In the <gui>General</gui> tab, enter 3 in the <gui>Pages</gui> selection."
 msgstr ""
-"A la pestanya <gui>General</gui>, escriviu 3 al selector de <gui>Pàgines</"
-"gui>."
 
 #. (itstool) path: item/p
 #: C/duplex-13pages.page:101
@@ -2222,9 +1897,6 @@ msgid ""
 "Once page 3 has printed, place the paper back in the printer taking care to "
 "orient it correctly (pages 4 and 13 will be printed on the other side)."
 msgstr ""
-"Quan la pàgina 3 s'hagi imprès, introduïu el paper de nou a la impressora "
-"tenint cura d'orientar-lo correctament (les pàgines 4 i 13 s'imprimiran a "
-"l'altra cara)."
 
 #. (itstool) path: item/p
 #: C/duplex-13pages.page:109
@@ -2232,15 +1904,12 @@ msgid ""
 "In the <gui>General</gui> tab enter pages 4, 13 in the <gui>Pages</gui> "
 "selection."
 msgstr ""
-"A la pestanya <gui>General</gui>, escriviu 4, 13 al selector de "
-"<gui>Pàgines</gui>."
 
 #. (itstool) path: item/p
 #: C/duplex-13pages.page:126
 msgid ""
 "Enter pages 8, 9, 10, 7, 6, 11, 12, 5 in the <gui>Pages</gui> selection menu."
 msgstr ""
-"Escriviu 8, 9, 10, 7, 6, 11, 12, 5 al menú de selecció de <gui>Pàgines</gui>."
 
 #. (itstool) path: note/p
 #: C/duplex-13pages.page:138
@@ -2248,46 +1917,39 @@ msgid ""
 "It is easier to print a 16-page booklet. You may wish to add 3 blank pages "
 "to your PDF document to make it 16-pages. To do so, you can:"
 msgstr ""
-"És més fàcil imprimir un llibret de 16 pàgines. Podeu afegir tres pàgines en "
-"blanc al document PDF per a convertir-lo en un de 16 pàgines. Per a fer-ho, "
-"podeu:"
 
 #. (itstool) path: info/desc
 #: C/headerbar.page:8
 msgid "Using the header bar."
-msgstr "Ús de la barra de capçalera."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/headerbar.page:23
 msgid "Header bar"
-msgstr "Barra de capçalera"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/headerbar.page:25
 msgid "The header bar contains:"
-msgstr "La barra de capçalera conté:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/headerbar.page:28
 msgid "A button to show or hide the side pane."
-msgstr "Un botó per a mostrar o amagar el panell lateral."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/headerbar.page:31
 msgid ""
 "A text field to <link xref=\"movingaround#between-pages\">go to a certain "
-"page</link> or to <link xref=\"finding\">search</link> in the <link xref="
-"\"movingaround#navigating\">index</link>."
+"page</link> or to <link xref=\"finding\">search</link> in the <link "
+"xref=\"movingaround#navigating\">index</link>."
 msgstr ""
-"Un camp de text per a <link xref=\"movingaround#between-pages\">anar a una "
-"pàgina determinada</link> o per a <link xref=\"finding\">cercar</link> a "
-"l'<link xref=\"movingaround#navigating\">índex</link>."
 
 #. (itstool) path: item/p
 #: C/headerbar.page:36
 msgid "A button to manage <link xref=\"annotations\">annotations</link>."
 msgstr ""
-"Un botó per a gestionar les <link xref=\"annotations\">anotacions</link>."
 
 #. (itstool) path: item/p
 #: C/headerbar.page:39
@@ -2295,8 +1957,6 @@ msgid ""
 "A drop-down box to adjust the <link xref=\"movingaround#zoom\">zoom</link> "
 "level."
 msgstr ""
-"Un menú desplegable per a ajustar el nivell d'<link xref=\"movingaround#zoom"
-"\">ampliació</link>."
 
 #. (itstool) path: item/p
 #: C/headerbar.page:42
@@ -2304,47 +1964,43 @@ msgid ""
 "A <gui>Magnifying glass button</gui> to <link xref=\"finding\">find a word "
 "or phrase in the document</link>."
 msgstr ""
-"Un <gui>botó de lupa</gui> per a <link xref=\"finding\">trobar una paraula o "
-"una frase al document</link>."
 
 #. (itstool) path: item/p
 #: C/headerbar.page:46
 msgid "A button to open the main menu."
-msgstr "Un botó per a obrir el menú principal."
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/print-pagescaling.page:19
 msgid "Shrink or expand the document to fit the paper size."
-msgstr "Comprimir o expandir el document per a ajustar-lo a la mida del paper."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/print-pagescaling.page:22
 msgid "Scale page for printing"
-msgstr "Escalar una pàgina per a imprimir"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:30
 msgid ""
-"Open the menu at the top-right of the window, then select <gui style="
-"\"menuitem\">Print…</gui>."
+"Open the menu at the top-right of the window, then select <gui "
+"style=\"menuitem\">Print…</gui>."
 msgstr ""
-"Obriu el menú a la part superior dreta de la finestra i seleccioneu <gui "
-"style=\"menuitem\">Imprimeix…</gui>."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:34
 msgid "Select the <gui style=\"tab\">Page Handling</gui> tab."
-msgstr "Seleccioneu la pestanya <gui style=\"tab\">Gestió de la pàgina</gui>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:37
 msgid "Choose a <em>Page Scaling</em> from the drop-down list."
-msgstr "Seleccioneu <em>Escala de la pàgina</em> al menú desplegable."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:40
 msgid "<em>None</em>: do not perform page scaling."
-msgstr "<em>Cap</em>: no escaleu la pàgina."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:43
@@ -2352,9 +2008,6 @@ msgid ""
 "<em>Shrink to Printable Area</em>: document pages larger than the printable "
 "area are reduced to fit the printable area of the printer page."
 msgstr ""
-"<em>Reduir a l'àrea imprimible</em>: les pàgines del document més grans que "
-"l'àrea imprimible es redueixen per a adaptar-se a l'àrea imprimible de la "
-"pàgina de la impressora."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:48
@@ -2362,24 +2015,21 @@ msgid ""
 "<em>Fit to Printable Area</em>: document pages are enlarged or reduced as "
 "required to fit the printable area of the printer page."
 msgstr ""
-"<em>Ajustar a l'àrea imprimible</em>: les pàgines del document s'amplien o "
-"es redueixen segons es requereix per a adaptar-se a l'àrea imprimible de la "
-"pàgina de la impressora."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:55
 msgid "Click <gui>Print</gui> to print your document."
-msgstr "Feu clic a <gui>Imprimeix</gui> per a imprimir el vostre document."
+msgstr "برای چاپ سند خود، <gui>چاپ</gui> را کلیک کنید."
 
 #. (itstool) path: info/desc
 #: C/annotations-navigate.page:7
 msgid "How to navigate to annotations."
-msgstr "Com navegar entre anotacions."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/annotations-navigate.page:21
 msgid "Annotation navigation"
-msgstr "Navegació a les anotacions"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/annotations-navigate.page:22
@@ -2388,9 +2038,6 @@ msgid ""
 "to display the list of all the annotations in the document. The list "
 "indicates the type, page number and author of the annotation."
 msgstr ""
-"Si heu creat anotacions al document, podeu utilitzar el panell lateral per a "
-"mostrar-ne la llista completa. La llista indica el tipus, el número de "
-"pàgina, l'autor i la data de l'anotació."
 
 #. (itstool) path: page/p
 #: C/annotations-navigate.page:25
@@ -2401,10 +2048,6 @@ msgid ""
 "<app>document viewer</app> will navigate to the location of the annotation "
 "in the document."
 msgstr ""
-"Per a navegar ràpidament fins a la ubicació d'una anotació, feu clic a la "
-"fletxa a l'esquerra del número de pàgina. Veureu la llista d'anotacions de "
-"la pàgina. Feu clic a l'anotació que us interessi, i el <app>visor de "
-"documents</app> anirà a la ubicació de l'anotació."
 
 #. (itstool) path: page/media
 #. This is a reference to an external file such as an image or video. When
@@ -2417,24 +2060,21 @@ msgid ""
 "external ref='figures/annotations-nav-to-page.png' "
 "md5='c45d82e4fac0e7bc8218e5b5b8fdabce'"
 msgstr ""
-"external ref='figures/annotations-nav-to-page.png' "
-"md5='c45d82e4fac0e7bc8218e5b5b8fdabce'"
 
 #. (itstool) path: info/desc
 #: C/duplex-10pages.page:8
 msgid "Print a 10 page booklet."
-msgstr "Imprimeix un llibret de 10 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-10pages.page:21
 msgid "10-page booklet"
-msgstr "Llibret de 10 pàgines"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-10pages.page:36
 msgid "Type the numbers of the pages in this order: 10, 3, 4, 9, 8, 5, 6, 7, 2"
 msgstr ""
-"Escriviu el número de pàgines en aquest ordre: 10, 3, 4, 9, 8, 5, 6, 7, 2"
 
 #. (itstool) path: note/p
 #: C/duplex-10pages.page:94
@@ -2442,9 +2082,6 @@ msgid ""
 "It is easier to print a 12-page booklet. You may wish to add 2 blank pages "
 "to your PDF document to make it 12-pages. To do so, you can:"
 msgstr ""
-"És més fàcil imprimir un llibret de 12 pàgines. Podeu afegir dues pàgines en "
-"blanc al document PDF per a convertir-lo en un de 12 pàgines. Per a fer-ho, "
-"podeu:"
 
 #. (itstool) path: item/p
 #: C/duplex-10pages.page:110 C/duplex-9pages.page:161 C/duplex-11pages.page:103
@@ -2452,29 +2089,27 @@ msgid ""
 "Follow the steps for printing a <link xref=\"duplex-12page\">12-page "
 "booklet</link>."
 msgstr ""
-"Seguiu els passos per a imprimir un <link xref=\"duplex-12page\">llibret de "
-"12 pàgines</link>."
 
 #. (itstool) path: info/title
 #: C/duplex-6pages.page:7
 msgctxt "sort"
 msgid "06-Page Booklet"
-msgstr "Llibret de 6 pàgines"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/duplex-6pages.page:8
 msgid "Print a 6 page booklet."
-msgstr "Imprimir un llibret de 6 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-6pages.page:21
 msgid "6-page booklet"
-msgstr "Llibret de 6 pàgines"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-6pages.page:36
 msgid "Type the numbers of the pages in this order: 6, 3, 4, 5, 2"
-msgstr "Escriviu els números de les pàgines en aquest ordre: 6, 3, 4, 5, 2"
+msgstr ""
 
 #. (itstool) path: note/p
 #: C/duplex-6pages.page:96
@@ -2482,21 +2117,16 @@ msgid ""
 "It is easier to print a 8-page booklet. You may wish to add 2 blank pages to "
 "your PDF document to make it 8-pages. To do so, you can:"
 msgstr ""
-"És més fàcil imprimir un llibret de 8 pàgines. Podeu afegir dues pàgines en "
-"blanc al document PDF per a convertir-lo en un de 8 pàgines. Per a fer-ho, "
-"podeu:"
 
 #. (itstool) path: info/desc
 #: C/print-order.page:8
 msgid "Use the Collate and Reverse options to make pages print in order."
 msgstr ""
-"Utilitzeu les opcions compagina i reverteix per a fer que les pàgines "
-"s'imprimeixin en ordre."
 
 #. (itstool) path: page/title
 #: C/print-order.page:20
 msgid "Getting copies to print in the correct order"
-msgstr "Obtenir còpies per a imprimir en l'ordre correcte"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/print-order.page:22
@@ -2505,38 +2135,33 @@ msgid ""
 "gnome.org/users/gnome-help/stable/printing-order\">the GNOME Desktop Help</"
 "link>."
 msgstr ""
-"Vegeu <link xref=\"help:gnome-help/printing-order\" href=\"https://help."
-"gnome.org/users/gnome-help/stable/printing-order\">l'ajuda de l'escriptori "
-"GNOME</link>."
 
 #. (itstool) path: info/title
 #: C/duplex-9pages.page:7
 msgctxt "sort"
 msgid "09-Page Booklet"
-msgstr "Llibret de 9 pàgines"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/duplex-9pages.page:8
 msgid "Print a 9 page booklet."
-msgstr "Imprimir un llibret de 9 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-9pages.page:21
 msgid "9-page booklet"
-msgstr "Llibret de 9 pàgines"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-9pages.page:90
 msgid ""
 "In the <gui>General</gui> tab enter 3 in the <gui>Pages</gui> selection."
 msgstr ""
-"A la pestanya <gui>General</gui>, escriviu 3 al selector de <gui>Pàgines</"
-"gui>."
 
 #. (itstool) path: item/p
 #: C/duplex-9pages.page:133
 msgid "Enter pages 8, 5, 6, 7 in the <gui>Pages</gui> selection menu."
-msgstr "Escriviu 8, 5, 6, 7 al menú de selecció de <gui>Pàgines</gui>."
+msgstr ""
 
 #. (itstool) path: note/p
 #: C/duplex-9pages.page:145
@@ -2544,25 +2169,22 @@ msgid ""
 "It is easier to print a 12-page booklet. You may wish to add 3 blank pages "
 "to your PDF document to make it 12-pages. To do so, you can:"
 msgstr ""
-"És més fàcil imprimir un llibret de 12 pàgines. Podeu afegir tres pàgines en "
-"blanc al document PDF per a convertir-lo en un de 12 pàgines. Per a fer-ho, "
-"podeu:"
 
 #. (itstool) path: info/title
 #: C/singlesided-5-8pages.page:7
 msgctxt "sort"
 msgid "05-Page or 4-Page Booklet"
-msgstr "Llibret de 05 a 4 pàgines"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/singlesided-5-8pages.page:8
 msgid "Print a 5, 6, 7 or 8 page booklet."
-msgstr "Imprimir un llibret de 5, 6, 7 o 8 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/singlesided-5-8pages.page:21
 msgid "5-page to 8-page booklet"
-msgstr "Llibret de 5 a 8 pàgines"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/singlesided-5-8pages.page:23
@@ -2570,14 +2192,11 @@ msgid ""
 "If you have a 5, 6 or 7 page PDF document you should add the appropriate "
 "number of blank pages to make it 8-pages. To do so, you can:"
 msgstr ""
-"Si teniu un document PDF de 5, 6 o 7 pàgines, heu d'afegir el nombre adequat "
-"de pàgines en blanc per a arribar a 8. Per a fer-ho, podeu:"
 
 #. (itstool) path: item/p
 #: C/singlesided-5-8pages.page:57 C/duplex-8pages.page:36
 msgid "Type the numbers of the pages in this order: 8, 1, 2, 7, 6, 3, 4, 5"
 msgstr ""
-"Escriviu els números de les pàgines en aquest ordre: 8, 1, 2, 7, 6, 3, 4, 5"
 
 #. (itstool) path: info/desc
 #: C/forms-saving.page:7
@@ -2585,13 +2204,11 @@ msgid ""
 "Make sure you save the form, otherwise all of the information you entered "
 "will be lost."
 msgstr ""
-"Assegureu-vos de desar el formulari, en cas contrari es perdrà tota la "
-"informació que heu introduït."
 
 #. (itstool) path: page/title
 #: C/forms-saving.page:27
 msgid "Saving a form"
-msgstr "Desa un formulari"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/forms-saving.page:29
@@ -2599,16 +2216,12 @@ msgid ""
 "After you have filled it out, you may wish to save your form in one of two "
 "ways:"
 msgstr ""
-"Quan l'hàgiu omplert, és possible que vulgueu desar el formulari d'una de "
-"les dues maneres següents:"
 
 #. (itstool) path: item/p
 #: C/forms-saving.page:34
 msgid ""
 "To save a copy that can be edited in the future (form remains interactive):"
 msgstr ""
-"Per a desar una còpia que es pugui editar posteriorment (el formulari "
-"continua sent interactiu):"
 
 #. (itstool) path: item/p
 #: C/forms-saving.page:39
@@ -2617,9 +2230,6 @@ msgid ""
 "<gui>Save As…</gui> or press <keyseq><key>Ctrl</key><key>S</key></keyseq> on "
 "your keyboard."
 msgstr ""
-"Feu clic al menú <gui>Opcions de fitxer</gui> a la cantonada superior dreta "
-"i seleccioneu <gui>Anomena i desa…</gui> o premeu <keyseq><key>Ctrl</"
-"key><key>P</key></keyseq> al vostre teclat."
 
 #. (itstool) path: item/p
 #: C/forms-saving.page:44
@@ -2627,8 +2237,6 @@ msgid ""
 "Choose a name and folder to save the file in, then click <gui>Save</gui>. "
 "The PDF will be saved in the folder you chose."
 msgstr ""
-"Trieu un nom i una carpeta on desar el fitxer i, a continuació, feu clic a "
-"<gui>Desa</gui>. El PDF es desarà a la carpeta que trieu."
 
 #. (itstool) path: item/p
 #: C/forms-saving.page:51
@@ -2636,8 +2244,6 @@ msgid ""
 "To save a copy that can no longer be edited (for example, to e-mail the form "
 "or submit it on-line):"
 msgstr ""
-"Per a desar una còpia que no es pugui editar posteriorment (per exemple, per "
-"a enviar el formulari per correu electrònic o en línia):"
 
 #. (itstool) path: item/p
 #: C/forms-saving.page:56 C/convertpdf.page:40
@@ -2646,9 +2252,6 @@ msgid ""
 "<gui>Print</gui> or press <keyseq><key>Ctrl</key><key>P</key></keyseq> on "
 "your keyboard."
 msgstr ""
-"Feu clic al menú <gui>Opcions de fitxer</gui> a la cantonada superior dreta "
-"i seleccioneu <gui>Imprimeix</gui> o premeu <keyseq><key>Ctrl</key><key>P</"
-"key></keyseq> al vostre teclat."
 
 #. (itstool) path: item/p
 #: C/forms-saving.page:61 C/convertpdf.page:45
@@ -2656,8 +2259,6 @@ msgid ""
 "Select <gui>Print to File</gui> and choose PDF as the <gui>Output format</"
 "gui>."
 msgstr ""
-"Seleccioneu <gui>Imprimeix a un fitxer</gui> i seleccioneu <gui>Format de "
-"sortid</gui>."
 
 #. (itstool) path: item/p
 #: C/forms-saving.page:67
@@ -2665,44 +2266,42 @@ msgid ""
 "Choose a name and folder to save the file in, then click <gui>Print</gui>. "
 "The PDF will be saved in the folder you chose."
 msgstr ""
-"Trieu un nom i una carpeta on desar el fitxer i, a continuació, feu clic a "
-"<gui>Imprimeix</gui>. El PDF es desarà a la carpeta que trieu."
 
 #. (itstool) path: note/p
 #: C/forms-saving.page:77
 msgid "Copies of encrypted files can't be saved or printed."
-msgstr "Les còpies de fitxers encriptats no es poden desar ni imprimir."
+msgstr ""
 
 #. (itstool) path: info/title
 #: C/duplex-8pages.page:7
 msgctxt "sort"
 msgid "08-Page Booklet"
-msgstr "Llibret de 8 pàgines"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/duplex-8pages.page:8
 msgid "Print an 8 page booklet."
-msgstr "Imprimir un llibret de 8 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-8pages.page:21
 msgid "8-page booklet"
-msgstr "Llibret de 8 pàgines"
+msgstr ""
 
 #. (itstool) path: credit/name
 #: C/annotations-delete.page:14
 msgid "David King"
-msgstr "David King"
+msgstr "دیوید کینگ"
 
 #. (itstool) path: info/desc
 #: C/annotations-delete.page:20
 msgid "Delete annotations from a PDF document."
-msgstr "Esborrar anotacions d'un document PDF."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/annotations-delete.page:23
 msgid "Removing annotations"
-msgstr "Supressió d'anotacions"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/annotations-delete.page:25
@@ -2710,8 +2309,6 @@ msgid ""
 "An annotation is a note or comment added to a PDF document. You can remove "
 "annotations that you or other people have added."
 msgstr ""
-"Una anotació és una nota o comentari afegit a un document PDF. Podeu "
-"eliminar les anotacions que vostè o altres persones hagin afegit."
 
 #. (itstool) path: item/p
 #: C/annotations-delete.page:30
@@ -2720,18 +2317,13 @@ msgid ""
 "annotations, find them in the <link xref=\"annotations-navigate\">annotation "
 "side pane</link>."
 msgstr ""
-"Consulteu una pàgina que tingui una anotació. Si no esteu segurs de quines "
-"pàgines tenen anotacions, podeu trobar-les a la secció <link xref="
-"\"annotations-navigate\">panell lateral d'anotacions</link>."
 
 #. (itstool) path: item/p
 #: C/annotations-delete.page:35
 msgid ""
-"Right-click on the annotation icon in the document, and click <gui style="
-"\"menuitem\">Remove Annotation</gui>."
+"Right-click on the annotation icon in the document, and click <gui "
+"style=\"menuitem\">Remove Annotation</gui>."
 msgstr ""
-"Feu clic amb el botó dret a la icona de l'anotació al document, i feu clic a "
-"<gui style=\"menuitem\">Elimina l'anotació</gui>."
 
 #. (itstool) path: item/p
 #: C/annotations-delete.page:39
@@ -2739,18 +2331,16 @@ msgid ""
 "Save the changes to a new document by clicking the menu button in the top "
 "right, followed by <gui style=\"menuitem\">Save As…</gui>."
 msgstr ""
-"Guardeu els canvis en un document nou fent clic al botó de menú a la part "
-"superior dreta, seguit d'<gui style=\"menuitem\">Anomena i desa…</gui>."
 
 #. (itstool) path: info/desc
 #: C/bug-filing.page:7
 msgid "How and where to report problems."
-msgstr "Com i on informar de problemes."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/bug-filing.page:19
 msgid "File a bug against the <app>document viewer</app>"
-msgstr "Informar d'un error del <app>visualitzador de documents</app>"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:20
@@ -2760,10 +2350,6 @@ msgid ""
 "report</em>. To file a bug, go to <link href=\"https://gitlab.gnome.org/"
 "GNOME/evince/issues/\"/>."
 msgstr ""
-"El <app>visualitzador de documents</app> el manté una comunitat de "
-"voluntaris. Us convidem a participar-hi. Si robeu algun problema podeu "
-"informar a <em>Informe d'error</em>. Per a informar, aneu a <link href="
-"\"https://gitlab.gnome.org/GNOME/evince/issues/\"/>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:23
@@ -2771,8 +2357,6 @@ msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs, crashes and request enhancements."
 msgstr ""
-"Es tracta d'un sistema de seguiment d'errors on els usuaris i "
-"desenvolupadors poden presentar detalls sobre errors i sol·licitar millores."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:26
@@ -2783,11 +2367,6 @@ msgid ""
 "have an account, just click on the <gui>Sign in / Register</gui> link to "
 "create one."
 msgstr ""
-"Per a participar, necessiteu un compte que us permeti accedir-hi, arxivar "
-"errors i fer comentaris. A més, cal registrar-se per a poder rebre "
-"actualitzacions per correu electrònic sobre l'estat dels errors. Si encara "
-"no teniu cap compte, feu clic a l'enllaç <gui>Autentificar-se / Registrar-"
-"se</gui> per a crear-ne un."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:29
@@ -2798,11 +2377,6 @@ msgid ""
 "please <link href=\"https://gitlab.gnome.org/GNOME/evince/issues\">browse</"
 "link> for the bug to see if it already exists."
 msgstr ""
-"Quan tingueu un compte, accediu-hi, i feu clic a <gui>New issue</gui>. Abans "
-"d'informar sobre un error, si us plau llegiu <link href=\"https://wiki.gnome."
-"org/GettingInTouch/BugReportingGuidelines\">pautes d'escriptura d'errors</"
-"link>, i si us plau <link href=\"https://gitlab.gnome.org/GNOME/evince/issues"
-"\">navegueu</link> per la llista d'error per a comprovar si ja existeix."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:33
@@ -2811,9 +2385,6 @@ msgid ""
 "<gui>Labels</gui> menu. Fill in the Title and Description sections and click "
 "<gui>Submit Issue</gui>."
 msgstr ""
-"Si sol·liciteu una funció nova, trieu <gui>1. Funcions</gui> al menú "
-"<gui>Etiquetes</gui>. Ompliu les seccions Títol i Descripció, i feu clic a "
-"<gui>Enviar la qüestió</gui>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:37
@@ -2821,18 +2392,16 @@ msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
 msgstr ""
-"El vostre informe rebrà un número d'identificació i actualitzarà el seu "
-"estat a mesura que es vagi tractant."
 
 #. (itstool) path: info/desc
 #: C/print-select.page:7
 msgid "Print only specific pages, or only a range of pages."
-msgstr "Imprimiu només pàgines específiques o només un rang de pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/print-select.page:19
 msgid "Only printing certain pages"
-msgstr "Tan sols imprimir certes pàgines"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/print-select.page:21
@@ -2841,27 +2410,22 @@ msgid ""
 "help.gnome.org/users/gnome-help/stable/printing-select\">the GNOME Desktop "
 "Help</link>."
 msgstr ""
-"Vegeu <link xref=\"help:gnome-help/printing-select\" href=\"https://help."
-"gnome.org/users/gnome-help/stable/printing-select\">l'ajuda de l'escriptori "
-"GNOME</link>."
 
 #. (itstool) path: info/desc
 #: C/movingaround.page:23
 msgid "Navigating, scrolling and zooming."
-msgstr "Navegació, desplaçament i ampliació."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/movingaround.page:26
 msgid "Moving around a document"
-msgstr "Moure's per un document"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/movingaround.page:29
 msgid ""
 "You can move around each page of a document by any of the following methods:"
 msgstr ""
-"Podeu desplaçar-vos per cada pàgina d'un document utilitzant qualsevol dels "
-"mètodes següents:"
 
 #. (itstool) path: item/p
 #: C/movingaround.page:34
@@ -2869,15 +2433,11 @@ msgid ""
 "Scrolling up and down using the mouse wheel. To move around a page just by "
 "moving the mouse:"
 msgstr ""
-"Desplaçant-vos amunt i avall amb la rodeta del ratolí. Per a moure's per una "
-"pàgina només movent el ratolí:"
 
 #. (itstool) path: item/p
 #: C/movingaround.page:38
 msgid "Right-click the page and select <gui>Autoscroll</gui>."
 msgstr ""
-"Feu clic amb el botó dret la pàgina i seleccioneu <gui>Desplaçament "
-"automàtic</gui>."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:41
@@ -2885,27 +2445,21 @@ msgid ""
 "Move the mouse pointer towards the bottom of the window to scroll down; it "
 "will scroll faster depending on how far down the window you go."
 msgstr ""
-"Desplaceu el punter del ratolí cap a la part inferior de la finestra per a "
-"desplaçar-la cap avall; es desplaçarà més ràpidament en funció d'on us "
-"situeu a la finestra."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:46
 msgid "To stop autoscrolling, click anywhere in the document."
 msgstr ""
-"Per a aturar el desplaçament automàtic, feu clic a qualsevol lloc del "
-"document."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:51
 msgid "Using the scroll bar on the document window."
-msgstr "Utilitzeu la barra de desplaçament de la finestra del document."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/movingaround.page:54
 msgid "Using the up and down arrow keys of your keyboard."
 msgstr ""
-"Utilitzeu les tecles de desplaçament de cap amunt i de cap avall del teclat."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:57
@@ -2913,7 +2467,6 @@ msgid ""
 "Dragging the page around with your mouse, as if you are grabbing it. To do "
 "this:"
 msgstr ""
-"Arrossegueu la pàgina amb el ratolí, com si us l'emportéssiu. Per a fer-ho:"
 
 #. (itstool) path: item/p
 #: C/movingaround.page:61
@@ -2921,8 +2474,6 @@ msgid ""
 "Move the mouse pointer over the page and hold down the middle mouse button "
 "to drag it around."
 msgstr ""
-"Desplaceu el punter del ratolí sobre la pàgina i manteniu premut el botó del "
-"mig per a arrossegar-lo."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:65
@@ -2930,20 +2481,17 @@ msgid ""
 "If you don't have a middle mouse button, hold down the left and right mouse "
 "buttons at the same time, then drag."
 msgstr ""
-"Si no teniu un botó central del ratolí, manteniu premuts els botons esquerre "
-"i dret alhora i, a continuació, arrossegueu."
 
 #. (itstool) path: section/title
 #: C/movingaround.page:73
 msgid "Flipping between pages"
-msgstr "Anar d'una pàgina a una altra"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/movingaround.page:75
 msgid ""
 "You can move between pages of a document using one of the following methods:"
 msgstr ""
-"Us podeu moure entre les pàgines d'un document amb un dels mètodes següents:"
 
 #. (itstool) path: item/p
 #: C/movingaround.page:80
@@ -2951,13 +2499,11 @@ msgid ""
 "Press the <keyseq><key>Ctrl</key><key>Page Up</key></keyseq> or "
 "<keyseq><key>Ctrl</key><key>Page Down</key></keyseq> buttons on the keyboard."
 msgstr ""
-"Premeu els botons <keyseq><key>Ctrl</key><key>Re Pàg</key></keyseq> o "
-"<keyseq><key>Ctrl</key><key>Av Pàg</key></keyseq> al teclat."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:85
 msgid "To go to a specific page:"
-msgstr "Per a anar a una pàgina específica:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/movingaround.page:88
@@ -2965,25 +2511,21 @@ msgid ""
 "Type a page number in <gui style=\"input\">Select Page</gui> on the <link "
 "xref=\"headerbar\">header bar</link> and press <key>Enter</key>."
 msgstr ""
-"Escriviu el número a <gui style=\"input\">Selecciona la pàgina</gui> o a la "
-"<link xref=\"headerbar\">barra de capçalera</link> i premeu <key>Retorn</"
-"key>."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:92
 msgid "If you want to go to the beginning or the end of the document:"
-msgstr "Si voleu anar a l'inici o final de document:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/movingaround.page:95
 msgid "Press <keyseq><key>Ctrl</key><key>Home</key></keyseq> on your keyboard."
 msgstr ""
-"Premeu <keyseq><key>Ctrl</key><key>Inici</key></keyseq> al vostre teclat."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:99
 msgid "Press <keyseq><key>Ctrl</key><key>End</key></keyseq> on your keyboard."
-msgstr "Premeu <keyseq><key>Ctrl</key><key>Fi</key></keyseq> al vostre teclat."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/movingaround.page:107
@@ -2991,53 +2533,40 @@ msgid ""
 "To move ten pages at a time, press <keyseq><key>Shift</key><key>Page Up</"
 "key></keyseq> or <keyseq><key>Shift</key><key>Page Down</key></keyseq>."
 msgstr ""
-"Per a moure deu pàgines al mateix temps, premeu <keyseq><key>Maj</"
-"key><key>Re Pàg</key></keyseq> o <keyseq><key>Maj</key><key>Av Pàg</key></"
-"keyseq>."
 
 #. (itstool) path: note/p
 #: C/movingaround.page:111
 msgid ""
 "You can only move around one page at a time, by default. If you want to move "
 "between pages just by scrolling or dragging, press the menu button in the "
-"top-right corner of the window and select <gui style=\"menuitem"
-"\">Continuous</gui>."
+"top-right corner of the window and select <gui "
+"style=\"menuitem\">Continuous</gui>."
 msgstr ""
-"De manera predeterminada, només podeu moure-us per una pàgina alhora. Si "
-"voleu desplaçar-vos entre pàgines desplaçar-les o arrossegar-les, premeu el "
-"botó de menú a l'extrem superior dret de la finestra i seleccioneu <gui "
-"style=\"menuitem\">Continu</gui>."
 
 #. (itstool) path: section/title
 #: C/movingaround.page:122
 msgid "Navigating with a page list or table of contents"
-msgstr "Navegar amb una llista de pàgines o una taula de continguts"
+msgstr ""
 
 #. (itstool) path: section/p
 #. (itstool) path: page/p
 #: C/movingaround.page:124 C/annotations.page:30 C/bookmarks.page:34
 msgid ""
 "When you open a file, you should have a side pane on the left side of the "
-"window. If you do not have a visible side pane, click the <gui style=\"button"
-"\">Side pane</gui> button in the top-left corner, or press the <key>F9</key> "
-"key on the keyboard."
+"window. If you do not have a visible side pane, click the <gui "
+"style=\"button\">Side pane</gui> button in the top-left corner, or press the "
+"<key>F9</key> key on the keyboard."
 msgstr ""
-"Quan obriu un fitxer, tindreu un panell lateral al costat esquerre de la "
-"finestra. Si no teniu un panell lateral visible, seleccioneu el botó <gui "
-"style=\"button\">Panell lateral</gui> a la cantonada superior esquerra, o "
-"premeu <key>F9</key> al teclat."
 
 #. (itstool) path: section/p
 #: C/movingaround.page:128
 msgid "The side pane shows a preview of all of the pages in the document."
 msgstr ""
-"La subfinestra lateral mostra una previsualització de totes les pàgines del "
-"document."
 
 #. (itstool) path: section/p
 #: C/movingaround.page:130
 msgid "You can move between pages by clicking on them in the side pane."
-msgstr "Us podeu moure entre les pàgines clicant-les al panell lateral."
+msgstr ""
 
 #. (itstool) path: note/p
 #: C/movingaround.page:133
@@ -3046,9 +2575,6 @@ msgid ""
 "the side pane. Select the <gui>Outline</gui> button at the bottom of the "
 "side pane to view it."
 msgstr ""
-"Alguns documents tenen un índex o una taula de continguts, que podeu mostrar "
-"a la subfinestra lateral. Seleccioneu el botó <gui>Esquema</gui> a la part "
-"inferior de la subfinestra lateral per a veure-ho."
 
 #. (itstool) path: note/p
 #: C/movingaround.page:137
@@ -3056,18 +2582,16 @@ msgid ""
 "Most documents don't use this feature, so you won't be able to view their "
 "index in the side pane."
 msgstr ""
-"La majoria de documents no utilitzen aquesta funció, de manera que no en "
-"podreu veure l'índex al panell lateral."
 
 #. (itstool) path: section/title
 #: C/movingaround.page:145
 msgid "Zooming in and out"
-msgstr "Ampliació i reducció"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/movingaround.page:147
 msgid "To adjust the zoom level:"
-msgstr "Per a ajustar el nivell de zoom:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/movingaround.page:151
@@ -3075,8 +2599,6 @@ msgid ""
 "Select the desired zoom percentage from the drop-down menu in the top-right "
 "corner."
 msgstr ""
-"Seleccioneu el percentatge d'ampliació desitjat al menú desplegable de la "
-"cantonada superior dreta."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:155
@@ -3085,9 +2607,6 @@ msgid ""
 "key></keyseq> to zoom in, or <keyseq><key>Ctrl</key><key>-</key></keyseq> to "
 "zoom out."
 msgstr ""
-"També podeu utilitzar les dreceres de teclat <keyseq><key>Ctrl</key><key>+</"
-"key></keyseq> per a ampliar, o <keyseq><key>Ctrl</key><key>-</key></keyseq> "
-"per a reduir."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:159
@@ -3095,8 +2614,6 @@ msgid ""
 "Alternatively, hold down <key>Ctrl</key> and use your mouse scroll wheel to "
 "zoom."
 msgstr ""
-"També podeu mantenir premut <key>Ctrl</key> i utilitzar la roda de "
-"desplaçament del ratolí per a ampliar o reduir."
 
 #. (itstool) path: note/p
 #: C/movingaround.page:164
@@ -3104,8 +2621,6 @@ msgid ""
 "The <gui>Fit Page</gui> option will make a document page fit the whole "
 "<em>height</em> of the window."
 msgstr ""
-"L'opció <gui>Ajusta la pàgina</gui> fa que la pàgina d'un document s'ajusti "
-"a tota l'<em>alçada</em> de la finestra."
 
 #. (itstool) path: note/p
 #: C/movingaround.page:166
@@ -3113,19 +2628,14 @@ msgid ""
 "The <gui>Fit Width</gui> option will make a document page fill the whole "
 "<em>width</em> of the window."
 msgstr ""
-"L'opció <gui>Ajusta l'amplada</gui> fa que la pàgina d'un document ompli "
-"tota l'<em>amplada</em> de la finestra."
 
 #. (itstool) path: note/p
 #: C/movingaround.page:168
 msgid ""
 "If you want to see two pages at once, side by side, like in a book, press "
-"the menu button in the top-right corner of the window and select <gui style="
-"\"menuitem\">Dual</gui>."
-msgstr ""
-"Si voleu veure dues pàgines alhora, de costat, com en un llibre, premeu el "
-"botó de menú a la part superior dreta de la finestra i seleccioneu <gui "
+"the menu button in the top-right corner of the window and select <gui "
 "style=\"menuitem\">Dual</gui>."
+msgstr ""
 
 #. (itstool) path: note/p
 #: C/movingaround.page:171
@@ -3133,38 +2643,36 @@ msgid ""
 "If the allow-links-change-zoom gsetting is set to false, links are blocked "
 "from changing your zoom level."
 msgstr ""
-"Si gsetting té definit allow-links-change-zoom a fals, els enllaços per a "
-"canviar el nivell de zoom estaran bloquejats."
 
 #. (itstool) path: section/p
 #: C/movingaround.page:175
 msgid "You can use the whole of your screen to view the document:"
-msgstr "Podeu utilitzar tota la pantalla per a veure el document:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/movingaround.page:179
 msgid "Press <key>F11</key>."
-msgstr "Premeu <key>F11</key>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/movingaround.page:182
 msgid "To exit the full screen mode:"
-msgstr "Per a sortir del mode a pantalla completa:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/movingaround.page:183
 msgid "Press <key>F11</key> or <key>Escape</key>"
-msgstr "Premeu <key>F11</key> o <key>Esc</key>"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/print-booklet.page:8
 msgid "How to print a booklet."
-msgstr "Com imprimir un llibret."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/print-booklet.page:21
 msgid "Printing a booklet"
-msgstr "Imprimir un llibret"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/print-booklet.page:23
@@ -3174,20 +2682,16 @@ msgid ""
 "printing from the list below. Then select the number of printed pages your "
 "booklet will have."
 msgstr ""
-"Si imprimiu un fulletó (que potser estarà lligat o grapat a la meitat de "
-"cada pàgina), seleccioneu el tipus d'impressora que utilitzeu per a imprimir "
-"a la llista de sota. A continuació, seleccioneu el nombre de pàgines "
-"impreses que tindrà el llibret."
 
 #. (itstool) path: section/title
 #: C/print-booklet.page:28
 msgid "Printer allows single-sided printing"
-msgstr "La impressora permet imprimir per una sola cara"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/print-booklet.page:32
 msgid "Printer allows double-sided printing"
-msgstr "La impressora permet imprimir per una doble cara"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/reload.page:8
@@ -3195,13 +2699,11 @@ msgid ""
 "Your document will be automatically reloaded if another program changes it "
 "while you're viewing it."
 msgstr ""
-"El document es tornarà a carregar automàticament si un altre programa el "
-"canvia mentre l'esteu visualitzant."
 
 #. (itstool) path: page/title
 #: C/reload.page:23
 msgid "Why does the document keep reloading?"
-msgstr "Per què el document es manté carregant-se?"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/reload.page:25
@@ -3211,9 +2713,6 @@ msgid ""
 "automatically reload the document and display the most recent version for "
 "you."
 msgstr ""
-"Si el <app>Visualitzador de documents</app> detecta que el document que heu "
-"obert ha canviat (potser perquè un altre programa l'ha modificat), carregarà "
-"automàticament el document i us mostrarà la versió més recent."
 
 #. (itstool) path: page/p
 #: C/reload.page:29
@@ -3221,32 +2720,31 @@ msgid ""
 "If the document is deleted while you are still viewing it, it will still "
 "remain open."
 msgstr ""
-"Si el document se suprimeix mentre l'esteu visualitzant, continuarà obert."
 
 #. (itstool) path: info/desc
 #: C/presentations.page:7
 msgid "How to play presentations."
-msgstr "Com passar presentacions."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/presentations.page:26
 msgid "Presentations"
-msgstr "Presentacions"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/presentations.page:28
 msgid "Starting a presentation"
-msgstr "Iniciació d'una presentació"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/presentations.page:29
 msgid "To start a presentation:"
-msgstr "Per a iniciar una presentació:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/presentations.page:32
 msgid "<link xref=\"opening\">Open a file</link>"
-msgstr "<link xref=\"opening\">Obriu un fitxer</link>"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/presentations.page:35
@@ -3254,19 +2752,16 @@ msgid ""
 "Press the menu button in the top-right corner of the window and select <gui "
 "style=\"menuitem\">Present as Slideshow</gui> (or press <key>F5</key>)."
 msgstr ""
-"Premeu el botó de menú a la part superior dreta de la finestra i seleccioneu "
-"<gui style=\"menuitem\">Presentació de diapositives</gui> (o premeu <key>F5</"
-"key>)."
 
 #. (itstool) path: item/p
 #: C/presentations.page:37
 msgid "The presentation will be displayed full screen."
-msgstr "La presentació es visualitzarà a pantalla completa."
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/presentations.page:44
 msgid "Moving through a presentation"
-msgstr "Moure's per una presentació"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/presentations.page:47
@@ -3274,8 +2769,6 @@ msgid ""
 "Use the <key>spacebar</key>, <key>→</key>, <key>↓</key>, or left mouse click "
 "to go to the next slide."
 msgstr ""
-"Utilitzeu la <key>barra espaiadora</key>, <key>→</key>, <key>↓</key>, o feu "
-"clic amb el botó esquerre per a anar a la següent diapositiva."
 
 #. (itstool) path: section/p
 #: C/presentations.page:50
@@ -3283,8 +2776,6 @@ msgid ""
 "Use the <key>←</key>, <key>↑</key> or right mouse click to go to the "
 "previous slide."
 msgstr ""
-"Utilitzeu <key>←</key>, <key>↑</key> o el botó dret de ratolí per a anar a "
-"la diapositiva anterior."
 
 #. (itstool) path: note/p
 #: C/presentations.page:54
@@ -3292,66 +2783,62 @@ msgid ""
 "You can also use the scroll wheel to move back and forth through the "
 "presentation."
 msgstr ""
-"També podeu utilitzar la roda de desplaçament per a avançar i retrocedir a "
-"través de la presentació."
 
 #. (itstool) path: section/p
 #: C/presentations.page:58
 msgid "Use <key>Esc</key> to exit the presentation."
-msgstr "Utilitzeu <key>Esc</key> per a sortir de la presentació."
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/presentations.page:64
 msgid "Showing a blank screen"
-msgstr "Mostrar una pantalla buida"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/presentations.page:65
 msgid "Press <key>B</key> or <key>.</key> to show a black screen."
-msgstr "Premeu <key>B</key> o <key>.</key> per a mostrar la pantalla negra."
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/presentations.page:66
 msgid "Press <key>W</key> to show a white screen."
-msgstr "Premeu <key>W</key> per a mostrar la pantalla blanca."
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/presentations.page:67
 msgid ""
 "Press <key>B</key>, <key>.</key>, or <key>W</key> again to show the slide."
 msgstr ""
-"Premeu <key>B</key>, <key>.</key>, o <key>W</key> de nou per a veure la "
-"diapositiva."
 
 #. (itstool) path: section/title
 #: C/presentations.page:72
 msgid "Supported presentation file formats"
-msgstr "Formats de presentació suportats"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/presentations.page:73
 msgid "The following file formats can be used for presentations:"
-msgstr "Els següents formats de fitxer es poden utilitzar a les presentacions:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/presentations.page:77
 msgid "Comic Book Archive (.cbr and .cbz)"
-msgstr "Arxiu de llibre de còmic (.cbr i .cbz)"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/presentations.page:80
 msgid "Open Document Presentation (.odp)"
-msgstr "Presentació Open Document (.odp)"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/editing.page:7
 msgid "You can't use the <app>document viewer</app> to edit files."
-msgstr "Amb el <app>Visualitzador de documents</app> no podeu editar fitxers."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/editing.page:21
 msgid "Can I edit documents in the document viewer?"
-msgstr "Puc editar documents al visualitzador de documents?"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/editing.page:24
@@ -3360,9 +2847,6 @@ msgid ""
 "You need to use the appropriate editing application for the type of file you "
 "want to change."
 msgstr ""
-"El <app>visualitzador de documents</app> no es pot utilitzar per a fer "
-"canvis als documents. Heu d'utilitzar l'aplicació d'editatge adequada per al "
-"tipus de fitxer que vulgueu canviar."
 
 #. (itstool) path: note/p
 #: C/editing.page:30
@@ -3372,33 +2856,26 @@ msgid ""
 "<app>Okular</app>, for example. Furthermore, <app>pdfarranger</app> allows "
 "rearranging or removing pages and merging files."
 msgstr ""
-"Normalment, els fitxers PDF i PostScript (.ps) no estan pensats per a ser "
-"editats, però hi ha programari d'edició de PDF disponible. Proveu el "
-"<app>LibreOffice Draw</app> o <app>Okular</app>, per exemple. A més, "
-"<app>pdfarranger</app> permet reorganitzar o eliminar pàgines i combinar "
-"fitxers."
 
 #. (itstool) path: info/desc
 #: C/annotation-properties.page:7
 msgid "How to customize the author, color, style or icon of an annotation."
 msgstr ""
-"Personalització de l'autor, el color, l'estil i la icona d'una anotació."
 
 #. (itstool) path: page/title
 #: C/annotation-properties.page:20
 msgid "Customize annotations"
-msgstr "Personalització de les anotacions"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/annotation-properties.page:24
 msgid "Right click on the annotation icon in the document."
 msgstr ""
-"Feu clic amb el botó secundari a la icona de l'anotació en el document."
 
 #. (itstool) path: item/p
 #: C/annotation-properties.page:29
 msgid "Select <gui>Annotation Properties…</gui>."
-msgstr "Seleccioneu <gui>Propietats de l'anotació…</gui>."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/annotation-properties.page:34
@@ -3406,8 +2883,6 @@ msgid ""
 "In the <gui>Annotation Properties</gui> window, you can change the author, "
 "color, style and icon of your note."
 msgstr ""
-"A la finestra <gui>Propietats de l'anotació</gui> podeu canviar l'autor, el "
-"color, l'estil i la icona de l'anotació."
 
 #. (itstool) path: note/p
 #: C/annotation-properties.page:38
@@ -3415,14 +2890,11 @@ msgid ""
 "The annotation properties will be applied to the note for which you made the "
 "changes only. Each note can have a different set of properties."
 msgstr ""
-"Les propietats que canvieu només s'aplicaran a l'anotació que editeu. Cada "
-"anotació té les seves pròpies propietats."
 
 #. (itstool) path: section/title
 #: C/annotation-properties.page:47
 msgid "Can I permanently change the default annotation properties?"
 msgstr ""
-"Es poden canviar permanentment les propietats per defecte de les anotacions?"
 
 #. (itstool) path: section/p
 #: C/annotation-properties.page:48
@@ -3434,28 +2906,21 @@ msgid ""
 "individually on each note. There is no way to save different default "
 "settings for annotation properties, at this time."
 msgstr ""
-"Les propietats predeterminades de les anotacions (autor, color, estil i "
-"icona) només es poden canviar en una nota particular tal com s'ha indicat "
-"anteriorment. Per tant, si voleu que totes les icones de les vostres notes "
-"siguin <gui>vermelles</gui> en comptes de <gui>grogues</gui>, haureu de "
-"canviar l'opció predeterminada <gui>groc</gui> a <gui>vermell</gui> "
-"individualment a cada nota. En aquest moment no hi ha cap altra manera de "
-"desar diferents configuracions predeterminades per a les anotacions."
 
 #. (itstool) path: info/desc
 #: C/duplex-11pages.page:8
 msgid "Print a 11 page booklet."
-msgstr "Imprimeix un llibret d'11 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-11pages.page:21
 msgid "11-page booklet"
-msgstr "Llibret d'11 pàgines"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-11pages.page:37
 msgid "Type the numbers of the pages in this order: 11, 2, 1"
-msgstr "Escriviu el número de pàgines en aquest ordre: 11, 2, 1"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-11pages.page:70
@@ -3463,8 +2928,6 @@ msgid ""
 "Type the numbers of the remaining pages in this order: 10, 3, 4, 9, 8, 5, 6, "
 "7"
 msgstr ""
-"Escriviu els números de les pàgines restants en aquest ordre: 10, 3, 4, 9, "
-"8, 5, 6, 7"
 
 #. (itstool) path: note/p
 #: C/duplex-11pages.page:87
@@ -3472,15 +2935,12 @@ msgid ""
 "It is easier to print a 12-page booklet. You may wish to add a blank page to "
 "your PDF document to make it 12-pages. To do so, you can:"
 msgstr ""
-"És més fàcil imprimir un llibret de 12 pàgines. Podeu afegir una pàgina en "
-"blanc al document PDF per a convertir-lo en un de 12 pàgines. Per a fer-ho, "
-"podeu:"
 
 #. (itstool) path: info/title
 #: C/commandline.page:7
 msgctxt "sort"
 msgid "Command line"
-msgstr "Línia d'ordres"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/commandline.page:8
@@ -3488,13 +2948,11 @@ msgid ""
 "The <cmd>evince</cmd> command can open any number of files, at specific "
 "pages and in various modes."
 msgstr ""
-"La comanda <cmd>evince</cmd> pot obrir un nombre qualsevol de fitxers, en "
-"pàgines concretes i en diferents modes."
 
 #. (itstool) path: page/title
 #: C/commandline.page:24
 msgid "The command line"
-msgstr "La línia d'ordres"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/commandline.page:25
@@ -3503,15 +2961,12 @@ msgid ""
 "<cmd>evince</cmd>. You can open a specific file by typing the filename after "
 "the evince command:"
 msgstr ""
-"Per a iniciar el <app>Visualitzador de documents</app> des de la línia "
-"d'ordres, teclegeu <cmd>evince</cmd>. Podeu obrir un fitxer específic "
-"escrivint el nom de fitxer després de l'ordre:"
 
 #. (itstool) path: page/screen
 #: C/commandline.page:30
 #, no-wrap
 msgid "evince file.pdf"
-msgstr "evince fitxer.pdf"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/commandline.page:31
@@ -3519,14 +2974,12 @@ msgid ""
 "You can open multiple files by typing the filenames after the evince "
 "command, separating the filenames by a space:"
 msgstr ""
-"Podeu obrir diversos fitxers escrivint els noms dels fitxers després de "
-"l'ordre evince, separant els noms dels fitxers amb un espai:"
 
 #. (itstool) path: page/screen
 #: C/commandline.page:34
 #, no-wrap
 msgid "evince file1.pdf file2.pdf"
-msgstr "evince fitxer1.pdf fitxer2.pdf"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/commandline.page:35
@@ -3535,20 +2988,17 @@ msgid ""
 "web. For example, after the evince command you can give the location of a "
 "file on the web:"
 msgstr ""
-"El <app>visualitzador de documents</app> també suporta la gestió de fitxers "
-"a la web. Per exemple, després de l'ordre evince, podeu donar la ubicació "
-"d'un fitxer al web:"
 
 #. (itstool) path: page/screen
 #: C/commandline.page:38
 #, no-wrap
 msgid "evince http://www.claymath.org/millennium/P_vs_NP/pvsnp.pdf"
-msgstr "evince http://www.claymath.org/millennium/P_vs_NP/pvsnp.pdf"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/commandline.page:40
 msgid "Opening a document at a specific page"
-msgstr "Obrir un document en una pàgina específica"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/commandline.page:41
@@ -3556,15 +3006,12 @@ msgid ""
 "You can use the <cmd>--page-label</cmd> switch to open a document at a "
 "specific page. For example, to open a document to page 3, you would type:"
 msgstr ""
-"Podeu utilitzar el canviador <cmd>--page-label</cmd> per a obrir un document "
-"en una pàgina determinada. Per exemple, per a obrir un document a la pàgina "
-"3, escriviu:"
 
 #. (itstool) path: section/screen
 #: C/commandline.page:45
 #, no-wrap
 msgid "evince --page-label=3 file.pdf"
-msgstr "evince --page-label=3 fitxer.pdf"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/commandline.page:46
@@ -3572,57 +3019,54 @@ msgid ""
 "The page label should be in the same format as the page number displayed in "
 "the <app>Document Viewer</app> header bar."
 msgstr ""
-"L'etiqueta de la pàgina ha de tenir el mateix format que el número de pàgina "
-"que es mostra a la barra de capçalera del <app>Visualitzador de documents</"
-"app>."
 
 #. (itstool) path: section/title
 #: C/commandline.page:52
 msgid "Opening a document in fullscreen mode"
-msgstr "Obertura de documents en mode a pantalla completa"
+msgstr ""
 
 #. (itstool) path: section/screen
 #: C/commandline.page:53
 #, no-wrap
 msgid "evince --fullscreen file.pdf"
-msgstr "evince --fullscreen fitxer.pdf"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/commandline.page:56
 msgid "Opening a document in presentation mode"
-msgstr "Obertura de documents en mode de presentació"
+msgstr ""
 
 #. (itstool) path: section/screen
 #: C/commandline.page:57
 #, no-wrap
 msgid "evince --presentation file.pdf"
-msgstr "evince --presentation fitxer.pdf"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/commandline.page:60
 msgid "Opening a document in preview mode"
-msgstr "Obertura de documents en mode de previsualització"
+msgstr ""
 
 #. (itstool) path: section/screen
 #: C/commandline.page:61
 #, no-wrap
 msgid "evince --preview file.pdf"
-msgstr "evince --preview fitxer.pdf"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/annotations.page:8
 msgid "How to create and customize annotations."
-msgstr "Com crear anotacions personalitzades."
+msgstr ""
 
 #. (itstool) path: credit/name
 #: C/annotations.page:17
 msgid "Andre Klapper"
-msgstr "Andre Klapper"
+msgstr "آندره کلپر"
 
 #. (itstool) path: page/title
 #: C/annotations.page:26
 msgid "Adding annotations"
-msgstr "Afegir anotacions"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/annotations.page:27
@@ -3630,8 +3074,6 @@ msgid ""
 "An annotation is a note or comment added to a PDF document. You can add "
 "annotations using the <app>document viewer</app>."
 msgstr ""
-"Una anotació és una nota o comentari afegit a un document PDF. Podeu afegir "
-"anotacions mitjançant el <app>visualitzador de documents</app>."
 
 #. (itstool) path: page/p
 #: C/annotations.page:36
@@ -3641,15 +3083,11 @@ msgid ""
 "choose what to display in the side pane. (Some options may not be available "
 "for some documents)."
 msgstr ""
-"A la part inferior de la subfinestra lateral, els botons <gui>Miniatures</"
-"gui>, <gui>Esquema</gui>, <gui>Anotacions</gui> i <gui>Adreces d'interès</"
-"gui> us permeten triar què mostrar a la subfinestra lateral. (Algunes "
-"opcions poden no estar disponibles per a alguns documents)."
 
 #. (itstool) path: page/p
 #: C/annotations.page:39
 msgid "To create an annotation:"
-msgstr "Per a crear una anotació:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/annotations.page:44
@@ -3657,22 +3095,18 @@ msgid ""
 "Select the <gui style=\"button\">Annotate the document</gui> button from the "
 "header bar:"
 msgstr ""
-"Seleccioneu el botó <gui style=\"button\">Anota el document</gui> des de la "
-"barra de capçalera:"
 
 #. (itstool) path: item/p
 #: C/annotations.page:50
 msgid ""
-"You should now see <gui style=\"button\">Note text</gui> and <gui style="
-"\"button\">Highlight text</gui> buttons below the header bar."
+"You should now see <gui style=\"button\">Note text</gui> and <gui "
+"style=\"button\">Highlight text</gui> buttons below the header bar."
 msgstr ""
-"Hauríeu de veure a sota de la barra de capçalera els botons de <gui style="
-"\"button\">Nota de text</gui> i <gui style=\"button\">Ressalta el text</gui>."
 
 #. (itstool) path: item/p
 #: C/annotations.page:57
 msgid "Click on the first button to add a text annotation."
-msgstr "Feu clic al primer botó per a afegir una anotació de text."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/annotations.page:62
@@ -3680,13 +3114,11 @@ msgid ""
 "Click on the spot in the document window you would like to add the "
 "annotation to. Your <em>annotation</em> window will open."
 msgstr ""
-"Feu clic al punt de la finestra del document en el qual voleu afegir "
-"l'anotació. S'obrirà la finestra d'<em>anotacions</em>."
 
 #. (itstool) path: item/p
 #: C/annotations.page:67
 msgid "Type your text into the <em>annotation</em> window."
-msgstr "Escriviu el vostre text a la finestra d'<em>anotacions</em>."
+msgstr ""
 
 #. (itstool) path: note/p
 #: C/annotations.page:71
@@ -3694,27 +3126,22 @@ msgid ""
 "You can resize the note by clicking and holding the left mouse button on one "
 "of the bottom corners of the note, and moving it around."
 msgstr ""
-"Podeu canviar la mida de la nota fent clic i mantenint premut el botó "
-"esquerre del ratolí sobre una de les cantonades inferiors de la nota i "
-"desplaçant-lo."
 
 #. (itstool) path: item/p
 #: C/annotations.page:77
 msgid ""
 "Close the note by clicking on the <gui>x</gui> in the top corner of the note."
 msgstr ""
-"Tanqueu la nota fent clic a la <gui>x</gui> a la cantonada superior de la "
-"nota."
 
 #. (itstool) path: info/desc
 #: C/annotations-disabled.page:7
 msgid "Annotations can only be added to PDF files."
-msgstr "Només es poden afegir anotacions a fitxers PDF."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/annotations-disabled.page:18
 msgid "Can't add annotations?"
-msgstr "No puc afegir anotacions?"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/annotations-disabled.page:19
@@ -3722,25 +3149,22 @@ msgid ""
 "Annotations can only be added to PDF files. If your file is of a format "
 "other than PDF, the option to add annotations will be greyed out (disabled)."
 msgstr ""
-"Les anotacions només es poden afegir als fitxers PDF. Si el fitxer és d'un "
-"format diferent al PDF, l'opció d'afegir anotacions es mostrarà grisa "
-"(desactivada)."
 
 #. (itstool) path: info/title
 #: C/duplex-3pages.page:7
 msgctxt "sort"
 msgid "03-Page Booklet"
-msgstr "Llibret de 3 pàgines"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/duplex-3pages.page:8
 msgid "Print a 3 page booklet."
-msgstr "Imprimeix un llibret de 3 pàgines."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/duplex-3pages.page:22
 msgid "3-page booklet"
-msgstr "Llibret de 3 pàgines"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/duplex-3pages.page:34
@@ -3748,8 +3172,6 @@ msgid ""
 "Under <em>Range</em>, choose <gui>Pages</gui>. Type the numbers of the pages "
 "in this order: 3, 2, 1"
 msgstr ""
-"A <em>Rang</em>, trieu <gui>Pàgines</gui>. Escriviu els números de les "
-"pàgines en aquest ordre: 3, 2, 1"
 
 #. (itstool) path: note/p
 #: C/duplex-3pages.page:61
@@ -3757,9 +3179,6 @@ msgid ""
 "It is easier to print a 4-page booklet. You may wish to add a blank page to "
 "your PDF document to make it 4-pages. To do so, you can:"
 msgstr ""
-"És més fàcil imprimir un llibret de 4 pàgines. Podeu afegir una pàgina en "
-"blanc al document PDF per a convertir-lo en un de 4 pàgines. Per a fer-ho, "
-"podeu:"
 
 #. (itstool) path: item/p
 #: C/duplex-3pages.page:77
@@ -3767,26 +3186,24 @@ msgid ""
 "Follow the steps for printing a <link xref=\"duplex-4page\">4-page booklet</"
 "link>."
 msgstr ""
-"Seguiu els passos per a imprimir un <link xref=\"duplex-4page\">llibret de 4 "
-"pàgines</link>."
 
 #. (itstool) path: info/title
 #: C/index.page:7
 msgctxt "link:trail"
 msgid "Evince Document Viewer"
-msgstr "Visualitzador de documents Evince"
+msgstr ""
 
 #. (itstool) path: info/title
 #: C/index.page:8
 msgctxt "link"
 msgid "Evince Document Viewer"
-msgstr "Visualitzador de documents Evince"
+msgstr ""
 
 #. (itstool) path: info/title
 #: C/index.page:9
 msgctxt "text"
 msgid "Evince Document Viewer"
-msgstr "Visualitzador de documents Evince"
+msgstr ""
 
 #. (itstool) path: info/desc
 #: C/index.page:24
@@ -3795,74 +3212,71 @@ msgid ""
 "viewing PDF documents. Learn how to get started with <app>Document Viewer</"
 "app> and its features."
 msgstr ""
-"<app>Visualitzador de documents</app>, normalment conegut com a <app>Evince</"
-"app>, està fet per a visualitzar documents pdf. Aprèn com començar amb el "
-"<app>Visualitzador de documents</app> i les seves funcionalitats."
 
 #. (itstool) path: page/title
 #: C/index.page:30
 msgid "<_:media-1/> Document Viewer Help"
-msgstr "<_:media-1/> Ajuda del Visualitzador de documents"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/index.page:36
 msgid "Reading documents"
-msgstr "Lectura de documents"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/index.page:40
 msgid "Presentations and other supported formats"
-msgstr "Presentacions i altres formats admesos"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/index.page:44
 msgid "Printing"
-msgstr "Impressió"
+msgstr "چاپ کردن"
 
 #. (itstool) path: section/title
 #: C/index.page:48
 msgid "Annotations and bookmarks"
-msgstr "Anotacions i punts d'interès"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/index.page:52
 msgid "Interactive forms"
-msgstr "Formularis interactius"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/index.page:56
 msgid "Frequently asked questions"
-msgstr "Preguntes més freqüents"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/index.page:60
 msgid "Advanced"
-msgstr "Avançat"
+msgstr "پیشرفته"
 
 #. (itstool) path: section/title
 #: C/index.page:64
 msgid "Tips and tricks"
-msgstr "Consells i trucs"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/index.page:68
 msgid "SyncTeX"
-msgstr "SyncTeX"
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/index.page:73
 msgid "Get involved"
-msgstr "Involucrar-se"
+msgstr "درگیر شدن"
 
 #. (itstool) path: info/desc
 #: C/bookmarks.page:26
 msgid "You can use annotations like bookmarks."
-msgstr "Podeu utilitzar les anotacions com a adreces d'interès."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/bookmarks.page:29
 msgid "Bookmarks"
-msgstr "Punts d'interès"
+msgstr "نشانک‌ها"
 
 #. (itstool) path: page/p
 #: C/bookmarks.page:31
@@ -3870,8 +3284,6 @@ msgid ""
 "You can add, rename and delete bookmarks using the <app>Document Viewer</"
 "app>."
 msgstr ""
-"Podeu afegir, canviar de nom i esborrar les adreces d'interès mitjançant el "
-"<app>Visualitzador de documents</app>."
 
 #. (itstool) path: page/p
 #: C/bookmarks.page:38
@@ -3879,13 +3291,11 @@ msgid ""
 "At the bottom of this side pane, select the <gui style=\"button\">Bookmarks</"
 "gui> button."
 msgstr ""
-"A la part inferior d'aquest panell lateral, seleccioneu el botó <gui style="
-"\"button\">Adreça d'interès</gui>."
 
 #. (itstool) path: section/title
 #: C/bookmarks.page:44
 msgid "Create a bookmark"
-msgstr "Crear una adreces d'interès"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:48
@@ -3893,8 +3303,6 @@ msgid ""
 "In the PDF document itself, navigate to the page to which you would like to "
 "add the bookmark."
 msgstr ""
-"Al document PDF, navegueu a la pàgina a la qual voleu afegir l'adreça "
-"d'interès."
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:52 C/bookmarks.page:71 C/bookmarks.page:85
@@ -3902,8 +3310,6 @@ msgid ""
 "In the side pane, select the <gui style=\"button\">Bookmarks</gui> button at "
 "the bottom."
 msgstr ""
-"Al panell lateral, seleccioneu el botó <gui style=\"button\">Adreces "
-"d'interès</gui> a la part inferior."
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:56
@@ -3912,68 +3318,63 @@ msgid ""
 "pane. The default name of the bookmark you just added is the page number of "
 "the document."
 msgstr ""
-"Premeu el botó <gui style=\"button\">+</gui> a la part inferior del panell "
-"lateral. El nom predeterminat de l'adreça d'interès que s'acaba d'afegir és "
-"el número de pàgina del document."
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:61
 msgid "The bookmark is now listed in the bookmarks list."
-msgstr "El marcador ara es troba a la llista d'adreces d'interès."
+msgstr ""
 
 #. (itstool) path: section/title
 #: C/bookmarks.page:68
 msgid "Rename a bookmark"
-msgstr "Canviar de nom una adreça d'interès"
+msgstr "تغییر نام نشانک"
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:73
 msgid "Select the bookmark in the side pane."
-msgstr "Seleccioneu l'adreça d'interès al panell lateral."
+msgstr "نشانک را در قاب کناری برگزینید."
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:74
 msgid "Click on the bookmark name."
-msgstr "Feu clic al nom de l'adreça d'interès."
+msgstr "روی نام نشانک بزنید."
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:75
 msgid "Enter the new name."
-msgstr "Introduir el nou nom."
+msgstr "نام جدید را وارد کنید."
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:76
 msgid "Press <key>Enter</key>."
-msgstr "Premeu <key>Retorn</key>."
+msgstr "<key>ورود</key> را بزنید."
 
 #. (itstool) path: section/title
 #: C/bookmarks.page:82
 msgid "Delete a bookmark"
-msgstr "Esborrar una adreça d'interès"
+msgstr "حذف نشانک"
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:87
 msgid ""
 "Press the <gui style=\"button\">-</gui> button at the bottom of the side "
 "pane."
-msgstr ""
-"Premeu el botó <gui style=\"button\">-</gui> a la part inferior del panell "
-"lateral."
+msgstr "دکمهٔ <gui style=\"button\">-</gui> را در پایین قاب کناری بزنید"
 
 #. (itstool) path: info/desc
 #: C/print-2sided.page:8
 msgid "Printing two-sided and multi-page per sheet."
-msgstr "Impressió de dues cares i diverses pàgines per full."
+msgstr "چاپ دوطرفه و چندصفحه‌ در یک برگه."
 
 #. (itstool) path: page/title
 #: C/print-2sided.page:21
 msgid "Two-sided and multiple pages per side layout for printing"
-msgstr "Disposició per a imprimir a dues cares i múltiples pàgines per cara"
+msgstr "چینش دوطرفه و چندصفحه‌ در یک طرف برای چاپ"
 
 #. (itstool) path: page/p
 #: C/print-2sided.page:23
 msgid "You can print on both sides of each sheet of paper:"
-msgstr "Podeu imprimir a ambdues cares en cada full:"
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/print-2sided.page:34
@@ -3981,8 +3382,6 @@ msgid ""
 "Go to the <gui>Page Setup</gui> tab of the Print window and choose an option "
 "from the <gui>Two-sided</gui> drop-down list."
 msgstr ""
-"Aneu a la pestanya <gui>Configuració de la pàgina</gui> a la finestra "
-"d'impressió i seleccioneu una opció del desplegable <gui>A dues cares</gui>."
 
 #. (itstool) path: item/p
 #: C/print-2sided.page:39
@@ -3990,33 +3389,29 @@ msgid ""
 "You can print more than one page of the document per <em>side</em> of paper "
 "too. Use the <gui>Pages per side</gui> option to do this."
 msgstr ""
-"Podeu imprimir més d'una pàgina del document per <em>cara</em> de paper "
-"també. L'ús de l'opció <gui>Pàgines per cara</gui> ho permet."
 
 #. (itstool) path: info/desc
 #: C/convertpdf.page:7
 msgid "You can convert a document to PDF by \"printing\" it to a file."
-msgstr "Podeu convertir un document a PDF si «imprimiu» a fitxer."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/convertpdf.page:26
 msgid "Converting a document to PDF"
-msgstr "Conversió d'un document a PDF"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/convertpdf.page:28
 msgid ""
 "You can convert documents of the following format types into PDF format:"
-msgstr "Podeu convertir els documents dels formats següents a format PDF:"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/convertpdf.page:35
 msgid ""
-"This works by opening the file in <app>Document Viewer</app> and \"printing"
-"\" the document as a PDF file."
+"This works by opening the file in <app>Document Viewer</app> and "
+"\"printing\" the document as a PDF file."
 msgstr ""
-"Ho podeu fer si obriu el document amb el <app>Visualitzador de documents</"
-"app> i «imprimiu» el document com a fitxer PDF."
 
 #. (itstool) path: item/p
 #: C/convertpdf.page:51
@@ -4024,8 +3419,6 @@ msgid ""
 "Choose a name and folder in which to save the file, then click <gui>Print</"
 "gui>. The PDF will be saved in the folder you chose."
 msgstr ""
-"Trieu un nom i una carpeta on desar el fitxer i, a continuació, feu clic a "
-"<gui>Imprimeix</gui>. El PDF es desarà a la carpeta que trieu."
 
 #. (itstool) path: note/p
 #: C/convertpdf.page:58
@@ -4038,34 +3431,24 @@ msgid ""
 "Recognition</em> (OCR) software to extract the text from files if you need "
 "to."
 msgstr ""
-"No podeu seleccionar text en fitxers PostScript o .dvi, però normalment "
-"podeu fer-ho en fitxers PDF. La conversió de fitxers .dvi o PostScript a PDF "
-"no farà que el text sigui seleccionable. Això és perquè el text en si no "
-"està emmagatzemat en el fitxer (només és una imatge del que és el text), "
-"així que no hi ha manera de recuperar-lo i posar-lo en el PDF. Podeu "
-"utilitzar el programari <em>Reconeixement òptic de caràcters</em> (OCR) per "
-"a extreure el text dels fitxers, si cal."
 
 #. (itstool) path: info/desc
 #: C/invert-colors.page:8
 msgid "Inverting the colors can make it easier to read some text."
-msgstr "Invertir els colors pot facilitar la lectura d'algun text."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/invert-colors.page:29
 msgid "Invert colors on a page"
-msgstr "Inverteix els colors d'una pàgina"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/invert-colors.page:32
 msgid ""
 "To swap black for white, white for black, and so on, press the menu button "
-"in the top-right corner of the window and select <gui style=\"menuitem"
-"\">Night Mode</gui>."
+"in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Night Mode</gui>."
 msgstr ""
-"Per a canviar de negre a blanc, de blanc a negre, etc., premeu el botó de "
-"menú a l'extrem superior dret de la finestra i seleccioneu <gui style="
-"\"menuitem\">Mode nocturn</gui>."
 
 #. (itstool) path: note/p
 #: C/invert-colors.page:37
@@ -4073,18 +3456,16 @@ msgid ""
 "Doing this can make it easier to read text, especially in the case of "
 "certain kinds of visual impairment."
 msgstr ""
-"Fer-ho pot facilitar la lectura del text, especialment en el cas de certs "
-"tipus de deficiències visuals."
 
 #. (itstool) path: info/desc
 #: C/forms.page:7
 msgid "Working with fillable forms."
-msgstr "Treball amb formularis emplenables."
+msgstr ""
 
 #. (itstool) path: page/title
 #: C/forms.page:20
 msgid "Forms"
-msgstr "Formularis"
+msgstr "فرم‌ها"
 
 #. (itstool) path: page/p
 #: C/forms.page:21
@@ -4093,9 +3474,6 @@ msgid ""
 "by clicking on a field with your mouse. When you are finished filling out a "
 "text field, press <key>Enter</key>."
 msgstr ""
-"Quan empleneu un formulari interactiu, podeu navegar de camp a camp fent "
-"clic sobre un camp amb el ratolí. En acabar d'omplir un camp de text, premeu "
-"<key>Retorn</key>."
 
 #. (itstool) path: page/p
 #: C/forms.page:25
@@ -4103,8 +3481,6 @@ msgid ""
 "You can make a selection in a scrollable list box by clicking on the list "
 "box and scrolling to your choice with your mouse."
 msgstr ""
-"Podeu fer una selecció en un quadre de llista desplaçable fent clic al "
-"quadre de llista i desplaçant-vos amb el ratolí fins a la vostra elecció."
 
 #. (itstool) path: note/p
 #: C/forms.page:29
@@ -4116,23 +3492,16 @@ msgid ""
 "eu/2008/05/03/how-to-annotate-pdf-files-in-linux-using-xournal/\">Xournal</"
 "link>."
 msgstr ""
-"Hi pot haver parts d'un formulari que necessiteu omplir a mà <em>després</"
-"em> d'imprimir-lo. Per exemple, potser haureu de destacar determinades "
-"coses, o signar-lo en un o més llocs. Si ho voleu fer de forma electrònica, "
-"és possible que vulgueu utilitzar <link href=\"http://www.g-loaded."
-"eu/2008/05/03/how-to-annotate-pdf-files-in-linux-using-xournal/\">Xournal</"
-"link>."
 
 #. (itstool) path: info/desc
 #: C/synctex-search.page:7
 msgid "Flip between the <app>document viewer</app> and <app>gedit</app>."
 msgstr ""
-"Canvieu entre el <app>Visualitzador de documents</app> i el <app>gedit</app>."
 
 #. (itstool) path: page/title
 #: C/synctex-search.page:20
 msgid "Search with SyncTeX"
-msgstr "Cercar amb SyncTeX"
+msgstr ""
 
 #. (itstool) path: page/p
 #: C/synctex-search.page:21
@@ -4141,9 +3510,6 @@ msgid ""
 "link>, you will be able to search. SyncTeX even supports forward and "
 "backward search from an included file."
 msgstr ""
-"Després de <link xref=\"synctex-compile\">compilar el fitxer TeX amb el "
-"SyncTeX</link>, hauríeu de ser capaç de cercar. El SyncTeX fins i tot permet "
-"cerques cap endavant i cap enrere des d'un fitxer inclòs."
 
 #. (itstool) path: section/title
 #: C/synctex-search.page:26
@@ -4151,8 +3517,6 @@ msgid ""
 "Forward search: from TeX to PDF (from <app>gedit</app> to the <app>document "
 "viewer</app>)"
 msgstr ""
-"Cerca cap endavant: des de TeX a PDF (des del <app>gedit</app> cap al "
-"<app>Visualitzador de documents</app>)"
 
 #. (itstool) path: section/p
 #: C/synctex-search.page:27
@@ -4160,14 +3524,11 @@ msgid ""
 "Forward search allows you to click on a specific section of TeX source code, "
 "and jump to the associated position in the PDF. To perform forward search:"
 msgstr ""
-"La cerca cap endavant us permet fer clic en una secció específica del codi "
-"font TeX i saltar cap a la posició associada al PDF. Per a realitzar una "
-"cerca cap endavant:"
 
 #. (itstool) path: item/p
 #: C/synctex-search.page:32
 msgid "Click on a line in the TeX file."
-msgstr "Feu clic en una línia del fitxer TeX."
+msgstr ""
 
 #. (itstool) path: item/p
 #: C/synctex-search.page:37
@@ -4175,8 +3536,6 @@ msgid ""
 "In <app>gedit</app>, click <guiseq><gui>Tools</gui> <gui>Forward Search</"
 "gui></guiseq>. The corresponding line in the PDF will be outlined in red."
 msgstr ""
-"Al <app>gedit</app>, feu clic a <guiseq><gui>Eines</gui><gui>Cerca cap "
-"endavant</gui></guiseq>. La línia coincident al PDF es ressaltarà en vermell."
 
 #. (itstool) path: item/p
 #: C/synctex-search.page:40
@@ -4185,9 +3544,6 @@ msgid ""
 "key></keyseq>, or <keyseq><key>Ctrl</key>left click</keyseq>. The "
 "corresponding line in the PDF will be outlined in red."
 msgstr ""
-"També podeu prémer <keyseq><key>Ctrl</key><key>Alt</key><key>F</key></"
-"keyseq> o <keyseq><key>Ctrl</key>clic principal</keyseq>. La línia "
-"coincident al PDF es ressaltarà en vermell."
 
 #. (itstool) path: note/p
 #: C/synctex-search.page:46
@@ -4195,19 +3551,17 @@ msgid ""
 "If the corresponding PDF file is not open, performing a forward search will "
 "open the PDF in the <app>document viewer</app>."
 msgstr ""
-"Si el fitxer PDF corresponent no està obert, en realitzar una cerca cap "
-"endavant obrirà el PDF al <app>Visualitzador de documents</app>."
 
 #. (itstool) path: section/p
 #: C/synctex-search.page:50
 msgid "If you have a complex project with several TeX files you can put"
-msgstr "Si teniu un projecte complex amb molts fitxers TeX podeu posar"
+msgstr ""
 
 #. (itstool) path: section/code
 #: C/synctex-search.page:53
 #, no-wrap
 msgid "% mainfile: mainfile.tex"
-msgstr "% mainfile: mainfile.tex"
+msgstr ""
 
 #. (itstool) path: section/p
 #: C/synctex-search.page:54
@@ -4216,9 +3570,6 @@ msgid ""
 "forward search will work. Backward search should always work, even if you "
 "don't add the modeline."
 msgstr ""
-"a les tres primeres o les tres últimes línies cada fitxer TeX perquè la "
-"cerca cap endavant funcioni. La cerca cap enrere també hauria de funcionar, "
-"fins i tot si no heu afegit aquest modeline."
 
 #. (itstool) path: section/title
 #: C/synctex-search.page:61
@@ -4226,8 +3577,6 @@ msgid ""
 "Backward search: from PDF to TeX (from the <app>document viewer</app> to "
 "<app>gedit</app>)"
 msgstr ""
-"Cerca cap enrere: des del PDF a TeX (des del <app>Visualitzador de "
-"documents</app> cap a l'editor de text <app>gedit</app>)"
 
 #. (itstool) path: section/p
 #: C/synctex-search.page:62
@@ -4235,8 +3584,6 @@ msgid ""
 "Backward search allows you to click on a specific line in the PDF file, and "
 "jump to the associated line in the TeX source code."
 msgstr ""
-"La cerca cap enrere us permet fer clic en una línia del fitxer PDF i saltar "
-"cap a la línia corresponent del fitxer TeX."
 
 #. (itstool) path: section/p
 #: C/synctex-search.page:65
@@ -4245,13 +3592,3 @@ msgid ""
 "click</keyseq> in the <app>document viewer</app>. The corresponding line in "
 "the TeX source code will be highlighted."
 msgstr ""
-"Podeu realitzar una cerca cap enrere si premeu <keyseq><key>Ctrl</key>clic "
-"esquerra</keyseq> al <app>Visualitzador de documents</app>. Es ressaltarà la "
-"línia corresponent al codi font TeX."
-
-#~ msgid ""
-#~ "Click <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Plugins</gui></"
-#~ "guiseq> tab."
-#~ msgstr ""
-#~ "Feu clic a la pestanya <guiseq><gui>Edita</gui><gui>Preferències</"
-#~ "gui><gui>Connectors</gui></guiseq>."
