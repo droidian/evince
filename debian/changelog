@@ -1,3 +1,9 @@
+evince (45.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Mon, 18 Sep 2023 18:16:52 -0400
+
 evince (45~rc-1) unstable; urgency=medium
 
   * New upstream release
