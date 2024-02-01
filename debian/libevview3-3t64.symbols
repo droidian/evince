@@ -1,4 +1,4 @@
-libevview3.so.3 libevview3-3 #MINVER#
+libevview3.so.3 libevview3-3t64 #MINVER#
 * Build-Depends-Package: libevince-dev
  ev_document_model_get_continuous@Base 3.0.2
  ev_document_model_get_document@Base 3.0.2

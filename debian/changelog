@@ -1,3 +1,10 @@
+evince (45.0-1.1~exp1) experimental; urgency=medium
+
+  * Non-maintainer upload.
+  * Rename libraries for 64-bit time_t transition.
+
+ -- Michael Hudson-Doyle <mwhudson@debian.org>  Thu, 01 Feb 2024 21:20:15 +0000
+
 evince (45.0-1) unstable; urgency=medium
 
   * New upstream release

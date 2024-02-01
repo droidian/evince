@@ -6,7 +6,7 @@ Source: evince
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Amin Bandali <bandali@ubuntu.com>, Jeremy Bícha <jbicha@ubuntu.com>, Laurent Bigonville <bigon@debian.org>, Marco Trevisan (Treviño) <marco@ubuntu.com>, Tim Lunn <tim@feathertop.org>
+Uploaders: Amin Bandali <bandali@ubuntu.com>, Jeremy Bícha <jbicha@ubuntu.com>, Laurent Bigonville <bigon@debian.org>, Marco Trevisan (Treviño) <marco@ubuntu.com>
 Build-Depends: debhelper-compat (= 13),
                desktop-file-utils,
                dh-apparmor,
@@ -56,8 +56,8 @@ Package: evince
 Architecture: any
 Depends: evince-common (>= ${source:Version}),
          gsettings-desktop-schemas,
-         libevdocument3-4 (= ${binary:Version}),
-         libevview3-3 (= ${binary:Version}),
+         libevdocument3-4t64 (= ${binary:Version}),
+         libevview3-3t64 (= ${binary:Version}),
          shared-mime-info,
          ${misc:Depends},
          ${shlibs:Depends}
@@ -69,8 +69,8 @@ Suggests: gvfs,
           nautilus-sendto,
           poppler-data,
           unrar
-Breaks: libevdocument3-4 (<< 3.29.91-2~)
-Replaces: libevdocument3-4 (<< 3.29.91-2~)
+Breaks: libevdocument3-4t64 (<< 3.29.91-2~)
+Replaces: libevdocument3-4t64 (<< 3.29.91-2~)
 Enhances: nautilus
 Description: Document (PostScript, PDF) viewer
  Evince is a simple multi-page document viewer.  It can display and print
@@ -93,7 +93,10 @@ Description: Document (PostScript, PDF) viewer - common files
  .
  This package contains architecture-independent files for evince.
 
-Package: libevdocument3-4
+Package: libevdocument3-4t64
+Provides: ${t64:Provides}
+Replaces: libevdocument3-4
+Breaks: libevdocument3-4 (<< ${source:Version})
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -105,7 +108,10 @@ Description: Document (PostScript, PDF) rendering library
  .
  It ships with a ps, pdf, dvi, tiff, djvu, comics and xps backend.
 
-Package: libevview3-3
+Package: libevview3-3t64
+Provides: ${t64:Provides}
+Replaces: libevview3-3
+Breaks: libevview3-3 (<< ${source:Version})
 Architecture: any
 Multi-Arch: same
 Section: libs
@@ -121,8 +127,8 @@ Architecture: any
 Multi-Arch: same
 Section: libdevel
 Depends: gir1.2-evince-3.0 (= ${binary:Version}),
-         libevdocument3-4 (= ${binary:Version}),
-         libevview3-3 (= ${binary:Version}),
+         libevdocument3-4t64 (= ${binary:Version}),
+         libevview3-3t64 (= ${binary:Version}),
          libglib2.0-dev (>= 2.38.0),
          libgtk-3-dev (>= 3.16.0),
          ${misc:Depends}
