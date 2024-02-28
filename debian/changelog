@@ -1,3 +1,10 @@
+evince (45.0-2) unstable; urgency=medium
+
+  * Stop using debian/control.in and dh_gnome_clean
+  * Release to unstable (Closes: #1062541)
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Tue, 27 Feb 2024 21:28:15 -0500
+
 evince (45.0-1.1~exp1) experimental; urgency=medium
 
   * Non-maintainer upload.
