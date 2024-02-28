@@ -25,3 +25,5 @@ execute_after_dh_install:
 	install -m 0644 -D debian/apparmor-profile.abstraction debian/evince/etc/apparmor.d/abstractions/evince
 	install -m 0644 -D debian/evince.apport debian/evince/usr/share/apport/package-hooks/source_evince.py
 	dh_apparmor --profile-name=usr.bin.evince -pevince
+
+override_dh_gnome_clean:
