@@ -1,3 +1,9 @@
+evince (46.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Wed, 20 Mar 2024 15:49:23 -0400
+
 evince (45.0-2) unstable; urgency=medium
 
   * Stop using debian/control.in and dh_gnome_clean
