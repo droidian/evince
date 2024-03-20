@@ -46,7 +46,7 @@ Rules-Requires-Root: no
 Standards-Version: 4.6.2
 Vcs-Browser: https://salsa.debian.org/gnome-team/evince
 Vcs-Git: https://salsa.debian.org/gnome-team/evince.git
-Homepage: https://wiki.gnome.org/Apps/Evince
+Homepage: https://apps.gnome.org/Evince/
 
 Package: evince
 Architecture: any
