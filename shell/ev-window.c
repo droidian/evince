@@ -4226,7 +4226,7 @@ ev_window_cmd_about (GSimpleAction *action,
         gtk_show_about_dialog (GTK_WINDOW (ev_window),
                                "name", _("Evince"),
                                "version", VERSION,
-                               "copyright", _("© 1996–2022 The Evince document viewer authors"),
+                               "copyright", _("© 1996–2023 The Evince document viewer authors"),
                                "license-type", GTK_LICENSE_GPL_2_0,
                                "website", "https://wiki.gnome.org/Apps/Evince",
                                "comments", _("Evince is a simple document viewer for GNOME"),
@@ -4637,6 +4637,7 @@ ev_window_run_fullscreen (EvWindow *window)
 {
 	EvWindowPrivate *priv = GET_PRIVATE (window);
 	gboolean fullscreen_window = TRUE;
+	gboolean maximized = FALSE;
 
 	if (ev_document_model_get_fullscreen (priv->model))
 		return;
@@ -4657,8 +4658,11 @@ ev_window_run_fullscreen (EvWindow *window)
 		gtk_window_fullscreen (GTK_WINDOW (window));
 	gtk_widget_grab_focus (priv->view);
 
-	if (priv->metadata && !ev_window_is_empty (window))
-		ev_metadata_set_boolean (priv->metadata, "fullscreen", TRUE);
+	if (priv->metadata && !ev_window_is_empty (window)) {
+		ev_metadata_get_boolean (priv->metadata, "window_maximized", &maximized);
+		if (!maximized)
+			ev_metadata_set_boolean (priv->metadata, "fullscreen", TRUE);
+	}
 }
 
 static void
